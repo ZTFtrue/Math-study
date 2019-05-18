@@ -76,10 +76,10 @@ export class AppComponent {
     while (stack.length !== 0) {
       jsonNode = stack.pop();
       if (jsonNode.child.length > 0) {
-        let a = jsonNode.child.reverse();
+        const childs = jsonNode.child.reverse();
         jsonNode.child = [];
         stack.push(jsonNode);
-        for (const item of a) {
+        for (const item of childs) {
           stack.push(item);
         }
       } else {
