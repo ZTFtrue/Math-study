@@ -1,28 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <button (click)="readFile()">readFile</button>
 <textarea style="width:100%" [(ngModel)]="inputContent"></textarea>
-<canvas id="myCanvas" width="0px" height="0px" style="border:1px solid #d3d3d3;">
-  您的浏览器不支持 HTML5 canvas 标签。</canvas>
-<div class="root0">
-  <span class="item-parent0"><pre>{{jsonTree.parent}}</pre></span>
-  <div class="root-item">
-    <div class="root" *ngFor="let item1 of jsonTree.child">
-      <span class="item-parent-first"><pre>{{item1.parent}}</pre></span>
-      <div class="root-item">
-        <div class="root" *ngFor="let item2 of item1.child">
-          <span class="item-parent"><pre>{{item2.parent}}</pre></span>
-          <div class="root-item">
-            <div class="root" *ngFor="let item3 of item2.child">
-              <span class="item-parent"><pre>{{item3.parent}}</pre></span>
-              <div class="root-item">
-                <div class="root" *ngFor="let item4 of item3.child">
-                  <span class="item-parent-last">{{item4.parent}}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<svg width="960" height="600"></svg>

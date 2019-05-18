@@ -64,26 +64,129 @@ export class AppComponent {
    * 树结构遍历
    **/
   draw() {
-    const c: any = document.getElementById('myCanvas');
-    const ctx: any = c.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-    ctx.stroke();
-    let jsonNode = this.jsonTree;
-    const stack = [];
-    stack.push(jsonNode);
-    while (stack.length !== 0) {
-      jsonNode = stack.pop();
-      if (jsonNode.children.length > 0) {
-        const childrens = jsonNode.children.reverse();
-        jsonNode.children = [];
-        stack.push(jsonNode);
-        for (const item of childrens) {
-          stack.push(item);
+    // 定义边界
+    const marge = { top: 50, bottom: 0, left: 10, right: 0 };
+
+    const svg = d3.select('svg');
+    const width = svg.attr('width');
+    const height = svg.attr('height');
+
+    const g = svg.append('g')
+      .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
+
+    const scale = svg.append('g')
+      .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
+    // 数据
+    const dataset = {
+      name: '中国',
+      children: [
+        {
+          name: '浙江',
+          children: [
+            { name: '杭州', value: 100 },
+            { name: '宁波', value: 100 },
+            { name: '温州', value: 100 },
+            { name: '绍兴', value: 100 }
+          ]
+        },
+        {
+          name: '广西',
+          children: [
+            {
+              name: '桂林',
+              children: [
+                { name: '秀峰区', value: 100 },
+                { name: '叠彩区', value: 100 },
+                { name: '象山区', value: 100 },
+                { name: '七星区', value: 100 }
+              ]
+            },
+            { name: '南宁', value: 100 },
+            { name: '柳州', value: 100 },
+            { name: '防城港', value: 100 }
+          ]
         }
-      } else {
-        console.log(jsonNode.name);
-      }
-    }
+      ]
+    };
+
+    // 创建一个hierarchy layout
+    const hierarchyData = d3.hierarchy(this.jsonTree)
+      .sum((d) => {
+        return d.value;
+      });
+
+    // 创建一个树状图
+    const tree = d3.tree()
+      .size([width - 400, height - 200])
+      .separation((a, b) => {
+        return (a.parent === b.parent ? 1 : 2) / a.depth;
+      });
+
+    // 初始化树状图，也就是传入数据,并得到绘制树基本数据
+    const treeData = tree(hierarchyData);
+    console.log(treeData);
+    // 得到节点
+    const nodes = treeData.descendants();
+    const links = treeData.links();
+
+    // 输出节点和边
+    console.log(nodes);
+    console.log(links);
+
+    // 创建一个贝塞尔生成曲线生成器
+    const bézierCurveGenerator: any = d3.linkHorizontal()
+      .x((d) => {
+        return d.y;
+      })
+      .y((d) => {
+        return d.x;
+      });
+
+    // 有了节点和边集的数据后，我们就可以开始绘制了，
+    // 绘制边
+    g.append('g')
+      .selectAll('path')
+      .data(links)
+      .enter()
+      .append('path')
+      .attr('d', (d) => {
+        const start = { x: d.source.x, y: d.source.y };
+        const end = { x: d.target.x, y: d.target.y };
+        return bézierCurveGenerator({ source: start, target: end });
+      })
+      .attr('fill', 'none')
+      .attr('stroke', 'yellow')
+      .attr('stroke-width', 1);
+
+    // 绘制节点和文字
+    // 老规矩，先创建用以绘制每个节点和对应文字的分组<g>
+    const gs = g.append('g')
+      .selectAll('g')
+      .data(nodes)
+      .enter()
+      .append('g')
+      .attr('transform', (d) => {
+        const cx = d.x;
+        const cy = d.y;
+        return 'translate(' + cy + ',' + cx + ')';
+      });
+    // 绘制节点
+    gs.append('circle')
+      .attr('r', 6)
+      .attr('fill', 'white')
+      .attr('stroke', 'blue')
+      .attr('stroke-width', 1);
+
+    // 文字
+    gs.append('text')
+      .attr('x', (d) => {
+        return d.children ? -40 : 8;
+      })
+      .attr('y', -5)
+      .attr('dy', 10)
+      .text((d) => {
+        return d.data.name;
+      });
+
   }
 }
