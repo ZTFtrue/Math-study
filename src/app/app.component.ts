@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,9 @@ export class AppComponent {
   content: string;
   inputContent = '';
   html = '';
-  jsonTree = { parent: '', child: [] };
+  jsonTree = { name: '', children: [] };
   readFile() {
-    this.jsonTree = { parent: '', child: [] };
+    this.jsonTree = { name: '', children: [] };
     const stringArrary = this.inputContent.split('###')[1].split('\n');
     const nodes = [0];
     if (stringArrary[0] === '') {
@@ -37,7 +38,7 @@ export class AppComponent {
       s = s.substring(i, s.length);
       s = s.replace('  ', '\n');
       const spaceIndex = i / 2;  // 表示缩进
-      let jsonChild = this.jsonTree;
+      let jsonchildren = this.jsonTree;
       if (lastIndex < i) { // 子
         if (!isNaN(nodes[spaceIndex])) {
           nodes[spaceIndex] = nodes[spaceIndex] + 1;
@@ -51,39 +52,37 @@ export class AppComponent {
         nodes[spaceIndex] = nodes[spaceIndex] + 1;
       }
       for (let j = 0; j < spaceIndex; j++) {
-        jsonChild = jsonChild.child[nodes[j]];
+        jsonchildren = jsonchildren.children[nodes[j]];
       }
-      jsonChild.child.push({ parent: s, child: [] });
+      jsonchildren.children.push({ name: s, children: [] });
       lastIndex = i;
     }
     this.draw();
   }
 
   /*
-   * 树结构遍历,不用递归
+   * 树结构遍历
    **/
   draw() {
-    // 拷贝问题？
     const c: any = document.getElementById('myCanvas');
     const ctx: any = c.getContext('2d');
     ctx.beginPath();
     ctx.arc(95, 50, 40, 0, 2 * Math.PI);
     ctx.stroke();
-
     let jsonNode = this.jsonTree;
     const stack = [];
     stack.push(jsonNode);
     while (stack.length !== 0) {
       jsonNode = stack.pop();
-      if (jsonNode.child.length > 0) {
-        const childs = jsonNode.child.reverse();
-        jsonNode.child = [];
+      if (jsonNode.children.length > 0) {
+        const childrens = jsonNode.children.reverse();
+        jsonNode.children = [];
         stack.push(jsonNode);
-        for (const item of childs) {
+        for (const item of childrens) {
           stack.push(item);
         }
       } else {
-        console.log(jsonNode.parent);
+        console.log(jsonNode.name);
       }
     }
   }
