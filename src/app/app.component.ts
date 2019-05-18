@@ -10,9 +10,11 @@ export class AppComponent {
   title = 'gd-app';
   content: string;
   inputContent = '';
-  html = '';
   jsonTree = { name: '', children: [] };
   readFile() {
+    if (!this.inputContent) {
+      return;
+    }
     this.jsonTree = { name: '', children: [] };
     const stringArrary = this.inputContent.split('###')[1].split('\n');
     const nodes = [0];
