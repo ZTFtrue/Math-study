@@ -59,6 +59,7 @@ export class AppComponent {
       jsonchildren.children.push({ name: s, children: [] });
       lastIndex = i;
     }
+    this.jsonTree = this.jsonTree.children[0];
     this.draw();
   }
 
