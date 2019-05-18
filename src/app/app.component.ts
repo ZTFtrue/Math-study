@@ -77,41 +77,6 @@ export class AppComponent {
     const g = svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
 
-    const scale = svg.append('g')
-      .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
-    // 数据
-    const dataset = {
-      name: '中国',
-      children: [
-        {
-          name: '浙江',
-          children: [
-            { name: '杭州', value: 100 },
-            { name: '宁波', value: 100 },
-            { name: '温州', value: 100 },
-            { name: '绍兴', value: 100 }
-          ]
-        },
-        {
-          name: '广西',
-          children: [
-            {
-              name: '桂林',
-              children: [
-                { name: '秀峰区', value: 100 },
-                { name: '叠彩区', value: 100 },
-                { name: '象山区', value: 100 },
-                { name: '七星区', value: 100 }
-              ]
-            },
-            { name: '南宁', value: 100 },
-            { name: '柳州', value: 100 },
-            { name: '防城港', value: 100 }
-          ]
-        }
-      ]
-    };
-
     // 创建一个hierarchy layout
     const hierarchyData = d3.hierarchy(this.jsonTree)
       .sum((d) => {
