@@ -1,34 +1,13 @@
-.root {
+.input-form {
+  width: 100%;
+  height: 80px;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid chartreuse;
+  margin: 0;
 }
 
-.item-parent {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid chartreuse;
-}
-
-.root-item {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-}
-
-.item-parent-last {
-  width: 400px;
-  padding: 10px;
-  border: 1px solid chartreuse;
-}
-
-.item-parent-first {
-  padding: 10px;
-}
-
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.svg-content {
+  margin: 0;
+  overflow: scroll;
+  width: 100%;
+  height: calc(100vh - 100px);
 }

@@ -11,7 +11,21 @@ export class AppComponent {
   content: string;
   inputContent = '';
   jsonTree = { name: '', children: [] };
-  readFile() {
+  processFiles(file) {
+    file = file.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsText(file, 'UTF-8');
+      reader.onload = ((event: any) => {
+        this.inputContent = event.target.result;
+        this.convertInput();
+      });
+      reader.onerror = ((event) => {
+        console.log(event);
+      });
+    }
+  }
+  convertInput() {
     if (!this.inputContent) {
       return;
     }
@@ -63,9 +77,6 @@ export class AppComponent {
     this.draw();
   }
 
-  /*
-   * 树结构遍历
-   **/
   draw() {
     // 定义边界
     const marge = { top: 50, bottom: 0, left: 10, right: 0 };
@@ -85,21 +96,17 @@ export class AppComponent {
 
     // 创建一个树状图
     const tree = d3.tree()
-      .size([width - 400, height - 200])
+      .size([height - 200, width - 400])
+      // 节点距离
       .separation((a, b) => {
         return (a.parent === b.parent ? 1 : 2) / a.depth;
       });
 
     // 初始化树状图，也就是传入数据,并得到绘制树基本数据
     const treeData = tree(hierarchyData);
-    console.log(treeData);
     // 得到节点
     const nodes = treeData.descendants();
     const links = treeData.links();
-
-    // 输出节点和边
-    console.log(nodes);
-    console.log(links);
 
     // 创建一个贝塞尔生成曲线生成器
     const bézierCurveGenerator: any = d3.linkHorizontal()
@@ -135,12 +142,13 @@ export class AppComponent {
       .append('g')
       .attr('transform', (d) => {
         const cx = d.x;
+        // d.data.name
         const cy = d.y;
         return 'translate(' + cy + ',' + cx + ')';
       });
     // 绘制节点
     gs.append('circle')
-      .attr('r', 6)
+      .attr('r', 4)
       .attr('fill', 'white')
       .attr('stroke', 'blue')
       .attr('stroke-width', 1);
@@ -155,6 +163,19 @@ export class AppComponent {
       .text((d) => {
         return d.data.name;
       });
-
+    this.wrapWord(gs.selectAll('text'));
+  }
+  wrapWord(texts: any) {
+    // tslint:disable-next-line: space-before-function-paren
+    texts.each(function () {
+      const text = d3.select(this);
+      const words = text.text().split('\n');
+      let tspan = text.text(null).append('tspan');
+      let lineHigth = -5;
+      for (const word of words) {
+        tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(word);
+        lineHigth = lineHigth + 30;
+      }
+    });
   }
 }

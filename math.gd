@@ -1,5 +1,13 @@
-#
+#注释
+  每一行都是一个节点，双空格表示换行，缩进表示节点父子关系。
+  没有任何字符的空行不会做任何处理。
+  “\#\#\#” 是头部和主体部分的分割符。
   left_and_right
+  height:4000
+  widht:2000
+  node-circle-radius:6
+  font-size:24
+  indentation-size:2
 ###
 Math
   平面图形
