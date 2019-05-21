@@ -11,9 +11,14 @@ export class AppComponent {
   content: string;
   inputContent = '';
   jsonTree = { name: '', children: [] };
+  nodeWidth = 180;
+  nodeHeight = 280;
+  svgWidth = 1000;
+  svgHeight = 10000;
   processFiles(file) {
     file = file.target.files[0];
     if (file) {
+      console.log('只支持UTF-8');
       const reader = new FileReader();
       reader.readAsText(file, 'UTF-8');
       reader.onload = ((event: any) => {
@@ -30,7 +35,24 @@ export class AppComponent {
       return;
     }
     this.jsonTree = { name: '', children: [] };
-    const stringArrary = this.inputContent.split('###')[1].split('\n');
+    const contentArrary = this.inputContent.split('###');
+    let stringConfigs = contentArrary[0].split('\n');
+    stringConfigs = stringConfigs.filter((item) => {
+      return item.charAt(0) !== '#';
+    });
+    for (const config of stringConfigs) {
+      if (config.indexOf('svg-height') >= 0) {
+        this.svgHeight = parseFloat(config.split(':')[1]);
+      } else if (config.indexOf('svg-width') >= 0) {
+        this.svgWidth = parseFloat(config.split(':')[1]);
+      } else if (config.indexOf('node-height') >= 0) {
+        this.nodeHeight = parseFloat(config.split(':')[1]);
+      } else if (config.indexOf('node-width') >= 0) {
+        this.nodeWidth = parseFloat(config.split(':')[1]);
+      }
+    }
+    console.log(this.svgWidth);
+    const stringArrary = contentArrary[1].split('\n');
     const nodes = [0];
     if (stringArrary[0] === '') {
       stringArrary.splice(0, 1);
@@ -81,10 +103,13 @@ export class AppComponent {
     // 定义边界
     const marge = { top: 50, bottom: 0, left: 10, right: 0 };
 
-    const svg = d3.select('svg');
-    const width = svg.attr('width');
-    const height = svg.attr('height');
-
+    let svg = d3.select('svg');
+    if (svg.attr('width') > 0) {
+      d3.select('svg').remove();
+      svg = d3.select('svg-content').append('svg');
+    }
+    svg.attr('width', this.svgWidth);
+    svg.attr('height', this.svgHeight);
     const g = svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
 
@@ -93,21 +118,19 @@ export class AppComponent {
       .sum((d) => {
         return d.value;
       });
-
     // 创建一个树状图
     const tree = d3.tree()
-      .size([height - 200, width - 400])
+      .size([this.svgHeight - 200, this.svgWidth - 400])
+      // .nodeSize([this.nodeWidth, this.nodeHeight])
       // 节点距离
       .separation((a, b) => {
         return (a.parent === b.parent ? 1 : 2) / a.depth;
       });
-
     // 初始化树状图，也就是传入数据,并得到绘制树基本数据
     const treeData = tree(hierarchyData);
     // 得到节点
     const nodes = treeData.descendants();
     const links = treeData.links();
-
     // 创建一个贝塞尔生成曲线生成器
     const bézierCurveGenerator: any = d3.linkHorizontal()
       .x((d) => {
