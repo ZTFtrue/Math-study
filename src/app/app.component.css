@@ -7,7 +7,7 @@
 
 .svg-content {
   margin: 0;
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
   height: calc(100vh - 100px);
 }
