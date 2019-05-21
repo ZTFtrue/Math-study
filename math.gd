@@ -4,6 +4,7 @@
 #  “\#\#\#” 是头部和主体部分的分割符。
 #  下面是配置。
 left_and_right
+# 图的高度
 svg-height:10000
 svg-width:1500
 node-width:200
