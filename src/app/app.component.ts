@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
   title = 'gd-app';
@@ -183,6 +184,7 @@ export class AppComponent {
       })
       .attr('y', -5)
       .attr('dy', 10)
+      .attr('class', 'text-node')
       .text((d) => {
         return d.data.name;
       });
@@ -192,12 +194,16 @@ export class AppComponent {
     // tslint:disable-next-line: space-before-function-paren
     texts.each(function () {
       const text = d3.select(this);
+      text.on('click', function (event) {
+        console.log(event);
+
+      });
       const words = text.text().split('\n');
       let tspan = text.text(null).append('tspan');
       let lineHigth = -5;
       for (const word of words) {
         tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(word);
-        lineHigth = lineHigth + 30;
+        break;
       }
     });
   }

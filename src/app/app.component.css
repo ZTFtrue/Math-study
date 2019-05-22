@@ -11,3 +11,15 @@
   width: 100%;
   height: calc(100vh - 100px);
 }
+
+.text-node {
+  cursor: pointer;
+}
+
+tspan {
+  cursor: pointer;
+}
+
+::slotted(*) {
+  cursor: pointer;
+}
