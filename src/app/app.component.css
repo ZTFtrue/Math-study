@@ -14,11 +14,13 @@
 
 .text-node {
   cursor: pointer;
+  background-color: antiquewhite;
+  text-decoration: underline;
 }
 
-tspan {
+/* tspan {
   cursor: pointer;
-}
+} */
 
 ::slotted(*) {
   cursor: pointer;

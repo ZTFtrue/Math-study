@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
+import { MatDialog } from '@angular/material';
+import { DialogDetailsComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,7 @@ export class AppComponent {
   nodeHeight = 280;
   svgWidth = 1000;
   svgHeight = 10000;
+  constructor(public dialog: MatDialog) { }
   processFiles(file) {
     file = file.target.files[0];
     if (file) {
@@ -122,7 +125,6 @@ export class AppComponent {
     // 创建一个树状图
     const tree = d3.tree()
       .size([this.svgHeight - 200, this.svgWidth - 400])
-      // .nodeSize([this.nodeWidth, this.nodeHeight])
       // 节点距离
       .separation((a, b) => {
         return (a.parent === b.parent ? 1 : 2) / a.depth;
@@ -149,8 +151,8 @@ export class AppComponent {
       .enter()
       .append('path')
       .attr('d', (d) => {
-        const start = { x: d.source.x, y: d.source.y };
-        const end = { x: d.target.x, y: d.target.y };
+        const start = { x: d.source.x + 1, y: d.source.y };
+        const end = { x: d.target.x + 1, y: d.target.y };
         return bézierCurveGenerator({ source: start, target: end });
       })
       .attr('fill', 'none')
@@ -184,27 +186,40 @@ export class AppComponent {
       })
       .attr('y', -5)
       .attr('dy', 10)
-      .attr('class', 'text-node')
       .text((d) => {
         return d.data.name;
       });
     this.wrapWord(gs.selectAll('text'));
   }
   wrapWord(texts: any) {
+    const vm = this;
     // tslint:disable-next-line: space-before-function-paren
     texts.each(function () {
       const text = d3.select(this);
-      text.on('click', function (event) {
-        console.log(event);
 
-      });
       const words = text.text().split('\n');
-      let tspan = text.text(null).append('tspan');
-      let lineHigth = -5;
+      let tspan = text.text(null);
+      if (words.length > 1) {
+        text.attr('class', 'text-node');
+        text.on('click', (event) => {
+          vm.openDialog(event.data.name);
+        });
+      }
+      const lineHigth = -5;
       for (const word of words) {
         tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(word);
         break;
       }
+    });
+  }
+  openDialog(content: string): void {
+    const dialogRef = this.dialog.open(DialogDetailsComponent, {
+      // width: '250px',
+      data: content
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
     });
   }
 }
