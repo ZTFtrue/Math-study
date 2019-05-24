@@ -23,7 +23,8 @@ export class AppComponent {
   viewBoxStartY = 0;
   viewBoxEndX = 1000;
   viewBoxEndY = 10000;
-  scaleSpeed = 50;
+  scaleSpeed = 100;
+  moveSpeed = 50;
   lastClientX = 0;
   lastClientY = 0;
   constructor(public dialog: MatDialog) { }
@@ -257,14 +258,25 @@ export class AppComponent {
   }
   mouseMove(event) {
     // TODO 需要计算
-    console.log(event.clientX - this.lastClientX);
-    console.log(event.clientY - this.lastClientY);
-    this.viewBoxStartX = -(event.clientX - this.lastClientX) * 3;
-    this.viewBoxStartY = -(event.clientY - this.lastClientY) * 3;
     if (!this.svg) {
       return;
     }
+    let x = this.lastClientX - event.clientX;
+    if (x > 0) {// left
+      this.viewBoxStartX = this.viewBoxStartX + this.moveSpeed;
+    } else if (x < 0) {// right
+      this.viewBoxStartX = this.viewBoxStartX - this.moveSpeed;
+    }
+    let y = this.lastClientY - event.clientY;
+    console.log(y);
+    if (y > 0) {// up
+      this.viewBoxStartY = this.viewBoxStartY + this.moveSpeed;
+    } else if (y < 0) {// down
+      this.viewBoxStartY = this.viewBoxStartY - this.moveSpeed;
+    }
     this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+    this.lastClientX = event.clientX;
+    this.lastClientY = event.clientY;
   }
 
 }
