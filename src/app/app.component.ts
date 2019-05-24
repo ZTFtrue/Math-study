@@ -126,8 +126,8 @@ export class AppComponent {
       d3.select('svg').remove();
       this.svg = d3.select('svg-content').append('svg');
     }
-    this.svg.attr('width', 800);
-    this.svg.attr('height', 800);
+    this.svg.attr('width', this.lastClientX);
+    this.svg.attr('height', this.lastClientY);
     const g = this.svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
 
@@ -261,14 +261,13 @@ export class AppComponent {
     if (!this.svg) {
       return;
     }
-    let x = this.lastClientX - event.clientX;
+    const x = this.lastClientX - event.clientX;
     if (x > 0) {// left
       this.viewBoxStartX = this.viewBoxStartX + this.moveSpeed;
     } else if (x < 0) {// right
       this.viewBoxStartX = this.viewBoxStartX - this.moveSpeed;
     }
-    let y = this.lastClientY - event.clientY;
-    console.log(y);
+    const y = this.lastClientY - event.clientY;
     if (y > 0) {// up
       this.viewBoxStartY = this.viewBoxStartY + this.moveSpeed;
     } else if (y < 0) {// down
