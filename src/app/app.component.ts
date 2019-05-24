@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import * as d3 from 'd3';
 import { MatDialog } from '@angular/material';
+import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
 
 @Component({
@@ -18,6 +18,14 @@ export class AppComponent {
   nodeHeight = 280;
   svgWidth = 1000;
   svgHeight = 10000;
+  svg;
+  viewBoxStartX = 0;
+  viewBoxStartY = 0;
+  viewBoxEndX = 1000;
+  viewBoxEndY = 10000;
+  scaleSpeed = 50;
+  lastClientX = 0;
+  lastClientY = 0;
   constructor(public dialog: MatDialog) { }
   processFiles(file) {
     file = file.target.files[0];
@@ -47,15 +55,16 @@ export class AppComponent {
     for (const config of stringConfigs) {
       if (config.indexOf('svg-height') >= 0) {
         this.svgHeight = parseFloat(config.split(':')[1]);
+        this.viewBoxEndY = this.svgHeight;
       } else if (config.indexOf('svg-width') >= 0) {
         this.svgWidth = parseFloat(config.split(':')[1]);
+        this.viewBoxEndX = this.svgWidth;
       } else if (config.indexOf('node-height') >= 0) {
         this.nodeHeight = parseFloat(config.split(':')[1]);
       } else if (config.indexOf('node-width') >= 0) {
         this.nodeWidth = parseFloat(config.split(':')[1]);
       }
     }
-    console.log(this.svgWidth);
     const stringArrary = contentArrary[1].split('\n');
     const nodes = [0];
     if (stringArrary[0] === '') {
@@ -104,17 +113,21 @@ export class AppComponent {
   }
 
   draw() {
+    const content = d3.select('#content');
+    this.lastClientX = parseFloat(content.style('width').replace('px', ''));
+    this.lastClientY = parseFloat(content.style('height').replace('px', ''));
+
     // 定义边界
     const marge = { top: 50, bottom: 0, left: 10, right: 0 };
 
-    let svg = d3.select('svg');
-    if (svg.attr('width') > 0) {
+    this.svg = d3.select('svg');
+    if (this.svg.attr('width') > 0) {
       d3.select('svg').remove();
-      svg = d3.select('svg-content').append('svg');
+      this.svg = d3.select('svg-content').append('svg');
     }
-    svg.attr('width', this.svgWidth);
-    svg.attr('height', this.svgHeight);
-    const g = svg.append('g')
+    this.svg.attr('width', 800);
+    this.svg.attr('height', 800);
+    const g = this.svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
 
     // 创建一个hierarchy layout
@@ -190,6 +203,7 @@ export class AppComponent {
         return d.data.name;
       });
     this.wrapWord(gs.selectAll('text'));
+    this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   wrapWord(texts: any) {
     const vm = this;
@@ -217,9 +231,40 @@ export class AppComponent {
       // width: '250px',
       data: content
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
+  mouseWheelUp(event) {// 放大
+    if (!this.svg) {
+      return;
+    }
+    if (this.viewBoxEndX - this.scaleSpeed > 100) {
+      this.viewBoxEndX = this.viewBoxEndX - this.scaleSpeed;
+    }
+    if (this.viewBoxEndY - this.scaleSpeed > 100) {
+      this.viewBoxEndY = this.viewBoxEndY - this.scaleSpeed;
+    }
+    this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+  }
+  mouseWheelDown(event) {// 缩小
+    if (!this.svg) {
+      return;
+    }
+    this.viewBoxEndX = this.viewBoxEndX + this.scaleSpeed;
+    this.viewBoxEndY = this.viewBoxEndY + this.scaleSpeed;
+    this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+  }
+  mouseMove(event) {
+    // TODO 需要计算
+    console.log(event.clientX - this.lastClientX);
+    console.log(event.clientY - this.lastClientY);
+    this.viewBoxStartX = -(event.clientX - this.lastClientX) * 3;
+    this.viewBoxStartY = -(event.clientY - this.lastClientY) * 3;
+    if (!this.svg) {
+      return;
+    }
+    this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+  }
+
 }

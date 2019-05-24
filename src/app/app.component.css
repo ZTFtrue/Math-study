@@ -7,7 +7,6 @@
 
 .svg-content {
   margin: 0;
-  overflow: auto;
   width: 100%;
   height: calc(100vh - 100px);
 }
@@ -17,6 +16,8 @@
   background-color: antiquewhite;
   text-decoration: underline;
 }
+
+
 
 /* tspan {
   cursor: pointer;

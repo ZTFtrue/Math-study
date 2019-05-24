@@ -6,6 +6,7 @@
   </div>
   <textarea matInput class="input-textarea" style="width:100%;height: 100%;" [(ngModel)]="inputContent"></textarea>
 </div>
-<div class="svg-content">
-  <svg width="0" height="0"></svg>
+<div id="content" appMouseWheel (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)"
+  (mouseMove)="mouseMove($event)" class="svg-content" >
+  <svg width="0" height="0" preserveAspectRatio="xMidYMid meet"></svg>
 </div>

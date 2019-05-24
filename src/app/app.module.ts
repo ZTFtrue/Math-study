@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { DialogDetailsComponent } from './dialog/dialog.component';
+import { MouseWheelDirective } from './mouse-wheel.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogDetailsComponent
+    DialogDetailsComponent,
+    MouseWheelDirective
   ],
   imports: [
     BrowserModule,
