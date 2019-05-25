@@ -263,7 +263,6 @@ export class AppComponent {
     this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   mouseMove(event) {
-    // TODO 需要计算
     if (!this.svg) {
       return;
     }

@@ -22,15 +22,13 @@ export class MouseWheelDirective {
   }
 
   @HostListener('mousemove', ['$event']) onMouseMove(event: any) {
-    // this.mouseWheelFunc(event);
     if (this.elementMouseMove) {
       this.mouseMove.emit(event);
     }
   }
   @HostListener('mousedown', ['$event']) onMouseDown(event: any) {
-    // this.mouseWheelFunc(event);
     this.mouseDown.emit(event);
-    if (event.button === 0) {
+    if (event.button === 0 || event.button === 1) {
       this.elementMouseMove = true;
     }
   }
