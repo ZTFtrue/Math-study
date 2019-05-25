@@ -3,6 +3,8 @@
   height: 80px;
   display: flex;
   margin: 0;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .svg-content {
@@ -17,7 +19,15 @@
   text-decoration: underline;
 }
 
-
+.parameter-input {
+  box-sizing: border-box;
+  border: #fff;
+  width: 5rem;
+  font-size: 1.1rem;
+  height: 2rem;
+  border-bottom: 1px solid black !important;
+  outline: none;
+}
 
 /* tspan {
   cursor: pointer;

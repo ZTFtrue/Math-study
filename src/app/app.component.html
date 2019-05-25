@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="input-form">
-  <div>
-    <button mat-raised-button (click)="convertInput()">生成图形</button>
-    <input type="file" (change)="processFiles($event)" accept="file/*,.gd">
-  </div>
-  <textarea matInput class="input-textarea" style="width:100%;height: 100%;" [(ngModel)]="inputContent"></textarea>
+  放大速率：<input class="parameter-input" type="number" placeholder="放大速率" [(ngModel)]="scaleSpeed">
+  平移速率：<input class="parameter-input" type="number" placeholder="平移速率" [(ngModel)]="moveSpeed" />
+  <!-- <mat-checkbox >禁用复制</mat-checkbox> -->
+  <button mat-raised-button (click)="resetSvg()">重置图形</button>
+   <button mat-raised-button (click)="convertInput()">生成图形</button>
+  <input type="file" (change)="processFiles($event)" accept="file/*,.gd">
+  <textarea placeholder="显示文本" [(ngModel)]="inputContent"></textarea>
 </div>
-<div id="content" appMouseWheel (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)"
-  (mouseMove)="mouseMove($event)" class="svg-content" >
+<div id="content" [ngStyle]="{'user-select':forbidCopy?'none':'auto' }" appMouseWheel
+  (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMove)="mouseMove($event)"
+  class="svg-content">
   <svg width="0" height="0" preserveAspectRatio="xMidYMid meet"></svg>
 </div>

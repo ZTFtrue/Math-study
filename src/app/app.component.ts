@@ -24,9 +24,10 @@ export class AppComponent {
   viewBoxEndX = 1000;
   viewBoxEndY = 10000;
   scaleSpeed = 100;
-  moveSpeed = 50;
+  moveSpeed = 30;
   lastClientX = 0;
   lastClientY = 0;
+  forbidCopy = false;
   constructor(public dialog: MatDialog) { }
   processFiles(file) {
     file = file.target.files[0];
@@ -204,6 +205,12 @@ export class AppComponent {
         return d.data.name;
       });
     this.wrapWord(gs.selectAll('text'));
+    console.log(1);
+    this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+  }
+  resetSvg() {
+    this.viewBoxEndY = this.svgHeight;
+    this.viewBoxEndX = this.svgWidth;
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   wrapWord(texts: any) {
