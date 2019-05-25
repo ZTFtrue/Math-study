@@ -205,7 +205,6 @@ export class AppComponent {
         return d.data.name;
       });
     this.wrapWord(gs.selectAll('text'));
-    console.log(1);
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   resetSvg() {
