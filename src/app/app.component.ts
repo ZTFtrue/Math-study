@@ -18,7 +18,7 @@ export class AppComponent {
   nodeHeight = 280;
   svgWidth = 1000;
   svgHeight = 10000;
-  svg;
+  svg = null;
   viewBoxStartX = 0;
   viewBoxStartY = 0;
   viewBoxEndX = 1000;
@@ -282,5 +282,19 @@ export class AppComponent {
     this.lastClientX = event.clientX;
     this.lastClientY = event.clientY;
   }
-
+  saveSvg() {
+    const html = d3.select('svg')
+      .attr('title', 'test2')
+      .attr('version', 1.1)
+      .attr('xmlns', 'http://www.w3.org/2000/svg')
+      .node().parentNode.innerHTML;
+    const blob = new Blob([html], { type: 'image/svg+xml' });
+    const svgUrl = URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = svgUrl;
+    downloadLink.download = 'math.svg';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
 }
