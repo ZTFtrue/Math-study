@@ -28,9 +28,8 @@ export class MouseWheelDirective {
   }
   @HostListener('mousedown', ['$event']) onMouseDown(event: any) {
     this.mouseDown.emit(event);
-    if (event.button === 0 || event.button === 1) {
-      this.elementMouseMove = true;
-    }
+    this.elementMouseMove = true;
+    console.log(event);
   }
   @HostListener('mouseleave', ['$event']) onMouseLeave(event: any) {
     // this.mouseWheelFunc(event);
@@ -40,6 +39,12 @@ export class MouseWheelDirective {
   @HostListener('mouseup', ['$event']) onMouseUp(event: any) {
     this.mouseUp.emit(event);
     this.elementMouseMove = false;
+  }
+  @HostListener('contextmenu', ['$event']) onContextMenu(event: any) {
+    console.log(event);
+    event.preventDefault();
+    // this.mouseUp.emit(event);
+    // this.elementMouseMove = false;
   }
   mouseWheelFunc(event: any) {
     const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));

@@ -24,7 +24,7 @@ export class AppComponent {
   viewBoxEndX = 1000;
   viewBoxEndY = 10000;
   scaleSpeed = 100;
-  moveSpeed = 30;
+  moveSpeed = 35;
   lastClientX = 0;
   lastClientY = 0;
   forbidCopy = false;
