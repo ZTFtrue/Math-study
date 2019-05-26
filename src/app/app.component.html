@@ -2,6 +2,7 @@
 <div class="input-form">
   放大速率：<input class="parameter-input" type="number" placeholder="放大速率" [(ngModel)]="scaleSpeed">
   平移速率：<input class="parameter-input" type="number" placeholder="平移速率" [(ngModel)]="moveSpeed" />
+  允许复制：<input class="parameter-input" type="checkbox" [(ngModel)]="forbidCopy" />
   <!-- <mat-checkbox >禁用复制</mat-checkbox> -->
   <button [disabled]="svg===null" mat-raised-button (click)="resetSvg()">重置图形</button>
   <button [disabled]="svg===null" mat-raised-button (click)="convertInput()">生成图形</button>
@@ -9,7 +10,7 @@
   <input type="file" (change)="processFiles($event)" accept="file/*,.gd">
   <textarea placeholder="显示文本" [(ngModel)]="inputContent"></textarea>
 </div>
-<div id="content" [ngStyle]="{'user-select':forbidCopy?'none':'auto' }" appMouseWheel
+<div id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy"
   (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMove)="mouseMove($event)"
   class="svg-content">
   <svg width="0" height="0" preserveAspectRatio="xMidYMid meet"></svg>
