@@ -3,7 +3,6 @@
   放大速率：<input class="parameter-input" type="number" placeholder="放大速率" [(ngModel)]="scaleSpeed">
   平移速率：<input class="parameter-input" type="number" placeholder="平移速率" [(ngModel)]="moveSpeed" />
   允许复制：<input type="checkbox" [(ngModel)]="forbidCopy" />
-  <!-- <mat-checkbox >禁用复制</mat-checkbox> -->
   <button [disabled]="svg===null" mat-raised-button (click)="resetSvg()">重置图形</button>
   <button [disabled]="svg===null" mat-raised-button (click)="convertInput()">生成图形</button>
   <button [disabled]="svg===null" mat-raised-button (click)="saveSvg()">保存图形</button>

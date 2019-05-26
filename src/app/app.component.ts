@@ -209,11 +209,13 @@ export class AppComponent implements AfterViewInit {
       })
       .attr('y', -5)
       .attr('dy', 10)
+      .attr('fill', 'black')
       .text((d) => {
         return d.data.name;
       });
     this.wrapWord(gs.selectAll('text'));
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
+    this.svg.attr('fill', 'white');
   }
   resetSvg() {
     this.viewBoxEndY = this.svgHeight;
@@ -247,7 +249,6 @@ export class AppComponent implements AfterViewInit {
       data: content
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
   mouseWheelUp(event) {// 放大
@@ -295,7 +296,9 @@ export class AppComponent implements AfterViewInit {
       .attr('title', 'test2')
       .attr('version', 1.1)
       .attr('xmlns', 'http://www.w3.org/2000/svg')
+      .attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY)
       .node().parentNode.innerHTML;
+
     const blob = new Blob([html], { type: 'image/svg+xml' });
     const svgUrl = URL.createObjectURL(blob);
     const downloadLink = document.createElement('a');
