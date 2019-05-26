@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
@@ -9,7 +9,7 @@ import { DialogDetailsComponent } from './dialog/dialog.component';
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'gd-app';
   content: string;
   inputContent = '';
@@ -28,7 +28,15 @@ export class AppComponent {
   lastClientX = 0;
   lastClientY = 0;
   forbidCopy = false;
-  constructor(public dialog: MatDialog) { }
+  @ViewChild('inputfile') inputfile: ElementRef;
+  constructor(public dialog: MatDialog) {
+  }
+  ngAfterViewInit() {
+
+  }
+  uploadFileClick() {
+    this.inputfile.nativeElement.click();
+  }
   processFiles(file) {
     file = file.target.files[0];
     if (file) {
