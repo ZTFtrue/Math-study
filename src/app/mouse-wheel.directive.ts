@@ -30,11 +30,9 @@ export class MouseWheelDirective {
   }
   @HostListener('mousedown', ['$event']) onMouseDown(event: any) {
     this.mouseDown.emit(event);
-    console.log(this.forbidCopy);
     if ((event.button === 0 && !this.forbidCopy) || event.button === 2 || event.button === 1) {
       this.elementMouseMove = true;
     }
-    console.log(event);
   }
   @HostListener('mouseleave', ['$event']) onMouseLeave(event: any) {
     // this.mouseWheelFunc(event);
@@ -46,7 +44,6 @@ export class MouseWheelDirective {
     this.elementMouseMove = false;
   }
   @HostListener('contextmenu', ['$event']) onContextMenu(event: any) {
-    console.log(event);
     event.preventDefault();
     // this.mouseUp.emit(event);
     // this.elementMouseMove = false;
