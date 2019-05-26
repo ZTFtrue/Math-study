@@ -296,7 +296,7 @@ export class AppComponent implements AfterViewInit {
       .attr('title', 'test2')
       .attr('version', 1.1)
       .attr('xmlns', 'http://www.w3.org/2000/svg')
-      .attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY)
+      .attr('viewBox', '0 0 ' + this.svgWidth + ' ' + this.svgHeight)
       .node().parentNode.innerHTML;
 
     const blob = new Blob([html], { type: 'image/svg+xml' });
