@@ -135,6 +135,7 @@ export class AppComponent implements AfterViewInit {
       d3.select('svg').remove();
       this.svg = d3.select('svg-content').append('svg');
     }
+    this.svg.attr('fill', 'white');
     this.svg.attr('width', this.lastClientX);
     this.svg.attr('height', this.lastClientY);
     const g = this.svg.append('g')
@@ -293,7 +294,7 @@ export class AppComponent implements AfterViewInit {
   }
   saveSvg() {
     const html = d3.select('svg')
-      .attr('title', 'test2')
+      .attr('title', 'math')
       .attr('version', 1.1)
       .attr('xmlns', 'http://www.w3.org/2000/svg')
       .attr('viewBox', '0 0 ' + this.svgWidth + ' ' + this.svgHeight)
