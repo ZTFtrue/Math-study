@@ -273,6 +273,7 @@ export class AppComponent implements AfterViewInit {
     this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   mouseMove(event) {
+    // 计算鼠标移动速度
     if (!this.svg) {
       return;
     }
