@@ -1,1 +1,8 @@
-<p>{{data}}</p>
+<!-- <button mat-raised-button (click)="closeDialog()">关闭</button> -->
+<h2 mat-dialog-title>{{ dataArrary[0]+' '}}: </h2>
+<mat-dialog-content>
+  <div id="mathContent" [innerHTML]="dataArrary[1]"></div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>关闭</button>
+</mat-dialog-actions>
