@@ -28,7 +28,7 @@ export class AppComponent implements AfterViewInit {
   lastClientX = 0;
   lastClientY = 0;
   forbidCopy = false;
-  @ViewChild('inputfile') inputfile: ElementRef;
+  @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
   constructor(public dialog: MatDialog) {
   }
   ngAfterViewInit() {
