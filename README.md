@@ -10,16 +10,16 @@ __数学各个方面的知识，包括和计算机相关的(没有习题)__ _这
 
 ## 运行方法
 
-1. 编辑math.gd
-2. npm install
-3. npm run start
-4. 浏览器打开[http://localhost:4200](http://localhost:4200)
-5. 输入math.gd的内容或者选择math.gd文件
+1. npm install
+2. npm run start
+3. 浏览器打开[http://localhost:4200](http://localhost:4200)
+4. 输入math.gd的内容或者选择math.gd文件
 
 ![eg](./img/img1.jpg)
+![eg](./img/img2.jpg)
 
 ## _未完成_
 
 1. 图需要优化距离和换行。
 2. 内容没有完成。
-3. 公式需要处理。
+3. SVG中的公式需要处理。
