@@ -30,10 +30,9 @@ export class DialogDetailsComponent implements AfterViewInit {
     MathJax.Hub.Config({
       showMathMenu: false,
       tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
-      menuSettings: { zoom: 'Double-Click', zscale: '150%' },
       CommonHTML: { linebreaks: { automatic: true } },
       'HTML-CSS': { linebreaks: { automatic: true } },
-      SVG: { linebreaks: { automatic: true } }
+      SVG: { linebreaks: { automatic: true } },
     });
   }
 }
