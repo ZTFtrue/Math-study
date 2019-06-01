@@ -247,7 +247,10 @@ export class AppComponent implements AfterViewInit {
   openDialog(content: string): void {
     const dialogRef = this.dialog.open(DialogDetailsComponent, {
       // width: '250px',
-      data: content
+      // height: '80%',
+      data: content,
+      autoFocus: false,
+      restoreFocus: false
     });
     dialogRef.afterClosed().subscribe(result => {
     });
