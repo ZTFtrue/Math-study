@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
 
