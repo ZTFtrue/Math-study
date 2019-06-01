@@ -45,12 +45,16 @@ export class AppComponent implements AfterViewInit {
       reader.readAsText(file, 'UTF-8');
       reader.onload = ((event: any) => {
         this.inputContent = event.target.result;
-        this.convertInput();
+        this.convertAndDraw();
       });
       reader.onerror = ((event) => {
         console.log(event);
       });
     }
+  }
+  convertAndDraw() {
+    this.convertInput();
+    this.drawSvg();
   }
   convertInput() {
     if (!this.inputContent) {
@@ -58,23 +62,8 @@ export class AppComponent implements AfterViewInit {
     }
     this.jsonTree = { name: '', children: [] };
     const contentArrary = this.inputContent.split('###');
-    let stringConfigs = contentArrary[0].split('\n');
-    stringConfigs = stringConfigs.filter((item) => {
-      return item.charAt(0) !== '#';
-    });
-    for (const config of stringConfigs) {
-      if (config.indexOf('svg-height') >= 0) {
-        this.svgHeight = parseFloat(config.split(':')[1]);
-        this.viewBoxEndY = this.svgHeight;
-      } else if (config.indexOf('svg-width') >= 0) {
-        this.svgWidth = parseFloat(config.split(':')[1]);
-        this.viewBoxEndX = this.svgWidth;
-      } else if (config.indexOf('node-height') >= 0) {
-        this.nodeHeight = parseFloat(config.split(':')[1]);
-      } else if (config.indexOf('node-width') >= 0) {
-        this.nodeWidth = parseFloat(config.split(':')[1]);
-      }
-    }
+    // 解析配置
+    this.compileConfig(contentArrary[0].split('\n'));
     const stringArrary = contentArrary[1].split('\n');
     const nodes = [0];
     if (stringArrary[0] === '') {
@@ -119,10 +108,22 @@ export class AppComponent implements AfterViewInit {
       lastIndex = i;
     }
     this.jsonTree = this.jsonTree.children[0];
-    this.draw();
   }
-
-  draw() {
+  compileConfig(stringConfigs: string[]) {
+    stringConfigs = stringConfigs.filter((item) => {
+      return item.charAt(0) !== '#';
+    });
+    for (const config of stringConfigs) {
+      if (config.indexOf('svg-height') >= 0) {
+        this.svgHeight = parseFloat(config.split(':')[1]);
+        this.viewBoxEndY = this.svgHeight;
+      } else if (config.indexOf('svg-width') >= 0) {
+        this.svgWidth = parseFloat(config.split(':')[1]);
+        this.viewBoxEndX = this.svgWidth;
+      }
+    }
+  }
+  drawSvg() {
     const content = d3.select('#content');
     this.lastClientX = parseFloat(content.style('width').replace('px', ''));
     this.lastClientY = parseFloat(content.style('height').replace('px', ''));
