@@ -8,6 +8,21 @@ __数学各个方面的知识，包括和计算机相关的(没有习题)__ _这
 
 滚轮缩放
 
+虽然可以通过配置，解决支持浏览器的问题，但是我暂时不想做。
+
+linux 用户可能会遇到如下问题
+
+```sh
+[12419:0602/204432.273114:FATAL:setuid_sandbox_host.cc(157)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that ./node_modules/electron/dist/chrome-sandbox is owned by root and has mode 4755.
+```
+
+暂时我没有找到好的解决办法,只好设置了一下权限。
+
+```sh
+sudo chown root your_path/node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 your_path/node_modules/electron/dist/chrome-sandbox
+```
+
 ## 运行方法
 
 1. npm install
