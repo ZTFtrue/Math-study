@@ -4,14 +4,14 @@
   平移速率：<input class="parameter-input" type="number" placeholder="平移速率" [(ngModel)]="moveSpeed" />
   允许复制：<input type="checkbox" [(ngModel)]="forbidCopy" />
   <button [disabled]="svg===null" mat-raised-button (click)="resetSvg()">重置图形</button>
-  <button [disabled]="svg===null" mat-raised-button (click)="relaodFile()" [hidden]="!fs">刷新文件</button>
   <button [disabled]="svg===null" mat-raised-button (click)="saveSvg()">保存图形</button>
+  <button [disabled]="svg===null" mat-raised-button (click)="relaodFile()">刷新文件</button>
   <button mat-raised-button (click)="uploadFileClick()">
     <input #inputfile style="display: none" type="file" (change)="processFiles($event)" accept="file/*,.gd">
     上传文件
   </button>
 </div>
-<div   id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy"
+<div id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy"
   (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMove)="mouseMove($event)"
   class="svg-content">
   <svg width="0" height="0" preserveAspectRatio="xMidYMid meet"></svg>

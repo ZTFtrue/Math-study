@@ -2,9 +2,6 @@ import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } fr
 import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
-import { app, BrowserWindow, screen } from 'electron';
-import * as path from 'path';
-import * as url from 'url';
 import * as fs from 'fs';
 @Component({
   selector: 'app-root',
@@ -38,10 +35,6 @@ export class AppComponent implements AfterViewInit {
     this.read();
   }
   read() {
-    if (!fs) {
-      console.log('no nodejs')
-      return;
-    }
     // 本地文件写入
     const filePath = JSON.parse(localStorage.getItem('path'));
     console.log(filePath);
