@@ -40,6 +40,9 @@ export class AppComponent implements AfterViewInit {
     // 本地文件写入
     const filePath = JSON.parse(localStorage.getItem('path'));
     console.log(filePath);
+    if (!filePath) {
+      return;
+    }
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) { return console.log(err); } else {
         this.inputContent = data;
