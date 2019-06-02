@@ -38,6 +38,10 @@ export class AppComponent implements AfterViewInit {
     this.read();
   }
   read() {
+    if (!fs) {
+      console.log('no nodejs')
+      return;
+    }
     // 本地文件写入
     const filePath = JSON.parse(localStorage.getItem('path'));
     console.log(filePath);

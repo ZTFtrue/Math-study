@@ -1,7 +1,6 @@
 import { app, BrowserWindow, screen } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
-import * as fs from 'fs';
 let win: BrowserWindow;
 let serve: boolean;
 const args = process.argv.slice(1);
@@ -24,15 +23,15 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
-
   if (serve) {
     require('electron-reload')(__dirname, {
-      electron: require(`${__dirname}/node_modules/electron`)
+
+      electron: require(`${__dirname.replace('dist', '')}/node_modules/electron`)
     });
     win.loadURL('http://localhost:4200');
   } else {
     win.loadURL(url.format({
-      pathname: path.join(__dirname, 'dist/index.html'),
+      pathname: path.join(__dirname.replace('dist', ''), 'dist/index.html'),
       protocol: 'file:',
       slashes: true
     }));

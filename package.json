@@ -1,7 +1,7 @@
 {
   "name": "gd-app",
   "version": "0.0.0",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
     "postinstall": "npm run postinstall:electron && electron-builder install-app-deps",
     "postinstall:web": "node postinstall-web",
