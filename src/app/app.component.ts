@@ -34,6 +34,9 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
   constructor(public dialog: MatDialog) {
   }
+  relaodFile() {
+    this.read();
+  }
   read() {
     // 本地文件写入
     const filePath = JSON.parse(localStorage.getItem('path'));
@@ -157,14 +160,13 @@ export class AppComponent implements AfterViewInit {
     this.svg = d3.select('svg');
     if (this.svg.attr('width') > 0) {
       d3.select('svg').remove();
-      this.svg = d3.select('svg-content').append('svg');
+      this.svg = content.append('svg');
     }
     this.svg.attr('fill', 'white');
     this.svg.attr('width', this.lastClientX);
     this.svg.attr('height', this.lastClientY);
     const g = this.svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
-
     // 创建一个hierarchy layout
     const hierarchyData = d3.hierarchy(this.jsonTree)
       .sum((d) => {
@@ -241,6 +243,8 @@ export class AppComponent implements AfterViewInit {
     this.wrapWord(gs.selectAll('text'));
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
     this.svg.attr('fill', 'white');
+    console.log(this.jsonTree);
+
   }
   resetSvg() {
     this.viewBoxEndY = this.svgHeight;
