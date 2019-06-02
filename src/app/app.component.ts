@@ -2,7 +2,9 @@ import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } fr
 import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
+import { app } from 'electron';
 import * as fs from 'fs';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
