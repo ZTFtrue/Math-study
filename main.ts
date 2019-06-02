@@ -23,6 +23,7 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
+
   if (serve) {
     require('electron-reload')(__dirname, {
 
@@ -31,7 +32,7 @@ function createWindow() {
     win.loadURL('http://localhost:4200');
   } else {
     win.loadURL(url.format({
-      pathname: path.join(__dirname.replace('dist', ''), 'dist/index.html'),
+      pathname: path.join(__dirname, 'gd-app/index.html'),
       protocol: 'file:',
       slashes: true
     }));
