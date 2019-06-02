@@ -2,7 +2,10 @@ import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } fr
 import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
-
+import { app, BrowserWindow, screen } from 'electron';
+import * as path from 'path';
+import * as url from 'url';
+import * as fs from 'fs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +14,7 @@ import { DialogDetailsComponent } from './dialog/dialog.component';
 })
 export class AppComponent implements AfterViewInit {
   title = 'gd-app';
-  content: string;
+  // content: string;
   inputContent = '';
   jsonTree = { name: '', children: [] };
   nodeWidth = 180;
@@ -31,8 +34,26 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
   constructor(public dialog: MatDialog) {
   }
-  ngAfterViewInit() {
+  read() {
+    // 本地文件写入
+    const filePath = JSON.parse(localStorage.getItem('path'));
+    console.log(filePath);
+    fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) { return console.log(err); } else {
+        this.inputContent = data;
+        this.convertAndDraw();
+      }
+    });
 
+    // fs.writeFile(filePath, 'electron + Javascript', (err) => {
+    //   if (!err) {
+    //     console.log('写入成功！');
+    //   }
+    // });
+
+  }
+  ngAfterViewInit() {
+    this.read();
   }
   uploadFileClick() {
     this.inputfile.nativeElement.click();
@@ -40,6 +61,8 @@ export class AppComponent implements AfterViewInit {
   processFiles(file) {
     file = file.target.files[0];
     if (file) {
+      console.log(file.path);
+      localStorage.setItem('path', JSON.stringify(file.path));
       console.log('只支持UTF-8');
       const reader = new FileReader();
       reader.readAsText(file, 'UTF-8');
