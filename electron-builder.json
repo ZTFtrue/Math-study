@@ -1,5 +1,5 @@
 {
-  "productName": "angular-electron",
+  "productName": "gd-app-electron",
   "directories": {
     "output": "release/"
   },

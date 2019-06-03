@@ -281,8 +281,8 @@ export class AppComponent implements AfterViewInit {
       // width: '250px',
       // height: '80%',
       data: content,
-      // autoFocus: false,
-      // restoreFocus: false
+      autoFocus: false,
+      restoreFocus: false
     });
     dialogRef.afterClosed().subscribe(result => {
     });
