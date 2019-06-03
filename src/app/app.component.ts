@@ -28,7 +28,7 @@ export class AppComponent implements AfterViewInit {
   scaleSpeed = 100;
   moveSpeed = 35;
   lastClientX = 0;
-  lastClientY = 0;
+  lastClientY = -1;
   forbidCopy = false;
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
   constructor(public dialog: MatDialog) {
@@ -39,9 +39,8 @@ export class AppComponent implements AfterViewInit {
   read() {
     // 本地文件写入
     const filePath = JSON.parse(localStorage.getItem('path'));
-    console.log(filePath);
     if (!filePath) {
-      return;
+      return console.log('no file');
     }
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) { return console.log(err); } else {
@@ -59,6 +58,14 @@ export class AppComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     this.read();
+
+    window.onresize = ((event) => {
+      const content = d3.select('#content');
+      if (this.svg) {
+        this.svg.attr('width', parseFloat(content.style('width').replace('px', '')));
+        this.svg.attr('height', parseFloat(content.style('height').replace('px', '')));
+      }
+    });
   }
   uploadFileClick() {
     this.inputfile.nativeElement.click();
@@ -153,9 +160,6 @@ export class AppComponent implements AfterViewInit {
   }
   drawSvg() {
     const content = d3.select('#content');
-    this.lastClientX = parseFloat(content.style('width').replace('px', ''));
-    this.lastClientY = parseFloat(content.style('height').replace('px', ''));
-
     // 定义边界
     const marge = { top: 50, bottom: 0, left: 10, right: 0 };
 
@@ -165,8 +169,8 @@ export class AppComponent implements AfterViewInit {
       this.svg = content.append('svg');
     }
     this.svg.attr('fill', 'white');
-    this.svg.attr('width', this.lastClientX);
-    this.svg.attr('height', this.lastClientY);
+    this.svg.attr('width', parseFloat(content.style('width').replace('px', '')));
+    this.svg.attr('height', parseFloat(content.style('height').replace('px', '')));
     const g = this.svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
     // 创建一个hierarchy layout
@@ -308,6 +312,11 @@ export class AppComponent implements AfterViewInit {
   mouseMove(event) {
     // 计算鼠标移动速度
     if (!this.svg) {
+      return;
+    }
+    if (this.lastClientY === -1) {// Y 不可能为-1
+      this.lastClientX = event.clientX;
+      this.lastClientY = event.clientY;
       return;
     }
     const x = this.lastClientX - event.clientX;
