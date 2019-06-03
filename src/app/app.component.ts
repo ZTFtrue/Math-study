@@ -249,8 +249,6 @@ export class AppComponent implements AfterViewInit {
     this.wrapWord(gs.selectAll('text'));
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
     this.svg.attr('fill', 'white');
-    console.log(this.jsonTree);
-
   }
   resetSvg() {
     this.viewBoxEndY = this.svgHeight;
