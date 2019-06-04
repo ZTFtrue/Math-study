@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
@@ -32,8 +32,7 @@ export class AppComponent implements AfterViewInit {
   lastClientY = -1;
   forbidCopy = false;
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
-  @ViewChild('temp_math', { static: true }) tempMathContent: ElementRef;
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private renderer: Renderer2, private el: ElementRef) {
   }
   relaodFile() {
     this.read();
@@ -92,9 +91,6 @@ export class AppComponent implements AfterViewInit {
       extensions: ['mml2jax.js', 'MathEvents.js'],
       MathML: {
         extensions: ['content-mathml.js']
-      },
-      menuSettings: {
-        zoom: 'Click'
       },
       MatchWebFonts: {
         matchFor: {
@@ -322,16 +318,14 @@ export class AppComponent implements AfterViewInit {
       }
       const lineHigth = -5;
       // if (words[0].indexOf('$$') >= 0) {
-      //   tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(words[0]);
-      // vm.tempMathContent.nativeElement.innerHTML = words[0];
-      // MathJax.Hub.Queue(['setRenderer', MathJax.Hub, 'SVG'], ['Typeset', MathJax.Hub, 'content'], () => {
-      // const mathSvg = vm.tempMathContent.nativeElement;
-      // console.log(mathSvg);
-      // d3.select(this).append(() => {
-      //   return mathSvg;
-      // });
-      // .attr('x', 10).attr('y', lineHigth);
-      // });
+      //   const temp = vm.renderer.createElement('div');
+      //   temp.innerHTML = words[0];
+      //   MathJax.Hub.Queue(['setRenderer', MathJax.Hub, 'SVG'], ['Typeset', MathJax.Hub, temp], () => {
+      //     d3.select(this).append(() => {
+      //       return temp;
+      //     });
+      //     // .attr('x', 10).attr('y', lineHigth);
+      //   });
       // } else {
       tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(words[0]);
       // }
