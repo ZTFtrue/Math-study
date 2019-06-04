@@ -18,10 +18,60 @@ export class DialogDetailsComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
+    this.loadMathConfig();
     this.renderMath();
   }
 
   renderMath() {
-    MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'mathContent']);
+    MathJax.Hub.Queue(['setRenderer', MathJax.Hub, 'SVG'], ['Typeset', MathJax.Hub, 'mathContent']);
   }
+  loadMathConfig() {
+    MathJax.Hub.Config({
+      showMathMenu: false,
+      tex2jax: {
+        inlineMath: [
+          ['$', '$']
+        ],
+        displayMath: [
+          ['$$', '$$']
+        ]
+      },
+      CommonHTML: {
+        linebreaks: {
+          automatic: true
+        }
+      },
+      'HTML-CSS': {
+        linebreaks: {
+          automatic: true
+        }
+      },
+      SVG: {
+        linebreaks: {
+          automatic: true
+        },
+        mtextFontInherit: true,
+        blacker: 1,
+      },
+      // extensions: ['tex2jax.js', 'TeX/AMSmath.js'],
+      // jax: ['input/TeX', 'output/SVG'],
+      jax: ['input/MathML', 'output/SVG'],
+      extensions: ['mml2jax.js', 'MathEvents.js'],
+      MathML: {
+        extensions: ['content-mathml.js']
+      },
+      menuSettings: {
+        zoom: 'Click'
+      },
+      MatchWebFonts: {
+        matchFor: {
+          SVG: true
+        },
+        fontCheckDelay: 500,
+        fontCheckTimeout: 15 * 1000
+      },
+      messageStyle: 'none'
+    });
+  }
+
 }

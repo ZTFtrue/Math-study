@@ -10,6 +10,7 @@
     <input #inputfile style="display: none" type="file" (change)="processFiles($event)" accept="file/*,.gd">
     上传文件
   </button>
+  <div #temp_math id="temp_math"></div>
 </div>
 <div id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy"
   (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMove)="mouseMove($event)"

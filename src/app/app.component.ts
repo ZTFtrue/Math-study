@@ -4,6 +4,7 @@ import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
 import { app } from 'electron';
 import * as fs from 'fs';
+declare var MathJax: any;
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ export class AppComponent implements AfterViewInit {
   lastClientY = -1;
   forbidCopy = false;
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
+  @ViewChild('temp_math', { static: true }) tempMathContent: ElementRef;
   constructor(public dialog: MatDialog) {
   }
   relaodFile() {
@@ -56,7 +58,56 @@ export class AppComponent implements AfterViewInit {
     // });
 
   }
+  loadMathConfig() {
+    MathJax.Hub.Config({
+      showMathMenu: false,
+      tex2jax: {
+        inlineMath: [
+          ['$', '$']
+        ],
+        displayMath: [
+          ['$$', '$$']
+        ]
+      },
+      CommonHTML: {
+        linebreaks: {
+          automatic: true
+        }
+      },
+      'HTML-CSS': {
+        linebreaks: {
+          automatic: true
+        }
+      },
+      SVG: {
+        linebreaks: {
+          automatic: true
+        },
+        mtextFontInherit: true,
+        blacker: 1,
+      },
+      // extensions: ['tex2jax.js', 'TeX/AMSmath.js'],
+      // jax: ['input/TeX', 'output/SVG'],
+      jax: ['input/MathML', 'output/SVG'],
+      extensions: ['mml2jax.js', 'MathEvents.js'],
+      MathML: {
+        extensions: ['content-mathml.js']
+      },
+      menuSettings: {
+        zoom: 'Click'
+      },
+      MatchWebFonts: {
+        matchFor: {
+          SVG: true
+        },
+        fontCheckDelay: 500,
+        fontCheckTimeout: 15 * 1000
+      },
+      messageStyle: 'none'
+    });
+  }
   ngAfterViewInit() {
+    this.loadMathConfig();
     this.read();
 
     window.onresize = ((event) => {
@@ -270,10 +321,20 @@ export class AppComponent implements AfterViewInit {
         });
       }
       const lineHigth = -5;
-      for (const word of words) {
-        tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(word);
-        break;
-      }
+      // if (words[0].indexOf('$$') >= 0) {
+      //   tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(words[0]);
+      // vm.tempMathContent.nativeElement.innerHTML = words[0];
+      // MathJax.Hub.Queue(['setRenderer', MathJax.Hub, 'SVG'], ['Typeset', MathJax.Hub, 'content'], () => {
+      // const mathSvg = vm.tempMathContent.nativeElement;
+      // console.log(mathSvg);
+      // d3.select(this).append(() => {
+      //   return mathSvg;
+      // });
+      // .attr('x', 10).attr('y', lineHigth);
+      // });
+      // } else {
+      tspan = text.append('tspan').attr('x', 10).attr('y', lineHigth).text(words[0]);
+      // }
     });
   }
   openDialog(content: string): void {
