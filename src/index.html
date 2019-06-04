@@ -9,7 +9,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script type="text/javascript" crossorigin
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=default"></script>
+  <script>
+    function loadMathConfig() {
+      MathJax.Hub.Config({
+        showMathMenu: false,
+        tex2jax: {
+          inlineMath: [
+            ['$', '$']
+          ],
+          displayMath: [
+            ['$$', '$$']
+          ]
+        },
+        CommonHTML: {
+          linebreaks: {
+            automatic: true
+          }
+        },
+        'HTML-CSS': {
+          linebreaks: {
+            automatic: true
+          }
+        },
+        SVG: {
+          linebreaks: {
+            automatic: true
+          }
+        },
+        extensions: ['tex2jax.js', 'TeX/AMSmath.js'],
+        jax: ['input/TeX', 'output/SVG'],
+      });
+    }
+    loadMathConfig();
+
+  </script>
 </head>
 
 <body>

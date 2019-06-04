@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-// import { MathJax } from 'mathjax';
 declare var MathJax: any;
 
 @Component({
@@ -19,20 +18,10 @@ export class DialogDetailsComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    this.loadMathConfig();
     this.renderMath();
   }
 
   renderMath() {
-    MathJax.Hub.Queue(['Typeset', MathJax.Hub], 'mathContent');
-  }
-  loadMathConfig() {
-    MathJax.Hub.Config({
-      showMathMenu: false,
-      tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] },
-      CommonHTML: { linebreaks: { automatic: true } },
-      'HTML-CSS': { linebreaks: { automatic: true } },
-      SVG: { linebreaks: { automatic: true } },
-    });
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'mathContent']);
   }
 }
