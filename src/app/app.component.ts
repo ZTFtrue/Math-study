@@ -215,6 +215,12 @@ export class AppComponent implements AfterViewInit {
       d3.select('svg').remove();
       this.svg = content.append('svg');
     }
+    this.svg.append('rect')
+      .attr('x', 0)
+      .attr('y', 0)
+      .attr('width', this.svgWidth)
+      .attr('height', this.svgHeight)
+      .attr('fill', 'white');
     this.svg.attr('fill', 'white');
     this.svg.attr('width', parseFloat(content.style('width').replace('px', '')));
     this.svg.attr('height', parseFloat(content.style('height').replace('px', '')));
@@ -300,6 +306,8 @@ export class AppComponent implements AfterViewInit {
   resetSvg() {
     this.viewBoxEndY = this.svgHeight;
     this.viewBoxEndX = this.svgWidth;
+    this.lastClientX = -1;
+    this.lastClientY = -1;
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   wrapWord(texts: any) {
@@ -389,13 +397,13 @@ export class AppComponent implements AfterViewInit {
     this.lastClientY = event.clientY;
   }
   saveSvg() {
+    this.resetSvg();
     const html = d3.select('svg')
       .attr('title', 'math')
       .attr('version', 1.1)
       .attr('xmlns', 'http://www.w3.org/2000/svg')
-      .attr('viewBox', '0 0 ' + this.svgWidth + ' ' + this.svgHeight)
+      // .attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY)
       .node().parentNode.innerHTML;
-
     const blob = new Blob([html], { type: 'image/svg+xml' });
     const svgUrl = URL.createObjectURL(blob);
     const downloadLink = document.createElement('a');
