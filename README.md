@@ -44,3 +44,7 @@ sudo sysctl kernel.unprivileged_userns_clone=1
 1. 图需要优化距离和换行。
 2. 内容没有完成。
 3. SVG中的公式需要处理。
+
+## 问题
+
+  1. 关闭掉optimization才可以显示数学公式
