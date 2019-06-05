@@ -44,8 +44,8 @@ Math
 
   集合:  基本的数学概念，它是集合论的研究对象，指具有某种特定性质的事物的总体，（在最原始的集合论─朴素集合论─中的定义，集合就是“一堆东西”。）集合里的事物（“东西”），叫作元素。若然 {\displaystyle x} x是集合 {\displaystyle A} A的元素，记作 {\displaystyle x\in A} x\in A。   简单来说，所谓的一个集合，就是将数个对象归类而分成为一个或数个形态各异的大小整体。 一般来讲，集合是具有某种特性的事物的整体，或是一些确认对象的汇集。构成集合的事物或对象称作元素或是成员。集合的元素可以是任何事物，可以是人，可以是物，也可以是字母或数字等。在数学交流当中为了方便，集合会有一些别名。比如：族、系　通常指它的元素也是一些集合。
     符号
-      元素  通常用 {\displaystyle a,\ b,\ c,\ d,\ x} a,\ b,\ c,\ d,\ x等小写字母来表示；
-      集合  通常用 {\displaystyle \mathbf {A,\ B,\ C,\ D,\ X} } \mathbf{A,\ B,\ C,\ D,\ X}等大写字母来表示。当元素 {\displaystyle a} a属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\in \mathbf {A} } a\in\mathbf{A}。当元素 {\displaystyle a} a不属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\not \in \mathbf {A} } a\not \in\mathbf{A}。如果 {\displaystyle \mathbf {A,\ B} } \mathbf{A ,\ B}两个集合所包含的元素完全一样，则二者相等，写作 {\displaystyle \mathbf {A=B} } \mathbf{A = B}。
+      元素  通常用 ${\displaystyle a,\ b,\ c,\ d,\ x} a,\ b,\ c,\ d,\ x$等小写字母来表示；
+      集合  通常用 ${\displaystyle \mathbf {A,\ B,\ C,\ D,\ X} } \mathbf{A,\ B,\ C,\ D,\ X}$等大写字母来表示。当元素 {\displaystyle a} a属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\in \mathbf {A} } a\in\mathbf{A}。当元素 {\displaystyle a} a不属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\not \in \mathbf {A} } a\not \in\mathbf{A}。如果 {\displaystyle \mathbf {A,\ B} } \mathbf{A ,\ B}两个集合所包含的元素完全一样，则二者相等，写作 {\displaystyle \mathbf {A=B} } \mathbf{A = B}。
     集合的特性
       无序性  一个集合中，每个元素的地位都是相同的，元素之间是无序的。集合上可以定义序关系，定义了序关系后，元素之间就可以按照序关系排序。但就集合本身的特性而言，元素之间没有必然的序
       互异性  一个集合中，任何两个元素都认为是不相同的，即每个元素只能出现一次。有时需要对同一元素出现多次的情形进行刻画，可以使用多重集，其中的元素允许出现多次。
@@ -81,9 +81,9 @@ Math
   极限
     数列的极限(描述性定义)  对于数列  $$\{a_n\}$$ ，当n无线增大时，如果 $$\{a_n\}$$  无限接近于一个确定的常数A，那么称A是数列  $$\{a_n\}$$  的极限，或者称数列  $$\{a_n\}$$  收敛于A。记为  $$lim(n→∞)\{a_n\} =A $$, 或者 $$ a_n → A（n→∞) $$, 如果 $$ \{a_n\} $$ 没有极限,则称数列 $$ \{a_n\} $$ 发散。      1. 如果数列有极限，则数列的极限是唯一的。      2. 一般地，任一常数数列的极限是常数本身，$$ lim(n→∞)C=C $$。
     函数的极限
-      当$$ x→∞ $$
-        当自变量x取正值且无限增大(记为$$x→+∞$$)时，函数值f(x)无限接近于一个确定常数A，那么A称为函数f(x)当$$x→+∞$$时的极限，记为$$lim(x→∞)f(x) =A $$或 $$ f(x) → A（x→∞) $$.
-        类似的，当x取负值且$$|x|$$无限增大(记为$$ x→-∞ $$) ,函数值f(x)无限接近于一个确定常数A，那么A称为函数f(x)当$$x→-∞$$时的极限，记为$$lim(x→-∞)f(x) =A $$或 $$ f(x) → A（x→-∞) $$.
+      当x→∞
+        当自变量x取正值且无限增大(记为x→+∞)时  函数值f(x)无限接近于一个确定常数A，那么A称为函数f(x)当$$x→+∞$$时的极限，记为$$lim(x→∞)f(x) =A $$或 $$ f(x) → A（x→∞) $$.
+        当x取负值且|x|无限增大(记为 x→-∞)  函数值f(x)无限接近于一个确定常数A，那么A称为函数f(x)当$$x→-∞$$时的极限，记为$$lim(x→-∞)f(x) =A $$或 $$ f(x) → A（x→-∞) $$.
         $$ |x|→∞$$记为$$记为$$ x→∞ $$ . $$ x→∞ $$ 时，相应的函数值f(x)无限接近于一个确定常数A，那么A称为函数f(x)当$$ x→∞ $$时的极限，记为记为$$lim(x→∞)f(x) =A $$或 $$ f(x) → A（x→∞) $$. 函数$$y=(x+1)/x$$的x 无限增大极限为1，而$$ y=(1/2)^x $$ 不存在。
         当且仅当$$ lim(x→+∞)f(x)  $$ 和 $$ lim(x→-∞)f(x) $$ 都存在且相等，则 $$lim(x→∞)f(x)$$ 存在，即$$lim(x→∞)f(x) = A <=> lim(x→+∞)f(x) = lim(x→-∞)f(x)= A $$
       当$$ x→x_0 $$
