@@ -24,7 +24,6 @@ export class DialogDetailsComponent implements AfterViewInit {
   }
 
   renderMath() {
-    console.log('stat render');
     this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'SVG'], ['Typeset', this.mathJaxObject.Hub, 'mathContent']);
   }
   loadMathConfig() {
