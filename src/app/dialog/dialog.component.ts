@@ -24,7 +24,7 @@ export class DialogDetailsComponent implements AfterViewInit {
   }
 
   renderMath() {
-    this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'SVG'], ['Typeset', this.mathJaxObject.Hub, 'mathContent']);
+    this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'CommonHTML'], ['Typeset', this.mathJaxObject.Hub, 'mathContent']);
   }
   loadMathConfig() {
     this.mathJaxObject.Hub.Config({
@@ -62,7 +62,7 @@ export class DialogDetailsComponent implements AfterViewInit {
         extensions: ['content-mathml.js']
       },
       menuSettings: {
-        zoom: 'Click'
+        zoom: 'None'
       },
       MatchWebFonts: {
         matchFor: {
