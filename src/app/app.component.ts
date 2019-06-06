@@ -26,8 +26,8 @@ export class AppComponent implements AfterViewInit {
   viewBoxStartY = 0;
   viewBoxEndX = 1000;
   viewBoxEndY = 10000;
-  scaleSpeed = 100;
-  moveSpeed = 35;
+  scaleSpeed = 150;
+  moveSpeed = 40;
   lastClientX = 0;
   lastClientY = -1;
   forbidCopy = false;
@@ -44,7 +44,9 @@ export class AppComponent implements AfterViewInit {
       return console.log('no file');
     }
     fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) { return console.log(err); } else {
+      if (err) {
+        return console.log(err);
+      } else {
         this.inputContent = data;
         this.convertAndDraw();
       }
@@ -117,7 +119,7 @@ export class AppComponent implements AfterViewInit {
   uploadFileClick() {
     this.inputfile.nativeElement.click();
   }
-  processFiles(file) {
+  processFiles(file: any): void {
     file = file.target.files[0];
     if (file) {
       console.log(file.path);
@@ -183,8 +185,18 @@ export class AppComponent implements AfterViewInit {
       } else if (lastIndex !== 0 && lastIndex === i) {
         nodes[spaceIndex] = nodes[spaceIndex] + 1;
       }
-      for (let j = 0; j < spaceIndex; j++) {
-        jsonchildren = jsonchildren.children[nodes[j]];
+      if (s.charAt(0) === '@') {
+        for (let j = 0; j < spaceIndex; j++) {
+          jsonchildren = jsonchildren.children[nodes[j]];
+          if (j === spaceIndex - 1) {
+            jsonchildren.name = jsonchildren.name + '\n' + s.substring(1, s.length);
+            break;
+          }
+        }
+      } else {
+        for (let j = 0; j < spaceIndex; j++) {
+          jsonchildren = jsonchildren.children[nodes[j]];
+        }
       }
       jsonchildren.children.push({ name: s, children: [] });
       lastIndex = i;
