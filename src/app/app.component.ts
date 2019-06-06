@@ -26,8 +26,8 @@ export class AppComponent implements AfterViewInit {
   viewBoxStartY = 0;
   viewBoxEndX = 1000;
   viewBoxEndY = 10000;
-  scaleSpeed = 150;
-  moveSpeed = 40;
+  scaleSpeed = 200;
+  moveSpeed = 50;
   lastClientX = 0;
   lastClientY = -1;
   forbidCopy = false;
@@ -189,6 +189,7 @@ export class AppComponent implements AfterViewInit {
         for (let j = 0; j < spaceIndex; j++) {
           jsonchildren = jsonchildren.children[nodes[j]];
           if (j === spaceIndex - 1) {
+            console.log(s);
             jsonchildren.name = jsonchildren.name + '\n' + s.substring(1, s.length);
             break;
           }
@@ -197,8 +198,10 @@ export class AppComponent implements AfterViewInit {
         for (let j = 0; j < spaceIndex; j++) {
           jsonchildren = jsonchildren.children[nodes[j]];
         }
+        if (jsonchildren) {
+          jsonchildren.children.push({ name: s, children: [] });
+        }
       }
-      jsonchildren.children.push({ name: s, children: [] });
       lastIndex = i;
     }
     this.jsonTree = this.jsonTree.children[0];
