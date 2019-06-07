@@ -1,7 +1,7 @@
 <!-- <button mat-raised-button (click)="closeDialog()">关闭</button> -->
 <h2 mat-dialog-title>{{ dataArrary[0]+' '}}: </h2>
 <mat-dialog-content>
-  <div id="mathContent">
+  <div id="mathContent" [hidden]="!renderFinish">
     <p *ngFor="let item of dataArrary;let i = index"  [hidden]="i===0">{{item}}</p>
   </div>
 </mat-dialog-content>

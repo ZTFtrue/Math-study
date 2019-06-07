@@ -9,6 +9,7 @@ import { ConfigService } from '../config.service';
 export class DialogDetailsComponent implements AfterViewInit {
   dataArrary;
   mathJaxObject;
+  renderFinish = false;
   constructor(public dialogRef: MatDialogRef<DialogDetailsComponent>,
     // tslint:disable-next-line: align
     @Inject(MAT_DIALOG_DATA) public data: string, public cs: ConfigService, public detector: NgZone) {
@@ -26,6 +27,7 @@ export class DialogDetailsComponent implements AfterViewInit {
   renderMath() {
     this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'CommonHTML'],
       ['Typeset', this.mathJaxObject.Hub, 'mathContent'], () => {
+        this.detector.run(() => { this.renderFinish = true; })
       });
   }
   loadMathConfig() {
