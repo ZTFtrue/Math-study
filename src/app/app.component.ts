@@ -189,6 +189,7 @@ export class AppComponent implements AfterViewInit {
         for (let j = 0; j < spaceIndex; j++) {
           jsonchildren = jsonchildren.children[nodes[j]];
           if (j === spaceIndex - 1) {
+            nodes[spaceIndex] = nodes[spaceIndex] - 1;
             jsonchildren.name = jsonchildren.name + '\n' + s.substring(1, s.length);
             break;
           }
@@ -197,9 +198,7 @@ export class AppComponent implements AfterViewInit {
         for (let j = 0; j < spaceIndex; j++) {
           jsonchildren = jsonchildren.children[nodes[j]];
         }
-        if (jsonchildren) {
-          jsonchildren.children.push({ name: s, children: [] });
-        }
+        jsonchildren.children.push({ name: s, children: [] });
       }
       lastIndex = i;
     }
