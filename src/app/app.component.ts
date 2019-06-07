@@ -189,7 +189,6 @@ export class AppComponent implements AfterViewInit {
         for (let j = 0; j < spaceIndex; j++) {
           jsonchildren = jsonchildren.children[nodes[j]];
           if (j === spaceIndex - 1) {
-            console.log(s);
             jsonchildren.name = jsonchildren.name + '\n' + s.substring(1, s.length);
             break;
           }
