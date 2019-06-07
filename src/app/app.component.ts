@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, AfterViewInit, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import * as d3 from 'd3';
 import { DialogDetailsComponent } from './dialog/dialog.component';
@@ -12,7 +12,7 @@ declare var MathJax: any;
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'gd-app';
   // content: string;
   inputContent = '';
@@ -31,11 +31,38 @@ export class AppComponent implements AfterViewInit {
   lastClientX = 0;
   lastClientY = -1;
   forbidCopy = false;
+  useBrowser = false;
   @ViewChild('inputfile', { static: true }) inputfile: ElementRef;
+  @ViewChild('svgContent', { static: true }) svgContent: ElementRef;
+
   constructor(public dialog: MatDialog, private renderer: Renderer2, private el: ElementRef) {
   }
   relaodFile() {
     this.read();
+  }
+  ngOnInit(): void {
+    this.useBrowser = JSON.parse(localStorage.getItem('useBrowser'));
+    if (this.useBrowser) {
+        this.forbidCopy = true;
+    } else {
+        this.forbidCopy = false;
+    }
+  }
+  changeuseBrowser() {
+    localStorage.setItem('useBrowser', JSON.stringify(this.useBrowser));
+    if (this.useBrowser) {
+      if (this.svg) {
+        this.forbidCopy = true;
+        this.svg.attr('width', this.svgWidth);
+        this.svg.attr('height', this.svgHeight);
+        this.svg.attr('viewBox', '0 0 ' + this.svgWidth + ' ' + this.svgHeight);
+      }
+    } else {
+      if (this.svg) {
+        this.forbidCopy = false;
+        this.resetSvg();
+      }
+    }
   }
   read() {
     // 本地文件写入
@@ -59,60 +86,12 @@ export class AppComponent implements AfterViewInit {
     // });
 
   }
-  loadMathConfig() {
-    MathJax.Hub.Config({
-      showMathMenu: false,
-      tex2jax: {
-        inlineMath: [
-          ['$', '$']
-        ],
-        displayMath: [
-          ['$$', '$$']
-        ]
-      },
-      CommonHTML: {
-        linebreaks: {
-          automatic: true
-        }
-      },
-      'HTML-CSS': {
-        linebreaks: {
-          automatic: true
-        }
-      },
-      SVG: {
-        linebreaks: {
-          automatic: true
-        },
-        mtextFontInherit: true,
-        blacker: 1,
-      },
-      // extensions: ['tex2jax.js', 'TeX/AMSmath.js'],
-      // jax: ['input/TeX', 'output/SVG'],
-      jax: ['input/MathML', 'output/SVG'],
-      extensions: ['mml2jax.js', 'MathEvents.js'],
-      MathML: {
-        extensions: ['content-mathml.js']
-      },
-      MatchWebFonts: {
-        matchFor: {
-          SVG: true
-        },
-        fontCheckDelay: 500,
-        fontCheckTimeout: 15 * 1000
-      },
-      messageStyle: 'none'
-    });
-  }
   ngAfterViewInit() {
-    this.loadMathConfig();
     this.read();
-
     window.onresize = ((event) => {
-      const content = d3.select('#content');
-      if (this.svg) {
-        this.svg.attr('width', parseFloat(content.style('width').replace('px', '')));
-        this.svg.attr('height', parseFloat(content.style('height').replace('px', '')));
+      if (this.svg && !this.useBrowser) {
+        this.svg.attr('width', this.svgContent.nativeElement.offsetWidth);
+        this.svg.attr('height', this.svgContent.nativeElement.offsetHeight);
       }
     });
   }
@@ -235,8 +214,13 @@ export class AppComponent implements AfterViewInit {
       .attr('height', this.svgHeight)
       .attr('fill', 'white');
     this.svg.attr('fill', 'white');
-    this.svg.attr('width', parseFloat(content.style('width').replace('px', '')));
-    this.svg.attr('height', parseFloat(content.style('height').replace('px', '')));
+    if (this.useBrowser) {
+      this.svg.attr('width', this.svgWidth);
+      this.svg.attr('height', this.svgHeight);
+    } else {
+      this.svg.attr('width', this.svgContent.nativeElement.offsetWidth);
+      this.svg.attr('height', this.svgContent.nativeElement.offsetHeight);
+    }
     const g = this.svg.append('g')
       .attr('transform', 'translate(' + marge.top + ',' + marge.left + ')');
     // 创建一个hierarchy layout
@@ -317,10 +301,15 @@ export class AppComponent implements AfterViewInit {
     this.svg.attr('fill', 'white');
   }
   resetSvg() {
+    if (this.useBrowser) {
+      return;
+    }
     this.viewBoxEndY = this.svgHeight;
     this.viewBoxEndX = this.svgWidth;
     this.lastClientX = -1;
     this.lastClientY = -1;
+    this.svg.attr('width', this.svgContent.nativeElement.offsetWidth);
+    this.svg.attr('height', this.svgContent.nativeElement.offsetHeight);
     this.svg.attr('viewBox', '0 0 ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
   }
   wrapWord(texts: any) {
@@ -408,6 +397,10 @@ export class AppComponent implements AfterViewInit {
     this.svg.attr('viewBox', this.viewBoxStartX + ' ' + this.viewBoxStartY + ' ' + this.viewBoxEndX + ' ' + this.viewBoxEndY);
     this.lastClientX = event.clientX;
     this.lastClientY = event.clientY;
+  }
+  mouseMoveEnd(event) {
+    this.lastClientX = -1;
+    this.lastClientY = -1;
   }
   saveSvg() {
     this.resetSvg();

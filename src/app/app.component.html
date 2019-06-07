@@ -3,6 +3,7 @@
   放大速率：<input class="parameter-input" type="number" placeholder="放大速率" [(ngModel)]="scaleSpeed">
   平移速率：<input class="parameter-input" type="number" placeholder="平移速率" [(ngModel)]="moveSpeed" />
   允许复制：<input type="checkbox" [(ngModel)]="forbidCopy" />
+  使用浏览器控制移动：<input type="checkbox" [(ngModel)]="useBrowser" (change)="changeuseBrowser()"/>
   <button [disabled]="svg===null" mat-raised-button (click)="resetSvg()">重置图形</button>
   <button [disabled]="svg===null" mat-raised-button (click)="saveSvg()">保存图形</button>
   <button [disabled]="svg===null" mat-raised-button (click)="relaodFile()">刷新文件</button>
@@ -12,8 +13,8 @@
   </button>
   <div *ngIf="!inputContent">没有文件记录</div>
 </div>
-<div id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy"
-  (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMove)="mouseMove($event)"
+<div #svgContent id="content" [ngStyle]="{'user-select':!forbidCopy?'none':'auto' }" appMouseWheel [forbidCopy]="forbidCopy" [useBrowser]="useBrowser"
+  (mouseWheelUp)="mouseWheelUp($event)" (mouseWheelDown)="mouseWheelDown($event)" (mouseMoveEnd)="mouseMoveEnd($event)" (mouseMove)="mouseMove($event)"
   class="svg-content">
   <svg width="0" height="0" preserveAspectRatio="xMidYMid meet"></svg>
 </div>
