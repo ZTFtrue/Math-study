@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject } from '@angular/core';
+import { AfterViewInit, Component, Inject, NgZone } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ConfigService } from '../config.service';
 @Component({
@@ -11,7 +11,7 @@ export class DialogDetailsComponent implements AfterViewInit {
   mathJaxObject;
   constructor(public dialogRef: MatDialogRef<DialogDetailsComponent>,
     // tslint:disable-next-line: align
-    @Inject(MAT_DIALOG_DATA) public data: string, public cs: ConfigService) {
+    @Inject(MAT_DIALOG_DATA) public data: string, public cs: ConfigService, public detector: NgZone) {
     this.dataArrary = data.split('\n');
   }
 
@@ -24,7 +24,9 @@ export class DialogDetailsComponent implements AfterViewInit {
   }
 
   renderMath() {
-    this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'CommonHTML'], ['Typeset', this.mathJaxObject.Hub, 'mathContent']);
+    this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'CommonHTML'],
+      ['Typeset', this.mathJaxObject.Hub, 'mathContent'], () => {
+      });
   }
   loadMathConfig() {
     this.mathJaxObject.Hub.Config({
@@ -74,5 +76,7 @@ export class DialogDetailsComponent implements AfterViewInit {
       messageStyle: 'none'
     });
   }
-
+  closeDialog() {
+    this.detector.run(() => { this.dialogRef.close(); });
+  }
 }
