@@ -27,7 +27,7 @@ export class DialogDetailsComponent implements AfterViewInit {
   renderMath() {
     this.mathJaxObject.Hub.Queue(['setRenderer', this.mathJaxObject.Hub, 'CommonHTML'],
       ['Typeset', this.mathJaxObject.Hub, 'mathContent'], () => {
-        this.detector.run(() => { this.renderFinish = true; })
+        this.detector.run(() => { this.renderFinish = true; });
       });
   }
   loadMathConfig() {
