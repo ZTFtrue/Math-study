@@ -47,8 +47,8 @@ Math
     @ 集合里的事物（“东西”），叫作元素。$x$是集合$A$的元素，记作 $x\in A$。
     @ 简单来说，所谓的一个集合，就是将数个对象归类而分成为一个或数个形态各异的大小整体。 一般来讲，集合是具有某种特性的事物的整体，或是一些确认对象的汇集。构成集合的事物或对象称作元素或是成员。集合的元素可以是任何事物，可以是人，可以是物，也可以是字母或数字等。在数学交流当中为了方便，集合会有一些别名。比如：族、系　通常指它的元素也是一些集合。
     符号
-      元素  通常用 ${\displaystyle a,\ b,\ c,\ d,\ x} a,\ b,\ c,\ d,\ x$等小写字母来表示；
-      集合  通常用 ${\displaystyle \mathbf {A,\ B,\ C,\ D,\ X} } \mathbf{A,\ B,\ C,\ D,\ X}$等大写字母来表示。当元素 {\displaystyle a} a属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\in \mathbf {A} } a\in\mathbf{A}。当元素 {\displaystyle a} a不属于集合 {\displaystyle \mathbf {A} } \mathbf{A}时，记作 {\displaystyle a\not \in \mathbf {A} } a\not \in\mathbf{A}。如果 {\displaystyle \mathbf {A,\ B} } \mathbf{A ,\ B}两个集合所包含的元素完全一样，则二者相等，写作 {\displaystyle \mathbf {A=B} } \mathbf{A = B}。
+      元素  通常用 ${\displaystyle a,\ b,\ c,\ d,\ x} $等小写字母来表示；
+      集合  通常用 ${\displaystyle \mathbf {A,\ B,\ C,\ D,\ X} }$等大写字母来表示。当元素 ${\displaystyle a}$ 属于集合 ${\displaystyle \mathbf {A} }$ 时，记作 ${\displaystyle a\in \mathbf {A} } $。当元素 ${\displaystyle a} $不属于集合 ${\displaystyle \mathbf {A} } $时，记作 ${\displaystyle a\not \in \mathbf {A} } $。如果 ${\displaystyle \mathbf {A,\ B} }$ 两个集合所包含的元素完全一样，则二者相等，写作 ${\displaystyle \mathbf {A=B} }$。
     集合的特性
       无序性  一个集合中，每个元素的地位都是相同的，元素之间是无序的。集合上可以定义序关系，定义了序关系后，元素之间就可以按照序关系排序。但就集合本身的特性而言，元素之间没有必然的序
       互异性  一个集合中，任何两个元素都认为是不相同的，即每个元素只能出现一次。有时需要对同一元素出现多次的情形进行刻画，可以使用多重集，其中的元素允许出现多次。
@@ -61,7 +61,7 @@ Math
 
   函数
     映射
-    一元函数  设D为一非空实数集合，如果对应法则f，使任意实数 x∈D , 都有唯一的实数y与之对应，则简称y是x的函数，记为y=f(x).称x为自变量，y为因变量，非空实数集D称为定义域，简记为D(f),集合{y|y=f(x),x∈D}称为函数的值域，记为Z(f).有于该函数仅包含一个自变量，所以我们也称之为一元函数。
+    一元函数  设D为一非空实数集合，如果对应法则f，使任意实数 ${x \in D}$ , 都有唯一的实数y与之对应，则简称y是x的函数，记为y=f(x).称x为自变量，y为因变量，非空实数集D称为定义域，简记为D(f),集合{y|y=f(x),x∈D}称为函数的值域，记为Z(f).有于该函数仅包含一个自变量，所以我们也称之为一元函数。
       函数的表示方法  表达式法，列表法，图形法。
       分段函数  在定义域内不同的区间上用不同的解析表达式表示
         单位阶跃函数
