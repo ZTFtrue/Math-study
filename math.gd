@@ -118,7 +118,10 @@ Math
       基本函数的求导公式
         @ 1. $(C)'=0(C为常数)$
         @ 2. $(x^a)'=ax^{a-1}$(a为非零常数,x>0); $\left(\sqrt{X}\right)'= \frac{1}{2\sqrt{X}}; \left(\frac{1}{x}\right)'=\frac{1}{{ x^{2}}}$
-        @ 3.
+        @ 3. $(a^x)'=a^{x}\ln a(a>0,a \neq 1)$,特别的,$(e^x)'=e^x$
+        @ 4. $(log_{a}x)'=\frac{1}{x\ln a}(a>0,a \neq 1)$,特别的,$(\ln x)'=\frac{1}{x}$
+        @ 5. $(\sin x)'=\cos x$
+        @ 6. $(\cos x)'=-\sin x$
       导数的四则运算
     多元函数的偏导数
     隐函数的求导方法
