@@ -71,6 +71,8 @@ Math
       指数函数  $y=a^x(a>0,a!=1)$
       对数函数  $y=log_a^x$
       三角函数
+        @ 余切$\cot x =\frac{1}{\tan x}$
+        @ $\csc x =\frac{1}{\sin x}$
         三角恒等变换
         任意角的三角函数
         弧度制
@@ -122,6 +124,14 @@ Math
         @ 4. $(log_{a}x)'=\frac{1}{x\ln a}(a>0,a \neq 1)$,特别的,$(\ln x)'=\frac{1}{x}$
         @ 5. $(\sin x)'=\cos x$
         @ 6. $(\cos x)'=-\sin x$
+        @ 7. $(\tan x)'=\sec^{2}x$
+        @ 8. $(\cot x)'=-\csc^{2}x$
+        @ 9. $(\sec x)'=-\sec x\tan x$
+        @ 10. $(\csc x)'=-\csc x\cot x$
+        @ 11. $(\arcsin x)'=- \frac{1}{\sqrt{1-x^{2}}}$
+        @ 12. $(\arccos x)'=- \frac{1}{\sqrt{1-x^{2}}}$
+        @ 13. $(\arctan x)'= \frac{1}{1+x^{2}}$
+        @ 14. $(arccot x)'= - \frac{1}{1+x^{2}}$
       导数的四则运算
     多元函数的偏导数
     隐函数的求导方法
