@@ -147,7 +147,7 @@ Math
         @ 首先构造一个辅助函数$F(x,y,\lambda)=f(x,y)+\lambda\varphi(x,y)$，称为拉格朗日函数，其中称为拉格朗日乘数。
         @ 其次，解方程组
         @ $$f(n)=\begin{cases} F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{\lambda}=\varphi(x,y)=0, \end{cases}$$
-        @ 可得$F(x,y,\lambda)$的驻点$(x_0,y_0,\lambda_0)$,则
+        @ 可得$F(x,y,\lambda)$的驻点$(x_0,y_0,\lambda_0)$,则$(x_0,y_0)$就是$z=f(x,y)$在约束条件$\varphi(x,y)=0$的情况下的可能的极值点，至于$(x_0,y_0)$是否确为$z=f(x,y)$的极值点，在实际问题中往往可由其实际定义加以判断。
     曲线的凹凸性与拐点
       凹凸性
       拐点
