@@ -153,6 +153,8 @@ Math
       拐点
       渐进线
     曲率
+      曲率的概念和公式  称$K=\underset{\varDelta x\rightarrow0}{\lim}\mid\frac{\varDelta\alpha}{\varDelta s}\mid$为曲线在点$P$处的去率。  曲率是曲线弯曲程度的定量描述，曲率大，曲线的弯曲程度大；去率小曲线的，弯曲程度小。  曲率的计算公式为$$K=\underset{\varDelta x\rightarrow0}{\lim}\mid\frac{\varDelta\alpha}{\varDelta s}\mid=\left|\frac{d\alpha}{ds}\right|=\left|\frac{y''}{(1+y'^{2})^{\frac{3}{2}}}\right|$$
+      曲率圆与曲率半径
     洛必达法则
       @ 洛必达法则  设函数f(x),g(x)满足下列条件
       @ 1. $limf(x)=0,limg(x)=0$(或$limf(x)=∞，limf(g)=∞$);
