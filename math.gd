@@ -152,7 +152,7 @@ Math
       拐点
       渐进线
     曲率
-      曲率的概念和公式  称$K=\underset{\varDelta x\rightarrow0}{\lim}\mid\frac{\varDelta\alpha}{\varDelta s}\mid$为曲线在点$P$处的去率。  曲率是曲线弯曲程度的定量描述，曲率大，曲线的弯曲程度大；去率小曲线的，弯曲程度小。  曲率的计算公式为$$K=\underset{\varDelta x\rightarrow0}{\lim}\mid\frac{\varDelta\alpha}{\varDelta s}\mid=\left|\frac{d\alpha}{ds}\right|=\left|\frac{y''}{(1+y'^{2})^{\frac{3}{2}}}\right|$$
+      曲率的概念和公式  称$K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid$为曲线在点$P$处的去率。  曲率是曲线弯曲程度的定量描述，曲率大，曲线的弯曲程度大；去率小曲线的，弯曲程度小。  曲率的计算公式为$$K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\left|\frac{d\alpha}{ds}\right|=\left|\frac{y''}{(1+y'^{2})^{\frac{3}{2}}}\right|$$
       曲率圆与曲率半径
     洛必达法则
       @ 洛必达法则  设函数f(x),g(x)满足下列条件
@@ -191,7 +191,7 @@ Math
     不定积分
       原函数  设$f(x)$是定义在某区间$I$上的已知函数，若存在函数$F(x),使得$F'(x)=f(x)$或$dF(x)=f(x)dx),则称$F(x)$是$f(x)$在区间$I$上的一个原函数.  如果一个函数有原函数，则原函数不是唯一的，而是有无穷多个。  一般地，连续函数一定有原函数。  如果函数$f(x)$在区间$I$上存在原函数$F(x)$，则$f(x)$在区间$I$上有无穷多个原函数，而$F(x)+C$表示$f(x)$所有原函数的全体，其中$C$为任意常数。
       不定积分的定义
-      @ 如果$F(x)$是$f(x)$在区间$I$上的一个原函数，那么$f(x)$的所有原函数的全体$F(x)+C(C是任意常数)$称为$f(x)$在区间$I$上的不定积分，记为$\int f(x)dx$,即$$\int f(x)dx=F(x)+C$$,其中，"\int"为不定积分符号，$f(x)$称为被积函数，$f(x)dx$称为被积表达式，$x$称为积分变量，$C$称为积分常数。 
+      @ 如果$F(x)$是$f(x)$在区间$I$上的一个原函数，那么$f(x)$的所有原函数的全体$F(x)+C(C是任意常数)$称为$f(x)$在区间$I$上的不定积分，记为$\int f(x)dx$,即$$\int f(x)dx=F(x)+C$$,其中，$"\int"$为不定积分符号，$f(x)$称为被积函数，$f(x)dx$称为被积表达式，$x$称为积分变量，$C$称为积分常数。 
       @ 不定积分$\int f(x)dx$ 实际上是求被积函数$f(x)$的所有原函数的全体，也即只要求出$f(x)$的一个原函数再加上积分常数$C$即可。
       不定积分的几何意义
       不定积分的计算
