@@ -202,6 +202,9 @@ Math
         凑微分法
         分部积分法
     定积分
+      @ 设函数$y=f(x)$在区间$[a,b]$上有定义,任取一分组点$a=x_{0}<x_{1}<\cdots<x_{i-1}<x_{i}<\cdots<x_{n-1}<x_{n}=b$,将区见$[a,b]$ 分成 $n$个小区间,即$[a,b]=\stackrel[i=1]{n}{U}[x_{i-1},x_{i}]$.记$\Delta x_{i}=x_{i}-x_{i-1}(i=1,2,\cdots,n)$,$\lambda=\underset{1≤ i≤ n}{max}\{\Delta x_{i}\}$. 在每个小区间$[x_{i-1},x_{i}]$上任意取一点$\xi_{i}(i=1,2,\cdots,n)$,作和式$\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x$.如果不论对区间$[a,b]$采取何种分割方法及$\xi$如何选取,当$\lambda\rightarrow0$时,该和式的极限存在,则称此极限值为函数$f(x)$在区间$[a,b]$上的定积分,记为$\intop_{a}^{b}f(x)dx$,即$$\intop_{a}^{b}f(x)dx=\underset{\lambda\rightarrow0}{lim}\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x_{i}$$,其中$f(x)$称为被积函数,$f(x)dx$称为被积表达式,$x$称为积分变量,$a$与$b$分别称为积分上限和积分下限,$\left[a,b\right]$称为积分区间 .
+      @ 如果定积分$\intop_{a}^{b}f(x)dx$存在,则称$f(x)在\left[a,b\right]$上可积.连续函数是可积的 .
+      @ 由定积分的定义,面积问题可以表述如下:由曲线$y=f(x)(f(x)≥)$,直线$x=a$,$x=b$和$x$轴围成的多边形的面积$S=\int_{a}^{b}f(x)dx$ .
     无穷区间上的广义积分
     重积分
     应用
