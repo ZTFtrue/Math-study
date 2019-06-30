@@ -212,6 +212,7 @@ Math
         不等式性质
         估值定理
         积分中值定理
+          @ ![测试图片](https://raw.githubusercontent.com/ZTFtrue/Math-study/master/img/Screenshot-20190630150906-928x994.png)
       定积分的计算
         牛顿-莱布尼茨公式
           变上限积分
