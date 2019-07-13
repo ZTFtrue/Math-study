@@ -25,6 +25,10 @@ Math
     参数方程
     渐开线与摆线
   复数
+    实数
+      素数
+      最大公因子
+    虚数
   数列
     等差数列
     等比数列
@@ -256,6 +260,7 @@ Math
       @ $$ (a-b) mod n= ((a mod n)-(b mod n)) mod n $$ 
       @ $$ (a\timesb) mod n= ((a mod n)\times(b mod n)) mod n $$ 
       @ $$ (a \times (b+c)) mod n= (((a \times b) mod n)+((a \times c) mod n)) mod n $$ 
+    
     向上取整
 
   二面角
@@ -265,7 +270,8 @@ Math
     秦九韶算法
     排序
     进位制
-
+    逆元
+    求模逆元
   统计简介
     抽样方法
     总体分布的估计
