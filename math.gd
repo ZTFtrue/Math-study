@@ -271,6 +271,13 @@ Math
     排序
     进位制
     逆元
+      加法逆元
+        @ 设“+”为一个交换性的二元运算，即对于所有x,y，x+y=y+x。若该集内存在一个元素0，使得对于所有x，x+0=0+x=x，则此元素是唯一的。如果对于一个给定的x，存在一个x'使得x+x'=x'+x=0，则称x'是x的加法逆元。
+        @ 对于一个任意数n，存在加法逆元（英语：Additive Inverse，又称相反数），其与n的和为零（加法单位元）。n的加法逆元表示为-n。
+      乘法逆元(倒数)
+        @数学上，一个数 ${\displaystyle \displaystyle x} \displaystyle x的倒数（reciprocal），或称乘法逆元（multiplicative inverse），是指一个与 {\displaystyle \displaystyle x} \displaystyle x相乘的积为1的数，记为 {\displaystyle \displaystyle {\tfrac {1}{x}}} \displaystyle \tfrac{1}{x}或 {\displaystyle \displaystyle x^{-1}} \displaystyle x^{-1}$。  在抽象代数中，倒数所对应的抽象化概念是乘法群的某个元素的“乘法逆”，也就是相对于群中“乘法”运算的逆元素。注意这个名词只当相应的群中的运算被称为“乘法”后才使用。如果群中的运算被称为“加法”，那么同样的概念称为“加法逆”。乘法逆的具体定义可以参见群的逆元素概念。
+        负倒数
+        @ 乘积为-1的两个实数互为负倒数，实数x的负倒数记为 ${\displaystyle -{\frac {1}{x}}} {\displaystyle -{\frac {1}{x}}}或 {\displaystyle -x^{-1}} {\displaystyle -x^{-1}}$。一个实数的倒数和其负倒数是相反数，0没有倒数或负倒数。
     求模逆元
   统计简介
     抽样方法
