@@ -312,4 +312,30 @@ Math
   随机过程
   其它
     牛顿迭代法
+      @ 一般情况二分法求平方根，牛顿迭代法快速寻找平方根比二分法更快。首先随便猜一个近似值x，然后不断令x等于x和a/x的平均数，迭代次数越多越精确。
+      @ 这种算法是不断用(x,f(x))的切线来逼近方程x^2-a=0的根。根号a实际上就是x^2-a=0的一个正实根，这个函数的导数是2x。也就是说，函数上任一点(x,f(x))处的切线斜率是2x。那么，x-f(x)/(2x)就是一个比x更接近的近似值。代入 f(x)=x^2-a得到x-(x^2-a)/(2x)，也就是(x+a/x)/2。 
+      @ 下面是示例代码(非常厉害)[参考](http://www.matrix67.com/data/InvSqrt.pdf)
+      @ ```
+      @ float Q_rsqrt( float number )
+      @  {
+      @      long i;
+      @      float x2, y;
+      @      const float threehalfs = 1.5F;
+      @  
+      @      x2 = number * 0.5F;
+      @      y   = number;
+      @      i   = * ( long * ) &y;   // evil floating point bit level hacking
+      @      i   = 0x5f3759df - ( i >> 1 ); // what the fuck?
+      @      y   = * ( float * ) &i;
+      @      y   = y * ( threehalfs - ( x2 * y * y ) ); // 1st iteration
+      @      // y   = y * ( threehalfs - ( x2 * y * y ) ); // 2nd iteration, this  can be removed
+      @  
+      @      #ifndef Q3_VM
+      @      #ifdef __linux__
+      @           assert( !isnan(y) ); // bk010122 - FPE?
+      @      #endif
+      @      #endif
+      @      return y;
+      @  }  
+      @ ```
     双峰函数
