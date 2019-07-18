@@ -314,7 +314,7 @@ Math
     牛顿迭代法
       @ 一般情况二分法求平方根，牛顿迭代法快速寻找平方根比二分法更快。首先随便猜一个近似值x，然后不断令x等于x和a/x的平均数，迭代次数越多越精确。
       @ 这种算法是不断用(x,f(x))的切线来逼近方程x^2-a=0的根。根号a实际上就是x^2-a=0的一个正实根，这个函数的导数是2x。也就是说，函数上任一点(x,f(x))处的切线斜率是2x。那么，x-f(x)/(2x)就是一个比x更接近的近似值。代入 f(x)=x^2-a得到x-(x^2-a)/(2x)，也就是(x+a/x)/2。 
-      @ 下面是示例代码(非常厉害)[参考](http://www.matrix67.com/data/InvSqrt.pdf)
+      @ 下面是示例代码(非常厉害)[参考1](http://www.matrix67.com/data/InvSqrt.pdf)[参考2](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9%E5%80%92%E6%95%B0%E9%80%9F%E7%AE%97%E6%B3%95)
       @ ```
       @ float Q_rsqrt( float number )
       @  {
