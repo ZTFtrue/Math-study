@@ -63,7 +63,7 @@ Math
       @ 基变换(换底公式) $\log_\alpha x=\frac{\log_\beta x}{\log_\beta \alpha}$
       @ 指系(次方公式) ${ \log _{\alpha ^{n}}x^{m}={\frac {m}{n}}\log _{\alpha }x}$
       @ 互换	$M^{\log _{\alpha } N}=N^{\log _{\alpha } M}$
-      @ 倒数 $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\dfrac{1}{\dfrac{\ln\alpha}{\ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
+      @ 倒数 $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\frac{1}{\frac{ln\alpha}{ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
       @ 链式 ${\displaystyle {\begin{aligned}\log _{\gamma }\beta \log _{\beta }\alpha &={\frac {\ln \alpha }{\ln \beta }}\ {\frac {\ln \beta }{\ln \gamma }}={\frac {\ln \alpha }{\ln \gamma }}=\log _{\gamma }\alpha \end{aligned}}}$
     逆元
       加法逆元
