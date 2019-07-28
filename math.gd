@@ -63,7 +63,7 @@ Math
       @ 基变换(换底公式) $\log_\alpha x=\frac{\log_\beta x}{\log_\beta \alpha}$
       @ 指系(次方公式) ${ \log _{\alpha ^{n}}x^{m}={\frac {m}{n}}\log _{\alpha }x}$
       @ 互换	$M^{\log _{\alpha } N}=N^{\log _{\alpha } M}$
-      @ 倒数 $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\frac{1}{\frac{ln\alpha}{ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
+      @ 倒数 $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\dfrac{1}{\dfrac{\ln\alpha}{\ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
       @ 链式 ${\displaystyle {\begin{aligned}\log _{\gamma }\beta \log _{\beta }\alpha &={\frac {\ln \alpha }{\ln \beta }}\ {\frac {\ln \beta }{\ln \gamma }}={\frac {\ln \alpha }{\ln \gamma }}=\log _{\gamma }\alpha \end{aligned}}}$
     逆元
       加法逆元
@@ -198,7 +198,7 @@ Math
         @设条件极值的目标函数为$f(x,y)$，约束条件为$\varphi (x,y)=0$,拉格朗日乘数法的具体步骤如下：
         @ 首先构造一个辅助函数$F(x,y,\lambda)=f(x,y)+\lambda\varphi(x,y)$，称为拉格朗日函数，其中称为拉格朗日乘数。
         @ 其次，解方程组
-        @ $$f(n)=\begin{cases} F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{\lambda}=\varphi(x,y)=0, \end{cases}$$
+        @ $f(n)=\begin{cases} F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\ F'_{\lambda}=\varphi(x,y)=0, \end{cases}$
         @ 可得$F(x,y,\lambda)$的驻点$(x_0,y_0,\lambda_0)$,则$(x_0,y_0)$就是$z=f(x,y)$在约束条件$\varphi(x,y)=0$的情况下的可能的极值点，至于$(x_0,y_0)$是否确为$z=f(x,y)$的极值点，在实际问题中往往可由其实际定义加以判断。
     曲线的凹凸性与拐点
       凹凸性
@@ -357,9 +357,9 @@ Math
   其它
     牛顿迭代法
       @ 一般情况二分法求平方根，牛顿迭代法快速寻找平方根比二分法更快。首先随便猜一个近似值x，然后不断令x等于x和a/x的平均数，迭代次数越多越精确。
-      @ 这种算法是不断用(x,f(x))的切线来逼近方程x^2-a=0的根。根号a实际上就是x^2-a=0的一个正实根，这个函数的导数是2x。也就是说，函数上任一点(x,f(x))处的切线斜率是2x。那么，x-f(x)/(2x)就是一个比x更接近的近似值。代入 f(x)=x^2-a得到x-(x^2-a)/(2x)，也就是(x+a/x)/2。 
+      @ 这种算法是不断用$(x,f(x))$的切线来逼近方程$x^2-a=0$的根。根号a实际上就是x^2-a=0的一个正实根，这个函数的导数是2x。也就是说，函数上任一点(x,f(x))处的切线斜率是2x。那么，x-f(x)/(2x)就是一个比x更接近的近似值。代入 f(x)=x^2-a得到x-(x^2-a)/(2x)，也就是(x+a/x)/2。 
       @ 下面是示例代码(非常厉害)[参考1](http://www.matrix67.com/data/InvSqrt.pdf)[参考2](https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9%E5%80%92%E6%95%B0%E9%80%9F%E7%AE%97%E6%B3%95)
-      @ ```
+      @```c
       @ float Q_rsqrt( float number )
       @  {
       @      long i;
@@ -381,7 +381,7 @@ Math
       @      #endif
       @      return y;
       @  }  
-      @ ```
+      @```
     双峰函数
     常见进制换算
       二进制 转 十进制
