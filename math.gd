@@ -65,6 +65,8 @@ Math
       @ 互换	$M^{\log _{\alpha } N}=N^{\log _{\alpha } M}$
       @ 倒数 $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\dfrac{1}{\dfrac{\ln\alpha}{\ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
       @ 链式 ${\displaystyle {\begin{aligned}\log _{\gamma }\beta \log _{\beta }\alpha &={\frac {\ln \alpha }{\ln \beta }}\ {\frac {\ln \beta }{\ln \gamma }}={\frac {\ln \alpha }{\ln \gamma }}=\log _{\gamma }\alpha \end{aligned}}}$
+    阶乘
+      @ 在数学中，正整数的阶乘（英语：factorial）是所有小于及等于该数的正整数的积，计为n!，例如5的阶乘计为5!，其值为120：$${\displaystyle 5!=5\times 4\times 3\times 2\times 1=120 .}$$并定义，1的阶乘1!为1、0的阶乘0!亦为1，其中，0的阶乘表示一个[空积](https://zh.wikipedia.org/wiki/%E7%A9%BA%E7%A7%AF)
     逆元
       加法逆元
         @ 设“+”为一个交换性的二元运算，即对于所有x,y，x+y=y+x。若该集内存在一个元素0，使得对于所有x，x+0=0+x=x，则此元素是唯一的。如果对于一个给定的x，存在一个x'使得x+x'=x'+x=0，则称x'是x的加法逆元。
@@ -407,6 +409,7 @@ Math
       @3. 3+40=43，即(53)O=(43)D。
       十六进制 转 十进制
       @ 基本原理依然同二进制转十进制，只是需要注意相应的ABCDEF与十进制对应于10、11、....、15 .
+    二项式系数
   趣味数学
     小数0.9(其中9无限循环)等于1
     @ 证明:
