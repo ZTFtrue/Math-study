@@ -75,6 +75,11 @@ Math
         @数学上，一个数 ${\displaystyle \displaystyle x} \displaystyle x的倒数（reciprocal），或称乘法逆元（multiplicative inverse），是指一个与 {\displaystyle \displaystyle x} \displaystyle x相乘的积为1的数，记为 {\displaystyle \displaystyle {\tfrac {1}{x}}} \displaystyle \tfrac{1}{x}或 {\displaystyle \displaystyle x^{-1}} \displaystyle x^{-1}$。  在抽象代数中，倒数所对应的抽象化概念是乘法群的某个元素的“乘法逆”，也就是相对于群中“乘法”运算的逆元素。注意这个名词只当相应的群中的运算被称为“乘法”后才使用。如果群中的运算被称为“加法”，那么同样的概念称为“加法逆”。乘法逆的具体定义可以参见群的逆元素概念。
         负倒数
         @ 乘积为-1的两个实数互为负倒数，实数x的负倒数记为 ${\displaystyle -{\frac {1}{x}}} {\displaystyle -{\frac {1}{x}}}或 {\displaystyle -x^{-1}} {\displaystyle -x^{-1}}$。一个实数的倒数和其负倒数是相反数，0没有倒数或负倒数。
+    二项式定理
+    @$(x+y)^{n}={n \choose 0}x^{n}y^{0}+{n \choose 1}x^{{n-1}}y^{1}+{n \choose 2}x^{{n-2}}y^{2}+\cdots +{n \choose n-1}x^{1}y^{{n-1}}+{n \choose n}x^{0}y^{n}$,其中每个 ${n \choose k}$ 为一个称作二项式系数的特定正整数，其等于 ${\frac {n!}{k!(n-k)!}}$。这个公式也称二项式公式或二项恒等式。使用求和符号，可以把它写作$(x+y)^{n}=\sum _{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum _{k=0}^{n}{n \choose k}x^{k}y^{n-k}$.
+    @ 后面的表达式只是将根据 x 与 y 的对称性得出的，通过比较发现公式中的二项式系数也是对称的。 二项式定理的一个变形是用 1 来代换 y 得到的，所以它只涉及一个变量。在这种形式中，公式写作$(1+x)^{n}={n \choose 0}x^{0}+{n \choose 1}x^{1}+{n \choose 2}x^{2}+\cdots +{n \choose {n-1}}x^{n-1}+{n \choose n}x^{n}$,或者等价地$(1+x)^{n}=\sum _{k=0}^{n}{n \choose k}x^{k}$.
+    二项式系数(二项式定理中各项的系数,参考杨辉三角)
+    贝塞尔曲线
   数列
     等差数列
     等比数列
