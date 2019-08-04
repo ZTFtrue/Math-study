@@ -75,6 +75,23 @@ Math
         @数学上，一个数 ${\displaystyle \displaystyle x} \displaystyle x的倒数（reciprocal），或称乘法逆元（multiplicative inverse），是指一个与 {\displaystyle \displaystyle x} \displaystyle x相乘的积为1的数，记为 {\displaystyle \displaystyle {\tfrac {1}{x}}} \displaystyle \tfrac{1}{x}或 {\displaystyle \displaystyle x^{-1}} \displaystyle x^{-1}$。  在抽象代数中，倒数所对应的抽象化概念是乘法群的某个元素的“乘法逆”，也就是相对于群中“乘法”运算的逆元素。注意这个名词只当相应的群中的运算被称为“乘法”后才使用。如果群中的运算被称为“加法”，那么同样的概念称为“加法逆”。乘法逆的具体定义可以参见群的逆元素概念。
         负倒数
         @ 乘积为-1的两个实数互为负倒数，实数x的负倒数记为 ${\displaystyle -{\frac {1}{x}}} {\displaystyle -{\frac {1}{x}}}或 {\displaystyle -x^{-1}} {\displaystyle -x^{-1}}$。一个实数的倒数和其负倒数是相反数，0没有倒数或负倒数。
+    二项式定理
+    @$(x+y)^{n}={n \choose 0}x^{n}y^{0}+{n \choose 1}x^{{n-1}}y^{1}+{n \choose 2}x^{{n-2}}y^{2}+\cdots +{n \choose n-1}x^{1}y^{{n-1}}+{n \choose n}x^{0}y^{n}$,其中每个 ${n \choose k}$ 为一个称作二项式系数的特定正整数，其等于 ${\frac {n!}{k!(n-k)!}}$。这个公式也称二项式公式或二项恒等式。使用求和符号，可以把它写作$(x+y)^{n}=\sum _{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum _{k=0}^{n}{n \choose k}x^{k}y^{n-k}$.
+    @ 后面的表达式只是将根据 x 与 y 的对称性得出的，通过比较发现公式中的二项式系数也是对称的。 二项式定理的一个变形是用 1 来代换 y 得到的，所以它只涉及一个变量。在这种形式中，公式写作$(1+x)^{n}={n \choose 0}x^{0}+{n \choose 1}x^{1}+{n \choose 2}x^{2}+\cdots +{n \choose {n-1}}x^{n-1}+{n \choose n}x^{n}$,或者等价地$(1+x)^{n}=\sum _{k=0}^{n}{n \choose k}x^{k}$.
+    二项式系数(二项式定理中各项的系数,参考杨辉三角)
+    贝塞尔曲线
+    @${\mathbf {B}}(t)=\sum _{{i=0}}^{n}{n \choose i}{\mathbf {P}}_{i}(1-t)^{{n-i}}t^{i}={n \choose 0}{\mathbf {P}}_{0}(1-t)^{n}t^{{0}}+{n \choose 1}{\mathbf {P}}_{1}(1-t)^{{n-1}}t^{{1}}+\cdots +{n \choose n-1}{\mathbf {P}}_{{n-1}}(1-t)^{{1}}t^{{n-1}}+{n \choose n}{\mathbf {P}}_{n}(1-t)^{{0}}t^{n}{\mbox{ , }}t\in [0,1]$
+    杨辉三角形(帕斯卡三角形、贾宪三角形、海亚姆三角形、巴斯卡三角形)
+    @ 1. 杨辉三角以正整数构成，数字左右对称，每行由1开始逐渐变大，然后变小，回到1。
+    @ 2. 杨辉三角每一行的平方和在杨辉三角出现奇数次。
+    @ 3. 杨辉三角第2的幂行所有数都是奇数。
+    @ 4. 杨辉三角每一行的和是2的幂。
+    @ 5. 第 n 行的数字个数为n个。
+    @ 6. 第 n 行的第k个数字为组合数$C_{n-1}^{k-1}$。
+    @ 7. 第n行数字和为$2^{n-1}$。
+    @ 8. 除每行最左侧与最右侧的数字以外，每个数字等于它的左上方与右上方两个数字之和（也就是说，第 n 行第k 个数字等于第 n-1 行的k-1 个数字与第 k 个数字的和）。这是因为有组合恒等式：$C_{n+1}^{i+1}=C_{n}^{i}+C_{n}^{i+1}$。可用此性质写出整个杨辉三角形。
+    @![杨辉三角形图解](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)  (图片来自维基百科)
+    丢番图方程(不定方程)
   数列
     等差数列
     等比数列
