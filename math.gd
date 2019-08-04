@@ -80,6 +80,10 @@ Math
     @ 后面的表达式只是将根据 x 与 y 的对称性得出的，通过比较发现公式中的二项式系数也是对称的。 二项式定理的一个变形是用 1 来代换 y 得到的，所以它只涉及一个变量。在这种形式中，公式写作$(1+x)^{n}={n \choose 0}x^{0}+{n \choose 1}x^{1}+{n \choose 2}x^{2}+\cdots +{n \choose {n-1}}x^{n-1}+{n \choose n}x^{n}$,或者等价地$(1+x)^{n}=\sum _{k=0}^{n}{n \choose k}x^{k}$.
     二项式系数(二项式定理中各项的系数,参考杨辉三角)
     贝塞尔曲线
+    @${\mathbf {B}}(t)=\sum _{{i=0}}^{n}{n \choose i}{\mathbf {P}}_{i}(1-t)^{{n-i}}t^{i}={n \choose 0}{\mathbf {P}}_{0}(1-t)^{n}t^{{0}}+{n \choose 1}{\mathbf {P}}_{1}(1-t)^{{n-1}}t^{{1}}+\cdots +{n \choose n-1}{\mathbf {P}}_{{n-1}}(1-t)^{{1}}t^{{n-1}}+{n \choose n}{\mathbf {P}}_{n}(1-t)^{{0}}t^{n}{\mbox{ , }}t\in [0,1]$
+    杨辉三角形(帕斯卡三角形、贾宪三角形、海亚姆三角形、巴斯卡三角形)
+    @![杨辉三角形图解](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)  (图片来自维基百科)
+    丢番图方程(不定方程)
   数列
     等差数列
     等比数列
