@@ -336,8 +336,13 @@ Math
       @ 模n完整余数系统中，与模n互质的代表数所构成的集合，称为模n的简约余数系统（reduced residue system），其元素个数记为$\phi (n)$，亦即欧拉函数。例如，模$6$的简约余数系统为${1,5}(1,5 与6 互为质数)$或${7,11}$。如果模n是质数，那么它的最小简约余数系统是{1,2,...,n-1}$，只比最小余数系统少一个0。
       同余性质
         整除性
-        @ ${\displaystyle a\equiv b{\pmod {m}}\Rightarrow c\cdot m=a-b,c\in \mathbb {Z} }$ （即是说 a 和 b 之差是 m 的倍数）,换句话说，${\displaystyle a\equiv b{\pmod {m}}\Rightarrow m\mid (a-b)}$  注:($m\mid x $表示 m 能整除 x，或者说 x 能被 m 整除)
+        @ ${\displaystyle a\equiv b{\pmod {m}}\Rightarrow c\cdot m=a-b,c\in \mathbb {Z} }$ （即是说 a 和 b 之差是 m 的倍数）,换句话说，${\displaystyle a\equiv b{\pmod {m}}\Rightarrow m\mid (a-b)}$  注:($ m\mid x $表示 m 能整除 x，或者说 x 能被 m 整除)
         @ 同余可以用来检验一个数是否可以整除另外一个数.
+        传递性
+        @ $\left.\begin{matrix}a\equiv b(\mod m)\\ b\equiv c(\mod m) \end{matrix}\right\} \Rightarrow a\equiv c(\mod m)$
+        保持基本运算
+        @ $${\displaystyle \left.\begin{matrix}a\equiv b(\mod m)\\ c\equiv d(\mod m) \end{matrix}\right\} \Rightarrow\left\{ \begin{matrix}a\pm c\equiv b\pm d(\mod m)\\ ac\equiv bd(\mod m) \end{matrix}\right.}$$
+        @这性质更可进一步引申成为这样：$${\displaystyle {\displaystyle a\equiv b(\mod m)\Rightarrow\begin{cases} an\equiv bn(\mod m),\forall n\in\mathbb{Z}\\ a^{n}\equiv b^{n}(\mod m),\forall n\in\mathbb{N}^{0} \end{cases}}}$$
     时间计算
     计算机反码
     HASH 取模算法
