@@ -1,5 +1,11 @@
 # Math-study
 
+Update:
+
+使用lyx编写, [lyx 下载地址](https://www.lyx.org/Download)
+
+_---旧的内容---_
+
 __数学各个方面的知识，包括和计算机相关的。[math.gd](https://github.com/ZTFtrue/Math-study/blob/master/math.gd) 是显示的内容(完善中)
 
 ## 如何查看
