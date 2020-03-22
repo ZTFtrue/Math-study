@@ -1833,6 +1833,27 @@ x相对于Δx作为常量处理，只要将
 导数的四则运算
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $(u\pm v)'=u'\pm v'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(uv)'=u'v+uv'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(\frac{u}{v})'=\frac{u'v-uv'}{v^{2}}(v(x)\neq0)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 多元函数的偏导数 
 \end_layout
@@ -4512,27 +4533,47 @@ float Q_rsqrt( float number )  {
 \end_layout
 
 \begin_layout Chapter
-
 双峰函数  
 \end_layout
 
 \begin_layout Chapter
-
 二项式系数
 \end_layout
 
 \begin_layout Chapter
+单纯形法
+\end_layout
 
+\begin_layout Standard
+单纯形法（simplex algorithm）在数学优化领域中常用于线性规划问题的数值求解，由乔治·伯纳德·丹齐格发明。
+\end_layout
+
+\begin_layout Standard
+下山单纯形法（Nelder-Mead method）与单纯形法名称相似，但二者关联不大。该方法由Nelder和Mead于1965年发明，是用于优化多维无约束问题
+的一种数值方法，属于更普遍的搜索算法的类别。这两种方法都使用了单纯形的概念。单纯形是 
+\begin_inset Formula $N$
+\end_inset
+
+ 维中的 
+\begin_inset Formula ${\displaystyle N+1}$
+\end_inset
+
+个顶点的凸包，是一个多胞体：直线上的一个线段，平面上的一个三角形，三维空间中的一个四面体等等，都是单纯形。
+\end_layout
+
+\begin_layout Standard
+https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
+\end_layout
+
+\begin_layout Chapter
 趣味数学 
 \end_layout
 
 \begin_layout Section
-
 小数0.9(其中9无限循环)等于1 
 \end_layout
 
 \begin_layout Standard
-
 证明: 
 \begin_inset Formula $0.\dot{9}=3\times0.\dot{3}=3\times\frac{1}{3}=1$
 \end_inset
@@ -4541,7 +4582,6 @@ float Q_rsqrt( float number )  {
 \end_layout
 
 \begin_layout Section
-
 画线乘法计算法
 \end_layout
 
