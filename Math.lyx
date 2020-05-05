@@ -1046,6 +1046,177 @@ in A$。
 映射
 \end_layout
 
+\begin_layout Standard
+定义设 
+\begin_inset Formula $X$
+\end_inset
+
+、
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个非空集合,如果存在一个法则,使得对
+\begin_inset Formula $X$
+\end_inset
+
+中每个元素 
+\begin_inset Formula $x$
+\end_inset
+
+,按法则
+\begin_inset Formula $f$
+\end_inset
+
+,在
+\begin_inset Formula $Y$
+\end_inset
+
+中有
+\series bold
+唯一确定
+\series default
+的元素与之对应,那么称
+\begin_inset Formula $f$
+\end_inset
+
+为从
+\begin_inset Formula $X$
+\end_inset
+
+到
+\begin_inset Formula $Y$
+\end_inset
+
+的映射, 记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f:X\rightarrow Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $y$
+\end_inset
+
+称为元素
+\begin_inset Formula $x$
+\end_inset
+
+ (在映射
+\begin_inset Formula $f$
+\end_inset
+
+下)的
+\series bold
+像
+\series default
+,并 记作 
+\begin_inset Formula $f(x)$
+\end_inset
+
+,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=f(x)
+\]
+
+\end_inset
+
+而元素 
+\begin_inset Formula $x$
+\end_inset
+
+ 称为元素(在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+映射下)的一个
+\series bold
+原像
+\series default
+;集合 
+\begin_inset Formula $X$
+\end_inset
+
+称为映射
+\begin_inset Formula $f$
+\end_inset
+
+的定义域,记作
+\begin_inset Formula $D_{f},$
+\end_inset
+
+即
+\begin_inset Formula $D_{f}=X;$
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ 中所有元素的像所组成的集合称为映射
+\begin_inset Formula $f$
+\end_inset
+
+的值域,记作
+\begin_inset Formula $R$
+\end_inset
+
+或 
+\begin_inset Formula $f(X)$
+\end_inset
+
+, 即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{f}=f(X)={f(x)|x\in X}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 一元函数 
 \end_layout
