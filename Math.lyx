@@ -1046,6 +1046,177 @@ in A$。
 映射
 \end_layout
 
+\begin_layout Standard
+定义设 
+\begin_inset Formula $X$
+\end_inset
+
+、
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个非空集合,如果存在一个法则,使得对
+\begin_inset Formula $X$
+\end_inset
+
+中每个元素 
+\begin_inset Formula $x$
+\end_inset
+
+,按法则
+\begin_inset Formula $f$
+\end_inset
+
+,在
+\begin_inset Formula $Y$
+\end_inset
+
+中有
+\series bold
+唯一确定
+\series default
+的元素与之对应,那么称
+\begin_inset Formula $f$
+\end_inset
+
+为从
+\begin_inset Formula $X$
+\end_inset
+
+到
+\begin_inset Formula $Y$
+\end_inset
+
+的映射, 记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f:X\rightarrow Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $y$
+\end_inset
+
+称为元素
+\begin_inset Formula $x$
+\end_inset
+
+ (在映射
+\begin_inset Formula $f$
+\end_inset
+
+下)的
+\series bold
+像
+\series default
+,并 记作 
+\begin_inset Formula $f(x)$
+\end_inset
+
+,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=f(x)
+\]
+
+\end_inset
+
+而元素 
+\begin_inset Formula $x$
+\end_inset
+
+ 称为元素(在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+映射下)的一个
+\series bold
+原像
+\series default
+;集合 
+\begin_inset Formula $X$
+\end_inset
+
+称为映射
+\begin_inset Formula $f$
+\end_inset
+
+的定义域,记作
+\begin_inset Formula $D_{f},$
+\end_inset
+
+即
+\begin_inset Formula $D_{f}=X;$
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ 中所有元素的像所组成的集合称为映射
+\begin_inset Formula $f$
+\end_inset
+
+的值域,记作
+\begin_inset Formula $R$
+\end_inset
+
+或 
+\begin_inset Formula $f(X)$
+\end_inset
+
+, 即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{f}=f(X)={f(x)|x\in X}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 一元函数 
 \end_layout
@@ -1219,6 +1390,10 @@ in A$。
 
 \begin_layout Description
 反三角函数
+\end_layout
+
+\begin_layout Subsection
+初等函数
 \end_layout
 
 \begin_layout Subsection
@@ -4583,6 +4758,67 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 
 \begin_layout Section
 画线乘法计算法
+\end_layout
+
+\begin_layout Section
+一些有趣的图形
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/sin(x) divide y,sin(x)*x divide y.png
+	lyxscale 30
+	width 10cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+y=sin(x)/y and y=sin(x)/y
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/sin(x)*x.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+y=sin(x)*x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
