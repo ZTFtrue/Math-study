@@ -1217,8 +1217,8 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \end_layout
 
-\begin_layout Subsection
-一元函数 
+\begin_layout Section
+函数
 \end_layout
 
 \begin_layout Standard
@@ -1254,7 +1254,15 @@ R_{f}=f(X)={f(x)|x\in X}
 \end_layout
 
 \begin_layout Standard
-有于该函数仅包含一个自变量，所以我们也称之为一元函数。 
+特性: 单调性, 有界性,奇偶性,周期性
+\end_layout
+
+\begin_layout Subsection
+一元函数 
+\end_layout
+
+\begin_layout Standard
+如果函数仅包含一个自变量，所以我们也称之为一元函数。 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1262,7 +1270,7 @@ R_{f}=f(X)={f(x)|x\in X}
 \end_layout
 
 \begin_layout Standard
-表达式法，列表法，图形法。 
+表达式法，列表法，图形法。
 \end_layout
 
 \begin_layout Subsubsection
@@ -1394,6 +1402,71 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \begin_layout Subsection
 初等函数
+\end_layout
+
+\begin_layout Standard
+\noindent
+双曲正弦: 
+\begin_inset Formula $f(x)=\sinh(x)=\frac{(e^{x}-e^{-x})}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+双曲余弦: 
+\begin_inset Formula $f(x)=\cosh(x)=\frac{(e^{x}+e^{-x})}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+双曲正切: 
+\begin_inset Formula $f(x)=\cosh(x)=\frac{(e^{x}-e^{-x})}{e^{x}+e^{-x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename image/双曲函数.png
+	lyxscale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+双曲函数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
