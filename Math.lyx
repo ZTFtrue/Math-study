@@ -1557,6 +1557,93 @@ lim(n→∞)\{a_{n}\}=A
 函数的极限
 \end_layout
 
+\begin_layout Standard
+不严格地讲，函数
+\begin_inset Formula ${\displaystyle f}$
+\end_inset
+
+对于每个给定的在定义域内自变量，都会有一个对应的因变量
+\begin_inset Formula $f(x)$
+\end_inset
+
+。声称在自变量为
+\begin_inset Formula ${\displaystyle p}$
+\end_inset
+
+时，函数极限为
+\begin_inset Formula ${\displaystyle L}$
+\end_inset
+
+则表明：当自变量
+\begin_inset Formula ${\displaystyle x}$
+\end_inset
+
+的值无限接近于
+\begin_inset Formula ${\displaystyle p}$
+\end_inset
+
+时，因变量
+\begin_inset Formula ${\displaystyle f(x)}$
+\end_inset
+
+的值便无限接近于
+\begin_inset Formula ${\displaystyle L}$
+\end_inset
+
+。另一方面，如果存在十分接近于
+\begin_inset Formula ${\displaystyle p}$
+\end_inset
+
+的自变量所对应的因变量的值与
+\begin_inset Formula ${\displaystyle L}$
+\end_inset
+
+的值相差较大，则表示函数极限不存在。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/fuc-limit.jpg
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+上表所示函数的图形，请注意在x=0处取不到值。因为被零除，所以在这一点函数没有意义。 尽管函数 (sin x)/x 的定义域中不包括“0”, 但当
+ x 无限接近于零时, (sin x)/x 就无限接近于一.
+ 这就是说, x 接近于零时，(sin x)/x 的极限是 1。
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+来自wiki
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 x与无穷大的关系
 \end_layout
