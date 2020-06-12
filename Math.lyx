@@ -1425,7 +1425,7 @@ R_{f}=f(X)={f(x)|x\in X}
 \begin_layout Standard
 \noindent
 双曲正切: 
-\begin_inset Formula $f(x)=\cosh(x)=\frac{(e^{x}-e^{-x})}{e^{x}+e^{-x}}$
+\begin_inset Formula $f(x)=\tanh(x)=\frac{(e^{x}-e^{-x})}{e^{x}+e^{-x}}$
 \end_inset
 
 
