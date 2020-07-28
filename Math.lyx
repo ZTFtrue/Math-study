@@ -82,115 +82,6 @@ Math
 \end_layout
 
 \begin_layout Chapter
-平面图形
-\end_layout
-
-\begin_layout Section
-直线与方程 
-\end_layout
-
-\begin_layout Section
-点直线平面之间的位置关系 
-\end_layout
-
-\begin_layout Section
-圆与方程
-\end_layout
-
-\begin_layout Section
-直线与圆
-\end_layout
-
-\begin_layout Section
-椭圆
-\end_layout
-
-\begin_layout Section
-圆锥曲线 
-\end_layout
-
-\begin_layout Section
-解三角形 
-\end_layout
-
-\begin_layout Section
-参数方程 
-\end_layout
-
-\begin_layout Section
-渐开线与摆线
-\end_layout
-
-\begin_layout Chapter
-复数
-\end_layout
-
-\begin_layout Section
-实数
-\end_layout
-
-\begin_layout Subsubsection
-素数
-\end_layout
-
-\begin_layout Subsubsection
-最大公因子
-\end_layout
-
-\begin_layout Section
-虚数
-\end_layout
-
-\begin_layout Standard
-虚数是指实数以外的复数，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视
-为同时是实数也是虚数.
- 
-\end_layout
-
-\begin_layout Standard
-虚数可对应平面上的纵轴，与对应平面上横轴的实数同样真实。虚数轴和实数轴构成的平面称复数平面，复数平面上每一点对应着一个复数（参考向量）。 
-\end_layout
-
-\begin_layout Standard
-不同的虚数都是不能比较大小的，虚数或者说虚部不为0的复数不能比较大小。 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\sqrt{-1}$
-\end_inset
-
-实际上代表的是两个数，分别为
-\begin_inset Formula $+i$
-\end_inset
-
-及 
-\begin_inset Formula $-1$
-\end_inset
-
-,直接将 
-\begin_inset Formula $\sqrt{-1}$
-\end_inset
-
-对应到
-\begin_inset Formula $+i$
-\end_inset
-
-，而 
-\begin_inset Formula ${-{\sqrt{-1}}}$
-\end_inset
-
- 对应到 
-\begin_inset Formula ${-i}$
-\end_inset
-
- 也是可以的，也可以认为
-\begin_inset Formula $i^{2}=-1$
-\end_inset
-
-。 
-\end_layout
-
-\begin_layout Chapter
 数学运算
 \end_layout
 
@@ -213,7 +104,15 @@ Math
 \begin_inset Formula $0^{0}$
 \end_inset
 
- 没有正式的定义，部分惯例为1 
+ 没有正式的定义，部分惯例为1 (
+\begin_inset Formula $0$
+\end_inset
+
+的任何次方根都是
+\begin_inset Formula $0$
+\end_inset
+
+)// 不同版本教材定义不一样
 \end_layout
 
 \begin_layout Enumerate
@@ -281,6 +180,57 @@ Math
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+式子
+\begin_inset Formula $\sqrt[n]{a}$
+\end_inset
+
+叫做根式(radical),
+\begin_inset Formula $n$
+\end_inset
+
+叫做指数(radical exponent), 
+\begin_inset Formula $a$
+\end_inset
+
+叫做被开放数(redicand)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+分数指数幂 
+\begin_inset Formula $a^{\frac{m}{n}}=\sqrt[n]{a^{m}}(a>0,m,n\in N^{*},\text{且n>1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推理:
+\series bold
+ 
+\begin_inset Formula $\sqrt[n]{a^{m}}=\sqrt[n]{a^{n*\frac{m}{n}}}=\sqrt[n]{(a^{\frac{m}{n}})^{n}}=a^{\frac{m}{n}}(a>0,m,n\in N^{*},\text{且n>1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a^{-\frac{m}{n}}=\frac{1}{a^{\frac{m}{n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,无理数指数幂
+\begin_inset Formula $a"(a>1,是无理数)$
+\end_inset
+
+是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居。
 \end_layout
 
 \begin_layout Section
@@ -757,6 +707,144 @@ literal "false"
 \end_layout
 
 \begin_layout Chapter
+平面图形
+\end_layout
+
+\begin_layout Section
+直线与方程 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=kx+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+点直线平面之间的位置关系 
+\end_layout
+
+\begin_layout Section
+圆与方程
+\end_layout
+
+\begin_layout Standard
+圆的标准方程:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(x-a)^{2}+(y-b)^{2}=r^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(a,b)$
+\end_inset
+
+ 为圆心,
+\begin_inset Formula $r$
+\end_inset
+
+是半径
+\end_layout
+
+\begin_layout Section
+直线与圆
+\end_layout
+
+\begin_layout Section
+椭圆
+\end_layout
+
+\begin_layout Section
+圆锥曲线 
+\end_layout
+
+\begin_layout Section
+解三角形 
+\end_layout
+
+\begin_layout Section
+参数方程 
+\end_layout
+
+\begin_layout Section
+渐开线与摆线
+\end_layout
+
+\begin_layout Chapter
+复数
+\end_layout
+
+\begin_layout Section
+实数
+\end_layout
+
+\begin_layout Subsubsection
+素数
+\end_layout
+
+\begin_layout Subsubsection
+最大公因子
+\end_layout
+
+\begin_layout Section
+虚数
+\end_layout
+
+\begin_layout Standard
+虚数是指实数以外的复数，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视
+为同时是实数也是虚数.
+ 
+\end_layout
+
+\begin_layout Standard
+虚数可对应平面上的纵轴，与对应平面上横轴的实数同样真实。虚数轴和实数轴构成的平面称复数平面，复数平面上每一点对应着一个复数（参考向量）。 
+\end_layout
+
+\begin_layout Standard
+不同的虚数都是不能比较大小的，虚数或者说虚部不为0的复数不能比较大小。 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+实际上代表的是两个数，分别为
+\begin_inset Formula $+i$
+\end_inset
+
+及 
+\begin_inset Formula $-1$
+\end_inset
+
+,直接将 
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+对应到
+\begin_inset Formula $+i$
+\end_inset
+
+，而 
+\begin_inset Formula ${-{\sqrt{-1}}}$
+\end_inset
+
+ 对应到 
+\begin_inset Formula ${-i}$
+\end_inset
+
+ 也是可以的，也可以认为
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+。 
+\end_layout
+
+\begin_layout Chapter
 数列 
 \end_layout
 
@@ -906,6 +994,153 @@ Oz)，三个坐标平面把空间分成八个部分，称为八个挂限。空�
 
 \begin_layout Section
 空间几何体
+\end_layout
+
+\begin_layout Subsection
+圆柱
+\end_layout
+
+\begin_layout Subsection
+圆锥
+\end_layout
+
+\begin_layout Subsection
+圆台
+\end_layout
+
+\begin_layout Subsection
+棱柱
+\end_layout
+
+\begin_layout Standard
+指上下底面平行且全等，侧棱平行且相等的封闭几何体。若棱柱的底面为
+\begin_inset Formula $n$
+\end_inset
+
+边形，那么该棱柱便称为
+\series bold
+n-棱柱
+\series default
+。如三棱柱就是底面为三角形的棱柱。
+\end_layout
+
+\begin_layout Standard
+在一个棱柱中：
+\end_layout
+
+\begin_layout Itemize
+两个相互平行的面叫做棱柱的底面，其余各面叫做棱柱的侧面；
+\end_layout
+
+\begin_layout Itemize
+两个面的公共边叫做棱柱的棱，其中两个侧面的公共边叫做棱柱的侧棱
+\end_layout
+
+\begin_layout Itemize
+侧面与底面的公共顶点叫做棱柱的顶点； 
+\end_layout
+
+\begin_layout Itemize
+不在同一个面上的两个顶点的连线叫做棱柱的对角线； 
+\end_layout
+
+\begin_layout Itemize
+两个底面之间的距离叫做棱柱的高
+\end_layout
+
+\begin_layout Subsection
+棱锥
+\end_layout
+
+\begin_layout Standard
+棱锥又称角锥，是三维多面体的一种，由多边形各个顶点向它所在的平面外一点依次连直线段而构成, 有一个面是多边形, 其余的各面是有一个公共顶点的三角形.
+ 
+\end_layout
+
+\begin_layout Standard
+随着底面形状不同，棱锥的称呼也不相同，依底面多边形而定，例如底面是正方形的棱锥称为方锥，底面为三角形的棱锥称为三棱锥，底面为五边形的棱锥称为五棱锥等等
+\end_layout
+
+\begin_layout Itemize
+棱锥中的多边形叫做棱锥的
+\series bold
+底面
+\end_layout
+
+\begin_layout Itemize
+棱锥中除底面以外的各个面都叫做棱锥的
+\series bold
+侧面
+\end_layout
+
+\begin_layout Itemize
+相邻侧面的公共边叫做棱锥的
+\series bold
+侧棱
+\series default
+。
+\end_layout
+
+\begin_layout Itemize
+棱锥中各个侧面的公共顶点叫做棱锥的
+\series bold
+顶点
+\series default
+。 
+\end_layout
+
+\begin_layout Itemize
+棱锥的顶点到底面的距离叫做棱锥的
+\series bold
+高
+\series default
+。 
+\end_layout
+
+\begin_layout Itemize
+棱锥中过不相邻的两条侧棱的截面叫做
+\series bold
+对角面
+\series default
+。
+\end_layout
+
+\begin_layout Subsection
+棱台
+\end_layout
+
+\begin_layout Standard
+当一个棱锥被平行于它的底面的一个平面所截后，截面与底面之间的几何形体就是棱台。
+\end_layout
+
+\begin_layout Standard
+截面也称为棱台的上底面，原来棱锥的底面称为下底面。 
+\end_layout
+
+\begin_layout Subsection
+球
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=\frac{4}{3}\pi R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=4\pi R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+平面之间的关系
+\end_layout
+
+\begin_layout Standard
+二面角
 \end_layout
 
 \begin_layout Chapter
@@ -1536,8 +1771,164 @@ R_{f}=f(X)={f(x)|x\in X}
 单位阶跃函数
 \end_layout
 
+\begin_layout Subsection
+函数的性质
+\end_layout
+
 \begin_layout Subsubsection
 函数的单调性
+\end_layout
+
+\begin_layout Standard
+一般地,设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的定义域为
+\begin_inset Formula $I$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+如果对于定义域内某个区间
+\begin_inset Formula $D$
+\end_inset
+
+上的任意两个自变量的值
+\begin_inset Formula $x_{1}$
+\end_inset
+
+,
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 当
+\begin_inset Formula $x_{1}<x_{2}$
+\end_inset
+
+时,都有
+\begin_inset Formula $f(x)_{1}<f(x)_{2}$
+\end_inset
+
+, 那么就说函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $D$
+\end_inset
+
+上是增函数(increasing function); 
+\end_layout
+
+\begin_layout Standard
+如果对于定义域内某个区间
+\begin_inset Formula $D$
+\end_inset
+
+上的任意两个自变量的值 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+,
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, 当
+\begin_inset Formula $x_{1}>x_{2}$
+\end_inset
+
+时,都有
+\begin_inset Formula $f(x)_{1}>f(x)_{2}$
+\end_inset
+
+,那么就说函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间D上是减函数(decreasing functionn)
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $D$
+\end_inset
+
+上是
+\series bold
+增函数
+\series default
+或
+\series bold
+减函数
+\series default
+,那么就说函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 在这一区间具有严格的单调性,区间
+\begin_inset Formula $D$
+\end_inset
+
+叫做
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的单调区间,
+\end_layout
+
+\begin_layout Subsubsection
+奇偶性
+\end_layout
+
+\begin_layout Standard
+一般地,在函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的定义域内任意一个
+\begin_inset Formula $x$
+\end_inset
+
+, 都有
+\begin_inset Formula $f(-x)=f(x)$
+\end_inset
+
+,那么函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+就叫做
+\series bold
+偶函数
+\series default
+(even fuction).
+\end_layout
+
+\begin_layout Standard
+一般地,在函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的定义域内任意一个
+\begin_inset Formula $x$
+\end_inset
+
+, 都有
+\begin_inset Formula $f(-x)=-f(x)$
+\end_inset
+
+,那么函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+就叫做奇函数(even fuction).
 \end_layout
 
 \begin_layout Subsection
@@ -1584,31 +1975,553 @@ R_{f}=f(X)={f(x)|x\in X}
 基本初等函数
 \end_layout
 
-\begin_layout Description
-幂函数 
-\begin_inset Formula $y=x^{a}$
-\end_inset
-
- 
+\begin_layout Subsubsection
+指数函数
 \end_layout
 
 \begin_layout Description
-指数函数
 \begin_inset Formula $y=a^{x}(a>0,a!=1)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+一般地,如果
+\begin_inset Formula $x^{n}=a$
+\end_inset
+
+,那么
+\begin_inset Formula $x$
+\end_inset
+
+叫做
+\begin_inset Formula $a$
+\end_inset
+
+的
+\begin_inset Formula $n$
+\end_inset
+
+次方根, 其中
+\begin_inset Formula $n>1$
+\end_inset
+
+,且
+\begin_inset Formula $n\in N^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0$
+\end_inset
+
+的任何次方根都是
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+式子
+\begin_inset Formula $\sqrt[n]{a}$
+\end_inset
+
+叫做根式(radical),
+\begin_inset Formula $n$
+\end_inset
+
+叫做指数(radical exponent), 
+\begin_inset Formula $a$
+\end_inset
+
+叫做被开放数(redicand)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+分数指数幂 
+\begin_inset Formula $a^{\frac{m}{n}}=\sqrt[n]{a^{m}}(a>0,m,n\in N^{*},\text{且n>1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推理:
+\series bold
+ 
+\begin_inset Formula $\sqrt[n]{a^{m}}=\sqrt[n]{a^{n*\frac{m}{n}}}=\sqrt[n]{(a^{\frac{m}{n}})^{n}}=a^{\frac{m}{n}}(a>0,m,n\in N^{*},\text{且n>1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a^{-\frac{m}{n}}=\frac{1}{a^{\frac{m}{n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,无理数指数幂
+\begin_inset Formula $a"(a>1,是无理数)$
+\end_inset
+
+是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/redical_fuction_down1.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/redical_fuction_beyond1.png
+	lyxscale 10
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+定义域
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+值域
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(0,+\infty)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+性质
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+过定点(0,1),即x=0时,y=1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在R上是减函数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在R上是增函数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 对数函数 
+\end_layout
+
+\begin_layout Description
 \begin_inset Formula $y=log_{a}^{x}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Description
+\begin_layout Standard
+一般地,如果
+\begin_inset Formula $a^{x}=N(a>0,且a\neq1)$
+\end_inset
+
+,那么数
+\begin_inset Formula $x$
+\end_inset
+
+叫做以a为底N的
+\series bold
+对数
+\series default
+(logarithm).
+ 记作:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=\log_{a}N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中a叫做对数的底数,N叫做真数.
+ 
+\end_layout
+
+\begin_layout Standard
+(“log”是拉丁文 logarithm (对数)的缩写.)
+\end_layout
+
+\begin_layout Standard
+通常我们将以10为底的对数叫做常用对数(common logarithm),并把
+\begin_inset Formula $\log_{10}N$
+\end_inset
+
+记为
+\begin_inset Formula $lgN$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+在科学技术中常使用以无理数
+\begin_inset Formula $e=2.71828.…$
+\end_inset
+
+为底数的对数,以
+\begin_inset Formula $e$
+\end_inset
+
+为底的对数称为
+\series bold
+自然对数(natural logurithm)
+\series default
+,并且把
+\begin_inset Formula $log_{e}N$
+\end_inset
+
+记为
+\begin_inset Formula $InN$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+根据对数的定义,可以得到对数与指数间的关系: 
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $a>0,a\neq1$
+\end_inset
+
+时,
+\begin_inset Formula $a^{x}=N\iff x=\log_{a}N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+是“等价于”)
+\end_layout
+
+\begin_layout Standard
+由指数与对数的这个关系,可以得到关于对数的结论: 
+\series bold
+负数和零没有对数
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+运算: 乘加除减
+\end_layout
+
+\begin_layout Enumerate
+自然对数以
+\begin_inset Formula $e=2.178$
+\end_inset
+
+为底,
+\begin_inset Formula $lnx$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}$
+\end_inset
+
+ 参看极限.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{a}(1)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{a}(a)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{a}(M\cdot N)=\log_{a}M+\log_{a}N)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{a}(M/N)=\log_{a}M-\log_{a}N)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{a}(m^{n})=n\log_{a}m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log_{(a^{n})}M=\frac{1}{n}\log_{a}M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+还原
+\begin_inset Formula $n^{\log_{n}b}=b=\log_{n}n^{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+基变换(换底公式) 
+\begin_inset Formula $\log_{\alpha}x=\frac{\log_{\beta}x}{\log_{\beta}\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+指系(次方公式) 
+\begin_inset Formula ${\log_{\alpha^{n}}x^{m}={\frac{m}{n}}\log_{\alpha}x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+互换 
+\begin_inset Formula $M^{\log_{\alpha}N}=N^{\log_{\alpha}M}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+倒数 
+\begin_inset Formula $\log_{\alpha}\theta=\frac{\ln\theta}{\ln\alpha}=\dfrac{1}{\dfrac{\ln\alpha}{\ln\theta}}=\frac{1}{\log_{\theta}\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+链式
+\begin_inset Formula ${\displaystyle \begin{aligned}\log_{\gamma}\beta\log_{\beta}\alpha & ={\frac{\ln\alpha}{\ln\beta}}\ {\frac{\ln\beta}{\ln\gamma}}={\frac{\ln\alpha}{\ln\gamma}}=\log_{\gamma}\alpha\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+幂函数
+\end_layout
+
+\begin_layout Standard
+一般地, 函数
+\begin_inset Formula $y=x^{a}$
+\end_inset
+
+叫做幂函数(power fuction)
+\end_layout
+
+\begin_layout Subsubsection
 三角函数
 \end_layout
 
@@ -1734,6 +2647,103 @@ status open
 
 \begin_layout Subsection
 隐函数
+\end_layout
+
+\begin_layout Subsection
+函数的应用
+\end_layout
+
+\begin_layout Standard
+对于函数
+\begin_inset Formula $y=(x)$
+\end_inset
+
+,我们把使
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点(Zero point).
+ 
+\end_layout
+
+\begin_layout Standard
+这样,函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点就是方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+的实数根,也就是函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的图象与
+\begin_inset Formula $x$
+\end_inset
+
+轴的交点的横坐标,所以
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 有实数根
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\iff$
+\end_inset
+
+函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的图像与x轴有交点 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\iff$
+\end_inset
+
+函数y=f(x)有零点
+\end_layout
+
+\begin_layout Standard
+由此可知,求方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 的实数根,就是确定函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点,一般地, 对于不能用公式法求根的方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 来说, 我们可以将它与函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+联系起来, 利用函数的性质找出零点, 从而求出方程的根。
 \end_layout
 
 \begin_layout Chapter
@@ -3990,6 +5000,72 @@ a模n的运算给出了a的余数,余数是从
 
 \begin_layout Section
 抽样方法
+\end_layout
+
+\begin_layout Subsection
+随机抽样
+\end_layout
+
+\begin_layout Standard
+一般地,设一个总体含有
+\begin_inset Formula $N$
+\end_inset
+
+个个体,从中逐个不放回地抽取
+\begin_inset Formula $n$
+\end_inset
+
+个个体作为样本(
+\begin_inset Formula $n\leqslant N$
+\end_inset
+
+),如果每次抽取时总体内的各个个体被抽到的机会都相等,就把这种抽样方法叫做
+\series bold
+简单随机抽样
+\series default
+(simple random sampling)
+\end_layout
+
+\begin_layout Subsection
+系统抽样(systernatic simpling)
+\end_layout
+
+\begin_layout Standard
+一般地,假设要从容量为N的总体中抽取容量为的样 本,我们可以按下列步骤进行系统抽样;
+\end_layout
+
+\begin_layout Itemize
+先将总体的N个个体编号,有时可直接利用个体自 身所带的号码,如学号、准考证号、门牌号等;
+\end_layout
+
+\begin_layout Itemize
+确定分段间隔起,对编号进行分段,当(n是样本容量) 是整数时,取_N.
+ 
+\end_layout
+
+\begin_layout Itemize
+在第1段用简单随机抽样确定第一个个体编号!(_E); 
+\end_layout
+
+\begin_layout Itemize
+按照一定的规则抽取样本,通常是将!加上间隔人得到第2 个个体编号(1-k),再加上得到第3个个体编号(+2),依次进行 下去,直到获取整个样本.
+\end_layout
+
+\begin_layout Subsection
+分层抽样(stratified sturnpling)
+\end_layout
+
+\begin_layout Standard
+一般地,在抽样时,将总体分成互不交叉的层,然后按照一定的比例,从各层独立地抽取一定数量的个体,将各层取出的个体合在一起作为样本.
+\end_layout
+
+\begin_layout Standard
+从上面的抽样过程可以看出,分层抽样尽量利用了调查者对调查对象(总体)事先所掌握的各种信息,并充分考虑了保持样本结构与总体结构的一致性,这对提高样本的代表
+ 性是非常重要的.
+\end_layout
+
+\begin_layout Standard
+所以,分层抽样在实际中有着非常广泛的应用,通常,当总体是由差异明显的几个部分组成时,往往选用分层抽样的方法.
 \end_layout
 
 \begin_layout Section
