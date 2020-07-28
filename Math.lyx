@@ -921,9 +921,19 @@ Oz)，三个坐标平面把空间分成八个部分，称为八个挂限。空�
 \end_layout
 
 \begin_layout Standard
-集合里的事物（“东西”），叫作元素。$x$是集合$A$的元素，记作 $x
-\backslash
-in A$。
+集合里的事物（“东西”），叫作元素。
+\begin_inset Formula $x$
+\end_inset
+
+是集合
+\begin_inset Formula $A$
+\end_inset
+
+的元素，记作 
+\begin_inset Formula $x\in A$
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Standard
@@ -992,6 +1002,54 @@ in A$。
 。 
 \end_layout
 
+\begin_layout Standard
+常用表示:
+\end_layout
+
+\begin_layout Standard
+全体非负整数集合称为非负整数集(自然数集), 记作
+\begin_inset Formula $N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所有正整数组成的集合称为正整数集, 记作
+\begin_inset Formula $N^{*}$
+\end_inset
+
+或
+\begin_inset Formula $N_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+全体整数组成的集合称为整数集, 记作
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+全体有理数组成的集合称为有理数集, 记作
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实数集合,记作
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 集合的表示 
 \end_layout
@@ -1005,7 +1063,7 @@ in A$。
 \end_layout
 
 \begin_layout Itemize
-无序性 
+无序性
 \end_layout
 
 \begin_layout Standard
@@ -1023,7 +1081,7 @@ in A$。
 \end_layout
 
 \begin_layout Itemize
-确定性 
+确定性
 \end_layout
 
 \begin_layout Standard
@@ -1031,15 +1089,204 @@ in A$。
 \end_layout
 
 \begin_layout Section
-集合间的关系 
+集合间的关系
 \end_layout
 
 \begin_layout Section
 集合的运算
 \end_layout
 
+\begin_layout Itemize
+并集(union set) 
+\begin_inset Formula $A\cup B=\{x|x\in A,\text{或x\ensuremath{\in B}}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+交集(intersection set)
+\begin_inset Formula $A\cap B=\{x|x\in A,\text{且x\ensuremath{\in B}}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+补集(complementary set)
+\begin_inset Formula $C_{u}A=\{x|x\in U,\text{且}X\notin A\}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 函数
+\end_layout
+
+\begin_layout Section
+区间的概念
+\end_layout
+
+\begin_layout Standard
+研究函数时常会用到区间的概念.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+是两个实数,而且
+\begin_inset Formula $a<b$
+\end_inset
+
+我们规定; 
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a\leqslant x\leqslant b$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+的集合叫做闭区间,表示为
+\begin_inset Formula $[a,b]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a<x<b$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+ 的集合叫做开区间,表示为
+\begin_inset Formula $(a,b)$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a\leqslant x<b$
+\end_inset
+
+或
+\begin_inset Formula $a<x\leqslant b$
+\end_inset
+
+的实数的集合叫做半开半闭区间,分别表示为 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $[a,b)$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $(a,b]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+这些区间的几何表示如上表所示,在图中,用
+\series bold
+实心点
+\series default
+表示包括在区间内的端点,用
+\series bold
+空心点
+\series default
+表示不包括在区间内的端点, 
+\end_layout
+
+\begin_layout Standard
+实数集
+\series bold
+R
+\series default
+可以用区间表示为
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+,“
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+”读作“无穷大”,“
+\begin_inset Formula $-\infty$
+\end_inset
+
+”读作“负无穷大”,“
+\begin_inset Formula $+\infty$
+\end_inset
+
+”读作“正无穷大”.
 \end_layout
 
 \begin_layout Section
@@ -1257,6 +1504,10 @@ R_{f}=f(X)={f(x)|x\in X}
 特性: 单调性, 有界性,奇偶性,周期性
 \end_layout
 
+\begin_layout Standard
+函数的表示法:解析法,图像法,列表法
+\end_layout
+
 \begin_layout Subsection
 一元函数 
 \end_layout
@@ -1283,6 +1534,10 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \begin_layout Subsubsection
 单位阶跃函数
+\end_layout
+
+\begin_layout Subsubsection
+函数的单调性
 \end_layout
 
 \begin_layout Subsection
@@ -1425,7 +1680,7 @@ R_{f}=f(X)={f(x)|x\in X}
 \begin_layout Standard
 \noindent
 双曲正切: 
-\begin_inset Formula $f(x)=\cosh(x)=\frac{(e^{x}-e^{-x})}{e^{x}+e^{-x}}$
+\begin_inset Formula $f(x)=\tanh(x)=\frac{(e^{x}-e^{-x})}{e^{x}+e^{-x}}$
 \end_inset
 
 
