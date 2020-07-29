@@ -756,15 +756,718 @@ literal "false"
 \end_layout
 
 \begin_layout Section
-椭圆
-\end_layout
-
-\begin_layout Section
 圆锥曲线 
 \end_layout
 
-\begin_layout Section
-解三角形 
+\begin_layout Standard
+圆锥曲线（英语：conic section），又称圆锥截痕、圆锥截面、二次平面曲线，是数学、几何学中通过平切圆锥（严格为一个正圆锥面和一个平面完整相切）得到的曲
+线，包括圆，椭圆，抛物线，双曲线及一些退化类型。
+\end_layout
+
+\begin_layout Subsection
+椭圆
+\end_layout
+
+\begin_layout Standard
+我们把平面内与两个定点
+\begin_inset Formula $F_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{2}$
+\end_inset
+
+ 的距离之和等于常数(大于
+\begin_inset Formula $|F_{1}F_{2}|$
+\end_inset
+
+)的点
+\begin_inset Formula $M$
+\end_inset
+
+的轨迹叫做
+\series bold
+椭圆
+\series default
+(ellipse),这两个定点叫做椭圆的
+\series bold
+焦点
+\series default
+,两焦点间的距离叫做椭圆的
+\series bold
+焦距
+\series default
+,
+\end_layout
+
+\begin_layout Standard
+设椭圆的焦距为
+\begin_inset Formula $2c(c>0)$
+\end_inset
+
+,
+\begin_inset Formula $M$
+\end_inset
+
+与
+\begin_inset Formula $F_{1}$
+\end_inset
+
+,
+\begin_inset Formula $F_{2}$
+\end_inset
+
+的和等于
+\begin_inset Formula $2a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\{M\mid|MF_{1}|+|MF_{2}|=2a\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+椭圆的标准方程:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果焦点在x轴上,
+\begin_inset Formula $F_{1}(-c,0)$
+\end_inset
+
+,
+\begin_inset Formula $F_{2}(c,0)$
+\end_inset
+
+, 
+\begin_inset Formula $c^{2}=a^{2}-b^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/ecllipse.png
+	lyxscale 30
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在椭圆的标准方程里,令
+\begin_inset Formula $x=0$
+\end_inset
+
+,得
+\begin_inset Formula $y=\pm B$
+\end_inset
+
+,此时
+\begin_inset Formula $B(0,-b)$
+\end_inset
+
+,
+\begin_inset Formula $B(0,b)$
+\end_inset
+
+是椭圆与y轴的两个交点.
+ 同样,令 
+\begin_inset Formula $y=0$
+\end_inset
+
+,得
+\begin_inset Formula $x=\pm a$
+\end_inset
+
+,这说明 
+\begin_inset Formula $A_{1}(a,0)$
+\end_inset
+
+, 
+\begin_inset Formula $A_{2}(a,0)$
+\end_inset
+
+是椭圆与
+\begin_inset Formula $x$
+\end_inset
+
+轴的两个交点.
+\end_layout
+
+\begin_layout Standard
+因为x轴, y轴是椭圆的对称轴,所以椭圆与它的对称轴有四个交点,这四个交点叫做椭圆的顶点.
+\end_layout
+
+\begin_layout Standard
+线段
+\begin_inset Formula $A_{1}A_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{1}B_{2}$
+\end_inset
+
+, 分别叫做椭圆的
+\series bold
+长轴
+\series default
+和
+\series bold
+短轴
+\series default
+, 它们的长分别等于
+\begin_inset Formula $2a$
+\end_inset
+
+ 和
+\series bold
+
+\begin_inset Formula $2b$
+\end_inset
+
+
+\series default
+, 
+\begin_inset Formula $a$
+\end_inset
+
+和
+\begin_inset Formula $b$
+\end_inset
+
+分别叫做椭圆的
+\series bold
+长半轴长
+\series default
+和
+\series bold
+短半轴长.
+\end_layout
+
+\begin_layout Subparagraph
+离心率
+\end_layout
+
+\begin_layout Standard
+椭圆
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(a>b>0)$
+\end_inset
+
+的长半轴长为a,半焦距为
+\begin_inset Formula $c$
+\end_inset
+
+保持长半轴长
+\begin_inset Formula $a$
+\end_inset
+
+不变,改变椭圆的半焦距 
+\begin_inset Formula $c$
+\end_inset
+
+, 可以发现,越接近
+\begin_inset Formula $a$
+\end_inset
+
+,椭圆越扁平,这样, c和a这两个量,可以刻画椭圆的扁平程度.
+\end_layout
+
+\begin_layout Standard
+我们把椭圆的焦距与长轴长的比,称为椭圆的
+\series bold
+离心率
+\series default
+,用
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+表示,即
+\begin_inset Formula $\varepsilon=\frac{c}{a}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $a>c>0$
+\end_inset
+
+,所以
+\begin_inset Formula $0<\varepsilon<1$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+越接近于1,则
+\begin_inset Formula $c$
+\end_inset
+
+越接近于
+\begin_inset Formula $a$
+\end_inset
+
+, 从而
+\begin_inset Formula $b=\sqrt{a^{2}-b^{2}}$
+\end_inset
+
+越小,因此椭圆越扁;反之,e越接近于0,c从而越接近0;这时椭圆就越接近于圆, 
+\end_layout
+
+\begin_layout Standard
+当且仅当
+\begin_inset Formula $a=b$
+\end_inset
+
+时,
+\begin_inset Formula $c=0$
+\end_inset
+
+,这时两个焦点重合,图形变为 圆,它的方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}+y^{2}=a^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+双曲线
+\end_layout
+
+\begin_layout Standard
+平面内与两个定点
+\begin_inset Formula $F_{1},F_{2}$
+\end_inset
+
+的
+\series bold
+距离的差
+\series default
+的绝对值等于非零常数(小于
+\begin_inset Formula $|_{1}F_{2}|$
+\end_inset
+
+)的点的轨迹叫做双曲线(hyperbola),这两个定点叫做
+\series bold
+双曲线的焦点
+\series default
+,两焦点间的距离叫做双曲线的
+\series bold
+焦距
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+设椭圆的焦距为
+\begin_inset Formula $2c(c>0)$
+\end_inset
+
+,
+\begin_inset Formula $M$
+\end_inset
+
+与
+\begin_inset Formula $F_{1}(-c,0)$
+\end_inset
+
+,
+\begin_inset Formula $F_{2}(c,0)$
+\end_inset
+
+的差的绝对值等于
+\begin_inset Formula $2a$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\{M\mid|MF_{1}|-|MF_{2}|=2a\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+双曲线的标准方程:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果焦点在x轴上,
+\begin_inset Formula $F_{1}(-c,0)$
+\end_inset
+
+,
+\begin_inset Formula $F_{2}(c,0)$
+\end_inset
+
+, 
+\begin_inset Formula $c^{2}=a^{2}+b^{2}$
+\end_inset
+
+,双曲线
+\begin_inset Formula $x>|a|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/hyperbola.png
+	lyxscale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令y=0,得
+\begin_inset Formula $x=\pm a$
+\end_inset
+
+因此双曲线和x 轴有两个交点
+\begin_inset Formula $A(-a,0)$
+\end_inset
+
+, 
+\begin_inset Formula $A(a,0)$
+\end_inset
+
+,因为x轴是双曲线的对称轴,所以双曲线和它的对称轴有两个交点,它们叫做 双曲线的顶点, 令
+\begin_inset Formula $x=0$
+\end_inset
+
+,得
+\begin_inset Formula $y^{2}=-b^{2}$
+\end_inset
+
+,这个方程没有实数根,说明双曲线和y 轴没有交点.
+\end_layout
+
+\begin_layout Standard
+把
+\begin_inset Formula $B_{1}(0,-b)$
+\end_inset
+
+,
+\begin_inset Formula $B_{2}(0,b)$
+\end_inset
+
+画在
+\begin_inset Formula $y$
+\end_inset
+
+轴上.
+ 线段
+\series bold
+
+\begin_inset Formula $A_{1}A_{2}$
+\end_inset
+
+
+\series default
+,叫做双曲线的
+\series bold
+实轴
+\series default
+,它的长等于2a, a叫做双 曲线的实半轴长; 线段
+\begin_inset Formula $B_{1}B_{2}$
+\end_inset
+
+叫做双曲线的
+\series bold
+虚轴
+\series default
+, 它的长等于
+\begin_inset Formula $2b$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+叫做双曲线的虚半轴长.
+\end_layout
+
+\begin_layout Standard
+双曲线关于x轴、y轴和原点都是对称的,这时,坐标轴是双曲线的对称轴,原点是双曲线的对称中心,原点是双曲线的对称中心叫做
+\series bold
+双曲线的中心.
+\end_layout
+
+\begin_layout Subsubsection
+渐进线
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{x}{a}\pm\frac{y}{b}=0$
+\end_inset
+
+, 随着
+\begin_inset Formula $|y|$
+\end_inset
+
+的增加,双曲线会不断的趋近这两条线,但是永远不会相交.
+ 这两条直线就是
+\series bold
+双曲线的渐进线.
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $a=b$
+\end_inset
+
+,双曲线
+\begin_inset Formula $x^{2}-y^{2}=a^{2}$
+\end_inset
+
+就是等轴双曲线, 它的实轴和虚轴的长都等于
+\begin_inset Formula $2a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Subsubsection
+离心率
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon=\frac{c}{a}>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+抛物线
+\end_layout
+
+\begin_layout Standard
+在平面内与一个定点和一条定直线l(l不经过点F)的距离相等的点的轨迹叫做抛物线(paralbola),点叫做抛物线的
+\series bold
+焦点
+\series default
+,直线叫做抛物线的
+\series bold
+准线
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+取经过点
+\begin_inset Formula $F$
+\end_inset
+
+且垂直于直线
+\begin_inset Formula $l$
+\end_inset
+
+的直线为
+\begin_inset Formula $x$
+\end_inset
+
+轴,垂足为
+\begin_inset Formula $K$
+\end_inset
+
+, 并使原点与线段
+\begin_inset Formula $KF$
+\end_inset
+
+的
+\series bold
+中点
+\series default
+重合,建立直角坐标系 
+\begin_inset Formula $xOy$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $|KF|=p(p>0)$
+\end_inset
+
+,那么
+\series bold
+焦点F
+\series default
+的坐标为
+\begin_inset Formula $(\frac{p}{2},0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+准线
+\begin_inset Formula $l$
+\end_inset
+
+的方程为
+\series default
+:
+\begin_inset Formula $x=-\frac{p}{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+设点
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+是抛物线上任意一点,点
+\begin_inset Formula $M$
+\end_inset
+
+到
+\begin_inset Formula $l$
+\end_inset
+
+的距离为
+\begin_inset Formula $d$
+\end_inset
+
+,由抛物线的定义,抛物线就是点的集合:
+\begin_inset Formula 
+\[
+P={M||MF|=d}
+\]
+
+\end_inset
+
+抛物线的标准方程是:
+\begin_inset Formula $y^{2}=2px(x>0,-\infty<y<+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+离心率:抛物线上的点M到焦点的距离和它到准线的距离之比,叫做抛物线的离心率,用表
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+示,由定义可知,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\varepsilon=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对称性:抛物线关于
+\begin_inset Formula $x$
+\end_inset
+
+轴对称,我们把抛物线的对称轴做
+\series bold
+抛物线的轴
+\series default
+。
+\end_layout
+
+\begin_layout Itemize
+顶点: 抛物线和它的轴的交点叫做抛物线的顶点,抛物线的顶点就是坐标原点.
 \end_layout
 
 \begin_layout Section
@@ -775,6 +1478,168 @@ literal "false"
 渐开线与摆线
 \end_layout
 
+\begin_layout Section
+任意角
+\end_layout
+
+\begin_layout Itemize
+正角(positive angle):逆时针方向形成的角
+\end_layout
+
+\begin_layout Itemize
+负角(negative angle):顺时针方向形成的角
+\end_layout
+
+\begin_layout Itemize
+零角(zero angle): 零角的边与终边重合
+\end_layout
+
+\begin_layout Itemize
+几象限角(quadrill ingle): 使角的顶点与原点重合, 角的始边与
+\begin_inset Formula $x$
+\end_inset
+
+轴的非负半轴重合,那么,角的终边在第几象限,我们就说这个角是第第几象限角.
+\end_layout
+
+\begin_layout Itemize
+如果角的终边在坐标轴上,就认为这个角不属于任何一个象限.
+\end_layout
+
+\begin_layout Itemize
+所有与角
+\begin_inset Formula $\alpha$
+\end_inset
+
+终边相同的角,连同角在内,可构成一个集合 
+\begin_inset Formula 
+\[
+S={\beta|\beta=\alpha+k•360°,k\in Z}
+\]
+
+\end_inset
+
+ 即任一与角
+\begin_inset Formula $\alpha$
+\end_inset
+
+终边相同的角,都可以表示成角
+\begin_inset Formula $\alpha$
+\end_inset
+
+与整数个周角的和.
+\end_layout
+
+\begin_layout Section
+解三角形 
+\end_layout
+
+\begin_layout Subsection
+弧度制
+\begin_inset CommandInset label
+LatexCommand label
+name "弧度制"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "三角函数"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+角度制(degree measure):
+\series default
+,角以度为单位进行度量,1度的角等于周角的 
+\begin_inset Formula $\frac{1}{360}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+弧度制:把长度等于半径长的
+\series bold
+弧
+\series default
+所对的圆心角叫做1弧度(radian)的角,用符号
+\begin_inset Formula $rad$
+\end_inset
+
+表示,读弧度.
+\end_layout
+
+\begin_layout Standard
+一般地, 正角的弧度数是正数, 负角的弧度数是负数, 零角的弧度数是0.
+ 
+\end_layout
+
+\begin_layout Standard
+如果半径为
+\begin_inset Formula $r$
+\end_inset
+
+的圆的圆心角
+\begin_inset Formula $\alpha$
+\end_inset
+
+所对弧的长为
+\begin_inset Formula $l$
+\end_inset
+
+, 那么, 角 
+\begin_inset Formula $\alpha$
+\end_inset
+
+的弧度数的绝对值是
+\begin_inset Formula 
+\[
+|\alpha|=\frac{l}{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $360\textdegree=2\pi rad$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $180\textdegree=\pi rad$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1\textdegree=\frac{\pi}{180}rad\approx0.01745rad$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1rad=\frac{180}{\pi}\textdegree\approx57.30\textdegree=57\textdegree18'$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 复数
 \end_layout
@@ -783,7 +1648,7 @@ literal "false"
 实数
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 素数
 \end_layout
 
@@ -842,6 +1707,10 @@ literal "false"
 \end_inset
 
 。 
+\end_layout
+
+\begin_layout Subsection
+复数代数形式的四则运算
 \end_layout
 
 \begin_layout Chapter
@@ -1356,7 +2225,7 @@ n-棱柱
 \end_layout
 
 \begin_layout Chapter
-函数
+函数准备
 \end_layout
 
 \begin_layout Section
@@ -1699,7 +2568,7 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 函数
 \end_layout
 
@@ -1743,7 +2612,7 @@ R_{f}=f(X)={f(x)|x\in X}
 函数的表示法:解析法,图像法,列表法
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 一元函数 
 \end_layout
 
@@ -1751,7 +2620,7 @@ R_{f}=f(X)={f(x)|x\in X}
 如果函数仅包含一个自变量，所以我们也称之为一元函数。 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 函数的表示方法 
 \end_layout
 
@@ -1759,7 +2628,7 @@ R_{f}=f(X)={f(x)|x\in X}
 表达式法，列表法，图形法。
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 分段函数 
 \end_layout
 
@@ -1767,15 +2636,15 @@ R_{f}=f(X)={f(x)|x\in X}
 在定义域内不同的区间上用不同的解析表达式表示 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 单位阶跃函数
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 函数的性质
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 函数的单调性
 \end_layout
 
@@ -1883,7 +2752,7 @@ R_{f}=f(X)={f(x)|x\in X}
 的单调区间,
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 奇偶性
 \end_layout
 
@@ -1931,7 +2800,7 @@ R_{f}=f(X)={f(x)|x\in X}
 就叫做奇函数(even fuction).
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 反函数(定义域与值域反过来,域的值不重复)
 \end_layout
 
@@ -1971,11 +2840,11 @@ R_{f}=f(X)={f(x)|x\in X}
 ; 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 基本初等函数
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 指数函数
 \end_layout
 
@@ -2281,7 +3150,7 @@ R
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 对数函数 
 \end_layout
 
@@ -2509,7 +3378,7 @@ x=\log_{a}N
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 幂函数
 \end_layout
 
@@ -2521,8 +3390,164 @@ x=\log_{a}N
 叫做幂函数(power fuction)
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 三角函数
+\begin_inset CommandInset label
+LatexCommand label
+name "三角函数"
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "弧度制"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在引进弧度制时我们看到,在半径为单位长的圆中,角的弧度数的绝对值等于圆心角
+\begin_inset Formula $\alpha$
+\end_inset
+
+所对的弧长(符号由角a的终边的旋转方向决定),在直角坐标系中,我们称以原点O为圆心,以单位长度为半径的圆为
+\series bold
+单位圆
+\series default
+(unit circle),这样,上述P点就是a的终边与 单位的交点,锐角三角函数可以用单位圆上点的坐标表示.
+\end_layout
+
+\begin_layout Subsubsection
+三角恒等变换
+\end_layout
+
+\begin_layout Subsubsection
+任意角的三角函数 
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $\alpha$
+\end_inset
+
+是一个任意角,它的终边与单位圆交于点 P(x,y),那么:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y$
+\end_inset
+
+叫做
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 的正弦(sine),记作 
+\begin_inset Formula $\sin\alpha$
+\end_inset
+
+,即 
+\begin_inset Formula $\sin\alpha=y=\frac{y}{1(\text{半\text{径}})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+x叫做
+\begin_inset Formula $\alpha$
+\end_inset
+
+的余弦(cosine),记作 
+\begin_inset Formula $\cos\alpha$
+\end_inset
+
+,即 
+\begin_inset Formula $\cos\alpha=x=\frac{x}{1(\text{半\text{径}})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{y}{x}$
+\end_inset
+
+叫做a的正切(tangent),记作
+\begin_inset Formula $\tan\alpha$
+\end_inset
+
+,即 
+\begin_inset Formula $\tan\alpha=\frac{y}{x}(x\neq0)=\frac{\sin\alpha}{\cos\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看出,当
+\begin_inset Formula $\alpha=\frac{\pi}{2}+k\pi(k\in Z)$
+\end_inset
+
+时,
+\begin_inset Formula $\alpha$
+\end_inset
+
+的终边在y轴上,这时点P的横坐标
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+等于0,所以 
+\begin_inset Formula $\tan\alpha=\frac{y}{x}$
+\end_inset
+
+ 无意义.
+ 
+\end_layout
+
+\begin_layout Standard
+终边相同的角,同一三角函数的值相等:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(\alpha+k*2\pi)=\sin(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(\alpha+k*2\pi)=\cos(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan(\alpha+k*2\pi)=\tan(\alpha)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $k\in Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin^{2}(\alpha)+\cos^{2}(\alpha)=y^{2}+x^{2}=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2540,35 +3565,127 @@ x=\log_{a}N
  
 \end_layout
 
-\begin_layout Itemize
-三角恒等变换
-\end_layout
-
-\begin_layout Itemize
-任意角的三角函数 
-\end_layout
-
-\begin_layout Itemize
-弧度制 
-\end_layout
-
-\begin_layout Itemize
+\begin_layout Subsubsection
 正弦于弦的诱导公式 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Subsubsection
 同三角函数的基本关系式 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Subsubsection
 三角函数的图像性质
+\end_layout
+
+\begin_layout Standard
+对于函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,如果存在一个非零常数T,使得当
+\begin_inset Formula $x$
+\end_inset
+
+取定义域内的每一个值时,都有 
+\begin_inset Formula $(x+T)=(x)$
+\end_inset
+
+, 那么函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+就叫做
+\series bold
+周期函数
+\series default
+(periodic function),非零常数
+\begin_inset Formula $T$
+\end_inset
+
+叫做这个函数的周期 (period).
+ 
+\end_layout
+
+\begin_layout Standard
+周期函数的周期不止一个, 如果在周期函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的所有周期中存在一个最小的正数,那么这个最小正数就叫做
+\begin_inset Formula $f(x)$
+\end_inset
+
+的最小正周期(minimal positive period).
+ 例如正弦函数的最小正周期是
+\begin_inset Formula $2\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正弦函数是周期函数,
+\begin_inset Formula $2k\pi(k\in Z\text{且k\neq0})$
+\end_inset
+
+都是它的周期,最小正周期是
+\begin_inset Formula $2\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $y=A\sin(\omega x+\varphi),x\in[0,+\infty),其中A>0,\omega>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+物理中,描述简谐运动的物理量,如振幅, 周期和频率等都与这个解析式中的常数有关: 
+\end_layout
+
+\begin_layout Standard
+A就是这个简谐运动的振幅(amplitude of vibration),它是做简谐运动的物体离开平衡位置的最大距离; 
+\end_layout
+
+\begin_layout Standard
+这个简谐运动的周期(period)是
+\begin_inset Formula $T=\frac{2\pi}{\omega}$
+\end_inset
+
+,这是做简谐运动的物体往复运动一次所需要的时间; 
+\end_layout
+
+\begin_layout Standard
+这个简谐运动的频率(frequency)由公式
+\begin_inset Formula $f=\frac{1}{T}=\frac{\omega}{2\pi}$
+\end_inset
+
+给出,它是做简谐运动的物体在单位时间内往复运动的次数; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega x+\varphi$
+\end_inset
+
+称为相位(phase); 
+\end_layout
+
+\begin_layout Standard
+x=0时的相位
+\begin_inset Formula $\varphi$
+\end_inset
+
+称为初相 (initial phase).
 \end_layout
 
 \begin_layout Description
 反三角函数
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 初等函数
 \end_layout
 
@@ -2637,19 +3754,19 @@ status open
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 复合函数 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 多元函数 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 隐函数
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 函数的应用
 \end_layout
 
@@ -3210,6 +4327,26 @@ lim{x→x_{0}}{x^{n}}={x_{0}}^{n}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+平均变化率
+\series default
+: 
+\begin_inset Formula $\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}$
+\end_inset
+
+从
+\begin_inset Formula $x_{1}$
+\end_inset
+
+到
+\begin_inset Formula $x_{2}$
+\end_inset
+
+的平均变化率.
+\end_layout
+
+\begin_layout Standard
 设函数y=f(x)在点
 \begin_inset Formula $x_{0}$
 \end_inset
@@ -3268,7 +4405,7 @@ lim(Δx→0){Δy/Δx}=lim(Δx→0){{f(x_{0}+Δx-f(x_{0})}/Δx}
 \begin_inset Formula $f'(x)$
 \end_inset
 
-与之对应，这样就确定了定义在区间I上的一个函数(可导必定连续，连续未必可导)。 
+与之对应，这样就确定了定义在区间I上的一个函数(可导必定连续，连续未必可导)。
 \end_layout
 
 \begin_layout Section
@@ -4600,8 +5737,529 @@ status open
 向量 
 \end_layout
 
+\begin_layout Standard
+数学中,我们把这种既有大小,又有方向的量叫做
+\series bold
+向量
+\series default
+(vector),而把那些只有大小,没有方向的量(如年龄、身高、长度、面 积、体积、质量等),称为数量.
+\end_layout
+
 \begin_layout Section
 平面向量
+\end_layout
+
+\begin_layout Standard
+由于实数与数轴上的点一一对应,所以数量常常用数轴上的一个点表示,而且不同的点表示不同的数量,对于向量,我们常用带箭头的线段来表示,线段按一定比例(标度)画出,它
+的长短表示向量的大小,箭头的指向表示向量的方向.
+\end_layout
+
+\begin_layout Standard
+带有方向的线段叫做
+\series bold
+有向线段
+\series default
+,在有向线段的终点处画上箭头表示它的方向, 以
+\begin_inset Formula $A$
+\end_inset
+
+为起点、
+\begin_inset Formula $B$
+\end_inset
+
+为终点的有向线段记作
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+,起点写在终点的前面.
+\end_layout
+
+\begin_layout Standard
+已知
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+,线段
+\begin_inset Formula $AB$
+\end_inset
+
+的长度也叫做有向线段
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的长度, 记作
+\begin_inset Formula $|\overrightarrow{AB}|$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+有向线段包含三个要素:
+\series bold
+起点
+\series default
+、
+\series bold
+方向
+\series default
+、
+\series bold
+长度
+\series default
+,知道了有向线段的起点、方向和长度,它的
+\series bold
+终点
+\series default
+就唯一确定.
+\end_layout
+
+\begin_layout Standard
+向量可以用有向线段表示,向量
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的大小,也就是向量
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的长度(或称模),记作
+\begin_inset Formula $|\overrightarrow{AB}|$
+\end_inset
+
+,长度为0的向量叫做零向量(zero vector), 记作,长度等于1个单位的向量, 叫做单位向量(unit vector)。
+\end_layout
+
+\begin_layout Standard
+向量也可用字母
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{c}$
+\end_inset
+
+,…表示,或用表示向量的有向线段的起点和终点字母表示,例如,
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+平行向量
+\series default
+(parallel vectors): 方向相同或相反的非零向量,向量 
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+、
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+平 行,通常记作
+\begin_inset Formula $\overrightarrow{a}//\overrightarrow{b}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+规定:零向量与任一向量平行,即对于任意向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,都有 
+\begin_inset Formula $\overrightarrow{0}//\overrightarrow{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+相等向量
+\series default
+:长度相等且方向相同的向量叫做(equal vector),
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+共线向量(collinear vectors)
+\series default
+:任一组平行向量都可以移动到同一直线上,因此,平行向量也叫做
+\series bold
+共线向量
+\series default
+。
+\end_layout
+
+\begin_layout Subsection
+向量加法
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+三角形法则
+\end_layout
+
+\begin_layout Standard
+已知非零向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+,在平面内任取一点A,作
+\begin_inset Formula $\overrightarrow{AB}=\overrightarrow{a}$
+\end_inset
+
+, 
+\begin_inset Formula $\overrightarrow{BC}=\overrightarrow{b}$
+\end_inset
+
+,则向量 
+\begin_inset Formula $\overrightarrow{AC}$
+\end_inset
+
+叫做
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+与
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+的和,记作
+\begin_inset Formula $\overrightarrow{a}+\overrightarrow{b}$
+\end_inset
+
+,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AC}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/vector_add_3.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这种求两个向量和的方法叫做向量加法的
+\series bold
+三角形法则
+\series default
+, 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+平行四边形法则
+\end_layout
+
+\begin_layout Standard
+以同一点
+\begin_inset Formula $A$
+\end_inset
+
+为起点的两个已知向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+、
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+为邻边作
+\begin_inset Formula ${\scriptstyle {\textstyle {\displaystyle ◊ABCD}}}$
+\end_inset
+
+,则以
+\begin_inset Formula $A$
+\end_inset
+
+为起点的对角线
+\begin_inset Formula $\overrightarrow{AC}$
+\end_inset
+
+就是
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+与
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+的和,这种求两个向量和的方法叫做向量加法的
+\series bold
+平行四边形法则
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/vector_add_4.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于零向量与任一向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,我们规定 
+\begin_inset Formula $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a}=\overrightarrow{a}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Subsection
+向量减法
+\end_layout
+
+\begin_layout Standard
+规定, 与
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+长度相等,方向相反的向量,叫做
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+的相反向量,记作
+\begin_inset Formula $-\overrightarrow{a}$
+\end_inset
+
+ , 由于方向反转两次仍回到原来的方向,因此
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+和
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+互为相反向量, 于是
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-(-\overrightarrow{a})=\overrightarrow{a}
+\]
+
+\end_inset
+
+ 我们规定,零向量的相反向量仍是零向量,
+\end_layout
+
+\begin_layout Standard
+任一向量与其相反向量的和是零向量,即
+\begin_inset Formula 
+\[
+a+(-a)=(-a)+a=0
+\]
+
+\end_inset
+
+
+\series bold
+减去一个向量相当于加上这个向量的相反向量.
+\end_layout
+
+\begin_layout Subsection
+向量数乘
+\end_layout
+
+\begin_layout Standard
+一般地,我们规定实数
+\begin_inset Formula $\lambda$
+\end_inset
+
+与向量
+\begin_inset Formula $a$
+\end_inset
+
+的积是一个向量,这种运算叫做向量的数乘(multiplication of vectory by scalar).
+ 记作
+\begin_inset Formula $\lambda a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+平面向量基本定理
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $e_{1}$
+\end_inset
+
+,
+\begin_inset Formula $e_{2}$
+\end_inset
+
+是同一平面内的两个不共线向量, 那么对于这一平面内的任意向量
+\begin_inset Formula $a$
+\end_inset
+
+,有且只有一对实数
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+,使 :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们把不共线的向量
+\begin_inset Formula $e_{1}$
+\end_inset
+
+,
+\begin_inset Formula $e_{2}$
+\end_inset
+
+叫做表示这一平面内所有向量的一组基底(base).
+\end_layout
+
+\begin_layout Standard
+不共线向量有不同方向,它们的位置关系可用夹角来表示.
+\end_layout
+
+\begin_layout Standard
+已知两个非零向量
+\begin_inset Formula $a$
+\end_inset
+
+和
+\begin_inset Formula $b$
+\end_inset
+
+, 作
+\begin_inset Formula $OA=a$
+\end_inset
+
+,
+\begin_inset Formula $OB=b$
+\end_inset
+
+, 则
+\begin_inset Formula $\angle AOB=\theta(0°\leqslant\theta\leqslant180°)$
+\end_inset
+
+叫做向量a与b的
+\series bold
+夹角
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\theta=90°$
+\end_inset
+
+时,
+\begin_inset Formula $a$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+同向;当
+\begin_inset Formula $180°$
+\end_inset
+
+时,
+\begin_inset Formula $a$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+反向, 
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $a$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+的夹角是 
+\begin_inset Formula $90°$
+\end_inset
+
+,则
+\begin_inset Formula $a$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+垂直,记作
+\begin_inset Formula $a\bot b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -5039,12 +6697,16 @@ a模n的运算给出了a的余数,余数是从
 \end_layout
 
 \begin_layout Itemize
-确定分段间隔起,对编号进行分段,当(n是样本容量) 是整数时,取_N.
+确定分段间隔起,对编号进行分段,当(n是样本容量) 是整数时,取
+\begin_inset Formula $N$
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Itemize
-在第1段用简单随机抽样确定第一个个体编号!(_E); 
+在第1段用简单随机抽样确定第一个个体编号; 
 \end_layout
 
 \begin_layout Itemize
@@ -5072,6 +6734,86 @@ a模n的运算给出了a的余数,余数是从
 总体分布的估计
 \end_layout
 
+\begin_layout Subsection
+用样本的频率分布估计总体分布
+\end_layout
+
+\begin_layout Itemize
+极差:最大值与最小值的差
+\end_layout
+
+\begin_layout Itemize
+组距和组数: 
+\begin_inset Formula $\text{组\text{数=\frac{\text{极\text{差}}}{\text{组\text{距}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+组距与组数的确定没有固定的标准,常常需要一个尝试和选择的过程.
+\end_layout
+
+\begin_layout Standard
+将数据分组时, 组数应力求合适,以使数据的分布规律能较清楚地呈现出来,组数太多或太少,都会影响 我们了解数据的分布情况,数据分组的组数与样本容量有关,一般样本容
+量越大,所分组数越多.
+\end_layout
+
+\begin_layout Standard
+当样本容量不超过100 时,按照数据的多少,常分成5~12组。
+\end_layout
+
+\begin_layout Standard
+众数
+\end_layout
+
+\begin_layout Standard
+中位数
+\end_layout
+
+\begin_layout Standard
+平均数
+\end_layout
+
+\begin_layout Standard
+标准差
+\end_layout
+
+\begin_layout Subsubsection
+频率分布
+\end_layout
+
+\begin_layout Standard
+频率分布表,频率分布图,频率分布折线图,总体密度曲线,茎叶图,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $频率=\frac{\text{频\text{数}}}{\text{样\text{本容量}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+变量间的关系
+\end_layout
+
+\begin_layout Itemize
+正相关
+\end_layout
+
+\begin_layout Itemize
+负相关
+\end_layout
+
+\begin_layout Itemize
+回归直线(regression line): 其方程称为回归方程
+\end_layout
+
+\begin_layout Itemize
+最小二乘法
+\end_layout
+
 \begin_layout Section
 正态分布
 \end_layout
@@ -5080,12 +6822,40 @@ a模n的运算给出了a的余数,余数是从
 回归分析 
 \end_layout
 
+\begin_layout Standard
+一般地,建立回归模型的基本步骤为:
+\end_layout
+
+\begin_layout Enumerate
+确定研究对象,明确哪个变量是解释变量,哪个变量是预报变量,
+\end_layout
+
+\begin_layout Enumerate
+画出解释变量和预报变量的散点图,观察它们之间的关系(如是否存在线性关系等)
+\end_layout
+
+\begin_layout Enumerate
+由经验确定回归方程的类型(如我们观察到数据呈线性关系,则选用线性回归方程)。
+\end_layout
+
+\begin_layout Enumerate
+按一定规则(如最小二乘法)估计回归方程中的参数。
+\end_layout
+
+\begin_layout Enumerate
+得出结果后分析残差图是否有异常(如个别数据对应残差过大,残差呈现不随机的规律性等),若存在异常,则检查数据是否有误,或模型是否合适等。
+\end_layout
+
 \begin_layout Section
 线性回归
 \end_layout
 
 \begin_layout Section
 独立性检验
+\end_layout
+
+\begin_layout Standard
+判断两个事件是否有关联
 \end_layout
 
 \begin_layout Section
