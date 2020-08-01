@@ -82,6 +82,50 @@ Math
 \end_layout
 
 \begin_layout Chapter
+数学符号解释
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\iff$
+\end_inset
+
+ 等价于，
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+即可以互相推出
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sideset{}{}\sum$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 数学运算
 \end_layout
 
@@ -707,11 +751,853 @@ literal "false"
 \end_layout
 
 \begin_layout Chapter
+不等式 
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $a-b$
+\end_inset
+
+是正数,那么
+\begin_inset Formula $a>b$
+\end_inset
+
+;如果
+\begin_inset Formula $a-b$
+\end_inset
+
+等于零,那么
+\begin_inset Formula $a=b$
+\end_inset
+
+;如果
+\begin_inset Formula $a-b$
+\end_inset
+
+是负数, 那么
+\begin_inset Formula $a<b$
+\end_inset
+
+,反过来也对,这可以表示为 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a-b>0\iff a>b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a-b=0\iff a=b
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a-b<0\iff a<b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+要比较两个实数的大小,可以考察这两个实数的差。
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b$
+\end_inset
+
+,那么
+\begin_inset Formula $b<a$
+\end_inset
+
+; 如果 
+\begin_inset Formula $b<a$
+\end_inset
+
+,那么,即 
+\begin_inset Formula $a>b$
+\end_inset
+
+ 即
+\begin_inset Formula 
+\[
+a>b\iff b<a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b$
+\end_inset
+
+,
+\begin_inset Formula $b>c$
+\end_inset
+
+那么
+\begin_inset Formula $a>c$
+\end_inset
+
+,即 
+\begin_inset Formula 
+\[
+a>b,b>c\iff a>c
+\]
+
+\end_inset
+
+反之：
+\begin_inset Formula 
+\[
+a\text{<}b,b<c\iff a<c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b$
+\end_inset
+
+,那么
+\begin_inset Formula $a+c>b+c$
+\end_inset
+
+, 这就是说,不等式的两边都加上同一个实数,所得不等式与不等式同向, 同样, 如果
+\begin_inset Formula $a<b$
+\end_inset
+
+则
+\begin_inset Formula $a-c<b-c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+把数轴上的两个点A与B同时沿相同方向移动相等的距离,得到另两个点A与B, A与B和A与B的左右位置关系不会改变.
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b$
+\end_inset
+
+,
+\begin_inset Formula $c>0$
+\end_inset
+
+,那么
+\begin_inset Formula $ac>bc$
+\end_inset
+
+, 如果
+\begin_inset Formula $a<b$
+\end_inset
+
+,
+\begin_inset Formula $c>0$
+\end_inset
+
+,那么
+\begin_inset Formula $ac<bc$
+\end_inset
+
+ , 
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>d$
+\end_inset
+
+,
+\begin_inset Formula $c>d$
+\end_inset
+
+,那么
+\begin_inset Formula $a+c>b+d$
+\end_inset
+
+.
+ 两个同向不等式相加,所得不等式与原不等式同向。 
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b>0$
+\end_inset
+
+,
+\begin_inset Formula $c>d>0$
+\end_inset
+
+,那么
+\begin_inset Formula $ac>bd$
+\end_inset
+
+, 两边都是正数的同向不等式相乘,所得的不等式和原不等式同向
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b>0$
+\end_inset
+
+,那么
+\begin_inset Formula $a^{n}>b^{n}(n\in N,n\geqslant1)$
+\end_inset
+
+, 当不等式的两边都是正数时,不等式两边同时乘方所得的不等式和原不等式同向,
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $a>b>0$
+\end_inset
+
+,那么
+\begin_inset Formula $\sqrt[n]{a}>\sqrt[n]{b}(n\in N,n\geqslant2)$
+\end_inset
+
+,当不等式的两边都是正数时,不等式两边同时开方所得的不等式和原不等式同向.
+\end_layout
+
+\begin_layout Section
+二元一次不等式与线性规划
+\end_layout
+
+\begin_layout Standard
+满足二元一次不等式(组)的
+\begin_inset Formula $x$
+\end_inset
+
+和
+\begin_inset Formula $y$
+\end_inset
+
+的取值构成有序数对
+\begin_inset Formula $(x,y)$
+\end_inset
+
+, 所有这样的有序数对
+\begin_inset Formula $(x,y)$
+\end_inset
+
+构成的集合称为二元一次不等式(组)的解集,有序数对可以看成直角坐标平面内点的坐标,于是,二元一次不等式(组)的解集就可以看成直角坐标系内的点构成的集合。
+\end_layout
+
+\begin_layout Standard
+例1:
+\end_layout
+
+\begin_layout Standard
+解不等式: 
+\begin_inset Formula $x-y<a(a>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解: 画出
+\begin_inset Formula $x-y=a(a>0)$
+\end_inset
+
+的直线, 然后可以发现
+\begin_inset Formula $x-y<a(a>0)$
+\end_inset
+
+的解集在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x-y=a(a>0)$
+\end_inset
+
+的左上方.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+直线
+\begin_inset Formula $x-y=a(a>0)$
+\end_inset
+
+叫做两个区域的
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+边界
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ 因为是
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+小于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ 所以把直线画成虚线, 表示区域
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不包括边界
+\series default
+.如果是等于a可以画成直线.
+\end_layout
+
+\begin_layout Standard
+例二:
+\end_layout
+
+\begin_layout Standard
+给出条件:
+\begin_inset Formula 
+\[
+\begin{cases}
+x+2.5y\leqslant10\\
+3x\leqslant15\\
+4y\leqslant12\\
+x\geqslant0\\
+y\geqslant0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求
+\begin_inset Formula $z=2x+3y$
+\end_inset
+
+的最大值.
+\end_layout
+
+\begin_layout Standard
+解: 做图:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/不等式.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=2x+3y$
+\end_inset
+
+变形
+\begin_inset Formula $y=-\frac{2}{3}x+\frac{z}{3}$
+\end_inset
+
+,可以看出当z变化时,出现一组互相平行的直线, 所以实际就是求解什么时候
+\begin_inset Formula $\frac{z}{3}$
+\end_inset
+
+最大.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/不等式_解.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+目标函数:求最大值的函数; 本例中的
+\begin_inset Formula $z=2x+3y$
+\end_inset
+
+是关于x,y的一次解析式, 所以又称为线性目标函数.
+\end_layout
+
+\begin_layout Standard
+一般的,在线性约束条件下求 线性目标函数的最大值或最小值问题,统称为
+\series bold
+线性规划(
+\series default
+linear prograll)问题.
+\end_layout
+
+\begin_layout Standard
+满足线性约束条件的解(x,y)叫做
+\series bold
+可行解
+\series default
+(feasible solution),由所有可行解组成的集合叫做
+\series bold
+可行域
+\series default
+(feasible region),其中,使目标函数取得最大值或最小值的可行解叫做这个问题的
+\series bold
+最优解.
+\end_layout
+
+\begin_layout Section
+基本不等式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{ab}\leqslant\frac{a+b}{2}(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+2\sqrt{ab}\leqslant a+b(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{2}+b^{2}\geqslant2ab(a,b\in R)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即两个正数的算术平均不小于(大于或等于)几何平均.推到三个依然成立.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt[3]{abc}\leqslant\frac{a+b+c}{3}(a>0,b>0,c>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+证明:
+\begin_inset Formula 
+\[
+2\sqrt{ab}\leqslant a+b(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+4ab\leqslant a^{2}+b^{2}+2ab(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+2ab\leqslant a^{2}+b^{2}(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leqslant a^{2}+b^{2}-2ab(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0\leqslant(a-b)^{2}(a>0,b>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+显然
+\begin_inset Formula $(a-b)^{2}\geqslant0$
+\end_inset
+
+成立.
+\end_layout
+
+\begin_layout Standard
+这个公式可以证明在周长一定的矩形中正方形面积最大.
+\end_layout
+
+\begin_layout Section
+绝对值不等式(绝对值三角不等式)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|a+b|\leqslant|a|+|b|(a,b\in R)$
+\end_inset
+
+当且仅当
+\begin_inset Formula $ab\geqslant0\text{时符号成立}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|a-c|\leqslant|a-b|+|b-c|(a,b,c\in R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推理:
+\begin_inset Formula $|a-c|=|(a-b)+(b-c)|\leqslant|a-b|+|b-c|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+证明不等式的基本方法
+\end_layout
+
+\begin_layout Itemize
+比较法
+\end_layout
+
+\begin_layout Itemize
+综合法
+\end_layout
+
+\begin_layout Itemize
+分析法
+\end_layout
+
+\begin_layout Itemize
+反证法
+\end_layout
+
+\begin_layout Itemize
+放缩法
+\end_layout
+
+\begin_layout Section
+柯西不等式
+\end_layout
+
+\begin_layout Section
+排序不等式
+\end_layout
+
+\begin_layout Chapter
+坐标系
+\end_layout
+
+\begin_layout Section
+平面直角坐标系
+\end_layout
+
+\begin_layout Standard
+平面直角坐标系
+\series bold
+是(笛卡尔坐标系(直角) Cartesian coordinate system)的一种
+\end_layout
+
+\begin_layout Standard
+平面直角坐标系是由两条相互垂直、相交于原点的数轴构成的。在平面内，任何一点的坐标是根据数轴上对应的点的坐标设定的。在平面内，任何一点与坐标的对应关系，类似于数轴
+上点与坐标的对应关系。
+\end_layout
+
+\begin_layout Standard
+平面直角坐标系的两个坐标轴将平面分成了四个部分，称为象限，分别用罗马数字编号为
+\begin_inset Formula ${\displaystyle I(+,+)}$
+\end_inset
+
+，
+\begin_inset Formula ${\displaystyle II\ (-,+)}$
+\end_inset
+
+,
+\begin_inset Formula ${\displaystyle III\ (-,-)}$
+\end_inset
+
+,
+\begin_inset Formula ${\displaystyle IV\ (+,-)}$
+\end_inset
+
+)。象限的编号是按照逆时针方向，从象限
+\begin_inset Formula ${\displaystyle I}$
+\end_inset
+
+编到象限
+\begin_inset Formula ${\displaystyle IV}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+极坐标系
+\end_layout
+
+\begin_layout Standard
+平面中任意位置点
+\begin_inset Formula $M$
+\end_inset
+
+可由一个夹角和一段相对点O
+\series bold
+极点
+\series default
+的距离来表示。夹角通常为正角,单位取弧度.
+ 距离叫做极径,夹角叫做极角.
+ 
+\series bold
+极坐标
+\series default
+为
+\begin_inset Formula $M(p,\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+极坐标和直角坐标的互换:
+\end_layout
+
+\begin_layout Standard
+互换公式:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=p\cos\theta,y=p\sin\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p^{2}=x^{2}+y^{2},\tan\theta=\frac{y}{x}(x\neq0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/极坐标系.png
+	lyxscale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+曲线的极坐标方程
+\end_layout
+
+\begin_layout Standard
+圆: 
+\begin_inset Formula $p=2a\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+直线:
+\begin_inset Formula $\theta=(\text{角\text{度})};\text{距\text{离(p\ensuremath{\in R})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+柱坐标系
+\end_layout
+
+\begin_layout Standard
+它是二维极坐标系往 z-轴的延伸。添加的第三个坐标 
+\begin_inset Formula ${\displaystyle z}$
+\end_inset
+
+ 专门用来表示 P 点离 xy-平面的高低。按照国际标准化组织建立的约定 (ISO 31-11) ，径向距离、方位角、高度，分别标记为 
+\begin_inset Formula ${\displaystyle (\rho,\phi,z)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+球坐标系(spherical coordinate system)(空间极坐标系)
+\end_layout
+
+\begin_layout Standard
+原点与点P之间的“径向距离”（radial distance）
+\begin_inset Formula ${\displaystyle r}$
+\end_inset
+
+，原点到点P的连线与正-轴之间的“极角”（polar angle）
+\begin_inset Formula ${\displaystyle \theta}$
+\end_inset
+
+ ，以及原点到点P的连线在xy平面的投影线，与正x-轴之间的“方位角”（azimuth angle）
+\begin_inset Formula ${\displaystyle \varphi}$
+\end_inset
+
+ 。它可以被视为极坐标系的三维推广。球坐标的概念，延伸至高维空间，则称为超球坐标。
+\end_layout
+
+\begin_layout Standard
+假设P点在三维空间的位置的三个坐标是
+\begin_inset Formula ${\displaystyle (r,\theta,\varphi)}$
+\end_inset
+
+。那么，0 ≤ r是从原点到P点的距离，0 ≤ θ ≤ π是从原点到P点的连线与正z-轴的夹角，0 ≤ φ < 2π是从原点到P点的连线在xy-平面的投影线，与
+正x-轴的夹角。
+\end_layout
+
+\begin_layout Chapter
 平面图形
 \end_layout
 
 \begin_layout Section
-直线与方程 
+直线与方程
 \end_layout
 
 \begin_layout Standard
@@ -753,6 +1639,94 @@ literal "false"
 
 \begin_layout Section
 直线与圆
+\end_layout
+
+\begin_layout Subsection
+圆幂定理
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/circle_power_theorem.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+交弦定理
+\end_layout
+
+\begin_layout Standard
+在图中，圆心为 O，圆上有两弦 AB 及 CD，相交于 E 设有一圆，圆上有两条弦 AB 及 CD，它们相交于 E，则有
+\begin_inset Formula ${\displaystyle EA\cdot EB=EC\cdot ED}$
+\end_inset
+
+ .
+ 这个乘积，是 P的圆幂的相反数 −h。这是因为圆幂为非正数，而线段的乘积为正数。
+\end_layout
+
+\begin_layout Standard
+证明:ΔAED 与 ΔCEB 是相似三角形(根据圆周角定理)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \frac{EA}{EC}=\frac{ED}{EB}}
+\]
+
+\end_inset
+
+ 整理可得
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle EA\cdot EB=EC\cdot ED}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+割线定理
+\end_layout
+
+\begin_layout Standard
+设有一圆，圆外有一点 
+\begin_inset Formula $G$
+\end_inset
+
+，引出两条割线，分别与圆相交于 A、D 以及 C、B，则有
+\begin_inset Formula ${\displaystyle GA\cdot GD=GC\cdot GB}$
+\end_inset
+
+ 这个乘积，是 P 的圆幂 h。
+\end_layout
+
+\begin_layout Standard
+证明: ΔGAB 与 ΔGCD 是相似三角形
+\end_layout
+
+\begin_layout Subsubsection
+切割线定理 
+\end_layout
+
+\begin_layout Standard
+设有一圆，圆外有一点 P，引出一条割线，与圆相交于 A、B ，又引出一条切线，与圆相切于 T，则有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle PA\cdot PB=PT^{2}}$
+\end_inset
+
+ 这个乘积，同样是 P 的圆幂 h。
 \end_layout
 
 \begin_layout Section
@@ -1322,7 +2296,11 @@ P=\{M\mid|MF_{1}|-|MF_{2}|=2a\}
 \end_layout
 
 \begin_layout Standard
-在平面内与一个定点和一条定直线l(l不经过点F)的距离相等的点的轨迹叫做抛物线(paralbola),点叫做抛物线的
+在平面内与一个定点和一条定直线l(l不经过点F)的距离相等的点的轨迹叫做
+\series bold
+抛物线
+\series default
+(paralbola),点叫做抛物线的
 \series bold
 焦点
 \series default
@@ -1471,7 +2449,120 @@ P={M||MF|=d}
 \end_layout
 
 \begin_layout Section
-参数方程 
+参数方程
+\end_layout
+
+\begin_layout Standard
+一般地,在平面直角坐标系中,如果曲线上任意一点的坐标x,y都是某个变数t的函数
+\begin_inset Formula 
+\[
+\begin{cases}
+x=f(t)\\
+y=g(t)
+\end{cases}
+\]
+
+\end_inset
+
+并且对于的每一个允许值,由方程组所确定的点M(x,y)都在这条曲线上,那么方程就叫做这条曲线的
+\series bold
+参数方程
+\series default
+,联系变数 x,y的变数叫做
+\series bold
+参变数
+\series default
+,简称
+\series bold
+参数
+\series default
+,相对于参数方程而言,直接给出点的坐标间关系的方程叫做
+\series bold
+普通方程
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+参数是联系变数 x,y的桥梁,可以是一个有物理意义或几何意义的变数,也可以是没有明显实际意义的变数.
+ 同一条线也可能有不同的参数方程.
+\end_layout
+
+\begin_layout Standard
+圆:
+\begin_inset Formula $\begin{cases}
+x=r\cos\theta\\
+y=r\sin\theta
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推理:设圆
+\begin_inset Formula $O$
+\end_inset
+
+的半径是
+\begin_inset Formula $r$
+\end_inset
+
+,点M从初始位置
+\begin_inset Formula $M_{0}$
+\end_inset
+
+(t=0)出发, 但M绕点
+\begin_inset Formula $O$
+\end_inset
+
+的角速度为
+\begin_inset Formula $\omega$
+\end_inset
+
+.则:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos\omega t=\frac{x}{r},\sin\omega t=\frac{y}{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+椭圆的参数方程:
+\begin_inset Formula $\begin{cases}
+x=a\cos\theta\\
+y=b\sin\theta
+\end{cases}\theta\text{为参数}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+双曲线的参数方程:
+\begin_inset Formula $x=a\sec\varphi,y=b\tan\varphi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抛物线:
+\end_layout
+
+\begin_layout Standard
+直线:
+\end_layout
+
+\begin_layout Standard
+渐开线:
+\begin_inset Formula $x=r(\cos\varphi+\varphi\sin\varphi,y=r(\sin\varphi-\varphi\cos\varphi)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1597,7 +2688,7 @@ noprefix "false"
 \begin_inset Formula $l$
 \end_inset
 
-, 那么, 角 
+, 那么, 角
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -1635,6 +2726,217 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Formula $1rad=\frac{180}{\pi}\textdegree\approx57.30\textdegree=57\textdegree18'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+正弦定理
+\end_layout
+
+\begin_layout Standard
+在一个三角形中, 各边和它所对角的正弦比相等
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+证明
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/low_of_sines.png
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如图: 
+\begin_inset Formula 
+\[
+CD=a*\sin B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+CD=b*\sin A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+a*\sin B=b*\sin A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以:
+\begin_inset Formula $\frac{a}{\sin A}=\frac{b}{\sin B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同理: 
+\begin_inset Formula $\frac{b}{\sin B}=\frac{c}{\sin C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+余弦定理
+\end_layout
+
+\begin_layout Standard
+余弦定理(law of cuisities) 三角形中任何一边的平方等于其他两边的平方的和减去这两边与它们夹角的余弦的两倍, 即:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{2}=b^{2}+c^{2}-2bc\cos A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b^{2}=a^{2}+c^{2}-2ac\cos B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c^{2}=a^{2}+b^{2}-2ab\cos C
+\]
+
+\end_inset
+
+证明:
+\end_layout
+
+\begin_layout Standard
+由于涉及边长问题,我们可以考虑用向量的数量积.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $\overrightarrow{CB}=a$
+\end_inset
+
+, 
+\begin_inset Formula $\overrightarrow{CA}=b$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{AB}=c$
+\end_inset
+
+,那么 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c=a-b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|c|^{2}=c*c=(a-b)*(a-b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=a*a+b*b-2a*b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=a^{2}+b^{2}-2ab*\cos C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同理可以证明:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{2}=b^{2}+c^{2}-2bc\cos A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b^{2}=a^{2}+c^{2}-2ac\cos B
+\]
+
 \end_inset
 
 
@@ -1711,79 +3013,6 @@ noprefix "false"
 
 \begin_layout Subsection
 复数代数形式的四则运算
-\end_layout
-
-\begin_layout Chapter
-数列 
-\end_layout
-
-\begin_layout Section
-等差数列 
-\end_layout
-
-\begin_layout Section
-等比数列 
-\end_layout
-
-\begin_layout Section
-斐波那契数列
-\end_layout
-
-\begin_layout Standard
-斐波那契数列由0和1开始，之后的斐波那契系数就是由之前的两数相加而得出。首几个斐波那契系数是：
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $0,1,1,2,3,5,8,13,21,34,55,89,......$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-递归定义:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $F_{0}=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $f_{1}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $F_{n}=F_{n-1}+F_{n-2}(n≧2)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-0不是第一项，而是第零项。
-\end_layout
-
-\begin_layout Standard
-斐波纳契数也是帕斯卡三角形的每一条红色对角线上数字的和。
-\begin_inset CommandInset href
-LatexCommand href
-name "[参考wikipedia]"
-target "https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"
-literal "false"
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Subsection
-斐波那契螺旋线
 \end_layout
 
 \begin_layout Chapter
@@ -2012,8 +3241,435 @@ n-棱柱
 二面角
 \end_layout
 
+\begin_layout Section
+球与球面
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=\frac{4}{3}\pi R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=4\pi R^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+平面与球面的位置关系
+\end_layout
+
+\begin_layout Itemize
+相离
+\end_layout
+
+\begin_layout Itemize
+相交
+\end_layout
+
+\begin_layout Itemize
+相切
+\end_layout
+
+\begin_layout Standard
+球面被经过球心的平面截的圆叫做
+\series bold
+大圆,
+\series default
+被不经过球心的平面截的圆叫做
+\series bold
+小圆.
+\end_layout
+
+\begin_layout Subsection
+直线与球面的位置关系和球幂定理 
+\end_layout
+
+\begin_layout Itemize
+相离
+\end_layout
+
+\begin_layout Itemize
+相交
+\end_layout
+
+\begin_layout Itemize
+相切:切点:直线与球面只有一个公共点,线叫切线.
+\end_layout
+
+\begin_layout Subsubsection
+球幂定理
+\end_layout
+
+\begin_layout Standard
+类比圆幂定理.无论直线和球面是相割还是相切,其点组成的平面依然是圆.
+\end_layout
+
+\begin_layout Subsection
+球面的对称性
+\end_layout
+
+\begin_layout Standard
+球面关于球心,大圆,直径对称
+\end_layout
+
+\begin_layout Subsection
+球面上的距离
+\end_layout
+
+\begin_layout Subsection
+球面上的角 
+\end_layout
+
+\begin_layout Subsection
+极与赤道 
+\end_layout
+
+\begin_layout Subsection
+球面二角形 
+\end_layout
+
+\begin_layout Subsection
+球面三角形 
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形 
+\end_layout
+
+\begin_layout Subsubsection
+三面角 
+\end_layout
+
+\begin_layout Subsubsection
+对顶三角形 
+\end_layout
+
+\begin_layout Subsubsection
+球极三角形 
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形三边之间的关系
+\end_layout
+
+\begin_layout Subsubsection
+球面“等腰三角形 
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形的周长 
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形的内角和 
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形的全等
+\end_layout
+
+\begin_layout Paragraph
+1.“边边边”(s.s.s)判定定理 
+\end_layout
+
+\begin_layout Paragraph
+2.“边角边”(S.a.s.)判定定理 
+\end_layout
+
+\begin_layout Paragraph
+3.“角边角”(a.s.a.)判定定理 
+\end_layout
+
+\begin_layout Paragraph
+4.“角角角”(a.a.a.)判定定理 
+\end_layout
+
+\begin_layout Subsection
+球面多边形与欧拉公式 
+\end_layout
+
+\begin_layout Subsubsection
+球面多边形及其内角和公式
+\end_layout
+
+\begin_layout Subsubsection
+简单多面体的欧拉公式 
+\end_layout
+
+\begin_layout Subsubsection
+用球面多边形的内角和公式证明欧拉公式
+\end_layout
+
+\begin_layout Standard
+球面三角形的边角关系 
+\end_layout
+
+\begin_layout Standard
+球面上的正弦定理和余弦定理 
+\end_layout
+
+\begin_layout Standard
+用向量方法证明球面上的余弦定理 1.向量的向量积 2.球面上余弦定理的向量证明 
+\end_layout
+
+\begin_layout Standard
+从球面上的正弦定理看球面与平面
+\end_layout
+
+\begin_layout Standard
+球面上余弦定理的应用——求地球上两城市间的距离
+\end_layout
+
 \begin_layout Chapter
-极坐标系
+欧氏几何与非欧几何 
+\end_layout
+
+\begin_layout Section
+平面几何与球面几何的比较 
+\end_layout
+
+\begin_layout Section
+欧氏平行公理与非欧几何模型——庞加莱模型 
+\end_layout
+
+\begin_layout Section
+欧氏几何与非欧几何的意义
+\end_layout
+
+\begin_layout Chapter
+数列
+\end_layout
+
+\begin_layout Standard
+数列是一列两个以上按顺序排列的数，所组成的序列，记为 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left\{ a_{k}\right\} _{k=1}^{n}=\left\{ a_{1},a_{2},a_{3},\cdots,a_{n}\right\} }$
+\end_inset
+
+ ， 其中 
+\begin_inset Formula $n∈Z+$
+\end_inset
+
+, 
+\begin_inset Formula $Z+$
+\end_inset
+
+ 是正整数集.
+ 
+\end_layout
+
+\begin_layout Paragraph
+单调性 
+\end_layout
+
+\begin_layout Standard
+若对所有 n ∈ Z+ ，an+1 ≥ an ，则称数列 ⟨ak⟩ 为“递增数列”。把 ≥ 换成 > ，则称为“严格递增数列”。 若对所有 n
+ ∈ Z+ ，an+1 ≤ an ，则称数列 ⟨ak⟩ 为“递减数列”。把 ≤ 换成 < ，则称为“严格递减数列”。 若对所有 n ∈ Z+ ，an+1
+ = an ，则称数列 ⟨ak⟩ 为“常数数列”。 
+\end_layout
+
+\begin_layout Paragraph
+有限性
+\end_layout
+
+\begin_layout Standard
+若数列
+\begin_inset Formula ${\displaystyle \left\{ a_{k}\right\} _{k=1}^{n}}$
+\end_inset
+
+ 的项数有限，则
+\begin_inset Formula $\left\{ a_{k}\right\} $
+\end_inset
+
+ 为“有限数列”。 
+\end_layout
+
+\begin_layout Standard
+若数列 
+\begin_inset Formula ${\displaystyle \left\{ a_{k}\right\} _{k=1}^{\infty}}$
+\end_inset
+
+ 的项数无限，则 
+\begin_inset Formula $\left\{ a_{k}\right\} $
+\end_inset
+
+为“无穷数列”。 
+\end_layout
+
+\begin_layout Paragraph
+有界性
+\end_layout
+
+\begin_layout Standard
+若对所有 
+\begin_inset Formula $n∈Z^{+}$
+\end_inset
+
+，
+\begin_inset Formula $M≤an≤N$
+\end_inset
+
+ ，则称数列
+\begin_inset Formula $\left\{ a_{k}\right\} $
+\end_inset
+
+ 为“有界数列”.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+称为“下界”， 
+\begin_inset Formula $N$
+\end_inset
+
+称为“上界”。 
+\end_layout
+
+\begin_layout Standard
+若数列 
+\begin_inset Formula $\left\{ a_{k}\right\} $
+\end_inset
+
+ ，上述的
+\begin_inset Formula $M$
+\end_inset
+
+,
+\begin_inset Formula $N$
+\end_inset
+
+不存在，则称数列 
+\begin_inset Formula ${a_{n}}$
+\end_inset
+
+ 为“无界数列”。
+\end_layout
+
+\begin_layout Paragraph
+收敛性
+\end_layout
+
+\begin_layout Standard
+对于含有无穷多项的数列
+\begin_inset Formula ${a_{k}}$
+\end_inset
+
+, 我们可以为其定义“数列的极限”为常数 
+\begin_inset Formula $L$
+\end_inset
+
+: 
+\begin_inset Formula ${\displaystyle L=\lim_{k\to\infty}a_{k}}$
+\end_inset
+
+.
+ 若上述极限存在，则称该数列是“收敛数列”，且收敛于 L 。 若上述极限不存在，则称该数列为“发散数列”。
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+通项公式
+\end_layout
+
+\begin_layout Standard
+如果数列
+\begin_inset Formula ${a_{n}}$
+\end_inset
+
+的第
+\begin_inset Formula $1$
+\end_inset
+
+项与序号
+\begin_inset Formula $n$
+\end_inset
+
+之间的关系可以用一个式子来表示,那么这个公式叫做这个数列的
+\series bold
+通项公式
+\series default
+,我们可以根据数列的通项公式算出数列的各项
+\end_layout
+
+\begin_layout Section
+等差数列
+\end_layout
+
+\begin_layout Section
+等比数列
+\end_layout
+
+\begin_layout Section
+斐波那契数列
+\end_layout
+
+\begin_layout Standard
+斐波那契数列由0和1开始，之后的斐波那契系数就是由之前的两数相加而得出。首几个斐波那契系数是：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0,1,1,2,3,5,8,13,21,34,55,89,......$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+递归定义:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{0}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{n}=F_{n-1}+F_{n-2}(n≧2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+0不是第一项，而是第零项。
+\end_layout
+
+\begin_layout Standard
+斐波纳契数也是帕斯卡三角形的每一条红色对角线上数字的和。
+\begin_inset CommandInset href
+LatexCommand href
+name "[参考wikipedia]"
+target "https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"
+literal "false"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+斐波那契螺旋线
 \end_layout
 
 \begin_layout Chapter
@@ -4000,8 +5656,15 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-上表所示函数的图形，请注意在x=0处取不到值。因为被零除，所以在这一点函数没有意义。 尽管函数 (sin x)/x 的定义域中不包括“0”, 但当
- x 无限接近于零时, (sin x)/x 就无限接近于一.
+上表所示函数的图形，请注意在x=0处取不到值。因为被零除，所以在这一点函数没有意义。 尽管函数
+\begin_inset Formula $(sinx)/x$
+\end_inset
+
+ 的定义域中不包括“0”, 但当 x 无限接近于零时, 
+\begin_inset Formula $(sinx)/x$
+\end_inset
+
+ 就无限接近于一.
  这就是说, x 接近于零时，(sin x)/x 的极限是 1。
 \end_layout
 
@@ -4014,10 +5677,6 @@ status open
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -7738,14 +9397,6 @@ P(B\vert A)=0.9\cdot{\frac{2}{7305}}\cdot{\frac{7}{3}}=0.0005749486653...
 
 \begin_layout Section
 计数原理 
-\end_layout
-
-\begin_layout Chapter
-不等式 
-\end_layout
-
-\begin_layout Section
-一次不等式
 \end_layout
 
 \begin_layout Chapter
