@@ -122,6 +122,45 @@ Math
 \begin_inset Formula $\sideset{}{}\sum$
 \end_inset
 
+求和符号例如
+\begin_inset Formula $SD=\sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_{i}-\mu)^{2}}(\mu\text{为平均值{\displaystyle \overline{x}})}$
+\end_inset
+
+为从i=1开始求N个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(x_{i}-\mu)^{2}$
+\end_inset
+
+平方和,
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+表示求平均数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cup\text{并, 加的意思, 用在集合,概率等}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cap\text{交, 取共有的部分, 用在集合,概率等}$
+\end_inset
+
 
 \end_layout
 
@@ -2943,80 +2982,11 @@ b^{2}=a^{2}+c^{2}-2ac\cos B
 \end_layout
 
 \begin_layout Chapter
-复数
-\end_layout
-
-\begin_layout Section
-实数
-\end_layout
-
-\begin_layout Subsection
-素数
-\end_layout
-
-\begin_layout Subsubsection
-最大公因子
-\end_layout
-
-\begin_layout Section
-虚数
-\end_layout
-
-\begin_layout Standard
-虚数是指实数以外的复数，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视
-为同时是实数也是虚数.
- 
-\end_layout
-
-\begin_layout Standard
-虚数可对应平面上的纵轴，与对应平面上横轴的实数同样真实。虚数轴和实数轴构成的平面称复数平面，复数平面上每一点对应着一个复数（参考向量）。 
-\end_layout
-
-\begin_layout Standard
-不同的虚数都是不能比较大小的，虚数或者说虚部不为0的复数不能比较大小。 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\sqrt{-1}$
-\end_inset
-
-实际上代表的是两个数，分别为
-\begin_inset Formula $+i$
-\end_inset
-
-及 
-\begin_inset Formula $-1$
-\end_inset
-
-,直接将 
-\begin_inset Formula $\sqrt{-1}$
-\end_inset
-
-对应到
-\begin_inset Formula $+i$
-\end_inset
-
-，而 
-\begin_inset Formula ${-{\sqrt{-1}}}$
-\end_inset
-
- 对应到 
-\begin_inset Formula ${-i}$
-\end_inset
-
- 也是可以的，也可以认为
-\begin_inset Formula $i^{2}=-1$
-\end_inset
-
-。 
-\end_layout
-
-\begin_layout Subsection
-复数代数形式的四则运算
-\end_layout
-
-\begin_layout Chapter
 空间曲面 
+\end_layout
+
+\begin_layout Section
+二面角 
 \end_layout
 
 \begin_layout Section
@@ -3046,7 +3016,11 @@ Oz)，三个坐标平面把空间分成八个部分，称为八个挂限。空�
 
 \begin_layout Standard
 到定点M0(x0,)的距离等于定长R(R>0)的动点的轨迹称为球面，M0 称为球心,R为半径。设M为球面上的任意一点，则|MM0|^2=R^2,于是以M0为球心
-，R为半径的球面方程为（x ，如果球心在原点x^2+y^2+z^2=R^2;
+，R为半径的球面方程为（x ，如果球心在原点
+\begin_inset Formula $x^{2}+y^{2}+z^{2}=R^{2}$
+\end_inset
+
+;
 \end_layout
 
 \begin_layout Subsubsection
@@ -3054,8 +3028,19 @@ Oz)，三个坐标平面把空间分成八个部分，称为八个挂限。空�
 \end_layout
 
 \begin_layout Standard
-设c是坐标平面内的一条曲线，l为垂直与该平面的一条直线，将l沿着平面曲线c，平行滑动形成的轨迹称为柱面；平面曲线c称为柱面的准线，动直线l称为柱面的母线。
- 
+设c是坐标平面内的一条曲线，l为垂直与该平面的一条直线，将l沿着平面曲线c，平行滑动形成的轨迹称为柱面；平面
+\series bold
+曲线c
+\series default
+称为柱面的准线，动直
+\series bold
+线l
+\series default
+称为柱面的
+\series bold
+母线
+\series default
+。 
 \end_layout
 
 \begin_layout Subsubsection
@@ -3063,23 +3048,39 @@ Oz)，三个坐标平面把空间分成八个部分，称为八个挂限。空�
 \end_layout
 
 \begin_layout Standard
-平面曲线c绕着同一平面内的一条定直线l旋转而形成的曲面称为旋转曲面，曲线c称为母线，定直线l称为旋转轴。 
+
+\series bold
+平面曲线c
+\series default
+绕着同一平面内的一条
+\series bold
+定直线l
+\series default
+旋转而形成的曲面称为旋转曲面，曲线c称为母线，定直线l称为旋转轴。 
 \end_layout
 
 \begin_layout Paragraph
 旋转单叶双曲面 
+\begin_inset Formula $\frac{x^{2}}{b^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
-旋转双叶双曲面 
+旋转双叶双曲面(双叶双曲面 ) 
+\begin_inset Formula $-\frac{x^{2}}{b^{2}}-\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 由双曲线f(x)=1绕z轴旋转而形成的旋转曲面方程 
 \end_layout
 
-\begin_layout Paragraph
-双叶双曲面 
+\begin_layout Standard
+推导:
 \end_layout
 
 \begin_layout Section
@@ -3426,6 +3427,79 @@ n-棱柱
 \end_layout
 
 \begin_layout Chapter
+复数
+\end_layout
+
+\begin_layout Section
+实数
+\end_layout
+
+\begin_layout Subsection
+素数
+\end_layout
+
+\begin_layout Subsubsection
+最大公因子
+\end_layout
+
+\begin_layout Section
+虚数
+\end_layout
+
+\begin_layout Standard
+虚数是指实数以外的复数，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视
+为同时是实数也是虚数.
+ 
+\end_layout
+
+\begin_layout Standard
+虚数可对应平面上的纵轴，与对应平面上横轴的实数同样真实。虚数轴和实数轴构成的平面称复数平面，复数平面上每一点对应着一个复数（参考向量）。 
+\end_layout
+
+\begin_layout Standard
+不同的虚数都是不能比较大小的，虚数或者说虚部不为0的复数不能比较大小。 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+实际上代表的是两个数，分别为
+\begin_inset Formula $+i$
+\end_inset
+
+及 
+\begin_inset Formula $-1$
+\end_inset
+
+,直接将 
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+对应到
+\begin_inset Formula $+i$
+\end_inset
+
+，而 
+\begin_inset Formula ${-{\sqrt{-1}}}$
+\end_inset
+
+ 对应到 
+\begin_inset Formula ${-i}$
+\end_inset
+
+ 也是可以的，也可以认为
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+。 
+\end_layout
+
+\begin_layout Subsection
+复数代数形式的四则运算
+\end_layout
+
+\begin_layout Chapter
 欧氏几何与非欧几何 
 \end_layout
 
@@ -3670,6 +3744,74 @@ literal "false"
 
 \begin_layout Subsection
 斐波那契螺旋线
+\end_layout
+
+\begin_layout Section
+数列的极限(描述性定义)
+\end_layout
+
+\begin_layout Standard
+对于数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ ，当
+\begin_inset Formula $n$
+\end_inset
+
+无线增大时，如果 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+无限接近于一个确定的常数
+\begin_inset Formula $A$
+\end_inset
+
+，那么称
+\begin_inset Formula $A$
+\end_inset
+
+是数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+的极限，或者称数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 收敛于A。记为 
+\begin_inset Formula 
+\[
+lim(n→∞)\{a_{n}\}=A
+\]
+
+\end_inset
+
+, 或者$
+\begin_inset Formula $a_{n}→A（n→∞)$
+\end_inset
+
+, 如果
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+没有极限,则称数列
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+发散。
+\end_layout
+
+\begin_layout Enumerate
+如果数列有极限，则数列的极限是唯一的。
+\end_layout
+
+\begin_layout Enumerate
+一般地，任一常数数列的极限是常数本身，
+\begin_inset Formula $lim(n→∞)C=C$
+\end_inset
+
+。 
 \end_layout
 
 \begin_layout Chapter
@@ -5517,78 +5659,6 @@ status open
 \end_inset
 
 联系起来, 利用函数的性质找出零点, 从而求出方程的根。
-\end_layout
-
-\begin_layout Chapter
-极限
-\end_layout
-
-\begin_layout Section
-数列的极限(描述性定义)
-\end_layout
-
-\begin_layout Standard
-对于数列 
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
- ，当
-\begin_inset Formula $n$
-\end_inset
-
-无线增大时，如果 
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
-无限接近于一个确定的常数
-\begin_inset Formula $A$
-\end_inset
-
-，那么称
-\begin_inset Formula $A$
-\end_inset
-
-是数列 
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
-的极限，或者称数列 
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
- 收敛于A。记为 
-\begin_inset Formula 
-\[
-lim(n→∞)\{a_{n}\}=A
-\]
-
-\end_inset
-
-, 或者$
-\begin_inset Formula $a_{n}→A（n→∞)$
-\end_inset
-
-, 如果
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
-没有极限,则称数列
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
-发散。
-\end_layout
-
-\begin_layout Enumerate
-如果数列有极限，则数列的极限是唯一的。
-\end_layout
-
-\begin_layout Enumerate
-一般地，任一常数数列的极限是常数本身，
-\begin_inset Formula $lim(n→∞)C=C$
-\end_inset
-
-。 
 \end_layout
 
 \begin_layout Section
@@ -8308,10 +8378,6 @@ a模n的运算给出了a的余数,余数是从
 \end_layout
 
 \begin_layout Chapter
-二面角 
-\end_layout
-
-\begin_layout Chapter
 统计简介
 \end_layout
 
@@ -8343,6 +8409,14 @@ a模n的运算给出了a的余数,余数是从
 (simple random sampling)
 \end_layout
 
+\begin_layout Enumerate
+抽签发
+\end_layout
+
+\begin_layout Enumerate
+随机数法
+\end_layout
+
 \begin_layout Subsection
 系统抽样(systernatic simpling)
 \end_layout
@@ -8372,6 +8446,14 @@ a模n的运算给出了a的余数,余数是从
 按照一定的规则抽取样本,通常是将!加上间隔人得到第2 个个体编号(1-k),再加上得到第3个个体编号(+2),依次进行 下去,直到获取整个样本.
 \end_layout
 
+\begin_layout Standard
+例如:将100个人编号,然后从1~10中随机抽样, 如抽到的是8号, 每次增加10,下一个分别选择
+\begin_inset Formula $18,28,\cdots,98$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 分层抽样(stratified sturnpling)
 \end_layout
@@ -8387,6 +8469,10 @@ a模n的运算给出了a的余数,余数是从
 
 \begin_layout Standard
 所以,分层抽样在实际中有着非常广泛的应用,通常,当总体是由差异明显的几个部分组成时,往往选用分层抽样的方法.
+\end_layout
+
+\begin_layout Standard
+例如:调查新冠致死率可以,可以将总体感染人群按年龄分层, 然后,从各层独立地抽取一定数量的人, 再将他们合在一起作为样本.
 \end_layout
 
 \begin_layout Section
@@ -8423,19 +8509,125 @@ a模n的运算给出了a的余数,余数是从
 \end_layout
 
 \begin_layout Standard
-众数
+
+\series bold
+频数(次数)
+\series default
+:在一组依大小顺序排列的测量值中，当按一定的组距将其分组时出现在各组内的测量值的数目，即落在各类别（分组）中的数据个数
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+众数(Mode)
+\series default
+: 众数是在一组数据中,出现次数最多的数据，是一组数据中的原数据，而不是相应的次数, 代表数据的一般水平。 也是一组数据中出现次数最多的数值，有时众数在一组数中
+有好几个,也可能没有.
+ 如数据2、3、-1、2、1、3中，2、3都出现了两次，它们都是这组数据中的众数.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 中位数
+\series default
+:实数
+\begin_inset Formula ${\displaystyle x_{1},x_{2},\dots,x_{n}}$
+\end_inset
+
+按大小顺序（顺序，降序皆可）, 然后取中间的那个数,(如果数据个数是奇数,取平均值)
+\begin_inset Formula $\mathrm{Q}_{\frac{1}{2}}(x)={\begin{cases}
+x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
+{\frac{1}{2}}(x'_{\frac{n}{2}}+x'_{{\frac{n}{2}}+1}), & {\mbox{if }}n{\mbox{ is even number.}}
+\end{cases}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 平均数
+\series default
+:用
+\begin_inset Formula $\overline{x}$
+\end_inset
+
+表示
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 标准差
+\series default
+(Standard Deviation，缩写SD,数学符号σ（sigma）):
+\end_layout
+
+\begin_layout Standard
+一个较大的标准差，代表大部分的数值和其平均值之间差异较大；一个较小的标准差，代表这些数值较接近平均值。
+\end_layout
+
+\begin_layout Standard
+基本公式:
+\begin_inset Formula $SD=\sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_{i}-\mu)^{2}}(\mu\text{为平均值{\displaystyle \overline{x}})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+简化:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{align}\sum_{i=1}^{N}(X_{i}-\mu)^{2} & =\sum_{i=1}^{N}(X_{i}^{2}-2X_{i}\mu+\mu^{2})\\
+ & =\left(\sum_{i=1}^{N}X_{i}^{2}\right)-\left(2\mu\sum_{i=1}^{N}X_{i}\right)+N\mu^{2}\\
+ & =\left(\sum_{i=1}^{N}X_{i}^{2}\right)-2\mu(N\mu)+N\mu^{2}\\
+ & =\left(\sum_{i=1}^{N}X_{i}^{2}\right)-2N\mu^{2}+N\mu^{2}\\
+ & =\left(\sum_{i=1}^{N}X_{i}^{2}\right)-N\mu^{2}
+\end{align}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+样本标准差： 
+\begin_inset Formula $s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+标准误差：
+\begin_inset Formula $\sigma_{n}=\frac{\sigma}{\sqrt{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+与方差：方差=标准差的平方。
+\end_layout
+
+\begin_layout Standard
+在实验中单次测量总是难免会产生误差，为此我们经常测量多次，然后用测量值的平均值表示测量的量，并用误差条来表征数据的分布，其中误差条的高度为±
+\series bold
+标准误差
+\series default
+。这里即标准差。 
+\end_layout
+
+\begin_layout Standard
+变异系数：
+\begin_inset Formula $c_{v}=\frac{\sigma}{\bar{x}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -8458,27 +8650,54 @@ a模n的运算给出了a的余数,余数是从
 \end_layout
 
 \begin_layout Itemize
-正相关
+正相关: 自变量增长，因变量也跟着增长。两个变量变动方向相同，一个变量由大到小或由小到大变化时，另一个变量亦由大到小或由小到大变化。
 \end_layout
 
 \begin_layout Itemize
-负相关
+负相关: 两个变量变动方向不相同
 \end_layout
 
 \begin_layout Itemize
 回归直线(regression line): 其方程称为回归方程
 \end_layout
 
-\begin_layout Itemize
-最小二乘法
+\begin_layout Section
+正态分布(normal distribution)
+\end_layout
+
+\begin_layout Standard
+若随机变量
+\begin_inset Formula ${\displaystyle X}$
+\end_inset
+
+服从一个位置参数为
+\begin_inset Formula ${\displaystyle \mu}$
+\end_inset
+
+、尺度参数为
+\begin_inset Formula ${\displaystyle \sigma}$
+\end_inset
+
+的正态分布，记为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle X\sim N(\mu,\sigma^{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则其概率密度函数为 
+\begin_inset Formula ${\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-正态分布
-\end_layout
-
-\begin_layout Section
-回归分析 
+回归分析与回归直线
 \end_layout
 
 \begin_layout Standard
@@ -8505,6 +8724,114 @@ a模n的运算给出了a的余数,余数是从
 得出结果后分析残差图是否有异常(如个别数据对应残差过大,残差呈现不随机的规律性等),若存在异常,则检查数据是否有误,或模型是否合适等。
 \end_layout
 
+\begin_layout Subsection
+回归直线
+\end_layout
+
+\begin_layout Standard
+回归直线方程是根据样本资料通过回归分析所得到的反映一个变量（因变量）对另一个或一组变量（自变量）的回归关系的数学表达式。
+\end_layout
+
+\begin_layout Standard
+如果散点图中点的分布从整体看大致在一条直线附近，我们就称这两个变量之间具有线性相关关系，这条直线叫做回归直线(
+\begin_inset Formula $y=bx+a$
+\end_inset
+
+)。
+\end_layout
+
+\begin_layout Subsection
+求回归直线与
+\series bold
+最小二乘法
+\end_layout
+
+\begin_layout Standard
+根据统计得到两个具有线性相关关系的变量的一组数据:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{n},y_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+找出直线
+\begin_inset Formula $y=bx+a$
+\end_inset
+
+与点的距离.
+ 由于最短距离计算较为复杂, 我们可以用点
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+与这条直线上横坐标为的点
+\begin_inset Formula $x_{i}$
+\end_inset
+
+之间的距离来刻画点
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+到直线的远近,即用
+\begin_inset Formula 
+\[
+|y_{i}-(bx_{i}+a)|(i=1,2,3,\cdots,n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+简单一点
+\begin_inset Formula $Q=(y_{1}-bx_{1}-a)^{2}+(y_{2}-bx_{2}-a)^{2}+\cdots+(y_{n}-bx_{n}-a)^{2}$
+\end_inset
+
+(这个方法也叫
+\series bold
+最小二乘法
+\series default
+)
+\end_layout
+
+\begin_layout Standard
+最后得出所有点整体距离最小
+\begin_inset Formula $a,b$
+\end_inset
+
+值:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+b=\frac{\stackrel[i=1]{n}{\sum}(x_{i}-x)(y_{i}-\overline{y})}{\stackrel[i=1]{n}{\sum}(x_{i}-\overline{x})^{2}} & =\frac{\stackrel[i=1]{n}{\sum}x_{i}y_{i}-n\overline{x}\overline{y})}{\stackrel[i=1]{n}{\sum}x_{i}^{2}-n\overline{x}^{2}}\\
+a=\overline{y}-b\overline{x}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+回归方程为:
+\begin_inset Formula $\hat{y}=bx+a$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 线性回归
 \end_layout
@@ -8514,7 +8841,7 @@ a模n的运算给出了a的余数,余数是从
 \end_layout
 
 \begin_layout Standard
-判断两个事件是否有关联
+判断两个事件是否有关联.
 \end_layout
 
 \begin_layout Section
@@ -8539,6 +8866,14 @@ a模n的运算给出了a的余数,余数是从
 
 \begin_layout Section
 计验设计初步
+\end_layout
+
+\begin_layout Section
+最优化
+\end_layout
+
+\begin_layout Section
+随机过程
 \end_layout
 
 \begin_layout Chapter
@@ -8670,7 +9005,11 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-在随机试验中可能发生的所有单位事件的集合称为事件空间，用S来表示。 
+在随机试验中可能发生的所有单位事件的集合称为事件空间，用
+\begin_inset Formula $S$
+\end_inset
+
+来表示。 
 \end_layout
 
 \begin_layout Itemize
@@ -8706,7 +9045,7 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-必然事件 
+必然事件 : 在S条件下,一定会发生的事件,叫做相对于S条件的必然事件 (certain event),简称必然事件:
 \end_layout
 
 \begin_layout Standard
@@ -8721,7 +9060,7 @@ S\subset S
 \end_layout
 
 \begin_layout Itemize
-不可能事件 
+不可能事件: 在S条件下,一定不会发生的事件,叫做相对于S条件的不可能事件(impossble event),简称不可能事件
 \end_layout
 
 \begin_layout Standard
@@ -8736,11 +9075,296 @@ S\subset S
 \end_layout
 
 \begin_layout Itemize
-事件的计算
+确定事件: 必然事件与不可能事件统称为相对于条件的确定事件,简称确定事件
+\end_layout
+
+\begin_layout Itemize
+随机事件: 在S条件下可能发生也可能不发生的事件,叫做相对于S条件下的随机事件(randon event),简称随机事件,
+\end_layout
+
+\begin_layout Standard
+确定事件和随机事件统称为
+\series bold
+事件
+\series default
+,一般用大写字母A,B,C……表示.
+\end_layout
+
+\begin_layout Standard
+在相同的条件S下重复
+\begin_inset Formula $n$
+\end_inset
+
+次试验,观察某一事件是否出现,称
+\begin_inset Formula $n$
+\end_inset
+
+次试验中事件A出现的次数
+\begin_inset Formula $n_{A}$
+\end_inset
+
+为事件A出现的
+\series bold
+频数
+\series default
+(frequency), 称事件A出现的比例,
+\begin_inset Formula $f_{n}(A)=\frac{n_{A}}{n}$
+\end_inset
+
+为事件A出现的
+\series bold
+频率
+\series default
+(relative frequency),
+\end_layout
+
+\begin_layout Standard
+极大似然原理的直观想法是，一个随机试验如有若干个可能的结果A，B，C，...
+ ，若在一次试验中，结果A出现了，那么可以认为实验条件对A的出现有利，也即出现的概率P(A)较大。
+\end_layout
+
+\begin_layout Subsection
+事件的关系与运算
+\end_layout
+
+\begin_layout Standard
+(1) 如果事件
+\begin_inset Formula $C$
+\end_inset
+
+发生, 则事件
+\begin_inset Formula $H$
+\end_inset
+
+一定发生,这时我们说事件H包含事件
+\begin_inset Formula $C$
+\end_inset
+
+,记作
+\begin_inset Formula $H\supseteq C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+一般地,对于事件
+\begin_inset Formula $A$
+\end_inset
+
+与事件
+\begin_inset Formula $B$
+\end_inset
+
+,如果事件发生
+\begin_inset Formula $A$
+\end_inset
+
+,则事件B一定发生,这时称
+\series bold
+事件B包含事件A
+\series default
+(或称
+\series bold
+事件
+\begin_inset Formula $A$
+\end_inset
+
+包含于事件 B
+\series default
+),记作
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+(或
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+),
+\series bold
+ 任何事件都包含不可能事件
+\series default
+。 
+\end_layout
+
+\begin_layout Standard
+(2)如果事件C发生,那么事件D一定发生,反过来也对,这时我们说这两个事件相等,记作
+\begin_inset Formula $C=D$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+一般地,若
+\begin_inset Formula $B\supseteq A$
+\end_inset
+
+,且
+\begin_inset Formula $A\supseteq B$
+\end_inset
+
+,那么事件A与事件B相等,记作
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(3)若某事件发生当且仅当事件A发生或事件B发生,则称此事件为事件A与事件 B的
+\series bold
+并事件
+\series default
+(或和事件》,记作 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+(或
+\begin_inset Formula $A+B$
+\end_inset
+
+), 
+\end_layout
+
+\begin_layout Standard
+例如,在掷骰子的试验中,事件
+\begin_inset Formula $C_{1}\cup C_{2}$
+\end_inset
+
+表示出现1点或5点这个事件,即
+\begin_inset Formula $C_{1}\cup C_{2}=(出现1点或5点)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(4)若某事件发生当且仅当事件A发生且事件B发生,则称 此事件为事件A与事件B的
+\series bold
+交事件
+\series default
+(或积事件),记
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ (或
+\begin_inset Formula $AB$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+(5)若
+\begin_inset Formula $A\cap B$
+\end_inset
+
+为不可能事件(
+\begin_inset Formula $A\cap B=\varnothing$
+\end_inset
+
+),那么称
+\series bold
+事件A与事B互斥.
+\series default
+其含义是:事件与事件B在任何一次试验中不会同时发生.
+\end_layout
+
+\begin_layout Standard
+(6)若
+\begin_inset Formula $A\cap B$
+\end_inset
+
+为不可能事件(
+\begin_inset Formula $A\cap B=\varnothing$
+\end_inset
+
+), 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ 为必然事件,那么称事件 A与事件B
+\series bold
+互为对立事件.
+\end_layout
+
+\begin_layout Standard
+其含义是:事件A与事件B在任何一次试验中有且仅有一个发生.
+\end_layout
+
+\begin_layout Subsection
+概率的几个基本性质 
+\end_layout
+
+\begin_layout Standard
+(1) 由于事件的频数总是小于或等于试验的次数,所以频率在0~1之间,从而任何事件的概率在0~1之间,即 
+\begin_inset Formula 
+\[
+0\leqslant P(A)\leqslant1
+\]
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+(2) 在每次试验中,必然事件一定发生,因此它的頻率为1,从而必然事件的概率为1.
+ 
+\end_layout
+
+\begin_layout Standard
+(3) 在每次试验中,不可能事件一定不出现,因此它的频率为0,从而不可能事件的概率为0.
+ 
+\end_layout
+
+\begin_layout Standard
+(4)当事件A与事件B互斥时, AUB发生的频数等于A发生的频数与B发生的频数之和,从而
+\series bold
+
+\begin_inset Formula $A\cup B$
+\end_inset
+
+
+\series default
+的频率
+\begin_inset Formula $f_{n}(A\cup B)=f_{n}(A)+f_{n}(B)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+由此得到概率的加法公式:
+\begin_inset Formula 
+\[
+如果事件与事件B互斥,则P(A\cup B)=P(A)+P(B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(5) 特别地,若事件B与事件A互为对立事件,则
+\begin_inset Formula $A\cup B$
+\end_inset
+
+为必然事件.
 \end_layout
 
 \begin_layout Section
 概率的定义
+\end_layout
+
+\begin_layout Standard
+概率(probability)度量时间发生的可能性的大小.
 \end_layout
 
 \begin_layout Subsection
@@ -8764,7 +9388,7 @@ S\subset S
  为：
 \begin_inset Formula 
 \[
-P(A)=\frac{\text{构\text{成事件A的元素数目}}}{\text{构\text{成事件空间S的所有元素数目}}}
+P(A)=\frac{\text{构\text{成事件A的元素数目(A为基本事件)}}}{\text{构\text{成事件空间S的所有元素数目(基本事件的总数)}}}
 \]
 
 \end_inset
@@ -8778,13 +9402,13 @@ P(A)=\frac{\text{构\text{成事件A的元素数目}}}{\text{构\text{成事件�
 \end_inset
 
  为获得国徽面且点数大于 4 ，那么事件 A 的概率应该有如下计算方法：
-\begin_inset Formula $S={(国徽，1点)，(数字，1点)，(国徽，2点)，(数字，2点)，(国徽，3点)，(数字，3点)，(国徽，4点)，(数字，4点)，(国徽，5点)，(数字，5点)，(国徽，6点)，(数字，6点)}，{\displaystyle A}A＝{(国徽，5点)，(国徽，6点)}$
+\begin_inset Formula $S=(国徽，1点)，(数字，1点)，(国徽，2点)，(数字，2点)，(国徽，3点)，(数字，3点)，(国徽，4点)，(数字，4点)，(国徽，5点)，(数字，5点)，(国徽，6点)，(数字，6点)，{\displaystyle A}A＝{(国徽，5点)，(国徽，6点)}$
 \end_inset
 
 ，按照拉普拉斯定义，A 的概率为，
 \begin_inset Formula 
 \[
-P(A)={\frac{2}{12}}={\frac{1}{6}}
+P(A)=\frac{2}{12}=\frac{1}{6}
 \]
 
 \end_inset
@@ -8805,6 +9429,54 @@ P(A)={\frac{2}{12}}={\frac{1}{6}}
 如果仔细观察这个定义会发现拉普拉斯用概率解释了概率，定义中用了相同的可能性 ( 原文是 également possible )一词，其实指的就是"相同的概率"
 。这个定义也并没有说出，到底什么是概率，以及如何用数字来确定概率。在现实生活中也有一系列问题，无论如何不能用传统概率定义来解释，比如，人寿保险公司无法确定一个
  50 岁的人在下一年将死去的概率。 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+古典概率模型
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+(1)试验中所有可能出现的基本事件只有有限个; 
+\end_layout
+
+\begin_layout Standard
+(2)每个基本事件出现的可能性相等, 
+\end_layout
+
+\begin_layout Standard
+我们将具有这两个特点的概率模型称为古典概率模型(classical molels of probability), 简称
+\series bold
+古典概型
+\series default
+,
+\end_layout
+
+\begin_layout Subsection
+几何概型
+\end_layout
+
+\begin_layout Standard
+如果每个事件发生的概率只与构成该事件区域的长度(面积或体积)成比例,则称这样的概率模型为几何概率模型(geometric models of probabili
+ty) ,简称为几何概型; 在几何概型中,事件A的概率的计算公式如下:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A)=\frac{利成事件A的区域长度(面积或体积)}{\text{试验的全部结果所构成的区域长度}(\text{面积或体积})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如转盘游戏的概率就是几何概型.
 \end_layout
 
 \begin_layout Subsection
@@ -8957,7 +9629,7 @@ P(A)=\lim_{n\to\infty}f_{n}(A)
 互补事件的概率始终是
 \begin_inset Formula 
 \[
-P({\bar{A}})=1-P(A),\in S
+P(\bar{A})=1-P(A),\in S
 \]
 
 \end_inset
@@ -8975,13 +9647,13 @@ P({\bar{A}})=1-P(A),\in S
 \end_inset
 
 和
-\begin_inset Formula ${\overline{A}}$
+\begin_inset Formula $\overline{A}$
 \end_inset
 
 是互补关系，由公理 3 和公理 2 可得
 \begin_inset Formula 
 \[
-P(A)+P({\bar{A}})=P(S)=1\Rightarrow P({\bar{A}})=1-P(A)
+P(A)+P(\bar{A})=P(S)=1\Rightarrow P(\bar{A})=1-P(A)
 \]
 
 \end_inset
@@ -9005,7 +9677,7 @@ P(A)+P({\bar{A}})=P(S)=1\Rightarrow P({\bar{A}})=1-P(A)
 ，因此在这里互补概率就是指在两次连续旋转中至少有一次是红色的概率，
 \begin_inset Formula 
 \[
-P=1-\left({\frac{19}{37}}\right)^{2}=0.7363
+P=1-\left(\frac{19}{37}\right)^{2}=0.7363
 \]
 
 \end_inset
@@ -9175,10 +9847,10 @@ A\cup B=(A\setminus B)\cup(A\cap B)\cup(B\setminus A)
  首先根据定理 4 有：
 \begin_inset Formula 
 \[
-{\begin{array}{lcr}
+\begin{array}{lcr}
 P(A\setminus B) & = & P(A)-P(A\cap B)\\
 P(B\setminus A) & = & P(B)-P(A\cap B)
-\end{array}}
+\end{array}
 \]
 
 \end_inset
@@ -9186,17 +9858,16 @@ P(B\setminus A) & = & P(B)-P(A\cap B)
  再根据定理 3 得：
 \begin_inset Formula 
 \[
-{\begin{aligned}P(A\cup B) & =P(A\setminus B)+P(A\cap B)+P(B\setminus A)\\
+\begin{aligned}P(A\cup B) & =P(A\setminus B)+P(A\cap B)+P(B\setminus A)\\
  & =P(A)-P(A\cap B)+P(A\cap B)+P(B)-P(A\cap B)\\
  & =P(A)+P(B)-P(A\cap B)
 \end{aligned}
-}
 \]
 
 \end_inset
 
  例如，在由一共 32 张牌构成的斯卡特扑克牌中随机抽出一张，其或者是"方片"或者是"
-\begin_inset Formula ${\mathcal{A}}$
+\begin_inset Formula $\mathcal{A}$
 \end_inset
 
 "的概率是多少？ @ 事件
@@ -9222,7 +9893,7 @@ P(B\setminus A) & = & P(B)-P(A\cap B)
 只有一张，即概率是 1 / 32 )，因此有如下结果：
 \begin_inset Formula 
 \[
-P(A\cup B)={\frac{8}{32}}+{\frac{4}{32}}-{\frac{1}{32}}={\frac{11}{32}}
+P(A\cup B)=\frac{8}{32}+\frac{4}{32}-\frac{1}{32}=\frac{11}{32}
 \]
 
 \end_inset
@@ -9330,7 +10001,7 @@ P(A\cap B)=P(A)\cdot P(B)
 ，可以立刻导出贝叶斯定理：
 \begin_inset Formula 
 \[
-P(A\vert B)={\frac{P(B\vert A)\cdot P(A)}{P(B)}}
+P(A\vert B)=\frac{P(B\vert A)\cdot P(A)}{P(B)}
 \]
 
 \end_inset
@@ -9359,7 +10030,7 @@ P(A\vert B)={\frac{P(B\vert A)\cdot P(A)}{P(B)}}
 ，按照公式很容易得出结果：
 \begin_inset Formula 
 \[
-P(B\vert A)=0.9\cdot{\frac{2}{7305}}\cdot{\frac{7}{3}}=0.0005749486653...
+P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 \]
 
 \end_inset
@@ -9413,14 +10084,6 @@ P(B\vert A)=0.9\cdot{\frac{2}{7305}}\cdot{\frac{7}{3}}=0.0005749486653...
 
 \begin_layout Section
 矩阵
-\end_layout
-
-\begin_layout Chapter
-最优化
-\end_layout
-
-\begin_layout Chapter
-随机过程
 \end_layout
 
 \begin_layout Part
