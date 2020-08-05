@@ -164,6 +164,20 @@ Math
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $\hat{e}$
+\end_inset
+
+ 残差
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+ 复数集
+\end_layout
+
 \begin_layout Chapter
 数学运算
 \end_layout
@@ -3430,6 +3444,167 @@ n-棱柱
 复数
 \end_layout
 
+\begin_layout Standard
+为了解决
+\begin_inset Formula $r^{2}+1=0$
+\end_inset
+
+ 这样的方程在实数系中无解的问题,我们设想引入一个新数 
+\begin_inset Formula $i$
+\end_inset
+
+,使
+\begin_inset Formula $i$
+\end_inset
+
+是方程
+\begin_inset Formula $x^{2}+1=0$
+\end_inset
+
+ 的根,即使 
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+实数系经过扩充后得到的复数集应该
+\begin_inset Formula $C=\{a+bi\mid a,b\in R\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+复数
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+, 其中i 叫做虚数单位, 这一表示形式叫做复数的代数形式, 
+\begin_inset Formula $a$
+\end_inset
+
+ 叫做复数的实部(real part), 
+\begin_inset Formula $b$
+\end_inset
+
+ 叫做复数的虚部(imaginary part).
+\end_layout
+
+\begin_layout Standard
+在复数集
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C=\{a+bi\mid a,b\in R\}$
+\end_inset
+
+ 取任意两个数 
+\begin_inset Formula $a+bi$
+\end_inset
+
+ , 
+\begin_inset Formula $c+di$
+\end_inset
+
+,规定:
+\begin_inset Formula 
+\[
+a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $bi$
+\end_inset
+
+叫做纯虚数
+\end_layout
+
+\begin_layout Standard
+显然:
+\begin_inset Formula $C\supsetneqq R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+共轭复数:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+例如
+\begin_inset Formula $a+bi$
+\end_inset
+
+ , 
+\begin_inset Formula $a-bi$
+\end_inset
+
+ , 当两个实数的实部相等, 虚部互为相反数时,这两个复数叫做互为
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+共轭复数(conjugate complex number).
+\end_layout
+
+\begin_layout Standard
+虚部不等于0的两个共轭复数也叫做
+\series bold
+共轭虚数.
+\end_layout
+
 \begin_layout Section
 实数
 \end_layout
@@ -3447,8 +3622,11 @@ n-棱柱
 \end_layout
 
 \begin_layout Standard
-虚数是指实数以外的复数，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视
-为同时是实数也是虚数.
+虚数是指实数以外的
+\series bold
+复数
+\series default
+，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视为同时是实数也是虚数.
  
 \end_layout
 
@@ -3481,11 +3659,11 @@ n-棱柱
 \end_inset
 
 ，而 
-\begin_inset Formula ${-{\sqrt{-1}}}$
+\begin_inset Formula $-\sqrt{-1}$
 \end_inset
 
  对应到 
-\begin_inset Formula ${-i}$
+\begin_inset Formula $-i$
 \end_inset
 
  也是可以的，也可以认为
@@ -3495,8 +3673,251 @@ n-棱柱
 。 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
+复数的几何意义
+\end_layout
+
+\begin_layout Standard
+根据复数相等的定义, 任何一个复数
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+ , 都可以由一个有序实数对
+\begin_inset Formula $(a,b)$
+\end_inset
+
+唯一确定.
+\end_layout
+
+\begin_layout Standard
+因为有序实数对
+\begin_inset Formula $(a,b)$
+\end_inset
+
+与平面直角坐标系中的点一一对应,所以复数集与平面直角坐标系中的点集之间可以建立一一对应的关系, 
+\end_layout
+
+\begin_layout Standard
+如图,点
+\begin_inset Formula $Z$
+\end_inset
+
+的横坐标是
+\begin_inset Formula $a$
+\end_inset
+
+,纵坐标是
+\begin_inset Formula $b$
+\end_inset
+
+, 复数
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+ 可用点Z(a,b)表示.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/复数.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个建立了直角坐标系来表示复数的平面叫做
+\series bold
+复平面
+\series default
+,x轴叫做
+\series bold
+实轴
+\series default
+,y轴叫做
+\series bold
+虚轴
+\series default
+.
+ 显然,实轴上的点都表示实数;除了原点外,虛軸上的点都表示纯虚数.
+\end_layout
+
+\begin_layout Standard
+例如,复平面内的原点
+\begin_inset Formula $(0,0)$
+\end_inset
+
+表示实数,实轴上的点
+\begin_inset Formula $(2,0)$
+\end_inset
+
+表示实数 2,虚轴上的点
+\begin_inset Formula $(0,-1)$
+\end_inset
+
+表示纯虚数
+\begin_inset Formula $-i$
+\end_inset
+
+.
+\begin_inset Formula $(-2.3)$
+\end_inset
+
+表示复数
+\begin_inset Formula $-2+3i$
+\end_inset
+
+ 等.
+ 按照这种表示方法, 每一个复数, 有复平面内唯一的一个点和它对应;反过来,复平面内的每一个点,有唯一的一个复数和它对应。由此可知,复数集C和复平面内所有的点所
+组成的集合是一一对应的, 即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{复\text{数}}z=a+bi\stackrel{\text{一\text{一对应}}}{\longleftrightarrow}\text{复平面内的点}Z(a,b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+向量意义:
+\end_layout
+
+\begin_layout Standard
+在平面直角坐标系中,每一个平面向量都可以用一个有序实数对来表示,而有序实数对与复数是一一对应的, 这样, 我们还可以用
+\series bold
+平面向量来表示复数
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+设复平面内的点Z表示复数:
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+, 连结OZ, 显然向量
+\begin_inset Formula $\overrightarrow{OZ}$
+\end_inset
+
+由点Z唯一确定; 反过来,点Z(相对于原点来说,也可以由向量
+\begin_inset Formula $\overrightarrow{OZ}$
+\end_inset
+
+唯一确定,因此,复数集
+\begin_inset Formula $C$
+\end_inset
+
+与复 平面内的向量所成的集合也是一一对应的(实数0与零向量对 应),即 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{复\text{数}}z=a+bi\stackrel{\text{一\text{一对应}}}{\longleftrightarrow}\text{平面向量}\overrightarrow{OZ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是复数的另一种几何意义, 
+\end_layout
+
+\begin_layout Standard
+为方便起见,我们常把复数
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+说成点
+\begin_inset Formula $Z$
+\end_inset
+
+或说成向量
+\begin_inset Formula $\overrightarrow{OZ}$
+\end_inset
+
+,并且规定,相等的向量表示同一个复数.
+\end_layout
+
+\begin_layout Section
 复数代数形式的四则运算
+\end_layout
+
+\begin_layout Standard
+复数的加法和减法是实部和实部运算,虚部和虚部运算.
+\end_layout
+
+\begin_layout Paragraph
+复数的乘法
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a+bi)(c+di)=ac+bci+adi+bdi^{2}=(ac-bd)+(ad+bc)i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+满足交换律和结合律.
+\end_layout
+
+\begin_layout Paragraph
+复数的除法
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(a+bi)\div(c+di)=\frac{ac+bd}{c^{2}+d^{2}}+\frac{bc-ad}{c^{2}+d^{2}}i(c+di\neq0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推理:(分子与分母同称分母的共轭复数
+\begin_inset Formula $c-di$
+\end_inset
+
+)
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(a+bi)\div(c+di)=\frac{(a+bi)}{(c+di)}=\frac{(a+bi)*(c-di)}{(c+di)*(c-di)}=\frac{ac+bci-adi-bd(i^{2})}{c^{2}+cdi-cdi-d^{2}i^{2}}=\frac{ac+bd+(bc-ad)i}{c^{2}+d^{2}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -3992,6 +4413,130 @@ lim(n→∞)\{a_{n}\}=A
 
 \begin_layout Section
 集合间的关系
+\end_layout
+
+\begin_layout Standard
+集合
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，若
+\begin_inset Formula ${\displaystyle \forall a\in A}$
+\end_inset
+
+，有
+\begin_inset Formula ${\displaystyle a\in B\therefore A\subseteq B}$
+\end_inset
+
+。则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的子集，亦称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+包含于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，或
+\series bold
+
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+包含
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+
+\series default
+，记作
+\begin_inset Formula ${\displaystyle A\subseteq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supseteq A}$
+\end_inset
+
+，否则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+不是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的子集，记作
+\begin_inset Formula ${\displaystyle A\nsubseteq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\nsupseteq A}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula ${\displaystyle A\subseteq B}$
+\end_inset
+
+，且
+\begin_inset Formula ${\displaystyle A\neq B}$
+\end_inset
+
+，则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的真子集，亦称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+真包含于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，或
+\begin_inset Formula $B$
+\end_inset
+
+真包含
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+，记作
+\begin_inset Formula ${\displaystyle A\subsetneqq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supsetneqq A}$
+\end_inset
+
+（有时也记作
+\begin_inset Formula ${\displaystyle A\subset B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supset A}$
+\end_inset
+
+）
 \end_layout
 
 \begin_layout Section
@@ -8092,11 +8637,11 @@ a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
 \end_inset
 
 ，其完整余数系统可以是
-\begin_inset Formula ${9,12+1,15+2}$
+\begin_inset Formula $9,12+1,15+2$
 \end_inset
 
 。如果该集合是由每个同余类的最小非负整数所组成，亦即
-\begin_inset Formula ${0,1,2,...,n-1}$
+\begin_inset Formula $0,1,2,...,n-1$
 \end_inset
 
 ，则称该集合为模n的最小余数系统（least residue system）。 
@@ -8112,15 +8657,15 @@ a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
 \end_inset
 
 的简约余数系统为
-\begin_inset Formula ${1,5}(1,5与6互为质数)$
+\begin_inset Formula $1,5(1,5与6互为质数)$
 \end_inset
 
 或
-\begin_inset Formula ${7,11}$
+\begin_inset Formula $7,11$
 \end_inset
 
 。如果模n是质数，那么它的最小简约余数系统是
-\begin_inset Formula ${1,2,...,n-1}$
+\begin_inset Formula $1,2,...,n-1$
 \end_inset
 
 ，只比最小余数系统少一个
@@ -8139,11 +8684,11 @@ a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula ${\displaystyle a\equiv b{\pmod{m}}\Rightarrow c\cdot m=a-b,c\in\mathbb{Z}}$
+\begin_inset Formula ${\displaystyle a\equiv b\pmod m\Rightarrow c\cdot m=a-b,c\in\mathbb{Z}}$
 \end_inset
 
  （即是说 a 和 b 之差是 m 的倍数）,换句话说，
-\begin_inset Formula ${\displaystyle a\equiv b{\pmod{m}}\Rightarrow m\mid(a-b)}$
+\begin_inset Formula ${\displaystyle a\equiv b\pmod m\Rightarrow m\mid(a-b)}$
 \end_inset
 
  注:(
@@ -8697,7 +9242,7 @@ $
 \end_layout
 
 \begin_layout Section
-回归分析与回归直线
+回归分析,线性回归与回归直线
 \end_layout
 
 \begin_layout Standard
@@ -8722,6 +9267,10 @@ $
 
 \begin_layout Enumerate
 得出结果后分析残差图是否有异常(如个别数据对应残差过大,残差呈现不随机的规律性等),若存在异常,则检查数据是否有误,或模型是否合适等。
+\end_layout
+
+\begin_layout Enumerate
+有时, 如果数据不是一条直线可以通过转换转成一条直线
 \end_layout
 
 \begin_layout Subsection
@@ -8814,7 +9363,7 @@ $
 \begin_inset Formula 
 \[
 \begin{cases}
-b=\frac{\stackrel[i=1]{n}{\sum}(x_{i}-x)(y_{i}-\overline{y})}{\stackrel[i=1]{n}{\sum}(x_{i}-\overline{x})^{2}} & =\frac{\stackrel[i=1]{n}{\sum}x_{i}y_{i}-n\overline{x}\overline{y})}{\stackrel[i=1]{n}{\sum}x_{i}^{2}-n\overline{x}^{2}}\\
+b=\frac{\stackrel[i=1]{n}{\sum}(x_{i}-x)(y_{i}-\overline{y})}{\stackrel[i=1]{n}{\sum}(x_{i}-\overline{x})^{2}} & =\frac{\stackrel[i=1]{n}{\sum}(x_{i}y_{i}-n\overline{x}\overline{y})}{\stackrel[i=1]{n}{\sum}x_{i}^{2}-n\overline{x}^{2}}\\
 a=\overline{y}-b\overline{x}
 \end{cases}
 \]
@@ -8832,8 +9381,133 @@ a=\overline{y}-b\overline{x}
 
 \end_layout
 
-\begin_layout Section
-线性回归
+\begin_layout Standard
+其中
+\begin_inset Formula $x=\frac{1}{n}\stackrel[i=1]{n}{\sum x_{i}}$
+\end_inset
+
+,
+\begin_inset Formula $y=\frac{1}{n}\stackrel[i=1]{n}{\sum y_{i}}$
+\end_inset
+
+,
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 称为
+\series bold
+样本点的中心
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+如果样本点不在回归方程直线上, 可以使用这个模型
+\begin_inset Formula 
+\[
+\hat{y}=bx+a+e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中a,b 位模型的未知参数, e 称为
+\series bold
+随机误差
+\series default
+(random error).
+\end_layout
+
+\begin_layout Standard
+e=
+\begin_inset Formula $y-\hat{y}$
+\end_inset
+
+,对于样本点而言, 它们的随机误差为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e_{i}=y_{i}-bx_{i}-a,i=1,2,\cdots,n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其估值为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{e}_{i}=y_{i}-\hat{y_{i}}=y_{i}-\hat{b}x_{i}-\hat{a},i=1,2,\cdots,n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{e}$
+\end_inset
+
+ 称为对应于点
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+的
+\series bold
+残差
+\series default
+(residual)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+残差图
+\end_layout
+
+\begin_layout Standard
+刻画回归线效果:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R^{2}=1-\frac{\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}}{\stackrel[i=1]{n}{\sum}(y_{i}-\bar{y}_{i})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\stackrel[i=1]{n}{\sum}(y_{i}-\bar{y}_{i})^{2}$
+\end_inset
+
+是已确定的值, 因此
+\begin_inset Formula $R^{2}$
+\end_inset
+
+越大, 意味着残差和平方越小
+\begin_inset Formula $\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}$
+\end_inset
+
+, 即模型效果越好; 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ 越大反之.
 \end_layout
 
 \begin_layout Section
@@ -8841,7 +9515,535 @@ a=\overline{y}-b\overline{x}
 \end_layout
 
 \begin_layout Standard
-判断两个事件是否有关联.
+判断两个事件是否有关联, 是根据次数资料判断两类因子彼此相关或相互独立的假设检验。
+\end_layout
+
+\begin_layout Standard
+假设有两个分类变量X和Y，它们的值域分另为{x1, x2}和{y1, y2}，其样本频数列联表为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+y2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+总计
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+x2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c+d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+总计
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+b+c+d 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若要推断的论述为H1：“X与Y有关系”，可以利用独立性检验来考察两个变量是否有关系，并且能较精确地给出这种判断的可靠程度。具体的做法是，由表中的数据算出随机变量
+\begin_inset Formula $K^{2}$
+\end_inset
+
+的值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K^{2}=\frac{n(ad-bc)2}{[(a+b)(c+d)(a+c)(b+d)]}$
+\end_inset
+
+，　其中
+\begin_inset Formula $n=a+b+c+d$
+\end_inset
+
+为样本容量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K^{2}$
+\end_inset
+
+的值越大，说明“X与Y有关系”成立的可能性越大。
+\end_layout
+
+\begin_layout Standard
+如果X,Y 没有关系, 那么其比例
+\begin_inset Formula $\frac{a}{a+b}\thickapprox\frac{c}{c+d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以查阅下表来确定结论“X与Y有关系”的可信程度： 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="11">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(K^{2}≥k)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.15 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.025
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.005
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.455
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.708
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.323
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.072
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.706
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.481
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.024
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.6.635
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.879
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.828
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如，当“X与Y有关系”的
+\begin_inset Formula $K^{2}$
+\end_inset
+
+变量的值为6.109，根据表格，因为5.024≤6.109<6.635，所以“X与Y有关系”成立的概率为1-0.025=0.975，即
+\begin_inset Formula $97.5\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+定义
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=|\frac{a}{a+b}-\frac{c}{c+d}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由W的定义可以发现,它越大,越有利于结论“X和Y有关系”;它越小,越有利于结论“X和Y没有关系
+\begin_inset Quotes erd
+\end_inset
+
+, 因此可以建立如下的判断规则:
+\end_layout
+
+\begin_layout Standard
+当W的观测值
+\begin_inset Formula $W\geqslant w_{0}$
+\end_inset
+
+时就判断“X和Y有关系”;否则,判断“X和Y没有关系”,这里 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ 为正实数,满足如下条件:在“X和Y没有关系”的前提下:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(W\geqslant w_{0})=k,(k=P(K^{2}\ge k),\text{如0.010}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K^{2}=W^{2}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此
+\begin_inset Formula $K^{2}\geqslant k_{0}\Leftrightarrow W\geqslant\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
