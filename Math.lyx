@@ -122,7 +122,7 @@ Math
 \begin_inset Formula $\sideset{}{}\sum$
 \end_inset
 
-求和符号例如
+求和符号; 例如
 \begin_inset Formula $SD=\sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_{i}-\mu)^{2}}(\mu\text{为平均值{\displaystyle \overline{x}})}$
 \end_inset
 
@@ -143,7 +143,7 @@ Math
 \begin_inset Formula $(x_{i}-\mu)^{2}$
 \end_inset
 
-平方和,
+平方和, 
 \begin_inset Formula $\frac{1}{N}$
 \end_inset
 
@@ -175,7 +175,578 @@ Math
 \begin_inset Formula $C$
 \end_inset
 
- 复数集
+ 复数集 
+\begin_inset Formula $R$
+\end_inset
+
+实数集
+\end_layout
+
+\begin_layout Chapter
+常用逻辑用语及其符号
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\land q$
+\end_inset
+
+ p且q
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\lor q$
+\end_inset
+
+ p 或q
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lnot p$
+\end_inset
+
+ p的否定非p
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\Longrightarrow q$
+\end_inset
+
+ 若p则q
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall x\in M,p(x)$
+\end_inset
+
+ 对于每一个属于M的x, p(x) 成立
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists x_{0}\in M,p(x_{0})$
+\end_inset
+
+ 存在M的元素
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $p(x_{0})$
+\end_inset
+
+ 成立
+\end_layout
+
+\begin_layout Standard
+一般地,在数学中,我们把用语言、符号或式子表达的,可以判断真假的陈述句叫做
+\series bold
+命题
+\series default
+(proposition), 其中判断为真的语句叫做
+\series bold
+真命题
+\series default
+(true proposition), 判断为假的语句叫做
+\series bold
+假命题
+\series default
+(false proposition)。
+\end_layout
+
+\begin_layout Standard
+(3)若(z)不是正弦函数,则f(x)不是周期函数: (4)若(x)不是問題產数,则(1)不是正弦函数, 可以看到,命题(1)的条件是命题(2)的结论,且命题(
+1) 的结论是命题(2) 的 条件,即它们的条件和结论互换了, 
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+互逆命题
+\end_layout
+
+\begin_layout Standard
+一般地,对于两个命题,如果一个命题的条件和结论分别是另一个命题的结论和条件,那么我们把这样的两个命题叫做
+\series bold
+互逆命题
+\series default
+,其中一个命题叫做原
+\series bold
+命题
+\series default
+(original proposition),另一个叫做原命题的逆命题(inverse proposition), 也就是说,如果原命题为
+\begin_inset Formula 
+\[
+“若p,则q”
+\]
+
+\end_inset
+
+, 那么它的逆命题
+\begin_inset Formula 
+\[
+“若q,则p"
+\]
+
+\end_inset
+
+例如:
+\end_layout
+
+\begin_layout Itemize
+若f(x)是正弦函数,则f(x)是周期函数;
+\end_layout
+
+\begin_layout Itemize
+若f(x)是周期函数,则f(x)是正弦函数;
+\end_layout
+
+\begin_layout Paragraph
+互否命题
+\end_layout
+
+\begin_layout Standard
+其中一个命题的条件和结论恰好是另一个命题的条件的否定和结论的否定,我们把这样的两个命题叫做
+\series bold
+互否命题
+\series default
+, 如果把其中的一个命题叫做
+\series bold
+原命题
+\series default
+,那 么另一个叫做原命题的
+\series bold
+否命题
+\series default
+(negative proposition).
+ 
+\end_layout
+
+\begin_layout Standard
+也就是说,如果原命题为
+\begin_inset Formula 
+\[
+“若p,则q"
+\]
+
+\end_inset
+
+, 那么它的否命题为 
+\begin_inset Formula 
+\[
+“若\lnot p”,则\lnot q"
+\]
+
+\end_inset
+
+例如,如果原命题是“同位角相等,两直线平行”,那 么它的否命题是“同位角不相等,两直线不平行”.
+\end_layout
+
+\begin_layout Paragraph
+互为逆否命题
+\end_layout
+
+\begin_layout Standard
+其中一个命题的条件和结论恰好是另一个命题的结论的否定和条件的否定,我们把这样的两个命题叫做
+\series bold
+互为逆否命题
+\series default
+, 把其中的一个命题叫做原命 题,另一个叫做原命题的逆否命题(inverse and negative proposition), 也就是说,如果原命题为
+ 
+\begin_inset Formula 
+\[
+“若p,则q”
+\]
+
+\end_inset
+
+那么它的逆否命题为 
+\begin_inset Formula 
+\[
+“\text{若}\lnot q\text{”},\text{则}\lnot p"
+\]
+
+\end_inset
+
+例如,如果原命题是“同位角相等,两直线平行”,那么它的逆否命题是“两直线不平行,同位角不相等”.
+\end_layout
+
+\begin_layout Standard
+一般地,四种命题的真假性,有而且仅有下面四种情况: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+原命题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逆命题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+否命题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逆否命题
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+真
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+假
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此这四种命题的真假性之间的关系如下: 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+两个命题互为逆否命题,它们有相同的真假性; 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+两个命题为互逆命题或互否命题,它们的真假性没有关系;
+\end_layout
+
+\begin_layout Standard
+由于原命题和它的逆否命题有相同的真假性,所以我们在直接证明某一个命题为真命题有困难时,
+\series bold
+可以通过证明它的逆否命题为真命题,来间接地证明原命题为真命题.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+充分条件与必要条件
+\end_layout
+
+\begin_layout Standard
+一般地,“若p,则q”为真命题,是指由p通过推理可以得出q,这时,我们就 说,由p可推出q,记 
+\begin_inset Formula $p\Longrightarrow q$
+\end_inset
+
+ 并且说p是q的
+\series bold
+充分条件
+\series default
+(sufficient condition),q是p 的
+\series bold
+必要条件
+\series default
+(necessary condition).
+\end_layout
+
+\begin_layout Paragraph
+充分必要条件
+\end_layout
+
+\begin_layout Standard
+一般地,如果既有 
+\begin_inset Formula $p\Longrightarrow q$
+\end_inset
+
+,又有 
+\begin_inset Formula $q\Longrightarrow p$
+\end_inset
+
+,就记作 
+\begin_inset Formula $p\Leftrightarrow q$
+\end_inset
+
+.
+ 此时,我们说,p是q的
+\series bold
+充分必要条件
+\series default
+,
+\series bold
+简称充要条件
+\series default
+ (sufficient and necessary condition),显然,如果p是q的充 要条件,那么q也是p的充要条件, 
+\end_layout
+
+\begin_layout Standard
+概括地说,
+\series bold
+ 如果
+\begin_inset Formula $p\Leftrightarrow q$
+\end_inset
+
+,那么p与q互为充要条件
+\end_layout
+
+\begin_layout Section
+逻辑
+\end_layout
+
+\begin_layout Subsection
+且(与,and)
+\end_layout
+
+\begin_layout Standard
+一般地, 用联结词“且”把命题p和q命题可联结起来,就得到一个新命题,记作 
+\begin_inset Formula $p\land q$
+\end_inset
+
+, 读作“p且q”.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+一般地,我们规定: 当p,q都是真命题时,
+\begin_inset Formula $p\land q$
+\end_inset
+
+是真命题;当q,p两个命题中有一个命题是假命题时,
+\begin_inset Formula $p\land q$
+\end_inset
+
+是假命题,
+\end_layout
+
+\begin_layout Subsection
+或(or)
+\end_layout
+
+\begin_layout Standard
+一般地, 用联结词“或”把命题p和q命题联结起来,就得到一个新命题,记作 
+\begin_inset Formula $p\lor q$
+\end_inset
+
+, 读作“p或q”.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+一般地,我们规定: 当p,q有一个是真命题时,
+\begin_inset Formula $p\lor q$
+\end_inset
+
+是真命题;当q,p两个命题都是假命题时,
+\begin_inset Formula $p\land q$
+\end_inset
+
+是假命题
+\end_layout
+
+\begin_layout Subsection
+非(not)
+\end_layout
+
+\begin_layout Standard
+一般地,对一个命题p全盘否定,就得到一个新命题,记作
+\begin_inset Formula $\lnot p$
+\end_inset
+
+, 读作“非p”或“p的否定” 
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $p$
+\end_inset
+
+是真命题,则
+\begin_inset Formula $\lnot p$
+\end_inset
+
+必是假命题;若是
+\begin_inset Formula $p$
+\end_inset
+
+假命题,则必
+\begin_inset Formula $\lnot p$
+\end_inset
+
+是真命题。
 \end_layout
 
 \begin_layout Chapter
@@ -3336,28 +3907,403 @@ n-棱柱
 球面上的距离
 \end_layout
 
-\begin_layout Subsection
-球面上的角 
+\begin_layout Standard
+经过B(球面上的点), N(球面上的点) , O(圆心)三点(显然,这三点不在同一条直线上)的
+\series bold
+平面截球面
+\series default
+,得到一个圆,这个是大圆,大圆上的两点B, N把大圆分成两段圆弧,长的一段叫做优弧,短的一段叫做劣弧,这段劣弧的长度就是球面上这两点之间的最短路径,我们称之为
+\series bold
+球面上两点间的距离
+\series default
+,
 \end_layout
 
 \begin_layout Subsection
 极与赤道 
 \end_layout
 
-\begin_layout Subsection
-球面二角形 
+\begin_layout Standard
+我们可以在球面上任取一点A,过球心
+\begin_inset Formula $O$
+\end_inset
+
+且
+\series bold
+垂直于球半径OA的平面截球面
+\series default
+得到大圆
+\begin_inset Formula $L_{A}$
+\end_inset
+
+,此时,我们称点A为极点,简称极; 大圆
+\begin_inset Formula $L_{A}$
+\end_inset
+
+,称为以点A为极点的赤道圆,简称赤道, 
+\end_layout
+
+\begin_layout Standard
+这时,对于球面上的任意一点,均可得到与它对应的一个赤道;对于球面 上的赤道,均可得到与它对应的两个极点。 
+\end_layout
+
+\begin_layout Standard
+从极与赤道的概念不难看出,它们是一体的,谁也离不开谁,有极就有与之对应的赤 道,有赤道就有与之对应的极.
+ 赤道与极点上的任意一点的距离为
+\begin_inset Formula $\frac{1}{2}\pi R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+另外,由极与赤道的概念可知在球面上与点A的距离为
+\begin_inset Formula $\frac{1}{2}\pi R$
+\end_inset
+
+的点必在赤道 
+\begin_inset Formula $L_{A}$
+\end_inset
+
+ 上,因此,我们也可以这样来理解赤道:与球面 上一点A的距离为
+\begin_inset Formula $\frac{1}{2}\pi R$
+\end_inset
+
+的点的集合(或轨迹),这个点的集合是一个大圆,这个大圆称为以点A为极点的赤道,记为
+\begin_inset Formula $L_{A}$
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Subsection
-球面三角形 
+球面上的角
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+过球面上一点,作两条大圆弧
+\begin_inset Formula $\overset{\smallfrown}{AB}$
+\end_inset
+
+,
+\begin_inset Formula $\overset{\smallfrown}{AC}$
+\end_inset
+
+,它们构成的图形叫做
+\series bold
+球面角
+\series default
+, 仍记作
+\begin_inset Formula $\angle BAC$
+\end_inset
+
+.
+ 点
+\begin_inset Formula $A$
+\end_inset
+
+称为球面角的顶点,大圆弧
+\begin_inset Formula $\overset{\smallfrown}{AB}$
+\end_inset
+
+,
+\begin_inset Formula $\overset{\smallfrown}{AC}$
+\end_inset
+
+称为球面角的
+\series bold
+边.
+\end_layout
+
+\begin_layout Standard
+求球面角可以转成球面二角形.
+\end_layout
+
+\begin_layout Subsection
+球面二角形
+\end_layout
+
+\begin_layout Standard
+因为球面上的两个大圆所在的平面都经过球心O,所以这两个大圆所在的平面有一个公共点,因此这两个平面必有一条过球心O的交直线,这条相交直线显然是球的直径所在的直线,
+ 两个大圆的交点是这条直径的两个端点
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $A'$
+\end_inset
+
+.
+ 我们把球的直径的两个端点
+\begin_inset Formula $A,A'$
+\end_inset
+
+称为
+\series bold
+对径点
+\series default
+,因此,两个大圆相交于对径点
+\begin_inset Formula $A,A'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+这两个大圆面的夹角就是球面二角形.
+\end_layout
+
+\begin_layout Standard
+球面角
+\begin_inset Formula $\angle BAC$
+\end_inset
+
+的两边AB,AC延长后相交于点A的对径点
+\begin_inset Formula $A'$
+\end_inset
+
+所组成的图形
+\begin_inset Formula $ABA'C$
+\end_inset
+
+称为球面二角形,又因为它(平面图)像天空中一轮弯弯的月亮,所以又称它为
+\series bold
+月形
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+月形也可以看作球面上由两个大圆的各一半所围成的图形,我们把
+\begin_inset Formula $\overset{\frown}{ABA'}$
+\end_inset
+
+, 
+\begin_inset Formula $\overset{\frown}{ACA'}$
+\end_inset
+
+ 称为球面二角形的边,记为 
+\begin_inset Formula $ABA'$
+\end_inset
+
+, 
+\begin_inset Formula $ACA'$
+\end_inset
+
+,球面角
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\angle BAC$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 或
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\angle BA'C$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+称为球面二角形的夹角,
+\end_layout
+
+\begin_layout Subsection
 球面三角形 
 \end_layout
 
 \begin_layout Subsubsection
 三面角 
+\end_layout
+
+\begin_layout Standard
+三面角是指有三个面的多面角，三面角的任意两个面角的和大于第三个面角，三个面角的和小于4个直角，三面角的3个二面角的和大于2个直角，小于6个直角.
+\end_layout
+
+\begin_layout Standard
+从一点出发并且不在同一平面内的三条射线，其中每相邻两射线可以决定一个平面，这样的三个平面所围成的立体图形叫做
+\series bold
+三面角
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+其中，这三条射线叫做
+\series bold
+三面角的棱
+\series default
+，这些射线的公共端点叫做三面角的顶点，相邻两棱所夹的平面部分叫做
+\series bold
+三面角的面
+\series default
+，在每个面内两条棱所形成的角叫做
+\series bold
+三面角的面角
+\series default
+，过每一条棱的两个面所形成的二面角叫做
+\series bold
+三面角的二面角
+\series default
+。 
+\end_layout
+
+\begin_layout Standard
+一个三面角可以用它的顶点的字母来表示，例如“三面角S”；或在顶点的字母之后加一短划，并顺次写上每一条棱上的一个字母，例如“三面角S-ABC”。
+\end_layout
+
+\begin_layout Subsubsection
+球面三角形
+\end_layout
+
+\begin_layout Standard
+平面上的三角形是由
+\series bold
+三条线段首尾顺次相接
+\series default
+构成的图形, 完全类似, 我们把球面上三条“直线
+\begin_inset Quotes erd
+\end_inset
+
+段(即三条大圆的劣弧)首尾顺次相接构成的封闭图形称为球面三角形,也就是说,在球面上,给出不在同一大圆上的三点A,B,C,可以得到经过这三点中任意两点的大圆的弧
+\begin_inset Formula $AB$
+\end_inset
+
+, 
+\begin_inset Formula $BC$
+\end_inset
+
+, 
+\begin_inset Formula $CA$
+\end_inset
+
+,这三条步弧组成的图 形称为球面
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+.
+ 这三条劣弧称为球面
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+的边, 表示为AB,BC, CA; A,B,C三点称为球面
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+的顶点;
+\begin_inset Formula $\angle A$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+,
+\begin_inset Formula $\angle B$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,
+\begin_inset Formula $\angle C$
+\end_inset
+
+三个球面角称为球面
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的三个内角.
 \end_layout
 
 \begin_layout Subsubsection
@@ -3438,6 +4384,22 @@ n-棱柱
 
 \begin_layout Standard
 球面上余弦定理的应用——求地球上两城市间的距离
+\end_layout
+
+\begin_layout Chapter
+欧氏几何与非欧几何 
+\end_layout
+
+\begin_layout Section
+平面几何与球面几何的比较 
+\end_layout
+
+\begin_layout Section
+欧氏平行公理与非欧几何模型——庞加莱模型 
+\end_layout
+
+\begin_layout Section
+欧氏几何与非欧几何的意义
 \end_layout
 
 \begin_layout Chapter
@@ -3918,22 +4880,6 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Chapter
-欧氏几何与非欧几何 
-\end_layout
-
-\begin_layout Section
-平面几何与球面几何的比较 
-\end_layout
-
-\begin_layout Section
-欧氏平行公理与非欧几何模型——庞加莱模型 
-\end_layout
-
-\begin_layout Section
-欧氏几何与非欧几何的意义
 \end_layout
 
 \begin_layout Chapter
