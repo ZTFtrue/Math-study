@@ -749,6 +749,141 @@ Math
 是真命题。
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+且 或 非 类似集合 交 并 补
+\end_layout
+
+\begin_layout Section
+全称量词与存在量词
+\end_layout
+
+\begin_layout Paragraph
+全称量词
+\end_layout
+
+\begin_layout Standard
+短语“所有的”“任意一个”在逻辑中通常叫做
+\series bold
+全称量词
+\series default
+(universal quantifier), 并用符号“
+\begin_inset Formula $\forall$
+\end_inset
+
+”表示, 含有全称量词的命题,叫做
+\series bold
+全称命题
+\series default
+, 
+\end_layout
+
+\begin_layout Standard
+例如,命题: 
+\end_layout
+
+\begin_layout Standard
+对任意的
+\begin_inset Formula $n\in Z,$
+\end_inset
+
+ 
+\begin_inset Formula $2n+1$
+\end_inset
+
+是奇数;就是全称命题, 
+\end_layout
+
+\begin_layout Standard
+通常,将含有变量的语句用
+\begin_inset Formula $p(x),q(x),r(x)$
+\end_inset
+
+,…表示,变量
+\begin_inset Formula $x$
+\end_inset
+
+的取值范围用M表示,那么, 全称命题“对M中任意一个
+\begin_inset Formula $x$
+\end_inset
+
+,有p(x)成立”可用符号简记为: 
+\begin_inset Formula $\forall x\in M,p(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+它的否定:
+\begin_inset Formula $\exists x_{0}\in M,\neg p(x_{0})$
+\end_inset
+
+是特称命题
+\end_layout
+
+\begin_layout Paragraph
+存在量词
+\end_layout
+
+\begin_layout Standard
+短语“存在一个”,“至少有一个”在逻辑中通常叫做
+\series bold
+存在量词
+\series default
+(existential quantifier),并用符号“
+\begin_inset Formula $\exists$
+\end_inset
+
+”表示,含有存在量词的命题,叫做
+\series bold
+特称命题.
+\end_layout
+
+\begin_layout Standard
+特称命题
+\begin_inset Quotes erd
+\end_inset
+
+存在M中的元素
+\begin_inset Formula $x_{0}$
+\end_inset
+
+,使
+\begin_inset Formula $p(x_{0})$
+\end_inset
+
+成立
+\begin_inset Quotes erd
+\end_inset
+
+可用符号简记为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists x_{0}\in M,p(x_{0})$
+\end_inset
+
+ 存在M的元素
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $p(x_{0})$
+\end_inset
+
+ 成立
+\end_layout
+
+\begin_layout Standard
+它的否定:
+\begin_inset Formula $\forall x\in M,\neg p(x)$
+\end_inset
+
+是全称命题
+\end_layout
+
 \begin_layout Chapter
 数学运算
 \end_layout
