@@ -2497,6 +2497,54 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 线，包括圆，椭圆，抛物线，双曲线及一些退化类型。
 \end_layout
 
+\begin_layout Standard
+设
+\begin_inset Formula ${\displaystyle F}$
+\end_inset
+
+为定点，
+\begin_inset Formula ${\displaystyle l}$
+\end_inset
+
+为定直线，
+\begin_inset Formula ${\displaystyle e}$
+\end_inset
+
+为
+\series bold
+正
+\series default
+ 
+\series bold
+常数
+\series default
+，称满足
+\begin_inset Formula ${\displaystyle \frac{|PF|}{|Pl|}=e}$
+\end_inset
+
+的动点
+\begin_inset Formula $P$
+\end_inset
+
+的轨迹为圆锥曲线。
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula ${\displaystyle F}$
+\end_inset
+
+为其焦点，
+\begin_inset Formula $l$
+\end_inset
+
+为准线，
+\begin_inset Formula ${\displaystyle e}$
+\end_inset
+
+为离心率。
+\end_layout
+
 \begin_layout Subsection
 椭圆
 \end_layout
@@ -3205,6 +3253,10 @@ P={M||MF|=d}
 
 \begin_layout Itemize
 顶点: 抛物线和它的轴的交点叫做抛物线的顶点,抛物线的顶点就是坐标原点.
+\end_layout
+
+\begin_layout Itemize
+从抛物线焦点发出的光在抛物线反射后会变平行(反之同理)（证明：求切线，求角度）
 \end_layout
 
 \begin_layout Section
