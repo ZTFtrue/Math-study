@@ -2512,12 +2512,16 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 
 为
 \series bold
-正
+
+\begin_inset Formula $正$
+\end_inset
+
+
 \series default
  
-\series bold
-常数
-\series default
+\begin_inset Formula $常数$
+\end_inset
+
 ，称满足
 \begin_inset Formula ${\displaystyle \frac{|PF|}{|Pl|}=e}$
 \end_inset
@@ -2543,6 +2547,378 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 \end_inset
 
 为离心率。
+\end_layout
+
+\begin_layout Standard
+其方程为：
+\begin_inset Formula ${\displaystyle \rho=e(d-\rho\cos\theta)}$
+\end_inset
+
+ 或
+\begin_inset Formula ${\displaystyle \rho=\frac{ed}{1\pm e\cos\theta}}$
+\end_inset
+
+(正负号由所选焦点与定直线所处的位置不同而引起）。 其中
+\begin_inset Formula ${\displaystyle \theta}$
+\end_inset
+
+为
+\begin_inset Formula ${\displaystyle PF}$
+\end_inset
+
+与极轴的夹角，
+\begin_inset Formula ${\displaystyle d}$
+\end_inset
+
+为定直线
+\begin_inset Formula ${\displaystyle x=d}$
+\end_inset
+
+，即准线到焦点的距离。
+\begin_inset Formula $(1-e^{2})x^{2}+y^{2}-2pe^{2}x-p^{2}e^{2}=0(\text{其中p是定直线的方程,}x=-p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+参数方程：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2.6cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.7cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="2.4cm">
+<column alignment="center" valignment="top" width="2.4cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+圆锥曲线(conic section)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方程（equation）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+离心率(e) (eccentricity)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+半焦距(c)(linear eccentricity)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+半正焦弦(ℓ)(semi-latus rectum)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+焦点准线距离(p)(focal parameter)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+圆（circle）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x^{2}+y^{2}=a^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+椭圆（ellipse）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{1-\frac{b^{2}}{a^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{a^{2}-b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{b^{2}}{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \frac{b^{2}}{\sqrt{a^{2}-b^{2}}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛物线(parabola)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y^{2}=4ax$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+双曲线(hyperbola)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{1+\frac{b^{2}}{a^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{a^{2}+b^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{b^{2}}{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{b^{2}}{\sqrt{a^{2}+b^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9141,6 +9517,16 @@ status open
 \end_layout
 
 \begin_layout Chapter
+标量 
+\end_layout
+
+\begin_layout Standard
+标量（英语：scalar），又称纯量，是只有大小、没有方向、可用实数表示的一个量。实际上标量就是实数，“标量”这个称法只是为了区别于向量。[1]标量可以是负数，
+例如温度低于冰点。与之相对，向量（又称矢量）既有大小，又有方向。 在物理学中，标量是在坐标变换下保持不变的物理量。例如，欧几里得空间中两点间的距离在坐标变换下保
+持不变，相对论四维时空中时空间隔在坐标变换下保持不变。与此相对的矢量，其分量在不同的坐标系中有不同的值，例如速度。标量可被用作定义向量空间。
+\end_layout
+
+\begin_layout Chapter
 向量 
 \end_layout
 
@@ -9309,6 +9695,33 @@ status open
 共线向量
 \series default
 。
+\end_layout
+
+\begin_layout Standard
+夹角
+\end_layout
+
+\begin_layout Standard
+向量的夹角(Included angle)是对于两个向量而言的概念。对于任意两个给定的向量
+\begin_inset Formula $\overrightarrow{a}与{\displaystyle \overrightarrow{b}}$
+\end_inset
+
+具有夹角 ，二者的夹角即将二者图示化后两箭头所夹之角
+\begin_inset Formula $\theta$
+\end_inset
+
+ 。由于夹角具有互补性，因此在不同的出发规定、不同的旋转方向下，所得夹角亦不同。
+\end_layout
+
+\begin_layout Standard
+向量的夹角可由数量积的定义导出计算公式，即：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \cos\theta=\frac{\vec{a}\cdot\vec{b}}{\left\Vert \vec{a}\right\Vert \left\Vert \vec{b}\right\Vert }}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -9561,7 +9974,7 @@ a+(-a)=(-a)+a=0
 \begin_layout Standard
 \begin_inset Formula 
 \[
-a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
+a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \]
 
 \end_inset
@@ -9669,8 +10082,623 @@ a=\lambda_{1}e_{1}+\lambda_{2}+e_{2}
 .
 \end_layout
 
+\begin_layout Subsection
+向量乘法(数量积)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \vec{a}\cdot\vec{b}=\left|\vec{a}\right|\left|\vec{b}\right|\cos\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ 向量在
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ 向量方向上的投影长度（同方向为正反方向为负号），与 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ 向量长度的乘积。 数量积被广泛应用于物理中，如做功就是用力的向量乘位移的向量，即 
+\begin_inset Formula $W=\vec{F}\cdot\vec{s}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+垂直向量数量积等于0.
+\end_layout
+
+\begin_layout Subsection
+平面向量运算的坐标表示
+\end_layout
+
+\begin_layout Standard
+设: 
+\begin_inset Formula $a(a_{1},a_{2})$
+\end_inset
+
+,
+\begin_inset Formula $b(b_{1},b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a+b=(a_{1}+b_{1},a_{2}+b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a-b=(a_{1}-b_{1},a_{2}-b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a*b=a_{1}*b_{1}+a_{2}*b_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda a=\lambda a_{1}+\lambda a_{2}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 空间向量
+\end_layout
+
+\begin_layout Standard
+在空间,我们把具有大小和方向的量叫做
+\series bold
+空间向量
+\series default
+(space vector),向量的大小叫做向量的长度或模(modulus).
+ 与平面向量一样,空间向量也用有向线段表示,有向线段的长度表示向量的模 向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+的起点是A,终点是B,则 向量a也可以记作
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+,其模记为
+\begin_inset Formula $\mid a\mid$
+\end_inset
+
+ 或 
+\begin_inset Formula $|AB|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+我们规定,长度为0的向量叫做
+\series bold
+零向量
+\series default
+(zero vector),记为
+\begin_inset Formula $0$
+\end_inset
+
+,当有向线段的起点A与终点B重合时,
+\begin_inset Formula $\overrightarrow{AB}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+模为1的向量称为
+\series bold
+单位向量
+\series default
+(unit vector),与向量a长度相 等而方向相反的向量,称为a的相
+\series bold
+反向量
+\series default
+,记为-a.
+ 方向相同且模相等的向量称为
+\series bold
+相等向量
+\series default
+(equal vector).
+ 
+\end_layout
+
+\begin_layout Standard
+平行于同一个平面的向量叫做
+\series bold
+共面向量
+\series default
+, 任意两向量共面.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+平行向量
+\series default
+(parallel vectors): 表示空间向量所在直线互相平行
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+共线向量(collinear vectors)
+\series default
+: 表示空间向量所在直线重合
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Formula $c$
+\end_inset
+
+是不共面向量, 那么对于空间内的任意向量
+\begin_inset Formula $a$
+\end_inset
+
+,存在有序实数组
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+使
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=xa+yb+zc
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+立体几何与向量
+\end_layout
+
+\begin_layout Standard
+在空间中,我们取一定点O作为基点,那么空间中任意一点P的位置就 可以用向量来表示,我们把向量 
+\begin_inset Formula $\overrightarrow{OP}$
+\end_inset
+
+称为点P的位置向量。
+\end_layout
+
+\begin_layout Standard
+在空间中, 任意一条直线
+\begin_inset Formula $l$
+\end_inset
+
+的位置可以由
+\begin_inset Formula $l$
+\end_inset
+
+上一个定点
+\begin_inset Formula $A$
+\end_inset
+
+以及一个定方向来确定.
+ 其中如果, 
+\begin_inset Formula $a$
+\end_inset
+
+表示直线
+\begin_inset Formula $l$
+\end_inset
+
+的方向向量, 在直线
+\begin_inset Formula $l$
+\end_inset
+
+上 取 
+\begin_inset Formula $AB=a$
+\end_inset
+
+,那么对于直线
+\begin_inset Formula $l$
+\end_inset
+
+上任意一点,一定存在实数
+\begin_inset Formula $t$
+\end_inset
+
+,使得 
+\begin_inset Formula $\overrightarrow{AP}=t\overrightarrow{AB}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+这样,点A和向量
+\begin_inset Formula $a$
+\end_inset
+
+不仅可以确定直线
+\begin_inset Formula $l$
+\end_inset
+
+的位置,还可以具体表示出
+\begin_inset Formula $l$
+\end_inset
+
+上的任意一点,
+\end_layout
+
+\begin_layout Standard
+类似于直线的方向向量,我们还可以用平面的法向量表示空间中平面的位置,直线
+\begin_inset Formula $l\bot a$
+\end_inset
+
+,取直线
+\begin_inset Formula $l$
+\end_inset
+
+的方向向量
+\begin_inset Formula $a$
+\end_inset
+
+,则向量
+\begin_inset Formula $a$
+\end_inset
+
+叫做平面的
+\series bold
+法向量
+\series default
+(normal vectors).给定一点A和一个向量a,那么,过点A,以向量a为法向量的平面是完全确定的.
+\end_layout
+
+\begin_layout Standard
+例题:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+定理: 一个平面内的两条相交直线与另一个平面平行,则这两个平面平行。 
+\end_layout
+
+\begin_layout Standard
+已知直线
+\begin_inset Formula $l$
+\end_inset
+
+,
+\begin_inset Formula $m$
+\end_inset
+
+ 和平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+, 其中
+\begin_inset Formula $l,m\subset a$
+\end_inset
+
+(l,m 在a 上 ) ,
+\begin_inset Formula $l$
+\end_inset
+
+与
+\begin_inset Formula $m$
+\end_inset
+
+相交,
+\begin_inset Formula $l//\beta\sslash$
+\end_inset
+
+, 
+\begin_inset Formula $m//\beta$
+\end_inset
+
+, 求证:
+\begin_inset Formula $\alpha//\beta$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+证明:
+\end_layout
+
+\begin_layout Standard
+设相交直线l,m的方向向量分别为a,b,平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+的法向量分别为
+\begin_inset Formula $u$
+\end_inset
+
+,
+\begin_inset Formula $v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为 
+\begin_inset Formula $l//\beta\sslash$
+\end_inset
+
+, 
+\begin_inset Formula $m//\beta$
+\end_inset
+
+, 所以
+\begin_inset Formula $a\bot v$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $b\bot v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以
+\begin_inset Formula $a*v=0$
+\end_inset
+
+, 
+\begin_inset Formula $b*v=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+因为, 
+\begin_inset Formula $l,m\subset a$
+\end_inset
+
+(l,m 在a 上 ) 且
+\begin_inset Formula $l$
+\end_inset
+
+与
+\begin_inset Formula $m$
+\end_inset
+
+相交,所以
+\begin_inset Formula $\alpha$
+\end_inset
+
+内任一直线的方向向量
+\begin_inset Formula $p$
+\end_inset
+
+可以表示为如下形式
+\begin_inset Formula 
+\[
+p=xa+yb,x,y\in R
+\]
+
+\end_inset
+
+ 因为 
+\begin_inset Formula 
+\[
+p*v=(xa+xb)*v=xa*v+yb*v
+\]
+
+\end_inset
+
+,即平面的法线与平面内任一直线垂直。 所以平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+的法向量也是平
+\begin_inset Formula $\beta$
+\end_inset
+
+的法向量.
+ 即
+\begin_inset Formula $u//v$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha//\beta$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+在实际工作中可以把普通问题, 转换成向量问题再计算.
+\end_layout
+
+\begin_layout Section
+向量的推广与应用
+\end_layout
+
+\begin_layout Paragraph
+距离分类: 
+\end_layout
+
+\begin_layout Standard
+求多组不同特征的数据平均值, 求平均值距离.
+\end_layout
+
+\begin_layout Standard
+例如: 
+\end_layout
+
+\begin_layout Enumerate
+A 组 
+\begin_inset Formula $x_{A}$
+\end_inset
+
+ 特征平均值 10 , 
+\begin_inset Formula $y_{A}$
+\end_inset
+
+ 特征平均值 13, 
+\begin_inset Formula $z_{A}$
+\end_inset
+
+ 特征平均值 8
+\end_layout
+
+\begin_layout Enumerate
+B 组 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ 特征平均值 11 , 
+\begin_inset Formula $y_{B}$
+\end_inset
+
+ 特征平均值 15, 
+\begin_inset Formula $z_{A}$
+\end_inset
+
+ 特征平均值 9
+\end_layout
+
+\begin_layout Enumerate
+未知C 组 x 特征平均值 11 , y 特征平均值 12, z 特征平均值 7
+\end_layout
+
+\begin_layout Standard
+判断C组属于A还是B?
+\end_layout
+
+\begin_layout Standard
+C与A的距离
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $D_{1}=\sqrt{(x-x_{A})^{2}+(y-y_{A})^{2}+(z-z_{Z})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C与B的距离
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $D_{2}=\sqrt{(x-x_{B})^{2}+(y-y_{B})^{2}+(z-z_{B})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $D_{1}>D_{2}$
+\end_inset
+
+, 说明接近于 B 组.
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $D_{1}<D_{2}$
+\end_inset
+
+, 说明接近于 A 组.
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $D_{1}=D_{2}$
+\end_inset
+
+, 说明特征太少, 无法判断.
+\end_layout
+
+\begin_layout Standard
+距离分类在计算机和统计中会经常用到, 它和统计中的回归直线,方差有点类似, 前者比较外部数据, 后者比较的是内部数据.
 \end_layout
 
 \begin_layout Chapter
