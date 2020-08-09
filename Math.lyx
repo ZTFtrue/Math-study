@@ -182,6 +182,33 @@ Math
 实数集
 \end_layout
 
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x→a$
+\end_inset
+
+ x趋近于a
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta x$
+\end_inset
+
+ x的增量
+\end_layout
+
 \begin_layout Chapter
 常用逻辑用语及其符号
 \end_layout
@@ -2398,6 +2425,28 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 
 \begin_layout Section
 直线与圆
+\end_layout
+
+\begin_layout Subsection
+圆周角定理
+\end_layout
+
+\begin_layout Standard
+圆上一条弧所对的圆周角等于所对的圆心角的一半.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/circle_angualr1.png
+	lyxscale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+圆心角的度数等于它所对的弧的度数.
 \end_layout
 
 \begin_layout Subsection
@@ -7610,6 +7659,30 @@ status open
 复合函数 
 \end_layout
 
+\begin_layout Standard
+一般地,对于两个函数
+\begin_inset Formula $y=f(u)$
+\end_inset
+
+和
+\begin_inset Formula $u=g(x)$
+\end_inset
+
+, 如果通过变量u, y可以表示成x的函数,那么称这个函数为函数
+\begin_inset Formula $y=(u)$
+\end_inset
+
+和
+\begin_inset Formula $u=g(x)$
+\end_inset
+
+的复合函数(composite function),记作
+\begin_inset Formula $y=f(g(x))$
+\end_inset
+
+。
+\end_layout
+
 \begin_layout Section
 多元函数 
 \end_layout
@@ -8102,14 +8175,14 @@ lim{x→x_{0}}{x^{n}}={x_{0}}^{n}
 \end_layout
 
 \begin_layout Chapter
-导数与微分 
+导数
 \end_layout
 
 \begin_layout Section
 什么是导数 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 
 \series bold
 平均变化率
@@ -8158,7 +8231,7 @@ lim{x→x_{0}}{x^{n}}={x_{0}}^{n}
 时，极限
 \begin_inset Formula 
 \[
-lim(Δx→0){Δy/Δx}=lim(Δx→0){{f(x_{0}+Δx-f(x_{0})}/Δx}
+\underset{(Δx→0)}{lim}\frac{Δy}{Δx}=\underset{(Δx→0)}{lim}\frac{f(x_{0}+Δx)-f(x_{0})}{Δx}
 \]
 
 \end_inset
@@ -8171,11 +8244,19 @@ lim(Δx→0){Δy/Δx}=lim(Δx→0){{f(x_{0}+Δx-f(x_{0})}/Δx}
 \begin_inset Formula $x_{0}$
 \end_inset
 
-为f(x)的可导点，极限值称为函数f(x)在点
+为f(x)的可导点，极限值称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
 \begin_inset Formula $x_{0}$
 \end_inset
 
-处的导数,记作
+处的
+\series bold
+导数
+\series default
+,记作
 \begin_inset Formula $f'(x_{0})$
 \end_inset
 
@@ -8184,11 +8265,31 @@ lim(Δx→0){Δy/Δx}=lim(Δx→0){{f(x_{0}+Δx-f(x_{0})}/Δx}
 \end_layout
 
 \begin_layout Standard
-导函数简称导数 如果函数f(x)在区间I内每个点处都可导，那么对于区间I内的每一个确定的x值，都有唯一的导数值
+
+\series bold
+导函数简称导数:
+\series default
+ 如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $I$
+\end_inset
+
+内每个点处都可导，那么对于区间I内的每一个确定的x值，都有唯一的导数值
 \begin_inset Formula $f'(x)$
 \end_inset
 
-与之对应，这样就确定了定义在区间I上的一个函数(可导必定连续，连续未必可导)。
+与之对应，这样就确定了定义在区间I上的一个函数(可导必定连续，连续未必可导)。记作
+\begin_inset Formula $f'(x)$
+\end_inset
+
+或
+\begin_inset Formula $y'$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -8205,7 +8306,7 @@ lim(Δx→0){Δy/Δx}=lim(Δx→0){{f(x_{0}+Δx-f(x_{0})}/Δx}
 
 \begin_layout Enumerate
 取极限
-\begin_inset Formula $f'(x)=lim(Δx→0){Δy/Δx}$
+\begin_inset Formula $f'(x)=lim(Δx→0)\frac{Δy}{Δx}$
 \end_inset
 
 
@@ -8224,7 +8325,19 @@ x相对于Δx作为常量处理，只要将
 \end_layout
 
 \begin_layout Enumerate
-切线
+切线: 函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+ 处的导数就是切线的斜率
+\begin_inset Formula $k$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -8251,7 +8364,11 @@ x相对于Δx作为常量处理，只要将
 \end_inset
 
 
-\begin_inset Formula $\left(\sqrt{X}\right)'=\frac{1}{2\sqrt{X}};\left(\frac{1}{x}\right)'=\frac{1}{{x^{2}}}$
+\begin_inset Formula $\left(\sqrt{X}\right)'=\frac{1}{2\sqrt{X}};\left(\frac{1}{x}\right)'=(x^{-1})'=\frac{1}{{x^{2}}}$
+\end_inset
+
+
+\begin_inset Formula $(x)'=1$
 \end_inset
 
 
@@ -8374,6 +8491,211 @@ x相对于Δx作为常量处理，只要将
 
 \end_layout
 
+\begin_layout Subsection
+复合函数求导
+\end_layout
+
+\begin_layout Standard
+复合函数
+\begin_inset Formula $y=f(g(x))$
+\end_inset
+
+的导数和函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+; 
+\begin_inset Formula $u=g(x)$
+\end_inset
+
+的导数间的关系为 
+\begin_inset Formula 
+\[
+y'_{x}=y'_{u}*u'_{x}
+\]
+
+\end_inset
+
+即y对x的导数等于y对u的导数与u对x的导数的乘积。
+\end_layout
+
+\begin_layout Section
+牛顿迭代法
+\end_layout
+
+\begin_layout Standard
+它是一种在实数域和复数域上近似求解方程的方法。方法使用函数
+\begin_inset Formula ${\displaystyle f(x)}$
+\end_inset
+
+的泰勒级数的前面几项来寻找方程
+\begin_inset Formula ${\displaystyle f(x)=0}$
+\end_inset
+
+的根。
+\end_layout
+
+\begin_layout Standard
+一般情况二分法求平方根，牛顿迭代法快速寻找平方根比二分法更快。
+\end_layout
+
+\begin_layout Standard
+这种算法是不断用
+\begin_inset Formula $(x,f(x))$
+\end_inset
+
+的切线来逼近方程
+\begin_inset Formula $f(x)$
+\end_inset
+
+的根。
+\end_layout
+
+\begin_layout Standard
+首先，选择一个接近函数
+\begin_inset Formula ${\displaystyle f(x)}$
+\end_inset
+
+零点的
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+, 计算相应的
+\begin_inset Formula ${\displaystyle f(x_{0})}$
+\end_inset
+
+和切线斜率
+\begin_inset Formula ${\displaystyle f'(x_{0})}$
+\end_inset
+
+。然后计算穿过点
+\begin_inset Formula ${\displaystyle (x_{0},f(x_{0}))}$
+\end_inset
+
+并且斜率为
+\begin_inset Formula ${\displaystyle f'(x_{0})}$
+\end_inset
+
+的直线和
+\begin_inset Formula ${\displaystyle x}$
+\end_inset
+
+轴的交点的
+\begin_inset Formula ${\displaystyle x}$
+\end_inset
+
+坐标，也就是求如下方程的解：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle 0=(x-x_{0})\cdot f'(x_{0})+f(x_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们将新求得的点的
+\begin_inset Formula ${\displaystyle x}$
+\end_inset
+
+坐标命名为
+\begin_inset Formula ${\displaystyle x_{1}}$
+\end_inset
+
+，通常
+\begin_inset Formula ${\displaystyle x_{1}}$
+\end_inset
+
+会比
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+更接近方程
+\begin_inset Formula ${\displaystyle f(x)=0}$
+\end_inset
+
+的解。因此我们现在可以利用
+\begin_inset Formula ${\displaystyle x_{1}}$
+\end_inset
+
+开始下一轮迭代。迭代公式可化简为如下所示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle x_{n+1}=x_{n}-\frac{f(x_{n})}{f'(x_{n})}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+已有证明牛顿迭代法的二次收敛必须满足以下条件： 
+\begin_inset Formula 
+\[
+{\displaystyle f'(x)\neq0}
+\]
+
+\end_inset
+
+对于所有
+\begin_inset Formula ${\displaystyle x\in I}$
+\end_inset
+
+，其中
+\begin_inset Formula ${\displaystyle I}$
+\end_inset
+
+为区间
+\begin_inset Formula $[α−r,α+r]$
+\end_inset
+
+，且
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+在区间其中
+\begin_inset Formula ${\displaystyle I}$
+\end_inset
+
+内，即 
+\begin_inset Formula ${\displaystyle r\geqslant\left|a-x_{0}\right|}$
+\end_inset
+
+的; 对于所有
+\begin_inset Formula ${\displaystyle x\in I}$
+\end_inset
+
+，
+\begin_inset Formula ${\displaystyle f''(x)}$
+\end_inset
+
+是连续的; 
+\end_layout
+
+\begin_layout Standard
+牛顿法也被用于求函数的极值。
+\series bold
+由于函数取极值的点处的导数值为零
+\series default
+，故可用牛顿法求导函数的零点，其迭代式为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle x_{n+1}=x_{n}-\frac{f^{\prime}(x_{n})}{f^{\prime\prime}(x_{n})}}
+\]
+
+\end_inset
+
+求拐点的公式以此类推
+\end_layout
+
 \begin_layout Section
 多元函数的偏导数 
 \end_layout
@@ -8387,7 +8709,31 @@ x相对于Δx作为常量处理，只要将
 \end_layout
 
 \begin_layout Section
-函数的单调性 
+函数的单调性与导数 
+\end_layout
+
+\begin_layout Standard
+在某个区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内,如果
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+,那么函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在这个区间内单调递增;如果
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+,那么函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在这个区间内单调递减.
 \end_layout
 
 \begin_layout Section
@@ -8418,7 +8764,7 @@ x相对于Δx作为常量处理，只要将
 ,当z为可知的值时，即可转为无极值条件问题。 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 拉格朗日乘数法 直接求条件极值
 \end_layout
 
@@ -8618,7 +8964,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 在极限计算过程中，无穷小量等价代换和洛必达法则应结合使用，能用等价代换则先用等价代换，这样可以简化计算过程。 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 微分
 \end_layout
 
@@ -8659,7 +9005,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 微分的几何意义 
 \end_layout
 
@@ -8712,7 +9058,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 运算法则
 \end_layout
 
@@ -13451,198 +13797,6 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 
 \begin_layout Part
 其它
-\end_layout
-
-\begin_layout Chapter
-牛顿迭代法
-\end_layout
-
-\begin_layout Standard
-一般情况二分法求平方根，牛顿迭代法快速寻找平方根比二分法更快。首先随便猜一个近似值x，然后不断令x等于x和
-\begin_inset Formula $a/x$
-\end_inset
-
-的平均数，迭代次数越多越精确。
-\end_layout
-
-\begin_layout Standard
-这种算法是不断用
-\begin_inset Formula $(x,f(x))$
-\end_inset
-
-的切线来逼近方程
-\begin_inset Formula $x^{2}-a=0$
-\end_inset
-
-的根。根号
-\begin_inset Formula $a$
-\end_inset
-
-实际上就是
-\begin_inset Formula $x^{2}-a=0$
-\end_inset
-
-的一个正实根，这个函数的导数是
-\begin_inset Formula $2x$
-\end_inset
-
-。也就是说，函数上任一点
-\begin_inset Formula $(x,f(x))$
-\end_inset
-
-处的切线斜率是
-\begin_inset Formula $2x$
-\end_inset
-
-。那么，
-\begin_inset Formula $x-f(x)/(2x)$
-\end_inset
-
-就是一个比
-\begin_inset Formula $x$
-\end_inset
-
-更接近的近似值。代入 
-\begin_inset Formula $f(x)=x^{2}-a$
-\end_inset
-
-得到
-\begin_inset Formula $x-(x^{2}-a)/(2x)$
-\end_inset
-
-，也就是
-\begin_inset Formula $(x+a/x)/2$
-\end_inset
-
-。 
-\end_layout
-
-\begin_layout Standard
-下面是示例代码[
-\begin_inset CommandInset href
-LatexCommand href
-name "参考1"
-target "http://www.matrix67.com/data/InvSqrt.pdf"
-literal "false"
-
-\end_inset
-
-][
-\begin_inset CommandInset href
-LatexCommand href
-name "参考2"
-target "https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9%E5%80%92%E6%95%B0%E9%80%9F%E7%AE%97%E6%B3%95"
-literal "false"
-
-\end_inset
-
-]
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-inline false
-status open
-
-\begin_layout Plain Layout
-
-float Q_rsqrt( float number )  { 
-\end_layout
-
-\begin_layout Plain Layout
-
-   long i;    
-\end_layout
-
-\begin_layout Plain Layout
-
-   float x2, y;  
-\end_layout
-
-\begin_layout Plain Layout
-
-   const float threehalfs = 1.5F;     
-\end_layout
-
-\begin_layout Plain Layout
-
-   x2 = number * 0.5F;  
-\end_layout
-
-\begin_layout Plain Layout
-
-   y   = number; 
-\end_layout
-
-\begin_layout Plain Layout
-
-   i   = * ( long * ) &y;  
-\end_layout
-
-\begin_layout Plain Layout
-
-   // evil floating point bit level hacking    
-\end_layout
-
-\begin_layout Plain Layout
-
-   i = 0x5f3759df - ( i >> 1 ); // what the fuck?     
-\end_layout
-
-\begin_layout Plain Layout
-
-   y = * ( float * ) &i;     
-\end_layout
-
-\begin_layout Plain Layout
-
-   y = y * ( threehalfs - ( x2 * y * y ) ); // 1st iteration  
-\end_layout
-
-\begin_layout Plain Layout
-
-   // y   = y * ( threehalfs - ( x2 * y * y ) ); // 2nd iteration, this
-  can be removed       
-\end_layout
-
-\begin_layout Plain Layout
-
-   #ifndef Q3_VM     
-\end_layout
-
-\begin_layout Plain Layout
-
-   #ifdef __linux__        
-\end_layout
-
-\begin_layout Plain Layout
-
-   assert( !isnan(y) ); // bk010122 - FPE?     
-\end_layout
-
-\begin_layout Plain Layout
-
-   #endif    
-\end_layout
-
-\begin_layout Plain Layout
-
-   #endif     
-\end_layout
-
-\begin_layout Plain Layout
-
-   return y; 
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
