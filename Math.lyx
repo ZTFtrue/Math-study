@@ -2432,7 +2432,7 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 \end_layout
 
 \begin_layout Standard
-圆上一条弧所对的圆周角等于所对的圆心角的一半.
+圆上一条弧所对的圆周角等于所对的圆心角的一半(证明需要分情况证明, 需要用到等要三角形性质以及三角形的外角等于不相邻的内角和).
 \end_layout
 
 \begin_layout Standard
@@ -2447,6 +2447,14 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 
 \begin_layout Standard
 圆心角的度数等于它所对的弧的度数.
+\end_layout
+
+\begin_layout Standard
+同弧或等弧所对的圆周角相等;同圆或等圆中,相等的圆周角所对的弧也 相等.
+\end_layout
+
+\begin_layout Standard
+半圆(或直径)所对的圆周角是直角; 90°的周角所对的弦是直径.
 \end_layout
 
 \begin_layout Subsection
@@ -2535,6 +2543,62 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 \end_inset
 
  这个乘积，同样是 P 的圆幂 h。
+\end_layout
+
+\begin_layout Subsection
+圆内接四边形的性质
+\end_layout
+
+\begin_layout Enumerate
+圆的内接四边形对角互补(圆周角定量证明)
+\end_layout
+
+\begin_layout Enumerate
+圆的内接四边形的外角等于它的内角的对角
+\end_layout
+
+\begin_layout Enumerate
+如果一个四边形对角互补, 那么这个四边形的四个顶点共圆.
+\end_layout
+
+\begin_layout Enumerate
+四边形的外角等于它的内角的对角,那么这个四边形的四个顶点共圆
+\end_layout
+
+\begin_layout Subsection
+圆的切线
+\end_layout
+
+\begin_layout Standard
+圆的切线垂直且经过切点的半径
+\end_layout
+
+\begin_layout Standard
+经过圆心且垂直与切线的直线必经过切点
+\end_layout
+
+\begin_layout Standard
+经过切点且垂直与切线的直线必经过圆心
+\end_layout
+
+\begin_layout Standard
+经过半径的外端并且垂直于这条半径的直线是圆的切线
+\end_layout
+
+\begin_layout Subsection
+弦切角定理
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+弦切角
+\series default
+: 顶点在圆上,一边和圆相交、另一边和圆相切的角叫做弦切角
+\end_layout
+
+\begin_layout Standard
+弦切角等于它所夹的弧所对的圆圆周角.
 \end_layout
 
 \begin_layout Section
@@ -4176,6 +4240,86 @@ b^{2}=a^{2}+c^{2}-2ac\cos B
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+平面图形的对称与群
+\end_layout
+
+\begin_layout Standard
+我们知道,一个平面可以看成是点的集合, 就像我们把直线看成点的集合一样,设
+\begin_inset Formula $\alpha$
+\end_inset
+
+是一个由平面内的所有点组成的集合,
+\begin_inset Formula $l$
+\end_inset
+
+是这个平面内的一条直线.
+\end_layout
+
+\begin_layout Standard
+定义点集(平面)
+\begin_inset Formula $\alpha$
+\end_inset
+
+到其自身的一个映射
+\begin_inset Formula 
+\[
+r_{1}P\rightarrow P'
+\]
+
+\end_inset
+
+
+\begin_inset Formula $r$
+\end_inset
+
+把平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+以内的任意一点
+\begin_inset Formula $P$
+\end_inset
+
+
+\series bold
+映
+\series default
+到点P关于直线
+\begin_inset Formula $l$
+\end_inset
+
+的对称点
+\begin_inset Formula $P'$
+\end_inset
+
+。我们把这个映射称为平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+关于直线
+\begin_inset Formula $l$
+\end_inset
+
+ 的
+\series bold
+\color orange
+反射
+\series default
+\color inherit
+(reflection),数学上,把这样定义的反射称为平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+的一个
+\series bold
+\color orange
+反射变换
+\series default
+\color inherit
+,
 \end_layout
 
 \begin_layout Chapter
@@ -13792,7 +13936,52 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 \end_layout
 
 \begin_layout Section
-矩阵
+矩阵(matrix)与交换
+\end_layout
+
+\begin_layout Standard
+横的叫行, 竖的叫列, 从一开始计数
+\end_layout
+
+\begin_layout Subsection
+二阶矩阵
+\end_layout
+
+\begin_layout Standard
+由4个数a,b,c,d排成正方形数表
+\begin_inset Formula $\left\{ \begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right\} $
+\end_inset
+
+称为二阶矩阵, 数a,b,c,d称为矩阵的元素.
+\end_layout
+
+\begin_layout Standard
+元素全为0的二阶矩阵
+\begin_inset Formula $\left\{ \begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right\} $
+\end_inset
+
+叫做零矩阵, 简记为
+\begin_inset Formula $\boldsymbol{0}$
+\end_inset
+
+; 
+\begin_inset Formula $\left\{ \begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right\} $
+\end_inset
+
+称为二阶单位矩阵, 记为
+\begin_inset Formula $E_{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
