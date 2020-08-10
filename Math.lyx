@@ -4316,14 +4316,1510 @@ r_{1}P\rightarrow P'
 的一个
 \series bold
 \color orange
-反射变换
+反射变换.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+\begin_inset Graphics
+	filename image/反射变换.png
+	lyxscale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以知道,在反射变换r的作用下,平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 内的点被映到点,平面内的图形被
+\begin_inset Formula $\alpha$
+\end_inset
+
+映到了与它全等的图形.
+\end_layout
+
+\begin_layout Standard
+这时,如果个平面图形(如等腰三角形) 在映射的作用下仍与原来的图形重合,我们就称这个平面图形是一个
+\series bold
+\color orange
+轴对称图形
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+整个平面绕平面内一个固定点进时针转180°的旋转,准确地说,设
+\begin_inset Formula $\alpha$
+\end_inset
+
+是一个平面内所有点构成的集合,
+\begin_inset Formula $O$
+\end_inset
+
+是平面内
+\begin_inset Formula $\alpha$
+\end_inset
+
+的一个固定点, 定义点集(平面)
+\begin_inset Formula $\alpha$
+\end_inset
+
+到其自身的一个映射 :
+\begin_inset Formula 
+\[
+p_{1}=P\rightarrow P'
+\]
+
+\end_inset
+
+, 把平面内的任意一点P绕点旋转180°后映到点
+\begin_inset Formula $P'$
+\end_inset
+
+,这个映射称为以点O为 中心转
+\begin_inset Formula $180\textdegree$
+\end_inset
+
+的旋转(rotation).
+\end_layout
+
+\begin_layout Standard
+一般地, 如果一个平面图形在映射 p(以点O为中心转180°的旋转)的作用下仍与原来的图形重合,我们就称这个平面图形是一个
+\series bold
+\color orange
+中心对称图形
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+我们可以对以点O为中心转180°的旋转进行推广, 自己定义一个映射, 表示平面以一个固定点P为中心转任意给定角度的旋转, 这样定义的映射在数学上称为
+\series bold
+\color orange
+旋转变换
+\series default
+\color inherit
+。 
+\end_layout
+
+\begin_layout Standard
+旋转角度为
+\begin_inset Formula $0°$
+\end_inset
+
+的旋转变换把平面上的所有点映到它自身,这个映射使整个平面上的每个点都保持不动,所以称为恒等变换 ( identity transformation
+ )。
+\end_layout
+
+\begin_layout Standard
+可以发现,反射变换和旋转变换有一个共同的特点,即所谓 “保距性”, 也就是说, 对于平面内的任意两点P和Q, 在反射(或 旋转)变换的作用下的对应点是
+\begin_inset Formula $P'$
+\end_inset
+
+和
+\begin_inset Formula $Q'$
+\end_inset
+
+, 那么
+\begin_inset Formula $P$
+\end_inset
+
+到
+\begin_inset Formula $Q$
+\end_inset
+
+的距离等于
+\begin_inset Formula $P'$
+\end_inset
+
+到
+\begin_inset Formula $Q'$
+\end_inset
+
+的距离, 借用物理学中的一个名词,我们把这类“保持距离不变”的映射称为
+\series bold
+\color orange
+平面刚体运动.
+\end_layout
+
+\begin_layout Standard
+设 :
+\begin_inset Formula 
+\[
+m:平面\alpha\rightarrow平面\alpha
+\]
+
+\end_inset
+
+ 是一个平面刚体运动,若在平面
+\begin_inset Formula $\alpha$
+\end_inset
+
+内至少存在一个点O , 点
+\begin_inset Formula $O$
+\end_inset
+
+在的
+\begin_inset Formula $m$
+\end_inset
+
+作用下保持不动,即 
+\begin_inset Formula $m(O)=O$
+\end_inset
+
+,我们称为有
+\series bold
+\color orange
+不动点的平面刚体运动.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+定义:
+\series default
+ 若一个平面图形K在平面刚体运动
+\begin_inset Formula $m$
+\end_inset
+
+的作用下仍与原来的图形重合,就称K具有对称性,叫做K的
+\series bold
+\color orange
+对称变换
+\series default
+\color inherit
+(symmetric transformation) 或 symmetry).
+\end_layout
+
+\begin_layout Standard
+一般地,由对称变换的定义可以知道,一个平面图形的两个对称变换a与b的合成 (即先做a变换,再做b变换)仍然是这个平面图形的一个对称变换,记作
+\begin_inset Formula $b\bullet a$
+\end_inset
+
+.
+ 这个对称变换不满足交换律,满足结合律
+\begin_inset Formula $m_{3}\bullet(m_{2}\bullet m_{1})=(m_{3}\bullet m_{2})\bullet m_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,如果一个对称变换
+\begin_inset Formula $a$
+\end_inset
+
+与另一个对称
+\begin_inset Formula $b$
+\end_inset
+
+变换的合成等于恒等变换
+\begin_inset Formula $I$
+\end_inset
+
+,即
+\begin_inset Formula 
+\[
+b\bullet a=a\bullet b=I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们就称
+\begin_inset Formula $b$
+\end_inset
+
+为
+\begin_inset Formula $a$
+\end_inset
+
+的
+\series bold
+\color orange
+逆变换
+\series default
+\color inherit
+(或a为
+\begin_inset Formula $b$
+\end_inset
+
+的逆变换),记作
+\begin_inset Formula 
+\[
+a^{-1}=b(b^{-1}=a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+对称变换的
+\series bold
+\color orange
+乘法表:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}\bullet p_{1}=I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一种常用的表示对称变换合成结果的工具.
+ 因为对称变换的合成一般不满足交换律, 所以此处必须有明确的规定:
+\series bold
+先作列变换在作行变换.
+ 
+\end_layout
+
+\begin_layout Standard
+上面那个表是正三角形对称变换的乘法表, 我们可以把它叫作
+\series bold
+\color orange
+ 
+\begin_inset Formula $D_{3}$
+\end_inset
+
+的乘法表
+\series default
+\color inherit
+.
+ 从表格中可以看到, 
+\begin_inset Formula $D_{3}$
+\end_inset
+
+中任意两个元素的乘积仍然在
+\begin_inset Formula $D_{3}$
+\end_inset
+
+中,也就是正三角形的任意两个对称变换的合成仍然是
+\begin_inset Formula $D_{3}$
+\end_inset
+
+中的对称变换,我们称
+\begin_inset Formula $D_{3}$
+\end_inset
+
+的这个性质为正三角形的
+\series bold
+对称变换合成的
+\color orange
+封闭性
 \series default
 \color inherit
 ,
 \end_layout
 
+\begin_layout Standard
+表格关于主对角线(左上到右下)不对称, 也说明对称变换不满足交换律.
+ 如果存在
+\begin_inset Formula $\text{任\text{意}}a,b\in D_{3}$
+\end_inset
+
+ , 使得
+\begin_inset Formula $m\bullet a=m\bullet b$
+\end_inset
+
+ 或
+\begin_inset Formula $a\bullet m=b\bullet m$
+\end_inset
+
+, 那么一定有
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+对称群
+\end_layout
+
+\begin_layout Standard
+一般地,对于一个平面图形
+\begin_inset Formula $K$
+\end_inset
+
+的所有对称变换组成的
+\series bold
+\color orange
+集合
+\series default
+\color inherit
+
+\begin_inset Formula $S(K)$
+\end_inset
+
+, 如果把变换之间的 合成 看作
+\begin_inset Formula $S(K)$
+\end_inset
+
+上的一种运算, 记作
+\begin_inset Formula $\bullet$
+\end_inset
+
+, 那么这种运算都满足下述4条:
+\end_layout
+
+\begin_layout Itemize
+S(K)中任意两个变换合成的结果仍然在S(K)中; 
+\end_layout
+
+\begin_layout Itemize
+S(K)中存在恒等变换
+\begin_inset Formula $I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+S(K)中任意一个变换的逆变换仍然在S(K)中; 
+\end_layout
+
+\begin_layout Itemize
+S(K)中的变换的合成满足结合律;
+\end_layout
+
+\begin_layout Standard
+如果把这4条性质用数学的语言表达出来,我们得到: 
+\end_layout
+
+\begin_layout Enumerate
+对任意的 
+\begin_inset Formula $m_{1},m_{2}\in S(K)$
+\end_inset
+
+, 
+\begin_inset Formula $m_{1}\bullet m_{2}\in S(K)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S(K)$
+\end_inset
+
+中存在一个变换,对任意的
+\begin_inset Formula $m\in S(K)$
+\end_inset
+
+,有
+\begin_inset Formula $I\bullet m=m\bullet I=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对任意的
+\begin_inset Formula $m\in S(K)$
+\end_inset
+
+,存在变换
+\begin_inset Formula $m^{-1}\in S(K)$
+\end_inset
+
+, 使得
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $m\bullet m^{-1}=I=m^{-1}\bullet m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对任意的 
+\begin_inset Formula $m_{1},m_{2},m_{3}\in S(K)$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $m_{3}\bullet(m_{2}\bullet m_{1})=(m_{3}\bullet m_{2})\bullet m_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这时,我们把
+\begin_inset Formula $S(K)$
+\end_inset
+
+连同它的运算
+\begin_inset Formula $”\bullet”$
+\end_inset
+
+称为平面图形的
+\series bold
+\color orange
+对称群
+\series default
+\color inherit
+,记作
+\begin_inset Formula $(S(K),\bullet)$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Chapter
-空间曲面 
+空间曲面
 \end_layout
 
 \begin_layout Section
@@ -12731,15 +14227,6 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 
 \begin_layout Chapter
 概率论
-\begin_inset CommandInset href
-LatexCommand href
-name "参考wiki"
-target "https://zh.m.wikipedia.org/wiki/%E6%A6%82%E7%8E%87%E8%AE%BA"
-literal "false"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
