@@ -6074,7 +6074,24 @@ S(K)中的变换的合成满足结合律;
 
 \end_inset
 
-这样表示的一一对应在数学上称为置换(permutation).
+
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+\color orange
+置换
+\end_layout
+
+\begin_layout Standard
+这样表示的一一对应在数学上称为
+\series bold
+\color orange
+置换
+\series default
+\color inherit
+(permutation).
  与对称变换一样, 我们通常用字母
 \begin_inset Formula $a$
 \end_inset
@@ -6083,7 +6100,7 @@ S(K)中的变换的合成满足结合律;
 \begin_inset Formula $b$
 \end_inset
 
-等未表示置换.
+等来表示置换.
 \end_layout
 
 \begin_layout Chapter
