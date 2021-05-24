@@ -19059,7 +19059,7 @@ C与B的距离
 \begin_inset Formula $r^{2}+1=0$
 \end_inset
 
- 这样的方程在实数系中无解的问题,我们设想引入一个新数 
+ 这样的方程在实数系中无解的问题,引入一个新数 
 \begin_inset Formula $i$
 \end_inset
 
@@ -19073,6 +19073,10 @@ C与B的距离
 
  的根,即使 
 \begin_inset Formula $i^{2}=-1$
+\end_inset
+
+,
+\begin_inset Formula $i=\sqrt{-1}$
 \end_inset
 
 .
@@ -19213,6 +19217,120 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 虚部不等于0的两个共轭复数也叫做
 \series bold
 共轭虚数.
+\end_layout
+
+\begin_layout Section
+复数的坐标表示
+\end_layout
+
+\begin_layout Standard
+如果所示与实数轴垂直的直线构成复数的虚数轴,虚数轴单位为i.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/虚数坐标表示.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在一条数轴上有一个数 
+\begin_inset Formula $1$
+\end_inset
+
+, 当它乘以
+\begin_inset Formula $-1$
+\end_inset
+
+的时候，就这个数变成了
+\begin_inset Formula $-1$
+\end_inset
+
+，也可以说这个数在数轴上围绕原点旋转了
+\begin_inset Formula $180$
+\end_inset
+
+度。乘以
+\begin_inset Formula $-1$
+\end_inset
+
+其实就是乘了两次 
+\begin_inset Formula $i$
+\end_inset
+
+使这个数绕原点旋转了 180 度，那么乘一次 
+\begin_inset Formula $i$
+\end_inset
+
+也就是旋转了 90 度。此时,我们就把乘一次 
+\begin_inset Formula $i$
+\end_inset
+
+这个数上的点和数轴原点 定义的直线叫做虚数轴.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/虚数轴.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+虚数轴
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
