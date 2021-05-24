@@ -19220,120 +19220,6 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \end_layout
 
 \begin_layout Section
-复数的坐标表示
-\end_layout
-
-\begin_layout Standard
-如果所示与实数轴垂直的直线构成复数的虚数轴,虚数轴单位为i.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/虚数坐标表示.png
-	lyxscale 40
-	scale 40
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-在一条数轴上有一个数 
-\begin_inset Formula $1$
-\end_inset
-
-, 当它乘以
-\begin_inset Formula $-1$
-\end_inset
-
-的时候，就这个数变成了
-\begin_inset Formula $-1$
-\end_inset
-
-，也可以说这个数在数轴上围绕原点旋转了
-\begin_inset Formula $180$
-\end_inset
-
-度。乘以
-\begin_inset Formula $-1$
-\end_inset
-
-其实就是乘了两次 
-\begin_inset Formula $i$
-\end_inset
-
-使这个数绕原点旋转了 180 度，那么乘一次 
-\begin_inset Formula $i$
-\end_inset
-
-也就是旋转了 90 度。此时,我们就把乘一次 
-\begin_inset Formula $i$
-\end_inset
-
-这个数上的点和数轴原点 定义的直线叫做虚数轴.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/虚数轴.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-虚数轴
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 实数
 \end_layout
 
@@ -19399,6 +19285,49 @@ status open
 \end_inset
 
 。 
+\end_layout
+
+\begin_layout Section
+复数的坐标表示
+\end_layout
+
+\begin_layout Standard
+如果所示与实数轴垂直的直线构成复数的虚数轴,虚数轴单位为i.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/虚数坐标表示.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -19576,6 +19505,97 @@ status open
 ,并且规定,相等的向量表示同一个复数.
 \end_layout
 
+\begin_layout Paragraph
+复数的极坐标形式
+\end_layout
+
+\begin_layout Standard
+复数 z也可以用极坐标来指定.
+ 
+\end_layout
+
+\begin_layout Standard
+极坐标形式的符号
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z=r(\cos\varphi+i\sin\varphi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+虚数轴的由来
+\end_layout
+
+\begin_layout Standard
+在一条数轴上有一个数 
+\begin_inset Formula $1$
+\end_inset
+
+, 当它乘以
+\begin_inset Formula $-1$
+\end_inset
+
+的时候，就这个数变成了
+\begin_inset Formula $-1$
+\end_inset
+
+，也可以说这个数在数轴上围绕原点旋转了
+\begin_inset Formula $180$
+\end_inset
+
+度。乘以
+\begin_inset Formula $-1$
+\end_inset
+
+其实就是乘了两次 
+\begin_inset Formula $i$
+\end_inset
+
+使这个数绕原点旋转了 180 度，那么乘一次 
+\begin_inset Formula $i$
+\end_inset
+
+也就是旋转了 90 度。此时,我们就把乘一次 
+\begin_inset Formula $i$
+\end_inset
+
+这个数上的点和数轴原点 定义的直线叫做虚数轴.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/虚数轴.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+虚数轴
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 复数代数形式的四则运算
 \end_layout
@@ -19646,6 +19666,100 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+复数的物理意义
+\end_layout
+
+\begin_layout Standard
+处理波(正弦波,电磁波等)
+\end_layout
+
+\begin_layout Standard
+一个
+\begin_inset Formula $i$
+\end_inset
+
+可以看做一个
+\begin_inset Formula $90$
+\end_inset
+
+度的旋转或移动(虚数轴的由来),所以, 对于立体图形,如果旋转
+\begin_inset Formula $90\text{度}$
+\end_inset
+
+,仅需要在乘一个
+\begin_inset Formula $i$
+\end_inset
+
+ .
+ 比如电磁波的磁场向电场转换.
+\end_layout
+
+\begin_layout Section
+欧拉公式(复数)
+\end_layout
+
+\begin_layout Standard
+欧拉公式（英语：Euler's formula，又称尤拉公式）是复分析领域的公式，它将三角函数与复指数函数关联起来，因其提出者莱昂哈德·欧拉而得名(欧拉不止这一
+个公式).
+\end_layout
+
+\begin_layout Quote
+莱昂哈德·欧拉（德語：Leonhard Paul Euler，1707年4月15日－1783年9月18日）是一位瑞士数学家和物理学家.
+\end_layout
+
+\begin_layout Standard
+对任意实数 
+\begin_inset Formula $x$
+\end_inset
+
+，都存在 
+\begin_inset Formula 
+\[
+{\displaystyle e^{ix}=\cos x+i\sin x}(e\text{是自然对数的底数，}i\text{是虚数单位})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这一复数指数函数有时还写作
+\begin_inset Formula $cisx$
+\end_inset
+
+(英语: cosine plus i sine, 余弦加
+\begin_inset Formula $i$
+\end_inset
+
+乘以正弦).
+\end_layout
+
+\begin_layout Paragraph
+欧拉恒等式
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula ${\displaystyle x=\pi}$
+\end_inset
+
+时，欧拉公式变为
+\begin_inset Formula ${\displaystyle e^{i\pi}+1=0}$
+\end_inset
+
+(
+\begin_inset Formula $e^{i\pi}=-1+0$
+\end_inset
+
+),即欧拉恒等式.
+\end_layout
+
+\begin_layout Standard
+证明:
 \end_layout
 
 \begin_layout Chapter
@@ -21245,7 +21359,7 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
-任意角的三角函数 
+任意角的三角函数
 \end_layout
 
 \begin_layout Standard
@@ -21480,7 +21594,19 @@ A就是这个简谐运动的振幅(amplitude of vibration),它是做简谐运动
 \begin_inset Formula $f=\frac{1}{T}=\frac{\omega}{2\pi}$
 \end_inset
 
-给出,它是做简谐运动的物体在单位时间内往复运动的次数; 
+给出,它是做简谐运动的物体在单位时间内重复运动的次数;单位为赫兹(英语：Hertz，简写为Hz), 
+\begin_inset Formula $\tau$
+\end_inset
+
+ 时间内某事件重复发生
+\begin_inset Formula $n$
+\end_inset
+
+次, 则此事件发生的频率为
+\begin_inset Formula ${\displaystyle f=\frac{n}{\tau}}$
+\end_inset
+
+赫兹
 \end_layout
 
 \begin_layout Standard
@@ -21495,7 +21621,50 @@ x=0时的相位
 \begin_inset Formula $\varphi$
 \end_inset
 
-称为初相 (initial phase).
+称为初相 (initial phase),实际上就是
+\begin_inset Formula $sin(x)$
+\end_inset
+
+偏移距离.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/tri-Asin(x).png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
