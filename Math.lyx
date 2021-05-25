@@ -19510,7 +19510,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-复数 z也可以用极坐标来指定.
+复数 
+\begin_inset Formula $z=a+bi$
+\end_inset
+
+也可以用极坐标来指定.
  
 \end_layout
 
@@ -19523,6 +19527,38 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $a=r\cos\varphi$
+\end_inset
+
+, 
+\begin_inset Formula $b=r\sin\varphi$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle r=\sqrt{a^{2}+b^{2}}\in\mathbb{R},\varphi=\arctan(\frac{v}{u})\in\mathbb{R}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\sin\varphi=0$
+\end_inset
+
+时, 此时z为实数, 点落在直角坐标系的实数轴上; 当 
+\begin_inset Formula $\cos\varphi=0$
+\end_inset
+
+ 时, 
+\begin_inset Formula $z$
+\end_inset
+
+为纯虚数.
 \end_layout
 
 \begin_layout Subsection
