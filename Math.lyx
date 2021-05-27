@@ -9534,12 +9534,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-在图中，圆心为 O，圆上有两弦 AB 及 CD，相交于 E 设有一圆，圆上有两条弦 AB 及 CD，它们相交于 E，则有
+设有一圆，圆上有两条弦 AB 及 CD，它们相交于 E，证明
 \begin_inset Formula ${\displaystyle EA\cdot EB=EC\cdot ED}$
 \end_inset
 
  .
- 这个乘积，是 P的圆幂的相反数 −h。这是因为圆幂为非正数，而线段的乘积为正数。
+ 
 \end_layout
 
 \begin_layout Standard
@@ -19865,6 +19865,27 @@ status open
 \end_layout
 
 \begin_layout Paragraph
+收敛性
+\end_layout
+
+\begin_layout Standard
+对于含有无穷多项的数列
+\begin_inset Formula ${a_{k}}$
+\end_inset
+
+, 我们可以为其定义"数列的极限”为常数 
+\begin_inset Formula $L$
+\end_inset
+
+: 
+\begin_inset Formula ${\displaystyle L=\lim_{k\to\infty}a_{k}}$
+\end_inset
+
+.
+ 若上述极限存在，则称该数列是"收敛数列”，且收敛于 L 。 若上述极限不存在，则称该数列为"发散数列”。
+\end_layout
+
+\begin_layout Paragraph
 有界性
 \end_layout
 
@@ -19890,7 +19911,7 @@ status open
 \begin_inset Formula $N$
 \end_inset
 
-称为"上界”。 
+称为"上界”。 如果数列收敛,那么数列一定有界
 \end_layout
 
 \begin_layout Standard
@@ -19906,32 +19927,15 @@ status open
 \begin_inset Formula $N$
 \end_inset
 
-不存在，则称数列 
-\begin_inset Formula ${a_{n}}$
+不存在，则称数列
+\begin_inset Formula $\left\{ a_{k}\right\} $
 \end_inset
 
- 为"无界数列”。
+为"无界数列”。
 \end_layout
 
 \begin_layout Paragraph
-收敛性
-\end_layout
-
-\begin_layout Standard
-对于含有无穷多项的数列
-\begin_inset Formula ${a_{k}}$
-\end_inset
-
-, 我们可以为其定义"数列的极限”为常数 
-\begin_inset Formula $L$
-\end_inset
-
-: 
-\begin_inset Formula ${\displaystyle L=\lim_{k\to\infty}a_{k}}$
-\end_inset
-
-.
- 若上述极限存在，则称该数列是"收敛数列”，且收敛于 L 。 若上述极限不存在，则称该数列为"发散数列”。
+保号性
 \end_layout
 
 \begin_layout Paragraph
@@ -19942,7 +19946,7 @@ status open
 
 \begin_layout Standard
 如果数列
-\begin_inset Formula ${a_{n}}$
+\begin_inset Formula $\{a_{n}\}$
 \end_inset
 
 的第
@@ -19957,7 +19961,7 @@ status open
 \series bold
 通项公式
 \series default
-,我们可以根据数列的通项公式算出数列的各项
+,我们可以根据数列的通项公式算出数列的各项.
 \end_layout
 
 \begin_layout Section
@@ -20456,7 +20460,15 @@ R_{f}=f(X)={f(x)|x\in X}
 \end_layout
 
 \begin_layout Standard
-设D为一非空实数集合，如果对应法则f，使任意实数
+设
+\begin_inset Formula $D$
+\end_inset
+
+为一非空实数集合，如果对应法则
+\begin_inset Formula $f$
+\end_inset
+
+，使任意实数
 \begin_inset Formula $x\in D$
 \end_inset
 
@@ -20468,23 +20480,80 @@ R_{f}=f(X)={f(x)|x\in X}
 \begin_inset Formula $x$
 \end_inset
 
-为自变量，
+为
+\series bold
+自变量
+\series default
+，
 \begin_inset Formula $y$
 \end_inset
 
-为因变量，非空实数集D称为定义域，简记为
+为
+\series bold
+因变量
+\series default
+, y的值称为函数
+\begin_inset Formula $f$
+\end_inset
+
+在
+\begin_inset Formula $x$
+\end_inset
+
+处的函数值，非空实数集
+\begin_inset Formula $D$
+\end_inset
+
+称为
+\series bold
+定.
+ 义域
+\series default
+，简记为
 \begin_inset Formula $D(f)$
 \end_inset
 
-,集合
-\begin_inset Formula $y|y=f(x),x∈D$
+.
+ 集合
+\begin_inset Formula $\{y|y=f(x),x∈D\}$
 \end_inset
 
-称为函数的值域，记为
-\begin_inset Formula $Z(f)$
+称为函数的
+\series bold
+值域
+\series default
+，记为
+\begin_inset Formula $f(D)$
+\end_inset
+
+或
+\begin_inset Formula $R_{f}$
 \end_inset
 
 .
+ 因变量
+\begin_inset Formula $y$
+\end_inset
+
+与自变量
+\begin_inset Formula $x$
+\end_inset
+
+的关系通常称为
+\series bold
+函数关系.
+\end_layout
+
+\begin_layout Standard
+构成函数的要素:定义域
+\begin_inset Formula $D(f)$
+\end_inset
+
+及对应法则
+\begin_inset Formula $f$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -20495,8 +20564,195 @@ R_{f}=f(X)={f(x)|x\in X}
 函数的表示法:解析法,图像法,列表法
 \end_layout
 
+\begin_layout Standard
+函数的定义域: 如果函数有实际背景,根据实际意义确定; 另为一种是使得算式有意义的实数, 这种定义域称为自然定义域.
+\end_layout
+
+\begin_layout Paragraph
+例
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="4cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+绝对值函数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=|x|=\left\{ \begin{split}-x, & x<0\\
+x, & x\geqslant0
+\end{split}
+\right.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+符号函数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=\text{sgn}x=\left\{ \begin{split}-1, & x<0\\
+0 & x=0\\
+1, & x>0
+\end{split}
+\right.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+分段函数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+图像发生跳跃, 阶梯曲线.如果跳跃发生在
+\begin_inset Formula $x$
+\end_inset
+
+为整数值处,则称为取整函数
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-一元函数 
+一元函数
 \end_layout
 
 \begin_layout Standard
@@ -20609,6 +20865,47 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \begin_layout Section
 函数的性质
+\end_layout
+
+\begin_layout Subsection
+函数的有界性
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的定义域为
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $X\subset D$
+\end_inset
+
+.
+ 如果存在数
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(x)\leqslant K_{1}$
+\end_inset
+
+对于任一
+\begin_inset Formula $x\in X$
+\end_inset
+
+都成立,那么称函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+上有上界;反之下界.
 \end_layout
 
 \begin_layout Subsection
@@ -20765,6 +21062,10 @@ R_{f}=f(X)={f(x)|x\in X}
 \end_inset
 
 就叫做奇函数(even fuction).
+\end_layout
+
+\begin_layout Subsection
+周期性
 \end_layout
 
 \begin_layout Section
@@ -21387,7 +21688,32 @@ noprefix "false"
 \series bold
 单位圆
 \series default
-(unit circle),这样,上述P点就是a的终边与 单位的交点,锐角三角函数可以用单位圆上点的坐标表示.
+(unit circle),这样,交P点就是a的终边与 单位园的交点.三角形内角和
+\begin_inset Formula $180\textdegree$
+\end_inset
+
+,恰好为
+\begin_inset Formula $\pi$
+\end_inset
+
+,半个单位园.
+ 
+\begin_inset Formula $P$
+\end_inset
+
+的纵坐标为
+\begin_inset Formula $y$
+\end_inset
+
+,横坐标为
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $\sin(x)$
+\end_inset
+
+就是y.
 \end_layout
 
 \begin_layout Subsubsection
@@ -21603,14 +21929,14 @@ x叫做
 \end_layout
 
 \begin_layout Paragraph
+简谐运动
+\end_layout
+
+\begin_layout Paragraph
 \begin_inset Formula $y=A\sin(\omega x+\varphi),x\in[0,+\infty),其中A>0,\omega>0$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-物理中,描述简谐运动的物理量,如振幅, 周期和频率等都与这个解析式中的常数有关: 
 \end_layout
 
 \begin_layout Standard
@@ -21777,7 +22103,7 @@ status open
 \end_layout
 
 \begin_layout Section
-复合函数 
+复合函数
 \end_layout
 
 \begin_layout Standard
@@ -22216,11 +22542,11 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 \end_layout
 
 \begin_layout Standard
-在自变量x的同一变化过程中，设$
+在自变量x的同一变化过程中，设
 \begin_inset Formula $limf(x)=A$
 \end_inset
 
-$，$
+，$
 \begin_inset Formula $limg(x)=B$
 \end_inset
 
