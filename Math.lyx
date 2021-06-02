@@ -22435,7 +22435,7 @@ lim(x→∞)f(x)=A
 \begin_inset Formula $y=(1/2)^{x}$
 \end_inset
 
- 不存在。
+ 不存在.
 \end_layout
 
 \begin_layout Standard
@@ -33672,6 +33672,70 @@ k\equiv z^{3}(\mod d)
 ,只需求d和z的值.最终通过穷举得出.
 \end_layout
 
+\begin_layout Section
+画线乘法计算法
+\end_layout
+
+\begin_layout Section
+一些有趣的图形
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/一些有趣的图形_1.png
+	lyxscale 30
+	width 10cm
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=sin(x)\div y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/sin(x)*x.png
+	lyxscale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+y=sin(x)*x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -33738,104 +33802,70 @@ https://phys.org/news/2021-03-sum-cubes-puzzle-solution.html
 
 \end_layout
 
-\begin_layout Section
-画线乘法计算法
-\end_layout
-
-\begin_layout Section
-一些有趣的图形
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/sin(x) divide y,sin(x)*x divide y.png
-	lyxscale 30
-	width 10cm
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $y=sin(x)\div y$
-\end_inset
-
-
-\end_layout
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "维基百科"
+literal "false"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/sin(x)*x.png
-	lyxscale 20
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "人教版数学教材(初中(部分)到高中(部分))"
+literal "false"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-y=sin(x)*x
-\end_layout
-
-\end_inset
-
-
-\end_layout
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "同济大学 高等数学"
+literal "false"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Part
-参考资料
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "浙大 概率论与数理统计"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-本书参考自:
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "书中图片来自 : 借助geogebra所画"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-维基百科
-\end_layout
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "书中图片来自 : 维基百科(搜索对应词条)"
+literal "false"
 
-\begin_layout Enumerate
-人教版数学教材(初中(部分)到高中(部分))
-\end_layout
+\end_inset
 
-\begin_layout Enumerate
-同济大学 高等数学
-\end_layout
 
-\begin_layout Enumerate
-浙大 概率论与数理统计
-\end_layout
-
-\begin_layout Standard
-书中图片来自:
-\end_layout
-
-\begin_layout Enumerate
-借助geogebra所画
-\end_layout
-
-\begin_layout Enumerate
-维基百科(搜索对应词条)
 \end_layout
 
 \end_body
