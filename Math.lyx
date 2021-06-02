@@ -923,6 +923,438 @@ Math
 \end_layout
 
 \begin_layout Chapter
+集合
+\end_layout
+
+\begin_layout Standard
+基本的数学概念，它是集合论的研究对象，指具有某种特定性质的事物的总体，（在最原始的集合论─朴素集合论─中的定义，集合就是"一堆东西”。）
+\end_layout
+
+\begin_layout Standard
+集合里的事物（"东西”），叫作元素。
+\begin_inset Formula $x$
+\end_inset
+
+是集合
+\begin_inset Formula $A$
+\end_inset
+
+的元素，记作 
+\begin_inset Formula $x\in A$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+简单来说，所谓的一个集合，就是将数个对象归类而分成为一个或数个形态各异的大小整体。 一般来讲，集合是具有某种特性的事物的整体，或是一些确认对象的汇集。构成集合的
+事物或对象称作元素或是成员。集合的元素可以是任何事物，可以是人，可以是物，也可以是字母或数字等。在数学交流当中为了方便，集合会有一些别名。比如：族、系　通常指它
+的元素也是一些集合。 
+\end_layout
+
+\begin_layout Section
+符号
+\end_layout
+
+\begin_layout Itemize
+元素 
+\end_layout
+
+\begin_layout Standard
+通常用
+\begin_inset Formula ${\displaystyle a,b,c,d,x}$
+\end_inset
+
+等小写字母来表示； 
+\end_layout
+
+\begin_layout Itemize
+集合
+\end_layout
+
+\begin_layout Standard
+通常用
+\begin_inset Formula ${\displaystyle \mathbf{A,B,C,D,X}}$
+\end_inset
+
+等大写字母来表示。当元素
+\begin_inset Formula ${\displaystyle a}$
+\end_inset
+
+ 属于集合 
+\begin_inset Formula ${\displaystyle \mathbf{A}}$
+\end_inset
+
+ 时，记作
+\begin_inset Formula ${\displaystyle a\in\mathbf{A}}$
+\end_inset
+
+。当元素
+\begin_inset Formula ${\displaystyle a}$
+\end_inset
+
+不属于集合
+\begin_inset Formula ${\displaystyle \mathbf{A}}$
+\end_inset
+
+时，记作
+\begin_inset Formula ${\displaystyle a\not\in\mathbf{A}}$
+\end_inset
+
+。如果 
+\begin_inset Formula ${\displaystyle \mathbf{A,B}}$
+\end_inset
+
+ 两个集合所包含的元素完全一样，则二者相等，写作 
+\begin_inset Formula ${\displaystyle \mathbf{A=B}}$
+\end_inset
+
+。 
+\end_layout
+
+\begin_layout Standard
+常用表示:
+\end_layout
+
+\begin_layout Standard
+全体非负整数集合称为非负整数集(自然数集), 记作
+\begin_inset Formula $N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所有正整数组成的集合称为正整数集, 记作
+\begin_inset Formula $N^{*}$
+\end_inset
+
+或
+\begin_inset Formula $N_{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+全体整数组成的集合称为整数集, 记作
+\begin_inset Formula $Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+全体有理数组成的集合称为有理数集, 记作
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+实数集合,记作
+\begin_inset Formula $R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+集合的表示 
+\end_layout
+
+\begin_layout Standard
+用文字或数学符号描述 在大括号中列出其元素，称为列举法
+\end_layout
+
+\begin_layout Section
+集合的特性
+\end_layout
+
+\begin_layout Itemize
+无序性
+\end_layout
+
+\begin_layout Standard
+一个集合中，每个元素的地位都是相同的，元素之间是无序的。集合上可以定义序关系，定义了序关系后，元素之间就可以按照序关系排序。但就集合本身的特性而言，元素之间没有
+必然的序 
+\end_layout
+
+\begin_layout Itemize
+互异性
+\end_layout
+
+\begin_layout Standard
+一个集合中，任何两个元素都认为是不相同的，即每个元素只能出现一次。有时需要对同一元素出现多次的情形进行刻画，可以使用多重集，其中的元素允许出现多次。
+ 
+\end_layout
+
+\begin_layout Itemize
+确定性
+\end_layout
+
+\begin_layout Standard
+给定一个集合，任给一个元素，该元素或者属于或者不属于该集合，二者必居其一，不允许有模棱两可的情况出现。 
+\end_layout
+
+\begin_layout Section
+集合间的关系
+\end_layout
+
+\begin_layout Standard
+集合
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，若
+\begin_inset Formula ${\displaystyle \forall a\in A}$
+\end_inset
+
+，有
+\begin_inset Formula ${\displaystyle a\in B\therefore A\subseteq B}$
+\end_inset
+
+。则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的子集，亦称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+包含于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，或
+\series bold
+
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+包含
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+
+\series default
+，记作
+\begin_inset Formula ${\displaystyle A\subseteq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supseteq A}$
+\end_inset
+
+，否则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+不是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的子集，记作
+\begin_inset Formula ${\displaystyle A\nsubseteq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\nsupseteq A}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula ${\displaystyle A\subseteq B}$
+\end_inset
+
+，且
+\begin_inset Formula ${\displaystyle A\neq B}$
+\end_inset
+
+，则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+是
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+的真子集，亦称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+真包含于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，或
+\begin_inset Formula $B$
+\end_inset
+
+真包含
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+，记作
+\begin_inset Formula ${\displaystyle A\subsetneqq B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supsetneqq A}$
+\end_inset
+
+（有时也记作
+\begin_inset Formula ${\displaystyle A\subset B}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle B\supset A}$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Section
+集合的运算
+\end_layout
+
+\begin_layout Itemize
+并集(union set) 
+\begin_inset Formula $A\cup B=\{x|x\in A,\text{或x\ensuremath{\in B}}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+交集(intersection set)
+\begin_inset Formula $A\cap B=\{x|x\in A,\text{且x\ensuremath{\in B}}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+补集(complementary set)
+\begin_inset Formula $C_{u}A=\{x|x\in U,\text{且}X\notin A\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+环
+\end_layout
+
+\begin_layout Standard
+设在非空集合
+\begin_inset Formula $R$
+\end_inset
+
+上定义了两个代数运算,一个叫加法,记为
+\begin_inset Formula $a+b$
+\end_inset
+
+,一个叫乘法,记为
+\begin_inset Formula $ab$
+\end_inset
+
+,它们适合
+\end_layout
+
+\begin_layout Standard
+1.关于加法的以下规则:
+\end_layout
+
+\begin_layout Standard
+(1)
+\begin_inset Formula $(a+b)+c=a+(b+c)$
+\end_inset
+
+;(加法结合律)
+\end_layout
+
+\begin_layout Standard
+(2)
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+;(加法交换律)
+\end_layout
+
+\begin_layout Standard
+(3)在R中有元素0,使对任意的
+\begin_inset Formula $a∈R,a+0=a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(4)若
+\begin_inset Formula $a\in R$
+\end_inset
+
+,则存在
+\begin_inset Formula $b\in R$
+\end_inset
+
+,使
+\begin_inset Formula $a+b=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.关于乘法的结合律:
+\begin_inset Formula 
+\[
+a(bc)=(ab)c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.关于加法和乘法的分配律:
+\begin_inset Formula 
+\[
+a(b+c)=ab+ac
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(b+c)a=ba+ca
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样的非空集合R连同这两个运算称为环, 全体整数对于数的加法和乘法构成一个环.
+\end_layout
+
+\begin_layout Chapter
 数学运算
 \end_layout
 
@@ -7282,438 +7714,6 @@ y_{0}=\frac{c(1-ak_{n})}{b}
 
 \begin_layout Subsection
 丢番图方程
-\end_layout
-
-\begin_layout Chapter
-集合
-\end_layout
-
-\begin_layout Standard
-基本的数学概念，它是集合论的研究对象，指具有某种特定性质的事物的总体，（在最原始的集合论─朴素集合论─中的定义，集合就是"一堆东西”。）
-\end_layout
-
-\begin_layout Standard
-集合里的事物（"东西”），叫作元素。
-\begin_inset Formula $x$
-\end_inset
-
-是集合
-\begin_inset Formula $A$
-\end_inset
-
-的元素，记作 
-\begin_inset Formula $x\in A$
-\end_inset
-
-。
-\end_layout
-
-\begin_layout Standard
-简单来说，所谓的一个集合，就是将数个对象归类而分成为一个或数个形态各异的大小整体。 一般来讲，集合是具有某种特性的事物的整体，或是一些确认对象的汇集。构成集合的
-事物或对象称作元素或是成员。集合的元素可以是任何事物，可以是人，可以是物，也可以是字母或数字等。在数学交流当中为了方便，集合会有一些别名。比如：族、系　通常指它
-的元素也是一些集合。 
-\end_layout
-
-\begin_layout Section
-符号
-\end_layout
-
-\begin_layout Itemize
-元素 
-\end_layout
-
-\begin_layout Standard
-通常用
-\begin_inset Formula ${\displaystyle a,b,c,d,x}$
-\end_inset
-
-等小写字母来表示； 
-\end_layout
-
-\begin_layout Itemize
-集合
-\end_layout
-
-\begin_layout Standard
-通常用
-\begin_inset Formula ${\displaystyle \mathbf{A,B,C,D,X}}$
-\end_inset
-
-等大写字母来表示。当元素
-\begin_inset Formula ${\displaystyle a}$
-\end_inset
-
- 属于集合 
-\begin_inset Formula ${\displaystyle \mathbf{A}}$
-\end_inset
-
- 时，记作
-\begin_inset Formula ${\displaystyle a\in\mathbf{A}}$
-\end_inset
-
-。当元素
-\begin_inset Formula ${\displaystyle a}$
-\end_inset
-
-不属于集合
-\begin_inset Formula ${\displaystyle \mathbf{A}}$
-\end_inset
-
-时，记作
-\begin_inset Formula ${\displaystyle a\not\in\mathbf{A}}$
-\end_inset
-
-。如果 
-\begin_inset Formula ${\displaystyle \mathbf{A,B}}$
-\end_inset
-
- 两个集合所包含的元素完全一样，则二者相等，写作 
-\begin_inset Formula ${\displaystyle \mathbf{A=B}}$
-\end_inset
-
-。 
-\end_layout
-
-\begin_layout Standard
-常用表示:
-\end_layout
-
-\begin_layout Standard
-全体非负整数集合称为非负整数集(自然数集), 记作
-\begin_inset Formula $N$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-所有正整数组成的集合称为正整数集, 记作
-\begin_inset Formula $N^{*}$
-\end_inset
-
-或
-\begin_inset Formula $N_{+}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-全体整数组成的集合称为整数集, 记作
-\begin_inset Formula $Z$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-全体有理数组成的集合称为有理数集, 记作
-\begin_inset Formula $Q$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-实数集合,记作
-\begin_inset Formula $R$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-集合的表示 
-\end_layout
-
-\begin_layout Standard
-用文字或数学符号描述 在大括号中列出其元素，称为列举法
-\end_layout
-
-\begin_layout Section
-集合的特性
-\end_layout
-
-\begin_layout Itemize
-无序性
-\end_layout
-
-\begin_layout Standard
-一个集合中，每个元素的地位都是相同的，元素之间是无序的。集合上可以定义序关系，定义了序关系后，元素之间就可以按照序关系排序。但就集合本身的特性而言，元素之间没有
-必然的序 
-\end_layout
-
-\begin_layout Itemize
-互异性
-\end_layout
-
-\begin_layout Standard
-一个集合中，任何两个元素都认为是不相同的，即每个元素只能出现一次。有时需要对同一元素出现多次的情形进行刻画，可以使用多重集，其中的元素允许出现多次。
- 
-\end_layout
-
-\begin_layout Itemize
-确定性
-\end_layout
-
-\begin_layout Standard
-给定一个集合，任给一个元素，该元素或者属于或者不属于该集合，二者必居其一，不允许有模棱两可的情况出现。 
-\end_layout
-
-\begin_layout Section
-集合间的关系
-\end_layout
-
-\begin_layout Standard
-集合
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-、
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-，若
-\begin_inset Formula ${\displaystyle \forall a\in A}$
-\end_inset
-
-，有
-\begin_inset Formula ${\displaystyle a\in B\therefore A\subseteq B}$
-\end_inset
-
-。则称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-是
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-的子集，亦称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-包含于
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-，或
-\series bold
-
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-包含
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-
-\series default
-，记作
-\begin_inset Formula ${\displaystyle A\subseteq B}$
-\end_inset
-
-或
-\begin_inset Formula ${\displaystyle B\supseteq A}$
-\end_inset
-
-，否则称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-不是
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-的子集，记作
-\begin_inset Formula ${\displaystyle A\nsubseteq B}$
-\end_inset
-
-或
-\begin_inset Formula ${\displaystyle B\nsupseteq A}$
-\end_inset
-
-。
-\end_layout
-
-\begin_layout Standard
-若
-\begin_inset Formula ${\displaystyle A\subseteq B}$
-\end_inset
-
-，且
-\begin_inset Formula ${\displaystyle A\neq B}$
-\end_inset
-
-，则称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-是
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-的真子集，亦称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-真包含于
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-，或
-\begin_inset Formula $B$
-\end_inset
-
-真包含
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-，记作
-\begin_inset Formula ${\displaystyle A\subsetneqq B}$
-\end_inset
-
-或
-\begin_inset Formula ${\displaystyle B\supsetneqq A}$
-\end_inset
-
-（有时也记作
-\begin_inset Formula ${\displaystyle A\subset B}$
-\end_inset
-
-或
-\begin_inset Formula ${\displaystyle B\supset A}$
-\end_inset
-
-）
-\end_layout
-
-\begin_layout Section
-集合的运算
-\end_layout
-
-\begin_layout Itemize
-并集(union set) 
-\begin_inset Formula $A\cup B=\{x|x\in A,\text{或x\ensuremath{\in B}}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-交集(intersection set)
-\begin_inset Formula $A\cap B=\{x|x\in A,\text{且x\ensuremath{\in B}}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-补集(complementary set)
-\begin_inset Formula $C_{u}A=\{x|x\in U,\text{且}X\notin A\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-环
-\end_layout
-
-\begin_layout Standard
-设在非空集合
-\begin_inset Formula $R$
-\end_inset
-
-上定义了两个代数运算,一个叫加法,记为
-\begin_inset Formula $a+b$
-\end_inset
-
-,一个叫乘法,记为
-\begin_inset Formula $ab$
-\end_inset
-
-,它们适合
-\end_layout
-
-\begin_layout Standard
-1.关于加法的以下规则:
-\end_layout
-
-\begin_layout Standard
-(1)
-\begin_inset Formula $(a+b)+c=a+(b+c)$
-\end_inset
-
-;(加法结合律)
-\end_layout
-
-\begin_layout Standard
-(2)
-\begin_inset Formula $a+b=b+a$
-\end_inset
-
-;(加法交换律)
-\end_layout
-
-\begin_layout Standard
-(3)在R中有元素0,使对任意的
-\begin_inset Formula $a∈R,a+0=a$
-\end_inset
-
-;
-\end_layout
-
-\begin_layout Standard
-(4)若
-\begin_inset Formula $a\in R$
-\end_inset
-
-,则存在
-\begin_inset Formula $b\in R$
-\end_inset
-
-,使
-\begin_inset Formula $a+b=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-2.关于乘法的结合律:
-\begin_inset Formula 
-\[
-a(bc)=(ab)c
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-3.关于加法和乘法的分配律:
-\begin_inset Formula 
-\[
-a(b+c)=ab+ac
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-(b+c)a=ba+ca
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这样的非空集合R连同这两个运算称为环, 全体整数对于数的加法和乘法构成一个环.
 \end_layout
 
 \begin_layout Chapter
@@ -19240,7 +19240,11 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \series bold
 复数
 \series default
-，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位$i$乘积的数，以此定义，0可视为同时是实数也是虚数.
+，其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位
+\begin_inset Formula $i$
+\end_inset
+
+乘积的数，以此定义，0可视为同时是实数也是虚数.
  
 \end_layout
 
@@ -19935,10 +19939,6 @@ status open
 \end_layout
 
 \begin_layout Paragraph
-保号性
-\end_layout
-
-\begin_layout Paragraph
 
 \series bold
 通项公式
@@ -20056,7 +20056,7 @@ literal "false"
 \begin_inset Formula $n$
 \end_inset
 
-无线增大时，如果 
+无限增大时，如果 
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
@@ -20084,7 +20084,7 @@ lim(n→∞)\{a_{n}\}=A
 
 \end_inset
 
-, 或者$
+, 或者
 \begin_inset Formula $a_{n}→A（n→∞)$
 \end_inset
 
@@ -20096,7 +20096,7 @@ lim(n→∞)\{a_{n}\}=A
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
-发散。
+发散.
 \end_layout
 
 \begin_layout Enumerate
@@ -20111,176 +20111,11 @@ lim(n→∞)\{a_{n}\}=A
 。 
 \end_layout
 
-\begin_layout Section
-映射
-\end_layout
-
-\begin_layout Section
-区间的概念
-\end_layout
-
-\begin_layout Standard
-研究函数时常会用到区间的概念.
-\end_layout
-
-\begin_layout Standard
-设
-\begin_inset Formula $a$
-\end_inset
-
-,
-\begin_inset Formula $b$
-\end_inset
-
-是两个实数,而且
-\begin_inset Formula $a<b$
-\end_inset
-
-我们规定; 
-\end_layout
-
 \begin_layout Enumerate
-满足不等式
-\begin_inset Formula $a\leqslant x\leqslant b$
-\end_inset
-
-的实数
-\begin_inset Formula $x$
-\end_inset
-
-的集合叫做闭区间,表示为
-\begin_inset Formula $[a,b]$
-\end_inset
-
-;
+保号性
 \end_layout
 
-\begin_layout Enumerate
-满足不等式
-\begin_inset Formula $a<x<b$
-\end_inset
-
-的实数
-\begin_inset Formula $x$
-\end_inset
-
- 的集合叫做开区间,表示为
-\begin_inset Formula $(a,b)$
-\end_inset
-
-; 
-\end_layout
-
-\begin_layout Enumerate
-满足不等式
-\begin_inset Formula $a\leqslant x<b$
-\end_inset
-
-或
-\begin_inset Formula $a<x\leqslant b$
-\end_inset
-
-的实数的集合叫做半开半闭区间,分别表示为 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $[a,b)$
-\end_inset
-
-,
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset Formula $(a,b]$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-这些区间的几何表示如上表所示,在图中,用
-\series bold
-实心点
-\series default
-表示包括在区间内的端点,用
-\series bold
-空心点
-\series default
-表示不包括在区间内的端点, 
-\end_layout
-
-\begin_layout Standard
-实数集
-\series bold
-R
-\series default
-可以用区间表示为
-\begin_inset Formula $(-\infty,+\infty)$
-\end_inset
-
-,"
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\infty$
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-”读作"无穷大”,"
-\begin_inset Formula $-\infty$
-\end_inset
-
-”读作"负无穷大”,"
-\begin_inset Formula $+\infty$
-\end_inset
-
-”读作"正无穷大”.
-\end_layout
-
-\begin_layout Section
+\begin_layout Chapter
 映射
 \end_layout
 
@@ -20447,7 +20282,7 @@ y=f(x)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-R_{f}=f(X)={f(x)|x\in X}
+R_{f}=f(X)=f(x)|x\in X
 \]
 
 \end_inset
@@ -20574,11 +20409,10 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="3" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="4cm">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -20589,7 +20423,7 @@ R_{f}=f(X)={f(x)|x\in X}
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -20599,15 +20433,6 @@ x, & x\geqslant0
 \right.$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -20624,7 +20449,7 @@ x, & x\geqslant0
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -20640,18 +20465,9 @@ x, & x\geqslant0
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -20660,84 +20476,13 @@ x, & x\geqslant0
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-图像发生跳跃, 阶梯曲线.如果跳跃发生在
-\begin_inset Formula $x$
-\end_inset
-
-为整数值处,则称为取整函数
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $\text{图像发生跳跃},\text{阶梯曲线}.\text{如果跳跃发生在}x\text{为整数值处},\text{则称为取整函数}$
+\end_inset
+
 
 \end_layout
 
@@ -20749,6 +20494,171 @@ x, & x\geqslant0
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+区间的概念
+\end_layout
+
+\begin_layout Standard
+研究函数时常会用到区间的概念.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+是两个实数,而且
+\begin_inset Formula $a<b$
+\end_inset
+
+我们规定; 
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a\leqslant x\leqslant b$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+的集合叫做闭区间,表示为
+\begin_inset Formula $[a,b]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a<x<b$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+ 的集合叫做开区间,表示为
+\begin_inset Formula $(a,b)$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Enumerate
+满足不等式
+\begin_inset Formula $a\leqslant x<b$
+\end_inset
+
+或
+\begin_inset Formula $a<x\leqslant b$
+\end_inset
+
+的实数的集合叫做半开半闭区间,分别表示为 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $[a,b)$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $(a,b]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+这些区间的几何表示如上表所示,在图中,用
+\series bold
+实心点
+\series default
+表示包括在区间内的端点,用
+\series bold
+空心点
+\series default
+表示不包括在区间内的端点, 
+\end_layout
+
+\begin_layout Standard
+实数集
+\series bold
+R
+\series default
+可以用区间表示为
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+,"
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+”读作"无穷大”,"
+\begin_inset Formula $-\infty$
+\end_inset
+
+”读作"负无穷大”,"
+\begin_inset Formula $+\infty$
+\end_inset
+
+”读作"正无穷大”.
 \end_layout
 
 \begin_layout Section
@@ -20953,7 +20863,11 @@ x, & x\geqslant0
 \begin_inset Formula $D$
 \end_inset
 
-上是增函数(increasing function); 
+上是
+\series bold
+增函数
+\series default
+(increasing function); 
 \end_layout
 
 \begin_layout Standard
@@ -20981,7 +20895,11 @@ x, & x\geqslant0
 \begin_inset Formula $f(x)$
 \end_inset
 
-在区间D上是减函数(decreasing functionn)
+在区间D上是
+\series bold
+减函数
+\series default
+(decreasing functionn)
 \end_layout
 
 \begin_layout Standard
@@ -21001,7 +20919,7 @@ x, & x\geqslant0
 \series bold
 减函数
 \series default
-,那么就说函数 
+, 那么就说函数 
 \begin_inset Formula $y=f(x)$
 \end_inset
 
@@ -21066,6 +20984,116 @@ x, & x\geqslant0
 
 \begin_layout Subsection
 周期性
+\end_layout
+
+\begin_layout Standard
+对于函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,如果存在一个非零常数T,使得当
+\begin_inset Formula $x$
+\end_inset
+
+取定义域内的每一个值时,都有 
+\begin_inset Formula $(x+T)=(x)$
+\end_inset
+
+, 那么函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+就叫做
+\series bold
+周期函数
+\series default
+(periodic function),非零常数
+\begin_inset Formula $T$
+\end_inset
+
+叫做这个函数的周期 (period).
+ 
+\end_layout
+
+\begin_layout Standard
+周期函数的周期不止一个, 如果在周期函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的所有周期中存在一个最小的正数,那么这个最小正数就叫做
+\begin_inset Formula $f(x)$
+\end_inset
+
+的最小正周期(minimal positive period).
+ 例如正弦函数的最小正周期是
+\begin_inset Formula $2\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+函数的运算
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,
+\begin_inset Formula $g(x)$
+\end_inset
+
+的定义域依次为
+\begin_inset Formula $D_{f}$
+\end_inset
+
+,
+\begin_inset Formula $D_{g}$
+\end_inset
+
+,
+\begin_inset Formula $D=D_{f}\cap D_{g}\neq\emptyset$
+\end_inset
+
+, 则可以定义这两个函数的运算为:
+\end_layout
+
+\begin_layout Standard
+和差
+\begin_inset Formula $f\pm g$
+\end_inset
+
+: 
+\begin_inset Formula $(f\pm g)(x)=f(x)\pm g(x),x\in D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+积
+\begin_inset Formula $f\cdot g$
+\end_inset
+
+: 
+\begin_inset Formula $(f\cdot g)(x)=f(x)\cdot g(x),x\in D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+商
+\begin_inset Formula $\frac{f}{g}$
+\end_inset
+
+: 
+\begin_inset Formula $(\frac{f}{g})(x)=\frac{f(x)}{f(g)},x\in D,\text{其\text{中}}f(g)\neq0\text{即}\{x|g(x)\neq0,x\in D\}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -21652,7 +21680,7 @@ x=\log_{a}N
 
 \begin_layout Standard
 一般地, 函数
-\begin_inset Formula $y=x^{a}$
+\begin_inset Formula $y=x^{a}(a\in R)$
 \end_inset
 
 叫做幂函数(power fuction)
@@ -22029,12 +22057,44 @@ status open
 
 \end_layout
 
-\begin_layout Description
+\begin_layout Subsection
 反三角函数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=\arcsin x$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $y=\arccos x$
+\end_inset
+
+, 
+\begin_inset Formula $y=\arctan x$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 初等函数
+\end_layout
+
+\begin_layout Standard
+有常数和基本初等函数经过有限次的四则运算和有限次的函数复合构成一个新的函数.
 \end_layout
 
 \begin_layout Standard
@@ -22128,6 +22188,26 @@ status open
 \end_inset
 
 。
+\end_layout
+
+\begin_layout Subsection
+一元二次方程
+\end_layout
+
+\begin_layout Standard
+标准形式: 
+\begin_inset Formula $ax^{2}+bx+c=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求根公式: 
+\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -22240,7 +22320,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-不严格地讲，函数
+不严格地讲, 函数
 \begin_inset Formula ${\displaystyle f}$
 \end_inset
 
@@ -22248,15 +22328,7 @@ status open
 \begin_inset Formula $f(x)$
 \end_inset
 
-。声称在自变量为
-\begin_inset Formula ${\displaystyle p}$
-\end_inset
-
-时，函数极限为
-\begin_inset Formula ${\displaystyle L}$
-\end_inset
-
-则表明：当自变量
+, 当自变量
 \begin_inset Formula ${\displaystyle x}$
 \end_inset
 
@@ -22272,7 +22344,20 @@ status open
 \begin_inset Formula ${\displaystyle L}$
 \end_inset
 
-。另一方面，如果存在十分接近于
+.
+ 即, 声称在自变量为
+\begin_inset Formula ${\displaystyle p}$
+\end_inset
+
+时, 函数极限为
+\begin_inset Formula ${\displaystyle L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+另一方面，如果存在十分接近于
 \begin_inset Formula ${\displaystyle p}$
 \end_inset
 
@@ -22280,7 +22365,7 @@ status open
 \begin_inset Formula ${\displaystyle L}$
 \end_inset
 
-的值相差较大，则表示函数极限不存在。
+的值相差较大，则表示函数极限不存在.
 \end_layout
 
 \begin_layout Standard
@@ -22300,23 +22385,39 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-上表所示函数的图形，请注意在x=0处取不到值。因为被零除，所以在这一点函数没有意义。 尽管函数
-\begin_inset Formula $(sinx)/x$
+上表所示函数的图形
+\begin_inset Formula $\frac{\sin x}{x}$
 \end_inset
 
- 的定义域中不包括"0”, 但当 x 无限接近于零时, 
+, 请注意在x=0处取不到值, 因为被零除.
+ 所以在这一点函数没有意义。 
+\end_layout
+
+\begin_layout Plain Layout
+尽管函数
+\begin_inset Formula $\frac{\sin x}{x}$
+\end_inset
+
+的定义域中不包括"0”, 但当 x 无限接近于零时, 
 \begin_inset Formula $(sinx)/x$
 \end_inset
 
  就无限接近于一.
- 这就是说, x 接近于零时，(sin x)/x 的极限是 1。
+\end_layout
+
+\begin_layout Plain Layout
+这就是说, x 接近于零时，
+\begin_inset Formula $\frac{\sin x}{x}$
+\end_inset
+
+的极限是 1。
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-来自wiki
+函数的极限
 \end_layout
 
 \end_inset
@@ -22330,7 +22431,10 @@ status open
 \end_layout
 
 \begin_layout Subsection
-x与无穷大的关系
+\begin_inset Formula $x$
+\end_inset
+
+与无穷大的关系
 \end_layout
 
 \begin_layout Standard
@@ -22546,11 +22650,11 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 \begin_inset Formula $limf(x)=A$
 \end_inset
 
-，$
+，
 \begin_inset Formula $limg(x)=B$
 \end_inset
 
-$，则
+，则
 \begin_inset Formula 
 \[
 lim[f(x)±g(x)]=limf(x)±g(x)=A±B
@@ -23208,7 +23312,11 @@ y'_{x}=y'_{u}*u'_{x}
 \end_layout
 
 \begin_layout Standard
-对于函数$f(x,y)$除了限制自变量
+对于函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+除了限制自变量
 \begin_inset Formula $x,y$
 \end_inset
 
@@ -23228,9 +23336,15 @@ y'_{x}=y'_{u}*u'_{x}
 \end_layout
 
 \begin_layout Standard
-@设条件极值的目标函数为$f(x,y)$，约束条件为$
-\backslash
-varphi (x,y)=0$,拉格朗日乘数法的具体步骤如下： 
+设条件极值的目标函数为
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+，约束条件为
+\begin_inset Formula $\varphi(x,y)=0$
+\end_inset
+
+,拉格朗日乘数法的具体步骤如下： 
 \end_layout
 
 \begin_layout Standard
@@ -26932,7 +27046,11 @@ P(B\setminus A) & = & P(B)-P(A\cap B)
 \begin_inset Formula $\mathcal{A}$
 \end_inset
 
-"的概率是多少？ @ 事件
+"的概率是多少？ 
+\end_layout
+
+\begin_layout Standard
+事件
 \begin_inset Formula $A$
 \end_inset
 
@@ -33723,7 +33841,10 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-y=sin(x)*x
+\begin_inset Formula $y=sin(x)\times x$
+\end_inset
+
+
 \end_layout
 
 \end_inset
