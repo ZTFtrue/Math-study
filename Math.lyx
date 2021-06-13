@@ -138,7 +138,8 @@ Math
 \begin_inset Formula $\sum$
 \end_inset
 
-求和符号; 例如
+求和符号; 对同一类各项求和.
+ 例如
 \begin_inset Formula $SD=\sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_{i}-\mu)^{2}}(\mu\text{为平均值{\displaystyle \overline{x}})}$
 \end_inset
 
@@ -292,7 +293,8 @@ Math
 \series bold
 假命题
 \series default
-(false proposition)。
+(false proposition).
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -784,7 +786,8 @@ Math
 \begin_inset Formula $\lnot p$
 \end_inset
 
-是真命题。
+是真命题.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -927,11 +930,13 @@ Math
 \end_layout
 
 \begin_layout Standard
-基本的数学概念, 它是集合论的研究对象, 指具有某种特定性质的事物的总体, (在最原始的集合论─朴素集合论─中的定义, 集合就是"一堆东西”。)
+基本的数学概念, 它是集合论的研究对象, 指具有某种特定性质的事物的总体, (在最原始的集合论─朴素集合论─中的定义, 集合就是"一堆东西”.
+ )
 \end_layout
 
 \begin_layout Standard
-集合里的事物("东西”), 叫作元素。
+集合里的事物("东西”), 叫作元素.
+ 
 \begin_inset Formula $x$
 \end_inset
 
@@ -943,13 +948,18 @@ Math
 \begin_inset Formula $x\in A$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
-简单来说, 所谓的一个集合, 就是将数个对象归类而分成为一个或数个形态各异的大小整体。 一般来讲, 集合是具有某种特性的事物的整体, 或是一些确认对象的汇集。构
-成集合的事物或对象称作元素或是成员。集合的元素可以是任何事物, 可以是人, 可以是物, 也可以是字母或数字等。在数学交流当中为了方便, 集合会有一些别名。比如：
-族、系　通常指它的元素也是一些集合。 
+简单来说, 所谓的一个集合, 就是将数个对象归类而分成为一个或数个形态各异的大小整体.
+  一般来讲, 集合是具有某种特性的事物的整体, 或是一些确认对象的汇集.
+ 构成集合的事物或对象称作元素或是成员.
+ 集合的元素可以是任何事物, 可以是人, 可以是物, 也可以是字母或数字等.
+ 在数学交流当中为了方便, 集合会有一些别名.
+ 比如：族、系　通常指它的元素也是一些集合.
+  
 \end_layout
 
 \begin_layout Section
@@ -977,7 +987,8 @@ Math
 \begin_inset Formula ${\displaystyle \mathbf{A,B,C,D,X}}$
 \end_inset
 
-等大写字母来表示。当元素
+等大写字母来表示.
+ 当元素
 \begin_inset Formula ${\displaystyle a}$
 \end_inset
 
@@ -989,7 +1000,8 @@ Math
 \begin_inset Formula ${\displaystyle a\in\mathbf{A}}$
 \end_inset
 
-。当元素
+.
+ 当元素
 \begin_inset Formula ${\displaystyle a}$
 \end_inset
 
@@ -1001,7 +1013,8 @@ Math
 \begin_inset Formula ${\displaystyle a\not\in\mathbf{A}}$
 \end_inset
 
-。如果 
+.
+ 如果 
 \begin_inset Formula ${\displaystyle \mathbf{A,B}}$
 \end_inset
 
@@ -1009,7 +1022,8 @@ Math
 \begin_inset Formula ${\displaystyle \mathbf{A=B}}$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -1077,8 +1091,9 @@ Math
 \end_layout
 
 \begin_layout Standard
-一个集合中, 每个元素的地位都是相同的, 元素之间是无序的。集合上可以定义序关系, 定义了序关系后, 元素之间就可以按照序关系排序。但就集合本身的特性而言,
- 元素之间没有必然的序 
+一个集合中, 每个元素的地位都是相同的, 元素之间是无序的.
+ 集合上可以定义序关系, 定义了序关系后, 元素之间就可以按照序关系排序.
+ 但就集合本身的特性而言, 元素之间没有必然的序 
 \end_layout
 
 \begin_layout Itemize
@@ -1086,8 +1101,9 @@ Math
 \end_layout
 
 \begin_layout Standard
-一个集合中, 任何两个元素都认为是不相同的, 即每个元素只能出现一次。有时需要对同一元素出现多次的情形进行刻画, 可以使用多重集, 其中的元素允许出现多次。
- 
+一个集合中, 任何两个元素都认为是不相同的, 即每个元素只能出现一次.
+ 有时需要对同一元素出现多次的情形进行刻画, 可以使用多重集, 其中的元素允许出现多次.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -1095,7 +1111,8 @@ Math
 \end_layout
 
 \begin_layout Standard
-给定一个集合, 任给一个元素, 该元素或者属于或者不属于该集合, 二者必居其一, 不允许有模棱两可的情况出现。 
+给定一个集合, 任给一个元素, 该元素或者属于或者不属于该集合, 二者必居其一, 不允许有模棱两可的情况出现.
+  
 \end_layout
 
 \begin_layout Section
@@ -1119,7 +1136,8 @@ Math
 \begin_inset Formula ${\displaystyle a\in B\therefore A\subseteq B}$
 \end_inset
 
-。则称
+.
+ 则称
 \begin_inset Formula ${\displaystyle A}$
 \end_inset
 
@@ -1171,7 +1189,8 @@ Math
 \begin_inset Formula ${\displaystyle B\nsupseteq A}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1380,7 +1399,8 @@ a(b+c)=ab+ac
 \begin_inset Formula $60$
 \end_inset
 
-的平方, 也都是正规数。 
+的平方, 也都是正规数.
+  
 \end_layout
 
 \begin_layout Standard
@@ -1396,19 +1416,23 @@ a(b+c)=ab+ac
 \begin_inset Formula $5$
 \end_inset
 
-, 这是k-光滑数中的一个特例, k-光滑数是指其素因数都小于等于k的整数。
+, 这是k-光滑数中的一个特例, k-光滑数是指其素因数都小于等于k的整数.
+ 
 \end_layout
 
 \begin_layout Standard
-在巴比伦数学中, 60乘幂的约数称为正规数或是60正规数, 因为巴比伦数学是使用六十进制, 因此这类数字格外的重要。
+在巴比伦数学中, 60乘幂的约数称为正规数或是60正规数, 因为巴比伦数学是使用六十进制, 因此这类数字格外的重要.
+ 
 \end_layout
 
 \begin_layout Standard
-在计算机科学, 60乘幂的约数称为汉明数(Hamming numbers), 得名自数学家理查德·卫斯里·汉明, 他提出一个用电脑依序找出60乘幂的约数的算法。
+在计算机科学, 60乘幂的约数称为汉明数(Hamming numbers), 得名自数学家理查德·卫斯里·汉明, 他提出一个用电脑依序找出60乘幂的约数的算法.
+ 
 \end_layout
 
 \begin_layout Standard
-在音乐理论中,出现在五限 正调中的音调比率中。
+在音乐理论中,出现在五限 正调中的音调比率中.
+ 
 \end_layout
 
 \begin_layout Section
@@ -1616,7 +1640,8 @@ status open
 \series bold
 欧氏除法算式
 \series default
-)。 
+).
+  
 \end_layout
 
 \begin_layout Standard
@@ -1795,7 +1820,8 @@ N=m_{1}...m_{k}
 \series bold
 思考
 \series default
-: 找出1~100 中的全部素数。 
+: 找出1~100 中的全部素数.
+  
 \end_layout
 
 \begin_layout Standard
@@ -1843,7 +1869,8 @@ N=m_{1}...m_{k}
 \begin_inset Formula $(a,b)$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1863,7 +1890,8 @@ N=m_{1}...m_{k}
 \series bold
 穷举法
 \series default
-：分别列出两整数的所有约数, 并找出最大的公约数。
+：分别列出两整数的所有约数, 并找出最大的公约数.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -1871,7 +1899,8 @@ N=m_{1}...m_{k}
 \series bold
 素因数分解
 \series default
-：分别列出两数的素因数分解式, 并计算共同项的乘积。 
+：分别列出两数的素因数分解式, 并计算共同项的乘积.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -1879,7 +1908,8 @@ N=m_{1}...m_{k}
 \series bold
 短除法
 \series default
-：两数除以其共同素因数, 直到两数互素时, 所有除数的乘积即为最大公约数。
+：两数除以其共同素因数, 直到两数互素时, 所有除数的乘积即为最大公约数.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -1903,7 +1933,8 @@ N=m_{1}...m_{k}
 \begin_inset Formula ${\displaystyle \gcd(a,b)}$
 \end_inset
 
-的约数。 
+的约数.
+  
 \end_layout
 
 \begin_layout Standard
@@ -1919,7 +1950,8 @@ N=m_{1}...m_{k}
 \end_layout
 
 \begin_layout Standard
-关于最大公因数,有一条重要的性质,这条性质在求解一次同余方程和不定方程时经常要用到。
+关于最大公因数,有一条重要的性质,这条性质在求解一次同余方程和不定方程时经常要用到.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2494,7 +2526,8 @@ ab=(a,b)[a.b]m
 \begin_inset Formula $n^{m}$
 \end_inset
 
- n为底数, m为指数。n的m次幂、n的m次方
+ n为底数, m为指数.
+ n的m次幂、n的m次方
 \end_layout
 
 \begin_layout Enumerate
@@ -2627,7 +2660,8 @@ ab=(a,b)[a.b]m
 \begin_inset Formula $a"(a>1,是无理数)$
 \end_inset
 
-是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居。
+是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2856,7 +2890,8 @@ literal "false"
 \begin_inset Formula $x,y，x+y=y+x$
 \end_inset
 
-。若该集内存在一个元素
+.
+ 若该集内存在一个元素
 \begin_inset Formula $0$
 \end_inset
 
@@ -2864,7 +2899,8 @@ literal "false"
 \begin_inset Formula $x，x+0=0+x=x$
 \end_inset
 
-, 则此元素是唯一的。如果对于一个给定的x, 存在一个
+, 则此元素是唯一的.
+ 如果对于一个给定的x, 存在一个
 \begin_inset Formula $x'$
 \end_inset
 
@@ -2880,7 +2916,8 @@ literal "false"
 \begin_inset Formula $x$
 \end_inset
 
-的加法逆元。 
+的加法逆元.
+  
 \end_layout
 
 \begin_layout Standard
@@ -2888,7 +2925,8 @@ literal "false"
 \begin_inset Formula $n$
 \end_inset
 
-, 存在加法逆元(英语：Additive Inverse, 又称相反数), 其与n的和为零(加法单位元)。
+, 存在加法逆元(英语：Additive Inverse, 又称相反数), 其与n的和为零(加法单位元).
+ 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2896,7 +2934,8 @@ literal "false"
 \begin_inset Formula $-n$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -2920,8 +2959,12 @@ literal "false"
 \begin_inset Formula ${\displaystyle {\displaystyle x^{-1}}}$
 \end_inset
 
-。 在抽象代数中, 倒数所对应的抽象化概念是乘法群的某个元素的"乘法逆”, 也就是相对于群中"乘法”运算的逆元素。注意这个名词只当相应的群中的运算被称为"乘法”
-后才使用。如果群中的运算被称为"加法”, 那么同样的概念称为"加法逆”。乘法逆的具体定义可以参见群的逆元素概念。 负倒数 
+.
+  在抽象代数中, 倒数所对应的抽象化概念是乘法群的某个元素的"乘法逆”, 也就是相对于群中"乘法”运算的逆元素.
+ 注意这个名词只当相应的群中的运算被称为"乘法”后才使用.
+ 如果群中的运算被称为"加法”, 那么同样的概念称为"加法逆”.
+ 乘法逆的具体定义可以参见群的逆元素概念.
+  负倒数 
 \end_layout
 
 \begin_layout Standard
@@ -2933,7 +2976,9 @@ literal "false"
 \begin_inset Formula ${\displaystyle -x^{-1}}$
 \end_inset
 
-。一个实数的倒数和其负倒数是相反数, 0没有倒数或负倒数。 
+.
+ 一个实数的倒数和其负倒数是相反数, 0没有倒数或负倒数.
+  
 \end_layout
 
 \begin_layout Section
@@ -2952,13 +2997,16 @@ literal "false"
 \begin_inset Formula $\frac{n!}{k!(n-k)!}$
 \end_inset
 
-。这个公式也称二项式公式或二项恒等式。使用求和符号, 可以把它写作
+.
+ 这个公式也称二项式公式或二项恒等式.
+ 使用求和符号, 可以把它写作
 \begin_inset Formula $(x+y)^{n}=\sum_{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum_{k=0}^{n}{n \choose k}x^{k}y^{n-k}$
 \end_inset
 
 .
- 后面的表达式只是将根据 x 与 y 的对称性得出的, 通过比较发现公式中的二项式系数也是对称的。 二项式定理的一个变形是用 1 来代换 y 得到的,
- 所以它只涉及一个变量。在这种形式中, 公式写作
+ 后面的表达式只是将根据 x 与 y 的对称性得出的, 通过比较发现公式中的二项式系数也是对称的.
+  二项式定理的一个变形是用 1 来代换 y 得到的, 所以它只涉及一个变量.
+ 在这种形式中, 公式写作
 \begin_inset Formula 
 \[
 (1+x)^{n}={n \choose 0}x^{0}+{n \choose 1}x^{1}+{n \choose 2}x^{2}+\cdots+{n \choose {n-1}}x^{n-1}+{n \choose n}x^{n}
@@ -2992,27 +3040,32 @@ literal "false"
 \begin_inset Formula $C_{n}^{m}=C_{n}^{n-m}$
 \end_inset
 
-也可得出。 
+也可得出.
+  
 \end_layout
 
 \begin_layout Standard
 2.
- 杨辉三角每一行的平方和在杨辉三角出现奇数次。
+ 杨辉三角每一行的平方和在杨辉三角出现奇数次.
+ 
 \end_layout
 
 \begin_layout Standard
 3.
- 杨辉三角第2的幂行所有数都是奇数。 
+ 杨辉三角第2的幂行所有数都是奇数.
+  
 \end_layout
 
 \begin_layout Standard
 4.
- 杨辉三角每一行的和是2的幂。 
+ 杨辉三角每一行的和是2的幂.
+  
 \end_layout
 
 \begin_layout Standard
 5.
- 第 n 行的数字个数为n个。 
+ 第 n 行的数字个数为n个.
+  
 \end_layout
 
 \begin_layout Standard
@@ -3021,7 +3074,8 @@ literal "false"
 \begin_inset Formula $C_{n-1}^{k-1}$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -3030,17 +3084,21 @@ literal "false"
 \begin_inset Formula $2^{n-1}$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
 8.
  除每行最左侧与最右侧的数字以外, 每个数字等于它的左上方与右上方两个数字之和(也就是说, 第 n 行第k 个数字等于第 n-1 行的k-1 个数字与第
- k 个数字的和)。这是因为有组合恒等式：
+ k 个数字的和).
+ 这是因为有组合恒等式：
 \begin_inset Formula $C_{n+1}^{i+1}=C_{n}^{i}+C_{n}^{i+1}$
 \end_inset
 
-。可用此性质写出整个杨辉三角形。
+.
+ 可用此性质写出整个杨辉三角形.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3093,7 +3151,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-任何大于1的整数总可以分解成素因数乘积的形式,并且, 如果不计分解式中素因数的次序,这种分解式是惟一的。 
+任何大于1的整数总可以分解成素因数乘积的形式,并且, 如果不计分解式中素因数的次序,这种分解式是惟一的.
+  
 \end_layout
 
 \begin_layout Standard
@@ -3656,13 +3715,16 @@ a\mod b=a-b\times\lfloor a/y\rfloor,y\neq0
 \end_layout
 
 \begin_layout Standard
-数学上, 同余(英语：congruence modulo, 符号：≡)是数论中的一种等价关系。当两个整数除以同一个正整数, 若得相同余数, 则二整数
+数学上, 同余(英语：congruence modulo, 符号：≡)是数论中的一种等价关系.
+ 当两个整数除以同一个正整数, 若得相同余数, 则二整数
 \series bold
 \color orange
 同余
 \series default
 \color inherit
-。同余是抽象代数中的同余关系的原型。最先引用同余的概念与"
+.
+ 同余是抽象代数中的同余关系的原型.
+ 最先引用同余的概念与"
 \begin_inset Formula $\equiv$
 \end_inset
 
@@ -3724,7 +3786,8 @@ a\mod b=a-b\times\lfloor a/y\rfloor,y\neq0
 \begin_inset Formula $\equiv$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4482,7 +4545,8 @@ a & \equiv & a_{n}(-1)^{n}+a_{n-1}(-1)^{n-1}+\cdots+a_{1}(-1)^{1}+a_{0}\\
 \begin_inset Formula $\overline{a}_{n}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4501,7 +4565,8 @@ a & \equiv & a_{n}(-1)^{n}+a_{n-1}(-1)^{n-1}+\cdots+a_{1}(-1)^{1}+a_{0}\\
 \begin_inset Formula $[a]$
 \end_inset
 
-。 并把
+.
+  并把
 \begin_inset Formula $a$
 \end_inset
 
@@ -6161,8 +6226,8 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \end_layout
 
 \begin_layout Standard
-余数系统(residue system)亦即模n同余类的代表数的集合, 通常使用的代表数是最小非负整数, 因为它是除法中的应当余数。要注意的是,
- 对于同一个模数n, 不同的
+余数系统(residue system)亦即模n同余类的代表数的集合, 通常使用的代表数是最小非负整数, 因为它是除法中的应当余数.
+ 要注意的是, 对于同一个模数n, 不同的
 \series bold
 同余类
 \series default
@@ -6174,12 +6239,14 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \series bold
 模数n
 \series default
-的一个同余类, 因为模n将整数域划分为互斥区块, 每个区块是一个同余类。 
+的一个同余类, 因为模n将整数域划分为互斥区块, 每个区块是一个同余类.
+  
 \end_layout
 
 \begin_layout Standard
 一个完整余数系统(complete residue system)指的是模n的全部同余类的代表数的集合；因为余数系统中的任二元素不同余于模n,
- 所以它也称为非同余余数的完整系统(英语：complete system of incongruent residues)。例如, 模3有三个同余类
+ 所以它也称为非同余余数的完整系统(英语：complete system of incongruent residues).
+ 例如, 模3有三个同余类
 \begin_inset Formula $[0],[1],[2]$
 \end_inset
 
@@ -6187,11 +6254,13 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \begin_inset Formula $9,12+1,15+2$
 \end_inset
 
-。如果该集合是由每个同余类的最小非负整数所组成, 亦即
+.
+ 如果该集合是由每个同余类的最小非负整数所组成, 亦即
 \begin_inset Formula $0,1,2,...,n-1$
 \end_inset
 
-, 则称该集合为模n的最小余数系统(least residue system)。 
+, 则称该集合为模n的最小余数系统(least residue system).
+  
 \end_layout
 
 \begin_layout Standard
@@ -6199,7 +6268,8 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \begin_inset Formula $\phi(n)$
 \end_inset
 
-, 亦即欧拉函数。例如, 模
+, 亦即欧拉函数.
+ 例如, 模
 \begin_inset Formula $6$
 \end_inset
 
@@ -6211,7 +6281,8 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \begin_inset Formula $7,11$
 \end_inset
 
-。如果模n是质数, 那么它的最小简约余数系统是
+.
+ 如果模n是质数, 那么它的最小简约余数系统是
 \begin_inset Formula $1,2,...,n-1$
 \end_inset
 
@@ -6219,7 +6290,8 @@ p|(1^{n}+2^{n}+…+(p-1)^{n})
 \begin_inset Formula $0$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -6713,7 +6785,8 @@ ax\equiv b(\mod n)
 \begin_inset Formula $a$
 \end_inset
 
-不等于零。
+不等于零.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6744,7 +6817,8 @@ ax\equiv b(\mod n)
 \end_layout
 
 \begin_layout Standard
-因此,要判断一个模的剩余类是不是同余方程的解,只需选取 剩余类中的一个代表元,看它是否使同余式成立即可。
+因此,要判断一个模的剩余类是不是同余方程的解,只需选取 剩余类中的一个代表元,看它是否使同余式成立即可.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6848,7 +6922,8 @@ aj\equiv b(\mod m)
 \begin_inset Formula $(a,n)$
 \end_inset
 
- 个解。
+ 个解.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -7333,12 +7408,14 @@ HASH 取模算法
 \end_layout
 
 \begin_layout Standard
-hash(对象) % N, 结果必定小于N。
+hash(对象) % N, 结果必定小于N.
+ 
 \end_layout
 
 \begin_layout Standard
-如果我们有5个位置放这些对象, 给每个位置编号0、1、2、3、4。使用HASH对象后的结果对5求余, 那么余数一定是0、1、2、3、4, 如果求余的结果为0,
-  我们就把当前对象放在在0号位置；如果余数为1, 则放在1号位置；以此类推, 能够直接判断出对象为于个位置上 
+如果我们有5个位置放这些对象, 给每个位置编号0、1、2、3、4.
+ 使用HASH对象后的结果对5求余, 那么余数一定是0、1、2、3、4, 如果求余的结果为0,  我们就把当前对象放在在0号位置；如果余数为1,
+ 则放在1号位置；以此类推, 能够直接判断出对象为于个位置上 
 \end_layout
 
 \begin_layout Subsubsection
@@ -7761,12 +7838,14 @@ N=m\times n
 \end_layout
 
 \begin_layout Standard
-分类要做到"不重不漏”,分类后再分别对每一类进行计数,最后用分类加法计数原 理求和,得到总数。 
+分类要做到"不重不漏”,分类后再分别对每一类进行计数,最后用分类加法计数原 理求和,得到总数.
+  
 \end_layout
 
 \begin_layout Standard
 分步要做到"步骤完整”完成了所有步骤,恰好完成任务,当然步与步之间要相互独立,分步后再计算每一步的方法数,最后根据分步乘法计数原理,把完成每一步的方法数相乘,得
-到总数。
+到总数.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -8187,7 +8266,8 @@ a-b<0\iff a<b
 \end_layout
 
 \begin_layout Standard
-要比较两个实数的大小,可以考察这两个实数的差。
+要比较两个实数的大小,可以考察这两个实数的差.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -8316,7 +8396,8 @@ a\text{<}b,b<c\iff a<c
 \end_inset
 
 .
- 两个同向不等式相加,所得不等式与原不等式同向。 
+ 两个同向不等式相加,所得不等式与原不等式同向.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -8380,7 +8461,8 @@ a\text{<}b,b<c\iff a<c
 \begin_inset Formula $(x,y)$
 \end_inset
 
-构成的集合称为二元一次不等式(组)的解集,有序数对可以看成直角坐标平面内点的坐标,于是,二元一次不等式(组)的解集就可以看成直角坐标系内的点构成的集合。
+构成的集合称为二元一次不等式(组)的解集,有序数对可以看成直角坐标平面内点的坐标,于是,二元一次不等式(组)的解集就可以看成直角坐标系内的点构成的集合.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -8815,7 +8897,8 @@ a^{2}+b^{2}\geqslant2ab(a,b\in R)
 
 \end_inset
 
-当且仅当ad=bc时,等号成立。
+当且仅当ad=bc时,等号成立.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9085,8 +9168,10 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \end_layout
 
 \begin_layout Standard
-平面直角坐标系是由两条相互垂直、相交于原点的数轴构成的。在平面内, 任何一点的坐标是根据数轴上对应的点的坐标设定的。在平面内, 任何一点与坐标的对应关系,
- 类似于数轴上点与坐标的对应关系。
+平面直角坐标系是由两条相互垂直、相交于原点的数轴构成的.
+ 在平面内, 任何一点的坐标是根据数轴上对应的点的坐标设定的.
+ 在平面内, 任何一点与坐标的对应关系, 类似于数轴上点与坐标的对应关系.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9106,7 +9191,8 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \begin_inset Formula ${\displaystyle IV\ (+,-)}$
 \end_inset
 
-)。象限的编号是按照逆时针方向, 从象限
+).
+ 象限的编号是按照逆时针方向, 从象限
 \begin_inset Formula ${\displaystyle I}$
 \end_inset
 
@@ -9130,7 +9216,8 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \series bold
 极点
 \series default
-的距离来表示。夹角通常为正角,单位取弧度.
+的距离来表示.
+ 夹角通常为正角,单位取弧度.
  距离叫做
 \series bold
 极径
@@ -9212,11 +9299,13 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \end_layout
 
 \begin_layout Standard
-它是二维极坐标系往 z-轴的延伸。添加的第三个坐标 
+它是二维极坐标系往 z-轴的延伸.
+ 添加的第三个坐标 
 \begin_inset Formula ${\displaystyle z}$
 \end_inset
 
- 专门用来表示 P 点离 xy-平面的高低。按照国际标准化组织建立的约定 (ISO 31-11) , 径向距离、方位角、高度, 分别标记为 
+ 专门用来表示 P 点离 xy-平面的高低.
+ 按照国际标准化组织建立的约定 (ISO 31-11) , 径向距离、方位角、高度, 分别标记为 
 \begin_inset Formula ${\displaystyle (\rho,\phi,z)}$
 \end_inset
 
@@ -9240,7 +9329,10 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \begin_inset Formula ${\displaystyle \varphi}$
 \end_inset
 
- 。它可以被视为极坐标系的三维推广。球坐标的概念, 延伸至高维空间, 则称为超球坐标。
+ .
+ 它可以被视为极坐标系的三维推广.
+ 球坐标的概念, 延伸至高维空间, 则称为超球坐标.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9248,7 +9340,8 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \begin_inset Formula ${\displaystyle (r,\theta,\varphi)}$
 \end_inset
 
-。那么, 0 
+.
+ 那么, 0 
 \begin_inset Formula $\leqslant$
 \end_inset
 
@@ -9260,7 +9353,8 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \begin_inset Formula $0\leqslant\varphi\leqslant2\pi$
 \end_inset
 
-是从原点到P点的连线在xy平面的投影线, 与正x轴的夹角。
+是从原点到P点的连线在xy平面的投影线, 与正x轴的夹角.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -9387,7 +9481,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-平面内如果一条直线通过一个圆的圆心,我们也称这条直线与圆正交。
+平面内如果一条直线通过一个圆的圆心,我们也称这条直线与圆正交.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9589,7 +9684,8 @@ status open
 \begin_inset Formula ${\displaystyle GA\cdot GD=GC\cdot GB}$
 \end_inset
 
- 这个乘积, 是 P 的圆幂 h。
+ 这个乘积, 是 P 的圆幂 h.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9616,7 +9712,8 @@ status open
 \begin_inset Formula ${\displaystyle PA\cdot PB=PT^{2}}$
 \end_inset
 
- 这个乘积, 同样是 P 的圆幂 h。
+ 这个乘积, 同样是 P 的圆幂 h.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -9681,7 +9778,8 @@ status open
 
 \begin_layout Standard
 圆锥曲线(英语：conic section), 又称圆锥截痕、圆锥截面、二次平面曲线, 是数学、几何学中通过平切圆锥(严格为一个正圆锥面和一个平面完整相切)得到
-的曲线, 包括圆, 椭圆, 抛物线, 双曲线及一些退化类型。
+的曲线, 包括圆, 椭圆, 抛物线, 双曲线及一些退化类型.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9717,7 +9815,8 @@ status open
 \begin_inset Formula $P$
 \end_inset
 
-的轨迹为圆锥曲线。
+的轨迹为圆锥曲线.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9733,7 +9832,8 @@ status open
 \begin_inset Formula ${\displaystyle e}$
 \end_inset
 
-为离心率。
+为离心率.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -9745,7 +9845,8 @@ status open
 \begin_inset Formula ${\displaystyle \rho=\frac{ed}{1\pm e\cos\theta}}$
 \end_inset
 
-(正负号由所选焦点与定直线所处的位置不同而引起)。 其中
+(正负号由所选焦点与定直线所处的位置不同而引起).
+  其中
 \begin_inset Formula ${\displaystyle \theta}$
 \end_inset
 
@@ -9761,7 +9862,8 @@ status open
 \begin_inset Formula ${\displaystyle x=d}$
 \end_inset
 
-, 即准线到焦点的距离。
+, 即准线到焦点的距离.
+ 
 \begin_inset Formula $(1-e^{2})x^{2}+y^{2}-2pe^{2}x-p^{2}e^{2}=0(\text{其中p是定直线的方程,}x=-p)$
 \end_inset
 
@@ -10857,7 +10959,8 @@ P={M||MF|=d}
 \series bold
 抛物线的轴
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -11063,12 +11166,16 @@ x=2pt^{2},y=2pt
 \end_layout
 
 \begin_layout Standard
-渐伸线(involute)(或称渐开线(evolvent))和渐屈线(evolute)是曲线的微分几何上互为表里的概念。若曲线A是曲线B的渐伸线,
- 曲线B是曲线A的渐屈线。
+渐伸线(involute)(或称渐开线(evolvent))和渐屈线(evolute)是曲线的微分几何上互为表里的概念.
+ 若曲线A是曲线B的渐伸线, 曲线B是曲线A的渐屈线.
+ 
 \end_layout
 
 \begin_layout Standard
-在曲线上选一定点S。有一动点P由S出发沿曲线移动, 选在P的切线上的Q, 使得曲线长SP和直线段长PQ相同。渐伸线就是Q的轨迹。
+在曲线上选一定点S.
+ 有一动点P由S出发沿曲线移动, 选在P的切线上的Q, 使得曲线长SP和直线段长PQ相同.
+ 渐伸线就是Q的轨迹.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11219,7 +11326,10 @@ x=2pt^{2},y=2pt
 \end_layout
 
 \begin_layout Standard
-在数学中, 摆线(cycloid)被定义为, 一个圆在一条直线上滚动时, 圆边界上一定点所形成的轨迹。它是一般旋轮线的一种。摆线亦称圆滚线(平摆线,旋轮线)。
+在数学中, 摆线(cycloid)被定义为, 一个圆在一条直线上滚动时, 圆边界上一定点所形成的轨迹.
+ 它是一般旋轮线的一种.
+ 摆线亦称圆滚线(平摆线,旋轮线).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11417,7 +11527,8 @@ y=DM=AC=AB-CB=r-r\cos\varphi)
 \begin_inset Formula $\frac{1}{n+1}$
 \end_inset
 
-倍的圆在其内部滚动, 则圆周上的一定点在滚动时划出的轨迹就是一条内摆线(圆内螺线)。
+倍的圆在其内部滚动, 则圆周上的一定点在滚动时划出的轨迹就是一条内摆线(圆内螺线).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11548,7 +11659,8 @@ literal "false"
 \begin_inset Formula $\frac{1}{3}$
 \end_inset
 
-)。
+).
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -11560,7 +11672,8 @@ literal "false"
 \begin_inset Formula $\frac{1}{n-1}$
 \end_inset
 
-倍的圆在上滚动, 则圆周上的一定点在滚动时划出的轨迹就是一条外摆线。
+倍的圆在上滚动, 则圆周上的一定点在滚动时划出的轨迹就是一条外摆线.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -11622,7 +11735,8 @@ https://commons.wikimedia.org/w/index.php?curid=12002364
 \end_layout
 
 \begin_layout Standard
-肾形线:肾形线亦是外摆线的一种, 其n为3。
+肾形线:肾形线亦是外摆线的一种, 其n为3.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -12329,7 +12443,8 @@ S=\sqrt{p(p-a)(p-b)(p-c)}(\text{其\text{中}}p=\frac{a+b+c}{2})
 \end_layout
 
 \begin_layout Standard
-以上三角函数值的正负由所在的象限决定。 
+以上三角函数值的正负由所在的象限决定.
+  
 \end_layout
 
 \begin_layout Subsubsection
@@ -12788,7 +12903,8 @@ r_{1}P\rightarrow P'
 \begin_inset Formula $P'$
 \end_inset
 
-。我们把这个映射称为平面
+.
+ 我们把这个映射称为平面
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -12900,7 +13016,8 @@ p_{1}=P\rightarrow P'
 旋转变换
 \series default
 \color inherit
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -12909,7 +13026,8 @@ p_{1}=P\rightarrow P'
 \end_inset
 
 的旋转变换把平面上的所有点映到它自身,这个映射使整个平面上的每个点都保持不动,所以称为恒等变换 ( identity transformation
- )。
+ ).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -14335,7 +14453,8 @@ S(K)中的变换的合成满足结合律;
 \end_layout
 
 \begin_layout Standard
-例如下表列出了正三角形的对称变换和相应顶点的变换。
+例如下表列出了正三角形的对称变换和相应顶点的变换.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15058,7 +15177,8 @@ x_{1}+x_{2},x_{1}x_{2}x_{3}
 对称多项式
 \series default
 \color inherit
-。
+.
+ 
 \end_layout
 
 \begin_layout Section
@@ -15667,9 +15787,9 @@ G的乘法满足结合律,即对任意的
 \end_layout
 
 \begin_layout Standard
-过空间某定点O(原点)作三条互相垂直的数轴(它们都以O为原点, 通常取相同的长度单位), 分别称为x轴、y轴和z轴。每两轴组成的面称为坐标平面(xOy,yOz,
-xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间两点P(x1,y1,z1), P2距离:|P1P2|=(x1-x2)^2+()+()
- 
+过空间某定点O(原点)作三条互相垂直的数轴(它们都以O为原点, 通常取相同的长度单位), 分别称为x轴、y轴和z轴.
+ 每两轴组成的面称为坐标平面(xOy,yOz,xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限.
+ 空间两点P(x1,y1,z1), P2距离:|P1P2|=(x1-x2)^2+()+() 
 \end_layout
 
 \begin_layout Section
@@ -15689,8 +15809,8 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \end_layout
 
 \begin_layout Standard
-到定点M0(x0,)的距离等于定长R(R>0)的动点的轨迹称为球面, M0 称为球心,R为半径。设M为球面上的任意一点, 则|MM0|^2=R^2,于是以M0为
-球心, R为半径的球面方程为(x , 如果球心在原点
+到定点M0(x0,)的距离等于定长R(R>0)的动点的轨迹称为球面, M0 称为球心,R为半径.
+ 设M为球面上的任意一点, 则|MM0|^2=R^2,于是以M0为球心, R为半径的球面方程为(x , 如果球心在原点
 \begin_inset Formula $x^{2}+y^{2}+z^{2}=R^{2}$
 \end_inset
 
@@ -15714,7 +15834,8 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \series bold
 母线
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Subsubsection
@@ -15730,7 +15851,8 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \series bold
 定直线l
 \series default
-旋转而形成的曲面称为旋转曲面, 曲线c称为母线, 定直线l称为旋转轴。 
+旋转而形成的曲面称为旋转曲面, 曲线c称为母线, 定直线l称为旋转轴.
+  
 \end_layout
 
 \begin_layout Paragraph
@@ -15778,7 +15900,8 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \series bold
 三面角
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15798,11 +15921,13 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \series bold
 三面角的二面角
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
-一个三面角可以用它的顶点的字母来表示, 例如"三面角S”；或在顶点的字母之后加一短划, 并顺次写上每一条棱上的一个字母, 例如"三面角S-ABC”。
+一个三面角可以用它的顶点的字母来表示, 例如"三面角S”；或在顶点的字母之后加一短划, 并顺次写上每一条棱上的一个字母, 例如"三面角S-ABC”.
+ 
 \end_layout
 
 \begin_layout Section
@@ -15830,7 +15955,8 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \end_layout
 
 \begin_layout Standard
-指上下底面平行且全等, 侧棱平行且相等的封闭几何体。若棱柱的底面为
+指上下底面平行且全等, 侧棱平行且相等的封闭几何体.
+ 若棱柱的底面为
 \begin_inset Formula $n$
 \end_inset
 
@@ -15838,7 +15964,9 @@ xOz), 三个坐标平面把空间分成八个部分, 称为八个挂限。空间
 \series bold
 n-棱柱
 \series default
-。如三棱柱就是底面为三角形的棱柱。
+.
+ 如三棱柱就是底面为三角形的棱柱.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15895,7 +16023,8 @@ n-棱柱
 \series bold
 侧棱
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -15903,7 +16032,8 @@ n-棱柱
 \series bold
 顶点
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -15911,7 +16041,8 @@ n-棱柱
 \series bold
 高
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -15919,7 +16050,8 @@ n-棱柱
 \series bold
 对角面
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -15927,11 +16059,13 @@ n-棱柱
 \end_layout
 
 \begin_layout Standard
-当一个棱锥被平行于它的底面的一个平面所截后, 截面与底面之间的几何形体就是棱台。
+当一个棱锥被平行于它的底面的一个平面所截后, 截面与底面之间的几何形体就是棱台.
+ 
 \end_layout
 
 \begin_layout Standard
-截面也称为棱台的上底面, 原来棱锥的底面称为下底面。 
+截面也称为棱台的上底面, 原来棱锥的底面称为下底面.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -16101,7 +16235,8 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-这时,对于球面上的任意一点,均可得到与它对应的一个赤道;对于球面上的赤道,均可得到与它对应的两个极点。 
+这时,对于球面上的任意一点,均可得到与它对应的一个赤道;对于球面上的赤道,均可得到与它对应的两个极点.
+  
 \end_layout
 
 \begin_layout Standard
@@ -16130,7 +16265,8 @@ v-e+f=2
 \begin_inset Formula $L_{A}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -16886,7 +17022,8 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-于是,在球面上就产生了一些与欧氏平面几何完全不相同的定理, 在欧氏平行公理不成立的情况下,推导出来的所有定理及其他结果所组成的几何体系, 我们称之为非欧几何。
+于是,在球面上就产生了一些与欧氏平面几何完全不相同的定理, 在欧氏平行公理不成立的情况下,推导出来的所有定理及其他结果所组成的几何体系, 我们称之为非欧几何.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17063,7 +17200,8 @@ v-e+f=2
 \begin_inset Text
 
 \begin_layout Plain Layout
-平面等腰三角形(球面“等腰三角形”)的两底角相等,两腰对应相等。
+平面等腰三角形(球面“等腰三角形”)的两底角相等,两腰对应相等.
+ 
 \end_layout
 
 \end_inset
@@ -17206,7 +17344,8 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-在球面上,大圆具有直线在平面上的一些最基本的性质。
+在球面上,大圆具有直线在平面上的一些最基本的性质.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17216,7 +17355,8 @@ v-e+f=2
 
 \begin_layout Standard
 在球面上,如果我们把大圆作为“直线”,那么欧氏平行公理就不正确, 我们把这样改变后的结论称为非欧(双曲)平行公理,由双曲平行公理成立的情况下,推导出来的所有定理
-所组成的几何体系称为双曲几何。 
+所组成的几何体系称为双曲几何.
+  
 \end_layout
 
 \begin_layout Standard
@@ -17228,9 +17368,10 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-几何中, 庞加莱圆盘模型(Poincaré disk model), 也叫共形圆盘模型(conformal disk model), 是一个 n-维双曲几何模型
-。几何中的点对应到 n 维圆盘(或球)上的点, 几何中的“直线”(准确地说是测地线)对应到任意垂直于圆盘边界的圆弧或是圆盘的直径。庞加莱圆盘模型、克莱因模型以及
-庞加莱半空间模型, 一起被贝尔特拉米用来证明双曲几何与欧几里得几何的相容性等价。
+几何中, 庞加莱圆盘模型(Poincaré disk model), 也叫共形圆盘模型(conformal disk model), 是一个 n-维双曲几何模型.
+ 几何中的点对应到 n 维圆盘(或球)上的点, 几何中的“直线”(准确地说是测地线)对应到任意垂直于圆盘边界的圆弧或是圆盘的直径.
+ 庞加莱圆盘模型、克莱因模型以及庞加莱半空间模型, 一起被贝尔特拉米用来证明双曲几何与欧几里得几何的相容性等价.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17275,7 +17416,8 @@ v-e+f=2
 双曲平面
 \series default
 \color inherit
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -17441,7 +17583,8 @@ v-e+f=2
 \begin_inset Formula $|\overrightarrow{AB}|$
 \end_inset
 
-,长度为0的向量叫做零向量(zero vector), 记作,长度等于1个单位的向量, 叫做单位向量(unit vector)。
+,长度为0的向量叫做零向量(zero vector), 记作,长度等于1个单位的向量, 叫做单位向量(unit vector).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17514,7 +17657,8 @@ v-e+f=2
 \series bold
 共线向量
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17522,7 +17666,8 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-向量的夹角(Included angle)是对于两个向量而言的概念。对于任意两个给定的向量
+向量的夹角(Included angle)是对于两个向量而言的概念.
+ 对于任意两个给定的向量
 \begin_inset Formula $\overrightarrow{a}与{\displaystyle \overrightarrow{b}}$
 \end_inset
 
@@ -17530,7 +17675,9 @@ v-e+f=2
 \begin_inset Formula $\theta$
 \end_inset
 
- 。由于夹角具有互补性, 因此在不同的出发规定、不同的旋转方向下, 所得夹角亦不同。
+ .
+ 由于夹角具有互补性, 因此在不同的出发规定、不同的旋转方向下, 所得夹角亦不同.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -17684,7 +17831,8 @@ v-e+f=2
 \begin_inset Formula $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a}=\overrightarrow{a}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -17926,11 +18074,13 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \begin_inset Formula $\vec{a}$
 \end_inset
 
- 向量长度的乘积。 数量积被广泛应用于物理中, 如做功就是用力的向量乘位移的向量, 即 
+ 向量长度的乘积.
+  数量积被广泛应用于物理中, 如做功就是用力的向量乘位移的向量, 即 
 \begin_inset Formula $W=\vec{F}\cdot\vec{s}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -18514,7 +18664,8 @@ b_{1} & b_{2}
 \begin_inset Formula $\overrightarrow{OP}$
 \end_inset
 
-称为点P的位置向量。
+称为点P的位置向量.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -18610,7 +18761,8 @@ b_{1} & b_{2}
 \begin_layout Standard
 
 \series bold
-定理: 一个平面内的两条相交直线与另一个平面平行,则这两个平面平行。 
+定理: 一个平面内的两条相交直线与另一个平面平行,则这两个平面平行.
+  
 \end_layout
 
 \begin_layout Standard
@@ -18764,7 +18916,8 @@ p*v=(xa+xb)*v=xa*v+yb*v
 
 \end_inset
 
-,即平面的法线与平面内任一直线垂直。 所以平面
+,即平面的法线与平面内任一直线垂直.
+  所以平面
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -19241,7 +19394,8 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \series bold
 复数
 \series default
-, 其中实部为0的虚数称为纯虚数。而英文imaginary number的另一种定义是可以写作实数与虚数单位
+, 其中实部为0的虚数称为纯虚数.
+ 而英文imaginary number的另一种定义是可以写作实数与虚数单位
 \begin_inset Formula $i$
 \end_inset
 
@@ -19250,11 +19404,14 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \end_layout
 
 \begin_layout Standard
-虚数可对应平面上的纵轴, 与对应平面上横轴的实数同样真实。虚数轴和实数轴构成的平面称复数平面, 复数平面上每一点对应着一个复数(参考向量)。 
+虚数可对应平面上的纵轴, 与对应平面上横轴的实数同样真实.
+ 虚数轴和实数轴构成的平面称复数平面, 复数平面上每一点对应着一个复数(参考向量).
+  
 \end_layout
 
 \begin_layout Standard
-不同的虚数都是不能比较大小的, 虚数或者说虚部不为0的复数不能比较大小。 
+不同的虚数都是不能比较大小的, 虚数或者说虚部不为0的复数不能比较大小.
+  
 \end_layout
 
 \begin_layout Standard
@@ -19289,7 +19446,8 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \begin_inset Formula $i^{2}=-1$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Section
@@ -19432,8 +19590,8 @@ status open
 \end_inset
 
  等.
- 按照这种表示方法, 每一个复数, 有复平面内唯一的一个点和它对应;反过来,复平面内的每一个点,有唯一的一个复数和它对应。由此可知,复数集C和复平面内所有的点所
-组成的集合是一一对应的, 即
+ 按照这种表示方法, 每一个复数, 有复平面内唯一的一个点和它对应;反过来,复平面内的每一个点,有唯一的一个复数和它对应.
+ 由此可知,复数集C和复平面内所有的点所组成的集合是一一对应的, 即
 \end_layout
 
 \begin_layout Standard
@@ -19456,7 +19614,8 @@ status open
 \series bold
 平面向量来表示复数
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -19587,7 +19746,8 @@ status open
 \begin_inset Formula $180$
 \end_inset
 
-度。乘以
+度.
+ 乘以
 \begin_inset Formula $-1$
 \end_inset
 
@@ -19599,7 +19759,8 @@ status open
 \begin_inset Formula $i$
 \end_inset
 
-也就是旋转了 90 度。此时,我们就把乘一次 
+也就是旋转了 90 度.
+ 此时,我们就把乘一次 
 \begin_inset Formula $i$
 \end_inset
 
@@ -19836,9 +19997,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-若对所有 n ∈ Z+ , an+1 ≥ an , 则称数列 ⟨ak⟩ 为"递增数列”。把 ≥ 换成 > , 则称为"严格递增数列”。 若对所有
- n ∈ Z+ , an+1 ≤ an , 则称数列 ⟨ak⟩ 为"递减数列”。把 ≤ 换成 < , 则称为"严格递减数列”。 若对所有 n ∈
- Z+ , an+1 = an , 则称数列 ⟨ak⟩ 为"常数数列”。 
+若对所有 n ∈ Z+ , an+1 ≥ an , 则称数列 ⟨ak⟩ 为"递增数列”.
+ 把 ≥ 换成 > , 则称为"严格递增数列”.
+  若对所有 n ∈ Z+ , an+1 ≤ an , 则称数列 ⟨ak⟩ 为"递减数列”.
+ 把 ≤ 换成 < , 则称为"严格递减数列”.
+  若对所有 n ∈ Z+ , an+1 = an , 则称数列 ⟨ak⟩ 为"常数数列”.
+  
 \end_layout
 
 \begin_layout Paragraph
@@ -19854,7 +20018,8 @@ status open
 \begin_inset Formula $\left\{ a_{k}\right\} $
 \end_inset
 
- 为"有限数列”。 
+ 为"有限数列”.
+  
 \end_layout
 
 \begin_layout Standard
@@ -19866,7 +20031,8 @@ status open
 \begin_inset Formula $\left\{ a_{k}\right\} $
 \end_inset
 
-为"无穷数列”。 
+为"无穷数列”.
+  
 \end_layout
 
 \begin_layout Paragraph
@@ -19887,7 +20053,9 @@ status open
 \end_inset
 
 .
- 若上述极限存在, 则称该数列是"收敛数列”, 且收敛于 L 。 若上述极限不存在, 则称该数列为"发散数列”。
+ 若上述极限存在, 则称该数列是"收敛数列”, 且收敛于 L .
+  若上述极限不存在, 则称该数列为"发散数列”.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -19916,7 +20084,8 @@ status open
 \begin_inset Formula $N$
 \end_inset
 
-称为"上界”。 如果数列收敛,那么数列一定有界
+称为"上界”.
+  如果数列收敛,那么数列一定有界
 \end_layout
 
 \begin_layout Standard
@@ -19936,7 +20105,8 @@ status open
 \begin_inset Formula $\left\{ a_{k}\right\} $
 \end_inset
 
-为"无界数列”。
+为"无界数列”.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -19978,7 +20148,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-斐波那契数列由0和1开始, 之后的斐波那契系数就是由之前的两数相加而得出。首几个斐波那契系数是：
+斐波那契数列由0和1开始, 之后的斐波那契系数就是由之前的两数相加而得出.
+ 首几个斐波那契系数是：
 \end_layout
 
 \begin_layout Standard
@@ -20014,11 +20185,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-0不是第一项, 而是第零项。
+0不是第一项, 而是第零项.
+ 
 \end_layout
 
 \begin_layout Standard
-斐波纳契数也是帕斯卡三角形的每一条红色对角线上数字的和。
+斐波纳契数也是帕斯卡三角形的每一条红色对角线上数字的和.
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "[参考wikipedia]"
@@ -20077,7 +20250,8 @@ literal "false"
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- 收敛于A。记为 
+ 收敛于A.
+ 记为 
 \begin_inset Formula 
 \[
 lim(n→∞)\{a_{n}\}=A
@@ -20101,7 +20275,8 @@ lim(n→∞)\{a_{n}\}=A
 \end_layout
 
 \begin_layout Enumerate
-如果数列有极限, 则数列的极限是唯一的。
+如果数列有极限, 则数列的极限是唯一的.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -20109,7 +20284,8 @@ lim(n→∞)\{a_{n}\}=A
 \begin_inset Formula $lim(n→∞)C=C$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Enumerate
@@ -20667,7 +20843,8 @@ R
 \end_layout
 
 \begin_layout Standard
-如果函数仅包含一个自变量, 所以我们也称之为一元函数。 
+如果函数仅包含一个自变量, 所以我们也称之为一元函数.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -20675,7 +20852,8 @@ R
 \end_layout
 
 \begin_layout Standard
-表达式法, 列表法, 图形法。
+表达式法, 列表法, 图形法.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -21239,7 +21417,8 @@ R
 \begin_inset Formula $a"(a>1,是无理数)$
 \end_inset
 
-是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居。
+是一个确定的实数,有理数指数幂的运算性质同样适用于无理数指数居.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -22188,7 +22367,8 @@ status open
 \begin_inset Formula $y=f(g(x))$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -22313,7 +22493,8 @@ status open
 \begin_inset Formula $y=f(x)$
 \end_inset
 
-联系起来, 利用函数的性质找出零点, 从而求出方程的根。
+联系起来, 利用函数的性质找出零点, 从而求出方程的根.
+ 
 \end_layout
 
 \begin_layout Section
@@ -22395,7 +22576,8 @@ status open
 \end_inset
 
 处取不到值, 因为被零除.
- 所以在这一点函数没有意义。 
+ 所以在这一点函数没有意义.
+  
 \end_layout
 
 \begin_layout Plain Layout
@@ -22415,7 +22597,8 @@ status open
 \begin_inset Formula $\frac{\sin x}{x}$
 \end_inset
 
-的极限是 1。
+的极限是 1.
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -22595,7 +22778,8 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 \begin_inset Formula $x_{0}$
 \end_inset
 
- 处的左右极限都存在且相等。
+ 处的左右极限都存在且相等.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -23450,7 +23634,11 @@ f(\xi)=C\text{ }(a<\xi<b)
 \end_layout
 
 \begin_layout Standard
-设函数y=f(x)在点
+设函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在点
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -23511,15 +23699,29 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $f'(x_{0})$
 \end_inset
 
-,也可记为.
+,也可记为
+\begin_inset Formula $y'|_{x=x_{0}}$
+\end_inset
+
+或
+\begin_inset Formula $\frac{dy}{dx}\left|_{x=x_{0}}\right.$
+\end_inset
+
+或
+\begin_inset Formula $\frac{df(x)}{dx}\left|_{x=x_{0}}\right.$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-导函数简称导数:
-\series default
- 如果函数
+导函数简称导数
+\end_layout
+
+\begin_layout Standard
+如果函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -23531,7 +23733,8 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $f'(x)$
 \end_inset
 
-与之对应, 这样就确定了定义在区间I上的一个函数(可导必定连续, 连续未必可导)。记作
+与之对应, 这样就确定了定义在区间I上的一个函数(可导必定连续, 连续未必可导).
+ 记作
 \begin_inset Formula $f'(x)$
 \end_inset
 
@@ -23539,11 +23742,302 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $y'$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Paragraph
+导数的记法简介:
+\end_layout
+
+\begin_layout Standard
+莱布尼兹的记法:
+\begin_inset Formula $\frac{dy}{dx}$
+\end_inset
+
+, 记号
+\begin_inset Formula ${\displaystyle dx}$
+\end_inset
+
+是一个整体, 
+\begin_inset Formula $dy$
+\end_inset
+
+也是, 
+\begin_inset Formula $\frac{dy}{dx}$
+\end_inset
+
+可以看成一个整体,也可以不严谨地看成
+\begin_inset Formula $dy$
+\end_inset
+
+和
+\begin_inset Formula $dx$
+\end_inset
+
+的比值.
+ 此外，
+\begin_inset Formula $\frac{dy}{dx}$
+\end_inset
+
+表示的是导函数，在某一点
+\begin_inset Formula $x=a$
+\end_inset
+
+ = 的导数则记为:
+\begin_inset Formula 
+\[
+\left.\frac{dy}{dx}\right|_{x=a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+拉格朗日的记法: 
+\begin_inset Formula $f′(x)$
+\end_inset
+
+或
+\begin_inset Formula $y′$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+单侧导数
+\end_layout
+
+\begin_layout Standard
+根据函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+处的导数
+\begin_inset Formula $f'(x)$
+\end_inset
+
+的定义,导数
+\begin_inset Formula 
+\[
+f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
+\]
+
+\end_inset
+
+是一个极限, 而极限存在的充分必要条件是左,右极限都存在且相等.
+ 因此
+\begin_inset Formula $f'(x_{0})$
+\end_inset
+
+存在即
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处可导的充分必要条件是左右极限都存在且相等.
+\end_layout
+
+\begin_layout Standard
+左极限: 
+\begin_inset Formula $\underset{h\rightarrow0^{-}}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+右极限: 
+\begin_inset Formula $\underset{h\rightarrow0^{+}}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这两个极限分别称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处的左导数和右导数，记作
+\begin_inset Formula $f_{-}^{'}(x_{0})$
+\end_inset
+
+及
+\begin_inset Formula $f_{+}^{'}(x_{0})$
+\end_inset
+
+, 即
+\end_layout
+
+\begin_layout Standard
+左导数:
+\begin_inset Formula $f_{-}^{'}(x_{0})=\underset{h\rightarrow0^{-}}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+右导数: 
+\begin_inset Formula $f_{+}^{'}(x_{0})=\underset{h\rightarrow0^{+}}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+左导数和右导数统称为单侧导数.
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在开区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内可导, 且
+\begin_inset Formula $f_{-}^{'}(a)$
+\end_inset
+
+及
+\begin_inset Formula $f_{-}^{'}(b)$
+\end_inset
+
+都存在, 那么就说
+\begin_inset Formula $f(x)$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上
+\series bold
+可导
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+处的左导数
+\begin_inset Formula $f_{-}^{'}(0)=-1$
+\end_inset
+
+, 右导数
+\begin_inset Formula $f_{+}^{'}(0)=1$
+\end_inset
+
+不相等, 所以
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+处
+\series bold
+不可导
+\series default
+.
+\end_layout
+
+\begin_layout Proof
+可导必定连续
+\begin_inset Newline newline
+\end_inset
+
+证明:设函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+点上可导, 即
+\begin_inset Formula ${\displaystyle f'(x_{0})=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}}$
+\end_inset
+
+存在，其中 
+\begin_inset Formula ${\displaystyle \Delta y=f(x_{0}+\Delta x)-f(x_{0})}$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\text{\varDelta y=\frac{\varDelta y}{\varDelta x}\cdot\varDelta x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+所以: 
+\begin_inset Formula $\underset{\varDelta x\rightarrow0}{\lim}\varDelta y=\underset{\varDelta x\rightarrow0}{\lim}(\frac{\varDelta y}{\varDelta x}\cdot\varDelta x)=\underset{\varDelta x\rightarrow0}{\lim}\frac{\varDelta y}{\varDelta x}\cdot\underset{\varDelta x\rightarrow0}{\lim}\varDelta x=f'(x_{0})\cdot0=0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+即函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处连续.
+\end_layout
+
+\begin_layout Standard
+连续未必可导: 例如函数
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Section
-求导方法 
+求导方法
 \end_layout
 
 \begin_layout Enumerate
@@ -23579,7 +24073,8 @@ x相对于
 \begin_inset Formula $x_{0}$
 \end_inset
 
-带入f'(x)即可。
+带入f'(x)即可.
+ 
 \end_layout
 
 \begin_layout Section
@@ -23599,11 +24094,48 @@ x相对于
 \begin_inset Formula $k$
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
 法线(与切线垂直)
+\end_layout
+
+\begin_layout Standard
+曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $M$
+\end_inset
+
+
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处的切线方程为
+\begin_inset Formula $y-y_{0}=f'(x_{0})(x-x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $f'(x)\neq0$
+\end_inset
+
+, 法线的斜率为
+\begin_inset Formula $-\frac{1}{f'(x_{0})}$
+\end_inset
+
+ ,从而法线方程为 
+\begin_inset Formula $y-y_{0}=-\frac{1}{f'(x_{0})}(x-x_{0})$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -23753,6 +24285,66 @@ x相对于
 
 \end_layout
 
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{eqnarray*}
+(u\pm v)' & =\\
+ & = & \underset{\Delta x\rightarrow0}{\lim}\frac{[u(x+\Delta x)\pm v(x+\Delta x)]-[u(x)\pm v(x)]}{\Delta x}\\
+ & = & \underset{\Delta x\rightarrow0}{\lim}\frac{[u(x+\Delta x)-u(x)]\pm[v(x+\Delta x)-v(x)]}{\Delta x}\\
+ & = & \underset{\Delta x\rightarrow0}{\lim}\frac{[u(x+\Delta x)-u(x)]}{\Delta x}\pm\underset{\Delta x\rightarrow0}{\lim}\frac{[v(x+\Delta x)-v(x)]}{\Delta x}\\
+ & = & u'(x)\pm v'(x)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+反函数的求导法则
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $x=f(y)$
+\end_inset
+
+在区间内
+\series bold
+单调
+\series default
+、可导且
+\begin_inset Formula $f'(y)\neq0$
+\end_inset
+
+,那么它的反函数
+\begin_inset Formula $y=f^{-1}(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $I_{x}=\{x|x=f(y),y\in I\}$
+\end_inset
+
+内也可导, 且
+\begin_inset Formula $[f^{-1}(x)]'=\frac{1}{f'(y)}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 复合函数求导
 \end_layout
@@ -23773,12 +24365,338 @@ x相对于
 的导数间的关系为 
 \begin_inset Formula 
 \[
-y'_{x}=y'_{u}*u'_{x}
+y'_{x}=y'_{u}\cdot u'_{x}
 \]
 
 \end_inset
 
-即y对x的导数等于y对u的导数与u对x的导数的乘积。
+或
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}
+\]
+
+\end_inset
+
+即
+\begin_inset Formula $y$
+\end_inset
+
+对
+\begin_inset Formula $x$
+\end_inset
+
+的导数等于
+\begin_inset Formula $y$
+\end_inset
+
+对
+\begin_inset Formula $u$
+\end_inset
+
+的导数与
+\begin_inset Formula $u$
+\end_inset
+
+对
+\begin_inset Formula $x$
+\end_inset
+
+的导数的乘积.
+ 
+\end_layout
+
+\begin_layout Section
+高阶导数
+\end_layout
+
+\begin_layout Standard
+二阶导数: 导数的导数.
+\end_layout
+
+\begin_layout Standard
+一般地,函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的导数
+\begin_inset Formula $y/=f'(x)$
+\end_inset
+
+仍然是
+\begin_inset Formula $x$
+\end_inset
+
+的函数.我们把
+\begin_inset Formula $y'=f'(x)$
+\end_inset
+
+的导数叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的二阶导数,记作
+\begin_inset Formula $y''$
+\end_inset
+
+或
+\begin_inset Formula $\frac{d^{2}y}{dx^{2}}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+y''=(y')'
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\frac{d^{2}y}{dx^{2}}=\frac{d}{dx}(\frac{dy}{dx})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+相应地，把
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的导数
+\begin_inset Formula $f'(x)$
+\end_inset
+
+叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的一阶导数.
+ 
+\end_layout
+
+\begin_layout Standard
+类似地，二阶导数的导数，叫做三阶导数，三阶导数的导数叫做四阶导数……一般地，
+\begin_inset Formula $(n-1)$
+\end_inset
+
+阶导数的导数叫做
+\begin_inset Formula $n$
+\end_inset
+
+阶导数，分别记作
+\begin_inset Formula 
+\[
+y''',y^{(4)},\cdots,y^{n}
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\frac{d^{3}y}{dx^{3}},\frac{d^{4}y}{dx^{4}},\cdots,\frac{d^{n}y}{dx^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 也常说成函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+阶可导.
+ 如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 那么
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+的某一邻域内必定具有全部低于
+\begin_inset Formula $n$
+\end_inset
+
+阶的导数.
+\end_layout
+
+\begin_layout Standard
+二阶及二阶以上的导数统称
+\series bold
+高阶导数
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+高阶导数的计算
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\pm v)=\frac{{\rm d}^{n}}{{\rm d}x^{n}}u\pm\frac{{\rm d}^{n}}{{\rm d}x^{n}}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(Cu)=C\frac{{\rm d}^{n}}{{\rm d}x^{n}}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\cdot v)=\sum_{k=0}^{n}C_{k}^{n}\frac{{\rm d}^{n-k}}{{\rm d}x^{n-k}}u\frac{{\rm d}^{k}}{{\rm d}x^{k}}v$
+\end_inset
+
+(莱布尼兹公式)
+\end_layout
+
+\begin_layout Subsection
+莱布尼茨公式
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $u=u(x)$
+\end_inset
+
+与
+\begin_inset Formula $v=v(x)$
+\end_inset
+
+都在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数,那么显然
+\begin_inset Formula $u(x)+v(x)$
+\end_inset
+
+与
+\begin_inset Formula $u(x)-v(x)$
+\end_inset
+
+也在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 且
+\begin_inset Formula $(u\pm v)^{(n)}=u^{(u)}\pm v^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+对于
+\begin_inset Formula $u(x)\cdot v(x)$
+\end_inset
+
+的
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
+\end_inset
+
+这个公式叫做莱布尼茨公式.
+\end_layout
+
+\begin_layout Standard
+推导: 由
+\begin_inset Formula $(uv)'=u'v+uv'$
+\end_inset
+
+得
+\begin_inset Formula 
+\[
+(uv)''=u''v+2u'v'+uv''
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(uv)'''=u'''v+3u'''v'+3u^{'}v^{''}+uv'''
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用数学归纳法证明得
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+按二项式定理展可以写成(零阶导数理解为函数本身)
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v^{(0)}+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+u^{(0)}v^{(n)}$
+\end_inset
+
+即
+\begin_inset Formula 
+\[
+(u\cdot v)^{n}=\sum_{k=0}^{n}C_{k}^{n}u^{n-k}v^{k}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -23786,7 +24704,8 @@ y'_{x}=y'_{u}*u'_{x}
 \end_layout
 
 \begin_layout Standard
-它是一种在实数域和复数域上近似求解方程的方法。方法使用函数
+它是一种在实数域和复数域上近似求解方程的方法.
+ 方法使用函数
 \begin_inset Formula ${\displaystyle f(x)}$
 \end_inset
 
@@ -23794,11 +24713,13 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula ${\displaystyle f(x)=0}$
 \end_inset
 
-的根。
+的根.
+ 
 \end_layout
 
 \begin_layout Standard
-一般情况二分法求平方根, 牛顿迭代法快速寻找平方根比二分法更快。
+一般情况二分法求平方根, 牛顿迭代法快速寻找平方根比二分法更快.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -23810,7 +24731,8 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula $f(x)$
 \end_inset
 
-的根。
+的根.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -23830,7 +24752,8 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula ${\displaystyle f'(x_{0})}$
 \end_inset
 
-。然后计算穿过点
+.
+ 然后计算穿过点
 \begin_inset Formula ${\displaystyle (x_{0},f(x_{0}))}$
 \end_inset
 
@@ -23881,11 +24804,13 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula ${\displaystyle f(x)=0}$
 \end_inset
 
-的解。因此我们现在可以利用
+的解.
+ 因此我们现在可以利用
 \begin_inset Formula ${\displaystyle x_{1}}$
 \end_inset
 
-开始下一轮迭代。迭代公式可化简为如下所示：
+开始下一轮迭代.
+ 迭代公式可化简为如下所示：
 \end_layout
 
 \begin_layout Standard
@@ -23940,7 +24865,8 @@ y'_{x}=y'_{u}*u'_{x}
 \end_layout
 
 \begin_layout Standard
-牛顿法也被用于求函数的极值。
+牛顿法也被用于求函数的极值.
+ 
 \series bold
 由于函数取极值的点处的导数值为零
 \series default
@@ -23966,8 +24892,59 @@ y'_{x}=y'_{u}*u'_{x}
 隐函数的求导方法
 \end_layout
 
-\begin_layout Section
-高阶导数
+\begin_layout Standard
+一般地,如果变量x和y满足一个方程
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+,在一定条件下,当
+\begin_inset Formula $x$
+\end_inset
+
+取区间内的任一值时,相应地总有满足这方程的唯一的
+\begin_inset Formula $y$
+\end_inset
+
+值存在,那么就说方程
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+在该区间内确定了一个
+\series bold
+隐函数
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+隐函数示例:
+\series bold
+
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把一个隐函数化成显函数,叫做
+\series bold
+隐函数的显化.
+ 
+\series default
+例如从方程
+\series bold
+
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+
+\series default
+ 解出
+\begin_inset Formula $y=\sqrt{x^{2}-1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -24019,15 +24996,18 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula $x,y$
 \end_inset
 
-在其定义域内变化之外, 再无其它任何限制, 称之外无极值条件。 
+在其定义域内变化之外, 再无其它任何限制, 称之外无极值条件.
+  
 \end_layout
 
 \begin_layout Standard
-自变量需要满足一定约束条件(附加条件)的极值问题, 称为条件极值。如
+自变量需要满足一定约束条件(附加条件)的极值问题, 称为条件极值.
+ 如
 \begin_inset Formula $y=f(x,y,z)$
 \end_inset
 
-,当z为可知的值时, 即可转为无极值条件问题。 
+,当z为可知的值时, 即可转为无极值条件问题.
+  
 \end_layout
 
 \begin_layout Section
@@ -24051,7 +25031,8 @@ y'_{x}=y'_{u}*u'_{x}
 \begin_inset Formula $F(x,y,\lambda)=f(x,y)+\lambda\varphi(x,y)$
 \end_inset
 
-, 称为拉格朗日函数, 其中称为拉格朗日乘数。 
+, 称为拉格朗日函数, 其中称为拉格朗日乘数.
+  
 \end_layout
 
 \begin_layout Standard
@@ -24102,7 +25083,8 @@ F'_{\lambda}=\varphi(x,y)=0,
 \begin_inset Formula $z=f(x,y)$
 \end_inset
 
-的极值点, 在实际问题中往往可由其实际定义加以判断。
+的极值点, 在实际问题中往往可由其实际定义加以判断.
+ 
 \end_layout
 
 \begin_layout Section
@@ -24138,7 +25120,9 @@ F'_{\lambda}=\varphi(x,y)=0,
 \begin_inset Formula $P$
 \end_inset
 
-处的去率。 曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小。 曲率的计算公式为
+处的去率.
+  曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小.
+  曲率的计算公式为
 \begin_inset Formula 
 \[
 K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\left|\frac{d\alpha}{ds}\right|=\left|\frac{y''}{(1+y'^{2})^{\frac{3}{2}}}\right|
@@ -24191,7 +25175,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $∞$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Enumerate
@@ -24211,7 +25196,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula ${∞/∞}$
 \end_inset
 
-型)的未定型极限, 在符合定理的条件下, 可以通过对分子及分母分别求导数, 然后再求极限的方法来确定。 
+型)的未定型极限, 在符合定理的条件下, 可以通过对分子及分母分别求导数, 然后再求极限的方法来确定.
+  
 \end_layout
 
 \begin_layout Standard
@@ -24229,18 +25215,20 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $\frac{\infty}{\infty}$
 \end_inset
 
-才可以使用洛必达法则。
+才可以使用洛必达法则.
+ 
 \end_layout
 
 \begin_layout Enumerate
-在极限计算过程中, 无穷小量等价代换和洛必达法则应结合使用, 能用等价代换则先用等价代换, 这样可以简化计算过程。 
+在极限计算过程中, 无穷小量等价代换和洛必达法则应结合使用, 能用等价代换则先用等价代换, 这样可以简化计算过程.
+  
 \end_layout
 
 \begin_layout Chapter
 微分
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
 若函数
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -24261,7 +25249,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $y=f(x)$
 \end_inset
 
-在点x处的微分, 记为
+在点
+\begin_inset Formula $x$
+\end_inset
+
+处的微分, 记为
 \begin_inset Formula $dy$
 \end_inset
 
@@ -24274,11 +25266,10 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
  .
- 
 \end_layout
 
 \begin_layout Section
-微分的几何意义 
+微分的几何意义
 \end_layout
 
 \begin_layout Enumerate
@@ -24302,7 +25293,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $M_{0}$
 \end_inset
 
-处切线的纵坐标的改变量。 
+处切线的纵坐标的改变量.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -24339,11 +25331,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
-导数是函数在一点处的变化率, 代表曲线上相应点处切线的斜率, 而微分是函数在一点处由自变量的增量引起的函数值变化量的主要部分。
+导数是函数在一点处的变化率, 代表曲线上相应点处切线的斜率, 而微分是函数在一点处由自变量的增量引起的函数值变化量的主要部分.
 \end_layout
 
 \begin_layout Section
-全微分 
+全微分
 \end_layout
 
 \begin_layout Subsection
@@ -24408,7 +25400,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $(\xi,f(\xi))$
 \end_inset
 
-处的切线平行于x轴。 
+处的切线平行于x轴.
+  
 \end_layout
 
 \begin_layout Standard
@@ -24428,7 +25421,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $\xi$
 \end_inset
 
-可以不唯一。 
+可以不唯一.
+  
 \end_layout
 
 \begin_layout Standard
@@ -24491,7 +25485,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $(b,f(b))$
 \end_inset
 
-的直线的斜率相等。
+的直线的斜率相等.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -24596,11 +25591,13 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
-如果一个函数有原函数, 则原函数不是唯一的, 而是有无穷多个。 
+如果一个函数有原函数, 则原函数不是唯一的, 而是有无穷多个.
+  
 \end_layout
 
 \begin_layout Standard
-一般地, 连续函数一定有原函数。 如果函数
+一般地, 连续函数一定有原函数.
+  如果函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -24632,7 +25629,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $C$
 \end_inset
 
-为任意常数。 
+为任意常数.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -24700,7 +25698,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $C$
 \end_inset
 
-称为积分常数。 
+称为积分常数.
+  
 \end_layout
 
 \begin_layout Standard
@@ -24720,7 +25719,8 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $C$
 \end_inset
 
-即可。 
+即可.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -25324,7 +26324,8 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \end_layout
 
 \begin_layout Standard
-微分是函数在一点处由自变量的增量引起的函数值变化量的主要部分。
+微分是函数在一点处由自变量的增量引起的函数值变化量的主要部分.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25344,7 +26345,8 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \begin_inset Formula $C$
 \end_inset
 
-(由于常数不定, 可以有无数个, 所以叫不定)。 
+(由于常数不定, 可以有无数个, 所以叫不定).
+  
 \end_layout
 
 \begin_layout Standard
@@ -25361,10 +26363,15 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \end_layout
 
 \begin_layout Standard
-标量(英语：scalar), 又称纯量, 是只有大小、没有方向、可用实数表示的一个量。实际上标量就是实数, "标量”这个称法只是为了区别于向量。[1]标量可以是
-负数, 例如温度低于冰点。与之相对, 向量(又称矢量)既有大小, 又有方向。 在物理学中, 标量是在坐标变换下保持不变的物理量。例如, 欧几里得空间中两点间的距
-离在坐标变换下保持不变, 相对论四维时空中时空间隔在坐标变换下保持不变。与此相对的矢量, 其分量在不同的坐标系中有不同的值, 例如速度。标量可被用作定义向量空间
-。
+标量(英语：scalar), 又称纯量, 是只有大小、没有方向、可用实数表示的一个量.
+ 实际上标量就是实数, "标量”这个称法只是为了区别于向量.
+ [1]标量可以是负数, 例如温度低于冰点.
+ 与之相对, 向量(又称矢量)既有大小, 又有方向.
+  在物理学中, 标量是在坐标变换下保持不变的物理量.
+ 例如, 欧几里得空间中两点间的距离在坐标变换下保持不变, 相对论四维时空中时空间隔在坐标变换下保持不变.
+ 与此相对的矢量, 其分量在不同的坐标系中有不同的值, 例如速度.
+ 标量可被用作定义向量空间.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -25495,7 +26502,8 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \end_layout
 
 \begin_layout Standard
-当样本容量不超过100 时,按照数据的多少,常分成5~12组。
+当样本容量不超过100 时,按照数据的多少,常分成5~12组.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25511,8 +26519,8 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \series bold
 众数(Mode)
 \series default
-: 众数是在一组数据中,出现次数最多的数据, 是一组数据中的原数据, 而不是相应的次数, 代表数据的一般水平。 也是一组数据中出现次数最多的数值,
- 有时众数在一组数中有好几个,也可能没有.
+: 众数是在一组数据中,出现次数最多的数据, 是一组数据中的原数据, 而不是相应的次数, 代表数据的一般水平.
+  也是一组数据中出现次数最多的数值, 有时众数在一组数中有好几个,也可能没有.
  如数据2、3、-1、2、1、3中, 2、3都出现了两次, 它们都是这组数据中的众数.
 \end_layout
 
@@ -25560,7 +26568,8 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \end_layout
 
 \begin_layout Standard
-一个较大的标准差, 代表大部分的数值和其平均值之间差异较大；一个较小的标准差, 代表这些数值较接近平均值。
+一个较大的标准差, 代表大部分的数值和其平均值之间差异较大；一个较小的标准差, 代表这些数值较接近平均值.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25607,7 +26616,8 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \end_layout
 
 \begin_layout Standard
-与方差：方差=标准差的平方。
+与方差：方差=标准差的平方.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25615,7 +26625,9 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \series bold
 标准误差
 \series default
-。这里即标准差。 
+.
+ 这里即标准差.
+  
 \end_layout
 
 \begin_layout Standard
@@ -25646,7 +26658,9 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \end_layout
 
 \begin_layout Itemize
-正相关: 自变量增长, 因变量也跟着增长。两个变量变动方向相同, 一个变量由大到小或由小到大变化时, 另一个变量亦由大到小或由小到大变化。
+正相关: 自变量增长, 因变量也跟着增长.
+ 两个变量变动方向相同, 一个变量由大到小或由小到大变化时, 另一个变量亦由大到小或由小到大变化.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -25705,7 +26719,8 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \begin_inset Formula ${\displaystyle \sigma}$
 \end_inset
 
- 等于尺度参数, 决定了分布的幅度。
+ 等于尺度参数, 决定了分布的幅度.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25827,7 +26842,8 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 \begin_inset Formula $3\sigma$
 \end_inset
 
-原则。
+原则.
+ 
 \end_layout
 
 \begin_layout Section
@@ -25847,15 +26863,18 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 \end_layout
 
 \begin_layout Enumerate
-由经验确定回归方程的类型(如我们观察到数据呈线性关系,则选用线性回归方程)。
+由经验确定回归方程的类型(如我们观察到数据呈线性关系,则选用线性回归方程).
+ 
 \end_layout
 
 \begin_layout Enumerate
-按一定规则(如最小二乘法)估计回归方程中的参数。
+按一定规则(如最小二乘法)估计回归方程中的参数.
+ 
 \end_layout
 
 \begin_layout Enumerate
-得出结果后分析残差图是否有异常(如个别数据对应残差过大,残差呈现不随机的规律性等),若存在异常,则检查数据是否有误,或模型是否合适等。
+得出结果后分析残差图是否有异常(如个别数据对应残差过大,残差呈现不随机的规律性等),若存在异常,则检查数据是否有误,或模型是否合适等.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -25867,7 +26886,8 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 \end_layout
 
 \begin_layout Standard
-回归直线方程是根据样本资料通过回归分析所得到的反映一个变量(因变量)对另一个或一组变量(自变量)的回归关系的数学表达式。
+回归直线方程是根据样本资料通过回归分析所得到的反映一个变量(因变量)对另一个或一组变量(自变量)的回归关系的数学表达式.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25875,7 +26895,8 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 \begin_inset Formula $y=bx+a$
 \end_inset
 
-)。
+).
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -26104,7 +27125,8 @@ R^{2}=1-\frac{\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}}{\stackrel[i=1]{n}{
 \end_layout
 
 \begin_layout Standard
-判断两个事件是否有关联, 是根据次数资料判断两类因子彼此相关或相互独立的假设检验。
+判断两个事件是否有关联, 是根据次数资料判断两类因子彼此相关或相互独立的假设检验.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -26279,8 +27301,8 @@ a+b+c+d
 \end_layout
 
 \begin_layout Standard
-若要推断的论述为H1："X与Y有关系”, 可以利用独立性检验来考察两个变量是否有关系, 并且能较精确地给出这种判断的可靠程度。具体的做法是, 由表中的数据算出随
-机变量
+若要推断的论述为H1："X与Y有关系”, 可以利用独立性检验来考察两个变量是否有关系, 并且能较精确地给出这种判断的可靠程度.
+ 具体的做法是, 由表中的数据算出随机变量
 \begin_inset Formula $K^{2}$
 \end_inset
 
@@ -26302,7 +27324,8 @@ a+b+c+d
 \begin_inset Formula $K^{2}$
 \end_inset
 
-的值越大, 说明"X与Y有关系”成立的可能性越大。
+的值越大, 说明"X与Y有关系”成立的可能性越大.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -26641,18 +27664,22 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \end_layout
 
 \begin_layout Standard
-概率论(英语：Probability theory)是集中研究概率及随机现象的数学分支, 是研究随机性或不确定性等现象的数学。概率论主要研究对象为随机事件、随机
-变量以及随机过程。对于随机事件是不可能准确预测其结果的, 然而对于一系列的独立随机事件——例如掷骰子、扔硬币、抽扑克牌以及轮盘等, 会呈现出一定的、可以被用于研
-究及预测的规律, 两个用来描述这些规律的最具代表性的数学结论分别是大数定律和中心极限定理。
+概率论(英语：Probability theory)是集中研究概率及随机现象的数学分支, 是研究随机性或不确定性等现象的数学.
+ 概率论主要研究对象为随机事件、随机变量以及随机过程.
+ 对于随机事件是不可能准确预测其结果的, 然而对于一系列的独立随机事件——例如掷骰子、扔硬币、抽扑克牌以及轮盘等, 会呈现出一定的、可以被用于研究及预测的规律,
+ 两个用来描述这些规律的最具代表性的数学结论分别是大数定律和中心极限定理.
+ 
 \end_layout
 
 \begin_layout Standard
 作为统计学的数学基础, 概率论对诸多涉及大量数据定量分析的人类活动极为重要, 概率论的方法同样适用于其他方面, 例如是对只知道系统部分状态的复杂系统的描述——统
-计力学, 而二十世纪物理学的重大发现是以量子力学所描述的原子尺度上物理现象的概率本质。
+计力学, 而二十世纪物理学的重大发现是以量子力学所描述的原子尺度上物理现象的概率本质.
+ 
 \end_layout
 
 \begin_layout Standard
-数学家和精算师认为概率是在0至1闭区间内的数字, 指定给一发生与失败是随机的"事件”。概率 
+数学家和精算师认为概率是在0至1闭区间内的数字, 指定给一发生与失败是随机的"事件”.
+ 概率 
 \begin_inset Formula $P(A)$
 \end_inset
 
@@ -26660,7 +27687,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula $A$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -26688,7 +27716,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula ${\displaystyle \frac{P(B\cap A)}{P(B)}}$
 \end_inset
 
-。若
+.
+ 若
 \begin_inset Formula ${\displaystyle B}$
 \end_inset
 
@@ -26708,7 +27737,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula $B$
 \end_inset
 
-为独立事件。且
+为独立事件.
+ 且
 \begin_inset Formula $A$
 \end_inset
 
@@ -26728,7 +27758,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula ${\displaystyle P(A\cap B)=P(A)P(B)}$
 \end_inset
 
-”中看出。
+”中看出.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -26740,7 +27771,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \series bold
 随机变量的概率分布
 \series default
-两种。
+两种.
+ 
 \end_layout
 
 \begin_layout Section
@@ -26752,7 +27784,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \end_layout
 
 \begin_layout Standard
-在一次随机试验中可能发生的不能再细分的结果被称为基本事件, 或者称为单位事件, 用E表示。 
+在一次随机试验中可能发生的不能再细分的结果被称为基本事件, 或者称为单位事件, 用E表示.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -26764,7 +27797,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula $S$
 \end_inset
 
-来表示。 
+来表示.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -26784,7 +27818,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula ${\displaystyle A,B,C\cdots}$
 \end_inset
 
-表示。例如在掷两个骰子的随机试验中, 设随机事件 
+表示.
+ 例如在掷两个骰子的随机试验中, 设随机事件 
 \begin_inset Formula $A=“获得的点数和大于10”$
 \end_inset
 
@@ -26796,7 +27831,8 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 \begin_inset Formula ${\displaystyle A=\{(5,6),(6,5),(6,6)\}}$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -26875,7 +27911,8 @@ S\subset S
 
 \begin_layout Standard
 极大似然原理的直观想法是, 一个随机试验如有若干个可能的结果A, B, C, ...
- , 若在一次试验中, 结果A出现了, 那么可以认为实验条件对A的出现有利, 也即出现的概率P(A)较大。
+ , 若在一次试验中, 结果A出现了, 那么可以认为实验条件对A的出现有利, 也即出现的概率P(A)较大.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -26940,7 +27977,8 @@ S\subset S
 \series bold
  任何事件都包含不可能事件
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -27115,7 +28153,8 @@ S\subset S
 \begin_inset Formula $A$
 \end_inset
 
-的概率。 .
+的概率.
+  .
 \end_layout
 
 \begin_layout Subsection
@@ -27197,8 +28236,9 @@ S\subset S
 \end_layout
 
 \begin_layout Standard
-传统概率的定义是由法国数学家拉普拉斯 ( Laplace ) 提出的。如果一个随机试验所包含的单位事件是有限的, 且每个单位事件发生的可能性均相等,
- 则这个随机试验叫做拉普拉斯试验。在拉普拉斯试验中, 事件
+传统概率的定义是由法国数学家拉普拉斯 ( Laplace ) 提出的.
+ 如果一个随机试验所包含的单位事件是有限的, 且每个单位事件发生的可能性均相等, 则这个随机试验叫做拉普拉斯试验.
+ 在拉普拉斯试验中, 事件
 \begin_inset Formula $A$
 \end_inset
 
@@ -27242,21 +28282,26 @@ P(A)=\frac{2}{12}=\frac{1}{6}
 \end_layout
 
 \begin_layout Standard
-因为我们不知道, 硬币以及骰子是否完美, 即骰子制造的是否均匀, 其重心是否位于正中心, 以及轮盘是否倾向于某一个数字。 
+因为我们不知道, 硬币以及骰子是否完美, 即骰子制造的是否均匀, 其重心是否位于正中心, 以及轮盘是否倾向于某一个数字.
+  
 \end_layout
 
 \begin_layout Standard
 尽管如此, 传统概率在实践中被广泛应用于确定事件的概率值, 其理论根据是： 如果没有足够的论据来证明一个事件的概率大于另一个事件的概率, 那么可以认为这两个事件
-的概率值相等(为等可能概型)。
+的概率值相等(为等可能概型).
+ 
 \end_layout
 
 \begin_layout Standard
 如果仔细观察这个定义会发现拉普拉斯用概率解释了概率, 定义中用了相同的可能性 ( 原文是 également possible )一词, 其实指的就是"相同的概
-率"。这个定义也并没有说出, 到底什么是概率, 以及如何用数字来确定概率。在现实生活中也有一系列问题, 无论如何不能用传统概率定义来解释.
+率".
+ 这个定义也并没有说出, 到底什么是概率, 以及如何用数字来确定概率.
+ 在现实生活中也有一系列问题, 无论如何不能用传统概率定义来解释.
 \end_layout
 
 \begin_layout Standard
-比如, 人寿保险公司无法确定一个 50 岁的人在下一年将死去的概率。 
+比如, 人寿保险公司无法确定一个 50 岁的人在下一年将死去的概率.
+  
 \end_layout
 
 \begin_layout Standard
@@ -27288,7 +28333,8 @@ P(A)=\frac{2}{12}=\frac{1}{6}
 \end_layout
 
 \begin_layout Standard
-表示多个个事件共同发生的概率。A与B的联合概率表示为
+表示多个个事件共同发生的概率.
+ A与B的联合概率表示为
 \begin_inset Formula $P(AB)$
 \end_inset
 
@@ -27433,7 +28479,8 @@ P(A)=\frac{利成事件A的区域长度(面积或体积)}{\text{试验的全部�
 \end_layout
 
 \begin_layout Standard
-继传统概率论之后, 英国逻辑学家约翰·维恩和奥地利数学家理查德提出建立在频率理论基础上的统计概率。
+继传统概率论之后, 英国逻辑学家约翰·维恩和奥地利数学家理查德提出建立在频率理论基础上的统计概率.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -27457,7 +28504,8 @@ P(A)=\frac{利成事件A的区域长度(面积或体积)}{\text{试验的全部�
 \begin_inset Formula $P(A)$
 \end_inset
 
-, 相对频率值趋向于这个极限值。这个极限值被称为统计概率, 表示为：
+, 相对频率值趋向于这个极限值.
+ 这个极限值被称为统计概率, 表示为：
 \begin_inset Formula 
 \[
 P(A)=\lim_{n\to\infty}f_{n}(A)
@@ -27470,7 +28518,8 @@ P(A)=\lim_{n\to\infty}f_{n}(A)
 
 \begin_layout Standard
 例如, 若想知道在一次掷骰子的随机试验中获得 6 点的概率值可以对其进行 3000 次前后独立的扔掷试验, 在每一次试验后记录下出现 6 点的次数,
- 然后通过计算相对频率值可以得到趋向于某一个数的统计概率值。 
+ 然后通过计算相对频率值可以得到趋向于某一个数的统计概率值.
+  
 \end_layout
 
 \begin_layout Subsection
@@ -27486,8 +28535,11 @@ P(A)=\lim_{n\to\infty}f_{n}(A)
 \end_layout
 
 \begin_layout Standard
-与初等概率论相对的, 是"现代概率论”。因"测度论”的研究与发展, 现代概率论得以建立公理化系统。一些曾经无法用初等概率论解释的概念因此得以用公理化的语言进行解
-释, 可以说现代概率论以测度论为理论基础终于得以完善, 完成了其现代化进程。现代概率论由前苏联数学家柯尔莫哥洛夫于1933年建立公理化。
+与初等概率论相对的, 是"现代概率论”.
+ 因"测度论”的研究与发展, 现代概率论得以建立公理化系统.
+ 一些曾经无法用初等概率论解释的概念因此得以用公理化的语言进行解释, 可以说现代概率论以测度论为理论基础终于得以完善, 完成了其现代化进程.
+ 现代概率论由前苏联数学家柯尔莫哥洛夫于1933年建立公理化.
+ 
 \end_layout
 
 \begin_layout Section
@@ -27606,7 +28658,8 @@ P=1-\left(\frac{19}{37}\right)^{2}=0.7363
 \begin_inset Formula $A_{1},A_{2},\cdots A_{n}\in S$
 \end_inset
 
- 每两两之间是空集关系, 那么这些所有事件集合的概率等于单个事件的概率的和。
+ 每两两之间是空集关系, 那么这些所有事件集合的概率等于单个事件的概率的和.
+ 
 \begin_inset Formula 
 \[
 P(A_{1}\cup\cdots\cup A_{n})=\sum_{j=1}^{n}P(A_{j})
@@ -27622,7 +28675,8 @@ P(A_{1}\cup\cdots\cup A_{n})=\sum_{j=1}^{n}P(A_{j})
 \begin_inset Formula $A_{1}\cdots A_{n}$
 \end_inset
 
-事件不能同时发生。例如, 在一次掷骰子中, 得到 5 点或者 6 点的概率是：
+事件不能同时发生.
+ 例如, 在一次掷骰子中, 得到 5 点或者 6 点的概率是：
 \begin_inset Formula 
 \[
 P=P(A_{5})+P(A_{6})=\frac{|\{1+1\}|}{\text{|\{总\text{共6个事件\}|}}}={\frac{2}{6}}={\frac{1}{3}}
@@ -27791,7 +28845,8 @@ P(A\cup B)=\frac{8}{32}+\frac{4}{32}-\frac{1}{32}=\frac{11}{32}
 \begin_inset Formula $P(A∩B)=0$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -27835,7 +28890,8 @@ P(A\cap B)=P(A)\cdot P(B\vert A)=P(B)\cdot P(A\vert B)
 \series bold
 条件概率
 \series default
-。 
+.
+  
 \end_layout
 
 \begin_layout Itemize
@@ -27863,7 +28919,8 @@ P(A\cap B)=P(A)\cdot P(B)
 \begin_inset Formula $P(B|A)=P(B)$
 \end_inset
 
-。 
+.
+  
 \end_layout
 
 \begin_layout Standard
@@ -27909,7 +28966,8 @@ P(A)=P(A|B_{1})P(B_{1})+...+P(A|B_{n}）P(B_{n})
 \begin_inset Formula $P(B|A)$
 \end_inset
 
-。按照定理 6 的乘法法则, 
+.
+ 按照定理 6 的乘法法则, 
 \begin_inset Formula $P(A∩B)=P(A)·P(B|A)=P(B)·P(A|B)$
 \end_inset
 
@@ -27973,7 +29031,8 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 
 \begin_layout Standard
 随机变量和函数都是一种映射, 随机变量把随机试验的结果映为实数, 函数把实数映为实数,在这两种映射之间, 试验结果的范围相当于函数的定义域, 随机变量的取值范围
-相当于函数的值域。
+相当于函数的值域.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -27985,7 +29044,8 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 \end_layout
 
 \begin_layout Standard
-即在一定区间内变量取值为有限个, 或可列无限多个(能够一一列举)。例如某地区某年人口的出生数、死亡数, 某药治疗某病病人的有效数、无效数等.
+即在一定区间内变量取值为有限个, 或可列无限多个(能够一一列举).
+ 例如某地区某年人口的出生数、死亡数, 某药治疗某病病人的有效数、无效数等.
 \end_layout
 
 \begin_layout Subsubsection
@@ -28385,19 +29445,24 @@ P
 \begin_inset Formula $是/非$
 \end_inset
 
-试验中成功的次数的离散概率分布, 其中每次试验的成功概率为p。这样的单次
+试验中成功的次数的离散概率分布, 其中每次试验的成功概率为p.
+ 这样的单次
 \begin_inset Formula $成功/失败$
 \end_inset
 
-试验又称为伯努利试验。实际上, 当
+试验又称为伯努利试验.
+ 实际上, 当
 \begin_inset Formula $n=1$
 \end_inset
 
-时, 二项分布就是伯努利分布。二项分布是显著性差异的二项试验的基础。
+时, 二项分布就是伯努利分布.
+ 二项分布是显著性差异的二项试验的基础.
+ 
 \end_layout
 
 \begin_layout Standard
-一个伯努利过程(Bernoulli process)是由重复出现独立但是相同分布的伯努利试验组成, 例如抛硬币十次, 而此时呈现之结果将呈现二项分布。
+一个伯努利过程(Bernoulli process)是由重复出现独立但是相同分布的伯努利试验组成, 例如抛硬币十次, 而此时呈现之结果将呈现二项分布.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28567,7 +29632,9 @@ n 是发生了多少次, k 是多少次成功.
 \begin_inset Formula $\lambda$
 \end_inset
 
-是单位时间(或单位面积)内随机事件的平均发生次数。 泊松分布适合于描述单位时间内随机事件发生的次数。
+是单位时间(或单位面积)内随机事件的平均发生次数.
+  泊松分布适合于描述单位时间内随机事件发生的次数.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28579,7 +29646,8 @@ n 是发生了多少次, k 是多少次成功.
 \begin_inset Formula $np$
 \end_inset
 
-。通常当
+.
+ 通常当
 \begin_inset Formula $n\geqslant20$
 \end_inset
 
@@ -28587,7 +29655,8 @@ n 是发生了多少次, k 是多少次成功.
 \begin_inset Formula $p\leqslant0.05$
 \end_inset
 
-时, 就可以用泊松公式近似得计算。
+时, 就可以用泊松公式近似得计算.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -28837,7 +29906,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_layout
 
 \begin_layout Standard
-超几何分布是统计学上一种离散概率分布。它描述了由有限个物件中抽出
+超几何分布是统计学上一种离散概率分布.
+ 它描述了由有限个物件中抽出
 \begin_inset Formula $n$
 \end_inset
 
@@ -28857,7 +29927,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_inset Formula ${\displaystyle K}$
 \end_inset
 
-个是不及格的。超几何分布描述了在该
+个是不及格的.
+ 超几何分布描述了在该
 \begin_inset Formula ${\displaystyle N}$
 \end_inset
 
@@ -28892,7 +29963,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_inset Formula $n$
 \end_inset
 
-个的方法数目。
+个的方法数目.
+ 
 \begin_inset Formula ${\displaystyle \tbinom{K}{k}}$
 \end_inset
 
@@ -28904,7 +29976,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_inset Formula ${\displaystyle k}$
 \end_inset
 
-个的方法数目, 即组合数, 又称二项式系数。剩下来的样本都是及格的, 而及格的样本有
+个的方法数目, 即组合数, 又称二项式系数.
+ 剩下来的样本都是及格的, 而及格的样本有
 \begin_inset Formula ${\displaystyle N-K}$
 \end_inset
 
@@ -28912,7 +29985,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_inset Formula ${\displaystyle \tbinom{N-K}{n-k}}$
 \end_inset
 
-种。
+种.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28927,7 +30001,8 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_inset Formula ${\displaystyle n=1}$
 \end_inset
 
-, 超几何分布还原为伯努利分布。
+, 超几何分布还原为伯努利分布.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28951,7 +30026,9 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_layout
 
 \begin_layout Standard
-即在一定区间内变量取值有无限个, 或数值无法一一列举出来。例如某地区男性健康成人的身长值、体重值。所以我们转去研究随机变量所取的值落在一个区间
+即在一定区间内变量取值有无限个, 或数值无法一一列举出来.
+ 例如某地区男性健康成人的身长值、体重值.
+ 所以我们转去研究随机变量所取的值落在一个区间
 \begin_inset Formula $(x_{1},x_{2}]$
 \end_inset
 
@@ -30669,7 +31746,8 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \end_layout
 
 \begin_layout Standard
-根据生产和科学研究中的不同问题, 利用数学原理合理安排试验, 以尽可能少的试验次数, 快速找到生产和科学实验中最优方案的科学试验方法。 
+根据生产和科学研究中的不同问题, 利用数学原理合理安排试验, 以尽可能少的试验次数, 快速找到生产和科学实验中最优方案的科学试验方法.
+  
 \end_layout
 
 \begin_layout Standard
@@ -30738,7 +31816,9 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \begin_inset Formula $[a,b]$
 \end_inset
 
-。如果不考虑端点a,b, 就记成(a,b)。 
+.
+ 如果不考虑端点a,b, 就记成(a,b).
+  
 \end_layout
 
 \begin_layout Standard
@@ -30798,7 +31878,10 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \end_layout
 
 \begin_layout Standard
-它在试验时, 把试点安排在黄金分割点上来寻找最佳点。而生产生活中, 我们常常取其近似值0.618, 因此得名。0.618法是最常用的单因素单峰目标函数优选法之一。
+它在试验时, 把试点安排在黄金分割点上来寻找最佳点.
+ 而生产生活中, 我们常常取其近似值0.618, 因此得名.
+ 0.618法是最常用的单因素单峰目标函数优选法之一.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -30941,12 +32024,13 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \end_layout
 
 \begin_layout Standard
-用是黄金分割法寻找最佳点时, 不能保证在有限次内准确找出最佳点, 但随着试验次数的增加, 最佳点被限定在越来越小的范围内, 即存优范围会越来越小。用存优范围与原
-始范围的比值来衡量一种试验方法的效率, 这个比值叫
+用是黄金分割法寻找最佳点时, 不能保证在有限次内准确找出最佳点, 但随着试验次数的增加, 最佳点被限定在越来越小的范围内, 即存优范围会越来越小.
+ 用存优范围与原始范围的比值来衡量一种试验方法的效率, 这个比值叫
 \series bold
 精度
 \series default
-。用是黄金分割法确定试点时, 每一次实验都把存优范围缩小为原来的0.618.
+.
+ 用是黄金分割法确定试点时, 每一次实验都把存优范围缩小为原来的0.618.
 \end_layout
 
 \begin_layout Standard
@@ -31082,7 +32166,8 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \end_layout
 
 \begin_layout Standard
-对于试点个数为常数时,用分数法找出其中最佳点的试验次数最少,这就是分数法的最优性。分数法在有有限个试点的优选问题中被广泛使用.
+对于试点个数为常数时,用分数法找出其中最佳点的试验次数最少,这就是分数法的最优性.
+ 分数法在有有限个试点的优选问题中被广泛使用.
 \end_layout
 
 \begin_layout Subparagraph
@@ -31192,7 +32277,8 @@ Y_{n}=\frac{\stackrel[k=1]{n}{\sum}X_{k}-E(\stackrel[k=1]{n}{\sum}X_{k})}{\sqrt{
 \begin_inset Formula $A_{1};A_{2},…,A_{3}$
 \end_inset
 
- 表示。
+ 表示.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -31770,7 +32856,8 @@ C催化剂浓度
 
 \begin_layout Standard
 由于每个试验号之间因素的水平有变化, 究竟哪个因素的哪个水平引起试验结果的好坏, 就难于分辨了, 而且正交试验是从所有可能的因素组合中抽取其中一部分做试验
- , 未做过试验的组合情况如何? 更好的组合有没有 ?显然,这对选取最优生产条件是一个很大的缺陷。
+ , 未做过试验的组合情况如何? 更好的组合有没有 ?显然,这对选取最优生产条件是一个很大的缺陷.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -31782,7 +32869,8 @@ C催化剂浓度
 \series bold
 试验误差
 \series default
-, 观察结果大于理论结果时, 误差为正; 反之, 误差为负。
+, 观察结果大于理论结果时, 误差为正; 反之, 误差为负.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -31806,7 +32894,8 @@ C催化剂浓度
 \begin_inset Formula $K_{pq}$
 \end_inset
 
-的平均值。 即
+的平均值.
+  即
 \begin_inset Formula $k_{pq}=\frac{K_{pq}}{\text{第q列水平p重复的次数}}$
 \end_inset
 
@@ -32508,7 +33597,8 @@ Q=\left\{ \begin{array}{cc}
 \begin_inset Formula $n$
 \end_inset
 
-是影响转移状态的数目。最简单的马尔科夫过程就是一阶过程, 每一个状态的转移只依赖于其之前的那一个状态.
+是影响转移状态的数目.
+ 最简单的马尔科夫过程就是一阶过程, 每一个状态的转移只依赖于其之前的那一个状态.
 \end_layout
 
 \begin_layout Standard
@@ -32534,7 +33624,8 @@ Q=\left\{ \begin{array}{cc}
 \begin_inset Formula $x_{i-1)}$
 \end_inset
 
-有关, 和他前面的没有关系, 这就是一阶过程。
+有关, 和他前面的没有关系, 这就是一阶过程.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -32542,7 +33633,10 @@ Q=\left\{ \begin{array}{cc}
 \end_layout
 
 \begin_layout Standard
-在马尔科夫过程中, 在给定当前状态的情况下, 过去对于预测将来是无关的。这种性质叫做无后效性。简单地说就是将来与过去无关, 只与现在有关。
+在马尔科夫过程中, 在给定当前状态的情况下, 过去对于预测将来是无关的.
+ 这种性质叫做无后效性.
+ 简单地说就是将来与过去无关, 只与现在有关.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -32641,7 +33735,8 @@ Q=\left\{ \begin{array}{cc}
 
 的状态
 \series default
-。
+.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -32910,7 +34005,8 @@ p_{i1} & p_{i2} &  & p_{in}
 \end_layout
 
 \begin_layout Standard
-设雨天状态为1, 晴天状态为0。
+设雨天状态为1, 晴天状态为0.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -33091,7 +34187,8 @@ P_{n}=P_{n-1}\times P=P_{n-1-1}\times P\times P=P^{n}\times P_{0}
 \end_inset
 
 .
- 已知这台机器正 常工作1小时可收益10元, 加急检修1小时费用为9元, 常规检修1小时费用为6元。那么,当机器出现故障时,应选择哪种检修方案排除故障?
+ 已知这台机器正 常工作1小时可收益10元, 加急检修1小时费用为9元, 常规检修1小时费用为6元.
+ 那么,当机器出现故障时,应选择哪种检修方案排除故障?
 \end_layout
 
 \begin_layout Standard
@@ -33387,7 +34484,8 @@ Q=\left[\begin{array}{cc}
 \end_layout
 
 \begin_layout Standard
-在某些情况下马尔科夫过程不足以描述我们希望发现的关系。
+在某些情况下马尔科夫过程不足以描述我们希望发现的关系.
+ 
 \end_layout
 
 \begin_layout Chapter
@@ -33456,7 +34554,9 @@ c & d
 \end_layout
 
 \begin_layout Standard
-图论起源于著名的柯尼斯堡七桥问题。该问题于1736年被欧拉解决, 因此普遍认为欧拉是图论的创始人。
+图论起源于著名的柯尼斯堡七桥问题.
+ 该问题于1736年被欧拉解决, 因此普遍认为欧拉是图论的创始人.
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -33464,8 +34564,9 @@ c & d
 \end_layout
 
 \begin_layout Standard
-当时东普鲁士柯尼斯堡(今日俄罗斯加里宁格勒)市区跨普列戈利亚河两岸, 河中心有两个小岛。小岛与河的两岸有七条桥连接。在所有桥都只能走一遍的前提下,
- 如何才能把这个地方所有的桥都走遍？
+当时东普鲁士柯尼斯堡(今日俄罗斯加里宁格勒)市区跨普列戈利亚河两岸, 河中心有两个小岛.
+ 小岛与河的两岸有七条桥连接.
+ 在所有桥都只能走一遍的前提下, 如何才能把这个地方所有的桥都走遍？
 \end_layout
 
 \begin_layout Standard
@@ -33477,8 +34578,10 @@ c & d
 \end_layout
 
 \begin_layout Standard
-每一座桥视为一条线, 桥所连接的地区视为点。这样若从某点出发后最后再回到这点, 则这一点的线数必须是偶数, 这样的点称为偶顶点。相对的, 连有奇数条线的点称为奇
-顶点。欧拉论述了, 由于柯尼斯堡七桥问题中存在4个奇顶点, 它无法实现符合题意的遍历.
+每一座桥视为一条线, 桥所连接的地区视为点.
+ 这样若从某点出发后最后再回到这点, 则这一点的线数必须是偶数, 这样的点称为偶顶点.
+ 相对的, 连有奇数条线的点称为奇顶点.
+ 欧拉论述了, 由于柯尼斯堡七桥问题中存在4个奇顶点, 它无法实现符合题意的遍历.
 \end_layout
 
 \begin_layout Section
@@ -33486,11 +34589,13 @@ c & d
 \end_layout
 
 \begin_layout Standard
-判断这个图是否是一个能够遍历完所有的边而没有重复。这样的图称为
+判断这个图是否是一个能够遍历完所有的边而没有重复.
+ 这样的图称为
 \series bold
 欧拉图
 \series default
-。遍历的路径称作
+.
+ 遍历的路径称作
 \series bold
 欧拉路径
 \series default
@@ -33502,7 +34607,8 @@ c & d
 \end_layout
 
 \begin_layout Standard
-一笔画问题的推广是多笔画问题, 即对于不能一笔画的图, 探讨最少能用多少笔来画成。
+一笔画问题的推广是多笔画问题, 即对于不能一笔画的图, 探讨最少能用多少笔来画成.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -33522,7 +34628,8 @@ c & d
 \begin_inset Formula $2$
 \end_inset
 
-。 连通的无向图 
+.
+  连通的无向图 
 \begin_inset Formula $G$
 \end_inset
 
@@ -33534,8 +34641,10 @@ c & d
 \end_layout
 
 \begin_layout Proof
-必要性：如果一个图能一笔画成, 那么对每一个顶点, 要么路径中“进入”这个点的边数等于“离开”这个点的边数：这时点的度为偶数。要么两者相差一：这时这个点必然是起
-点或终点之一。注意到有起点就必然有终点, 因此奇顶点的数目要么是0, 要么是2。
+必要性：如果一个图能一笔画成, 那么对每一个顶点, 要么路径中“进入”这个点的边数等于“离开”这个点的边数：这时点的度为偶数.
+ 要么两者相差一：这时这个点必然是起点或终点之一.
+ 注意到有起点就必然有终点, 因此奇顶点的数目要么是0, 要么是2.
+ 
 \end_layout
 
 \begin_layout Proof
@@ -33543,7 +34652,9 @@ c & d
 \begin_inset Formula $C_{1}$
 \end_inset
 
-。如果这个环就是原图, 那么结束。如果不是, 那么由于原图是连通的, 
+.
+ 如果这个环就是原图, 那么结束.
+ 如果不是, 那么由于原图是连通的, 
 \begin_inset Formula $C_{1}$
 \end_inset
 
@@ -33551,8 +34662,11 @@ c & d
 \begin_inset Formula $s_{1}$
 \end_inset
 
-。从这一点出发, 在原图的剩余部分中重复上述步骤。由于原图是连通图, 经过若干步后, 全图被分为一些环。由于两个相连的环就是一个环, 原来的图也就是一个欧拉环。
- 如果图中有两个奇顶点 
+.
+ 从这一点出发, 在原图的剩余部分中重复上述步骤.
+ 由于原图是连通图, 经过若干步后, 全图被分为一些环.
+ 由于两个相连的环就是一个环, 原来的图也就是一个欧拉环.
+  如果图中有两个奇顶点 
 \begin_inset Formula $u$
 \end_inset
 
@@ -33560,7 +34674,8 @@ c & d
 \begin_inset Formula $v$
 \end_inset
 
-, 那么加多一条边将它们连上后得到一个无奇顶点的连通图。由上知这个图是一个环, 因此去掉新加的边后成为一条路径, 起点和终点是 
+, 那么加多一条边将它们连上后得到一个无奇顶点的连通图.
+ 由上知这个图是一个环, 因此去掉新加的边后成为一条路径, 起点和终点是 
 \begin_inset Formula $u$
 \end_inset
 
@@ -33568,11 +34683,13 @@ c & d
 \begin_inset Formula $v$
 \end_inset
 
-。
+.
+ 
 \end_layout
 
 \begin_layout Proof
-实际上, 连通无向图中, 奇顶点的数目总是偶数。
+实际上, 连通无向图中, 奇顶点的数目总是偶数.
+ 
 \end_layout
 
 \begin_layout Theorem
@@ -33604,7 +34721,8 @@ c & d
 \begin_inset Formula $k$
 \end_inset
 
- 对后分别连起, 则得到一个无奇顶点的连通图。这个图是一个环, 因此去掉新加的边后至多成为
+ 对后分别连起, 则得到一个无奇顶点的连通图.
+ 这个图是一个环, 因此去掉新加的边后至多成为
 \begin_inset Formula $k$
 \end_inset
 
@@ -33612,7 +34730,8 @@ c & d
 \begin_inset Formula $k$
 \end_inset
 
-笔画成。但是假设全图可以分为 q 条欧拉路径, 则由
+笔画成.
+ 但是假设全图可以分为 q 条欧拉路径, 则由
 \series bold
 定理8
 \series default
@@ -33620,11 +34739,13 @@ c & d
 \begin_inset Formula $2q\geq2k$
 \end_inset
 
-。因此必定要
+.
+ 因此必定要
 \begin_inset Formula $k$
 \end_inset
 
-笔画成。
+笔画成.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -33677,12 +34798,15 @@ c & d
 \end_layout
 
 \begin_layout Standard
-单纯形法(simplex algorithm)在数学优化领域中常用于线性规划问题的数值求解, 由乔治·伯纳德·丹齐格发明。
+单纯形法(simplex algorithm)在数学优化领域中常用于线性规划问题的数值求解, 由乔治·伯纳德·丹齐格发明.
+ 
 \end_layout
 
 \begin_layout Standard
-下山单纯形法(Nelder-Mead method)与单纯形法名称相似, 但二者关联不大。该方法由Nelder和Mead于1965年发明, 是用于优化多维无约束
-问题的一种数值方法, 属于更普遍的搜索算法的类别。这两种方法都使用了单纯形的概念。单纯形是 
+下山单纯形法(Nelder-Mead method)与单纯形法名称相似, 但二者关联不大.
+ 该方法由Nelder和Mead于1965年发明, 是用于优化多维无约束问题的一种数值方法, 属于更普遍的搜索算法的类别.
+ 这两种方法都使用了单纯形的概念.
+ 单纯形是 
 \begin_inset Formula $N$
 \end_inset
 
@@ -33690,7 +34814,8 @@ c & d
 \begin_inset Formula ${\displaystyle N+1}$
 \end_inset
 
-个顶点的凸包, 是一个多胞体：直线上的一个线段, 平面上的一个三角形, 三维空间中的一个四面体等等, 都是单纯形。
+个顶点的凸包, 是一个多胞体：直线上的一个线段, 平面上的一个三角形, 三维空间中的一个四面体等等, 都是单纯形.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -33738,7 +34863,8 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 \begin_inset Formula $b$
 \end_inset
 
-个空瓶也能换一瓶新酒。问：
+个空瓶也能换一瓶新酒.
+ 问：
 \begin_inset Formula $x$
 \end_inset
 
@@ -33789,7 +34915,8 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 \begin_inset Formula $m$
 \end_inset
 
-个空酒瓶可以兑换一瓶新酒。问：最多能喝多少瓶啤酒？
+个空酒瓶可以兑换一瓶新酒.
+ 问：最多能喝多少瓶啤酒？
 \end_layout
 
 \begin_layout Standard
@@ -33918,7 +35045,8 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 \end_layout
 
 \begin_layout Standard
-一只兔子旁边有100根萝卜,  兔子想把它们搬回家,  离家50米,  一次最多能搬运50根,  每走一米吃一根,  问：兔子最多能搬运多少根萝卜回家。
+一只兔子旁边有100根萝卜,  兔子想把它们搬回家,  离家50米,  一次最多能搬运50根,  每走一米吃一根,  问：兔子最多能搬运多少根萝卜回家.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -34017,7 +35145,8 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 \end_layout
 
 \begin_layout Standard
-若超过50 则需要再次往返, 代价太大。 
+若超过50 则需要再次往返, 代价太大.
+  
 \end_layout
 
 \begin_layout Standard
@@ -34190,13 +35319,18 @@ x取最小, 取整17
 \end_layout
 
 \begin_layout Standard
-盈不足术是中国古代一种解算术难题的算法。一般算术应用题, 都有确切答案。盈不足术为了推算答案, 预先设立一个数字作为答案, 依题目核算, 若结果合问题,
- 所设之数就是答案；若不合问, 非盈即不足；通过两次假设, 即可利用盈不足术求出答案。这类问题共有五种, 即一盈一不足, 两盈、两不足、一盈一适足、一不足一适足
-。《九章算术》则汇集这五种问题, 并给出算法。
+盈不足术是中国古代一种解算术难题的算法.
+ 一般算术应用题, 都有确切答案.
+ 盈不足术为了推算答案, 预先设立一个数字作为答案, 依题目核算, 若结果合问题, 所设之数就是答案；若不合问, 非盈即不足；通过两次假设, 即可利用盈不足术求
+出答案.
+ 这类问题共有五种, 即一盈一不足, 两盈、两不足、一盈一适足、一不足一适足.
+ 《九章算术》则汇集这五种问题, 并给出算法.
+ 
 \end_layout
 
 \begin_layout Standard
-盈不足章除了拥有算术应用问题外, 还包括一些初等超越方程问题, 用这种模式算法解出前一类问题得到确切解, 用以解后一类问题则得近似解。
+盈不足章除了拥有算术应用问题外, 还包括一些初等超越方程问题, 用这种模式算法解出前一类问题得到确切解, 用以解后一类问题则得近似解.
+ 
 \end_layout
 
 \begin_layout Standard
