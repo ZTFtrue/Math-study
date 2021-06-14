@@ -959,7 +959,7 @@ Math
  集合的元素可以是任何事物, 可以是人, 可以是物, 也可以是字母或数字等.
  在数学交流当中为了方便, 集合会有一些别名.
  比如：族、系　通常指它的元素也是一些集合.
-  
+ 
 \end_layout
 
 \begin_layout Section
@@ -1274,6 +1274,57 @@ Math
 \end_layout
 
 \begin_layout Section
+邻域
+\end_layout
+
+\begin_layout Standard
+在集合论中邻域指以点
+\begin_inset Formula $a$
+\end_inset
+
+为中心的任何开区间, 记作: 
+\begin_inset Formula $U(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta$
+\end_inset
+
+邻域: 
+\begin_inset Formula ${\displaystyle U(a,\delta)=(a-\delta,a+\delta)=\left\{ x\mid|x-a|<\delta\right\} }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+去心邻域:
+\begin_inset Formula ${\displaystyle U_{0}(a,\delta)=\left\{ x\mid0<|x-a|<\delta\right\} }$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+左邻域: 
+\begin_inset Formula ${\displaystyle (a-\delta,a)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+右邻域: 
+\begin_inset Formula ${\displaystyle (a,a+\delta)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 环
 \end_layout
 
@@ -1298,7 +1349,6 @@ Math
 \end_layout
 
 \begin_layout Standard
-(1)
 \begin_inset Formula $(a+b)+c=a+(b+c)$
 \end_inset
 
@@ -1306,7 +1356,6 @@ Math
 \end_layout
 
 \begin_layout Standard
-(2)
 \begin_inset Formula $a+b=b+a$
 \end_inset
 
@@ -1314,7 +1363,7 @@ Math
 \end_layout
 
 \begin_layout Standard
-(3)在R中有元素0,使对任意的
+在R中有元素0,使对任意的
 \begin_inset Formula $a∈R,a+0=a$
 \end_inset
 
@@ -1322,7 +1371,7 @@ Math
 \end_layout
 
 \begin_layout Standard
-(4)若
+若
 \begin_inset Formula $a\in R$
 \end_inset
 
@@ -23064,7 +23113,7 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 \begin_inset Formula $f(x)$
 \end_inset
 
-有下列三种情形之一: 
+有下列三种情形之一:
 \end_layout
 
 \begin_layout Enumerate
@@ -25229,43 +25278,185 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
-若函数
-\begin_inset Formula $y=f(x)$
+设函数
+\begin_inset Formula ${\displaystyle y=f(x)}$
+\end_inset
+
+在某区间
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+内有定义.
+ 对于
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+内一点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 当
+\begin_inset Formula $x_{0}$
+\end_inset
+
+变动到附近的
+\begin_inset Formula $x_{0}+\Delta x$
+\end_inset
+
+(也在此区间内)时, 如果函数的增量
+\begin_inset Formula $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$
+\end_inset
+
+可表示为
+\begin_inset Formula $\Delta y=A\Delta x+o(\Delta x)$
+\end_inset
+
+(其中
+\begin_inset Formula $A$
+\end_inset
+
+是不依赖于
+\begin_inset Formula $\Delta x$
+\end_inset
+
+的常数, 
+\begin_inset Formula $o(\Delta x)$
+\end_inset
+
+是比
+\begin_inset Formula $\Delta x$
+\end_inset
+
+
+\series bold
+高阶的无穷小
+\series default
+)那么称函数
+\begin_inset Formula $f(x)$
 \end_inset
 
 在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是可微的, 且 
+\begin_inset Formula $A\Delta x$
+\end_inset
+
+称作函数在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+相应于自变量增量
+\begin_inset Formula $\Delta x$
+\end_inset
+
+的微分, 记作
+\begin_inset Formula $\textrm{d}y$
+\end_inset
+
+, 即
+\begin_inset Formula ${\displaystyle \textrm{d}y=A\Delta x}$
+\end_inset
+
+, 
+\begin_inset Formula $\textrm{d}y$
+\end_inset
+
+是
+\begin_inset Formula $\Delta y$
+\end_inset
+
+的线性主部.
+\end_layout
+
+\begin_layout Standard
+通常把自变量
 \begin_inset Formula $x$
 \end_inset
 
-处可导, 对于自变量的增量
-\begin_inset Formula $Δx$
+的增量
+\begin_inset Formula $\Delta x$
 \end_inset
 
-, 称
-\begin_inset Formula $f'(x)Δx$
+称为自变量的微分，记作
+\begin_inset Formula $\textrm{d}x$
 \end_inset
 
-为函数
-\begin_inset Formula $y=f(x)$
+，即
+\begin_inset Formula ${\displaystyle \textrm{d}x=\Delta x}$
 \end_inset
 
-在点
-\begin_inset Formula $x$
+。 
+\end_layout
+
+\begin_layout Standard
+对于一元函数来说，可微与可导是完全等价的概念.
+ 可微的函数, 其微分等于导数乘以自变量的微分
+\begin_inset Formula $\textrm{d}x$
 \end_inset
 
-处的微分, 记为
-\begin_inset Formula $dy$
-\end_inset
-
-或
-\begin_inset Formula $df(x)$
-\end_inset
-
-,即
-\begin_inset Formula $dy=f'(x)Δx$
+, 函数的微分与自变量的微分之商等于该函数的导数(因此，导数也叫做微商).
+ 即
+\begin_inset Formula $\textrm{d}y=f'(x)Δx=f'(x)\textrm{d}x$
 \end_inset
 
  .
+\end_layout
+
+\begin_layout Standard
+对于一元函数:
+\begin_inset Formula 
+\[
+\Delta y=A\Delta x+o(\Delta x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\Delta y}{\Delta x}=\frac{A\Delta x+o(\Delta x)}{\Delta x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\Delta y}{\Delta x}=\frac{A\Delta x+o(\Delta x)}{\Delta x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\Delta y}{\Delta x}=A+\frac{o(\Delta x)}{\Delta x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\Delta x\rightarrow0$
+\end_inset
+
+时
+\begin_inset Formula 
+\[
+\underset{\Delta x\rightarrow0}{\lim}\frac{\Delta y}{\Delta x}=A=f'(x_{0})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -25294,7 +25485,6 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 处切线的纵坐标的改变量.
- 
 \end_layout
 
 \begin_layout Enumerate
@@ -25319,15 +25509,713 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Section
 运算法则
 \end_layout
 
+\begin_layout Subsection
+基本初等函数微分公式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+导数公式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+微分公式
+\begin_inset Formula ${\displaystyle \textrm{d}x=\Delta x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x^{a})'=ax^{a-1}(a为非零常数,x>0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(x^{a})=ax^{a-1}\cdot dx(a\text{为非零常数},x>0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\sin x)'=\cos x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathrm{d}(\sin x)=\cos(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\cos x)'=-\sin x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\cos x)=-\sin(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\tan x)'=\sec^{2}x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\tan x)=\sec^{2}(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\cot x)'=-\csc^{2}x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\cot x)=-\csc^{2}(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\sec x)'=-\sec x\tan x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\sec x)=-\sec x\tan(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\csc x)'=-\csc x\cot x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\csc x)=-\csc x\cot(x\cdot dx)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a^{x})'=a^{x}\ln a(a>0,a\neq1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(a^{x})=a^{x}\ln(a\cdot dx)(a>0,a\neq1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(e^{x})'=e^{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(e^{x})=e^{x}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(log_{a}x)'=\frac{1}{x\ln a}(a>0,a\neq1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(log_{a}x)=\frac{1}{x\ln a}\cdot dx(a>0,a\neq1)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\ln x)'=\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\ln x)=\frac{1}{x}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\arcsin x)'=-\frac{1}{\sqrt{1-x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\arcsin x)=-\frac{1}{\sqrt{1-x^{2}}}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\arccos x)'=-\frac{1}{\sqrt{1-x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\arccos x)=-\frac{1}{\sqrt{1-x^{2}}}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\arctan x)'=\frac{1}{1+x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\arctan x)=\frac{1}{1+x^{2}}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\mathrm{arccot}x)'=-\frac{1}{1+x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathrm{d}(\mathrm{arccot}x)=-\frac{1}{1+x^{2}}\cdot dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+四则运算法则
+\end_layout
+
+\begin_layout Standard
+如果设函数
+\begin_inset Formula $u$
+\end_inset
+
+、
+\begin_inset Formula $v$
+\end_inset
+
+可微,可导，那么:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+导数公式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+微分公式
+\begin_inset Formula ${\displaystyle \textrm{d}x=\Delta x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(u\pm v)'=u'\pm v'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $d(u+v)=du+dv$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(uv)'=u'v+uv'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d(uv)=v(du)+u(dv)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(Cu)'=Cu'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d(Cu)=C(du)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle d(au+bv)=d(au)+d(bv)=a(du)+b(dv)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\frac{u}{v})'=\frac{u'v-uv'}{v^{2}}(v\neq0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d\left(\frac{u}{v}\right)=\frac{v(du)-u(dv)}{v^{2}}(v\neq0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+复合函数微分法则
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $y=f(u)$
+\end_inset
+
+及
+\begin_inset Formula $u=g(x)$
+\end_inset
+
+都可导,则复合函数
+\begin_inset Formula $y=f[g(x)]$
+\end_inset
+
+的微分为
+\begin_inset Formula 
+\[
+\mathrm{dy}=y',\mathrm{d}x=f'(u)g'(x)\mathrm{d}x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{d}y=f'(u)du
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-微分与导数的区别 
+微分与导数的区别
 \end_layout
 
 \begin_layout Standard
@@ -25347,7 +26235,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Subsection
-罗尔定理 
+费马引理
 \end_layout
 
 \begin_layout Standard
@@ -25355,19 +26243,203 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $f(x)$
 \end_inset
 
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的某邻域
+\begin_inset Formula $U(x_{0})$
+\end_inset
+
+内有定义 ( 邻域
+\begin_inset Formula $U(x_{0})$
+\end_inset
+
+的意思为以点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+为中心的开区间) , 并且在x处可导,如果对任意的x∈U(x),有
+\begin_inset Formula 
+\[
+f(x)\leqslant f(x_{0})\text{或}f(x)\geqslant f(x_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $x\in U(x_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)\leqslant f(x_{0})$
+\end_inset
+
+.
+ 对于
+\begin_inset Formula $x_{0}+\Delta x\in U(x_{0})$
+\end_inset
+
+, 如果有
+\begin_inset Formula 
+\[
+f(x_{0}+\Delta x)\leqslant f(x_{0})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x_{0}+\Delta x)-f(x_{0})\leqslant0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta x>0$
+\end_inset
+
+时
+\begin_inset Formula 
+\[
+\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\leqslant0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这个比值的极限
+\begin_inset Formula $\underset{\Delta x\rightarrow0^{+}}{\lim}\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}$
+\end_inset
+
+存在且为
+\begin_inset Formula ${\displaystyle f'(x_{0})}$
+\end_inset
+
+(根据导数的概念)
+\end_layout
+
+\begin_layout Proof
+当
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta x<0$
+\end_inset
+
+时
+\begin_inset Formula 
+\[
+\frac{f(x_{0}+\Delta x)-f(x_{0})}{\Delta x}\geqslant0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这个比值的极限存在且为
+\begin_inset Formula ${\displaystyle f'(x_{0})}$
+\end_inset
+
+.
+ 所以
+\begin_inset Formula ${\displaystyle f'(x_{0})=0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+通常称导数等于零的点称为函数的驻点(或稳定点,临界点).
+\end_layout
+
+\begin_layout Standard
+费马引理仅仅给出了函数在某个点为极值的必要条件。也就是说, 些驻点不是极值, 它们是拐点.
+\end_layout
+
+\begin_layout Subsection
+罗尔定理
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 在闭区间
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续, 在开区间
+上连续,
+\end_layout
+
+\begin_layout Standard
+在开区间
 \begin_inset Formula $(a,b)$
 \end_inset
 
-内可导, 且
+内可导, 
+\end_layout
+
+\begin_layout Standard
+且
 \begin_inset Formula $f(a)=f(b)$
 \end_inset
 
-,则至少存在一点
+, 
+\end_layout
+
+\begin_layout Standard
+则至少存在一点
 \begin_inset Formula $\xi\in(a,b)$
 \end_inset
 
@@ -25401,7 +26473,6 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 处的切线平行于x轴.
-  
 \end_layout
 
 \begin_layout Standard
@@ -25422,7 +26493,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 可以不唯一.
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -25634,7 +26705,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Subsection
-不定积分的定义 
+不定积分的定义
 \end_layout
 
 \begin_layout Standard
@@ -25724,11 +26795,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Subsection
-不定积分的几何意义 
+不定积分的几何意义
 \end_layout
 
 \begin_layout Subsection
-不定积分的计算 
+不定积分的计算
 \end_layout
 
 \begin_layout Subsubsection
