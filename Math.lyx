@@ -24469,7 +24469,7 @@ y'_{x}=y'_{u}\cdot u'_{x}
 \end_inset
 
 的导数
-\begin_inset Formula $y/=f'(x)$
+\begin_inset Formula $y=f'(x)$
 \end_inset
 
 仍然是
@@ -24749,7 +24749,15 @@ y''',y^{(4)},\cdots,y^{n}
 \end_layout
 
 \begin_layout Section
-牛顿迭代法
+方程近似解
+\end_layout
+
+\begin_layout Subsection
+二分法
+\end_layout
+
+\begin_layout Subsection
+牛顿迭代法(切线法)
 \end_layout
 
 \begin_layout Standard
@@ -24933,8 +24941,12 @@ y''',y^{(4)},\cdots,y^{n}
 求拐点的公式以此类推
 \end_layout
 
+\begin_layout Subsection
+割线法
+\end_layout
+
 \begin_layout Section
-多元函数的偏导数 
+多元函数的偏导数
 \end_layout
 
 \begin_layout Section
@@ -25006,26 +25018,324 @@ y''',y^{(4)},\cdots,y^{n}
 \end_inset
 
 内,如果
-\begin_inset Formula $f'(x)>0$
+\begin_inset Formula $f'(x)\geqslant0$
 \end_inset
 
 ,那么函数 
 \begin_inset Formula $y=f(x)$
 \end_inset
 
-在这个区间内单调递增;如果
-\begin_inset Formula $f'(x)<0$
+在这个区间内单调增加(所有点
+\begin_inset Formula $>0$
+\end_inset
+
+时为递增);
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $f'(x)\leqslant0$
 \end_inset
 
 ,那么函数 
 \begin_inset Formula $y=f(x)$
 \end_inset
 
-在这个区间内单调递减.
+在这个区间内单调减少(所有点
+\begin_inset Formula $<0$
+\end_inset
+
+时为递减).
 \end_layout
 
 \begin_layout Section
-一元函数的极值与最值 
+一元函数的极值与最值
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的定义域
+\begin_inset Formula $I$
+\end_inset
+
+内有定义, 如果任一
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x)<f(x_{0})
+\]
+
+\end_inset
+
+ 那么就称
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的一个
+\series bold
+极大值
+\series default
+; 反之
+\series bold
+极小值
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+函数的极大值与极小值统称
+\series bold
+极值
+\series default
+, 使数取得极值的点称为
+\series bold
+极值点.
+\end_layout
+
+\begin_layout Theorem
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处可导, 如果
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+, 则
+\begin_inset Formula $x_{0}$
+\end_inset
+
+为函数的极值.
+\end_layout
+
+\begin_layout Standard
+第一充分条件
+\end_layout
+
+\begin_layout Theorem
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+内可导, 且在区间内的点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处连续.
+\end_layout
+
+\begin_layout Theorem
+若
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\in(a,x_{0})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 时，
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+,
+\begin_inset Formula $x\in(x_{0},a)$
+\end_inset
+
+时, 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+则
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处取得
+\series bold
+极大值
+\series default
+；
+\end_layout
+
+\begin_layout Theorem
+若
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\in(a,x_{0})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 时，
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+,
+\begin_inset Formula $x\in(x_{0},a)$
+\end_inset
+
+时, 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+则
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处取得
+\series bold
+极小值
+\series default
+；
+\end_layout
+
+\begin_layout Theorem
+如果在区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内,
+\begin_inset Formula $f'(x)$
+\end_inset
+
+符号不变,则
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处没有极值.
+\end_layout
+
+\begin_layout Standard
+第二充分条件
+\end_layout
+
+\begin_layout Theorem
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处具有二阶导数且
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+, 
+\begin_inset Formula $f''(x_{0})\neq0$
+\end_inset
+
+,则
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $f''(x_{0})<0$
+\end_inset
+
+时，函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处取得极大值;
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $f''(x_{0})>0$
+\end_inset
+
+时，函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处取得极小值.
 \end_layout
 
 \begin_layout Section
@@ -25144,6 +25454,118 @@ F'_{\lambda}=\varphi(x,y)=0,
 凹凸性
 \end_layout
 
+\begin_layout Theorem
+设
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间/上连续，如果对
+\begin_inset Formula $I$
+\end_inset
+
+上任意两点
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+恒有
+\begin_inset Formula 
+\[
+f(\frac{x_{1}+x_{2}}{2})<\frac{f(x_{1})+f(x_{2})}{2}
+\]
+
+\end_inset
+
+那么称
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $I$
+\end_inset
+
+上的图形是(向上)凹的（或凹弧）；如果恒有
+\begin_inset Formula 
+\[
+f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么称
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $I$
+\end_inset
+
+上的图形是(向向上)凸的(或凸弧).
+\end_layout
+
+\begin_layout Standard
+二阶导判断
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续，在
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内具有一阶和二阶导数，那么
+\end_layout
+
+\begin_layout Standard
+若在
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+, 则
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的图形是凹的;
+\end_layout
+
+\begin_layout Standard
+若在
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+, 则
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的图形是凸的.
+\end_layout
+
 \begin_layout Subsection
 拐点 
 \end_layout
@@ -25184,93 +25606,6 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \begin_layout Subsection
 曲率圆与曲率半径
-\end_layout
-
-\begin_layout Section
-洛必达法则
-\end_layout
-
-\begin_layout Standard
-设函数f(x),g(x)满足下列条件
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $limf(x)=0,limg(x)=0$
-\end_inset
-
-(或
-\begin_inset Formula $limf(x)=∞，limf(g)=∞$
-\end_inset
-
-); 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $f(x),g(x)$
-\end_inset
-
- 可导, 且
-\begin_inset Formula $g'(x)≠0$
-\end_inset
-
-； 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $lim{f'(x)/g'(x)}$
-\end_inset
-
-存在或为
-\begin_inset Formula $∞$
-\end_inset
-
-.
-  
-\end_layout
-
-\begin_layout Enumerate
-则
-\begin_inset Formula $lim{f(x)/g(x)}=lim{f'(x)/g'(x)}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-该定理说明对于
-\begin_inset Formula ${0/0}$
-\end_inset
-
-型(或
-\begin_inset Formula ${∞/∞}$
-\end_inset
-
-型)的未定型极限, 在符合定理的条件下, 可以通过对分子及分母分别求导数, 然后再求极限的方法来确定.
-  
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-注意 
-\end_layout
-
-\begin_layout Enumerate
-使用洛必达法则前必须检验极限类型, 只有
-\begin_inset Formula $\frac{0}{0}$
-\end_inset
-
-型或者
-\begin_inset Formula $\frac{\infty}{\infty}$
-\end_inset
-
-才可以使用洛必达法则.
- 
-\end_layout
-
-\begin_layout Enumerate
-在极限计算过程中, 无穷小量等价代换和洛必达法则应结合使用, 能用等价代换则先用等价代换, 这样可以简化计算过程.
-  
 \end_layout
 
 \begin_layout Chapter
@@ -26439,6 +26774,8 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 则至少存在一点
 \begin_inset Formula $\xi\in(a,b)$
 \end_inset
@@ -26493,7 +26830,74 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \end_inset
 
 可以不唯一.
+\end_layout
+
+\begin_layout Proof
+由于
+\begin_inset Formula $f(x)$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 根据闭区间上连续函数的最大值最小值定理, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上必定取得它的最大值
+\begin_inset Formula $M$
+\end_inset
+
+和最小值
+\begin_inset Formula $m$
+\end_inset
+
+.这样，只有两种可能情形:
+\end_layout
+
+\begin_layout Proof
+1.
  
+\begin_inset Formula $M=m$
+\end_inset
+
+.
+ 这时
+\begin_inset Formula $f(x)$
+\end_inset
+
+区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上必然取相同的数值: 
+\begin_inset Formula $f(x)=M$
+\end_inset
+
+ .
+ 由此，
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ = 0.
+\end_layout
+
+\begin_layout Proof
+2.
+ 
+\begin_inset Formula $M>m$
+\end_inset
+
+, 因为
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -26516,7 +26920,7 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \end_layout
 
 \begin_layout Subsection
-拉格朗日中值定理
+拉格朗日中值定理(微分中值定理)
 \end_layout
 
 \begin_layout Standard
@@ -26524,15 +26928,29 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \begin_inset Formula $f(x)$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 在闭区间
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续, 在开区间
+上连续,
+\end_layout
+
+\begin_layout Standard
+在开区间
 \begin_inset Formula $(a,b)$
 \end_inset
 
-内可导, 则至少存在一点
+内可导,
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+则至少存在一点
 \begin_inset Formula $\xi\in(a,b)$
 \end_inset
 
@@ -26560,11 +26978,136 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
  
 \end_layout
 
-\begin_layout Itemize
-推理1 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/拉格朗日中值定理.jpg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+拉格朗日中值定理
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+设
+\begin_inset Formula $x$
+\end_inset
+
+为区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+内一点, 
+\begin_inset Formula $x+\Delta x$
+\end_inset
+
+为这区间内的另一点(
+\begin_inset Formula $\Delta x>0$
+\end_inset
+
+或
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta x<0$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+), 则公 式
+\series bold
+
+\begin_inset Formula $f'(\xi)=\frac{f(b)-f(a)}{b-a}$
+\end_inset
+
+ 
+\series default
+在区间
+\begin_inset Formula $[x,x+\Delta x]$
+\end_inset
+
+(当A% > 0时)或在区间
+\begin_inset Formula $[x+\Delta x,x]$
+\end_inset
+
+(当
+\begin_inset Formula $\Delta x<0$
+\end_inset
+
+时)上就成为
+\begin_inset Formula 
+\[
+f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个式子叫做限增量公式, 给出了自变量取得有限增量
+\begin_inset Formula $\Delta x$
+\end_inset
+
+(
+\begin_inset Formula $|\Delta x|$
+\end_inset
+
+不一定很小)时, 函数增量
+\begin_inset Formula $\Delta y$
+\end_inset
+
+的准确表达因此, 这个定理也叫做有限增量定理.
+\end_layout
+
+\begin_layout Corollary
 如果函数
 \begin_inset Formula $f(x)$
 \end_inset
@@ -26580,11 +27123,14 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 在该区间内恒为常数
 \end_layout
 
-\begin_layout Itemize
-推理2 
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Corollary
 如果函数
 \begin_inset Formula $f(x)$
 \end_inset
@@ -26610,6 +27156,261 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 
 \begin_layout Subsection
 柯西中值定理
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,
+\begin_inset Formula $g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在闭区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续,
+\end_layout
+
+\begin_layout Standard
+在开区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内可导,
+\end_layout
+
+\begin_layout Standard
+对任一
+\begin_inset Formula $x\in(a,b)$
+\end_inset
+
+, 
+\begin_inset Formula $g'(x)\neq0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+那么在
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内至少有一点
+\begin_inset Formula $\xi$
+\end_inset
+
+, 使等式
+\begin_inset Formula 
+\[
+\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}
+\]
+
+\end_inset
+
+成立.
+\end_layout
+
+\begin_layout Section
+洛必达法则
+\end_layout
+
+\begin_layout Subsection
+未定式
+\end_layout
+
+\begin_layout Standard
+如果当
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+(或
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+)时, 两个函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,
+\begin_inset Formula $g(x)$
+\end_inset
+
+都趋于零或都趋于无穷.那么极限
+\begin_inset Formula $\underset{(x\rightarrow\infty)}{\underset{x\rightarrow a}{\lim}}\frac{f(x)}{g(x)}$
+\end_inset
+
+可能存在, 也可能不存在.
+ 通常把这种极限叫做未定式, 简记为
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型(或
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型)
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+,
+\begin_inset Formula $g(x)$
+\end_inset
+
+满足下列条件
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $limf(x)=0,limg(x)=0$
+\end_inset
+
+(或
+\begin_inset Formula $limf(x)=∞，limf(g)=∞$
+\end_inset
+
+); 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f(x),g(x)$
+\end_inset
+
+ 可导, 且
+\begin_inset Formula $g'(x)≠0$
+\end_inset
+
+； 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $lim\frac{f'(x)}{g'(x)}$
+\end_inset
+
+存在或为
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+则
+\begin_inset Formula $lim\frac{f(x)}{g(x)}=lim\frac{f'(x)}{g'(x)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+该定理说明对于
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型(或
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型)的未定型极限, 在符合定理的条件下, 可以通过对分子及分母分别求导数, 然后再求极限的方法来确定.
+\end_layout
+
+\begin_layout Proof
+因为求
+\begin_inset Formula $\frac{f(x)}{g(x)}$
+\end_inset
+
+当
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+时的极限与
+\begin_inset Formula $f(a)$
+\end_inset
+
+及
+\begin_inset Formula $g(a)$
+\end_inset
+
+无关, 所以可以假定
+\begin_inset Formula $f(a)=g(a)=0$
+\end_inset
+
+.
+ 由条件1,2 可知, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+和
+\begin_inset Formula $g(x)$
+\end_inset
+
+点
+\begin_inset Formula $a$
+\end_inset
+
+的某一邻域内是连续的.设
+\begin_inset Formula $x$
+\end_inset
+
+是这邻域内的一点，那么在以
+\begin_inset Formula $x$
+\end_inset
+
+及
+\begin_inset Formula $a$
+\end_inset
+
+为端点的区间上,柯西中值定理的条件均满足，因此有
+\begin_inset Formula 
+\[
+\frac{f(x)}{g(x)}=\frac{f(x)-f(a)}{g(x)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\text{ }(\xi\text{在}x\text{与}a\text{之间})
+\]
+
+\end_inset
+
+令
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+,并对上式两端求极限.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+注意 
+\end_layout
+
+\begin_layout Enumerate
+使用洛必达法则前必须检验极限类型, 只有
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型或者
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+才可以使用洛必达法则.
+ 
+\end_layout
+
+\begin_layout Enumerate
+在极限计算过程中, 无穷小量等价代换和洛必达法则应结合使用, 能用等价代换则先用等价代换, 这样可以简化计算过程.
+\end_layout
+
+\begin_layout Section
+泰勒公式
 \end_layout
 
 \begin_layout Chapter
