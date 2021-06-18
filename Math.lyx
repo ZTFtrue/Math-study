@@ -22880,7 +22880,7 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 对于函数
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -22908,7 +22908,7 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 时的极限, 记为
 \begin_inset Formula 
 \[
-\underset{x\rightarrow+x_{0}}{\lim}f(x)=A
+\underset{x\rightarrow x_{0}}{\lim}f(x)=A
 \]
 
 \end_inset
@@ -22924,29 +22924,92 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph
 左极限(右极限)
 \end_layout
 
-\begin_layout Standard
-数f(x)在
+\begin_layout Definition
+对于函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 当
+\begin_inset Formula $x\rightarrow x_{0}^{-}$
+\end_inset
+
+(
+\begin_inset Formula $x\rightarrow x_{0}^{+}$
+\end_inset
+
+)时, 相应的函数值
+\begin_inset Formula $f(x)$
+\end_inset
+
+无限接近于一个确定常数A, 那么
+\begin_inset Formula $A$
+\end_inset
+
+称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
 \begin_inset Formula $x_{0}$
 \end_inset
 
- 处的极限存在的充分必要条件是f(x) 在
-\begin_inset Formula $x_{0}$
+处的左极限(右极限), 记为
+\begin_inset Formula 
+\[
+\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=A\text{ }\text{(}\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=A\text{)}
+\]
+
 \end_inset
 
- 处的左右极限都存在且相等.
  
+\begin_inset Formula 
+\[
+f(x)\rightarrow A（x\rightarrow x_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处的极限存在的充分必要条件是
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处的左右极限都存在且相等, 即
+\begin_inset Formula 
+\[
+\underset{x\rightarrow x_{0}}{\lim}f(x)=A\Longleftrightarrow\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=A
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-无穷大(比较绝对值) 
+无穷大(比较绝对值)
 \end_layout
 
 \begin_layout Subsection
-无穷小(以0为极限) 
+无穷小(以0为极限)
 \end_layout
 
 \begin_layout Itemize
