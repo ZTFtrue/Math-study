@@ -213,7 +213,7 @@ Math
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $x→a$
+\begin_inset Formula $x\rightarrow a$
 \end_inset
 
  x趋近于a
@@ -20303,13 +20303,13 @@ literal "false"
  记为 
 \begin_inset Formula 
 \[
-lim(n→∞)\{a_{n}\}=A
+lim(n\rightarrow\infty)\{a_{n}\}=A
 \]
 
 \end_inset
 
 , 或者
-\begin_inset Formula $a_{n}→A（n→∞)$
+\begin_inset Formula $a_{n}\rightarrow A（n\rightarrow\infty)$
 \end_inset
 
 , 如果
@@ -20330,7 +20330,7 @@ lim(n→∞)\{a_{n}\}=A
 
 \begin_layout Enumerate
 一般地, 任一常数数列的极限是常数本身, 
-\begin_inset Formula $lim(n→∞)C=C$
+\begin_inset Formula $lim(n\rightarrow\infty)C=C$
 \end_inset
 
 .
@@ -22675,40 +22675,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-当自变量x取正值且无限增大(记为
-\begin_inset Formula $x→+∞$
+对于函数
+\begin_inset Formula $y=f(x)$
 \end_inset
 
-)时, 函数值f(x)无限接近于一个确定常数A, 那么A称为函数f(x)当
-\begin_inset Formula $x→+∞$
-\end_inset
-
-时的极限, 记为
-\begin_inset Formula 
-\[
-lim(x→∞)f(x)=A
-\]
-
-\end_inset
-
-或 
-\begin_inset Formula 
-\[
-f(x)→A（x→∞)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-当x取负值且
-\begin_inset Formula $|x|$
-\end_inset
-
-无限增大(记为 
-\begin_inset Formula $x→-∞$
+, 当自变量x取正值且无限增大(记为
+\begin_inset Formula $x\rightarrow+\infty$
 \end_inset
 
 )时, 函数值
@@ -22716,13 +22688,13 @@ f(x)→A（x→∞)
 \end_inset
 
 无限接近于一个确定常数A, 那么A称为函数f(x)当
-\begin_inset Formula $x→-∞$
+\begin_inset Formula $x\rightarrow+\infty$
 \end_inset
 
 时的极限, 记为
 \begin_inset Formula 
 \[
-lim(x→-∞)f(x)=A
+\underset{x\rightarrow+\infty}{\lim}f(x)=A
 \]
 
 \end_inset
@@ -22730,7 +22702,43 @@ lim(x→-∞)f(x)=A
 或 
 \begin_inset Formula 
 \[
-f(x)→A（x→-∞)
+f(x)\rightarrow A（x\rightarrow+\infty)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+当x取负值且
+\begin_inset Formula $|x|$
+\end_inset
+
+无限增大(记为 
+\begin_inset Formula $x\rightarrow-\infty$
+\end_inset
+
+)时, 函数值
+\begin_inset Formula $f(x)$
+\end_inset
+
+无限接近于一个确定常数A, 那么A称为函数f(x)当
+\begin_inset Formula $x\rightarrow-\infty$
+\end_inset
+
+时的极限, 记为
+\begin_inset Formula 
+\[
+\underset{x\rightarrow-\infty}{\lim}f(x)=A
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+f(x)\rightarrow A(x\rightarrow-\infty)
 \]
 
 \end_inset
@@ -22739,57 +22747,115 @@ f(x)→A（x→-∞)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $|x|→∞$
+例如,
+\begin_inset Formula $\underset{x\rightarrow-\infty}{\lim}\frac{5}{x}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+对于函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 当
+\begin_inset Formula $x\rightarrow\infty$
 \end_inset
 
 记为 
-\begin_inset Formula $x→∞$
+\begin_inset Formula $x\rightarrow\infty$
 \end_inset
 
  .
  
-\begin_inset Formula $x→∞$
+\begin_inset Formula $x\rightarrow\infty$
 \end_inset
 
- 时, 相应的函数值f(x)无限接近于一个确定常数A, 那么A称为函数f(x)当
-\begin_inset Formula $x→∞$
+ 时, 相应的函数值
+\begin_inset Formula $f(x)$
+\end_inset
+
+无限接近于一个确定常数
+\begin_inset Formula $A$
+\end_inset
+
+, 那么
+\begin_inset Formula $A$
+\end_inset
+
+称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+当
+\begin_inset Formula $x\rightarrow\infty$
 \end_inset
 
 时的极限, 记为记为
 \begin_inset Formula 
 \[
-lim(x→∞)f(x)=A
+\underset{x\rightarrow\infty}{\lim}f(x)=A
 \]
 
 \end_inset
 
 或 
-\begin_inset Formula $f(x)→A（x→∞)$
+\begin_inset Formula $f(x)\rightarrow A(x\rightarrow\infty)$
 \end_inset
 
 .
- 函数
-\begin_inset Formula $y=(x+1)/x$
+ 
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $y=\frac{(x+1)}{x}$
 \end_inset
 
 的x 无限增大极限为1, 而
-\begin_inset Formula $y=(1/2)^{x}$
+\begin_inset Formula $y=(\frac{1}{2})^{x}$
 \end_inset
 
- 不存在.
+ 虽然
+\begin_inset Formula $x\rightarrow+\infty$
+\end_inset
+
+时,
+\begin_inset Formula $(\frac{1}{2})^{x}\rightarrow0$
+\end_inset
+
+, 但是当
+\begin_inset Formula $x\rightarrow-\infty$
+\end_inset
+
+时,
+\begin_inset Formula $(\frac{1}{2})^{x}$
+\end_inset
+
+的极限不存在, 所以
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+时
+\begin_inset Formula $y=(\frac{1}{2})^{x}$
+\end_inset
+
+的极限不存在.
 \end_layout
 
 \begin_layout Standard
 当且仅当
-\begin_inset Formula $lim(x→+∞)f(x)$
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}f(x)$
 \end_inset
 
  和
-\begin_inset Formula $lim(x→-∞)f(x)$
+\begin_inset Formula $\underset{x\rightarrow-\infty}{\lim}f(x)$
 \end_inset
 
 都存在且相等, 则 
-\begin_inset Formula $lim(x→∞)f(x)$
+\begin_inset Formula $lim(x\rightarrow\infty)f(x)$
 \end_inset
 
  存在, 即
@@ -22798,7 +22864,7 @@ lim(x→∞)f(x)=A
 \begin_layout Standard
 \begin_inset Formula 
 \[
-lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-\infty)f(x)=A
+\underset{x\rightarrow\infty}{\lim}f(x)=A\iff\underset{x\rightarrow+\infty}{\lim}f(x)=\underset{x\rightarrow-\infty}{\lim}f(x)=A
 \]
 
 \end_inset
@@ -22808,7 +22874,51 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 
 \begin_layout Subsection
 当
-\begin_inset Formula $x→x_{0}$
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 当
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+时, 相应的函数值
+\begin_inset Formula $f(x)$
+\end_inset
+
+无限接近于一个确定常数A, 那么
+\begin_inset Formula $A$
+\end_inset
+
+称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+当
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+时的极限, 记为
+\begin_inset Formula 
+\[
+\underset{x\rightarrow+x_{0}}{\lim}f(x)=A
+\]
+
+\end_inset
+
+或 
+\begin_inset Formula 
+\[
+f(x)\rightarrow A（x\rightarrow x_{0})
+\]
+
 \end_inset
 
 
@@ -22857,7 +22967,7 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 
 \begin_layout Standard
 若
-\begin_inset Formula $limf(x)=∞$
+\begin_inset Formula $limf(x)=\infty$
 \end_inset
 
  ,则
@@ -22873,7 +22983,7 @@ lim(x\rightarrow\infty)f(x)=A\iff lim(x\rightarrow+\infty)f(x)=lim(x\rightarrow-
 \end_inset
 
 , 则
-\begin_inset Formula $lim{1/f(x)}=∞$
+\begin_inset Formula $lim{1/f(x)}=\infty$
 \end_inset
 
 
@@ -23709,13 +23819,13 @@ f(\xi)=C\text{ }(a<\xi<b)
 
 .
  如果当
-\begin_inset Formula $Δx→0$
+\begin_inset Formula $Δx\rightarrow0$
 \end_inset
 
 时, 极限
 \begin_inset Formula 
 \[
-\underset{(Δx→0)}{lim}\frac{Δy}{Δx}=\underset{(Δx→0)}{lim}\frac{f(x_{0}+Δx)-f(x_{0})}{Δx}
+\underset{(Δx\rightarrow0)}{lim}\frac{Δy}{Δx}=\underset{(Δx\rightarrow0)}{lim}\frac{f(x_{0}+Δx)-f(x_{0})}{Δx}
 \]
 
 \end_inset
@@ -24107,7 +24217,7 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 
 \begin_layout Enumerate
 取极限
-\begin_inset Formula $f'(x)=lim(Δx→0)\frac{Δy}{Δx}$
+\begin_inset Formula $f'(x)=lim(Δx\rightarrow0)\frac{Δy}{Δx}$
 \end_inset
 
 
@@ -27276,7 +27386,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_inset
 
 (或
-\begin_inset Formula $limf(x)=∞，limf(g)=∞$
+\begin_inset Formula $limf(x)=\infty，limf(g)=\infty$
 \end_inset
 
 ); 
@@ -31672,7 +31782,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_inset
 
 重贝伯努利试验中,当试验次数
-\begin_inset Formula $n→∞$
+\begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
  时, 称为可列重伯努利试验.
@@ -35544,7 +35654,7 @@ Q=\left\{ \begin{array}{cc}
 
 \begin_layout Enumerate
 长期准则: 使得在
-\begin_inset Formula $[0,+∞)$
+\begin_inset Formula $[0,+\infty)$
 \end_inset
 
 时间段内获得最大平均收益或最小风险
