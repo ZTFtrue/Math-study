@@ -25255,9 +25255,18 @@ y''',y^{(4)},\cdots,y^{n}
 
 在该区间内确定了一个
 \series bold
-隐函数
+一元隐函数
 \series default
 .
+ 类似的, 由方程
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+ 确定的二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+称为二元隐函数.
 \end_layout
 
 \begin_layout Standard
@@ -25267,7 +25276,13 @@ y''',y^{(4)},\cdots,y^{n}
 \begin_inset Formula $x^{2}+y^{2}=1$
 \end_inset
 
+,
+\begin_inset Formula $x^{3}+y^{3}=6xy$
+\end_inset
 
+(
+\series default
+笛卡尔叶形线)
 \end_layout
 
 \begin_layout Standard
@@ -25289,6 +25304,70 @@ y''',y^{(4)},\cdots,y^{n}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+但是大部分隐函数是不容易显式话的, 如笛卡尔叶形线.
+ 
+\end_layout
+
+\begin_layout Standard
+显然,通过将隐函数是式化来求出隐函数的导数是行不通的。
+\end_layout
+
+\begin_layout Paragraph
+方法一:对确定隨函数的方程两边关于自变量求导
+\end_layout
+
+\begin_layout Example
+求由方程
+\begin_inset Formula $e^{x}-e^{y}-xy=0$
+\end_inset
+
+ 确定的隐函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 的导数
+\begin_inset Formula $y'$
+\end_inset
+
+及
+\begin_inset Formula $y'(0)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Solution*
+对方程
+\begin_inset Formula $e^{x}-e^{y}-xy=0$
+\end_inset
+
+两边关于
+\begin_inset Formula $x$
+\end_inset
+
+求导,注意到
+\begin_inset Formula $y$
+\end_inset
+
+是
+\begin_inset Formula $x$
+\end_inset
+
+的函数, 得
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Formula 
+\[
+e^{x}-e^{y}-xy=0
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -32014,7 +32093,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_inset
 
 , 方差是
-\begin_inset Formula $\frac {1-p} {p^{2}}$
+\begin_inset Formula $\frac{1-p}{p^{2}}$
 \end_inset
 
 
