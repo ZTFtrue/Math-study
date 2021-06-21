@@ -22626,7 +22626,7 @@ status open
 
 处取不到值, 因为被零除.
  所以在这一点函数没有意义.
-  
+ 2
 \end_layout
 
 \begin_layout Plain Layout
@@ -22635,7 +22635,7 @@ status open
 \end_inset
 
 的定义域中不包括"0”, 但当 x 无限接近于零时, 
-\begin_inset Formula $(sinx)/x$
+\begin_inset Formula $\frac{sinx}{x}$
 \end_inset
 
  就无限接近于一.
@@ -23008,8 +23008,102 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 无穷大(比较绝对值)
 \end_layout
 
+\begin_layout Definition
+对于函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 在自变量
+\begin_inset Formula $x$
+\end_inset
+
+的某种变化方式下, 
+\series bold
+如果函数值的绝对值
+\begin_inset Formula $|f(x)|$
+\end_inset
+
+无限增大
+\series default
+, 则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+为该方式下的无穷大量(简称 无穷大).
+ 记为
+\begin_inset Formula $\lim f(x)=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+无穷大是极限不存在的一种情形, 
+\begin_inset Formula $\lim f(x)=\infty$
+\end_inset
+
+只是借用极限记号, 并不表示极限存在.
+\end_layout
+
+\begin_layout Enumerate
+如果相应的函数值
+\begin_inset Formula $f(x)$
+\end_inset
+
+(或
+\begin_inset Formula $-f(x)$
+\end_inset
+
+)无限增大, 则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+为该方式下的正无穷大量(或负无穷大量), 记为
+\begin_inset Formula $\lim f(x)=+\infty$
+\end_inset
+
+(或
+\begin_inset Formula $\lim f(x)=-\infty$
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Subsection
 无穷小(以0为极限)
+\end_layout
+
+\begin_layout Definition
+对于函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 在自变量
+\begin_inset Formula $x$
+\end_inset
+
+的某种变化方式下, 
+\series bold
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+以
+\begin_inset Formula $0$
+\end_inset
+
+为极限
+\series default
+, 则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+为该方式下的无穷小量(简称 无穷小).
+ 记为
+\begin_inset Formula $\lim f(x)=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -23020,21 +23114,33 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 无穷小量与有界量的乘积仍然是无穷小量
 \end_layout
 
+\begin_layout Standard
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+是无穷大(或无穷小), 是与自变量
+\begin_inset Formula $x$
+\end_inset
+
+的变化方式紧密相连的, 因此说函数是无穷大(或无穷小)时, 必须指明
+\begin_inset Formula $x$
+\end_inset
+
+的变化方式.
+\end_layout
+
 \begin_layout Subsection
 无穷大与无穷小的关系
 \end_layout
 
-\begin_layout Standard
-无穷大与无穷小
-\end_layout
-
-\begin_layout Standard
+\begin_layout Definition
 若
 \begin_inset Formula $limf(x)=\infty$
 \end_inset
 
  ,则
-\begin_inset Formula $lim{1/f(x)}=0$
+\begin_inset Formula $\lim\frac{1}{f(x)}=0$
 \end_inset
 
 ;反之, 若
@@ -23046,10 +23152,14 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_inset
 
 , 则
-\begin_inset Formula $lim{1/f(x)}=\infty$
+\begin_inset Formula $\lim\frac{1}{f(x)}=\infty$
 \end_inset
 
+, 即互为倒数(
+\begin_inset Formula $0$
+\end_inset
 
+除外).
 \end_layout
 
 \begin_layout Subsection
@@ -31900,11 +32010,11 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 
 \begin_layout Standard
 呈几何分布的随机变量X的期望值是
-\begin_inset Formula $1/p$
+\begin_inset Formula $\frac{1}{p}$
 \end_inset
 
 , 方差是
-\begin_inset Formula $（1-p)/p2$
+\begin_inset Formula $\frac {1-p} {p^{2}}$
 \end_inset
 
 
