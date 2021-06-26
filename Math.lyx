@@ -25362,7 +25362,7 @@ y''',y^{(4)},\cdots,y^{n}
 \begin_layout Solution*
 \begin_inset Formula 
 \[
-e^{x}-e^{y}-xy=0
+e^{x}-e^{y}y'-(y+xy')=0
 \]
 
 \end_inset
@@ -25371,7 +25371,7 @@ e^{x}-e^{y}-xy=0
 \end_layout
 
 \begin_layout Section
-函数的单调性与导数 
+函数的单调性与导数
 \end_layout
 
 \begin_layout Standard
