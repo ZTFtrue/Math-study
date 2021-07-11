@@ -31,7 +31,7 @@ figs-within-sections
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command default
 \index_command default
 \paperfontsize default
@@ -24107,11 +24107,11 @@ f(\xi)=C\text{ }(a<\xi<b)
 \end_inset
 
 的比值.
- 此外，
+ 此外,
 \begin_inset Formula $\frac{dy}{dx}$
 \end_inset
 
-表示的是导函数，在某一点
+表示的是导函数,在某一点
 \begin_inset Formula $x=a$
 \end_inset
 
@@ -24204,7 +24204,7 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 \begin_inset Formula $x_{0}$
 \end_inset
 
-处的左导数和右导数，记作
+处的左导数和右导数,记作
 \begin_inset Formula $f_{-}^{'}(x_{0})$
 \end_inset
 
@@ -24316,7 +24316,7 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 \begin_inset Formula ${\displaystyle f'(x_{0})=\lim_{\Delta x\to0}\frac{\Delta y}{\Delta x}}$
 \end_inset
 
-存在，其中 
+存在,其中 
 \begin_inset Formula ${\displaystyle \Delta y=f(x_{0}+\Delta x)-f(x_{0})}$
 \end_inset
 
@@ -24795,7 +24795,7 @@ y''=(y')'
 \end_layout
 
 \begin_layout Standard
-相应地，把
+相应地,把
 \begin_inset Formula $y=f(x)$
 \end_inset
 
@@ -24812,7 +24812,7 @@ y''=(y')'
 \end_layout
 
 \begin_layout Standard
-类似地，二阶导数的导数，叫做三阶导数，三阶导数的导数叫做四阶导数……一般地，
+类似地,二阶导数的导数,叫做三阶导数,三阶导数的导数叫做四阶导数……一般地,
 \begin_inset Formula $(n-1)$
 \end_inset
 
@@ -24820,7 +24820,7 @@ y''=(y')'
 \begin_inset Formula $n$
 \end_inset
 
-阶导数，分别记作
+阶导数,分别记作
 \begin_inset Formula 
 \[
 y''',y^{(4)},\cdots,y^{n}
@@ -25469,7 +25469,8 @@ f(x)<f(x_{0})
 \end_layout
 
 \begin_layout Theorem
-设函数
+必要条 .
+ 设函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -25477,11 +25478,11 @@ f(x)<f(x_{0})
 \begin_inset Formula $x_{0}$
 \end_inset
 
-处可导, 如果
+处可导, 如果 
 \begin_inset Formula $f'(x_{0})=0$
 \end_inset
 
-, 则
+ , 则
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -25489,19 +25490,20 @@ f(x)<f(x_{0})
 \end_layout
 
 \begin_layout Standard
-第一充分条件
+
 \end_layout
 
 \begin_layout Theorem
-设函数
+第一充分条件 .
+ 设函数
 \begin_inset Formula $f(x)$
 \end_inset
 
-在区间
+ 在区间 
 \begin_inset Formula $[a,b]$
 \end_inset
 
-内可导, 且在区间内的点
+ 内可导, 且在区间内的点
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -25539,7 +25541,7 @@ f(x)<f(x_{0})
 \uwave default
 \noun default
 \color inherit
- 时，
+ 时,
 \begin_inset Formula $f'(x)>0$
 \end_inset
 
@@ -25597,7 +25599,7 @@ f(x)<f(x_{0})
 \uwave default
 \noun default
 \color inherit
- 时，
+ 时,
 \begin_inset Formula $f'(x)<0$
 \end_inset
 
@@ -25673,7 +25675,7 @@ f(x)<f(x_{0})
 \begin_inset Formula $f''(x_{0})<0$
 \end_inset
 
-时，函数
+时,函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -25689,7 +25691,7 @@ f(x)<f(x_{0})
 \begin_inset Formula $f''(x_{0})>0$
 \end_inset
 
-时，函数
+时,函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -25728,7 +25730,6 @@ f(x)<f(x_{0})
 \end_inset
 
 ,当z为可知的值时, 即可转为无极值条件问题.
-  
 \end_layout
 
 \begin_layout Section
@@ -25821,7 +25822,7 @@ F'_{\lambda}=\varphi(x,y)=0,
 \begin_inset Formula $f(x)$
 \end_inset
 
-在区间/上连续，如果对
+在区间/上连续,如果对
 \begin_inset Formula $I$
 \end_inset
 
@@ -25881,11 +25882,11 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续，在
+上连续,在
 \begin_inset Formula $(a,b)$
 \end_inset
 
-内具有一阶和二阶导数，那么
+内具有一阶和二阶导数,那么
 \end_layout
 
 \begin_layout Standard
@@ -25941,7 +25942,252 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 \end_layout
 
 \begin_layout Subsection
-曲率的概念和公式 
+弧微分
+\end_layout
+
+\begin_layout Standard
+弧微分公式:
+\begin_inset Formula 
+\[
+ds=\sqrt{1+y'^{2}}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内具有连续导数,在曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+上取固定点
+\begin_inset Formula $M_{0}(x_{0},y_{0})$
+\end_inset
+
+作为度量弧长的基点, 并规定以
+\begin_inset Formula $x$
+\end_inset
+
+增大的方向作为曲线的正向.
+ 
+\end_layout
+
+\begin_layout Standard
+对曲线上任一点
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+, 规定有向弧段
+\begin_inset Formula $\stackrel{\frown}{M_{0}M}$
+\end_inset
+
+的值
+\begin_inset Formula $s$
+\end_inset
+
+ (简称为弧
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $\stackrel{\frown}{M_{0}M}$
+\end_inset
+
+也可以表示有向弧段
+\begin_inset Formula $\stackrel{\frown}{M_{0}M}$
+\end_inset
+
+的值) 如下:
+\end_layout
+
+\begin_layout Standard
+如下
+\begin_inset Formula $s$
+\end_inset
+
+的绝对值等于这个弧段的长度，当有向弧段
+\begin_inset Formula $\stackrel{\frown}{M_{0}M}$
+\end_inset
+
+的方向与曲线的正向一致时
+\begin_inset Formula $s>0$
+\end_inset
+
+, 相反时
+\begin_inset Formula $s<0$
+\end_inset
+
+.显然, 弧
+\begin_inset Formula $s$
+\end_inset
+
+与
+\begin_inset Formula $x$
+\end_inset
+
+存在函数关系: 
+\begin_inset Formula $s=s(x)$
+\end_inset
+
+, 而且
+\begin_inset Formula $s(x)$
+\end_inset
+
+是
+\begin_inset Formula $x$
+\end_inset
+
+的单调增加函数.
+\end_layout
+
+\begin_layout Standard
+下面来求s(x)的导数及微分.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $x$
+\end_inset
+
+ , 
+\begin_inset Formula $x+\varDelta x$
+\end_inset
+
+为
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内两个邻近的点, 它们在曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 上的对应点为
+\begin_inset Formula $M$
+\end_inset
+
+,
+\begin_inset Formula $M'$
+\end_inset
+
+, 并设 对应于
+\begin_inset Formula $x$
+\end_inset
+
+的增量为
+\begin_inset Formula $\varDelta x$
+\end_inset
+
+, 弧
+\begin_inset Formula $s$
+\end_inset
+
+的增量为
+\begin_inset Formula $\varDelta s$
+\end_inset
+
+，那么
+\begin_inset Formula 
+\[
+\varDelta x=\stackrel{\frown}{M_{0}M'}-\stackrel{\frown}{M_{0}M}=\stackrel{\frown}{MM'}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是
+\begin_inset Formula 
+\begin{align*}
+(\frac{\varDelta s}{\varDelta x})^{2} & =(\frac{\stackrel{\frown}{MM'}}{\varDelta x})^{2}=(\frac{\stackrel{\frown}{MM'}}{|MM'|})^{2}\cdot\frac{|MM'|^{2}}{(\varDelta x)^{2}}\\
+= & (\frac{\stackrel{\frown}{MM'}}{|MM'|})^{2}\cdot\frac{(\varDelta x)^{2}+(\varDelta y)^{2}}{(\varDelta x)^{2}}\\
+= & (\frac{\stackrel{\frown}{MM'}}{|MM'|})^{2}\cdot\left[\left(1+\frac{(\varDelta y)}{(\varDelta x)}\right)^{2}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\varDelta s}{\varDelta x}=\pm\sqrt{(\frac{\stackrel{\frown}{MM'}}{|MM'|})^{2}\cdot\left[\left(1+\frac{(\varDelta y)}{(\varDelta x)}\right)^{2}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另 
+\begin_inset Formula $\lim\varDelta x\rightarrow0$
+\end_inset
+
+ , 由于
+\begin_inset Formula $\varDelta x\rightarrow0$
+\end_inset
+
+时这时弧的长度与弦的长度之比的极限等于1, 即
+\begin_inset Formula 
+\[
+\underset{M'\rightarrow M}{\lim}\frac{\stackrel{\frown}{MM'}}{|MM'|}=1
+\]
+
+\end_inset
+
+又
+\begin_inset Formula 
+\[
+\underset{\varDelta x\rightarrow0}{\lim}\frac{\varDelta y}{\varDelta x}=y'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此得
+\begin_inset Formula 
+\[
+\frac{ds}{dx}=\pm\sqrt{1+y'^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于 
+\begin_inset Formula $s=s(x)$
+\end_inset
+
+ 是单调增加函数, 从而根号前应取正号, 于是有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{1+y'^{2}}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+曲率的概念和公式
 \end_layout
 
 \begin_layout Standard
@@ -25954,7 +26200,7 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 \end_inset
 
 处的去率.
-  曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小.
+ 曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小.
   曲率的计算公式为
 \begin_inset Formula 
 \[
@@ -26076,11 +26322,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $\Delta x$
 \end_inset
 
-称为自变量的微分，记作
+称为自变量的微分,记作
 \begin_inset Formula $\textrm{d}x$
 \end_inset
 
-，即
+,即
 \begin_inset Formula ${\displaystyle \textrm{d}x=\Delta x}$
 \end_inset
 
@@ -26088,12 +26334,12 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
-对于一元函数来说，可微与可导是完全等价的概念.
+对于一元函数来说,可微与可导是完全等价的概念.
  可微的函数, 其微分等于导数乘以自变量的微分
 \begin_inset Formula $\textrm{d}x$
 \end_inset
 
-, 函数的微分与自变量的微分之商等于该函数的导数(因此，导数也叫做微商).
+, 函数的微分与自变量的微分之商等于该函数的导数(因此,导数也叫做微商).
  即
 \begin_inset Formula $\textrm{d}y=f'(x)Δx=f'(x)\textrm{d}x$
 \end_inset
@@ -26669,7 +26915,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $v$
 \end_inset
 
-可微,可导，那么:
+可微,可导,那么:
 \end_layout
 
 \begin_layout Standard
@@ -27219,7 +27465,7 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \begin_inset Formula $m$
 \end_inset
 
-.这样，只有两种可能情形:
+.这样,只有两种可能情形:
 \end_layout
 
 \begin_layout Proof
@@ -27242,7 +27488,7 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 \end_inset
 
  .
- 由此，
+ 由此,
 \begin_inset Formula $f'(x)$
 \end_inset
 
@@ -27618,7 +27864,8 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \begin_inset Formula $\frac{\infty}{\infty}$
 \end_inset
 
-型)
+型).
+ 对于这类极限,即使它存在也不能用“商的极限等于极限的商”这一 法则.
 \end_layout
 
 \begin_layout Standard
@@ -27634,11 +27881,11 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $limf(x)=0,limg(x)=0$
+\begin_inset Formula $\lim f(x)=0,\lim g(x)=0$
 \end_inset
 
 (或
-\begin_inset Formula $limf(x)=\infty，limf(g)=\infty$
+\begin_inset Formula $\lim f(x)=\infty，\lim g(g)=\infty$
 \end_inset
 
 ); 
@@ -27685,6 +27932,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_inset
 
 型)的未定型极限, 在符合定理的条件下, 可以通过对分子及分母分别求导数, 然后再求极限的方法来确定.
+ 这种方法称为洛必达(L' Hospital)法则
 \end_layout
 
 \begin_layout Proof
@@ -27725,7 +27973,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \begin_inset Formula $x$
 \end_inset
 
-是这邻域内的一点，那么在以
+是这邻域内的一点,那么在以
 \begin_inset Formula $x$
 \end_inset
 
@@ -27733,7 +27981,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \begin_inset Formula $a$
 \end_inset
 
-为端点的区间上,柯西中值定理的条件均满足，因此有
+为端点的区间上,柯西中值定理的条件均满足,因此有
 \begin_inset Formula 
 \[
 \frac{f(x)}{g(x)}=\frac{f(x)-f(a)}{g(x)-g(a)}=\frac{f'(\xi)}{g'(\xi)}\text{ }(\xi\text{在}x\text{与}a\text{之间})
@@ -27772,7 +28020,214 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_layout
 
 \begin_layout Section
-泰勒公式
+泰勒公式(Taylor's Formula)
+\end_layout
+
+\begin_layout Standard
+有时候会用一些简单的函数来近似表达函数的复杂性, 如
+\begin_inset Formula $e^{x}$
+\end_inset
+
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+附近, 
+\begin_inset Formula $e^{x}\approx1+x$
+\end_inset
+
+, 但是这不够精确, 泰勒公式就可以更精确的表示 .
+\end_layout
+
+\begin_layout Standard
+在数学中, 泰勒公式是用多项式来近似表示函数在某点周围的情况。例如,指数函数
+\begin_inset Formula $e^{x}$
+\end_inset
+
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+的附近, 可以用以下多项式来近似地表示:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle e^{x}\approx1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}}
+\]
+
+\end_inset
+
+称为指数函数在
+\begin_inset Formula $0$
+\end_inset
+
+处的
+\begin_inset Formula $n$
+\end_inset
+
+阶泰勒展开公式。这个公式只对
+\begin_inset Formula $0$
+\end_inset
+
+附近的
+\begin_inset Formula $x$
+\end_inset
+
+有用, 
+\begin_inset Formula $x$
+\end_inset
+
+离
+\begin_inset Formula $0$
+\end_inset
+
+越远, 这个公式就越不准确.
+ 实际函数值和多项式的偏差称为泰勒公式的余项.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{n}(x)=e^{x}-\left(1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}\right)
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+
+\series bold
+泰勒中值定理1
+\series default
+ 如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数,那么存在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的一个邻域,对于该邻域内的任一
+\begin_inset Formula $x$
+\end_inset
+
+,有
+\begin_inset Formula 
+\[
+f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f^{''}(x_{0})}{2!}(x-x_{0})^{2}+\cdots+\frac{f^{n}(x_{0})}{n!}(x-x_{0})^{n}+R_{n}(x)
+\]
+
+\end_inset
+
+其中的多项式称为函数在
+\begin_inset Formula $x$
+\end_inset
+
+处的泰勒展开式，剩余的 
+\begin_inset Formula $R_{n}(x)$
+\end_inset
+
+是泰勒公式的余项, 
+\begin_inset Formula $R_{n}(x)=o((x-x_{0})^{n})$
+\end_inset
+
+ 是 
+\begin_inset Formula $(x-x_{0})^{n}$
+\end_inset
+
+的高阶无穷小.
+\end_layout
+
+\begin_layout Proof
+记
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $R_{n}(x)=f(x)-p_{n}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $p_{n}(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f^{''}(x_{0})}{2!}(x-x_{0})^{2}+\cdots+\frac{f^{n}(x_{0})}{n!}(x-x_{0})^{n}$
+\end_inset
+
+则
+\begin_inset Formula 
+\[
+R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+符号
+\begin_inset Formula $o()$
+\end_inset
+
+表示是比括号内容的高阶无穷小.
+\end_layout
+
+\begin_layout Quotation
+泰勒公式的余项
+\begin_inset Formula $R_{n}(x)$
+\end_inset
+
+的表达形式有若干种:
+\end_layout
+
+\begin_layout Quotation
+皮亚诺型余项:
+\begin_inset Formula $R_{n}(x)=o((x-x_{0})^{n})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Quotation
+拉格朗日型余项(拉格朗日微分中值定理的推广): 
+\begin_inset Formula $R_{n}(x)=\frac{f^{(n+1)}(\theta)}{(n+1)!}(x-a)^{(n+1)}$
+\end_inset
+
+,其中
+\begin_inset Formula ${\displaystyle \theta\in(a,x)}\theta\in(a,x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+积分型余项(可以看做微积分基本定理的推广): 
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula $R_{n}(x)=\int_{a}^{x}\frac{f^{(n+1)}(t)}{n!}(x-t)^{n}dt$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
