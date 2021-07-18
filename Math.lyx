@@ -22547,7 +22547,7 @@ status open
 \end_layout
 
 \begin_layout Section
-函数的极限
+函数的极限与无穷大,无穷小
 \end_layout
 
 \begin_layout Standard
@@ -23131,6 +23131,207 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_layout
 
 \begin_layout Subsection
+无穷小的比较
+\end_layout
+
+\begin_layout Standard
+设在自变量的某一变化过程下, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+和
+\begin_inset Formula $g(x)$
+\end_inset
+
+均是无穷小, 且
+\begin_inset Formula $g(x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $\lim\frac{f(x)}{g(x)}=0$
+\end_inset
+
+,则称 
+\begin_inset Formula $f(x$
+\end_inset
+
+)是
+\begin_inset Formula $g(x)$
+\end_inset
+
+的高阶无穷小,或称
+\begin_inset Formula $g(x)$
+\end_inset
+
+是
+\begin_inset Formula $f(x)$
+\end_inset
+
+的低阶无穷小,记为 
+\begin_inset Formula $f(x)=o(g(x))$
+\end_inset
+
+.
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\text{ 意思是在某一变化过程下}f(x)\rightarrow0$
+\end_inset
+
+比
+\begin_inset Formula $g(x)\rightarrow0$
+\end_inset
+
+快一些.
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $\lim\frac{f(x)}{g(x)}=C(C\neq0)$
+\end_inset
+
+,则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+与
+\begin_inset Formula $g(x)$
+\end_inset
+
+是同阶无穷小.
+ 特别地, 若
+\begin_inset Formula $C=1$
+\end_inset
+
+,则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+与
+\begin_inset Formula $g(x)$
+\end_inset
+
+是等价无穷小,记为
+\begin_inset Formula $f(x)\sim g(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+例如,当
+\begin_inset Formula $x\rightarrow0$
+\end_inset
+
+时,
+\begin_inset Formula $x^{2}$
+\end_inset
+
+,
+\begin_inset Formula $\sin x$
+\end_inset
+
+都是无穷小, 且有
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{x^{2}}{x}=0$
+\end_inset
+
+,
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\sin x}{x}=1$
+\end_inset
+
+ , 所以
+\begin_inset Formula $x^{2}=o(x)$
+\end_inset
+
+,
+\begin_inset Formula $x\sim\sin x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+可以证明,两个无穷小间的等价关系(不是相等关系)具有传递性,即
+\begin_inset Formula $f(x)\sim g(x)$
+\end_inset
+
+
+\begin_inset Formula $g(x)\sim h(x)$
+\end_inset
+
+,则 
+\begin_inset Formula $f(x)\sim h(x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+几组重要的无穷小的等价关系:
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $x\rightarrow0$
+\end_inset
+
+时, 
+\begin_inset Formula $x\sim\sin x\sim\tan x\sim\ln(1+x)\sim e^{x}-1\sim\arctan x\sim\arcsin x$
+\end_inset
+
+; 
+\begin_inset Formula $1-\cos x\sim\frac{1}{2}x^{2}$
+\end_inset
+
+; 
+\begin_inset Formula $(1+x)^{\alpha}-1\sim\alpha x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+无穷小量等价代换定理.
+ 设
+\begin_inset Formula $x$
+\end_inset
+
+在某种变化方式下,
+\begin_inset Formula $f(x)\sim g(x)$
+\end_inset
+
+,
+\begin_inset Formula $h(x)\sim r(x)$
+\end_inset
+
+, 若
+\begin_inset Formula $\lim\frac{g(x)}{r(x)}=A(\text{或}\infty)$
+\end_inset
+
+, 则 
+\begin_inset Formula $\lim\frac{f(x)}{h(x)}=\lim\frac{g(x)}{r(x)}=A(\text{或}\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 无穷大与无穷小的关系
 \end_layout
 
@@ -23316,6 +23517,46 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 
 \begin_layout Subsection
 两个重要极限
+\end_layout
+
+\begin_layout Standard
+第一个重要极限
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\sin x}{x}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+第二个重要极限
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}(1+\frac{1}{x})^{x}=e$
+\end_inset
+
+或
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}(1+x)^{\frac{1}{x}}=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当函数的极限类型是
+\begin_inset Quotes erd
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+型, 并且函数形式可以写为
+\begin_inset Formula $(1+\square)^{\frac{1}{\square}}$
+\end_inset
+
+,则
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}(1+x)^{\frac{1}{x}}=e$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -23966,6 +24207,17 @@ f(\xi)=C\text{ }(a<\xi<b)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $Δx=x_{1}-$
+\end_inset
+
+
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 设函数
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -24133,6 +24385,48 @@ f(\xi)=C\text{ }(a<\xi<b)
 
 或
 \begin_inset Formula $y′$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dx$
+\end_inset
+
+是微分里的概念, 是指自变量
+\begin_inset Formula $x$
+\end_inset
+
+的很改变量
+\begin_inset Formula $\Delta x(\Delta x\rightarrow0)$
+\end_inset
+
+。当
+\begin_inset Formula $Δx$
+\end_inset
+
+很小时， 即
+\begin_inset Formula $Δx\rightarrow0$
+\end_inset
+
+时，为了简化这一形式，把它记为
+\begin_inset Formula $dx$
+\end_inset
+
+, 也就是
+\begin_inset Formula $dx=\Delta x(\Delta x\rightarrow0)$
+\end_inset
+
+, 本质上就是一个很小的数, 可以参与运算的数.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $dy=df(x)$
+\end_inset
+
+对f(x)的微分, 对于一元函数
+\begin_inset Formula $dy=f'(x)\Delta x$
 \end_inset
 
 
@@ -25276,7 +25570,7 @@ y''',y^{(4)},\cdots,y^{n}
 \begin_inset Formula $x^{2}+y^{2}=1$
 \end_inset
 
-,
+, 
 \begin_inset Formula $x^{3}+y^{3}=6xy$
 \end_inset
 
@@ -25365,6 +25659,83 @@ y''',y^{(4)},\cdots,y^{n}
 e^{x}-e^{y}y'-(y+xy')=0
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+便得到隐函数的导数:
+\begin_inset Formula $y'=\frac{e^{x}-y}{x+e^{y}}(x+e^{y}\neq0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+方法二: 公式求隐函数的导数
+\end_layout
+
+\begin_layout Standard
+采用多元复合函数求导的方法来找到隐函数的求导公式.
+\end_layout
+
+\begin_layout Standard
+设方程
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+ 确定了一元隐函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 其中
+\begin_inset Formula $F(x,y)$
+\end_inset
+
+具有一阶连续偏导数
+\begin_inset Formula $F'_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $F'_{y}$
+\end_inset
+
+且
+\begin_inset Formula $F'_{y}\neq0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F(x,y)$
+\end_inset
+
+ 是关于
+\begin_inset Formula $x$
+\end_inset
+
+的复合函数, 
+\begin_inset Formula $y$
+\end_inset
+
+ 是中间变量, 
+\begin_inset Formula $x$
+\end_inset
+
+ 就是中间变量又是自变量.
+\end_layout
+
+\begin_layout Standard
+现在对方程
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+两边关于
+\begin_inset Formula $x$
+\end_inset
+
+求导, 求多元复合函数求导法, 可得 
+\begin_inset Formula $F'_{x}=F'_{y}\frac{dy}{dx}=0$
 \end_inset
 
 
@@ -26285,11 +26656,15 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $x_{0}+\Delta x$
 \end_inset
 
-(也在此区间内)时, 如果函数的增量
+(也在此区间内)时, 如果函数的
+\series bold
+增量
+\series default
+ 
 \begin_inset Formula $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$
 \end_inset
 
-可表示为
+ 可表示为
 \begin_inset Formula $\Delta y=A\Delta x+o(\Delta x)$
 \end_inset
 
@@ -26313,7 +26688,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \series bold
 高阶的无穷小
 \series default
-)那么称函数
+) 那么称函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -26338,7 +26713,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 , 即
-\begin_inset Formula ${\displaystyle \textrm{d}y=A\Delta x}$
+\begin_inset Formula 
+\[
+{\displaystyle \textrm{d}y=A\Delta x}
+\]
+
 \end_inset
 
 , 
@@ -26358,7 +26737,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 的增量
-\begin_inset Formula $\Delta x$
+\begin_inset Formula $\Delta x(\Delta x\rightarrow0)$
 \end_inset
 
 称为自变量的微分,记作
@@ -26441,6 +26820,52 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_layout
 
+\begin_layout Standard
+有一块正方形的金属片，它的边长原来是3，受热后增加了 ，问这块金属片的面积增加了多少?
+\end_layout
+
+\begin_layout Standard
+设加热前正方形金属片的面积为 ，即 A，加热后正方形金属片的面积为 
+\begin_inset Formula $A+\Delta A$
+\end_inset
+
+，即 
+\begin_inset Formula $A+\Delta A=(x+\Delta x)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此正方形金属片在加热后面积增加了 ： 
+\begin_inset Formula $(x+\Delta x)^{2}-x^{2}=2x\Delta x+(\Delta x)^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+在实际问题的计算中，如果遇到几个不同阶的无穷小量之和，为了简化计算, 常常把高阶无穷小忽略不计,
+\begin_inset Formula $(\Delta x)^{2}$
+\end_inset
+
+是
+\begin_inset Formula $2x\Delta x\text{的高阶无穷小, 所以忽略(\Delta x)^{2}}$
+\end_inset
+
+.
+ 即
+\begin_inset Formula 
+\[
+\Delta A=2x\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 微分的几何意义
 \end_layout
@@ -26491,6 +26916,10 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+微分是对函数的局部变化的一种线性描述。微分可以近似地描述当函数自变量的变化量取值作足够小时, 函数的值是怎样改变的.
 \end_layout
 
 \begin_layout Section
