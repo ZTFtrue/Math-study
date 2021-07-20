@@ -25504,7 +25504,11 @@ y''',y^{(4)},\cdots,y^{n}
 \series bold
 由于函数取极值的点处的导数值为零
 \series default
-, 故可用牛顿法求导函数的零点, 其迭代式为
+, 故可用
+\series bold
+牛顿法求导函数的零点
+\series default
+, 其迭代式为
 \end_layout
 
 \begin_layout Standard
@@ -26601,16 +26605,127 @@ status open
 \end_layout
 
 \begin_layout Standard
-称
-\begin_inset Formula $K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid$
+在
+\begin_inset Formula $xOy$
 \end_inset
 
-为曲线在点
-\begin_inset Formula $P$
+坐标系中, 设曲线
+\begin_inset Formula $C$
 \end_inset
 
-处的去率.
- 曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小.
+ 是光滑的(连续可导), 在曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 上选定一点 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ 作为度量弧 
+\begin_inset Formula $s$
+\end_inset
+
+ 的基点.
+ 设曲线上点
+\begin_inset Formula $M$
+\end_inset
+
+ 对应于弧
+\begin_inset Formula $s$
+\end_inset
+
+, 在点 
+\begin_inset Formula $M$
+\end_inset
+
+处切线的倾角为
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 曲线上另外一点
+\begin_inset Formula $M'$
+\end_inset
+
+对应于弧 
+\begin_inset Formula $s+\Delta s$
+\end_inset
+
+ , 在点
+\begin_inset Formula $M'$
+\end_inset
+
+处切线的倾角为
+\begin_inset Formula $\alpha+\Delta\alpha$
+\end_inset
+
+, 则弧段
+\begin_inset Formula $\overset{\frown}{MM'}$
+\end_inset
+
+的长度为
+\begin_inset Formula $|\Delta s|$
+\end_inset
+
+, 当动点从
+\begin_inset Formula $M$
+\end_inset
+
+移 动到
+\begin_inset Formula $M'$
+\end_inset
+
+时切线转过的角度为
+\begin_inset Formula $|\Delta\alpha|$
+\end_inset
+
+(几何证明).
+\end_layout
+
+\begin_layout Standard
+我们用比值
+\begin_inset Formula $\mid\frac{\Delta\alpha}{\Delta s}\mid$
+\end_inset
+
+, 即单位弧段上切线转过的角度的大小来表达弧段的平均弯曲程度，把这比值叫做弧段
+\begin_inset Formula $\overset{\frown}{MM'}$
+\end_inset
+
+平均曲率, 的并记作
+\begin_inset Formula $\bar{K}$
+\end_inset
+
+即
+\begin_inset Formula 
+\[
+\bar{K}=\mid\frac{\Delta\alpha}{\Delta s}\mid
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $\Delta s\rightarrow0$
+\end_inset
+
+时，上述平均曲率的极限叫做曲线C在点M处的曲率,记作
+\begin_inset Formula $K$
+\end_inset
+
+,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K=\underset{\Delta s\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid
+\]
+
+\end_inset
+
+.曲率是曲线弯曲程度的定量描述, 曲率大, 曲线的弯曲程度大；去率小曲线的, 弯曲程度小.
   曲率的计算公式为
 \begin_inset Formula 
 \[
@@ -26624,6 +26739,220 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \begin_layout Subsection
 曲率圆与曲率半径
+\end_layout
+
+\begin_layout Standard
+设曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+处的曲率为
+\begin_inset Formula $K(K\neq0)$
+\end_inset
+
+.
+ 在点 
+\begin_inset Formula $M$
+\end_inset
+
+ 处的曲线的法线上, 在凹的一侧取一点
+\begin_inset Formula $D$
+\end_inset
+
+, 使
+\begin_inset Formula $|DM|=\frac{1}{K}=\rho$
+\end_inset
+
+.
+ 以
+\begin_inset Formula $D$
+\end_inset
+
+为圆心, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\rho$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+为半径作圆, 这个圆叫做曲线在点
+\begin_inset Formula $M$
+\end_inset
+
+处的圆, 曲率圆的圆心
+\begin_inset Formula $D$
+\end_inset
+
+叫做曲线在点M处
+\series bold
+曲率中心
+\series default
+, 曲率圆的半径
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\rho$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+叫做曲线在点
+\begin_inset Formula $M$
+\end_inset
+
+处的
+\series bold
+曲率半径
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+曲线上一点处的曲率半径与曲线在 该点处的曲率互为倒数.
+\end_layout
+
+\begin_layout Subsection
+渐屈线与渐伸线
+\end_layout
+
+\begin_layout Standard
+设已知曲线的方程是
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 且其二阶导数
+\begin_inset Formula $y"$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+不为零，则曲线在对应点
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+的曲率中心的坐标为
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{cc}
+\alpha & =x-\frac{1+(y')^{2}}{y''}\\
+\beta & =y+\frac{1+(y')^{2}}{y''}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当点 
+\begin_inset Formula $(x,f(x))$
+\end_inset
+
+ 沿曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 移动时，相应的曲率中心
+\begin_inset Formula $D$
+\end_inset
+
+的轨迹曲线
+\begin_inset Formula $G$
+\end_inset
+
+称为曲线 C的
+\series bold
+渐屈线
+\series default
+，而曲线
+\begin_inset Formula $C$
+\end_inset
+
+称为曲线
+\begin_inset Formula $G$
+\end_inset
+
+的
+\series bold
+渐伸线
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+所以曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的渐屈线的参数方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{cc}
+\alpha & =x-\frac{1+y^{3}}{y''}\\
+\beta & =y+\frac{1+y^{3}}{y''}
+\end{array}\right.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -28699,14 +29028,10 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Chapter
-积分
-\end_layout
-
-\begin_layout Section
 不定积分
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 原函数
 \end_layout
 
@@ -28728,7 +29053,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 或
-\begin_inset Formula $dF(x)=f(x)dx)$
+\begin_inset Formula $dF(x)=f(x)dx$
 \end_inset
 
 ,则称
@@ -28749,12 +29074,12 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 
 \begin_layout Standard
 如果一个函数有原函数, 则原函数不是唯一的, 而是有无穷多个.
-  
+ 
 \end_layout
 
 \begin_layout Standard
 一般地, 连续函数一定有原函数.
-  如果函数
+ 如果函数
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -28787,10 +29112,10 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 为任意常数.
-  
+ 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 不定积分的定义
 \end_layout
 
@@ -28856,7 +29181,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 称为积分常数.
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28877,42 +29202,407 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 即可.
-  
-\end_layout
-
-\begin_layout Subsection
-不定积分的几何意义
-\end_layout
-
-\begin_layout Subsection
-不定积分的计算
-\end_layout
-
-\begin_layout Subsubsection
-基本积分公式 
-\end_layout
-
-\begin_layout Subsubsection
-不定积分的性质 
-\end_layout
-
-\begin_layout Subsubsection
-不定积分的直接积分法 
-\end_layout
-
-\begin_layout Subsubsection
-换元积分法 
-\end_layout
-
-\begin_layout Subsubsection
-凑微分法 
-\end_layout
-
-\begin_layout Subsubsection
-分部积分法
+ 
 \end_layout
 
 \begin_layout Section
+不定积分的几何意义
+\end_layout
+
+\begin_layout Section
+不定积分的计算
+\end_layout
+
+\begin_layout Subsection
+基本积分公式 
+\end_layout
+
+\begin_layout Section
+不定积分的直接积分法 
+\end_layout
+
+\begin_layout Subsection
+不定积分的性质 
+\end_layout
+
+\begin_layout Corollary
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+及
+\begin_inset Formula $g(x)$
+\end_inset
+
+的原函数存在, 则
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\int[f(x)+g(x)]dx=\int f(x)dx+\int g(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+将上式右端求导，得
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $[f(x)dx+g(x)dx]'=[f(x)dx]'+[g(x)dx]'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的原函数存在, 
+\begin_inset Formula $k$
+\end_inset
+
+为非零常数，则
+\begin_inset Formula 
+\[
+\int kf(x)dx=k\int f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+检验积分结果是否正确，只要对结果求导，看它的导数是否等于被积 函数，相等时结果是正确的，否则结果是错误的
+\end_layout
+
+\begin_layout Section
+换元积分法 
+\end_layout
+
+\begin_layout Subsection
+第一类换元法
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $f(u)$
+\end_inset
+
+具有原函数 
+\begin_inset Formula $u=φ(x)$
+\end_inset
+
+ 可导，则有换元公式
+\begin_inset Formula 
+\[
+\int f[φ(x)]φ'(x)dx=[\int f(u)du]_{u=\varphi(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+第二类换元法
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $x=\psi(t)$
+\end_inset
+
+ 是单调的可导函数，并且
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi'(t)\neq0$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ 又设 
+\begin_inset Formula $f[\psi(t)]\psi'(t)$
+\end_inset
+
+ 具有原函数，则有换元公式
+\begin_inset Formula 
+\[
+\int f(x)dx=\left[\int f[\psi(t)]\psi^{'}(t)dt\right]_{t=\psi^{-1}(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $\psi^{-1}(x)$
+\end_inset
+
+是
+\begin_inset Formula $x=\psi(t)$
+\end_inset
+
+的反函数
+\end_layout
+
+\begin_layout Section
+凑微分法 
+\end_layout
+
+\begin_layout Section
+分部积分法
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $u=u(x)$
+\end_inset
+
+及
+\begin_inset Formula $v=v(x)$
+\end_inset
+
+具有连续导数, 则两个函数乘积的导数公式为
+\begin_inset Formula 
+\[
+(uv)'=u'v+uv'
+\]
+
+\end_inset
+
+移项，得
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+(uv)'
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\begin_inset Formula 
+\[
+uv'=(uv)'-u'v
+\]
+
+\end_inset
+
+ 对这个等式两边求不定积分, 得
+\begin_inset Formula 
+\[
+\int uv'dx=uv-\int u'vdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+有理函数的积分
+\end_layout
+
+\begin_layout Standard
+两个多项式的商
+\begin_inset Formula $\frac{P(x)}{Q(x)}$
+\end_inset
+
+称为
+\series bold
+有理函数
+\series default
+, 又称
+\series bold
+有理分式
+\series default
+.
+ 我们总假定分子多项式
+\begin_inset Formula $P(x)$
+\end_inset
+
+与分母多项式
+\begin_inset Formula $Q(x)$
+\end_inset
+
+之间
+\series bold
+没有公因式
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+当分子多项式Ρ(x)的次数小于分母多项式
+\begin_inset Formula $Q(x)$
+\end_inset
+
+的次数时，称这个有理函数为
+\series bold
+真分式
+\series default
+，否则称为
+\series bold
+假分式
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+利用多项式的除法，可以将一个假分式化成一个多项式与一个真分式之和的形式.
+\end_layout
+
+\begin_layout Standard
+对于真分式
+\begin_inset Formula $\frac{P(x)}{Q(x)}$
+\end_inset
+
+, 如果分母可以分解为两个多相式的乘积
+\begin_inset Formula 
+\[
+Q(x)=Q_{1}(x)Q_{2}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+且
+\begin_inset Formula $Q_{1}(x)$
+\end_inset
+
+与
+\begin_inset Formula $Q_{2}(x)$
+\end_inset
+
+没有公因式, 那么它可以拆分为两个真分式之和
+\begin_inset Formula 
+\[
+\frac{P(x)}{Q(x)}=\frac{P_{1}(x)}{Q_{1}(x)}+\frac{P_{2}(x)}{Q_{2}(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上述步骤称为把
+\series bold
+真分式化成部分分式之和
+\series default
+.如果
+\begin_inset Formula $Q_{1}(x)$
+\end_inset
+
+或
+\begin_inset Formula $Q_{2}(x)$
+\end_inset
+
+还能再分解成两个没有公因式的多项式的乘积，那么就可再分拆成更简单的部分分式.最后，有理函数的分解式中只出现
+\series bold
+多项式,
+\begin_inset Formula $\frac{P_{1}(x)}{(x-a)^{k}}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{P_{2}(x)}{(x^{2}+px+q)^{l}}$
+\end_inset
+
+
+\series default
+等三类函数(这里
+\begin_inset Formula $p^{2}-4q<0$
+\end_inset
+
+,
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+为小于
+\begin_inset Formula $k$
+\end_inset
+
+次的多项式, 
+\begin_inset Formula $P_{2}(x)$
+\end_inset
+
+为小于
+\begin_inset Formula $2l$
+\end_inset
+
+次的多项式).
+\end_layout
+
+\begin_layout Section
+积分表
+\end_layout
+
+\begin_layout Standard
+为 了实用的方便，往往把常用的积分公式汇集成表，这种表叫做积分表.
+\end_layout
+
+\begin_layout Chapter
 定积分
 \end_layout
 
@@ -29084,7 +29774,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 定积分的性质
 \end_layout
 
@@ -29170,11 +29860,11 @@ status open
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 定积分的计算
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 牛顿-莱布尼茨公式
 \end_layout
 
@@ -29233,7 +29923,7 @@ status open
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 定积分的换元积分法与分部积分法
 \end_layout
 
