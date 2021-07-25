@@ -23619,6 +23619,147 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 连续.
 \end_layout
 
+\begin_layout Paragraph
+左右连续
+\end_layout
+
+\begin_layout Definition
+若 
+\begin_inset Formula $\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=f(x_{0})$
+\end_inset
+
+, 则称函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处左连续, 若
+\begin_inset Formula $\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=f(x_{0})$
+\end_inset
+
+, 则称函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处右连续.
+\end_layout
+
+\begin_layout Standard
+易见,
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处连续当且仅当
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处左连续且右连续.
+\end_layout
+
+\begin_layout Definition
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在开区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内的每个点处都连续,则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+在开区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内连续; 如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在开区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内连续,在
+\begin_inset Formula $x=a$
+\end_inset
+
+处右连续, 在
+\begin_inset Formula $x=b$
+\end_inset
+
+处左连续,则称
+\begin_inset Formula $f(x)$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续.
+\end_layout
+
+\begin_layout Standard
+连续函数的图形是一条连绵不断的曲线,
+\end_layout
+
+\begin_layout Standard
+可以证明: 基本初等函数在其定义域内处处连续.
+\end_layout
+
+\begin_layout Definition
+设二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在 
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+及其附近有定义, 若
+\begin_inset Formula $\underset{P\rightarrow P_{0}}{\lim}f(x,y)=f(x_{0},y_{0})$
+\end_inset
+
+, 则称
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+处连续.
+ 若
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在区域D内的每个点处都连续, 则称
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+ 内连续.
+\end_layout
+
 \begin_layout Subsection
 间断点
 \end_layout
@@ -23700,6 +23841,67 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 或
 \series bold
 间断点
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $x_{0}$
+\end_inset
+
+为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的间断点,若
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处的左､右极限都存在, 则称 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 为 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 的 
+\series bold
+第一类间断点
+\series default
+; 除第一类间断点以外的间断点都称为
+\series bold
+第二类间断点
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+在第一类间断点中,如果左､右极限
+\series bold
+存在但不相等
+\series default
+,这种间断点又称为
+\series bold
+跳跃间断点
+\series default
+;
+\end_layout
+
+\begin_layout Standard
+如果 左､右极限
+\series bold
+存在且相等
+\series default
+,这种间断点称为
+\series bold
+可去间断点
 \series default
 .
 \end_layout
@@ -23819,66 +24021,7 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Theorem
-设函数
-\begin_inset Formula $y=f[g(x)]$
-\end_inset
-
-是由函数
-\begin_inset Formula $u=g(x)$
-\end_inset
-
-与函数
-\begin_inset Formula $y=f(u)$
-\end_inset
-
-复合而成, 
-\begin_inset Formula $U(x_{0})\subset D_{f\cdot g}$
-\end_inset
-
-CD.
- 若函数
-\begin_inset Formula $u=g(x)$
-\end_inset
-
-在
-\begin_inset Formula $x=x_{0}$
-\end_inset
-
-连续, 且
-\begin_inset Formula $g(x_{0})=u_{0}$
-\end_inset
-
-, 而函数
-\begin_inset Formula $y=f(u)$
-\end_inset
-
-在
-\begin_inset Formula $u=u_{0}$
-\end_inset
-
-连续, 则复合函数
-\begin_inset Formula $y=f[g(x)]$
-\end_inset
-
-在
-\begin_inset Formula $x=x_{0}$
-\end_inset
-
-也连续.(传递性?)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
+连续函数的复合函数仍然是连续函数.
 \end_layout
 
 \begin_layout Theorem
@@ -23893,11 +24036,27 @@ CD.
 \end_layout
 
 \begin_layout Theorem
-(有界性与最大值最小值定理) 在闭区间上连续的函数在该区间上有界且一定能取得它的最大值和最小值.
+(有界性与最大值最小值定理) 在闭区间上连续的函数在该区间上
+\series bold
+有界
+\series default
+且一定能取得它的
+\series bold
+最大值
+\series default
+和
+\series bold
+最小值
+\series default
+.
 \end_layout
 
-\begin_layout Theorem
-注意如果函数在开区间内连续,或函数在闭区间上有间断点,那么函数在该区间上不一定有界,也不一定有最大值或最小值.
+\begin_layout Standard
+注意: 如果函数在
+\series bold
+开区间
+\series default
+内连续,或函数在闭区间上有间断点, 那么函数在该区间上不一定有界, 也不一定有最大值或最小值.
  例如,函数
 \begin_inset Formula $y=\tan x$
 \end_inset
@@ -23914,70 +24073,35 @@ CD.
 \end_layout
 
 \begin_layout Standard
-如果
-\begin_inset Formula $x_{0}$
-\end_inset
-
-使
-\begin_inset Formula $f(x_{0})=0$
-\end_inset
-
-,那么
-\begin_inset Formula $x_{0}$
-\end_inset
-
-称为函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-的
-\series bold
-零点
-\series default
-.
-\end_layout
-
-\begin_layout Theorem
-(零点定理)设函数
-\begin_inset Formula $f(x)$
-\end_inset
-
 在闭区间
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续,且
-\begin_inset Formula $f(a)$
+上连续的函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的值域为闭区间
+\begin_inset Formula $[c_{1},c_{2}]$
+\end_inset
+
+,其中
+\begin_inset Formula $c_{1}$
 \end_inset
 
 与
-\begin_inset Formula $f(b)$
+\begin_inset Formula $c_{2}$
 \end_inset
 
-异号(即
-\begin_inset Formula $f(a)\cdot f(b)<0$
+依次为
+\begin_inset Formula $f(x)$
 \end_inset
 
-),则在开区间
-\begin_inset Formula $(a,b)$
+在
+\begin_inset Formula $[a,b]$
 \end_inset
 
-内至少有一点
-\begin_inset Formula $\xi$
-\end_inset
-
-,使
-\begin_inset Formula $f(\xi)=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
+上的最小值与最大值.
 \end_layout
 
 \begin_layout Theorem
@@ -24044,138 +24168,64 @@ f(\xi)=C\text{ }(a<\xi<b)
 至少相交一点
 \end_layout
 
+\begin_layout Standard
+如果
+\begin_inset Formula $x_{0}$
+\end_inset
+
+使
+\begin_inset Formula $f(x_{0})=0$
+\end_inset
+
+,那么
+\begin_inset Formula $x_{0}$
+\end_inset
+
+称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的
+\series bold
+零点
+\series default
+.
+\end_layout
+
 \begin_layout Corollary
+(零点定理)设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
 在闭区间
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续的函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-的值域为闭区间
-\begin_inset Formula $[c_{1},c_{2}]$
-\end_inset
-
-,其中
-\begin_inset Formula $c_{1}$
+上连续,且
+\begin_inset Formula $f(a)$
 \end_inset
 
 与
-\begin_inset Formula $c_{2}$
+\begin_inset Formula $f(b)$
 \end_inset
 
-依次为
-\begin_inset Formula $f(x)$
+异号(即
+\begin_inset Formula $f(a)\cdot f(b)<0$
 \end_inset
 
-在
-\begin_inset Formula $[a,b]$
+),则在开区间
+\begin_inset Formula $(a,b)$
 \end_inset
 
-上的最小值与最大值.
-\end_layout
-
-\begin_layout Theorem
-设函数
-\begin_inset Formula $f(x)$
+内至少有一点
+\begin_inset Formula $\xi$
 \end_inset
 
-在区间
-\begin_inset Formula $I$
+,使
+\begin_inset Formula $f(\xi)=0$
 \end_inset
 
-上有定义.
- 如果对于任意给定的正数
-\begin_inset Formula $\varepsilon$
-\end_inset
 
-,总存在正数
-\begin_inset Formula $\delta$
-\end_inset
-
-, 使得对于区间
-\begin_inset Formula $I$
-\end_inset
-
-上的任意两点
-\begin_inset Formula $x_{1}$
-\end_inset
-
-,
-\begin_inset Formula $x_{2}$
-\end_inset
-
-, 当
-\begin_inset Formula $|x_{1}-x_{2}|<\delta$
-\end_inset
-
- ,有
-\begin_inset Formula 
-\[
-|f(x_{1})-f(x_{2})|<\varepsilon
-\]
-
-\end_inset
-
-那么称函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-在区间
-\begin_inset Formula $I$
-\end_inset
-
-上一致连续.
-\end_layout
-
-\begin_layout Standard
-即
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $x_{1}$
-\end_inset
-
-和
-\begin_inset Formula $x_{2}$
-\end_inset
-
-的距离会对应一个
-\begin_inset Formula $f(x_{1})$
-\end_inset
-
-和
-\begin_inset Formula $f(x_{2})$
-\end_inset
-
-的距离.
-\end_layout
-
-\begin_layout Theorem
-(一致连续性定理) 如果函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-在
-\series bold
-闭区间
-\series default
-
-\begin_inset Formula $[a,b]$
-\end_inset
-
-上连续,那么它在该区间上一致连续.
 \end_layout
 
 \begin_layout Chapter
