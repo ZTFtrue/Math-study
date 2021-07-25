@@ -20048,8 +20048,18 @@ status open
 \begin_layout Standard
 若对所有 n ∈ Z+ , an+1 ≥ an , 则称数列 ⟨ak⟩ 为"递增数列”.
  把 ≥ 换成 > , 则称为"严格递增数列”.
-  若对所有 n ∈ Z+ , an+1 ≤ an , 则称数列 ⟨ak⟩ 为"递减数列”.
- 把 ≤ 换成 < , 则称为"严格递减数列”.
+  若对所有 n ∈ Z+ ,  
+\begin_inset Formula $an+1\leqslant an$ 
+
+\end_inset
+
+ , 则称数列 ⟨ak⟩ 为"递减数列”.
+ 把 
+\begin_inset Formula ${\displaystyle \leqslant}$ 
+
+\end_inset
+
+换成 < , 则称为"严格递减数列”.
   若对所有 n ∈ Z+ , an+1 = an , 则称数列 ⟨ak⟩ 为"常数数列”.
   
 \end_layout
@@ -20117,7 +20127,7 @@ status open
 \end_inset
 
 , 
-\begin_inset Formula $M≤an≤N$
+\begin_inset Formula $M\leqslant an\leqslant N$
 \end_inset
 
  , 则称数列
@@ -29123,46 +29133,33 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Standard
-如果一个函数有原函数, 则原函数不是唯一的, 而是有无穷多个.
- 
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $I$
+\end_inset
+
+上连续，那么在区间
+\begin_inset Formula $I$
+\end_inset
+
+上存在可 导函数F(x), 使对任一
+\begin_inset Formula $x\in I$
+\end_inset
+
+都有
+\begin_inset Formula $F'(x)=f(x)$
+\end_inset
+
+, 连续函数一定有原函数.
 \end_layout
 
 \begin_layout Standard
-一般地, 连续函数一定有原函数.
- 如果函数
-\begin_inset Formula $f(x)$
-\end_inset
 
-在区间
-\begin_inset Formula $I$
-\end_inset
-
-上存在原函数
-\begin_inset Formula $F(x)$
-\end_inset
-
-, 则
-\begin_inset Formula $f(x)$
-\end_inset
-
-在区间
-\begin_inset Formula $I$
-\end_inset
-
-上有无穷多个原函数, 而
-\begin_inset Formula $F(x)+C$
-\end_inset
-
-表示
-\begin_inset Formula $f(x)$
-\end_inset
-
-所有原函数的全体, 其中
-\begin_inset Formula $C$
-\end_inset
-
-为任意常数.
- 
+\series bold
+如果一个函数有原函数, 则原函数不是唯一的, 而是有无穷多个.
 \end_layout
 
 \begin_layout Section
@@ -29252,26 +29249,9 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 即可.
- 
 \end_layout
 
 \begin_layout Section
-不定积分的几何意义
-\end_layout
-
-\begin_layout Section
-不定积分的计算
-\end_layout
-
-\begin_layout Subsection
-基本积分公式 
-\end_layout
-
-\begin_layout Section
-不定积分的直接积分法 
-\end_layout
-
-\begin_layout Subsection
 不定积分的性质 
 \end_layout
 
@@ -29312,7 +29292,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $[f(x)dx+g(x)dx]'=[f(x)dx]'+[g(x)dx]'$
+\begin_inset Formula $[f(x)dx+g(x)dx]'=[f(x)dx]'+[g(x)dx]'=f(x)+g(x)$
 \end_inset
 
 
@@ -29343,7 +29323,23 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Section
-换元积分法 
+不定积分的几何意义
+\end_layout
+
+\begin_layout Section
+积分表
+\end_layout
+
+\begin_layout Section
+基本积分公式 
+\end_layout
+
+\begin_layout Section
+不定积分的直接积分法 
+\end_layout
+
+\begin_layout Section
+换元积分法
 \end_layout
 
 \begin_layout Subsection
@@ -29363,6 +29359,75 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \begin_inset Formula 
 \[
 \int f[φ(x)]φ'(x)dx=[\int f(u)du]_{u=\varphi(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $f(u)$
+\end_inset
+
+具有原函数
+\begin_inset Formula $F(u)$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+F'(u)=f(u),\int f(u)du=F(u)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $u$
+\end_inset
+
+是中间变量且
+\begin_inset Formula $u=\varphi(x)$
+\end_inset
+
+,且设
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+可微, 那么, 根据复合函数微分法, 有
+\begin_inset Formula 
+\[
+dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从而根据不定积分的定义就得
+\begin_inset Formula 
+\[
+\int f[\varphi(x)]\varphi'(x)dx=F[\varphi(x)]+C=[\int f(u)du]_{u=\varphi(x)}
 \]
 
 \end_inset
@@ -29417,7 +29482,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
  具有原函数，则有换元公式
 \begin_inset Formula 
 \[
-\int f(x)dx=\left[\int f[\psi(t)]\psi^{'}(t)dt\right]_{t=\psi^{-1}(x)}
+\int f(x)dx=\left[\int f[\psi(t)]\psi'(t)dt\right]_{t=\psi^{-1}(x)}
 \]
 
 \end_inset
@@ -29434,7 +29499,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \begin_inset Formula $x=\psi(t)$
 \end_inset
 
-的反函数
+的反函数.
 \end_layout
 
 \begin_layout Section
@@ -29644,14 +29709,6 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 次的多项式).
 \end_layout
 
-\begin_layout Section
-积分表
-\end_layout
-
-\begin_layout Standard
-为 了实用的方便，往往把常用的积分公式汇集成表，这种表叫做积分表.
-\end_layout
-
 \begin_layout Chapter
 定积分
 \end_layout
@@ -29686,7 +29743,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 ,
-\begin_inset Formula $\lambda=\underset{1≤i≤n}{max}\{\Delta x_{i}\}$
+\begin_inset Formula $\lambda=\underset{1\leqslant i\leqslant n}{max}\{\Delta x_{i}\}$
 \end_inset
 
 .
@@ -29699,7 +29756,11 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 ,作和式
-\begin_inset Formula $\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x$
+\begin_inset Formula 
+\[
+\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x
+\]
+
 \end_inset
 
 .如果不论对区间
@@ -29727,14 +29788,21 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 ,即
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\intop_{a}^{b}f(x)dx=\underset{\lambda\rightarrow0}{lim}\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x_{i}
+\int_{a}^{b}f(x)dx=\underset{\lambda\rightarrow0}{lim}\stackrel[i=1]{n}{\sum}f(\xi_{i})\Delta x_{i}
 \]
 
 \end_inset
 
-,其中
+
+\end_layout
+
+\begin_layout Standard
+其中
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -29779,7 +29847,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_layout
 
 \begin_layout Standard
-连续函数是可积的 .
+连续函数是可积的.
  
 \end_layout
 
@@ -29804,8 +29872,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \begin_inset Formula $S=\int_{a}^{b}f(x)dx$
 \end_inset
 
- .
- 
+.
 \end_layout
 
 \begin_layout Standard
@@ -29821,26 +29888,35 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \begin_inset Formula $\intop_{a}^{b}f(x)dx=0$
 \end_inset
 
- 
+.
+ 定积分的值只与被积函数及积分区间有关，而与积分变量的记 法无关.
 \end_layout
 
 \begin_layout Section
 定积分的性质
 \end_layout
 
-\begin_layout Itemize
-线性性质 
+\begin_layout Paragraph
+线性性质
 \begin_inset Formula 
 \[
-\intop_{a}^{b}\left[f(x)\pm g(x)dx\right]=\intop_{a}^{b}f(x)dx\pm\intop_{a}^{b}g(x)dx
+\int_{a}^{b}\left[\alpha f(x)\pm\beta g(x)dx\right]=\alpha\int_{a}^{b}f(x)dx\pm\beta\int_{a}^{b}g(x)dx
 \]
 
 \end_inset
 
- 
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+与
+\begin_inset Formula $\beta$
+\end_inset
+
+均为常 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Paragraph
 区间可加性
 \end_layout
 
@@ -29860,7 +29936,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 两部分,则
 \begin_inset Formula 
 \[
-\intop_{a}^{b}f(x)dx=\intop_{a}^{c}f(x)dx+\intop_{c}^{b}f(x)dx
+\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
 \]
 
 \end_inset
@@ -29868,61 +29944,420 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 
 \end_layout
 
-\begin_layout Itemize
-不等式性质 
-\end_layout
+\begin_layout Paragraph
+估值定理
+\begin_inset Formula $???$
+\end_inset
 
-\begin_layout Itemize
-估值定理 
-\end_layout
 
-\begin_layout Itemize
-积分中值定理
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
+如果在区间
+\begin_inset Formula $[a,b]$
+\end_inset
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
+上
+\begin_inset Formula $f(x)\equiv1$
+\end_inset
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/test.png
-	lyxscale 50
-	BoundingBox 1000bp 1000bp 1000bp 1000bp
+,那么
+\begin_inset Formula 
+\[
+\int_{a}^{b}1dx=\int_{a}^{b}dx=b-a
+\]
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Paragraph
+性质1
+\end_layout
+
+\begin_layout Standard
+如果在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+, 那么
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx\geqslant0(a<b)
+\]
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Corollary
+如果在区间[a,b]上
+\begin_inset Formula $f(x)\leqslant g(x)$
+\end_inset
+
+,那么
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx\leqslant\int_{a}^{b}g(x)dx
+\]
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+利用性质1
+\begin_inset Formula 
+\[
+\int_{a}^{b}[g(x)-f(x)]dx\geqslant0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+再利用线性性质即可证明
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\left|\int_{a}^{b}f(x)dx\right|\leqslant\int_{a}^{b}|f(x)|dx$
+\end_inset
+
+ 
+\begin_inset Formula $(a<b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $M$
+\end_inset
+
+及
+\begin_inset Formula $m$
+\end_inset
+
+分别是函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的最大值及最小值, 则
+\begin_inset Formula 
+\[
+m(b-a)\leqslant\int_{a}^{b}f(x)dx\leqslant M(b-a)\text{ }(a<b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+定积分中值定理 
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在积分区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 那么在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上至少存在一个点
+\begin_inset Formula $\xi$
+\end_inset
+
+, 使下式成立:
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=f(\xi)(b-a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+按积分中值公式所得
+\begin_inset Formula 
+\[
+f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
+\]
+
+\end_inset
+
+称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+再区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的平均值.
 \end_layout
 
 \begin_layout Section
 定积分的计算
 \end_layout
 
+\begin_layout Standard
+矩形法, 梯形法, 抛物线法(辛普森(Simpson)法)
+\end_layout
+
 \begin_layout Subsection
-牛顿-莱布尼茨公式
+积分上限的函数及其导数
 \end_layout
 
-\begin_layout Itemize
-变上限积分 
+\begin_layout Theorem
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 并且设
+\begin_inset Formula $x$
+\end_inset
+
+为
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的一点.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Theorem
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 那么积分上限的函数
+\begin_inset Formula 
+\[
+\varPhi(x)=\int_{a}^{x}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上可导, 并且它的导数
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\varPhi'(x)=\frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 那么函数
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\varPhi(x)=\int_{a}^{x}f(t)dt
+\]
+
+\end_inset
+
+就是
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的一个原函数
+\end_layout
+
+\begin_layout Proof
+若
+\begin_inset Formula $x\in(a,b)$
+\end_inset
+
+, 设
+\begin_inset Formula $x$
+\end_inset
+
+获得增量
+\begin_inset Formula $\Delta x$
+\end_inset
+
+,其绝对值足够地小, 使得
+\begin_inset Formula $x+\Delta x\in(a,b)$
+\end_inset
+
+, 则
+\begin_inset Formula $\varPhi(x)$
+\end_inset
+
+再
+\begin_inset Formula $x+\Delta x$
+\end_inset
+
+处的函数值为
+\begin_inset Formula 
+\[
+\varPhi(x+\Delta x)=\int_{a}^{x+\Delta x}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由此得
+\begin_inset Formula 
+\begin{align*}
+\Delta\varPhi & =\varPhi(x+\Delta x)-\varPhi(x)\\
+= & \int_{a}^{x+\Delta x}f(t)dt-\int_{a}^{x}f(t)dt\\
+= & \int_{x}^{x+\Delta x}f(t)dt
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+应用积分中值定理, 得
+\begin_inset Formula 
+\[
+\Delta\varPhi=f(\xi)\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+其中, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\xi$
+\end_inset
+
+在
+\begin_inset Formula $x$
+\end_inset
+
+与
+\begin_inset Formula $x+\Delta x$
+\end_inset
+
+ 之间.
+ 
+\end_layout
+
+\begin_layout Proof
+把上式两端各除以
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, 得函数增量与自变量增量的比值
+\begin_inset Formula 
+\[
+\frac{\Delta\varPhi}{\Delta x}=f(\xi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $\Delta x\rightarrow0$
+\end_inset
+
+时,
+\begin_inset Formula $\varPhi'(x)=f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个定理指出, 函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上得定积分是 
+\begin_inset Formula $\varPhi(b)-\varPhi(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 牛顿-莱布尼茨公式(N-L) 
 \end_layout
 
@@ -29943,13 +30378,13 @@ status open
 \begin_inset Formula $f(x)$
 \end_inset
 
-的任一原函数,则有 
+的任一原函数,则有
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\intop_{a}^{b}f(x)dx=F(b)-F(a)
+\int_{a}^{b}f(x)dx=F(b)-F(a)
 \]
 
 \end_inset
@@ -29965,7 +30400,7 @@ status open
 公式常用以下公式
 \begin_inset Formula 
 \[
-\intop_{a}^{b}f(x)dx=F(x)|_{a}^{b}=F(b)-F(a)
+\int_{a}^{b}f(x)dx=F(x)|_{a}^{b}=F(b)-F(a)
 \]
 
 \end_inset
@@ -30147,7 +30582,11 @@ status open
 \end_layout
 
 \begin_layout Standard
-在水中(x,y,z) 超过一小块水, 体积为
+在水中
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+超过一小块水, 体积为
 \begin_inset Formula $dv$
 \end_inset
 
@@ -30249,6 +30688,10 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \begin_layout Standard
 定积分是一个确定的实数(所以有"定"字),定积分的大小由积分区间和被积函数共同确定.
  
+\end_layout
+
+\begin_layout Chapter
+微分方程
 \end_layout
 
 \begin_layout Chapter
@@ -31472,8 +31915,9 @@ a+b+c+d
 \begin_inset Formula $K^{2}$
 \end_inset
 
-变量的值为6.109, 根据表格, 因为5.024≤6.109<6.635, 所以"X与Y有关系”成立的概率为1-0.025=0.975, 即
-\begin_inset Formula $97.5\%$
+变量的值为6.109, 根据表格, 因为
+\begin_inset Formula $5.024\leqslant6.109<6.635$, 所以"X与Y有关系”成立的概率为1-0.025=0.975, 即 
+
 \end_inset
 
 
