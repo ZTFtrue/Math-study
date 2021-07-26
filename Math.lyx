@@ -24310,7 +24310,7 @@ f(\xi)=C\text{ }(a<\xi<b)
 时, 极限
 \begin_inset Formula 
 \[
-\underset{(Δx\rightarrow0)}{lim}\frac{Δy}{Δx}=\underset{(Δx\rightarrow0)}{lim}\frac{f(x_{0}+Δx)-f(x_{0})}{Δx}
+\underset{(Δx\rightarrow0)}{lim}\frac{Δy}{Δx}=\underset{(Δx\rightarrow0)}{lim}\frac{f(x_{0}+Δx)-f(x_{0})}{Δx}=\frac{dy}{dx}
 \]
 
 \end_inset
@@ -25090,6 +25090,31 @@ y'_{x}=y'_{u}\cdot u'_{x}
 
 的导数的乘积.
  
+\end_layout
+
+\begin_layout Standard
+这个复合函数的求导方法也可用于多次复合的情形.
+ 这种由外向内逐层求导的方法也称为
+\begin_inset Quotes erd
+\end_inset
+
+
+\series bold
+链式法则
+\series default
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+参数方程导数
+\end_layout
+
+\begin_layout Standard
+参数方程的一般形式为
 \end_layout
 
 \begin_layout Section
