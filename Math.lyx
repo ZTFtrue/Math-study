@@ -11025,26 +11025,58 @@ P={M||MF|=d}
 \end_layout
 
 \begin_layout Standard
-一般地,在平面直角坐标系中,如果曲线上任意一点的坐标x,y都是某个变数t的函数
+在研究物体运动轨迹时, 曲线常被看做运动的轨迹,动点 
+\begin_inset Formula $M(x,y)$
+\end_inset
+
+的位置随参数
+\begin_inset Formula $t$
+\end_inset
+
+的变化而变化, 动点坐标 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+ 都是
+\begin_inset Formula $t$
+\end_inset
+
+的函数,我们用参数方程来表示这类曲线, 它的一般形式为
 \begin_inset Formula 
 \[
 \begin{cases}
 x=f(t)\\
 y=g(t)
-\end{cases}
+\end{cases},(\text{t}\text{为参数},a\leqslant t\leqslant b)
 \]
 
 \end_inset
 
-并且对于的每一个允许值,由方程组所确定的点M(x,y)都在这条曲线上,那么方程就叫做这条曲线的
+
+\end_layout
+
+\begin_layout Standard
+这个方程就叫做这条曲线的
 \series bold
 参数方程
 \series default
-,联系变数 x,y的变数叫做
+, 联系变数 
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+的变数叫做
 \series bold
 参变数
 \series default
-,简称
+, 简称
 \series bold
 参数
 \series default
@@ -11056,7 +11088,15 @@ y=g(t)
 \end_layout
 
 \begin_layout Standard
-参数是联系变数 x,y的桥梁,可以是一个有物理意义或几何意义的变数,也可以是没有明显实际意义的变数.
+参数是联系变数 
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+的桥梁,可以是一个有物理意义或几何意义的变数,也可以是没有明显实际意义的变数.
  同一条线也可能有不同的参数方程.
 \end_layout
 
@@ -25114,7 +25154,107 @@ y'_{x}=y'_{u}\cdot u'_{x}
 \end_layout
 
 \begin_layout Standard
-参数方程的一般形式为
+参数方程的一般形式为(参考平面图形)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x=f(t)\\
+y=g(t)
+\end{cases},(\text{t}\text{为参数},a\leqslant t\leqslant b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果通过参数, 能够确定
+\begin_inset Formula $y$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+的函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+, 我们称之为由参数方程确定的函数.
+ 
+\strikeout on
+在计算由参数方程所确定的函数的导数时, 通常并不需要先化去参数,找到
+\begin_inset Formula $y$
+\end_inset
+
+与
+\begin_inset Formula $x$
+\end_inset
+
+的直接函数关系后再求导
+\strikeout default
+.
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $x=f(t)$
+\end_inset
+
+,
+\begin_inset Formula $y=g(t)$
+\end_inset
+
+都可导, 且
+\begin_inset Formula $f'(t)\neq0$
+\end_inset
+
+.
+ 设 
+\begin_inset Formula $x=f(t)$
+\end_inset
+
+的反函数为
+\begin_inset Formula $t=f^{-1}(x)$
+\end_inset
+
+, 则由参数方程确定的函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+可以看成由 
+\begin_inset Formula $y=g(t)$
+\end_inset
+
+与
+\begin_inset Formula $t=f^{-1}(x)$
+\end_inset
+
+复合而成的函数, 根据复合函 数的求导方法及反函数的求导方法,有
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{dy}{dt}\cdot\frac{dt}{dx}=\frac{dy}{dt}\cdot\frac{1}{\frac{dx}{dt}}=g'(t)\cdot\frac{1}{f'(t)}=\frac{g'(t)}{f'(t)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是由参数方程确定的函数的求导公式
+\begin_inset Formula $\frac{dy}{dx}=\frac{g'(t)}{f'(t)}$
+\end_inset
+
+, 通常我们还将它记为
+\begin_inset Formula $\frac{dy}{dx}=\frac{y'_{t}}{x'_{t}}$
+\end_inset
+
+,即y关于参数t的导数除以x 关于t 的导数.
 \end_layout
 
 \begin_layout Section
