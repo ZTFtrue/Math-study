@@ -26004,7 +26004,7 @@ f'_{y}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\De
 例如
 \end_layout
 
-\begin_layout Problem
+\begin_layout Example
 设
 \begin_inset Formula $f(x,y)=e^{xy}\ln(x^{2}+y^{2})$
 \end_inset
@@ -26199,7 +26199,7 @@ f(x,0)=\ln x^{2}=2\ln x
  
 \end_layout
 
-\begin_layout Solution*
+\begin_layout Solution
 对方程
 \begin_inset Formula $e^{x}-e^{y}-xy=0$
 \end_inset
@@ -26236,6 +26236,209 @@ e^{x}-e^{y}y'-(y+xy')=0
 \end_inset
 
 
+\end_layout
+
+\begin_layout Solution*
+又
+\begin_inset Formula $x=0$
+\end_inset
+
+时,代入原方程得
+\begin_inset Formula $y=0$
+\end_inset
+
+,于是将
+\begin_inset Formula $x=0$
+\end_inset
+
+及
+\begin_inset Formula $y=0$
+\end_inset
+
+ 同时代入
+\begin_inset Formula $y'$
+\end_inset
+
+得
+\begin_inset Formula $y'(0)=1$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+注意
+\series default
+:由于
+\begin_inset Formula $y$
+\end_inset
+
+是
+\begin_inset Formula $x$
+\end_inset
+
+的函数, 该例中
+\begin_inset Formula $e^{x}$
+\end_inset
+
+是以
+\begin_inset Formula $y$
+\end_inset
+
+为中间变量的关于
+\begin_inset Formula $x$
+\end_inset
+
+的复合函数,因此对
+\begin_inset Formula $e^{y}$
+\end_inset
+
+关于
+\begin_inset Formula $x$
+\end_inset
+
+ 求导应利用
+\series bold
+一元复合函数的求导方法
+\series default
+, 
+\begin_inset Formula $y'$
+\end_inset
+
+不能丢.
+ 另外,我们也应注意到,隐函数求导时,结果中可以含有
+\begin_inset Formula $x$
+\end_inset
+
+也可含有因变量
+\begin_inset Formula $y$
+\end_inset
+
+,因此求
+\begin_inset Formula $y'(x_{0})$
+\end_inset
+
+时,应先将
+\begin_inset Formula $x_{0}$
+\end_inset
+
+代入方程
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+求出笛卡尔叶形线
+\series bold
+
+\begin_inset Formula $x^{3}+y^{3}=6xy$
+\end_inset
+
+
+\series default
+在点
+\begin_inset Formula $(3,3)$
+\end_inset
+
+处的切线方程
+\end_layout
+
+\begin_layout Solution
+解方程两边对
+\begin_inset Formula $x$
+\end_inset
+
+求导,可得
+\begin_inset Formula $x^{2}+y^{2}y'=2x+2xy'$
+\end_inset
+
+, 于是
+\begin_inset Formula $y'=\frac{2y-x^{2}}{y^{2}-2x}$
+\end_inset
+
+ , 因此有
+\begin_inset Formula 
+\[
+y'|_{(3,3)}=-1
+\]
+
+\end_inset
+
+所以,切线方程为
+\begin_inset Formula $y-3=-(x-3)$
+\end_inset
+
+, 即x+y=6.
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $y=(1+x^{2})^{\sin x}$
+\end_inset
+
+的导数,
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $y=(1+x^{2})^{\sin x}$
+\end_inset
+
+两边取对数,得
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\ln y=\sin x\ln(1+x^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+上式两边再求对
+\begin_inset Formula $x$
+\end_inset
+
+的导数,得
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{1}{y}y'=\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+于是
+\begin_inset Formula $y'=y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们也可以对幂指函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+两边取自然对数, 将显式函数转变为隐函数, 再用隐函数求导方法求出导数
+\begin_inset Formula $y'$
+\end_inset
+
+, 这种方法通常称为
+\series bold
+取对数求导法
+\series default
+, 
 \end_layout
 
 \begin_layout Paragraph
