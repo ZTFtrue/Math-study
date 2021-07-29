@@ -25755,6 +25755,343 @@ y''',y^{(4)},\cdots,y^{n}
 多元函数的偏导数
 \end_layout
 
+\begin_layout Subsection
+二元函数的偏导数
+\end_layout
+
+\begin_layout Definition
+设二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 处及其附近有定义, 当自变量
+\begin_inset Formula $y$
+\end_inset
+
+保持
+\begin_inset Formula $y_{0}$
+\end_inset
+
+不变, 而
+\begin_inset Formula $x$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处有改变量 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+时, 函数有相应增量
+\begin_inset Formula $f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})$
+\end_inset
+
+, 如果极限
+\begin_inset Formula $\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}$
+\end_inset
+
+存在, 则称此极限值为函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+ 在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处关于
+\begin_inset Formula $x$
+\end_inset
+
+的偏导数,记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'_{x}(x_{0},y_{0})$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial f(x_{0},y_{0})}{\partial x}$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial z}{\partial x}\left|_{\begin{array}{c}
+x=x_{0}\\
+y=y_{0}
+\end{array}}\right.$
+\end_inset
+
+或
+\begin_inset Formula $z'_{x}\left|_{\begin{array}{c}
+x=x_{0}\\
+y=y_{0}
+\end{array}}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula 
+\[
+f'_{x}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})}{\Delta x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+类似地, 函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处关于
+\begin_inset Formula $y$
+\end_inset
+
+的偏导数为极限值
+\begin_inset Formula $\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'_{y}(x_{0},y_{0})$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial f(x_{0},y_{0})}{\partial y}$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial z}{\partial y}\left|_{\begin{array}{c}
+x=x_{0}\\
+y=y_{0}
+\end{array}}\right.$
+\end_inset
+
+或
+\begin_inset Formula $z'_{y}\left|_{\begin{array}{c}
+x=x_{0}\\
+y=y_{0}
+\end{array}}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula 
+\[
+f'_{y}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})}{\Delta y}
+\]
+
+\end_inset
+
+如果函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+内的每一点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处于关于
+\begin_inset Formula $x$
+\end_inset
+
+的偏导数存在, 这个偏导数仍是
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+的二元函数, 称为其函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+关于自变量
+\begin_inset Formula $x$
+\end_inset
+
+的偏导函数, 简称偏导数.
+\end_layout
+
+\begin_layout Standard
+记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'_{x}(x,y)$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+或
+\begin_inset Formula $z'_{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+类似地, 函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处关于
+\begin_inset Formula $y$
+\end_inset
+
+的偏导函数, 记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'_{y}(x,y)$
+\end_inset
+
+或
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+或
+\begin_inset Formula $z'_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由偏导数的定义可以知道多元函数
+\series bold
+有几个自变量就有几个偏导数
+\series default
+.
+ 在求多元函数对某个变量的偏导数时, 其余变量均可视为常量, 本质上是一元函数的求导因此并不需要建立新的运算法则.
+\end_layout
+
+\begin_layout Standard
+例如
+\end_layout
+
+\begin_layout Problem
+设
+\begin_inset Formula $f(x,y)=e^{xy}\ln(x^{2}+y^{2})$
+\end_inset
+
+, 求
+\begin_inset Formula $f'_{x}(2,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+(简单解法) 先把
+\begin_inset Formula $y$
+\end_inset
+
+固定在
+\begin_inset Formula $y=0$
+\end_inset
+
+,则有
+\begin_inset Formula 
+\[
+f(x,0)=\ln x^{2}=2\ln x
+\]
+
+\end_inset
+
+从而
+\begin_inset Formula $f'_{x}(x,y=0)=2\cdot\frac{1}{x}=\frac{2}{x}$
+\end_inset
+
+, 所以
+\begin_inset Formula $f'_{x}(2,0)=\frac{2}{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+多元复合函数的求导法
+\end_layout
+
+\begin_layout Theorem
+设函数
+\begin_inset Formula $u=u(x,y)$
+\end_inset
+
+, 
+\begin_inset Formula $v=v(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处有偏导数, 函数
+\begin_inset Formula $z=f(u,z)$
+\end_inset
+
+在对应点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处有连续偏导数, 则复合函数
+\begin_inset Formula $z=f[u(x,y),u(x,y)]$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处有偏导数且
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\frac{\partial z\partial u}{\partial u\partial x}+\frac{\partial z\partial v}{\partial v\partial x},\frac{\partial z}{\partial y}=\frac{\partial z\partial u}{\partial u\partial y}+\frac{\partial z\partial v}{\partial v\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求多元复合函数的导数时, 需要将多项复合函数的偏导数相加.
+\end_layout
+
 \begin_layout Section
 隐函数的求导方法
 \end_layout
