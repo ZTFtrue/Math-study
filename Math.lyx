@@ -2793,14 +2793,14 @@ ab=(a,b)[a.b]m
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\log_{a}(M\cdot N)=\log_{a}M+\log_{a}N)$
+\begin_inset Formula $\log_{a}(M\cdot N)=\log_{a}M+\log_{a}N$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\log_{a}(M/N)=\log_{a}M-\log_{a}N)$
+\begin_inset Formula $\log_{a}(M/N)=\log_{a}M-\log_{a}N$
 \end_inset
 
 
@@ -26419,10 +26419,35 @@ y'|_{(3,3)}=-1
 
 \begin_layout Solution
 于是
-\begin_inset Formula $y'=y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})$
+\begin_inset Formula 
+\begin{eqnarray*}
+y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
+ &  & =(1+x^{2})^{\sin x}\cdot(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})
+\end{eqnarray*}
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+注意
+\series default
+ 该例是对
+\series bold
+显式函数求导
+\series default
+, 因而要将结果中的因变量
+\begin_inset Formula $y$
+\end_inset
+
+
+\series bold
+代换掉
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -26438,7 +26463,8 @@ y'|_{(3,3)}=-1
 \series bold
 取对数求导法
 \series default
-, 
+.
+ 
 \end_layout
 
 \begin_layout Paragraph
