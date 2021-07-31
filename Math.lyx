@@ -25258,299 +25258,6 @@ y=g(t)
 \end_layout
 
 \begin_layout Section
-高阶导数
-\end_layout
-
-\begin_layout Standard
-二阶导数: 导数的导数.
-\end_layout
-
-\begin_layout Standard
-一般地,函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的导数
-\begin_inset Formula $y=f'(x)$
-\end_inset
-
-仍然是
-\begin_inset Formula $x$
-\end_inset
-
-的函数.我们把
-\begin_inset Formula $y'=f'(x)$
-\end_inset
-
-的导数叫做函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的二阶导数,记作
-\begin_inset Formula $y''$
-\end_inset
-
-或
-\begin_inset Formula $\frac{d^{2}y}{dx^{2}}$
-\end_inset
-
-, 即
-\begin_inset Formula 
-\[
-y''=(y')'
-\]
-
-\end_inset
-
-或
-\begin_inset Formula 
-\[
-\frac{d^{2}y}{dx^{2}}=\frac{d}{dx}(\frac{dy}{dx})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-相应地,把
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的导数
-\begin_inset Formula $f'(x)$
-\end_inset
-
-叫做函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的一阶导数.
- 
-\end_layout
-
-\begin_layout Standard
-类似地,二阶导数的导数,叫做三阶导数,三阶导数的导数叫做四阶导数……一般地,
-\begin_inset Formula $(n-1)$
-\end_inset
-
-阶导数的导数叫做
-\begin_inset Formula $n$
-\end_inset
-
-阶导数,分别记作
-\begin_inset Formula 
-\[
-y''',y^{(4)},\cdots,y^{n}
-\]
-
-\end_inset
-
-或
-\begin_inset Formula 
-\[
-\frac{d^{3}y}{dx^{3}},\frac{d^{4}y}{dx^{4}},\cdots,\frac{d^{n}y}{dx^{n}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-具有
-\begin_inset Formula $n$
-\end_inset
-
-阶导数, 也常说成函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-为
-\begin_inset Formula $n$
-\end_inset
-
-阶可导.
- 如果函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-在点
-\begin_inset Formula $x$
-\end_inset
-
-处具有
-\begin_inset Formula $n$
-\end_inset
-
-阶导数, 那么
-\begin_inset Formula $f(x)$
-\end_inset
-
-在点
-\begin_inset Formula $x$
-\end_inset
-
-的某一邻域内必定具有全部低于
-\begin_inset Formula $n$
-\end_inset
-
-阶的导数.
-\end_layout
-
-\begin_layout Standard
-二阶及二阶以上的导数统称
-\series bold
-高阶导数
-\series default
-.
- 
-\end_layout
-
-\begin_layout Subsection
-
-\series bold
-高阶导数的计算
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\pm v)=\frac{{\rm d}^{n}}{{\rm d}x^{n}}u\pm\frac{{\rm d}^{n}}{{\rm d}x^{n}}v$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(Cu)=C\frac{{\rm d}^{n}}{{\rm d}x^{n}}u$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\cdot v)=\sum_{k=0}^{n}C_{k}^{n}\frac{{\rm d}^{n-k}}{{\rm d}x^{n-k}}u\frac{{\rm d}^{k}}{{\rm d}x^{k}}v$
-\end_inset
-
-(莱布尼兹公式)
-\end_layout
-
-\begin_layout Subsection
-莱布尼茨公式
-\end_layout
-
-\begin_layout Standard
-如果函数
-\begin_inset Formula $u=u(x)$
-\end_inset
-
-与
-\begin_inset Formula $v=v(x)$
-\end_inset
-
-都在点
-\begin_inset Formula $x$
-\end_inset
-
-处具有
-\begin_inset Formula $n$
-\end_inset
-
-阶导数,那么显然
-\begin_inset Formula $u(x)+v(x)$
-\end_inset
-
-与
-\begin_inset Formula $u(x)-v(x)$
-\end_inset
-
-也在点
-\begin_inset Formula $x$
-\end_inset
-
-处具有
-\begin_inset Formula $n$
-\end_inset
-
-阶导数, 且
-\begin_inset Formula $(u\pm v)^{(n)}=u^{(u)}\pm v^{(n)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-对于
-\begin_inset Formula $u(x)\cdot v(x)$
-\end_inset
-
-的
-\begin_inset Formula $n$
-\end_inset
-
-阶导数, 为
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
-\end_inset
-
-这个公式叫做莱布尼茨公式.
-\end_layout
-
-\begin_layout Standard
-推导: 由
-\begin_inset Formula $(uv)'=u'v+uv'$
-\end_inset
-
-得
-\begin_inset Formula 
-\[
-(uv)''=u''v+2u'v'+uv''
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-(uv)'''=u'''v+3u'''v'+3u^{'}v^{''}+uv'''
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-用数学归纳法证明得
-\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-按二项式定理展可以写成(零阶导数理解为函数本身)
-\begin_inset Formula $(uv)^{(n)}=u^{(n)}v^{(0)}+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+u^{(0)}v^{(n)}$
-\end_inset
-
-即
-\begin_inset Formula 
-\[
-(u\cdot v)^{n}=\sum_{k=0}^{n}C_{k}^{n}u^{n-k}v^{k}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 方程近似解
 \end_layout
 
@@ -26496,7 +26203,7 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \begin_inset Formula $F'_{y}$
 \end_inset
 
-且
+ 且
 \begin_inset Formula $F'_{y}\neq0$
 \end_inset
 
@@ -26530,10 +26237,376 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \end_inset
 
 求导, 求多元复合函数求导法, 可得 
-\begin_inset Formula $F'_{x}=F'_{y}\frac{dy}{dx}=0$
+\begin_inset Formula $F'_{x}\cdot\frac{\partial x}{\partial x}+F'_{y}\cdot\frac{\partial y}{\partial x}=F'_{x}+F'_{y}\cdot\frac{dy}{dx}=0$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+高阶导数
+\end_layout
+
+\begin_layout Standard
+二阶导数: 导数的导数.
+\end_layout
+
+\begin_layout Standard
+一般地,函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的导数
+\begin_inset Formula $y=f'(x)$
+\end_inset
+
+仍然是
+\begin_inset Formula $x$
+\end_inset
+
+的函数.我们把
+\begin_inset Formula $y'=f'(x)$
+\end_inset
+
+的导数叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的二阶导数,记作
+\begin_inset Formula $y''$
+\end_inset
+
+或
+\begin_inset Formula $\frac{d^{2}y}{dx^{2}}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+y''=(y')'
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\frac{d^{2}y}{dx^{2}}=\frac{d}{dx}(\frac{dy}{dx})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+相应地,把
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的导数
+\begin_inset Formula $f'(x)$
+\end_inset
+
+叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的一阶导数.
+ 
+\end_layout
+
+\begin_layout Standard
+类似地,二阶导数的导数,叫做三阶导数,三阶导数的导数叫做四阶导数……一般地,
+\begin_inset Formula $(n-1)$
+\end_inset
+
+阶导数的导数叫做
+\begin_inset Formula $n$
+\end_inset
+
+阶导数,分别记作
+\begin_inset Formula 
+\[
+y''',y^{(4)},\cdots,y^{n}
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\frac{d^{3}y}{dx^{3}},\frac{d^{4}y}{dx^{4}},\cdots,\frac{d^{n}y}{dx^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 也常说成函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+阶可导.
+ 如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 那么
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $x$
+\end_inset
+
+的某一邻域内必定具有全部低于
+\begin_inset Formula $n$
+\end_inset
+
+阶的导数.
+\end_layout
+
+\begin_layout Standard
+二阶及二阶以上的导数统称
+\series bold
+高阶导数
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+高阶导数的计算
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\pm v)=\frac{{\rm d}^{n}}{{\rm d}x^{n}}u\pm\frac{{\rm d}^{n}}{{\rm d}x^{n}}v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(Cu)=C\frac{{\rm d}^{n}}{{\rm d}x^{n}}u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\cdot v)=\sum_{k=0}^{n}C_{k}^{n}\frac{{\rm d}^{n-k}}{{\rm d}x^{n-k}}u\frac{{\rm d}^{k}}{{\rm d}x^{k}}v$
+\end_inset
+
+(莱布尼兹公式)
+\end_layout
+
+\begin_layout Subsection
+莱布尼茨公式
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $u=u(x)$
+\end_inset
+
+与
+\begin_inset Formula $v=v(x)$
+\end_inset
+
+都在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数,那么显然
+\begin_inset Formula $u(x)+v(x)$
+\end_inset
+
+与
+\begin_inset Formula $u(x)-v(x)$
+\end_inset
+
+也在点
+\begin_inset Formula $x$
+\end_inset
+
+处具有
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 且
+\begin_inset Formula $(u\pm v)^{(n)}=u^{(u)}\pm v^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+对于
+\begin_inset Formula $u(x)\cdot v(x)$
+\end_inset
+
+的
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
+\end_inset
+
+这个公式叫做莱布尼茨公式.
+\end_layout
+
+\begin_layout Standard
+推导: 由
+\begin_inset Formula $(uv)'=u'v+uv'$
+\end_inset
+
+得
+\begin_inset Formula 
+\[
+(uv)''=u''v+2u'v'+uv''
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(uv)'''=u'''v+3u'''v'+3u^{'}v^{''}+uv'''
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用数学归纳法证明得
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+uv^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+按二项式定理展可以写成(零阶导数理解为函数本身)
+\begin_inset Formula $(uv)^{(n)}=u^{(n)}v^{(0)}+nu^{(n-1)}v'+\frac{n(n-1)}{2!}u^{(n-2)}v^{n}+\cdots+\frac{n(n-1)\cdots(n-k+1)}{k!}u^{(n-k)}v^{(k)}+\cdots+u^{(0)}v^{(n)}$
+\end_inset
+
+即
+\begin_inset Formula 
+\[
+(u\cdot v)^{n}=\sum_{k=0}^{n}C_{k}^{n}u^{n-k}v^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+二元函数的高阶偏导数
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+内具有偏导数
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+和
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+, 如果它们关于 
+\begin_inset Formula $x,y$
+\end_inset
+
+ 的偏导数也存在,则称这两个偏导数的偏导数为
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+的二阶偏导数,这样的二阶偏导数共有四个,分别记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial x})=\frac{\partial^{2}z}{\partial x^{2}}=f_{xx}^{''}(x,y)=z_{xx}^{''}(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial}{\partial y}(\frac{\partial z}{\partial y})=\frac{\partial^{2}z}{\partial y^{2}}=f_{yy}^{''}(x,y)=z_{yy}^{''}(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial}{\partial y}(\frac{\partial z}{\partial x})=\frac{\partial^{2}z}{\partial x\partial y}=f_{xy}^{''}(x,y)=z_{xy}^{''}(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial y})=\frac{\partial^{2}z}{\partial y\partial x}=f_{yx}^{''}(x,y)=z_{yx}^{''}(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中偏导数
+\begin_inset Formula $\frac{\partial}{\partial y}(\frac{\partial z}{\partial x})$
+\end_inset
+
+和
+\begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial y})$
+\end_inset
+
+称为二阶混合偏导数.
+ 我们将二阶以及二阶以上的偏导数统称为高阶偏导数.
 \end_layout
 
 \begin_layout Section
@@ -26872,7 +26945,11 @@ f(x)<f(x_{0})
 多元函数的极值与最值
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
+二元函数极值
+\end_layout
+
+\begin_layout Subsection
 条件极值
 \end_layout
 
@@ -28761,6 +28838,155 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 二元函数全微分的概念
 \end_layout
 
+\begin_layout Standard
+一般地, 如果二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处的增量为
+\begin_inset Formula $\Delta x$
+\end_inset
+
+与
+\begin_inset Formula $\Delta y$
+\end_inset
+
+, 当 
+\begin_inset Formula $\Delta x\rightarrow0$
+\end_inset
+
+与
+\begin_inset Formula $\Delta y\rightarrow0$
+\end_inset
+
+时, 称 
+\begin_inset Formula $A\Delta x+B\Delta y$
+\end_inset
+
+ (其中
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+与
+\begin_inset Formula $\Delta x$
+\end_inset
+
+及
+\begin_inset Formula $\Delta y$
+\end_inset
+
+无关)是函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处的全微分, 记作
+\begin_inset Formula $dz$
+\end_inset
+
+ 或
+\begin_inset Formula $df(x,y)$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+dz=A\Delta x+B\Delta y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+与一元函数类似,全微分
+\begin_inset Formula $dz$
+\end_inset
+
+是全增量 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+ 的近似值, 即 
+\begin_inset Formula $\Delta z=dz$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+对于二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+的全微分,我们有以下结论:
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处具有连续的偏导数, 令
+\begin_inset Formula $A=\frac{\partial z}{\partial x}$
+\end_inset
+
+,
+\begin_inset Formula $B=\frac{\partial z}{\partial y}$
+\end_inset
+
+ , 则二元函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+处的全微分可以表示为 
+\begin_inset Formula $dz=\frac{\partial z}{\partial x}\Delta x+\frac{\partial z}{\partial y}\Delta y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+类似于一元函数,记
+\begin_inset Formula $\Delta x=dx$
+\end_inset
+
+,
+\begin_inset Formula $\Delta y=dy$
+\end_inset
+
+,从而有
+\begin_inset Formula 
+\[
+dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
+\]
+
+\end_inset
+
+二元函数全微分的定义及上述有关结论都可以推广到三元及三元以上的函数.
+\end_layout
+
 \begin_layout Section
 微分中值定理简介
 \end_layout
@@ -28790,7 +29016,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $x_{0}$
 \end_inset
 
-为中心的开区间) , 并且在x处可导,如果对任意的x∈U(x),有
+为中心的开区间) , 并且在x处可导,如果对任意的
+\begin_inset Formula $x\in U(x)$
+\end_inset
+
+,有
 \begin_inset Formula 
 \[
 f(x)\leqslant f(x_{0})\text{或}f(x)\geqslant f(x_{0})
@@ -28931,6 +29161,45 @@ f(x_{0}+\Delta x)-f(x_{0})\leqslant0
 
 \begin_layout Standard
 费马引理仅仅给出了函数在某个点为极值的必要条件。也就是说, 些驻点不是极值, 它们是拐点.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/费马引理.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
