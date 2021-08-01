@@ -26949,6 +26949,179 @@ f(x)<f(x_{0})
 二元函数极值
 \end_layout
 
+\begin_layout Standard
+对于一元函数我们有极值的必要条件,二元函数也有类似的结论.
+\end_layout
+
+\begin_layout Theorem
+(二元函数极值的必要条件) 设函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处的偏导数存在, 且在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+取得极值,则它在该点处的偏导数必然为零,即
+\begin_inset Formula 
+\[
+f_{x}^{'}(x_{0},y_{0})=0,f_{y}^{'}(x_{0},y_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+与一元函数类似,我们把满足方程组
+\begin_inset Formula $\left\{ \begin{split}f_{x}^{'}(x_{0},y_{0})=0\\
+f_{y}^{'}(x_{0},y_{0})=0
+\end{split}
+\right\} $
+\end_inset
+
+的点(x,y)称为二元函数f(x,y)的驻点.
+\end_layout
+
+\begin_layout Standard
+从定理可知,具有偏导数的函数的极值点必定是驻点,但函数的驻点不一定是极值点.
+\end_layout
+
+\begin_layout Theorem
+(二元函数极值的充分条件) 设函数 
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+的某邻域内有二阶连续偏导数,且
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+为函数的驻点,即
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+f_{x}^{'}(x_{0},y_{0})=0,f_{y}^{'}(x_{0},y_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+令
+\begin_inset Formula $f_{xx}^{''}(x_{0},y_{0})=A$
+\end_inset
+
+, 
+\begin_inset Formula $f_{xy}^{''}(x_{0},y_{0})=B$
+\end_inset
+
+, 
+\begin_inset Formula $f_{yy}^{''}(x_{0},y_{0})=C$
+\end_inset
+
+,则
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+处是否取得极值的条件如下:
+\end_layout
+
+\begin_layout Theorem
+(1) 当
+\begin_inset Formula $B^{2}-AC<0$
+\end_inset
+
+时,函数具有极值,当
+\begin_inset Formula $A<0$
+\end_inset
+
+时有极大值,当
+\begin_inset Formula $A>0$
+\end_inset
+
+时有极小值;
+\end_layout
+
+\begin_layout Theorem
+(2)当
+\begin_inset Formula $B^{2}-AC>0$
+\end_inset
+
+时,函数没有极值;
+\end_layout
+
+\begin_layout Theorem
+(3)当
+\begin_inset Formula $B^{2}-AC=0$
+\end_inset
+
+时,函数可能有极值,也可能没有极值还需另作讨论.
+\end_layout
+
+\begin_layout Standard
+利用定理1和定理2,对于具有二阶连续偏导数的二元函数f(x,y),我们可按下列步骤 求函数的极值:
+\end_layout
+
+\begin_layout Enumerate
+求出
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+的一阶,二阶偏导数;
+\end_layout
+
+\begin_layout Enumerate
+解方程组
+\begin_inset Formula $\left\{ \begin{split}f_{x}^{'}(x_{0},y_{0})=0\\
+f_{y}^{'}(x_{0},y_{0})=0
+\end{split}
+\right\} $
+\end_inset
+
+, 求出全部驻点;
+\end_layout
+
+\begin_layout Enumerate
+对于每个驻点, 求出二阶偏导数的值
+\begin_inset Formula $A$
+\end_inset
+
+,
+\begin_inset Formula $B$
+\end_inset
+
+,
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Enumerate
+确定 
+\begin_inset Formula $B^{2}-AC$
+\end_inset
+
+ 的符号,据此判定极值.
+\end_layout
+
 \begin_layout Subsection
 条件极值
 \end_layout
@@ -26975,7 +27148,7 @@ f(x)<f(x_{0})
 ,当z为可知的值时, 即可转为无极值条件问题.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 拉格朗日乘数法 直接求条件极值
 \end_layout
 
@@ -26997,7 +27170,7 @@ f(x)<f(x_{0})
 \end_inset
 
 , 称为拉格朗日函数, 其中称为拉格朗日乘数.
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -27009,7 +27182,7 @@ f(x)<f(x_{0})
 \[
 f(n)=\begin{cases}
 F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\
-F'_{x}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\
+F'_{y}=f'_{x}(x,y)+\lambda\varphi'_{x}(x,y)=0,\\
 F'_{\lambda}=\varphi(x,y)=0,
 \end{cases}
 \]
@@ -27050,6 +27223,125 @@ F'_{\lambda}=\varphi(x,y)=0,
 
 的极值点, 在实际问题中往往可由其实际定义加以判断.
  
+\end_layout
+
+\begin_layout Example
+某化妆品公司计划通过报纸和电视台做化妆品的促销广告, 根据统计资料, 销售收入
+\begin_inset Formula $R$
+\end_inset
+
+与报纸广告费用
+\begin_inset Formula $x$
+\end_inset
+
+(百万元)和电视广告费用
+\begin_inset Formula $y$
+\end_inset
+
+(百万元)之间的关系为 
+\begin_inset Formula $R=15+14x+32y-8xy-2x^{2}-10y^{2}$
+\end_inset
+
+.
+ 若可供使用的广告费用是
+\begin_inset Formula $2$
+\end_inset
+
+(百万元),求相应的最佳广告策略.
+\end_layout
+
+\begin_layout Solution
+由于纯销售收入=销售收入一广告费用, 故目标函数为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{eqnarray*}
+f(x,y) & = & 15+14x+32y-8xy-2x^{2}-10y^{2}-(x+y)\\
+ & = & 15+13x+31y-8xy-2x^{2}-10y^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+约束条件为
+\begin_inset Formula $x+y=2$
+\end_inset
+
+,构造拉格朗日函数:
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $F(x,y,\lambda)=15+13x+31y-8xy-2x^{2}-10y^{2}+\lambda(x+y-2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求一阶偏导数, 建立方程组得
+\begin_inset Formula $f(n)=\begin{cases}
+F'_{x}=13-8y-4x+\lambda=0,\\
+F'_{y}=31-8x-20y+\lambda=0,\\
+F'_{\lambda}=x+y-2=0,
+\end{cases}$
+\end_inset
+
+.
+ 解之得 
+\begin_inset Formula $x=0.75$
+\end_inset
+
+, 
+\begin_inset Formula $y=1.25$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Solution
+根据问题的实际意义知,纯销售收入的最大值是存在的,且只有唯一一个驻点,此时将 费用 
+\begin_inset Formula $75$
+\end_inset
+
+ 万投入报纸广告,
+\begin_inset Formula $125$
+\end_inset
+
+ 万投入电视广告,可使公司的纯销售收入最大.
+\end_layout
+
+\begin_layout Solution
+拉格朗日乘数法还可推广到含两个以上自变量及约束条件多于一个的情形.
+\end_layout
+
+\begin_layout Solution
+对于这个例题来说, 如果令
+\begin_inset Formula $y=2-x$
+\end_inset
+
+ 可以转换为求一元二次方程
+\begin_inset Formula $Z=15+14x+32(2-x)-8x(2-x)-2x^{2}-10(2-x)^{2}$
+\end_inset
+
+最大值时x的值.
 \end_layout
 
 \begin_layout Section
@@ -30323,26 +30615,26 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Section
-不定积分的几何意义
-\end_layout
-
-\begin_layout Section
-积分表
-\end_layout
-
-\begin_layout Section
-基本积分公式 
-\end_layout
-
-\begin_layout Section
-不定积分的直接积分法 
-\end_layout
-
-\begin_layout Section
-换元积分法
+不定积分的计算
 \end_layout
 
 \begin_layout Subsection
+积分表
+\end_layout
+
+\begin_layout Subsection
+基本积分公式 
+\end_layout
+
+\begin_layout Subsection
+不定积分的直接积分法 
+\end_layout
+
+\begin_layout Subsection
+换元积分法
+\end_layout
+
+\begin_layout Subsubsection
 第一类换元法
 \end_layout
 
@@ -30435,7 +30727,7 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 第二类换元法
 \end_layout
 
@@ -30502,11 +30794,11 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 的反函数.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 凑微分法 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 分部积分法
 \end_layout
 
