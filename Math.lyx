@@ -2568,6 +2568,75 @@ ab=(a,b)[a.b]m
 \end_layout
 
 \begin_layout Section
+负数
+\end_layout
+
+\begin_layout Subsection
+最小化绝对值之和
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $|a|+|b|\geqslant|a+b|$
+\end_inset
+
+, 当且仅当
+\begin_inset Formula $ab\geqslant0$
+\end_inset
+
+时等号成立
+\end_layout
+
+\begin_layout Standard
+对于
+\begin_inset Formula 
+\begin{align*}
+f(x)=|x-a_{1}|+|x-a_{2}|+\cdots+|x-a_{n}|\\
+=|x+(-a_{1})|+|a_{2}+(-x)|+\cdots+|a_{n}+(-x)|\\
+\geqslant|x+-a_{1}+a_{2}-x+\cdots+a_{n}-x|
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n$
+\end_inset
+
+为偶数时
+\begin_inset Formula $f(x)\geqslant|(a_{n}-a_{1})+\cdots+(a_{n-1}-a_{2})|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n$
+\end_inset
+
+为奇数,设
+\begin_inset Formula $n=2k+1$
+\end_inset
+
+时
+\begin_inset Formula $f(x)\geqslant|(a_{n}-a_{1})+\cdots+(a_{n-1}-a_{2})+x-a_{k+1}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以对于上边问题的式子当为偶数时x 可以为任意值, 当为奇数时x需要根据x范围判断.
+\end_layout
+
+\begin_layout Standard
+一般情况使用中值即可, 即每一个点到x的距离之和最小.
+\end_layout
+
+\begin_layout Section
 幂运算(指数运算)
 \end_layout
 
