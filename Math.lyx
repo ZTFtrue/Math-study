@@ -24961,7 +24961,7 @@ x相对于
 \end_inset
 
 
-\begin_inset Formula $\left(\sqrt{X}\right)'=\frac{1}{2\sqrt{X}};\left(\frac{1}{x}\right)'=(x^{-1})'=\frac{1}{{x^{2}}}$
+\begin_inset Formula $\left(\sqrt{X}\right)'=\frac{1}{2\sqrt{X}};\left(\frac{1}{x}\right)'=(x^{-1})'=\frac{1}{x^{2}}$
 \end_inset
 
 
@@ -31850,7 +31850,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
  则有 
 \begin_inset Formula 
 \[
-\int_{b}^{a}f(x)dx=\int_{\beta}^{\alpha}f[\varphi(t)]\varphi'(t)dt
+\int_{b}^{a}f(x)dx=\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
 \]
 
 \end_inset
@@ -31862,12 +31862,100 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 应用牛顿-莱布尼茨公
 \end_layout
 
+\begin_layout Proof
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\int_{b}^{a}f(x)dx=F(b)-F(a)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+记
+\begin_inset Formula $\varPhi(t)=F[\varphi(t)]$
+\end_inset
+
+, 由复合函数求导法则，得
+\begin_inset Formula 
+\[
+\varPhi'(t)=\frac{dF}{dx}\cdot\frac{dx}{dt}=f(x)\varphi'(t)=f[\varphi(t)]\varphi'(t)
+\]
+
+\end_inset
+
+这表明
+\begin_inset Formula $\varPhi(t)$
+\end_inset
+
+是
+\begin_inset Formula $f[\varphi(t)]\varphi'(t)$
+\end_inset
+
+的一个原函数.因此有
+\begin_inset Formula 
+\[
+\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt=\varPhi(\beta)-\varPhi(\alpha)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+又由 
+\begin_inset Formula $\varPhi(t)=F[\varphi(t)]$
+\end_inset
+
+及
+\begin_inset Formula $\varphi(\alpha)=a$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(\beta)=b$
+\end_inset
+
+; 可知
+\begin_inset Formula 
+\[
+\varPhi(\beta)-\varPhi(\alpha)=F(a)-F(b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+所以
+\begin_inset Formula 
+\[
+\int_{b}^{a}f(x)dx=\varPhi(\beta)-\varPhi(\alpha)=F(a)-F(b)=\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 定积分的分部积分法
 \end_layout
 
 \begin_layout Standard
-不定积分的分部积分法, 可得
+根据不定积分的分部积分法, 可得
 \begin_inset Formula 
 \begin{align*}
 \int_{b}^{a}u(x)v'(x)dx=[\int u(x)v'(x)dx]_{a}^{b}\\
@@ -31909,6 +31997,30 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
  
 \series bold
 表明原函数已经积出的部分可以先用上、下限代入.
+\end_layout
+
+\begin_layout Example
+计算 
+\begin_inset Formula $\int_{0}^{\frac{1}{2}}\arcsin xdx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{\frac{1}{2}}\arcsin xdx & =\int_{0}^{\frac{1}{2}}x'\cdot\arcsin xdx\\
+ & =[x\cdot\arcsin x]_{0}^{\frac{1}{2}}-\int_{0}^{\frac{1}{2}}\frac{x}{\sqrt{1-x^{2}}}dx\\
+ & =\frac{1}{2}\cdot\frac{\pi}{6}-\int_{0}^{\frac{1}{2}}x\cdot(\sqrt{1-x^{2}})'dx\\
+ & =\frac{\pi}{12}-\int_{0}^{\frac{1}{2}}(x^{2})'\cdot\frac{1}{\sqrt{1-x^{2}}}d\\
+ & =\frac{\pi}{12}+[\sqrt{1-x^{2}}]_{0}^{\frac{1}{2}}\\
+ & =\frac{\pi}{12}+\frac{\sqrt{3}}{2}-1
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
