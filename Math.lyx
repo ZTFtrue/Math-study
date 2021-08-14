@@ -12742,6 +12742,14 @@ a-c<a
 即可.
 \end_layout
 
+\begin_layout Proof
+如果不排序会出现
+\begin_inset Formula $2-1<3$
+\end_inset
+
+的错误
+\end_layout
+
 \begin_layout Standard
 如何判断是等边还是等腰三角形?
 \end_layout
@@ -31773,16 +31781,1190 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 定积分的换元积分法与分部积分法
 \end_layout
 
+\begin_layout Subsubsection
+定积分的换元法
+\end_layout
+
+\begin_layout Theorem
+假设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上连续, 函数
+\begin_inset Formula $x=\varphi(t)$
+\end_inset
+
+ 满足条件:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\varphi(\alpha)=a$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi(\beta)=b$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\varphi(t)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+在
+\begin_inset Formula $[\alpha,\beta]$
+\end_inset
+
+上具有连续导数.
+ 则有 
+\begin_inset Formula 
+\[
+\int_{b}^{a}f(x)dx=\int_{\beta}^{\alpha}f[\varphi(t)]\varphi'(t)dt
+\]
+
+\end_inset
+
+叫做定积分的换元公式.
+\end_layout
+
+\begin_layout Proof
+应用牛顿-莱布尼茨公
+\end_layout
+
+\begin_layout Subsubsection
+定积分的分部积分法
+\end_layout
+
+\begin_layout Standard
+不定积分的分部积分法, 可得
+\begin_inset Formula 
+\begin{align*}
+\int_{b}^{a}u(x)v'(x)dx=[\int u(x)v'(x)dx]_{a}^{b}\\
+=[u(x)v(x)-\int v(x)u'(x)dx]_{a}^{b}\\
+=[u(x)v(x)]_{a}^{b}-\int_{a}^{b}v(x)u'(x)dx
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+简记作
+\begin_inset Formula 
+\[
+\int_{b}^{a}uv'dx=[uv]_{a}^{b}-\int_{b}^{a}vu'dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或
+\begin_inset Formula 
+\[
+\int_{b}^{a}udv=[uv]_{a}^{b}-\int_{b}^{a}vdu
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上式就是定积分的分部积分公式.
+ 
+\series bold
+表明原函数已经积出的部分可以先用上、下限代入.
+\end_layout
+
 \begin_layout Section
+反常积分(Improper integral)
+\end_layout
+
+\begin_layout Standard
+反常积分（又叫广义积分），是对普通定积分的推广，分成两类。
+\end_layout
+
+\begin_layout Standard
+第一类反常积分，称为无穷积分，指积分区间的上限或下限为无穷的积分。
+\end_layout
+
+\begin_layout Standard
+第二类反常积分，称为反常积分，指被积函数在积分区间中含有
+\series bold
+不连续点
+\series default
+的积分。 
+\end_layout
+
+\begin_layout Definition
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上连续, 如果极限
+\begin_inset Formula $\underset{t\rightarrow+\infty}{\lim}\int_{a}^{t}f(x)dx$
+\end_inset
+
+存在，那么称反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+收敛，并称此极限为该反常积分的值；如果极限
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\int_{a}^{t}f(x)dx$
+\end_inset
+
+不存在, 那么称反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula ${\displaystyle \int_{1}^{\infty}\frac{1}{x}\,dx=\lim_{u\to+\infty}\int_{1}^{u}\frac{1}{x}\,dx=+\infty}$
+\end_inset
+
+，即发散；
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula ${\displaystyle \int_{1}^{\infty}x\sin x\,dx=\lim_{u\to+\infty}\int_{1}^{u}x\sin x\,dx}$
+\end_inset
+
+ ，振动发散
+\end_layout
+
+\begin_layout Standard
+类似地，也可以设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-\infty,b]$
+\end_inset
+
+上连续,任取 
+\begin_inset Formula $t<b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+类似地, 设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $(-\infty,b]$
+\end_inset
+
+ 上连续, 如果极限 
+\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{t}^{b}f(x)dx$
+\end_inset
+
+ 存在，那么称反常积分 
+\begin_inset Formula $\int_{-\infty}^{b}f(x)dx$
+\end_inset
+
+ 收敛，并称此极限为该反常积分的值；如果极限 
+\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{t}^{b}f(x)dx$
+\end_inset
+
+ 不存在, 那么称反常积分 
+\begin_inset Formula $\int_{-\infty}^{b}f(x)dx$
+\end_inset
+
+ 发散.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+上连续, 如果反常积分 
+\begin_inset Formula $\int_{-\infty}^{0}f(x)dx$
+\end_inset
+
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\int_{0}^{+\infty}f(x)dx$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 均收敛，那么称反常积分
+\begin_inset Formula $\int_{-\infty}^{+\infty}f(x)dx$
+\end_inset
+
+收敛；否则, 称反常积分
+\begin_inset Formula $\int_{-\infty}^{+\infty}f(x)dx$
+\end_inset
+
+ 发散.
+\end_layout
+
+\begin_layout Definition
+上述反常积分统称为
+\series bold
+无穷限的积分
+\series default
+.
+\end_layout
+
+\begin_layout Definition
+由上述定义及牛顿-莱布尼茨公式, 得
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $F(x)$
+\end_inset
+
+为
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上的一个原函数，若
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}F(x)$
+\end_inset
+
+存在，则反常积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}f(x)dx=\underset{x\rightarrow+\infty}{\lim}F(x)-F(a)
+\]
+
+\end_inset
+
+若
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}F(x)$
+\end_inset
+
+不存在, 则反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Standard
+其它反常积分同理.
+\end_layout
+
+\begin_layout Subsection
+无界函数的反常积分
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $a$
+\end_inset
+
+的任一邻域内都无界，那么点a称为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的瑕点 (也称为无界间断点,即
+\begin_inset Formula $f(x)$
+\end_inset
+
+在点
+\begin_inset Formula $a$
+\end_inset
+
+不连续).
+ 无界函数的反常积分又称为(瑕积分).
+\end_layout
+
+\begin_layout Standard
+设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $(a,b]$
+\end_inset
+
+上连续, 点
+\begin_inset Formula $a$
+\end_inset
+
+为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的瑕点.
+ 任取
+\begin_inset Formula $t>a$
+\end_inset
+
+, 积分
+\begin_inset Formula $\int_{t}^{b}$
+\end_inset
+
+, 再求极限
+\begin_inset Formula 
+\[
+\underset{t\rightarrow a^{+}}{\lim}\int_{t}^{b}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个对变下限的定积分求极限的算式称为
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $(a,b]$
+\end_inset
+
+上的反常积分，仍然记为
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=\underset{t\rightarrow a^{+}}{\lim}\int_{t}^{b}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果极限
+\begin_inset Formula $\underset{t\rightarrow a^{+}}{\lim}\int_{t}^{b}f(x)dx$
+\end_inset
+
+存在, 那么称反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+收敛, 并称此极限为该反常积分的值, 如果极限
+\begin_inset Formula $\underset{t\rightarrow a^{+}}{\lim}\int_{t}^{b}f(x)dx$
+\end_inset
+
+不存在, 那么称反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Definition
+类似地，对于区间
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $[a,b)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, 
+\begin_inset Formula $[a,c)$
+\end_inset
+
+及
+\begin_inset Formula $(c,b]$
+\end_inset
+
+ 也有同样的定义.
+\end_layout
+
+\begin_layout Definition
+计算无界函数的反常积分，同样也可借助于牛顿-莱布尼茨公式.
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)dx=[F(x)]+_{a}^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+反常积分的审敛法 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数
+\end_layout
+
+\begin_layout Subsubsection
+无穷限反常积分的审敛法
+\end_layout
+
+\begin_layout Theorem
+设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上连续, 且
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+, 若函数
+\begin_inset Formula 
+\[
+F(x)=\int_{a}^{x}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上有上界，则反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+收敛.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+比较审敛原理.
+ 设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ , 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+ 上连续.
+ 如果
+\begin_inset Formula $0\leqslant f(x)\leqslant g(x)\text{ }(a\leqslant x<+\infty)$
+\end_inset
+
+, 并且
+\begin_inset Formula $\int_{a}^{+\infty}g(x)dx$
+\end_inset
+
+收敛, 那么
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+也收敛; 如果
+\begin_inset Formula $0\leqslant g(x)\leqslant f(x)\text{ }(a\leqslant x<+\infty)$
+\end_inset
+
+, 并且
+\begin_inset Formula $\int_{a}^{+\infty}g(x)dx$
+\end_inset
+
+发散, 那么
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+也发散;
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(比较审敛法 1) 设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+ 
+\begin_inset Formula $(a>0)$
+\end_inset
+
+)上连续, 且
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+, 如果存在常数
+\begin_inset Formula $M>0$
+\end_inset
+
+及
+\begin_inset Formula $p>1$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(x)\leqslant\frac{M}{x^{p}}\text{ }(a\leqslant x<+\infty)$
+\end_inset
+
+，那么反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+收敛; 如果存在常数
+\begin_inset Formula $N>0$
+\end_inset
+
+,使得
+\begin_inset Formula $f(x)\geqslant\frac{N}{x}\text{ }(a\leqslant x<+\infty)$
+\end_inset
+
+, 那么反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(极限审敛法1) 设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间 
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上连续, 且
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+.
+ 如果存在常数及
+\begin_inset Formula $p>1$
+\end_inset
+
+, 使得
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}x^{p}f(x)=c<+\infty$
+\end_inset
+
+, 那么反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+收敛; 如果
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}x^{p}f(x)=d=+\infty$
+\end_inset
+
+(或
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}x^{p}f(x)=d>0$
+\end_inset
+
+) , 那么反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间 
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上连续, 如果反常积分
+\begin_inset Formula $\int_{a}^{+\infty}|f(x)|dx$
+\end_inset
+
+收敛, 那么反常积分
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+也收敛.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+通常称
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\int_{a}^{+\infty}|f(x)|dx$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+为绝对收敛.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+所以可以简单的表达为: 绝对收敛的反常积分
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ 必定收敛.
+\end_layout
+
+\begin_layout Subsubsection
+无界函数的反常积分的审敛法
+\end_layout
+
+\begin_layout Theorem
+(比较审敛法2)设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(a,b]$
+\end_inset
+
+上连续, 且
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+,
+\begin_inset Formula $x=a$
+\end_inset
+
+为
+\begin_inset Formula $f(x)$
+\end_inset
+
+的瑕点.
+ 如果存在常数
+\begin_inset Formula $M>0$
+\end_inset
+
+及
+\begin_inset Formula $q<1$
+\end_inset
+
+, 使得
+\begin_inset Formula $f(x)\leqslant\frac{M}{(x-a)^{q}}\text{ }(a<x\leqslant b)$
+\end_inset
+
+，那么反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+收敛; 如果存在常数
+\begin_inset Formula $N>0$
+\end_inset
+
+,使得
+\begin_inset Formula $f(x)\geqslant\frac{N}{x-a}\text{ }(a<x\leqslant b)$
+\end_inset
+
+, 那么反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(极限审敛法1) 设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间 
+\begin_inset Formula $(a,b]$
+\end_inset
+
+上连续, 且
+\begin_inset Formula $f(x)\geqslant0$
+\end_inset
+
+, 
+\begin_inset Formula $x=a$
+\end_inset
+
+为
+\begin_inset Formula $f(x)$
+\end_inset
+
+的瑕点.
+ 如果存在常数及
+\begin_inset Formula $0<q<1$
+\end_inset
+
+, 使得
+\begin_inset Formula $\underset{x\rightarrow a^{+}}{\lim}x-a^{q}f(x)$
+\end_inset
+
+存在, 那么反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+收敛; 如果
+\begin_inset Formula $\underset{x\rightarrow a^{+}}{\lim}x-a^{q}f(x)=d=+\infty$
+\end_inset
+
+(或
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}x^{p}f(x)=d>0$
+\end_inset
+
+) , 那么反常积分
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数定义
+\begin_inset Formula 
+\[
+\Gamma(s)=\int_{0}^{+\infty}e^{-x}x^{s-1}dx\text{ }(s>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+首先讨论
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x}x^{s-1}dx$
+\end_inset
+
+式积分的收敛性问题.这个积分的积分区间为无穷，又 当
+\begin_inset Formula $s-1<0$
+\end_inset
+
+时
+\begin_inset Formula $x=0$
+\end_inset
+
+是被积函数的瑕点(
+\begin_inset Formula $a^{(-k)}=\frac{1}{a^{k}}=a^{(0-k)}=\frac{a^{0}}{a^{k}}=\frac{1}{a^{k}}$
+\end_inset
+
+).为此，分别讨论下列两个积分
+\begin_inset Formula 
+\[
+I_{1}=\int_{0}^{1}e^{-x}x^{s-1}dx\text{ , }I_{1}=\int_{0}^{+\infty}e^{-x}x^{s-1}dx
+\]
+
+\end_inset
+
+的收敛性.
+ 先讨论
+\begin_inset Formula $I_{1}$
+\end_inset
+
+, 当
+\begin_inset Formula $s\geqslant1$
+\end_inset
+
+时，
+\begin_inset Formula $I_{1}$
+\end_inset
+
+是定积分；当
+\begin_inset Formula $0<s<1$
+\end_inset
+
+时，因为
+\begin_inset Formula 
+\[
+e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
+\]
+
+\end_inset
+
+而
+\begin_inset Formula $1-s<1$
+\end_inset
+
+，根据比较审敛法2,反常积分
+\begin_inset Formula $I_{1}$
+\end_inset
+
+收敛.
+\end_layout
+
+\begin_layout Standard
+再讨论
+\begin_inset Formula $I_{2}$
+\end_inset
+
+.因为
+\begin_inset Formula 
+\[
+\underset{x\rightarrow+\infty}{\lim}x^{2}\cdot(e^{-x}x^{s-1})=\underset{x\rightarrow+\infty}{\lim}\frac{x^{s+1}}{e^{x}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据极限审敛法1，
+\begin_inset Formula $I_{2}$
+\end_inset
+
+也收敛.
+\end_layout
+
+\begin_layout Standard
+反常积分
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x}x^{s-1}dx$
+\end_inset
+
+对
+\begin_inset Formula $s>0$
+\end_inset
+
+ 均收敛.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数性质
+\end_layout
+
+\begin_layout Standard
+递推公式
+\begin_inset Formula $\Gamma(s+1)=s\Gamma(s)\text{ }(s>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数看成是阶乘的推广 
+\begin_inset Formula $\Gamma(s+1)=s!$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $s\rightarrow0^{+}$
+\end_inset
+
+时, 
+\begin_inset Formula $\Gamma(s)\rightarrow+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+余元公式: 
+\begin_inset Formula $\Gamma(s)\Gamma(s-1)=\frac{\pi}{\sin\pi s}\text{ }(0<s<1)$
+\end_inset
+
+, 当
+\begin_inset Formula $s=\frac{1}{2}$
+\end_inset
+
+时
+\begin_inset Formula $\Gamma(\frac{1}{2})=\sqrt{\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma(s)=\int_{0}^{+\infty}e^{-x}x^{s-1}dx$
+\end_inset
+
+中, 作代换
+\begin_inset Formula $x=u^{2}$
+\end_inset
+
+, 有
+\begin_inset Formula 
+\[
+\Gamma(s)=2\int_{0}^{+\infty}e^{-u^{2}}x^{2s-1}du
+\]
+
+\end_inset
+
+再令
+\begin_inset Formula $2s-l=t$
+\end_inset
+
+或
+\begin_inset Formula $s=\frac{1+t}{2}$
+\end_inset
+
+ , 即有
+\begin_inset Formula 
+\[
+2\int_{0}^{+\infty}e^{-u^{2}}du=\Gamma(\frac{1}{2})=\sqrt{\pi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从而
+\begin_inset Formula 
+\[
+\int_{0}^{+\infty}e^{-u^{2}}du=\frac{\sqrt{\pi}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 无穷区间上的广义积分
 \end_layout
 
 \begin_layout Section
 二重积分 
-\end_layout
-
-\begin_layout Section
-常微分方程
 \end_layout
 
 \begin_layout Section
@@ -32053,6 +33235,38 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 
 \begin_layout Chapter
 微分方程
+\end_layout
+
+\begin_layout Section
+齐次方程
+\end_layout
+
+\begin_layout Section
+一阶线性微分方程
+\end_layout
+
+\begin_layout Section
+伯努利方程
+\end_layout
+
+\begin_layout Section
+可降阶的高阶微分方程
+\end_layout
+
+\begin_layout Section
+高阶线性微分方程
+\end_layout
+
+\begin_layout Section
+常系数齐次线性微分方程
+\end_layout
+
+\begin_layout Section
+常系数非齐次线性微分方程
+\end_layout
+
+\begin_layout Section
+欧拉方程
 \end_layout
 
 \begin_layout Chapter
