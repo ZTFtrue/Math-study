@@ -5,11 +5,17 @@
 \save_transient_properties true
 \origin unavailable
 \textclass scrbook
+\begin_preamble
+%\usepackage{epstopdf}
+\end_preamble
+\options UTF8
 \use_default_options true
 \begin_modules
 theorems-ams
 eqs-within-sections
 figs-within-sections
+fixltx2e
+pdfform
 \end_modules
 \maintain_unincluded_children false
 \language chinese-simplified
@@ -38,9 +44,9 @@ figs-within-sections
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 4
 \pdf_breaklinks true
 \pdf_pdfborder false
 \pdf_colorlinks false
@@ -48,7 +54,7 @@ figs-within-sections
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_package amsmath 1
+\use_package amsmath 2
 \use_package amssymb 1
 \use_package cancel 1
 \use_package esint 1
@@ -33684,19 +33690,1003 @@ P(x,y)dx+Q(x,y)dy=0
 \begin_inset Formula $dx$
 \end_inset
 
-,那么原方程就称为柯分离变量得微分方程.
+,那么原方程就称为可分离变量得微分方程.
 \end_layout
 
 \begin_layout Section
 齐次方程
 \end_layout
 
+\begin_layout Standard
+如果一阶微分方程可化成
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\varphi(\frac{y}{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+的形式，那么就称这方程为齐次方程
+\end_layout
+
+\begin_layout Example
+解方程
+\begin_inset Formula $(xy-y^{2})dx-(x^{2}-2xy)dy=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将方程
+\begin_inset Formula $(xy-y^{2})dx-(x^{2}-2xy)dy=0$
+\end_inset
+
+转为齐次方程:
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{xy-y^{2}}{x^{2}-2xy}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+右边同时除以
+\begin_inset Formula $x^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{\frac{y}{x}-(\frac{y}{x})^{2}}{1-2(\frac{y}{x})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $u=\frac{y}{x}$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Solution
+则 
+\begin_inset Formula $y=ux$
+\end_inset
+
+ , 
+\begin_inset Formula $\frac{dy}{dx}=ux'+xu'=u+x\cdot\frac{du}{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入齐次方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\varphi(\frac{y}{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+有
+\begin_inset Formula $u+x\cdot\frac{du}{dx}=\varphi(u)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+即
+\begin_inset Formula $x\cdot\frac{du}{dx}=\varphi(u)-u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分离变量
+\begin_inset Formula 
+\[
+\frac{du}{\varphi(u)-u}=\frac{dx}{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分，得
+\begin_inset Formula 
+\[
+\int\frac{du}{\varphi(u)-u}=\int\frac{dx}{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求出积分后, 再以
+\begin_inset Formula $\frac{y}{x}$
+\end_inset
+
+代替
+\begin_inset Formula $u$
+\end_inset
+
+ , 便得所给齐次方程的通解.
+\end_layout
+
+\begin_layout Solution
+将 
+\begin_inset Formula $\frac{dy}{dx}=ux'+xu'=u+x\cdot\frac{du}{dx}$
+\end_inset
+
+代入原方程, 于是原方程变为
+\begin_inset Formula 
+\[
+u+x\cdot\frac{du}{dx}=\frac{u-u^{2}}{1-2u}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分离变量
+\begin_inset Formula 
+\[
+x\cdot\frac{du}{dx}=\frac{u^{2}}{1-2u}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1-2u}{u^{2}}du=\frac{dx}{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+(\frac{1}{u^{2}}-\frac{2}{u})du=\frac{dx}{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分，得
+\begin_inset Formula $u^{-1}-2\ln|u|+C_{1}=\ln|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+再将
+\begin_inset Formula $u=\frac{y}{x}$
+\end_inset
+
+代入.
+\end_layout
+
+\begin_layout Example
+解方程
+\begin_inset Formula $y^{2}+x^{2}\frac{dy}{dx}=xy\frac{dy}{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+原方程可写成
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{y^{2}}{xy-x^{2}}=\frac{(\frac{y}{x})^{2}}{\frac{y}{x}-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此是齐次方程.
+ 令
+\begin_inset Formula $u=\frac{y}{x}$
+\end_inset
+
+ , 则
+\begin_inset Formula 
+\[
+y=xu\text{ , }\frac{dy}{dx}=u+x\cdot\frac{du}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+于是原方程变为
+\begin_inset Formula 
+\[
+u+x\cdot\frac{du}{dx}=\frac{u^{2}}{u-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+即
+\begin_inset Formula 
+\[
+x\cdot\frac{du}{dx}=\frac{u^{2}}{u-1}-u=\frac{u}{u-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分离变量, 得
+\begin_inset Formula 
+\[
+(1-\frac{1}{u})du=\frac{dx}{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分，得
+\begin_inset Formula $u-\ln|u|+C_{1}=\ln|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+或写为
+\begin_inset Formula $\ln|xu|=u+C_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将
+\begin_inset Formula $u=\frac{y}{x}$
+\end_inset
+
+代入
+\begin_inset Formula 
+\[
+\ln|y|=\frac{y}{x}+C_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+可化为齐次的方程
+\end_layout
+
+\begin_layout Standard
+方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{ax+by+c}{a_{1}x+b_{1}y+c_{1}}
+\]
+
+\end_inset
+
+当
+\begin_inset Formula $c=c_{1}=0$
+\end_inset
+
+时是齐次的, 否则不是齐次的.
+ 在非齐次的情形, 可用下列变换把它化为齐次方程: 令
+\begin_inset Formula 
+\[
+x=X+h\text{ , }y=Y+k
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $h$
+\end_inset
+
+及
+\begin_inset Formula $k$
+\end_inset
+
+是待定的常数.
+ 于是
+\begin_inset Formula 
+\[
+dx=dX\text{ , }dy=dY
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从而方程成为
+\begin_inset Formula 
+\[
+\frac{dY}{dX}=\frac{aX+bY+ah+bk+c}{a_{1}X+b_{1}Y+a_{1}h+b_{1}k+c_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+ah+bk+c & =0\\
+a_{1}h+b_{1}k+c_{1} & =0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+的系数行列式
+\begin_inset Formula $\begin{vmatrix}a & b\\
+a_{1} & b_{1}
+\end{vmatrix}\neq0$
+\end_inset
+
+, 即
+\begin_inset Formula $\frac{a_{1}}{a}\neq\frac{b_{1}}{b}$
+\end_inset
+
+, 那么可以确定
+\begin_inset Formula $h$
+\end_inset
+
+及
+\begin_inset Formula $k$
+\end_inset
+
+使它们满足上述方程组.
+ 这样, 方程便化为齐次方程
+\begin_inset Formula 
+\[
+\frac{dY}{dX}=\frac{aX+bY}{a_{1}X+b_{1}Y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求出这个齐次方程的通解后，在通解中以
+\begin_inset Formula $x-h$
+\end_inset
+
+代
+\begin_inset Formula $X$
+\end_inset
+
+,
+\begin_inset Formula $y-k$
+\end_inset
+
+代
+\begin_inset Formula $Y$
+\end_inset
+
+，便得原方程的通解.
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\frac{a_{1}}{a}=\frac{b_{1}}{b}$
+\end_inset
+
+时, 
+\begin_inset Formula $h$
+\end_inset
+
+及
+\begin_inset Formula $k$
+\end_inset
+
+无法求得，因此上述方法不能应用.
+ 但这时令
+\begin_inset Formula $\frac{a_{1}}{a}=\frac{b_{1}}{b}=\lambda$
+\end_inset
+
+，从而方程可写成
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{ax+by+c}{\lambda(ax+by)+c_{1}}
+\]
+
+\end_inset
+
+引入新变量
+\begin_inset Formula $v=ax+by$
+\end_inset
+
+ , 则
+\begin_inset Formula 
+\[
+\frac{dv}{dx}=a+b\frac{dy}{dx}\text{ 或 }\frac{dy}{dx}=\frac{1}{b}(\frac{dv}{dx}-a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是原方程变为
+\begin_inset Formula 
+\[
+\frac{1}{b}(\frac{dv}{dx}-a)=\frac{v+c}{\lambda v+c_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是可分离变量的方程.
+\end_layout
+
+\begin_layout Standard
+上所介绍的方法可以应用于更一般的方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=f(\frac{ax+by+c}{a_{1}x+b_{1}y+c_{1}})
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 一阶线性微分方程
 \end_layout
 
+\begin_layout Standard
+方程
+\begin_inset Formula 
+\begin{equation}
+\frac{dy}{dx}+P(x)y=Q(x)
+\end{equation}
+
+\end_inset
+
+叫做一阶线性微分方程.
+ 因为它对于未知函数
+\begin_inset Formula $y$
+\end_inset
+
+及其导数是一次方程.
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $Q(x)\equiv0$
+\end_inset
+
+, 那么方程称为齐次的, 否则, 称为非齐次的.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+次线性方程通解
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $Q(x)$
+\end_inset
+
+为
+\begin_inset Formula $0$
+\end_inset
+
+, 那么方程为
+\series bold
+齐次线性方程
+\series default
+:
+\begin_inset Formula 
+\[
+\frac{dy}{dx}+P(x)y=0
+\]
+
+\end_inset
+
+这个方程叫做对应于非齐次线性方程的
+\series bold
+齐次线性方程
+\series default
+.此后即可用分离变量方式求解, 分离变量后得
+\begin_inset Formula 
+\[
+\frac{dy}{y}=-P(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+两端积分，得
+\begin_inset Formula 
+\begin{equation}
+\ln|y|=-\int P(x)dx+C_{1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或
+\begin_inset Formula 
+\begin{equation}
+y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上式就是对应的齐次线性方程的通解
+\end_layout
+
+\begin_layout Paragraph
+非齐次线性方程通解
+\end_layout
+
+\begin_layout Standard
+使用
+\series bold
+常数易变法
+\series default
+来求非齐次线性方程的通解.
+ 
+\end_layout
+
+\begin_layout Standard
+把齐次线性方程的通解
+\begin_inset Formula $C$
+\end_inset
+
+换成
+\begin_inset Formula $x$
+\end_inset
+
+得知函数
+\series bold
+
+\begin_inset Formula $u(x)$
+\end_inset
+
+
+\series default
+,即
+\begin_inset Formula 
+\begin{equation}
+y=ue^{-\int P(x)dx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是
+\begin_inset Formula 
+\begin{equation}
+\frac{dy}{dx}=u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将方程
+\begin_inset Formula $(21.3.4)$
+\end_inset
+
+和
+\begin_inset Formula $(21.3.5)$
+\end_inset
+
+代入
+\begin_inset Formula $(21.3.1)$
+\end_inset
+
+得
+\begin_inset Formula 
+\begin{align*}
+u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}+P(x)ue^{-\int P(x)dx}\\
+=Q(x)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula $u'e^{-\int P(x)dx}=Q(x)$
+\end_inset
+
+,
+\begin_inset Formula $u'=Q(x)e^{\int P(x)dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+两端积分，得
+\begin_inset Formula 
+\[
+u=\int Q(x)e^{\int P(x)dx}dx+C
+\]
+
+\end_inset
+
+把上式代 
+\begin_inset Formula $(21.3.4)$
+\end_inset
+
+得非齐次线性方程
+\begin_inset Formula $(21.3.1)$
+\end_inset
+
+的通解
+\begin_inset Formula 
+\begin{align}
+y & =(\int Q(x)e^{\int P(x)dx}dx+C)\cdot e^{-\int P(x)dx}\\
+ & =C\cdot e^{-\int P(x)dx}+e^{-\int P(x)dx}\cdot\int Q(x)e^{\int P(x)dx}dx\nonumber 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+上式中
+\begin_inset Formula $C\cdot e^{-\int P(x)dx}$
+\end_inset
+
+对应的齐次线性方程的通解, 
+\begin_inset Formula $e^{-\int P(x)dx}\cdot\int Q(x)e^{\int P(x)dx}dx$
+\end_inset
+
+是非齐次线性方程
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $(21.3.1)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+的一个特解(另公式
+\begin_inset Formula $21.3.6$
+\end_inset
+
+中
+\begin_inset Formula $C=0$
+\end_inset
+
+便可求得特解)
+\end_layout
+
+\begin_layout Standard
+由此可知，一阶非齐次线性方程的
+\series bold
+通解
+\series default
+等于
+\series bold
+对应的齐次方程的通解
+\series default
+与
+\series bold
+非齐次方程的 一个特解之和
+\series default
+.
+\end_layout
+
+\begin_layout Example
+解方程
+\begin_inset Formula $\frac{dy}{dx}=\frac{1}{x+y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+令
+\begin_inset Formula $x+y=u$
+\end_inset
+
+,则
+\begin_inset Formula $y=u-x$
+\end_inset
+
+,
+\begin_inset Formula $\frac{dy}{dx}=\frac{du}{dx}-1$
+\end_inset
+
+,得
+\begin_inset Formula 
+\[
+\frac{du}{dx}-1=\frac{1}{u}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{du}{dx}=\frac{1}{u}+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分离变量得
+\begin_inset Formula 
+\[
+\frac{u}{u+1}du=dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分得
+\begin_inset Formula 
+\[
+u-\ln|u+1|=x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $u=x+y$
+\end_inset
+
+ 代人上式, 即可解.
+\end_layout
+
 \begin_layout Section
 伯努利方程
+\end_layout
+
+\begin_layout Standard
+方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}+P(x)y=Q(x)y^{n}\ (n\neq0,1)
+\]
+
+\end_inset
+
+叫做伯努利(Bernoulli)方程.
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n=0$
+\end_inset
+
+或
+\begin_inset Formula $n=1$
+\end_inset
+
+时, 这是线性微分方程.
+ 当
+\begin_inset Formula $n\neq0$
+\end_inset
+
+或
+\begin_inset Formula $n\neq1$
+\end_inset
+
+方程不是线的, 但是通过变量的代换, 把它化为线性的.
+\end_layout
+
+\begin_layout Standard
+事实上, 以
+\begin_inset Formula $y^{n}$
+\end_inset
+
+除方程的两端，得
+\begin_inset Formula 
+\begin{equation}
+y^{-n}\frac{dy}{dx}+P(x)y^{1-n}=Q(x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula 
+\[
+z=y^{1-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么
+\begin_inset Formula 
+\[
+\frac{dz}{dx}=(1-n)y^{-n}\frac{dy}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方程21.4.1 同时乘以
+\begin_inset Formula $(1-n)$
+\end_inset
+
+,得
+\begin_inset Formula 
+\[
+(1-n)y^{-n}\frac{dy}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula 
+\[
+\frac{dz}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求出上边方程的通解后，以
+\begin_inset Formula $y^{1-n}$
+\end_inset
+
+代替
+\begin_inset Formula $z$
+\end_inset
+
+便得到伯努利方程的通解.
 \end_layout
 
 \begin_layout Section
