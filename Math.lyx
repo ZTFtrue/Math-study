@@ -2907,7 +2907,7 @@ f(x)=|x-a_{1}|+|x-a_{2}|+\cdots+|x-a_{n}|\\
 
 \begin_layout Enumerate
 指系(次方公式) 
-\begin_inset Formula ${\log_{\alpha^{n}}x^{m}={\frac{m}{n}}\log_{\alpha}x}$
+\begin_inset Formula $\log_{\alpha^{n}}x^{m}=\frac{m}{n}\log_{\alpha}x$
 \end_inset
 
 
@@ -2931,7 +2931,7 @@ f(x)=|x-a_{1}|+|x-a_{2}|+\cdots+|x-a_{n}|\\
 
 \begin_layout Enumerate
 链式
-\begin_inset Formula ${\displaystyle \begin{aligned}\log_{\gamma}\beta\log_{\beta}\alpha & ={\frac{\ln\alpha}{\ln\beta}}\ {\frac{\ln\beta}{\ln\gamma}}={\frac{\ln\alpha}{\ln\gamma}}=\log_{\gamma}\alpha\end{aligned}
+\begin_inset Formula ${\displaystyle \begin{aligned}\log_{\gamma}\beta\log_{\beta}\alpha & =\frac{\ln\alpha}{\ln\beta}\ \frac{\ln\beta}{\ln\gamma}=\frac{\ln\alpha}{\ln\gamma}=\log_{\gamma}\alpha\end{aligned}
 }$
 \end_inset
 
@@ -26409,7 +26409,7 @@ y''=(y')'
 阶导数,分别记作
 \begin_inset Formula 
 \[
-y''',y^{(4)},\cdots,y^{n}
+y''',y^{(4)},\cdots,y^{(n)}
 \]
 
 \end_inset
@@ -32925,7 +32925,7 @@ F(x)=\int_{a}^{x}f(t)dt
 ).为此，分别讨论下列两个积分
 \begin_inset Formula 
 \[
-I_{1}=\int_{0}^{1}e^{-x}x^{s-1}dx\text{ , }I_{1}=\int_{0}^{+\infty}e^{-x}x^{s-1}dx
+I_{1}=\int_{0}^{1}e^{-x}x^{s-1}dx\text{ , }I_{2}=\int_{0}^{+\infty}e^{-x}x^{s-1}dx
 \]
 
 \end_inset
@@ -33392,6 +33392,299 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 
 \begin_layout Chapter
 微分方程
+\end_layout
+
+\begin_layout Standard
+一般地，凡表示未知函数、未知函数的导数与自变量之间的关系的方程，叫做微分方程, 有时也简称方程.
+\end_layout
+
+\begin_layout Standard
+例如
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=2x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+微分方程中所出现的未知函数的最高阶导数的阶数,叫做微分方程的阶
+\end_layout
+
+\begin_layout Standard
+加速度的二阶微分方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}s}{dt^{2}}=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地，
+\begin_inset Formula $n$
+\end_inset
+
+阶微分方程的形式是
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x,y,y',\cdots,y^{(n)}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在研究某些实际问题时，首先要建立微分方程，然后找出满足微分方程的函数(解微分方程)，这个函数就叫做该微分方程的解.
+\end_layout
+
+\begin_layout Standard
+如果微分方程的解中含有任意常数，且任意常数的个数与微分方程的阶数相同，这样的解叫做微分方程的通解.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+初值条件
+\end_layout
+
+\begin_layout Standard
+由于通解中含有任意常数，所以它还不能完全确定地反映某一客观事物的 规律性.要完全确定地反映客观事物的规律性，必须确定这些常数的值.为此，要根据问题的实际情况，
+\series bold
+提出确定这些常数的条件
+\series default
+.这种条件叫做
+\series bold
+初值条件
+\series default
+.
+ 例如
+\begin_inset Formula 
+\[
+x=x_{0}\text{时}y=y_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+确定了通解中的任意常数以后，就得到微分方程的特解.
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+初值问题
+\end_layout
+
+\begin_layout Standard
+求微分方程
+\begin_inset Formula $y'=f(x,y)$
+\end_inset
+
+满足初值条件
+\begin_inset Formula $y|_{x=x_{0}}=y_{0}$
+\end_inset
+
+的特解这样一个问题，叫做 一阶微分方程的
+\series bold
+初值问题
+\series default
+, 记作
+\begin_inset Formula 
+\[
+\begin{cases}
+y' & =f(x,y)\\
+y|_{x=x_{0}} & =y_{0}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+微分方程的积分曲线
+\end_layout
+
+\begin_layout Standard
+微分方程的解的图形是一条曲线, 叫做微分方程的积分曲线.
+\end_layout
+
+\begin_layout Standard
+二阶微分方程的初值问题
+\begin_inset Formula 
+\[
+\begin{cases}
+y'' & =f(x,y,y'')\\
+y|_{x=x_{0}}=y_{0}, & y'|_{x=x_{0}}=y'_{0}
+\end{cases}
+\]
+
+\end_inset
+
+的几何意义，是求微分方程通过点
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+且在该点处的切线斜率为
+\begin_inset Formula $y'_{0}$
+\end_inset
+
+的那条积分曲线.
+\end_layout
+
+\begin_layout Section
+分离变量的微分方程
+\end_layout
+
+\begin_layout Standard
+一阶微分方程 
+\begin_inset Formula 
+\[
+y'=f(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有时也写成如下的对称形式
+\begin_inset Formula 
+\[
+P(x,y)dx+Q(x,y)dy=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上式中, 变量
+\begin_inset Formula $x$
+\end_inset
+
+与
+\begin_inset Formula $y$
+\end_inset
+
+对称, 它既可看作是以
+\begin_inset Formula $x$
+\end_inset
+
+为自变量
+\begin_inset Formula $y$
+\end_inset
+
+为因变量的方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{P(x,y)}{Q(x,y)}\text{ }(\text{这时}Q(x,y)\neq0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也可看作是以
+\begin_inset Formula $y$
+\end_inset
+
+为自变量
+\begin_inset Formula $x$
+\end_inset
+
+为因变量的方程
+\begin_inset Formula 
+\[
+\frac{dx}{dy}=\frac{Q(x,y)}{P(x,y)}\text{ }(\text{这时}P(x,y)\neq0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\frac{dy}{dx}=2xy^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+方程两端同时乘
+\begin_inset Formula $\frac{dx}{y^{2}}$
+\end_inset
+
+, 得
+\begin_inset Formula 
+\[
+\frac{dy}{y^{2}}=2xdx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分得
+\begin_inset Formula 
+\[
+-\frac{1}{y}=x^{2}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+一般地，如果一个一阶微分方程能写成
+\begin_inset Formula $g(y)dy=f(x)dx$
+\end_inset
+
+的形式，就是说，能把微分方程写成一端只含
+\begin_inset Formula $y$
+\end_inset
+
+的函数和
+\begin_inset Formula $dy$
+\end_inset
+
+, 另一端只含
+\begin_inset Formula $x$
+\end_inset
+
+的函数和
+\begin_inset Formula $dx$
+\end_inset
+
+,那么原方程就称为柯分离变量得微分方程.
 \end_layout
 
 \begin_layout Section
