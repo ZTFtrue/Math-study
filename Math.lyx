@@ -24602,7 +24602,11 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $dy=df(x)$
 \end_inset
 
-对f(x)的微分, 对于一元函数
+对
+\begin_inset Formula $f(x)$
+\end_inset
+
+的微分, 对于一元函数
 \begin_inset Formula $dy=f'(x)\Delta x$
 \end_inset
 
@@ -30798,6 +30802,47 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \[
 \int f[\varphi(x)]\varphi'(x)dx=F[\varphi(x)]+C=[\int f(u)du]_{u=\varphi(x)}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int\frac{1}{3+2x}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $\frac{1}{3+2x}=\frac{1}{u}$
+\end_inset
+
+, 
+\begin_inset Formula $u=3+2x$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{3+2x}=\frac{1}{2}\cdot\frac{1}{3+2x}\cdot2=\frac{1}{2}\cdot\frac{1}{3+2x}(3+2x)'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int\frac{1}{3+2x}dx & =\int\frac{1}{2}\cdot\frac{1}{3+2x}(3+2x)'dx\\
+ & =\int\frac{1}{2}\cdot\frac{1}{u}du\\
+ & =\frac{1}{2}\ln|u|+C
+\end{align*}
 
 \end_inset
 
