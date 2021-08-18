@@ -34693,8 +34693,420 @@ z=y^{1-n}
 可降阶的高阶微分方程
 \end_layout
 
+\begin_layout Subsection
+\begin_inset Formula $y^{(n)}=f(x)$
+\end_inset
+
+型得微分方程
+\end_layout
+
+\begin_layout Standard
+微分方程
+\begin_inset Formula 
+\[
+y^{(n)}=f(x)
+\]
+
+\end_inset
+
+的右端仅含有一个自变量
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 容易看出, 只要把
+\begin_inset Formula $y^{(n-1)}$
+\end_inset
+
+看作是新的未知函数, 那么
+\begin_inset Formula $y^{(n)}=f(x)$
+\end_inset
+
+就是新未知函数的一阶微分方程.
+ 两边积分得到一个
+\begin_inset Formula $n-1$
+\end_inset
+
+阶的微分方程
+\begin_inset Formula 
+\[
+y^{(n-1)}=\int f(x)dx+C_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+依此接连积分
+\begin_inset Formula $n$
+\end_inset
+
+次，便得到微分方程的含有
+\begin_inset Formula $n$
+\end_inset
+
+个任意常数的通解.
+\end_layout
+
+\begin_layout Example
+求微分方程
+\begin_inset Formula $y'''=e^{2x}-\cos x$
+\end_inset
+
+的通解.
+\end_layout
+
+\begin_layout Solution
+对方程接连积分三次，得
+\begin_inset Formula 
+\[
+y''=\frac{1}{2}e^{2x}-\sin s+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+y'=\frac{1}{4}e^{2x}+\cos s+Cx+C_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+y=\frac{1}{8}e^{2x}+\sin x+C_{1}x^{2}+C_{2}x+C_{3}\ (C_{1}=\frac{C_{2}}{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $y^{''}=f(x,y')$
+\end_inset
+
+型得微分方程
+\end_layout
+
+\begin_layout Standard
+微分方程
+\begin_inset Formula 
+\[
+y^{''}=f(x,y')
+\]
+
+\end_inset
+
+右端不
+\series bold
+显含
+\series default
+未知数
+\begin_inset Formula $y$
+\end_inset
+
+.
+ 设
+\begin_inset Formula $y'=p$
+\end_inset
+
+, 那么
+\begin_inset Formula 
+\[
+y^{''}=\frac{dp}{dx}=p'
+\]
+
+\end_inset
+
+而方程就成为
+\begin_inset Formula 
+\[
+p'=f(x,p)
+\]
+
+\end_inset
+
+这是一个关于变量
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+的一阶微分方程.
+ 设其通解为
+\begin_inset Formula 
+\[
+p=\varphi(x,C_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于
+\begin_inset Formula $p=\frac{dy}{dx}$
+\end_inset
+
+，因此又得到一个一阶微分方程
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\varphi(x,C_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对它进行积分，便得微分方程的通解为
+\begin_inset Formula 
+\[
+y=\int\varphi(x,C_{1})dx+C_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求微分方程
+\begin_inset Formula $(1+x^{2})y''=2xy'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $y'=p$
+\end_inset
+
+, 代入方程并分离变量后，有
+\begin_inset Formula 
+\[
+\frac{dp}{p}=\frac{2x}{1+x^{2}}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+两端积分，得
+\begin_inset Formula 
+\[
+\ln|p|=\ln(1+x^{2})+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+即
+\begin_inset Formula 
+\[
+p=y'=C_{1}(1+x^{2})\ (C_{1}=\pm e^{C})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+y=\int C_{1}x^{2}dx+C_{2}\ (C_{1}=\pm e^{C})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $y^{''}=f(y,y')$
+\end_inset
+
+型的微分方程
+\end_layout
+
+\begin_layout Standard
+方程
+\begin_inset Formula 
+\[
+y^{''}=f(y,y')
+\]
+
+\end_inset
+
+不明显地含自变量
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 为了求出它的解, 我们令
+\begin_inset Formula $y'=p$
+\end_inset
+
+, 并利用复合函数的求导法则把
+\begin_inset Formula $y''$
+\end_inset
+
+化为对
+\begin_inset Formula $y$
+\end_inset
+
+的导数, 即
+\begin_inset Formula 
+\[
+y''=\frac{dp}{dx}=\frac{dp}{dy}\cdot\frac{dy}{dx}=p\frac{dp}{dy}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样，方程就成为
+\begin_inset Formula 
+\[
+p\frac{dp}{dy}=f(y,p)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个关于变量
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $p$
+\end_inset
+
+ 的一阶微分方程.
+ 设它的通解为
+\begin_inset Formula 
+\[
+y'=p=\varphi(y,C_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分离变量并积分，便得方程的通解为
+\begin_inset Formula 
+\[
+\int\frac{dy}{\varphi(y,C_{1})}=x+C_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 高阶线性微分方程
+\end_layout
+
+\begin_layout Subsection
+二阶线性微分方程举例
+\end_layout
+
+\begin_layout Subsection
+二阶齐次线性方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $y_{1}(x)$
+\end_inset
+
+与
+\begin_inset Formula $y_{2}(x)$
+\end_inset
+
+是方程(21.6.1)的两个解，那么
+\begin_inset Formula 
+\begin{equation}
+y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
+\end{equation}
+
+\end_inset
+
+也是的(21.6.1)解，其中
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+是任意常数.
+\end_layout
+
+\begin_layout Proof
+将(21.6.2)式代入(21.6.1)式左端，得
+\begin_inset Formula 
+\begin{align*}
+[C_{1}y_{1}^{''}+C_{2}y_{2}^{''}]+P(x)[C_{1}y_{1}^{'}+C_{2}y_{2}^{'}]+Q(x)[C_{1}y_{x}+C_{2}Y_{2}]\\
+=C_{1}[y_{1}^{''}+P(x)y_{1}^{'}+Q(x)y_{1}]+C_{2}[y_{2}^{''}+P(x)y_{2}^{'}+Q(x)y_{2}]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于
+\begin_inset Formula $y_{1}$
+\end_inset
+
+与
+\begin_inset Formula $y_{2}$
+\end_inset
+
+是方程(21.6.1)的解, 上式右端方括号中的表达式都恒等于零, 因而整个式子恒等于零, 所以(21.6.2)式是方程(21.6.1)的解.
 \end_layout
 
 \begin_layout Section
