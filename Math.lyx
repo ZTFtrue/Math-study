@@ -35037,6 +35037,33 @@ y'=p=\varphi(y,C_{1})
 高阶线性微分方程
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f(x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+叫做二阶微分方程.
+\end_layout
+
+\begin_layout Standard
+右端
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+时, 方程叫做齐次的; 当
+\begin_inset Formula $f(x)\neq0$
+\end_inset
+
+时, 方品叫做非齐次的.
+\end_layout
+
 \begin_layout Subsection
 二阶线性微分方程举例
 \end_layout
@@ -35056,7 +35083,7 @@ y''+P(x)y'+Q(x)y=0
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 如果函数
 \begin_inset Formula $y_{1}(x)$
 \end_inset
@@ -35065,7 +35092,7 @@ y''+P(x)y'+Q(x)y=0
 \begin_inset Formula $y_{2}(x)$
 \end_inset
 
-是方程(21.6.1)的两个解，那么
+是方程(21.6.2)的两个解，那么
 \begin_inset Formula 
 \begin{equation}
 y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
@@ -35073,7 +35100,7 @@ y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
 
 \end_inset
 
-也是的(21.6.1)解，其中
+也是的(21.6.2)解，其中
 \begin_inset Formula $C_{1}$
 \end_inset
 
@@ -35085,7 +35112,7 @@ y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
 \end_layout
 
 \begin_layout Proof
-将(21.6.2)式代入(21.6.1)式左端，得
+将(21.6.3)式代入(21.6.2)式左端，得
 \begin_inset Formula 
 \begin{align*}
 [C_{1}y_{1}^{''}+C_{2}y_{2}^{''}]+P(x)[C_{1}y_{1}^{'}+C_{2}y_{2}^{'}]+Q(x)[C_{1}y_{x}+C_{2}Y_{2}]\\
@@ -35106,7 +35133,250 @@ y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
 \begin_inset Formula $y_{2}$
 \end_inset
 
-是方程(21.6.1)的解, 上式右端方括号中的表达式都恒等于零, 因而整个式子恒等于零, 所以(21.6.2)式是方程(21.6.1)的解.
+是方程(21.6.2)的解, 上式右端方括号中的表达式都恒等于零, 因而整个式子恒等于零, 所以(21.6.3)式是方程(21.6.2)的解.
+\end_layout
+
+\begin_layout Proof
+这个只是特解, 不是通解
+\end_layout
+
+\begin_layout Paragraph
+函数组的线性相关与线性无关
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $y_{1}(x),y_{2}(x),\cdots,y_{n}(x)$
+\end_inset
+
+为定义在区间
+\begin_inset Formula $I$
+\end_inset
+
+上的
+\begin_inset Formula $n$
+\end_inset
+
+个函数, 如果存在
+\begin_inset Formula $n$
+\end_inset
+
+个不 全为零的常数
+\begin_inset Formula $k_{1},k_{2},\cdots,k_{n}$
+\end_inset
+
+,使得当
+\begin_inset Formula $x\in I$
+\end_inset
+
+时有恒等式
+\begin_inset Formula 
+\[
+k_{1}y_{1}+k_{2}y_{2}+\cdots+k_{n}y_{n}\equiv0
+\]
+
+\end_inset
+
+成立，那么称这
+\begin_inset Formula $n$
+\end_inset
+
+个函数在区间
+\begin_inset Formula $I$
+\end_inset
+
+上线性相关, 否则称线性无关.
+\end_layout
+
+\begin_layout Standard
+例如，函数
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^{2}x$
+\end_inset
+
+,
+\begin_inset Formula $\sin^{2}x$
+\end_inset
+
+ 在整个数轴上上是线相关的, 因为取
+\begin_inset Formula $k_{1}=k_{2}=k_{3}=-1$
+\end_inset
+
+, 就有恒等式 
+\begin_inset Formula $1-\cos^{2}x-\sin^{2}x\equiv0$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+又如，函数
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $x^{2}$
+\end_inset
+
+在任何区间
+\begin_inset Formula $(a,b)$
+\end_inset
+
+内是线性无关的.因为如果
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{1},k_{2},k_{3}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不全为零，那么在该区间内至多只有两个
+\begin_inset Formula $x$
+\end_inset
+
+值能使二次三项式
+\begin_inset Formula $k_{1}+k_{2}x+k_{3}x^{3}$
+\end_inset
+
+为零；要使它恒等于零，必须
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{1},k_{2},k_{3}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+全为零.
+\end_layout
+
+\begin_layout Standard
+应用上述概念可知, 对于两个函数的情形, 它们线性相关与否, 只要看 它们的比是否为常数：如果比为常数，那么它们就线性相关；否则就线性无关.
+ 
+\end_layout
+
+\begin_layout Theorem
+如果函数
+\begin_inset Formula $y_{1}(x)$
+\end_inset
+
+与
+\begin_inset Formula $y_{2}(x)$
+\end_inset
+
+是方程(21.6.2)的两个
+\series bold
+线性无关
+\series default
+个特解，那么
+\begin_inset Formula 
+\begin{equation}
+y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
+\end{equation}
+
+\end_inset
+
+也是的(21.6.2)通解，其中
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+是任意常数.
+\end_layout
+
+\begin_layout Standard
+例如，方程
+\begin_inset Formula $y''+y=0$
+\end_inset
+
+是二阶齐次线性方程(这里
+\begin_inset Formula $P(x)=0$
+\end_inset
+
+,
+\begin_inset Formula $Q(x)=1$
+\end_inset
+
+.容易验 证,
+\begin_inset Formula $y_{1}=\cos x$
+\end_inset
+
+与
+\begin_inset Formula $y_{2}=\sin x$
+\end_inset
+
+是所给方程的两个解, 且
+\begin_inset Formula $\frac{y_{2}}{y_{1}}=\frac{\sin x}{\cos x}=\tan x\not\equiv\text{常\text{数}}$
+\end_inset
+
+.
+ 即它们是线性无关的.因此方程
+\begin_inset Formula $y''+y=0$
+\end_inset
+
+的通解为
+\begin_inset Formula 
+\[
+y=C_{1}\cos x+C_{2}\sin x
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
