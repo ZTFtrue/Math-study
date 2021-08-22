@@ -17665,11 +17665,15 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-数学中,我们把这种既有大小,又有方向的量叫做
+数学中,我们把这种既有大小, 又有方向的量叫做
 \series bold
 向量
 \series default
-(vector),而把那些只有大小,没有方向的量(如年龄、身高、长度、面 积、体积、质量等),称为数量.
+(vector, 矢量), 而把那些只有大小, 没有方向的量(如年龄、身高、长度、面 积、体积、质量等), 称为
+\series bold
+数量
+\series default
+.
 \end_layout
 
 \begin_layout Section
@@ -17751,11 +17755,31 @@ v-e+f=2
 \begin_inset Formula $\overrightarrow{AB}$
 \end_inset
 
-的长度(或称模),记作
+的长度(或称
+\series bold
+模
+\series default
+),记作
 \begin_inset Formula $|\overrightarrow{AB}|$
 \end_inset
 
-,长度为0的向量叫做零向量(zero vector), 记作,长度等于1个单位的向量, 叫做单位向量(unit vector).
+,长度为0的向量叫做
+\series bold
+零向量(zero vector)
+\series default
+, 记作
+\begin_inset Formula $\boldsymbol{0}$
+\end_inset
+
+或
+\begin_inset Formula $\overset{\rightarrow}{0}$
+\end_inset
+
+.长度等于1个单位的向量, 叫做
+\series bold
+单位向量(unit vector)
+\series default
+.
  
 \end_layout
 
@@ -34307,6 +34331,12 @@ y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
 非齐次线性方程通解
 \end_layout
 
+\begin_layout Paragraph
+
+\series bold
+常数易变法
+\end_layout
+
 \begin_layout Standard
 使用
 \series bold
@@ -34325,7 +34355,7 @@ y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
 \begin_inset Formula $x$
 \end_inset
 
-得知函数
+得已知函数
 \series bold
 
 \begin_inset Formula $u(x)$
@@ -35061,7 +35091,7 @@ y''+P(x)y'+Q(x)y=f(x)
 \begin_inset Formula $f(x)\neq0$
 \end_inset
 
-时, 方品叫做非齐次的.
+时, 方程叫做非齐次的.
 \end_layout
 
 \begin_layout Subsection
@@ -35379,16 +35409,203 @@ y=C_{1}\cos x+C_{2}\sin x
 
 \end_layout
 
-\begin_layout Section
-常系数齐次线性微分方程
+\begin_layout Corollary
+如果
+\begin_inset Formula $y_{1}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}(x)$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $y_{n}(x)$
+\end_inset
+
+是n阶齐次线性方程 
+\begin_inset Formula 
+\[
+y^{(n)}+a_{1}(x)y^{(n-1)}+\cdots+a_{n-1}(x)y'+a_{n}(x)y=0
+\]
+
+\end_inset
+
+ 的n个线性无关的解，那么，此方程的通解为
+\begin_inset Formula 
+\[
+y=C_{1}y_{1}(x)+C_{2}y_{2}(x)+\cdots+C_{n}y_{n}(x)
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $C_{1},C_{2},\cdots,C_{n}$
+\end_inset
+
+为任意常数.
 \end_layout
 
-\begin_layout Section
-常系数非齐次线性微分方程
+\begin_layout Theorem
+设
+\begin_inset Formula $y''(x)$
+\end_inset
+
+是二阶非齐次线性方程 
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f(x)
+\end{equation}
+
+\end_inset
+
+ 的一个特解.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $Y(x)$
+\end_inset
+
+对应的齐次方程
+\begin_inset Formula $(21.6.2)$
+\end_inset
+
+的通解，则
+\begin_inset Formula 
+\begin{equation}
+y=Y(x)+y''(x)
+\end{equation}
+
+\end_inset
+
+是二阶非齐次线性微分方程
+\begin_inset Formula $(21.6.5)$
+\end_inset
+
+的通解.
+\end_layout
+
+\begin_layout Proof
+把(21.6.6)式代入方程(21.6.5)的左端
+\end_layout
+
+\begin_layout Theorem
+设非齐次线性方程
+\begin_inset Formula $(21.6.5)$
+\end_inset
+
+的右端
+\begin_inset Formula $f(x)$
+\end_inset
+
+是两个函数之和.即
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f_{1}(x)+f_{2}(x)
+\end{equation}
+
+\end_inset
+
+而；
+\begin_inset Formula $y_{1}^{*}(x)$
+\end_inset
+
+与
+\begin_inset Formula $y_{2}^{*'}(x)$
+\end_inset
+
+分别是方程
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f_{1}(x)
+\end{equation}
+
+\end_inset
+
+与 
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f_{2}(x)
+\end{equation}
+
+\end_inset
+
+的特解，则 
+\begin_inset Formula $y_{1}^{*}(x)+y_{2}^{*'}(x)$
+\end_inset
+
+ 就是原方程的特解.
+\end_layout
+
+\begin_layout Proof
+将
+\begin_inset Formula $y_{1}^{*}(x)+y_{2}^{*'}(x)$
+\end_inset
+
+代入方程(21.6.7)的左端，得
+\end_layout
+
+\begin_layout Standard
+这一定理通常称为线性微分方程的解的叠加定理
 \end_layout
 
 \begin_layout Section
 欧拉方程
+\end_layout
+
+\begin_layout Standard
+形如
+\begin_inset Formula 
+\begin{equation}
+x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy'+p_{n}y=f(x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+的方程(其中
+\begin_inset Formula $p_{1},p_{2},\cdots,p_{n}$
+\end_inset
+
+为常数), 叫做欧拉方程.
+\end_layout
+
+\begin_layout Solution*
+若
+\begin_inset Formula $x>0$
+\end_inset
+
+, 作变换
+\begin_inset Formula $x=e^{t}$
+\end_inset
+
+或
+\begin_inset Formula $t=\ln x$
+\end_inset
+
+, 将自变量
+\begin_inset Formula $x$
+\end_inset
+
+换成
+\begin_inset Formula $t$
+\end_inset
+
+, 有
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{dy}{dt}\cdot\frac{dt}{dx}=\frac{1}{x}\cdot\frac{dy}{dt}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
