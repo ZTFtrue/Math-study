@@ -18031,6 +18031,26 @@ v-e+f=2
  
 \end_layout
 
+\begin_layout Paragraph
+向量的加法符合下列运算规律:
+\end_layout
+
+\begin_layout Itemize
+交换律: 
+\begin_inset Formula $\boldsymbol{a}+\boldsymbol{b}=\boldsymbol{b}+\boldsymbol{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+结合律: 
+\begin_inset Formula $(\boldsymbol{a}+\boldsymbol{b})+\boldsymbol{c}=\boldsymbol{a}+(\boldsymbol{b}+\boldsymbol{c})$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 向量减法
 \end_layout
@@ -18074,7 +18094,7 @@ v-e+f=2
 任一向量与其相反向量的和是零向量,即
 \begin_inset Formula 
 \[
-a+(-a)=(-a)+a=0
+\overrightarrow{a}+(-\overrightarrow{a})=(-\overrightarrow{a})+\overrightarrow{a}=0
 \]
 
 \end_inset
@@ -18094,12 +18114,100 @@ a+(-a)=(-a)+a=0
 \end_inset
 
 与向量
-\begin_inset Formula $a$
+\begin_inset Formula $\overrightarrow{a}$
 \end_inset
 
 的积是一个向量,这种运算叫做向量的数乘(multiplication of vectory by scalar).
  记作
-\begin_inset Formula $\lambda a$
+\begin_inset Formula $\lambda\overrightarrow{a}$
+\end_inset
+
+, 它的模
+\begin_inset Formula 
+\[
+|\lambda\overrightarrow{a}|=|\lambda|\ |\overrightarrow{a}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda\overrightarrow{a}$
+\end_inset
+
+的方向当
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ 时与
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+相同，当
+\begin_inset Formula $\lambda<0$
+\end_inset
+
+时与
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+相反.
+ 
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $λ=0$
+\end_inset
+
+时, 
+\begin_inset Formula $|\lambda\boldsymbol{a}|=0$
+\end_inset
+
+, 即
+\begin_inset Formula $\lambda\boldsymbol{a}$
+\end_inset
+
+为零向量, 这吋它的方向可以是任意的.
+\end_layout
+
+\begin_layout Standard
+特别地，当
+\begin_inset Formula $λ=\pm1$
+\end_inset
+
+吋，有
+\begin_inset Formula 
+\[
+1\boldsymbol{a}=\boldsymbol{a},(-1)a=-a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+向量与数的乘积符合下列运算规律：
+\end_layout
+
+\begin_layout Itemize
+结合律: 
+\begin_inset Formula $\lambda(\mu\boldsymbol{a})=\mu(\lambda\boldsymbol{a})=(\lambda\mu)\boldsymbol{a})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+分配律: 
+\begin_inset Formula $(\lambda+\mu)\boldsymbol{a}=\lambda\boldsymbol{a}+\mu\boldsymbol{a}$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda(\boldsymbol{a}+\boldsymbol{b})=\lambda\boldsymbol{a}+\lambda\boldsymbol{b}$
 \end_inset
 
 
@@ -18113,18 +18221,18 @@ a+(-a)=(-a)+a=0
 
 \begin_layout Standard
 如果
-\begin_inset Formula $e_{1}$
+\begin_inset Formula $\overrightarrow{e_{1}}$
 \end_inset
 
 ,
-\begin_inset Formula $e_{2}$
+\begin_inset Formula $\overrightarrow{e_{2}}$
 \end_inset
 
 是同一平面内的两个不共线向量, 那么对于这一平面内的任意向量
-\begin_inset Formula $a$
+\begin_inset Formula $\overrightarrow{a}$
 \end_inset
 
-,有且只有一对实数
+, 有且只有一对实数
 \begin_inset Formula $\lambda_{1}$
 \end_inset
 
@@ -18132,7 +18240,7 @@ a+(-a)=(-a)+a=0
 \begin_inset Formula $\lambda_{2}$
 \end_inset
 
-,使 :
+,使:
 \end_layout
 
 \begin_layout Standard
@@ -18246,8 +18354,32 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 .
 \end_layout
 
+\begin_layout Theorem
+设向量
+\begin_inset Formula $\boldsymbol{a}\neq0$
+\end_inset
+
+,则向量平行于
+\begin_inset Formula $a$
+\end_inset
+
+的充分必要条件是: 存在唯一的实数
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ,使 
+\begin_inset Formula $b=\lambda a$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-向量乘法(数量积)
+向量乘法
+\end_layout
+
+\begin_layout Subsubsection
+数量积
 \end_layout
 
 \begin_layout Standard
@@ -18280,186 +18412,43 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \end_layout
 
 \begin_layout Standard
-垂直向量数量积等于0.
-\end_layout
-
-\begin_layout Subsection
-平面向量运算的坐标表示
-\end_layout
-
-\begin_layout Standard
-设: 
-\begin_inset Formula $a(a_{1},a_{2})$
-\end_inset
-
-,
-\begin_inset Formula $b(b_{1},b_{2})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a+b=(a_{1}+b_{1},a_{2}+b_{2})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a-b=(a_{1}-b_{1},a_{2}-b_{2})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a*b=a_{1}*b_{1}+a_{2}*b_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\lambda a=\lambda a_{1}+\lambda a_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-空间向量
-\end_layout
-
-\begin_layout Standard
-在空间,我们把具有大小和方向的量叫做
-\series bold
-空间向量
-\series default
-(space vector),向量的大小叫做向量的长度或模(modulus).
- 与平面向量一样,空间向量也用有向线段表示,有向线段的长度表示向量的模 向量
-\begin_inset Formula $\overrightarrow{a}$
-\end_inset
-
-的起点是A,终点是B,则 向量a也可以记作
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-,其模记为
-\begin_inset Formula $\mid a\mid$
-\end_inset
-
- 或 
-\begin_inset Formula $|AB|$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-我们规定,长度为0的向量叫做
-\series bold
-零向量
-\series default
-(zero vector),记为
+垂直向量数量积等于
 \begin_inset Formula $0$
 \end_inset
 
-,当有向线段的起点A与终点B重合时,
-\begin_inset Formula $\overrightarrow{AB}=0$
-\end_inset
-
 .
 \end_layout
 
-\begin_layout Standard
-模为1的向量称为
-\series bold
-单位向量
-\series default
-(unit vector),与向量a长度相 等而方向相反的向量,称为a的相
-\series bold
-反向量
-\series default
-,记为-a.
- 方向相同且模相等的向量称为
-\series bold
-相等向量
-\series default
-(equal vector).
- 
+\begin_layout Subparagraph
+数积符合下列运算规律
 \end_layout
 
-\begin_layout Standard
-平行于同一个平面的向量叫做
-\series bold
-共面向量
-\series default
-, 任意两向量共面.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-平行向量
-\series default
-(parallel vectors): 表示空间向量所在直线互相平行
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-共线向量(collinear vectors)
-\series default
-: 表示空间向量所在直线重合
-\end_layout
-
-\begin_layout Standard
-如果
-\begin_inset Formula $a$
-\end_inset
-
-,
-\begin_inset Formula $b$
-\end_inset
-
-
-\begin_inset Formula $c$
-\end_inset
-
-是不共面向量, 那么对于空间内的任意向量
-\begin_inset Formula $a$
-\end_inset
-
-,存在有序实数组
-\begin_inset Formula $x$
-\end_inset
-
-,
-\begin_inset Formula $y$
-\end_inset
-
-,
-\begin_inset Formula $z$
-\end_inset
-
-使
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-p=xa+yb+zc
-\]
-
+\begin_layout Itemize
+交换律: 
+\begin_inset Formula $\boldsymbol{a}\cdot\boldsymbol{b}=\boldsymbol{b}\cdot\boldsymbol{a}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
-向量的叉积
+\begin_layout Itemize
+分配律: 
+\begin_inset Formula $(\boldsymbol{a}+\boldsymbol{b})\cdot\boldsymbol{c}=\boldsymbol{a}\cdot\boldsymbol{c}+\boldsymbol{b}\cdot\boldsymbol{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+结合律:
+\begin_inset Formula $(\lambda\boldsymbol{a})\cdot\boldsymbol{b}=\lambda\cdot(\boldsymbol{a}\cdot\boldsymbol{b})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+两向量的向量积(叉积)
 \end_layout
 
 \begin_layout Standard
@@ -18503,6 +18492,7 @@ p=xa+yb+zc
 \end_inset
 
 所在平面的法向量共线).
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -18851,6 +18841,688 @@ b_{1} & b_{2}
 
 \end_layout
 
+\begin_layout Subsubsection
+混合积
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+定理:
+\end_layout
+
+\begin_layout Standard
+三个不共面的向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{c}$
+\end_inset
+
+所张成的平行六面体的体积
+\begin_inset Formula 
+\[
+V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}$
+\end_inset
+
+叫做
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{c}$
+\end_inset
+
+的
+\series bold
+混合积,记作
+\series default
+
+\begin_inset Formula $(\overrightarrow{a},\overrightarrow{b},\overrightarrow{c})$
+\end_inset
+
+,即
+\begin_inset Formula 
+\[
+(\overrightarrow{a},\overrightarrow{b},\overrightarrow{c})=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}=(\overrightarrow{b},\overrightarrow{c},\overrightarrow{a})=(\overrightarrow{c},\overrightarrow{a},\overrightarrow{b})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+定理1:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $(\overrightarrow{a}+\overrightarrow{b})\times(\overrightarrow{a}-\overrightarrow{b})=-2(\overrightarrow{a}\times\overrightarrow{b})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+定理2:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\times\overrightarrow{c}=(\overrightarrow{a}\bullet\overrightarrow{c})\overrightarrow{b}-(\overrightarrow{b}-\overrightarrow{c})\overrightarrow{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+平面向量运算的坐标表示
+\end_layout
+
+\begin_layout Standard
+设: 
+\begin_inset Formula $a(a_{1},a_{2})$
+\end_inset
+
+,
+\begin_inset Formula $b(b_{1},b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a+b=(a_{1}+b_{1},a_{2}+b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a-b=(a_{1}-b_{1},a_{2}-b_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a*b=a_{1}*b_{1}+a_{2}*b_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda a=\lambda a_{1}+\lambda a_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由此可见，对向量进行加，减及与数相乘，只需对向量的各个坐标分别进行相应的数量运算就行了.
+\end_layout
+
+\begin_layout Section
+空间向量
+\end_layout
+
+\begin_layout Standard
+在空间,我们把具有大小和方向的量叫做
+\series bold
+空间向量
+\series default
+(space vector),向量的大小叫做向量的长度或模(modulus).
+ 与平面向量一样,空间向量也用有向线段表示,有向线段的长度表示向量的模 向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+的起点是A,终点是B,则 向量a也可以记作
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+,其模记为
+\begin_inset Formula $\mid a\mid$
+\end_inset
+
+ 或 
+\begin_inset Formula $|AB|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+我们规定,长度为0的向量叫做
+\series bold
+零向量
+\series default
+(zero vector),记为
+\begin_inset Formula $0$
+\end_inset
+
+,当有向线段的起点A与终点B重合时,
+\begin_inset Formula $\overrightarrow{AB}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+模为1的向量称为
+\series bold
+单位向量
+\series default
+(unit vector),与向量a长度相 等而方向相反的向量,称为a的相
+\series bold
+反向量
+\series default
+,记为-a.
+ 方向相同且模相等的向量称为
+\series bold
+相等向量
+\series default
+(equal vector).
+ 
+\end_layout
+
+\begin_layout Standard
+平行于同一个平面的向量叫做
+\series bold
+共面向量
+\series default
+, 任意两向量共面.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+平行向量
+\series default
+(parallel vectors): 表示空间向量所在直线互相平行
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+共线向量(collinear vectors)
+\series default
+: 表示空间向量所在直线重合
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Formula $c$
+\end_inset
+
+是不共面向量, 那么对于空间内的任意向量
+\begin_inset Formula $a$
+\end_inset
+
+,存在有序实数组
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+使
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=xa+yb+zc
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+坐标分解式
+\end_layout
+
+\begin_layout Standard
+任给向量
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+, 有对应点
+\begin_inset Formula $M$
+\end_inset
+
+, 使
+\begin_inset Formula $\overrightarrow{OM}=r$
+\end_inset
+
+.
+ 以
+\begin_inset Formula $O$
+\end_inset
+
+为原点建立空间直角坐标系, 则
+\begin_inset Formula 
+\[
+r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
+\]
+
+\end_inset
+
+上式称为向量
+\begin_inset Formula $r$
+\end_inset
+
+的坐标分解式, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x\boldsymbol{i}$
+\end_inset
+
+,
+\begin_inset Formula $y\boldsymbol{j}$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $z\boldsymbol{k}$
+\end_inset
+
+称为向量
+\begin_inset Formula $r$
+\end_inset
+
+沿三个坐标轴方向的分向量.
+\end_layout
+
+\begin_layout Standard
+向量
+\series bold
+
+\begin_inset Formula $\boldsymbol{r}=\overrightarrow{OM}$
+\end_inset
+
+
+\series default
+称为点
+\begin_inset Formula $M$
+\end_inset
+
+ 关于原点
+\begin_inset Formula $Ο$
+\end_inset
+
+的
+\series bold
+向径.
+\end_layout
+
+\begin_layout Paragraph
+空间向量运算的坐标表示
+\end_layout
+
+\begin_layout Standard
+对向量进行加，减及与数相乘，只需对向量的各个坐标分别进行相应的数量运算就行了.
+\end_layout
+
+\begin_layout Subsection
+方向角与方向余弦
+\end_layout
+
+\begin_layout Standard
+非零向量
+\begin_inset Formula $r$
+\end_inset
+
+与三条坐标轴的夹角
+\begin_inset Formula $\alpha$
+\end_inset
+
+、
+\begin_inset Formula $\beta$
+\end_inset
+
+、 
+\begin_inset Formula $\gamma$
+\end_inset
+
+称为向量 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+的方向角.
+ 设
+\begin_inset Formula $\overrightarrow{OM}=\boldsymbol{r}=(x,y,z)$
+\end_inset
+
+, 所以
+\begin_inset Formula 
+\[
+\cos\alpha=\frac{x}{|\boldsymbol{r}|}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\cos\beta=\frac{y}{|\boldsymbol{r}|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos\gamma=\frac{z}{|\boldsymbol{r}|}
+\]
+
+\end_inset
+
+从而
+\begin_inset Formula 
+\[
+(\cos\alpha,\cos\beta,\cos\gamma)=(\frac{x}{|\boldsymbol{r}|},\frac{y}{|\boldsymbol{r}|},\frac{z}{|\boldsymbol{r}|})=\frac{1}{|\boldsymbol{r}|}(x,y,z)=\frac{r}{|r|}=\boldsymbol{e_{i}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\cos\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\cos\beta$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\cos\gamma$
+\end_inset
+
+称为向量
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+的方向余弦.
+\end_layout
+
+\begin_layout Subsubsection
+向量在轴上的投影
+\end_layout
+
+\begin_layout Standard
+一般地, 设点
+\begin_inset Formula $O$
+\end_inset
+
+及单位向量
+\begin_inset Formula $\boldsymbol{e}$
+\end_inset
+
+确定
+\begin_inset Formula $u$
+\end_inset
+
+轴.
+ 任一向量
+\begin_inset Formula $\boldsymbol{r}=\overrightarrow{OM}$
+\end_inset
+
+, 过点
+\begin_inset Formula $Μ$
+\end_inset
+
+作与
+\begin_inset Formula $u$
+\end_inset
+
+轴垂直的平面交
+\begin_inset Formula $u$
+\end_inset
+
+轴于点
+\begin_inset Formula $Μ'$
+\end_inset
+
+(点
+\begin_inset Formula $Μ'$
+\end_inset
+
+叫做点
+\begin_inset Formula $M$
+\end_inset
+
+在
+\begin_inset Formula $u$
+\end_inset
+
+轴上的投影), 则向量
+\begin_inset Formula $\overrightarrow{OM'}$
+\end_inset
+
+称为向量
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+在
+\series bold
+
+\begin_inset Formula $u$
+\end_inset
+
+
+\series default
+轴上的分向量.
+ 设
+\begin_inset Formula $\overrightarrow{OM'}=\lambda e$
+\end_inset
+
+ , 则数
+\begin_inset Formula $\lambda$
+\end_inset
+
+称为向量
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+在
+\begin_inset Formula $u$
+\end_inset
+
+轴上的投影,记作
+\begin_inset Formula $Prj_{u}\boldsymbol{r}$
+\end_inset
+
+ 或
+\begin_inset Formula $(\boldsymbol{r})_{u}$
+\end_inset
+
+.
+ (projection 投影).
+\end_layout
+
+\begin_layout Standard
+按此定义,向量
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+在直角坐标系
+\begin_inset Formula $Oxyz$
+\end_inset
+
+中的坐标 
+\begin_inset Formula $a_{x}$
+\end_inset
+
+、
+\begin_inset Formula $a_{y}$
+\end_inset
+
+、
+\begin_inset Formula $a_{z}$
+\end_inset
+
+就是
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+在三条坐标轴上的投影,即 
+\begin_inset Formula 
+\[
+a_{x}=Prj_{x}a,a_{y}=Prj_{y}a,a_{z}=Prj_{z}a
+\]
+
+\end_inset
+
+ 或记作 
+\begin_inset Formula 
+\[
+a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 立体几何与向量
 \end_layout
@@ -19135,143 +19807,6 @@ p*v=(xa+xb)*v=xa*v+yb*v
 
 \begin_layout Standard
 在实际工作中可以把普通问题, 转换成向量问题再计算.
-\end_layout
-
-\begin_layout Subsection
-混合积
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-定理:
-\end_layout
-
-\begin_layout Standard
-三个不共面的向量
-\begin_inset Formula $\overrightarrow{a}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{b}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{c}$
-\end_inset
-
-所张成的平行六面体的体积
-\begin_inset Formula 
-\[
-V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}$
-\end_inset
-
-叫做
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset Formula $\overrightarrow{a}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{b}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{c}$
-\end_inset
-
-的
-\series bold
-混合积,记作
-\series default
-
-\begin_inset Formula $(\overrightarrow{a},\overrightarrow{b},\overrightarrow{c})$
-\end_inset
-
-,即
-\begin_inset Formula 
-\[
-(\overrightarrow{a},\overrightarrow{b},\overrightarrow{c})=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}=(\overrightarrow{b},\overrightarrow{c},\overrightarrow{a})=(\overrightarrow{c},\overrightarrow{a},\overrightarrow{b})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-定理1:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\begin_inset Formula $(\overrightarrow{a}+\overrightarrow{b})\times(\overrightarrow{a}-\overrightarrow{b})=-2(\overrightarrow{a}\times\overrightarrow{b})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-定理2:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\times\overrightarrow{c}=(\overrightarrow{a}\bullet\overrightarrow{c})\overrightarrow{b}-(\overrightarrow{b}-\overrightarrow{c})\overrightarrow{a}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
