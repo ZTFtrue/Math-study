@@ -15947,7 +15947,7 @@ G的乘法满足结合律,即对任意的
 \end_layout
 
 \begin_layout Chapter
-空间曲面
+空间曲面和空间曲线
 \end_layout
 
 \begin_layout Section
@@ -15965,18 +15965,90 @@ G的乘法满足结合律,即对任意的
 \end_layout
 
 \begin_layout Section
-空间曲面方程 
+空间曲面和空间曲线方程 
 \end_layout
 
 \begin_layout Standard
-一个包含x,y,z的方程F(x,y,z)=0 则表示空间的一个曲面, 也可用z=f(x,y); 
+一个包含
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+的方程
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+ 则表示空间的一个
+\series bold
+空间曲面
+\series default
+
+\begin_inset Formula $S$
+\end_inset
+
+, 也可用
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+
+\series bold
+空间曲线
+\series default
+可以看作两个曲面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+,
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的交线.设
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+和
+\begin_inset Formula $G(x,y,z)=0$
+\end_inset
+
+分别是这两个曲面的方程, 它们的交线为C.
+ 因为曲线C上的任何点的坐标应同时满足这两个曲面的方程, 所以应满足方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+F(x,y,z)=0\\
+G(x,y,z)=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程组就叫做空间曲线
+\begin_inset Formula $C$
+\end_inset
+
+的方程.
+\end_layout
+
+\begin_layout Section
 常见空间曲面 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 球面
 \end_layout
 
@@ -15989,7 +16061,7 @@ G的乘法满足结合律,即对任意的
 ;
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 柱面 
 \end_layout
 
@@ -16010,7 +16082,7 @@ G的乘法满足结合律,即对任意的
   
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 旋转曲面 
 \end_layout
 
@@ -16027,7 +16099,7 @@ G的乘法满足结合律,即对任意的
   
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 旋转单叶双曲面 
 \begin_inset Formula $\frac{x^{2}}{b^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$
 \end_inset
@@ -16035,7 +16107,7 @@ G的乘法满足结合律,即对任意的
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 旋转双叶双曲面(双叶双曲面 ) 
 \begin_inset Formula $-\frac{x^{2}}{b^{2}}-\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$
 \end_inset
@@ -18543,6 +18615,32 @@ a叉b
 \end_inset
 
 .
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $<a,b>$
+\end_inset
+
+ 表示
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+,
+\begin_inset Formula $\boldsymbol{b}$
+\end_inset
+
+夹角.
 \end_layout
 
 \begin_layout Standard
@@ -19523,6 +19621,10 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 
 \end_layout
 
+\begin_layout Section
+向量的推广与应用
+\end_layout
+
 \begin_layout Subsection
 立体几何与向量
 \end_layout
@@ -19600,7 +19702,7 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 
 \begin_layout Standard
 类似于直线的方向向量,我们还可以用平面的法向量表示空间中平面的位置,直线
-\begin_inset Formula $l\bot a$
+\begin_inset Formula $l\bot\boldsymbol{a}$
 \end_inset
 
 ,取直线
@@ -19608,18 +19710,33 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_inset
 
 的方向向量
-\begin_inset Formula $a$
+\begin_inset Formula $\boldsymbol{a}$
 \end_inset
 
 ,则向量
-\begin_inset Formula $a$
+\begin_inset Formula $\boldsymbol{a}$
 \end_inset
 
 叫做平面的
 \series bold
 法向量
 \series default
-(normal vectors).给定一点A和一个向量a,那么,过点A,以向量a为法向量的平面是完全确定的.
+(normal vectors).
+ 给定一点A和一个向量
+\begin_inset Formula $\boldsymbol{a}$
+\end_inset
+
+,那么,过点A,以向量a为法向量的平面是完全确定的.
+\end_layout
+
+\begin_layout Standard
+两平面的
+\series bold
+法线向量的夹角
+\series default
+(通常指锐角或直角)称为
+\series bold
+两平面的夹角.
 \end_layout
 
 \begin_layout Standard
@@ -19630,7 +19747,6 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 
 \series bold
 定理: 一个平面内的两条相交直线与另一个平面平行,则这两个平面平行.
-  
 \end_layout
 
 \begin_layout Standard
@@ -19674,7 +19790,7 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \begin_inset Formula $\alpha//\beta$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -19809,11 +19925,239 @@ p*v=(xa+xb)*v=xa*v+yb*v
 在实际工作中可以把普通问题, 转换成向量问题再计算.
 \end_layout
 
-\begin_layout Section
-向量的推广与应用
+\begin_layout Subsubsection
+平面的点法式方程
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+设
+\begin_inset Formula $M(x,y,z)$
+\end_inset
+
+是平面
+\begin_inset Formula $S$
+\end_inset
+
+上的任一点, 则向量
+\begin_inset Formula $\overrightarrow{M_{0}M}$
+\end_inset
+
+必与平面
+\begin_inset Formula $S$
+\end_inset
+
+的法线向量
+\begin_inset Formula $n$
+\end_inset
+
+垂直.
+ 即它们的数量积等于零 
+\begin_inset Formula $n\cdot\overrightarrow{M_{0}M}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+设法向量
+\begin_inset Formula $\boldsymbol{n}=(A,B,C)$
+\end_inset
+
+,向量
+\begin_inset Formula $\overrightarrow{M_{0}M}=(x-x_{0},y-y_{0},z-z_{0})$
+\end_inset
+
+, 所以有 
+\begin_inset Formula 
+\[
+A(x-x_{0})+B(y-y_{0})+C(z-z_{0})=0
+\]
+
+\end_inset
+
+这就是
+\series bold
+平面
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+上任一点
+\begin_inset Formula $M$
+\end_inset
+
+的坐标
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+所满足的方程.
+\end_layout
+
+\begin_layout Standard
+有这个方程确定了平面上的点, 所以方程叫做
+\series bold
+平面的点法式方程.
+\end_layout
+
+\begin_layout Subsubsection
+平面的一般方程
+\end_layout
+
+\begin_layout Standard
+设有三元一次方程
+\begin_inset Formula 
+\[
+Ax+By+Cz+D=0
+\]
+
+\end_inset
+
+我们任取满足该方程的一组数
+\begin_inset Formula $x_{0}$
+\end_inset
+
+,
+\begin_inset Formula $y_{0}$
+\end_inset
+
+,
+\begin_inset Formula $z_{0}$
+\end_inset
+
+,即 
+\begin_inset Formula 
+\[
+Ax_{0}+By_{0}+Cz_{0}+D=0
+\]
+
+\end_inset
+
+把上述两等式相减, 得
+\begin_inset Formula 
+\begin{equation}
+A(x-x_{0})+B(y-y_{0})+C(z-z_{0})=0
+\end{equation}
+
+\end_inset
+
+把它和平面的点法式方程作比较, 可以知道方程(12.3.1)是通过点
+\begin_inset Formula $M_{0}(x_{0},y_{0},z_{0})$
+\end_inset
+
+且以
+\begin_inset Formula $n=(A,B,C)$
+\end_inset
+
+为法线向量的平面方程.
+ 
+\end_layout
+
+\begin_layout Standard
+由此可知,一次方程
+\begin_inset Formula 
+\[
+Ax+By+Cz+D=0
+\]
+
+\end_inset
+
+的图形总是一个平面, 称为平面的一般方程,其中
+\begin_inset Formula $x$
+\end_inset
+
+、
+\begin_inset Formula $y$
+\end_inset
+
+、
+\begin_inset Formula $z$
+\end_inset
+
+的系数就是该平面的一个法线向量
+\begin_inset Formula $n$
+\end_inset
+
+的坐标, 即
+\begin_inset Formula $n=(A,B,C)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+空间直线的一般方程
+\end_layout
+
+\begin_layout Standard
+空间直线
+\begin_inset Formula $l$
+\end_inset
+
+可以看做是两个平面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+和
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的交线.
+ 如果两个相 交的平面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+和
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的方程分别为
+\begin_inset Formula $A_{1}x+B_{1}y+C_{1}z+D_{1}=0$
+\end_inset
+
+和
+\begin_inset Formula $A_{2}x+B_{2}y+C_{2}z+D_{2}=0$
+\end_inset
+
+,那么直线
+\begin_inset Formula $l$
+\end_inset
+
+上的任一点的坐标应同时满足这两个平面的方程(参考空间曲面和空间曲线), 即应满足方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+A_{1}x+B_{1}y+C_{1}z+D_{1}=0\\
+A_{2}x+B_{2}y+C_{2}z+D_{2}=0
+\end{cases}
+\]
+
+\end_inset
+
+这个方程组叫做空间直线的一般方程.
+\end_layout
+
+\begin_layout Standard
+通过空间一直线
+\begin_inset Formula $l$
+\end_inset
+
+的平面有无限多个, 只要在这无限多个平面中任意选取两个,把它们的方程联立起来,所得的方程组就表示空间直线
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 距离分类: 
 \end_layout
 
