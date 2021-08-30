@@ -16053,8 +16053,36 @@ G(x,y,z)=0
 \end_layout
 
 \begin_layout Standard
-到定点M0(x0,)的距离等于定长R(R>0)的动点的轨迹称为球面, M0 称为球心,R为半径.
- 设M为球面上的任意一点, 则|MM0|^2=R^2,于是以M0为球心, R为半径的球面方程为(x , 如果球心在原点
+到定点
+\begin_inset Formula $M_{0}(x_{0},y_{0})$
+\end_inset
+
+的距离等于定长
+\begin_inset Formula $R$
+\end_inset
+
+
+\begin_inset Formula $(R>0)$
+\end_inset
+
+的动点的轨迹称为球面, 
+\begin_inset Formula $M_{0}$
+\end_inset
+
+ 称为球心,R为半径.
+ 设M为球面上的任意一点, 则
+\begin_inset Formula $|MM_{0}|^{2}=R^{2}$
+\end_inset
+
+,于是以M0为球心, R为半径的球面方程为
+\begin_inset Formula 
+\[
+\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}+(z-z_{0})^{2}}=R
+\]
+
+\end_inset
+
+ 如果球心在原点, 则
 \begin_inset Formula $x^{2}+y^{2}+z^{2}=R^{2}$
 \end_inset
 
@@ -16066,11 +16094,23 @@ G(x,y,z)=0
 \end_layout
 
 \begin_layout Standard
-设c是坐标平面内的一条曲线, l为垂直与该平面的一条直线, 将l沿着平面曲线c, 平行滑动形成的轨迹称为柱面；平面
+设c是坐标平面内的一条曲线,
+\begin_inset Formula $l$
+\end_inset
+
+为垂直与该平面的一条直线, 将
+\begin_inset Formula $l$
+\end_inset
+
+沿着平面曲线c, 平行滑动形成的轨迹称为柱面；平面
 \series bold
 曲线c
 \series default
-称为柱面的准线, 动直
+称为
+\series bold
+柱面的准线
+\series default
+, 动直
 \series bold
 线l
 \series default
@@ -16079,11 +16119,7 @@ G(x,y,z)=0
 母线
 \series default
 .
-  
-\end_layout
-
-\begin_layout Subsection
-旋转曲面 
+ 
 \end_layout
 
 \begin_layout Standard
@@ -16099,12 +16135,167 @@ G(x,y,z)=0
   
 \end_layout
 
+\begin_layout Subsection
+二次曲面(旋转曲面)
+\end_layout
+
+\begin_layout Standard
+我们把三元二次方程
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+所表示的曲面称为
+\series bold
+二次曲面
+\series default
+, 把平面称为
+\series bold
+一次曲面
+\series default
+.
+\end_layout
+
 \begin_layout Subsubsection
-旋转单叶双曲面 
-\begin_inset Formula $\frac{x^{2}}{b^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$
+椭圆锥面
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
+\]
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+以垂直于
+\begin_inset Formula $z$
+\end_inset
+
+轴的平面
+\begin_inset Formula $z=t$
+\end_inset
+
+截此曲面, 当
+\begin_inset Formula $t=0$
+\end_inset
+
+时得一点
+\begin_inset Formula $(0,0,0)$
+\end_inset
+
+;当
+\begin_inset Formula $t\neq0$
+\end_inset
+
+时, 得平面
+\begin_inset Formula $z=t$
+\end_inset
+
+上的椭圆
+\begin_inset Formula 
+\[
+\frac{x^{2}}{(at)^{2}}+\frac{y^{2}}{(bt)^{2}}=1
+\]
+
+\end_inset
+
+当
+\begin_inset Formula $t$
+\end_inset
+
+变化时, 上式表示一族
+\series bold
+长短轴比例
+\series default
+不变的椭圆, 当
+\begin_inset Formula $t$
+\end_inset
+
+ 从大到小并变为
+\begin_inset Formula $0$
+\end_inset
+
+时, 这族椭圆从大到小并缩为一点.
+ 
+\end_layout
+
+\begin_layout Standard
+平面
+\begin_inset Formula $z=t$
+\end_inset
+
+与曲面
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+的交线称为
+\series bold
+截痕
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+通过综合
+\series bold
+截痕
+\series default
+的变化来了解曲面形状的方法称为
+\series bold
+截痕法
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+椭球面
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把椭圆绕轴旋转.
+\end_layout
+
+\begin_layout Subsubsection
+单叶双曲面
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+双曲线
+\begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+绕
+\begin_inset Formula $z$
+\end_inset
+
+轴旋转而形成的旋转曲面方程 
 \end_layout
 
 \begin_layout Subsubsection
@@ -16116,11 +16307,62 @@ G(x,y,z)=0
 \end_layout
 
 \begin_layout Standard
-由双曲线f(x)=1绕z轴旋转而形成的旋转曲面方程 
+由双曲线
+\begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{z^{2}}{c^{2}}=1$
+\end_inset
+
+绕
+\begin_inset Formula $x$
+\end_inset
+
+轴旋转而形成的旋转曲面方程
+\end_layout
+
+\begin_layout Subsubsection
+椭圆抛物面
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=z
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-推导:
+抛物线
+\begin_inset Formula $\frac{x^{2}}{a^{2}}=z$
+\end_inset
+
+绕
+\begin_inset Formula $z$
+\end_inset
+
+轴旋转, 所得曲而叫做旋转抛物面.
+\end_layout
+
+\begin_layout Subsubsection
+双曲抛物面
+\end_layout
+
+\begin_layout Standard
+双曲抛物面又称马鞍面.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+空间曲线及其方程
 \end_layout
 
 \begin_layout Section
@@ -19740,7 +19982,62 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_layout
 
 \begin_layout Standard
-例题:
+设平面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+和
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的法线向量依次为
+\begin_inset Formula $\boldsymbol{n_{1}}=(A_{1},B_{1},C_{1})$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{n_{2}}=(A_{2},B_{2},C_{2})$
+\end_inset
+
+, 则平面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+和
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的夹角应是
+\begin_inset Formula $\boldsymbol{n_{1}}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{n_{2}}$
+\end_inset
+
+的锐角或直角.
+ 因此
+\series bold
+
+\begin_inset Formula 
+\[
+\cos\theta=\frac{|A_{1}A_{2}+B_{1}B_{2}+C_{1}C_{2}|}{\sqrt{A_{1}^{2}+B_{1}^{2}+C_{1}^{2}}\sqrt{A_{2}^{2}+B_{2}^{2}+C_{2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通过定直线的所有平面的全体称为
+\series bold
+平面竖
+\series default
+.方程叫做
+\series bold
+平面束的方程
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -20083,14 +20380,150 @@ Ax+By+Cz+D=0
 \end_inset
 
 的系数就是该平面的一个法线向量
-\begin_inset Formula $n$
+\begin_inset Formula $\boldsymbol{n}$
 \end_inset
 
 的坐标, 即
-\begin_inset Formula $n=(A,B,C)$
+\begin_inset Formula $\boldsymbol{n}=(A,B,C)$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+平面的截距式方程
+\end_layout
+
+\begin_layout Standard
+如果一个平面和坐标轴
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+轴的交点依次为 
+\begin_inset Formula $P(a,0,0)$
+\end_inset
+
+, 
+\begin_inset Formula $Q(0,b,0)$
+\end_inset
+
+, 
+\begin_inset Formula $R(0,0,c)$
+\end_inset
+
+三点(其中
+\begin_inset Formula $a\neq0$
+\end_inset
+
+,
+\begin_inset Formula $b\neq0$
+\end_inset
+
+,
+\begin_inset Formula $c\neq0$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+设平面的方程为
+\begin_inset Formula 
+\[
+Ax+By+Cz+D=0
+\]
+
+\end_inset
+
+将
+\begin_inset Formula $P(a,0,0)$
+\end_inset
+
+、
+\begin_inset Formula $Q(0,b,0)$
+\end_inset
+
+、
+\begin_inset Formula $R(0,0,c)$
+\end_inset
+
+带入, 即有
+\begin_inset Formula 
+\[
+\begin{cases}
+aA+D=0\\
+bB+D=0\\
+cC+D=0
+\end{cases}
+\]
+
+\end_inset
+
+解得 
+\begin_inset Formula $A=-\frac{D}{a}$
+\end_inset
+
+,
+\begin_inset Formula $B=-\frac{D}{b}$
+\end_inset
+
+,
+\begin_inset Formula $C=-\frac{D}{c}$
+\end_inset
+
+, 将解代入平面方程并除以
+\begin_inset Formula $D$
+\end_inset
+
+(
+\begin_inset Formula $D\neq0$
+\end_inset
+
+), 得所求的平面方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1
+\]
+
+\end_inset
+
+这个方程叫做平面的截距式方程, 
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+,
+\begin_inset Formula $c$
+\end_inset
+
+依次叫做平面在
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+轴上的截距.
 \end_layout
 
 \begin_layout Subsubsection
@@ -20155,6 +20588,214 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+空间直线的对称式方程与参数方程
+\end_layout
+
+\begin_layout Standard
+如果一个非零向量平行于一条已知直线, 那么这个向量就叫做这条直线的
+\series bold
+方向向量
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+当直线上的一点和它的一方向向量确定时, 直线的位置就完全确定了.
+\end_layout
+
+\begin_layout Standard
+设点
+\begin_inset Formula $M(x,y,z)$
+\end_inset
+
+是直线
+\begin_inset Formula $l$
+\end_inset
+
+上的任一点, 则向量
+\begin_inset Formula $\overrightarrow{M_{0}M}$
+\end_inset
+
+与
+\begin_inset Formula $l$
+\end_inset
+
+的方向向量
+\begin_inset Formula $\boldsymbol{s}$
+\end_inset
+
+平行.所以两向量的对应坐标成比例,由于
+\begin_inset Formula $\overrightarrow{M_{0}M}=(x-x_{0},y-y_{0},z-z_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $s=(m,n,p)$
+\end_inset
+
+, 从而有
+\begin_inset Formula 
+\[
+\frac{x-x_{0}}{m}=\frac{y-y_{0}}{n}=\frac{z-z_{0}}{p}
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $m$
+\end_inset
+
+,
+\begin_inset Formula $n$
+\end_inset
+
+,
+\begin_inset Formula $p$
+\end_inset
+
+不为
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+这个方程叫做直线的对称式方程或点向式方程.
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $\frac{x-x_{0}}{m}=\frac{y-y_{0}}{n}=\frac{z-z_{0}}{p}=t$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\[
+\begin{cases}
+x=x_{0}+mt\\
+y=y_{0}+nt\\
+z=z_{0}+pt
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程组就是直线的参数方程.
+\end_layout
+
+\begin_layout Example
+用对称式方程及参数方程表示直线
+\begin_inset Formula 
+\[
+\begin{cases}
+x+y+z+1=0\\
+2x-y+3z+4=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+找出这直线上的一点
+\begin_inset Formula $(x_{0},y_{0},z_{0})$
+\end_inset
+
+.
+ 设
+\begin_inset Formula $x_{0}=1$
+\end_inset
+
+, 代入得
+\begin_inset Formula 
+\[
+\begin{cases}
+y+z=-2\\
+y-3z=6
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+解得:
+\begin_inset Formula $y_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $z_{0}=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+找出这直线的方向量
+\begin_inset Formula $\boldsymbol{s}$
+\end_inset
+
+.
+ 因为两平而的交线与这两平面的法线向量
+\begin_inset Formula $\boldsymbol{n_{1}}=(1,1,1)$
+\end_inset
+
+,
+\begin_inset Formula $\boldsymbol{n_{2}}=(2,-1,3)$
+\end_inset
+
+都垂直, 所以可取
+\begin_inset Formula 
+\[
+\boldsymbol{s}=\boldsymbol{n_{1}}\times\boldsymbol{n_{2}}=\left|\begin{array}{ccc}
+\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k}\\
+1 & 1 & 1\\
+2 & -1 & 3
+\end{array}\right|=4\boldsymbol{i}-\boldsymbol{j}-3\boldsymbol{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此, 所给直线的对称式方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x-1}{4}=\frac{y}{-1}=\frac{z+2}{-3}
+\]
+
+\end_inset
+
+ 参数方程为
+\begin_inset Formula 
+\[
+\begin{cases}
+x=1+4t\\
+y=-t\\
+z=-2-3t
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
