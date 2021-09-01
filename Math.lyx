@@ -1428,6 +1428,358 @@ a(b+c)=ab+ac
 这样的非空集合R连同这两个运算称为环, 全体整数对于数的加法和乘法构成一个环.
 \end_layout
 
+\begin_layout Section
+平面点集
+\end_layout
+
+\begin_layout Standard
+坐标平面上具有某种性质
+\begin_inset Formula $P$
+\end_inset
+
+的点的集合, 称为
+\series bold
+平面点集
+\series default
+, 记作 
+\begin_inset Formula 
+\[
+E=\left|(x,y)\boldsymbol{|}(x,y)\text{具有性质}P\right|
+\]
+
+\end_inset
+
+ 例如, 平面上以原点为中心, 
+\begin_inset Formula $r$
+\end_inset
+
+为半径的圆内所有点的集合是 
+\begin_inset Formula 
+\[
+C=\left|(x,y)\boldsymbol{|}x^{2}+y^{2}<r^{2}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果以点
+\begin_inset Formula $P$
+\end_inset
+
+表示
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ , 
+\begin_inset Formula $|OP|$
+\end_inset
+
+表示点
+\begin_inset Formula $P$
+\end_inset
+
+到原点
+\begin_inset Formula $O$
+\end_inset
+
+的距离,那么集合
+\begin_inset Formula $C$
+\end_inset
+
+也可表成
+\begin_inset Formula 
+\[
+C=\left|(x,y)\boldsymbol{|}|OP|<r\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+平面邻域
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+是
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上的一个点, 
+\begin_inset Formula $\delta$
+\end_inset
+
+是某一正数.
+ 与点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+距离小于
+\begin_inset Formula $\delta$
+\end_inset
+
+的点
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+的全体,称为点
+\begin_inset Formula $P_{0}$
+\end_inset
+
+的
+\begin_inset Formula $\delta$
+\end_inset
+
+邻域, 记作
+\begin_inset Formula $U(P_{0},\delta)$
+\end_inset
+
+ ,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U(P_{0},\delta)=\left|P\boldsymbol{|}|PP_{0}|<\delta\right|
+\]
+
+\end_inset
+
+也就是
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U(P_{0},\delta)=\left|(x,y)\boldsymbol{|}\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}}<\delta\right|
+\]
+
+\end_inset
+
+ 点
+\begin_inset Formula $P_{0}$
+\end_inset
+
+的去心
+\begin_inset Formula $\delta$
+\end_inset
+
+邻域, 记作
+\begin_inset Formula $\mathring{U}(P_{0},\delta)$
+\end_inset
+
+, 即 
+\begin_inset Formula 
+\[
+\mathring{U}(P_{0},\delta)=\left|P\boldsymbol{|}0<|PP_{0}|<\delta\right|
+\]
+
+\end_inset
+
+ 在几何上, 
+\begin_inset Formula $U(P_{0},\delta)$
+\end_inset
+
+就是
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上以点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+为中心、
+\begin_inset Formula $\delta>0$
+\end_inset
+
+为半径的圆内部的点
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+的全体.
+\end_layout
+
+\begin_layout Standard
+如果不需要强调邻域的半径
+\begin_inset Formula $\delta$
+\end_inset
+
+, 则用
+\begin_inset Formula $U(P_{0})$
+\end_inset
+
+ 表示点
+\begin_inset Formula $P_{0}$
+\end_inset
+
+的去心邻域记作
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathring{U}(P_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+任意一点
+\begin_inset Formula $P\in R^{2}$
+\end_inset
+
+与任意一个点集
+\begin_inset Formula $E\subset R^{2}$
+\end_inset
+
+之间必有以下三种关系中的一种: 
+\end_layout
+
+\begin_layout Enumerate
+内点:如果存在点
+\begin_inset Formula $P$
+\end_inset
+
+的某个邻域
+\begin_inset Formula $U(P)$
+\end_inset
+
+,使得
+\begin_inset Formula $U(P)\subset E$
+\end_inset
+
+,那么称P为E的内点; 
+\end_layout
+
+\begin_layout Enumerate
+外点: 如果存在点
+\begin_inset Formula $P$
+\end_inset
+
+的某个邻域
+\begin_inset Formula $U(P)$
+\end_inset
+
+, 使得
+\begin_inset Formula $U(P)\cap E=\varnothing$
+\end_inset
+
+, 那么称P为E的外点
+\end_layout
+
+\begin_layout Enumerate
+边界点: 如果点
+\begin_inset Formula $P$
+\end_inset
+
+的任一邻域内既含有属于E的点,又含有不属于E的点, 那么称P为E的边界点
+\end_layout
+
+\begin_layout Enumerate
+E的边界点的全体,称为E的
+\series bold
+边界
+\series default
+, 记作
+\begin_inset Formula $\partial E$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+E的内点必属于E; E的外点必定不属于E; 而E的边界点可能属于E,也可能不属于E.
+\end_layout
+
+\begin_layout Enumerate
+聚点:如果对于任意给定的
+\begin_inset Formula $\delta>0$
+\end_inset
+
+, 点P的去心邻域
+\begin_inset Formula $U(P_{0},\delta)$
+\end_inset
+
+内总有
+\begin_inset Formula $E$
+\end_inset
+
+中的点,那么称P是E的
+\series bold
+聚点; 
+\series default
+点击
+\begin_inset Formula $E$
+\end_inset
+
+以及它的边界
+\begin_inset Formula $\partial E$
+\end_inset
+
+ 上的一切点都是E的聚点.
+\end_layout
+
+\begin_layout Enumerate
+开集:如果点集E的点都是E的内点,那么称E为开集 
+\end_layout
+
+\begin_layout Enumerate
+闭集:如果点集E的边界
+\begin_inset Formula $\partial E\subset E$
+\end_inset
+
+,那么称E为闭集
+\end_layout
+
+\begin_layout Enumerate
+连通集:如果点集E内任何两点,都可用折线联结起来,且该折线上的点都 属于E,那么称E为连通集 
+\end_layout
+
+\begin_layout Enumerate
+区域(或开区域):连通的开集称为区域或开区域 
+\end_layout
+
+\begin_layout Enumerate
+闭区域:开区域连同它的边界一起所构成的点集称为闭区域
+\end_layout
+
+\begin_layout Enumerate
+有界集:对于平面点集E,如果存在某一正数
+\begin_inset Formula $r$
+\end_inset
+
+,使得 
+\begin_inset Formula $E\subset U(O,r)$
+\end_inset
+
+, 其中O是坐标原点,那么称E为有界集
+\end_layout
+
+\begin_layout Enumerate
+无界集:一个集合如果不是有界集,就称这个集合为无界集 
+\end_layout
+
+\begin_layout Section
+n维空间
+\end_layout
+
 \begin_layout Chapter
 数学运算
 \end_layout
@@ -16361,12 +16713,162 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 
 \end_layout
 
+\begin_layout Subsubsection
+曲面的参数方程
+\begin_inset Formula 
+\[
+\begin{cases}
+x=x(s,t)\\
+y=y(s,t)\\
+z=z(s,t)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+空间曲面参数方程构建时, 可以把空间曲面理解为是空间曲线旋转而成的.
+ 如下为球面方程的一个示例
+\begin_inset Formula 
+\[
+\begin{cases}
+x=a\sin\varphi\cos\theta\\
+y=0 & 0\leqslant\varphi\leqslant\pi\\
+z=a\cos\varphi
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 空间曲线及其方程
 \end_layout
 
+\begin_layout Subsection
+空间曲线的一般方程
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+空间曲线
+\series default
+可以看作两个曲面
+\begin_inset Formula $S_{1}$
+\end_inset
+
+,
+\begin_inset Formula $S_{2}$
+\end_inset
+
+的交线.设
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+和
+\begin_inset Formula $G(x,y,z)=0$
+\end_inset
+
+分别是这两个曲面的方程, 它们的交线为C.
+ 因为曲线C上的任何点的坐标应同时满足这两个曲面的方程, 所以应满足方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+F(x,y,z)=0\\
+G(x,y,z)=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程组就叫做空间曲线
+\begin_inset Formula $C$
+\end_inset
+
+的一般方程.
+\end_layout
+
+\begin_layout Subsection
+空间曲线的参数方程
+\end_layout
+
+\begin_layout Standard
+空间曲线
+\begin_inset Formula $C$
+\end_inset
+
+的方程除了一般方程之外, 也可以用参数形式表示, 只要将
+\begin_inset Formula $C$
+\end_inset
+
+上动点的坐标
+\begin_inset Formula $x$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+,
+\begin_inset Formula $z$
+\end_inset
+
+表示为参数
+\begin_inset Formula $t$
+\end_inset
+
+的函数
+\begin_inset Formula 
+\[
+\begin{cases}
+x=x(t)\\
+y=y(t)\\
+z=z(t)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程组叫做空间曲线的参数方程.
+ 
+\end_layout
+
+\begin_layout Standard
+当给定
+\begin_inset Formula $t=t_{1}$
+\end_inset
+
+时, 就得到C上的一个点
+\begin_inset Formula $(x_{1},y_{1},z_{1})$
+\end_inset
+
+; 随着
+\begin_inset Formula $t$
+\end_inset
+
+的变动便可得曲线
+\begin_inset Formula $C$
+\end_inset
+
+上的全部点.
+\end_layout
+
 \begin_layout Section
-球坐标系 
+球坐标系
 \end_layout
 
 \begin_layout Section
@@ -16374,7 +16876,7 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Section
-三面角 
+三面角
 \end_layout
 
 \begin_layout Standard
@@ -24118,7 +24620,7 @@ status open
 \end_layout
 
 \begin_layout Section
-多元函数 
+多元函数
 \end_layout
 
 \begin_layout Section
