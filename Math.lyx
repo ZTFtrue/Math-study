@@ -222,7 +222,11 @@ Math
 \begin_inset Formula $x\rightarrow a$
 \end_inset
 
- x趋近于a
+ x趋近于
+\begin_inset Formula $a$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -230,6 +234,13 @@ Math
 \end_inset
 
  x的增量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall$
+\end_inset
+
+ 全称量词, 用来指示全称量化的符号。
 \end_layout
 
 \begin_layout Chapter
@@ -268,7 +279,7 @@ Math
 \begin_inset Formula $\forall x\in M,p(x)$
 \end_inset
 
- 对于每一个属于M的x, p(x) 成立
+ 对于每一个属于M的x, p(x) 成立, 即全部成立
 \end_layout
 
 \begin_layout Standard
