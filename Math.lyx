@@ -12559,7 +12559,47 @@ S={\beta|\beta=\alpha+k•360°,k\in Z}
 \end_layout
 
 \begin_layout Subsection
-解三角形 
+直角三角形
+\end_layout
+
+\begin_layout Standard
+正弦(sine):
+\begin_inset Formula $\sin\theta=\frac{\text{对\text{边}}}{\text{斜边}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+余弦(cosine)
+\begin_inset Formula $\cos\theta=\frac{\text{邻\text{边}}}{\text{斜边}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正切(tangent)
+\begin_inset Formula $\tan\theta=\frac{\text{对\text{边}}}{\text{邻边}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正割 函数： sec(θ) = 斜边 / 邻边 (=1/cos) 
+\end_layout
+
+\begin_layout Standard
+余割 函数： csc(θ) = 斜边 / 对边 (=1/sin) 
+\end_layout
+
+\begin_layout Standard
+余切 函数： cot(θ) = 邻边 / 对边 (=1/tan) 
+\end_layout
+
+\begin_layout Subsection
+解三角形
 \end_layout
 
 \begin_layout Subsubsection
@@ -12669,6 +12709,38 @@ noprefix "false"
 \end_layout
 
 \begin_layout Subsubsection
+三角函数转换公式 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sin(-α)=-sinα$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cos(-α)=cosα$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $sin(π/2-α)=cosα$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cos(π/2-α)=sinα$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 正弦定理
 \end_layout
 
@@ -12767,6 +12839,111 @@ a*\sin B=b*\sin A
 \begin_layout Standard
 同理: 
 \begin_inset Formula $\frac{b}{\sin B}=\frac{c}{\sin C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在正方形(边长为
+\begin_inset Formula $1$
+\end_inset
+
+)内置一三角形, 如下图.
+ 求
+\begin_inset Formula $\angle DFE$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/soulution_triangle.png
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $DE=\frac{DC}{\sin\angle DEC}=\frac{1}{\sin67\textdegree}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $DF=\frac{DA}{\sin\angle DFA}=\frac{1}{\sin68\textdegree}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $FE=\frac{BF}{\cos(180^{\textdegree}-\angle DFA-\angle DFE)}=\frac{1-\frac{\sin22\textdegree}{\sin68\textdegree}}{\cos(112-\angle DFE)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+根据三角形正弦定理
+\begin_inset Formula $\frac{a}{\sin A}=\frac{b}{\sin B}$
+\end_inset
+
+得
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{DE}{\sin(\angle DFE)}=\frac{DF}{\sin\angle DEF}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\frac{1}{\sin67\textdegree}}{\sin(\angle DFE)}=\frac{\frac{1}{\sin68\textdegree}}{\sin(180\textdegree-45\textdegree-\angle DFE)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\sin68\textdegree\sin(135\textdegree-\angle DFE)=\sin(\angle DFE)\sin67\textdegree$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+即
+\begin_inset Formula $\angle DFE=68\textdegree$
 \end_inset
 
 
@@ -12928,8 +13105,288 @@ S=\sqrt{p(p-a)(p-b)(p-c)}(\text{其\text{中}}p=\frac{a+b+c}{2})
 
 \end_layout
 
+\begin_layout Subsubsection
+三角函数转换公式 
+\end_layout
+
+\begin_layout Standard
+1.
+ 诱导公式(对称、移位和周期)：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(-\alpha)=-\sin\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(-\alpha)=\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(\frac{\pi}{2}-\alpha)=\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(\frac{\pi}{2}-\alpha)=\sin\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(\frac{\pi}{2}+\alpha)=\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(\frac{\pi}{2}+\alpha)=-\sin\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(\pi-\alpha)=\sin\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(\pi-\alpha)=-\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(\pi+\alpha)=-\sin\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(\pi+\alpha)=-\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan\alpha=\sin\alpha\cos\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan（\frac{\pi}{2}＋\alpha）＝－\cot\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan（\frac{\pi}{2}－\alpha）＝\cot\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan（\pi－\alpha）＝－\tan\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan（\pi＋\alpha）＝\tan\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 两角和差公式：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(A\pm B)=\sin A\cos B\pm\cos A\sin B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(A\pm B)=\cos A\cos B\mp\sin A\sin B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan(A\pm B)=\frac{\tan A\pm\tan B}{1\mp\tan A\tan B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cot(A\pm B)=\frac{\cot A\cot B\mp1}{\cot B\pm\cot A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 和差化积公式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sin\alpha+\sin\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \cos\alpha-\cos\beta=-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ 积化和差
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sin\alpha\cos\beta=\frac{\sin(\alpha+\beta)+\sin(\alpha-\beta)}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \cos\alpha\sin\beta=\frac{\sin(\alpha+\beta)-\sin(\alpha-\beta)}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \cos\alpha\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \sin\alpha\sin\beta=-\frac{\cos(\alpha+\beta)-\cos(\alpha-\beta)}{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+平方差公式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(x+y)\sin(x-y)=\sin^{2}x-\sin^{2}y=\cos^{2}y-\cos^{2}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos(x+y)\cos(x-y)=\cos^{2}x-\sin^{2}y=\cos^{2}y-\sin^{2}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+托勒密定理
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $w+x+y+z=\pi$
+\end_inset
+
+（半圆） 
+\end_layout
+
+\begin_layout Standard
+那么:
+\begin_inset Formula 
+\[
+\begin{aligned}\sin(w+x)\sin(x+y) & =\sin(x+y)\sin(y+z)\\
+ & =\sin(y+z)\sin(z+w)\\
+ & =\sin(z+w)\sin(w+x)\\
+ & =\sin w\sin y+\sin x\sin z
+\end{aligned}
+\]
+
+\end_inset
+
+ （前三个等式是一般情况；第四个是本质。）
+\end_layout
+
 \begin_layout Subsection
 倍角公式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin2A=2\sin A\cdot\cos A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos2A=\cos A^{2}-\sin A^{2}=1-2\sin A^{2}=2\cos A^{2}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\tan2A=\frac{2\tan A}{1-\tan A^{2}}=\frac{2\cot A}{\cot A^{2}-1}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -12971,7 +13428,28 @@ S=\sqrt{p(p-a)(p-b)(p-c)}(\text{其\text{中}}p=\frac{a+b+c}{2})
 
 \begin_layout Standard
 以上三角函数值的正负由所在的象限决定.
-  
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cot(\frac{A}{2})=\frac{\sin A}{1-\cos A}=\frac{1+\cos A}{\sin A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin^{2}(\frac{a}{2})=\frac{1-\cos(a)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos^{2}(\frac{a}{2})=\frac{1+\cos(a)}{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
