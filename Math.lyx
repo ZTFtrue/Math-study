@@ -33014,7 +33014,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Standard
-注: 内容来自wikipedia
+注: 内容来自wikipedia, 在这里上边加一个点表示一阶导, 两个点表示两阶导, 以此类推.
 \end_layout
 
 \begin_layout Standard
@@ -33193,6 +33193,245 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 
 \begin_layout Standard
 \begin_inset Formula ${\displaystyle \ddot{\boldsymbol{r}}=-G\frac{M}{r^{2}}(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+设
+\begin_inset Formula $u=\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j}$
+\end_inset
+
+, 于是
+\begin_inset Formula $\boldsymbol{r}=r\boldsymbol{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{v=}\dot{\boldsymbol{r}}=\frac{d\boldsymbol{r}}{dt}=\frac{d}{dt}(r\boldsymbol{u})=r\frac{d\boldsymbol{u}}{dt}+\frac{dr}{dt}\boldsymbol{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+对
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ddot{\boldsymbol{r}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+和角动量 
+\begin_inset Formula ${\displaystyle \boldsymbol{\ell}=mr^{2}\dot{\theta}}$
+\end_inset
+
+做叉乘
+\begin_inset Formula 
+\begin{align*}
+\ddot{\boldsymbol{r}}\times\ell & =-G\frac{M}{r^{2}}(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})\times mr^{2}\dot{\theta}\\
+ & =-G\frac{M}{r^{2}}(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})\times mr^{2}\frac{d\theta}{dt}\\
+ & =-GM(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})\times m\frac{d\theta}{dt}\\
+ & =GMm\frac{du}{dt}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{d}{dt}(\boldsymbol{v}\times\boldsymbol{\ell})=\ddot{\boldsymbol{r}}\times\boldsymbol{\ell}$
+\end_inset
+
+(
+\series bold
+
+\begin_inset Formula $\boldsymbol{\ell}$
+\end_inset
+
+
+\series default
+是常量, 关于t的导数为0)
+\end_layout
+
+\begin_layout Plain Layout
+对这个式子两边做不定积分，可以得到
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{v}\times\boldsymbol{\ell}=GMm\boldsymbol{u}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+将
+\begin_inset Formula $t=0$
+\end_inset
+
+时的
+\begin_inset Formula $r_{0}$
+\end_inset
+
+，
+\begin_inset Formula $v_{0}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{\ell}$
+\end_inset
+
+代入
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $C=(r_{0}v_{0}^{2}-GM)\boldsymbol{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+再把
+\begin_inset Formula $C$
+\end_inset
+
+代回
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{v}\times\boldsymbol{\ell}=GM\boldsymbol{u}+(r_{0}v_{0}^{2}-GM)\boldsymbol{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{r}\cdot(\boldsymbol{v}\times\boldsymbol{\ell})=(\boldsymbol{r}\times\boldsymbol{v})\cdot\boldsymbol{\ell}=m\boldsymbol{\ell}\cdot\boldsymbol{\ell}=mr_{0}^{2}v_{0}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+另外
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{r}\cdot(\boldsymbol{v}\times\boldsymbol{\ell}) & =\boldsymbol{r}\cdot(GMu)m+\boldsymbol{r}\cdot(r_{0}v_{0}^{2}-GM)m\boldsymbol{i}\\
+ & =m\boldsymbol{r}\cdot(GM\frac{\boldsymbol{r}}{r})+rm\boldsymbol{u}\cdot(r_{0}v_{0}^{2}-GM)\boldsymbol{i}\\
+ & =mGMr+mr(r_{0}v_{0}^{2}-GM)\cos\theta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+得
+\begin_inset Formula $r_{0}^{2}v_{0}^{2}=GMr+r(r_{0}v_{0}^{2}-GM)\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $r=\frac{r_{0}^{2}v_{0}^{2}}{GM+(r_{0}v_{0}^{2}-GM)\cos\theta}=\frac{\frac{r_{0}^{2}v_{0}^{2}}{GM}}{1+(\frac{r_{0}v_{0}^{2}}{GM}-1)\cos\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+简记
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $k=\frac{r_{0}^{2}v_{0}^{2}}{GM}$
+\end_inset
+
+, 
+\begin_inset Formula $e=\frac{r_{0}v_{0}^{2}}{GM}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+于是
+\begin_inset Formula $r=\frac{k}{1+e\cos\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这条曲线就是圆锥曲线的极座标形式.
+\end_layout
+
 \end_inset
 
 
