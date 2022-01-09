@@ -10515,7 +10515,7 @@ a
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sqrt{1-\frac{b^{2}}{a^{2}}}$
+\begin_inset Formula $\sqrt{1-\frac{b^{2}}{a^{2}}}<1$
 \end_inset
 
 
@@ -10645,7 +10645,7 @@ a
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sqrt{1+\frac{b^{2}}{a^{2}}}$
+\begin_inset Formula $\sqrt{1+\frac{b^{2}}{a^{2}}}>1$
 \end_inset
 
 
@@ -20019,6 +20019,10 @@ a叉b
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+两个向量平行，那么它们叉乘为零向量
 \end_layout
 
 \begin_layout Paragraph
@@ -32999,6 +33003,671 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+微积分与天体运行规律
+\end_layout
+
+\begin_layout Subsection
+开普勒定律
+\end_layout
+
+\begin_layout Standard
+注: 内容来自wikipedia
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+开普勒的第一定律
+\series default
+，也称为
+\series bold
+椭圆定律
+\series default
+、轨道定律：每一个行星都沿各自的椭圆轨道环绕太阳，而太阳则处在椭圆的一个焦点中.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+开普勒第二定律
+\series default
+，也称为
+\series bold
+等面积定律
+\series default
+：在相等时间内，太阳和运动着的行星的连线所扫过的面积都是相等的
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+开普勒第三定律
+\series default
+，也称为
+\series bold
+周期定律
+\series default
+：各个行星绕太阳公转周期(
+\begin_inset Formula $T$
+\end_inset
+
+)的平方及其椭圆轨道的半长轴(
+\begin_inset Formula $a$
+\end_inset
+
+)的立方成正比
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+开普勒的第二定律推导:
+\end_layout
+
+\begin_layout Standard
+万有引力定律向量式:
+\begin_inset Formula $F=-G\frac{mM}{r^{2}}\hat{\boldsymbol{r}}$
+\end_inset
+
+这里，
+\begin_inset Formula $\boldsymbol{F}$
+\end_inset
+
+ 是太阳作用于行星的万有引力，
+\begin_inset Formula ${\displaystyle m}$
+\end_inset
+
+是行星的质量，
+\begin_inset Formula $M$
+\end_inset
+
+ 是太阳的质量，
+\begin_inset Formula $r$
+\end_inset
+
+ 行星相对于太阳的距离, 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ 是行星相对于太阳的位移向量，
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+是 
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+ 的单位向量, 其中 
+\begin_inset Formula $\boldsymbol{r}=r\hat{\boldsymbol{r}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+把
+\begin_inset Formula $M$
+\end_inset
+
+放在坐标原点，于是引力的方向正好是由物体的位置
+\begin_inset Formula $\boldsymbol{\overrightarrow{r}}$
+\end_inset
+
+指向原点，因此
+\begin_inset Formula $\boldsymbol{F}$
+\end_inset
+
+和
+\series bold
+
+\begin_inset Formula $\overrightarrow{r}$
+\end_inset
+
+
+\series default
+反向，而
+\begin_inset Formula $r$
+\end_inset
+
+则表示了
+\begin_inset Formula $\boldsymbol{\overrightarrow{r}}$
+\end_inset
+
+的长度
+\end_layout
+
+\begin_layout Standard
+牛顿第二定律表明，物体受力后所产生的加速度 
+\begin_inset Formula ${\displaystyle \ddot{\boldsymbol{r}}}$
+\end_inset
+
+ ，和其所受的合力
+\begin_inset Formula ${\displaystyle F}$
+\end_inset
+
+成正比，和其质量 
+\begin_inset Formula $m$
+\end_inset
+
+ 成反比，以方程表示: 
+\begin_inset Formula ${\displaystyle \boldsymbol{F}=m\ddot{\boldsymbol{r}}}$
+\end_inset
+
+ 。
+\end_layout
+
+\begin_layout Standard
+合并这两个方程，得
+\begin_inset Formula 
+\begin{equation}
+{\displaystyle \ddot{\boldsymbol{r}}=-G\frac{M}{r^{2}}\hat{\boldsymbol{r}}}
+\end{equation}
+
+\end_inset
+
+ 。
+\end_layout
+
+\begin_layout Standard
+建立一个极坐标系:
+\begin_inset Formula $M$
+\end_inset
+
+ 设为原点.
+ 于是位置向量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{r}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
+\end_inset
+
+, 其中
+\begin_inset Formula $\theta$
+\end_inset
+
+是运动的角度.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \ddot{\boldsymbol{r}}=-G\frac{M}{r^{2}}(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于位置向量
+\begin_inset Formula ${\displaystyle \boldsymbol{r}=r\hat{\boldsymbol{r}}}$
+\end_inset
+
+，对于时间 
+\begin_inset Formula ${\displaystyle t}$
+\end_inset
+
+求导一次可得到速度向量，再求导一次则可得到加速度向量：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{v=}\dot{\boldsymbol{r}}=\frac{d\boldsymbol{r}}{dt}=r\dot{\theta}\hat{\boldsymbol{\theta}}+\dot{r}\hat{\boldsymbol{r}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ddot{\boldsymbol{r}}=\left(\ddot{r}\hat{\boldsymbol{r}}+\dot{r}\frac{\mathrm{d}\hat{\boldsymbol{r}}}{\mathrm{d}t}\right)+\left(\dot{r}\dot{\theta}\hat{\boldsymbol{\theta}}+r\ddot{\theta}\hat{\boldsymbol{\theta}}+r\dot{\theta}\frac{\mathrm{d}\hat{\boldsymbol{\theta}}}{\mathrm{d}t}\right)=(\ddot{r}-r\dot{\theta}^{2})\hat{\boldsymbol{r}}+(r\ddot{\theta}+2\dot{r}\dot{\theta})\hat{\boldsymbol{\theta}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这里，用到了单位向量微分方程：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \frac{\mathrm{d}\hat{\boldsymbol{r}}}{\mathrm{d}t}=\dot{\theta}\hat{\boldsymbol{\theta}}}$
+\end_inset
+
+ ，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \frac{\mathrm{d}\hat{\boldsymbol{\theta}}}{\mathrm{d}t}=-\dot{\theta}\hat{\boldsymbol{r}}}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+合并方程
+\begin_inset Formula $1$
+\end_inset
+
+和
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\ddot{r}-r\dot{\theta}^{2})\hat{\boldsymbol{r}}+(r\ddot{\theta}+2\dot{r}\dot{\theta})\hat{\boldsymbol{\theta}}=-\frac{GM}{r^{2}}\hat{\boldsymbol{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+取各个分量，可以得到两个常微分方程，一个是关于径向加速度(垂直于速度的加速度分量)，另一个是关于切向加速度(平行于速度的加速度分量)：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \ddot{r}-r\dot{\theta}^{2}=-\frac{GM}{r^{2}}}$
+\end_inset
+
+，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle r\ddot{\theta}+2\dot{r}\dot{\theta}=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+行星的角动量 
+\begin_inset Formula ${\displaystyle \ell=mr^{2}\dot{\theta}}$
+\end_inset
+
+ 。由于行星的质量是常数，角动量对于时间的导数为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \dot{\ell}=mr(2\dot{r}\dot{\theta}+r\ddot{\theta})=0}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+角动量 
+\begin_inset Formula ${\displaystyle \ell}$
+\end_inset
+
+也是一个运动常数，即使距离
+\begin_inset Formula ${\displaystyle r}$
+\end_inset
+
+与角速
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+度
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+都可能会随时间变化。
+\end_layout
+
+\begin_layout Standard
+从时间 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ 到时间 
+\begin_inset Formula $t_{2}$
+\end_inset
+
+扫过的区域
+\begin_inset Formula $\Delta A$
+\end_inset
+
+，
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \Delta A=\int_{t_{1}}^{t_{2}}\frac{1}{2}\cdot r\cdot r\dot{\theta}\cdot\mathrm{d}t=\int_{t_{1}}^{t_{2}}\frac{\ell}{2m}\mathrm{d}t=\frac{\ell}{2m}\cdot(t_{2}-t_{1})}$
+\end_inset
+
+。 
+\end_layout
+
+\begin_layout Standard
+行星太阳连线扫过的区域面积相依于间隔时间
+\begin_inset Formula $t_{2}-t_{1}$
+\end_inset
+
+ 。所以，开普勒第二定律是正确的。
+\end_layout
+
+\begin_layout Standard
+附: 单位向量就是长度为 1 的向量, 单位向量的符号通常有个“帽子”，如：
+\begin_inset Formula $\mathbf{\hat{i}}$
+\end_inset
+
+.
+ 欧几里得空间中，两个单位向量的
+\series bold
+点积
+\series default
+就是它们之间角度的余弦（因为它们的长度都是1）
+\begin_inset Formula ${\displaystyle \mathbf{\hat{u}}=\frac{\mathbf{u}}{\|\mathbf{u}\|}}$
+\end_inset
+
+
+\begin_inset Formula $\|\mathbf{u}\|$
+\end_inset
+
+是
+\begin_inset Formula $\boldsymbol{u}$
+\end_inset
+
+的模长.
+\end_layout
+
+\begin_layout Standard
+一组基的元素通常被选为单位向量, 在三维直角坐标系中，通常是 
+\begin_inset Formula ${\displaystyle \mathbf{\hat{i}}}$
+\end_inset
+
+ ,
+\begin_inset Formula $\mathbf{\hat{j}}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{\hat{k}}$
+\end_inset
+
+，分别为沿着 
+\begin_inset Formula ${\displaystyle x,y,z}$
+\end_inset
+
+方向的单位向量：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{\hat{i}}=\begin{bmatrix}1\\
+0\\
+0
+\end{bmatrix},\mathbf{\hat{j}}=\begin{bmatrix}0\\
+1\\
+0
+\end{bmatrix},\mathbf{\hat{k}}=\begin{bmatrix}0\\
+0\\
+1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+任何一个向量等于自身的长度乘以该方向上的单位向量.
+\end_layout
+
+\begin_layout Standard
+向量值函数(向量函数): 是一个单变量或多变量的、值域是多维向量或者无穷维向量的集合的函数.例如空间三维向量: 
+\begin_inset Formula $\boldsymbol{r}(t)=x(t)\boldsymbol{i}+y(t)\boldsymbol{i}+z(t)\boldsymbol{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+向量函数求导(对每个分量分别关于t求导): 
+\begin_inset Formula $\boldsymbol{r'}(t)=x'(t)\boldsymbol{i}+y'(t)\boldsymbol{i}+z'(t)\boldsymbol{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+万有引力标量
+\begin_inset Formula $F=G\frac{m_{1}m_{2}}{r^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F$
+\end_inset
+
+:两个物体之间的万有引力 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G$
+\end_inset
+
+: 万有引力常数
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+:物体1的质量 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle m_{2}}$
+\end_inset
+
+:物体2的质量
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r$
+\end_inset
+
+:两个物体之间的距离
+\end_layout
+
+\begin_layout Standard
+把
+\begin_inset Formula $m_{1}$
+\end_inset
+
+放在坐标原点，于是引力的方向正好是由
+\begin_inset Formula $m_{2}$
+\end_inset
+
+的位置
+\begin_inset Formula $r$
+\end_inset
+
+指向原点，因此
+\begin_inset Formula $\boldsymbol{F}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+反向，而
+\begin_inset Formula $r$
+\end_inset
+
+则表示了
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+的长度.
+\end_layout
+
+\begin_layout Standard
+万有引力定律向量式:
+\begin_inset Formula $\boldsymbol{F}=-F\hat{\boldsymbol{r}}=-G\frac{m_{1}m_{2}}{r^{2}}\cdot\hat{\boldsymbol{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对位移求导得到的就是速度v，对速度求导得到的就是加速度a，并且速度与加速度都是向量, 所以
+\begin_inset Formula 
+\[
+\boldsymbol{r}(t)=x(t)\boldsymbol{i}+y(t)\boldsymbol{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{v}(t)=\frac{dx}{dt}\boldsymbol{i}+\frac{dy}{dt}\boldsymbol{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{a}(t)=\frac{d^{2}x}{dt^{2}}\boldsymbol{i}+\frac{d^{2}y}{dt^{2}}\boldsymbol{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在物理学中，角动量是与物体的位置向量和动量相关的物理量, 对于某惯性参考系的原点
+\begin_inset Formula $\mathbf{O}$
+\end_inset
+
+，物体的
+\series bold
+角动量
+\series default
+是物体的
+\series bold
+位置矢量
+\series default
+和
+\series bold
+动量的叉积, 
+\series default
+通常写做 
+\begin_inset Formula $L$
+\end_inset
+
+ 。角动量是向量(伪向量,轴向量).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{L}=\mathbf{r}\times\mathbf{p}$
+\end_inset
+
+ 其中，
+\begin_inset Formula ${\displaystyle \mathbf{r}}$
+\end_inset
+
+表示物体的位置矢量，
+\begin_inset Formula ${\displaystyle \mathbf{L}}$
+\end_inset
+
+表示角动量。
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+表示动量。角
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+动量
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+又可写为：
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+{\displaystyle \mathbf{L}=\mathbf{r}\times\mathbf{p}=\mathbf{r}\times(m\mathbf{v})=\mathbf{r}\times(\boldsymbol{\boldsymbol{\omega}}\times(m\mathbf{r}))=mr^{2}\boldsymbol{\boldsymbol{\omega}}=I\boldsymbol{\boldsymbol{\omega}}}
+\]
+
+\end_inset
+
+ 其中，
+\begin_inset Formula ${\displaystyle I}$
+\end_inset
+
+表示质点的转动惯量，
+\begin_inset Formula ${\displaystyle \boldsymbol{\omega}}$
+\end_inset
+
+是角速度向量。
+\end_layout
+
+\begin_layout Standard
+假设作用于物体的外力矩和为零，则物体的角动量是守恒的, 即可以看作一个运动常数.
 \end_layout
 
 \begin_layout Chapter
