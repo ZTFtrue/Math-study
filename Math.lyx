@@ -21430,7 +21430,7 @@ C与B的距离
 \end_layout
 
 \begin_layout Standard
-距离分类在计算机和统计中会经常用到, 它和统计中的回归直线,方差有点类似, 前者比较外部数据, 后者比较的是内部数据.
+距离分类在计算机和统计中会经常用到.
 \end_layout
 
 \begin_layout Chapter
@@ -24631,112 +24631,6 @@ status open
 \end_layout
 
 \begin_layout Section
-多元函数
-\end_layout
-
-\begin_layout Section
-隐函数
-\end_layout
-
-\begin_layout Section
-函数的应用
-\end_layout
-
-\begin_layout Standard
-对于函数
-\begin_inset Formula $y=(x)$
-\end_inset
-
-,我们把使
-\begin_inset Formula $f(x)=0$
-\end_inset
-
-的实数
-\begin_inset Formula $x$
-\end_inset
-
-叫做函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的零点(Zero point).
- 
-\end_layout
-
-\begin_layout Standard
-这样,函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的零点就是方程
-\begin_inset Formula $f(x)=0$
-\end_inset
-
-的实数根,也就是函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的图象与
-\begin_inset Formula $x$
-\end_inset
-
-轴的交点的横坐标,所以
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-方程
-\begin_inset Formula $f(x)=0$
-\end_inset
-
- 有实数根
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\begin_inset Formula $\iff$
-\end_inset
-
-函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的图像与x轴有交点 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\begin_inset Formula $\iff$
-\end_inset
-
-函数y=f(x)有零点
-\end_layout
-
-\begin_layout Standard
-由此可知,求方程
-\begin_inset Formula $f(x)=0$
-\end_inset
-
- 的实数根,就是确定函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-的零点,一般地, 对于不能用公式法求根的方程
-\begin_inset Formula $f(x)=0$
-\end_inset
-
- 来说, 我们可以将它与函数
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-联系起来, 利用函数的性质找出零点, 从而求出方程的根.
- 
-\end_layout
-
-\begin_layout Section
 函数的极限与无穷大,无穷小
 \end_layout
 
@@ -26416,6 +26310,233 @@ f(\xi)=C\text{ }(a<\xi<b)
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+多元函数
+\end_layout
+
+\begin_layout Standard
+多元函数是指定义域为
+\begin_inset Formula ${\displaystyle {\scriptstyle \mathbb{R}^{n}}}$
+\end_inset
+
+或其一部分，值域为
+\begin_inset Formula ${\scriptstyle \mathbb{R}}$
+\end_inset
+
+或
+\begin_inset Formula ${\scriptstyle \mathbb{R}^{m}}$
+\end_inset
+
+的函数。这样的函数让定义域中的每个元素(即
+\begin_inset Formula $n$
+\end_inset
+
+元组 
+\begin_inset Formula ${\displaystyle x=(x_{1},x_{2},\dots,x_{n})}$
+\end_inset
+
+)对应唯一一个值域中的元素，记为
+\begin_inset Formula $f(x)$
+\end_inset
+
+或 
+\begin_inset Formula ${\displaystyle f(x_{1},x_{2},\dots,x_{n})}$
+\end_inset
+
+.当
+\begin_inset Formula $n=1$
+\end_inset
+
+时，为一元函数.
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $n=2$
+\end_inset
+
+或
+\begin_inset Formula $3$
+\end_inset
+
+时，习惯上将点
+\begin_inset Formula $(x_{1},x_{2})$
+\end_inset
+
+与点
+\begin_inset Formula $(x_{1},x_{2},x_{3})$
+\end_inset
+
+分别写成
+\begin_inset Formula $(x,y)$
+\end_inset
+
+与
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于二元函数一般简记为
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+,三元函数一般简记为
+\begin_inset Formula $u=f(x,y,z)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+若用字母表示
+\begin_inset Formula ${\displaystyle {\scriptstyle \mathbb{R}^{2}}}$
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle {\scriptstyle \mathbb{R}^{3}}}$
+\end_inset
+
+中的点，即写成
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+或
+\begin_inset Formula $M(x,y,z)$
+\end_inset
+
+，则相应的二元函数及三元函数也可简记为
+\begin_inset Formula $z=f(P)$
+\end_inset
+
+及
+\begin_inset Formula $u=f(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+一般地用算式表达的多元函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+时，使这个算式有意义的变元的
+\begin_inset Formula $x$
+\end_inset
+
+值所组成的点集为这个多元函数的自然定义域.
+ 因而, 对这类函数, 它的定义域不再特別标出.
+\end_layout
+
+\begin_layout Subsection
+极限与连续性
+\end_layout
+
+\begin_layout Section
+隐函数
+\end_layout
+
+\begin_layout Section
+函数的应用
+\end_layout
+
+\begin_layout Standard
+对于函数
+\begin_inset Formula $y=(x)$
+\end_inset
+
+,我们把使
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+的实数
+\begin_inset Formula $x$
+\end_inset
+
+叫做函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点(Zero point).
+ 
+\end_layout
+
+\begin_layout Standard
+这样,函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点就是方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+的实数根,也就是函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的图象与
+\begin_inset Formula $x$
+\end_inset
+
+轴的交点的横坐标,所以
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 有实数根
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\iff$
+\end_inset
+
+函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的图像与x轴有交点 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\iff$
+\end_inset
+
+函数y=f(x)有零点
+\end_layout
+
+\begin_layout Standard
+由此可知,求方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 的实数根,就是确定函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+的零点,一般地, 对于不能用公式法求根的方程
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 来说, 我们可以将它与函数
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+联系起来, 利用函数的性质找出零点, 从而求出方程的根.
+ 
 \end_layout
 
 \begin_layout Chapter
