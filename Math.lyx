@@ -18974,11 +18974,31 @@ v-e+f=2
 \series bold
 向量
 \series default
-(vector, 矢量), 而把那些只有大小, 没有方向的量(如年龄、身高、长度、面 积、体积、质量等), 称为
-\series bold
-数量
-\series default
-.
+(vector, 矢量), .
+\end_layout
+
+\begin_layout Standard
+标量(英语：scalar), 又称纯量, 是只有大小、没有方向、可用实数表示的一个量.
+ 实际上标量就是实数, "标量”这个称法只是为了区别于向量.
+ 
+\end_layout
+
+\begin_layout Standard
+标量可以是负数, 例如温度低于冰点.
+ 
+\end_layout
+
+\begin_layout Standard
+与之相对, 向量(又称矢量)既有大小, 又有方向.
+ 
+\end_layout
+
+\begin_layout Standard
+在物理学中, 标量是在坐标变换下保持不变的物理量.
+ 例如, 欧几里得空间中两点间的距离在坐标变换下保持不变, 相对论四维时空中时空间隔在坐标变换下保持不变.
+ 与此相对的矢量, 其分量在不同的坐标系中有不同的值, 例如速度.
+ 标量可被用作定义向量空间.
+ 
 \end_layout
 
 \begin_layout Section
@@ -39680,7 +39700,7 @@ status open
 \end_layout
 
 \begin_layout Section
-多元函数微分应用
+多元函数微分学的几何应用
 \end_layout
 
 \begin_layout Subsection
@@ -39753,39 +39773,1027 @@ z=\omega(t)
 \end_inset
 
 称为因变量.
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $n=3$
+\end_inset
+
+,即
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+的取值为
+\begin_inset Formula $3$
+\end_inset
+
+维向量.
+ 在
+\begin_inset Formula $R^{3}$
+\end_inset
+
+中，若向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+，
+\begin_inset Formula $t\in D$
+\end_inset
+
+ 的三个分量函数依次为
+\begin_inset Formula $f_{1}(t)$
+\end_inset
+
+,
+\begin_inset Formula $f_{2}(t)$
+\end_inset
+
+,
+\begin_inset Formula $f_{3}(t)$
+\end_inset
+
+，则向量值函数
+\begin_inset Formula $\boldsymbol{f}$
+\end_inset
+
+可表示为
+\begin_inset Formula 
+\[
+\boldsymbol{f}(t)=f_{1}(t)\boldsymbol{i}+f_{2}(t)\boldsymbol{j}+f_{3}(t)\boldsymbol{k},t\in D
+\]
+
+\end_inset
+
+ 或
+\begin_inset Formula 
+\[
+\boldsymbol{f}(t)=(f_{1}(t),f_{2}(t),f_{3}(t)),t\in D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设(变)向量
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+的起点取在坐标系的原点
+\begin_inset Formula $O$
+\end_inset
+
+处, 终点在
+\begin_inset Formula $M$
+\end_inset
+
+处, 即
+\begin_inset Formula $\boldsymbol{r}=\overrightarrow{OM}$
+\end_inset
+
+ .
+ 当
+\begin_inset Formula $t$
+\end_inset
+
+改变时，
+\begin_inset Formula $\boldsymbol{r}$
+\end_inset
+
+跟着改变, 从而终点
+\begin_inset Formula $M$
+\end_inset
+
+也随之改变.
+ 终点M的轨迹曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+称为向量值函数
+\begin_inset Formula $\boldsymbol{r}=\boldsymbol{f}(t)(t\in D)$
+\end_inset
+
+的终端曲线，曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+也称为向量值函数
+\begin_inset Formula $\boldsymbol{r}=\boldsymbol{f}(t)(t∈D)$
+\end_inset
+
+的图形.
+\end_layout
+
+\begin_layout Standard
+由于向量值函数
+\begin_inset Formula $\boldsymbol{r}=\boldsymbol{f}(t)(t∈D)$
+\end_inset
+
+与空间曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+是一一对应的，因此
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\boldsymbol{r}=f_{1}(t)\boldsymbol{i}+f_{2}(t)\boldsymbol{j}+f_{3}(t)\boldsymbol{k},t\in D
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 称为曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+的向量方程.
+\end_layout
+
+\begin_layout Standard
+设一元向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在点
+\begin_inset Formula $t_{0}$
+\end_inset
+
+的某一去心邻域内有定义, 如果存在一个常向量
+\begin_inset Formula $\boldsymbol{r}_{0}$
+\end_inset
+
+, 对于任意给定的正数
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+, 总存在正数
+\begin_inset Formula $\delta$
+\end_inset
+
+，使得当
+\begin_inset Formula $t$
+\end_inset
+
+满足
+\begin_inset Formula $0<|t-t_{0}|<\delta$
+\end_inset
+
+时, 对应的函数值
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+都满足不等式
+\begin_inset Formula 
+\[
+|\boldsymbol{f}(t)-\boldsymbol{r}_{0}|<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么，常向量
+\begin_inset Formula $\boldsymbol{r}_{0}$
+\end_inset
+
+。就叫做向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+当
+\begin_inset Formula $t\rightarrow t_{0}$
+\end_inset
+
+时的极限，记作
+\begin_inset Formula 
+\[
+\underset{t\rightarrow t_{0}}{\lim}\boldsymbol{f}(t)=\boldsymbol{r}_{0}
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\boldsymbol{f}(t)\rightarrow\boldsymbol{r}_{0},t\rightarrow t_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+当
+\begin_inset Formula $t\rightarrow t_{0}$
+\end_inset
+
+时的
+\series bold
+极限存在
+\series default
+的充分必要条件是:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+的三个分量函数
+\begin_inset Formula $f(t)$
+\end_inset
+
+,
+\begin_inset Formula $f_{2}(t)$
+\end_inset
+
+,
+\begin_inset Formula $f_{3}(t)$
+\end_inset
+
+当
+\begin_inset Formula $t\rightarrow t_{0}$
+\end_inset
+
+时的极限都存在；
+\end_layout
+
+\begin_layout Standard
+在函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+当
+\begin_inset Formula $t\rightarrow t_{0}$
+\end_inset
+
+ 时的极限存在时，其极限为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underset{t\rightarrow t_{0}}{\lim}\boldsymbol{f}(t)=\left(\underset{t\rightarrow t_{0}}{\lim}f_{1}(t),\underset{t\rightarrow t_{0}}{\lim}f_{2}(t),\underset{t\rightarrow t_{0}}{\lim}f_{3}(t)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+当
+\begin_inset Formula $t_{0}$
+\end_inset
+
+的某一邻域内有定义，若 
+\begin_inset Formula 
+\[
+\underset{t\rightarrow t_{0}}{\lim}\boldsymbol{f}(t)=\boldsymbol{f}(t_{0})
+\]
+
+\end_inset
+
+ 则称向量值函数
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $t_{0}$
+\end_inset
+
+连续.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+连续的充分必要条件是:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+的三个分量函数
+\begin_inset Formula $f_{1}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $f_{2}(t)$
+\end_inset
+
+,
+\begin_inset Formula $f_{3}(t)$
+\end_inset
+
+都在
+\begin_inset Formula $t_{0}$
+\end_inset
+
+连续.
  
+\end_layout
+
+\begin_layout Standard
+设向量值函数
+\begin_inset Formula $\boldsymbol{f}(t),t\in D$
+\end_inset
+
+, 若
+\begin_inset Formula $D_{1}\in D$
+\end_inset
+
+,
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $D_{1}$
+\end_inset
+
+中的每一点处都连续，则 称
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $D_{1}$
+\end_inset
+
+上连续，并称
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+是
+\begin_inset Formula $D_{1}$
+\end_inset
+
+上的
+\series bold
+连续函数
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+设向量值函数
+\begin_inset Formula $r=\boldsymbol{f}(t)$
+\end_inset
+
+在点
+\begin_inset Formula $t_{0}$
+\end_inset
+
+的某一邻域内有定义, 如果 
+\begin_inset Formula 
+\[
+\underset{t\rightarrow t_{0}}{\lim}\frac{\Delta\boldsymbol{r}}{\Delta t}=\underset{\Delta t\rightarrow0}{\lim}\frac{\boldsymbol{f}(t_{0}+\Delta t)-\boldsymbol{f}(t_{0})}{\Delta t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+存在, 那么就称这个极限向量为向量值函数
+\begin_inset Formula $\boldsymbol{r}=\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $t_{0}$
+\end_inset
+
+处的导数或导向量, 记作
+\begin_inset Formula $f'(t_{0})$
+\end_inset
+
+或
+\begin_inset Formula $\left.\frac{d\boldsymbol{r}}{dt}\right|_{t=t_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设向量值函数
+\begin_inset Formula $\boldsymbol{r}=\boldsymbol{f}(t),t\in D$
+\end_inset
+
+ .
+ 若
+\begin_inset Formula $D_{1}\subset D$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $D_{1}$
+\end_inset
+
+中的每一点
+\begin_inset Formula $t$
+\end_inset
+
+处都存在导向量
+\begin_inset Formula $f'(t)$
+\end_inset
+
+ 或
+\begin_inset Formula $\frac{d\boldsymbol{r}}{dt}$
+\end_inset
+
+则称
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+在
+\begin_inset Formula $D_{1}$
+\end_inset
+
+上可导.
+\end_layout
+
+\begin_layout Standard
+可导的
+\series bold
+充分必要条件
+\series default
+是：
+\begin_inset Formula $\boldsymbol{f}(t)$
+\end_inset
+
+的三个分量函数
+\begin_inset Formula $f_{1}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $f_{2}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $f_{3}(t)$
+\end_inset
+
+都在
+\begin_inset Formula $t_{0}$
+\end_inset
+
+可导.其导数 
+\begin_inset Formula 
+\[
+\boldsymbol{f'}(t_{0})=f'_{1}(t_{0})\boldsymbol{i}+f'_{2}(t_{0})\boldsymbol{j}+f'_{3}(t_{0})\boldsymbol{k},t\in D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\boldsymbol{f'}(t_{0})$
+\end_inset
+
+的几何意义为, 曲线
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\Gamma$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+在点
+\begin_inset Formula $Μ$
+\end_inset
+
+处的一个
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+切向量
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+，其指向与
+\begin_inset Formula $t$
+\end_inset
+
+的增长方向一致.
+\end_layout
+
+\begin_layout Standard
+向量值函数的导数运算法则与数量函数的导数运算法则的形式相同.
+\end_layout
+
+\begin_layout Subsection
+空间曲线的切线与法平面
+\end_layout
+
+\begin_layout Standard
+已知空间曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+的参数方程为
+\begin_inset Formula 
+\[
+\begin{cases}
+x=\varphi(t)\\
+y=\Psi(t) & t\in[\alpha,\beta]\\
+z=\omega(t)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设三个函数都在
+\begin_inset Formula $[\alpha,\beta]$
+\end_inset
+
+上可导,且三个导数不同时为零, 给定其上一点
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+, 与点
+\begin_inset Formula $Μ$
+\end_inset
+
+对应的参数为
+\begin_inset Formula $t_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+从而曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+在点
+\begin_inset Formula $M$
+\end_inset
+
+处的
+\series bold
+切线方程
+\series default
+为
+\begin_inset Formula 
+\[
+\frac{x-x_{0}}{\varphi'(t_{0})}=\frac{y-y_{0}}{\Psi'(t_{0})}=\frac{z-z_{0}}{\omega'(t_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通过点
+\begin_inset Formula $M$
+\end_inset
+
+且与切线垂直的平面称为曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+在点
+\begin_inset Formula $M$
+\end_inset
+
+处的法平面, 它是通过点
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+且以
+\begin_inset Formula $T=f'(t_{0})$
+\end_inset
+
+为法向量的平面, 因此
+\series bold
+法平面方程
+\series default
+为
+\begin_inset Formula 
+\[
+\varphi'(t_{0})(x-x_{0})+\Psi'(t_{0})(y-y_{0})+\omega'(t_{0})(z-z_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+曲面的切平面与法线
+\end_layout
+
+\begin_layout Standard
+给定一曲面
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+, 
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+, 函数
+\begin_inset Formula $F(x,y,z)=0$
+\end_inset
+
+ 的偏导数在该点连续且不同时为零.
+ 在曲面上, 通过点
+\begin_inset Formula $M$
+\end_inset
+
+任意引一条曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, 设
+\begin_inset Formula $\Gamma$
+\end_inset
+
+的参数方程为
+\begin_inset Formula 
+\[
+\begin{cases}
+x=\varphi(t)\\
+y=\Psi(t) & t\in[\alpha,\beta]\\
+z=\omega(t)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t=t_{0}$
+\end_inset
+
+对应于点
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+且
+\begin_inset Formula $\varphi'(t_{0})$
+\end_inset
+
+,
+\begin_inset Formula $\Psi'(t_{0})$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\omega'(t_{0})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+不全为零.
+\end_layout
+
+\begin_layout Standard
+可得曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+的切线方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x-x_{0}}{\varphi'(t_{0})}=\frac{y-y_{0}}{\Psi'(t_{0})}=\frac{z-z_{0}}{\omega'(t_{0})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+证明: 在曲面上通过点M的任何曲线, 它们在点M处的切线都在同一个平面上(这些曲线点M处必须具有切线).
+\end_layout
+
+\begin_layout Standard
+因为曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+完全在曲面上, 所以有恒等式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F[\varphi(t),\Psi(t),\omega(t)]\equiv0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+又因为
+\begin_inset Formula $F(x,y,z)$
+\end_inset
+
+在点
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+处有连续偏导数，且
+\begin_inset Formula $\varphi'(t_{0})$
+\end_inset
+
+,
+\begin_inset Formula $\Psi'(t_{0})$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\omega'(t_{0})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+存在, 所以这恒等式左边的复合函数在
+\begin_inset Formula $t=t_{0}$
+\end_inset
+
+时有全导数, 且这全导数等于零:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left.\frac{d}{dt}F[\varphi(t),\Psi(t),\omega(t)]\right|_{t=t_{0}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{x}(x_{0},y_{0},z_{0})\varphi'(t_{0})+F_{y}(x_{0},y_{0},z_{0})\Psi'(t_{0})+F_{z}(x_{0},y_{0},z_{0})\omega'(t_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+引入向量
+\begin_inset Formula 
+\[
+\boldsymbol{n}=(F_{x}(x_{0},y_{0},z_{0}),F_{y}(x_{0},y_{0},z_{0}),F_{z}(x_{0},y_{0},z_{0}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则证明曲线
+\begin_inset Formula $\Gamma$
+\end_inset
+
+在点Μ处的切向量
+\begin_inset Formula $\boldsymbol{T}=(\varphi'(t_{0}),\Psi'(t_{0}),\omega'(t_{0}))$
+\end_inset
+
+ 与向量
+\begin_inset Formula $\boldsymbol{n}$
+\end_inset
+
+垂直.
+ M的切线都与同一个向量n垂直，所以曲面上通过点
+\begin_inset Formula $M$
+\end_inset
+
+的一切曲线在点
+\begin_inset Formula $M$
+\end_inset
+
+的切线都在同一个平面上.
+ 这个平面称为曲面在点
+\begin_inset Formula $M$
+\end_inset
+
+的
+\series bold
+切平面
+\series default
+, 方程是
+\begin_inset Formula 
+\[
+F_{x}(x_{0},y_{0},z_{0})(x-x_{0})+F_{y}(x_{0},y_{0},z_{0})(y-y_{0})+F_{z}(x_{0},y_{0},z_{0})(z-z_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通过点
+\begin_inset Formula $M(x_{0},y_{0},z_{0})$
+\end_inset
+
+且垂直于切平面的直线称为曲面在该点的
+\series bold
+法线
+\series default
+, 法线方程是 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x-x_{0}}{F_{x}(x_{0},y_{0},z_{0})}=\frac{y-y_{0}}{F_{y}(x_{0},y_{0},z_{0})}=\frac{z-z_{0}}{F_{z}(x_{0},y_{0},z_{0})}
+\]
+
+\end_inset
+
+垂直于曲面上切平面的向量称为曲面的法向量.
+ 
+\begin_inset Formula 
+\[
+\boldsymbol{n}=(F_{x}(x_{0},y_{0},z_{0}),F_{y}(x_{0},y_{0},z_{0}),F_{z}(x_{0},y_{0},z_{0}))
+\]
+
+\end_inset
+
+就是曲面在点
+\begin_inset Formula $M$
+\end_inset
+
+处的一个法向量.
+ 
+\end_layout
+
+\begin_layout Section
+方向导数与梯度
 \end_layout
 
 \begin_layout Chapter
 无穷级数
-\end_layout
-
-\begin_layout Chapter
-标量 
-\end_layout
-
-\begin_layout Standard
-标量(英语：scalar), 又称纯量, 是只有大小、没有方向、可用实数表示的一个量.
- 实际上标量就是实数, "标量”这个称法只是为了区别于向量.
- 
-\end_layout
-
-\begin_layout Standard
-标量可以是负数, 例如温度低于冰点.
- 
-\end_layout
-
-\begin_layout Standard
-与之相对, 向量(又称矢量)既有大小, 又有方向.
- 
-\end_layout
-
-\begin_layout Standard
-在物理学中, 标量是在坐标变换下保持不变的物理量.
- 例如, 欧几里得空间中两点间的距离在坐标变换下保持不变, 相对论四维时空中时空间隔在坐标变换下保持不变.
- 与此相对的矢量, 其分量在不同的坐标系中有不同的值, 例如速度.
- 标量可被用作定义向量空间.
- 
 \end_layout
 
 \begin_layout Chapter
