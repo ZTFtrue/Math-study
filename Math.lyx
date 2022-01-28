@@ -33916,6 +33916,10 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 基本积分公式 
 \end_layout
 
+\begin_layout Standard
+微分和积分是互逆关系,可以由基本初导函数的求导公式推导.
+\end_layout
+
 \begin_layout Subsubsection
 积分表
 \end_layout
@@ -33929,27 +33933,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Subsubsection
-第一类换元法
-\end_layout
-
-\begin_layout Standard
-设
-\begin_inset Formula $f(u)$
-\end_inset
-
-具有原函数 
-\begin_inset Formula $u=φ(x)$
-\end_inset
-
- 可导，则有换元公式
-\begin_inset Formula 
-\[
-\int f[φ(x)]φ'(x)dx=[\int f(u)du]_{u=\varphi(x)}
-\]
-
-\end_inset
-
-
+第一换元法(凑微分法)
 \end_layout
 
 \begin_layout Standard
@@ -34063,7 +34047,7 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \end_layout
 
 \begin_layout Subsubsection
-第二类换元法
+第二换元法
 \end_layout
 
 \begin_layout Standard
@@ -34127,10 +34111,6 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \end_inset
 
 的反函数.
-\end_layout
-
-\begin_layout Subsection
-凑微分法 
 \end_layout
 
 \begin_layout Subsection
