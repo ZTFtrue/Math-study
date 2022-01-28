@@ -30236,11 +30236,19 @@ f_{y}^{'}(x_{0},y_{0})=0
 \right\} $
 \end_inset
 
-的点(x,y)称为二元函数f(x,y)的驻点.
+的点(x,y)称为二元函数f(x,y)的
+\series bold
+驻点
+\series default
+.
 \end_layout
 
 \begin_layout Standard
-从定理可知,具有偏导数的函数的极值点必定是驻点,但函数的驻点不一定是极值点.
+从定理可知,具有偏导数的函数的极值点必定是驻点,但函数的驻点不一定是
+\series bold
+极值点
+\series default
+.
 \end_layout
 
 \begin_layout Theorem
@@ -30593,6 +30601,140 @@ F'_{\lambda}=x+y-2=0,
 \end_inset
 
 最大值时x的值.
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+最小二乘法与极值
+\end_layout
+
+\begin_layout Standard
+根据统计得到两个具有线性相关关系的变量的一组数据:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x_{1},y_{1}),(x_{2},y_{2}),\cdots,(x_{n},y_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+找出直线
+\begin_inset Formula $y=bx+a$
+\end_inset
+
+与点的距离.
+ 由于最短距离计算较为复杂, 我们可以用点
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+与这条直线上横坐标为的点
+\begin_inset Formula $x_{i}$
+\end_inset
+
+之间的距离来刻画点
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+到直线的远近,即用
+\begin_inset Formula 
+\[
+|y_{i}-(bx_{i}+a)|(i=1,2,3,\cdots,n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+简单一点
+\begin_inset Formula $M=(y_{1}-bx_{1}-a)^{2}+(y_{2}-bx_{2}-a)^{2}+\cdots+(y_{n}-bx_{n}-a)^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+这种根据偏差的平方和为最小的条件来选择常数
+\begin_inset Formula $a$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+的方法叫做
+\series bold
+最小二乘法
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+经验公式
+\begin_inset Formula $y=at+b$
+\end_inset
+
+中, 
+\begin_inset Formula $α$
+\end_inset
+
+和
+\begin_inset Formula $b$
+\end_inset
+
+符合什么条件时, 可以使上述的M为最小.
+ 如果把
+\begin_inset Formula $M$
+\end_inset
+
+看成与自变量
+\begin_inset Formula $a$
+\end_inset
+
+和
+\begin_inset Formula $b$
+\end_inset
+
+相对应的
+\series bold
+因变量
+\series default
+，那么问题就可归结为求函数
+\begin_inset Formula $M=M(a,b)$
+\end_inset
+
+在哪些点处取得最小值.
+ 上 述问题可以通过求方程组
+\begin_inset Formula 
+\[
+\begin{cases}
+M_{a}(a,b)=0\\
+M_{b}(a,b)=0
+\end{cases}
+\]
+
+\end_inset
+
+ 的解来解决，即令
+\begin_inset Formula 
+\[
+\begin{cases}
+\frac{\partial M}{\partial a}=-2\stackrel[i=0]{n}{\sum}[y_{i}-(at_{i}+b)]t_{i}=0\\
+\frac{\partial M}{\partial b}=-2\stackrel[i=0]{n}{\sum}[y_{i}-(at_{i}+b)]=0
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -31564,7 +31706,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 有一块正方形的金属片，它的边长原来是3，受热后增加了 ，问这块金属片的面积增加了多少?
 \end_layout
 
@@ -33507,10 +33649,14 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_inset
 
 处的
+\series bold
+
 \begin_inset Formula $n$
 \end_inset
 
-阶泰勒展开公式。这个公式只对
+阶泰勒展开公式
+\series default
+。这个公式只对
 \begin_inset Formula $0$
 \end_inset
 
@@ -33671,6 +33817,10 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+二元函数的泰勒公式
 \end_layout
 
 \begin_layout Chapter
@@ -36314,7 +36464,11 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 \end_layout
 
 \begin_layout Section
-二重积分 
+重积分
+\end_layout
+
+\begin_layout Subsection
+二重积分
 \end_layout
 
 \begin_layout Section
@@ -40770,6 +40924,410 @@ F_{x}(x_{0},y_{0},z_{0})(x-x_{0})+F_{y}(x_{0},y_{0},z_{0})(y-y_{0})+F_{z}(x_{0},
 
 \begin_layout Section
 方向导数与梯度
+\end_layout
+
+\begin_layout Subsection
+方向导数
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $l$
+\end_inset
+
+是
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上以
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+为始点的一条射线, 
+\begin_inset Formula $e_{i}=(\cos\alpha,\cos\beta)$
+\end_inset
+
+是与
+\begin_inset Formula $l$
+\end_inset
+
+同方向的单位向量.
+ 射线
+\begin_inset Formula $l$
+\end_inset
+
+的参数方程为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x=x_{0}+t\cos(\alpha)\\
+y=y_{0}+t\cos(\beta)
+\end{cases}(t\geqslant0)
+\]
+
+\end_inset
+
+设函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+的某个邻域
+\begin_inset Formula $U(P_{0})$
+\end_inset
+
+内有定义, 
+\begin_inset Formula $P(x_{0}+t\cos\alpha,y_{0}+t\cos\beta)$
+\end_inset
+
+ 为
+\begin_inset Formula $l$
+\end_inset
+
+上另一点, 且 
+\begin_inset Formula $P\in U(P_{0})$
+\end_inset
+
+ .
+ 如果函数增量
+\begin_inset Formula $f(x_{0}+t\cos\alpha,y_{0}+t\cos\beta)-f(x_{0},y_{0})$
+\end_inset
+
+与
+\begin_inset Formula $P$
+\end_inset
+
+到
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ 的距离
+\begin_inset Formula $|PP_{0}|=t$
+\end_inset
+
+的比值
+\begin_inset Formula 
+\[
+\frac{f(x_{0}+t\cos\alpha,y_{0}+t\cos\beta)-f(x_{0},y_{0})}{t}
+\]
+
+\end_inset
+
+当
+\begin_inset Formula $P$
+\end_inset
+
+沿着
+\begin_inset Formula $l$
+\end_inset
+
+趋于
+\begin_inset Formula $P_{0}$
+\end_inset
+
+(即
+\begin_inset Formula $t\rightarrow0$
+\end_inset
+
+)时的极限存在, 那么称此极限为函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}$
+\end_inset
+
+沿方向
+\begin_inset Formula $l$
+\end_inset
+
+的
+\series bold
+方向导数
+\series default
+(变化率)，记作
+\begin_inset Formula $\left.\frac{\partial f}{\partial l}\right|_{(x_{0},y_{0})}$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+\left.\frac{\partial f}{\partial l}\right|_{(x_{0},y_{0})}=\underset{t\rightarrow0}{\lim}\frac{f(x_{0}+t\cos\alpha,y_{0}+t\cos\beta)-f(x_{0},y_{0})}{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+可微分, 那么函数在该点沿任一方向的方向导数存在，且有
+\begin_inset Formula 
+\[
+\left.\frac{\partial f}{\partial l}\right|_{(x_{0},y_{0})}=f(x_{0},y_{0})\cos\alpha-f(x_{0},y_{0})\cos\beta
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $\cos\alpha$
+\end_inset
+
+和
+\begin_inset Formula $\cos\beta$
+\end_inset
+
+是方向
+\begin_inset Formula $l$
+\end_inset
+
+的方向余弦.
+ 
+\end_layout
+
+\begin_layout Subsection
+梯度
+\end_layout
+
+\begin_layout Standard
+在二元函数的情形, 设函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在平面区域
+\begin_inset Formula $D$
+\end_inset
+
+内具有一阶连续偏导数, 则对于每一点
+\begin_inset Formula $P_{0}(x_{0},y_{0})\in D$
+\end_inset
+
+ 都可定出一个向量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{x}(x_{0},y_{0})\boldsymbol{i}+f_{y}(x_{0},y_{0})\boldsymbol{j}
+\]
+
+\end_inset
+
+这向量称为函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+的
+\series bold
+梯度
+\series default
+，记作
+\begin_inset Formula $\text{\textbf{grad}}f(x_{0},y_{0})$
+\end_inset
+
+或
+\begin_inset Formula $\nabla f(x_{0},y_{0})$
+\end_inset
+
+,即 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{\textbf{grad}}f(x_{0},y_{0})=\nabla f(x_{0},y_{0})=f_{x}(x_{0},y_{0})\boldsymbol{i}+f_{y}(x_{0},y_{0})\boldsymbol{j}
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $\nabla=\frac{\partial}{\partial x}\boldsymbol{i}+\frac{\partial}{\partial y}\boldsymbol{j}$
+\end_inset
+
+称为(二维的)
+\series bold
+向量微分算子
+\series default
+或
+\series bold
+Nabla算子
+\series default
+, 
+\begin_inset Formula $\nabla f=\frac{\partial}{\partial x}\boldsymbol{i}+\frac{\partial}{\partial y}\boldsymbol{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在点
+\begin_inset Formula $P_{0}(x_{0},y_{0})$
+\end_inset
+
+可微分, 
+\begin_inset Formula $e_{i}=(\cos\alpha,\cos\beta)$
+\end_inset
+
+是与方向
+\begin_inset Formula $l$
+\end_inset
+
+同向的单位向量, 那么
+\begin_inset Formula 
+\begin{align*}
+\left.\frac{\partial f}{\partial l}\right|_{(x_{0},y_{0})} & =f_{x}(x_{0},y_{0})\cos\alpha+f_{y}(x_{0},y_{0})\cos\beta\\
+ & =\text{\textbf{grad}}f(x_{0},y_{0})\cdot\boldsymbol{e_{i}}\\
+ & =|\text{\textbf{grad}}f(x_{0},y_{0})|\cos\theta
+\end{align*}
+
+\end_inset
+
+ 其中
+\begin_inset Formula $\theta=(\text{\textbf{grad}}f(x_{0},y_{0})\cdot\boldsymbol{e_{i}})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+这一关系式表明了函数在一点的梯度与函数在这点的方向导数间的关系.
+\end_layout
+
+\begin_layout Subsubsection
+数量场与向量场
+\end_layout
+
+\begin_layout Standard
+如果对于空间区域
+\begin_inset Formula $G$
+\end_inset
+
+内的任一点
+\begin_inset Formula $M$
+\end_inset
+
+,都有一个确定的数量
+\begin_inset Formula $f(M)$
+\end_inset
+
+, 那么称在这空间区域
+\begin_inset Formula $G$
+\end_inset
+
+内确定了一个
+\series bold
+数量场
+\series default
+(例如温度场、密度场等).
+ 一个数量场可用一个数量函数
+\begin_inset Formula $f(M)$
+\end_inset
+
+来确定.
+ 
+\end_layout
+
+\begin_layout Standard
+如果与点
+\begin_inset Formula $M$
+\end_inset
+
+相对应的是一个向量
+\begin_inset Formula $F(M)$
+\end_inset
+
+,那么称在这空间区域内确定了一个
+\series bold
+向量场
+\series default
+(例如力场、速度场等).
+ 一个向量场可用一个向量值函数
+\begin_inset Formula $F(M)$
+\end_inset
+
+来确定，而 
+\begin_inset Formula 
+\[
+\boldsymbol{F}(M)=P(M)\boldsymbol{i}+Q(M)\boldsymbol{j}+R(M)\boldsymbol{k}
+\]
+
+\end_inset
+
+其中
+\begin_inset Formula $P(M)$
+\end_inset
+
+,
+\begin_inset Formula $Q(M)$
+\end_inset
+
+,
+\begin_inset Formula $R(M)$
+\end_inset
+
+是点
+\begin_inset Formula $M$
+\end_inset
+
+的数量函数.
+ 若向量场
+\begin_inset Formula $F(M)$
+\end_inset
+
+是某个数量函数
+\begin_inset Formula $f(M)$
+\end_inset
+
+的梯度，则称
+\begin_inset Formula $f(M)$
+\end_inset
+
+是向量场
+\begin_inset Formula $F(M)$
+\end_inset
+
+的 一个势函数，并称向量场
+\begin_inset Formula $F(M)$
+\end_inset
+
+为势场.
+\end_layout
+
+\begin_layout Standard
+由此可知，由数量函数
+\begin_inset Formula $f(M)$
+\end_inset
+
+产生的梯度场
+\begin_inset Formula $\text{\textbf{grad}}f(M)$
+\end_inset
+
+是一个势场.
+ 但需注意，任意一个向量场并不一定都是势场，因为它不一定是某个数量函数的梯度.
+ 
 \end_layout
 
 \begin_layout Chapter
