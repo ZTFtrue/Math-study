@@ -34201,6 +34201,40 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \end_layout
 
 \begin_layout Standard
+第一换元法是将被积表达式“凑”成
+\begin_inset Formula $f(\varphi(x))d\varphi(x)$
+\end_inset
+
+的形式, 从而找到新的积分变量
+\begin_inset Formula $u=\varphi(x)$
+\end_inset
+
+,但是对于有些被积函数需要作另一种方式的换元,即令 
+\begin_inset Formula $x=\varphi(t)$
+\end_inset
+
+,这样
+\begin_inset Formula $dx=\varphi'(t)dt$
+\end_inset
+
+, 被积表达式 
+\begin_inset Formula $f(x)dx$
+\end_inset
+
+ 改写为变量
+\begin_inset Formula $t$
+\end_inset
+
+的形式
+\begin_inset Formula $f[\varphi(t)]\varphi'(t)dt$
+\end_inset
+
+,此时,为新的积分变量且容易积出结果.
+ 这种代换方法称为第二换元法.
+ 对于第二换元法,这里介绍和三角换元 两种情形.
+\end_layout
+
+\begin_layout Standard
 设 
 \begin_inset Formula $x=\psi(t)$
 \end_inset
@@ -34243,7 +34277,7 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
  具有原函数，则有换元公式
 \begin_inset Formula 
 \[
-\int f(x)dx=\left[\int f[\psi(t)]\psi'(t)dt\right]_{t=\psi^{-1}(x)}
+\int f(x)dx=\left[\int f[\varphi(t)]\varphi'(t)dt\right]_{t=\varphi^{-1}(x)}
 \]
 
 \end_inset
@@ -34253,14 +34287,51 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 
 \begin_layout Standard
 其中 
-\begin_inset Formula $\psi^{-1}(x)$
+\begin_inset Formula $\varphi^{-1}(x)$
 \end_inset
 
 是
-\begin_inset Formula $x=\psi(t)$
+\begin_inset Formula $x=\varphi(t)$
 \end_inset
 
 的反函数.
+\end_layout
+
+\begin_layout Paragraph
+简单根式换元
+\end_layout
+
+\begin_layout Standard
+一般地,我们将形如
+\begin_inset Formula $\sqrt[n]{ax+b}\,(n\geqslant2)$
+\end_inset
+
+的根式称为简单根式.
+ 当被积函数含有简单根式时,可作代换
+\begin_inset Formula $t=\sqrt[n]{ax+b}$
+\end_inset
+
+,即
+\begin_inset Formula $x=\frac{t^{n}-b}{a}\,(a\neq0)$
+\end_inset
+
+, 从而去掉根式, 再用直接积分法或凑微分法处理积分即可.这种代换方法通常称为
+\series bold
+简单根式换元
+\series default
+或
+\series bold
+根式换元
+\series default
+,
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int\frac{\sqrt{x+1}}{x}dx$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
