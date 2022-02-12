@@ -34082,6 +34082,10 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 换元积分法
 \end_layout
 
+\begin_layout Standard
+根据复合函数的微分法则推导.
+\end_layout
+
 \begin_layout Subsubsection
 第一换元法(凑微分法)
 \end_layout
@@ -34334,8 +34338,257 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 
 \end_layout
 
+\begin_layout Solution
+设
+\begin_inset Formula $t=\sqrt{x+1}$
+\end_inset
+
+, 则
+\begin_inset Formula $x=t^{2}-1$
+\end_inset
+
+,且
+\begin_inset Formula $d(x)=d(t^{2}-1)=2tdt$
+\end_inset
+
+, 于是
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int\frac{\sqrt{x+1}}{x}dx & =\int\frac{t}{t^{2}-1}2tdt=\int\frac{2t^{2}-2+2}{t^{2}-1}dt=\int(2+\frac{2}{t^{2}-1})dt\\
+ & =2t+\int(\frac{1}{t-1}-\frac{1}{t+1})dt\\
+ & =2t+|[\ln(t-1)-\ln(t+1)]|+C=2t+\ln\left|\frac{t-1}{t+1}\right|+C\\
+ & \overset{t=\sqrt{x+1}}{\implies}=2\sqrt{x+1}+\ln\left|\frac{\sqrt{x+1}-1}{\sqrt{x+1}+1}\right|+C
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int\frac{dx}{\sqrt{x}+\sqrt[3]{x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+被积函数有两个简单根式, 为引入一个变量能同时换掉两个根式,我们令
+\begin_inset Formula $t=\sqrt[6]{x}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Solution
+则
+\begin_inset Formula $x=t^{6}$
+\end_inset
+
+,且
+\begin_inset Formula $dx=6t^{5}dt$
+\end_inset
+
+,于是
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int\frac{dx}{\sqrt{x}+\sqrt[3]{x}} & =\int\frac{6t^{5}dt}{t^{3}+t^{2}}=6\int\frac{t^{3}dt}{t+1}\\
+ & =6\int\frac{t^{3}dt}{t+1}=6\int\frac{t^{3}+1-1}{t+1}dt\\
+ & =6\int(\frac{(t^{2}-t+1)(t+1)-1}{t+1})dt\\
+ & =6\int(t^{2}-t+1-\frac{1}{t+1})dt\\
+ & =6\times\frac{1}{3}t^{3}+6\times\frac{1}{2}t^{2}+6t-6\ln|t+1|+C\\
+\overset{t=\sqrt[6]{x}}{\implies} & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+引入简单根式换元实际上是将被积函数中的根式化为有理式, 但有时候直接用根式换元并不奏效, 形如
+\begin_inset Formula $\sqrt{a^{2}-x^{2}}$
+\end_inset
+
+,
+\begin_inset Formula $\sqrt{a^{2}+x^{2}}$
+\end_inset
+
+的二次根式, 如果直接用根式换元并不起作用.
+\end_layout
+
+\begin_layout Standard
+此时,我们可借助于三角函数, 分别用
+\begin_inset Formula $x=a\sin t$
+\end_inset
+
+, 
+\begin_inset Formula $x=a\tan t$
+\end_inset
+
+,
+\begin_inset Formula $x=a\sec t$
+\end_inset
+
+将这些表达式的二次根式去掉,
+\end_layout
+
+\begin_layout Standard
+这种代换我们通常称为
+\series bold
+三角换元
+\series default
+, 由于计算不定积分实际上只要求出被积函数的一个原函数再加上积分常数
+\begin_inset Formula $C$
+\end_inset
+
+即可, 因而在三角换元中,我们总将三角函数的角度设定为
+\series bold
+锐角
+\series default
+, 也就是说在开方运算时
+\series bold
+不必加绝对值号
+\series default
+.
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int\sqrt{a^{2}-x^{2}}dx$
+\end_inset
+
+
+\begin_inset Formula $(a>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $x=a\sin t$
+\end_inset
+
+ ,则
+\begin_inset Formula $dx=a\cos tdt$
+\end_inset
+
+ , 于是(
+\begin_inset Formula $\sin^{2}x+\cos^{2}x=1$
+\end_inset
+
+ )
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int\sqrt{a^{2}-x^{2}}dx & =\int\sqrt{a^{2}-a^{2}\sin^{2}t}\cdot a\cos tdt=\int a\sqrt{(1-\sin^{2}t)}\cdot a\cos tdt\\
+ & =\int a\cos t\cdot a\cos tdt=a^{2}\int\cos^{2}tdt\\
+ & =a^{2}\int\frac{1+\cos2t}{2}dt\\
+ & =\frac{1}{2}a^{2}t+\frac{1}{4}a^{2}\sin2t+C\\
+ & =\frac{1}{2}a^{2}t+\frac{1}{2}a^{2}\sin t\cos t+C
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+为能方便进行变量回代, 可根据
+\begin_inset Formula $x=a\sin t$
+\end_inset
+
+ 作一辅助直角三角形, 利用边角关系实现回代(这种回代方法, 我们通常称为画直角三角形回代法)。
+\end_layout
+
+\begin_layout Solution
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/不定积分-三角回代法.jpg
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+三角形回代法
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由图
+\begin_inset Formula $\sin t=\frac{x}{a}$
+\end_inset
+
+ ,
+\begin_inset Formula $\cos t=\frac{\sqrt{a^{2}-x^{2}}}{a}$
+\end_inset
+
+, 于是 
+\begin_inset Formula $\int\sqrt{a^{2}-x^{2}}dx=\frac{1}{2}a^{2}\arcsin\frac{x}{a}+\frac{x\sqrt{a^{2}-x^{2}}}{2}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+需要指出的是,两种代换的本质是用换元的思想将被积函数中
+\series bold
+比较难处理的项代换掉
+\series default
+, 我们不能拘泥于两种代换使用时对被积函数形式的规定.
+\end_layout
+
 \begin_layout Subsection
 分部积分法
+\end_layout
+
+\begin_layout Standard
+当被积函数是两个不同类型的函数的乘积时,如
+\begin_inset Formula $\int xe^{x}dx$
+\end_inset
+
+等, 往往用下面的分部积分法解決.
+ 
+\end_layout
+
+\begin_layout Standard
+分部积分法是与两个函数乘积相对应的,也是一种基本积分方法
 \end_layout
 
 \begin_layout Standard
@@ -34398,6 +34651,203 @@ uv'=(uv)'-u'v
 \end_inset
 
 
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int x\cos xdx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int x\cos xdx=\int xd(\sin x)$
+\end_inset
+
+,设
+\begin_inset Formula $u=x$
+\end_inset
+
+,
+\begin_inset Formula $v=\sin x$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\[
+\int x\cos xdx=\int xd(\sin x)=x\sin x-\int\sin xdx=x\sin x+\cos x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+本题如这样变化: 
+\begin_inset Formula $\int x\cos xdx=\frac{1}{2}\int\cos xdx^{2}$
+\end_inset
+
+,即
+\begin_inset Formula $u=\cos x$
+\end_inset
+
+,
+\begin_inset Formula $v=x^{2}$
+\end_inset
+
+.
+ 则由分部积分公式有
+\begin_inset Formula 
+\[
+\int x\cos xdx=\frac{1}{2}\int\cos xdx^{2}=\frac{1}{2}(x^{2}\cos x-\int x^{2}\sin xdx)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+反而比原来的积分更难求了, 因此, 在使用分部积分法时,确定
+\begin_inset Formula $u$
+\end_inset
+
+和
+\begin_inset Formula $v$
+\end_inset
+
+非常关键.
+ 一般地, 
+\begin_inset Formula $v$
+\end_inset
+
+要容易求得(用凑微分法), 并且
+\begin_inset Formula $\int vdu$
+\end_inset
+
+要比
+\begin_inset Formula $\int udv$
+\end_inset
+
+容易积分
+\end_layout
+
+\begin_layout Standard
+为更便捷准确地选取恰当的 
+\begin_inset Formula $u$
+\end_inset
+
+和
+\begin_inset Formula $v$
+\end_inset
+
+,我们指出:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+当被积函数为幂函数与三角函数(或指数函数)的乘积时, 选取幂函数作为
+\begin_inset Formula $u$
+\end_inset
+
+,将三角函数(或指数函数)凑到“d”的后面选作v.
+ 
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int x^{2}e^{x}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int x^{2}e^{x}dx=\int x^{2}de^{x}$
+\end_inset
+
+此时取
+\begin_inset Formula $u=x^{2}$
+\end_inset
+
+,
+\begin_inset Formula $v=e^{x}$
+\end_inset
+
+ ,于是
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int x^{2}e^{x}dx & =\int x^{2}de^{x}=x^{2}e^{x}-\int e^{x}dxx^{2}\\
+ & =x^{2}e^{x}-2\int xe^{x}dx\\
+ & =x^{2}e^{x}-2(xe^{x}-\int e^{x}dx)\\
+ & =x^{2}e^{x}-2xe^{x}+2e^{x}+C\\
+ & =(x^{2}-2x+2)e^{x}+C
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+该例表明,有时要多次使用分部积分法才能求出结果,一般地,幂函数最高次有几次,就要作几次分部积分.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+当被积函数为幂函数与对数函数(或反三角函数)的乘积时, 选取对数函数(或反三角函 数)作为u,将幂函数凑到“
+\begin_inset Formula $d$
+\end_inset
+
+”的后面选作
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int x\ln xdx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\int x\ln xdx & =\frac{1}{2}\int\ln xdx^{2}=\frac{1}{2}(x^{2}\ln x-\int x^{2}d\ln x)\\
+ & =\frac{1}{2}(x^{2}\ln x-\int x^{2}d\ln x)=\frac{1}{2}(x^{2}\ln xe-\int xdx)\\
+ & =\frac{1}{2}(x^{2}\ln x-\frac{1}{2}x^{2})+C
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有些不定积分如
+\begin_inset Formula $\int e^{-x^{2}}dx$
+\end_inset
+
+,
+\begin_inset Formula $\int\frac{\sin x}{x}dx$
+\end_inset
+
+,
+\begin_inset Formula $\int\frac{\ln x}{x}dx$
+\end_inset
+
+等,虽然这些不定积分都存在, 但是不能用初等函数表示这些被积函数的原函数, 我们称这种情况为“不可积”.
 \end_layout
 
 \begin_layout Section
@@ -34596,7 +35046,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 采取何种分割方法及
-\begin_inset Formula $\xi$
+\begin_inset Formula $\xi_{i}$
 \end_inset
 
 如何选取,当
@@ -34717,7 +35167,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 .
- 定积分的值只与被积函数及积分区间有关，而与积分变量的记 法无关.
+ 定积分的值只与被积函数及积分区间有关，而与积分变量的记法无关.
 \end_layout
 
 \begin_layout Section
