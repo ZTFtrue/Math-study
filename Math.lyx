@@ -35577,7 +35577,11 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上连续, 那么积分上限的函数
+上连续, 那么
+\series bold
+积分上限
+\series default
+的函数
 \begin_inset Formula 
 \[
 \varPhi(x)=\int_{a}^{x}f(t)dt
@@ -35599,7 +35603,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_layout Theorem
 \begin_inset Formula 
 \[
-\varPhi'(x)=\frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)
+\varPhi'(x)=(\int_{a}^{x}f(t)dt)'=f(x)
 \]
 
 \end_inset
@@ -35635,7 +35639,30 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $[a,b]$
 \end_inset
 
-上的一个原函数
+上的一个原函数.
+ 
+\end_layout
+
+\begin_layout Standard
+由中
+\begin_inset Formula $\varPhi'(x)=f(x)$
+\end_inset
+
+知, 
+\begin_inset Formula $\varPhi'(x)$
+\end_inset
+
+是
+\begin_inset Formula $f(x)$
+\end_inset
+
+的一个原函数.
+ 因此, 该定理也称作
+\series bold
+原函数存在定理
+\series default
+, 也即连续函数的原函数一定存在.
+ 连续函数的变上限积分函数的导数就是被积函数 
 \end_layout
 
 \begin_layout Proof
@@ -35857,7 +35884,53 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $\varphi(\beta)=b$
 \end_inset
 
-; 
+, 且当
+\begin_inset Formula $t$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[\alpha,\beta]$
+\end_inset
+
+(或
+\begin_inset Formula $[\beta,\alpha]$
+\end_inset
+
+)上变化时,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x=\varphi(t)$
+\end_inset
+
+的值在
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上变化
 \end_layout
 
 \begin_layout Enumerate
@@ -35894,11 +35967,11 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $[\alpha,\beta]$
 \end_inset
 
-上具有连续导数.
- 则有 
+上单调且具有连续导数.
+ 则有
 \begin_inset Formula 
 \[
-\int_{b}^{a}f(x)dx=\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
+\int_{b}^{a}f(x)dx\overset{x=\varphi(t)}{=}\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
 \]
 
 \end_inset
@@ -35992,6 +36065,99 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \[
 \int_{b}^{a}f(x)dx=\varPhi(\beta)-\varPhi(\alpha)=F(a)-F(b)=\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\int_{0}^{4}\frac{x}{\sqrt{2x+1}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $t=\sqrt{2x+1}$
+\end_inset
+
+, 即
+\begin_inset Formula $x=\frac{1}{2}(t^{2}-1)$
+\end_inset
+
+, 则
+\begin_inset Formula $dx=tdt$
+\end_inset
+
+, 且当
+\begin_inset Formula $x=0$
+\end_inset
+
+时
+\begin_inset Formula $t=1$
+\end_inset
+
+, 当
+\begin_inset Formula $x=4$
+\end_inset
+
+时
+\begin_inset Formula $t=3$
+\end_inset
+
+.
+ 于是
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{4}\frac{x}{\sqrt{2x+1}}dx & =\int_{1}^{3}\frac{\frac{1}{2}(t^{2}-1)}{t}tdt\\
+ & =\frac{1}{2}\int_{1}^{3}(t^{2}-1)dt\\
+ & =\frac{1}{2}(\frac{1}{3}t^{3}-t)|_{1}^{3}\\
+ & =\frac{1}{2}[9-3-(\frac{1}{3}-1)]|_{1}^{3}\\
+ & =\frac{10}{3}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+证
+\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}f(\sin x)dx=\int_{0}^{\frac{\pi}{2}}f(\cos x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $x=\frac{\pi}{2}-t$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{\frac{\pi}{2}}f(\sin x)dx & =\int_{\frac{\pi}{2}}^{0}f(\sin(\frac{\pi}{2}-t))d(\frac{\pi}{2}-t)\\
+ & =-\int_{0}^{\frac{\pi}{2}}f(\cos t)dt\\
+ & =\int_{0}^{\frac{\pi}{2}}f(\cos t)dt\\
+ & =\int_{0}^{\frac{\pi}{2}}f(\cos x)dx
+\end{align*}
 
 \end_inset
 
