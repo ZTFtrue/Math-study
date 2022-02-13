@@ -36246,11 +36246,23 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_layout
 
 \begin_layout Standard
-第一类反常积分，称为无穷积分，指积分区间的上限或下限为无穷的积分。
+第一类反常积分，称为
+\series bold
+无穷积分
+\series default
+，指积分区间的上限或下限为
+\series bold
+无穷
+\series default
+的积分。
 \end_layout
 
 \begin_layout Standard
-第二类反常积分，称为反常积分，指被积函数在积分区间中含有
+第二类反常积分，称为
+\series bold
+反常积分
+\series default
+，指被积函数在积分区间中含有
 \series bold
 不连续点
 \series default
@@ -36266,16 +36278,40 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $[a,+\infty)$
 \end_inset
 
-上连续, 如果极限
-\begin_inset Formula $\underset{t\rightarrow+\infty}{\lim}\int_{a}^{t}f(x)dx$
+上连续, 取
+\begin_inset Formula $b>a$
 \end_inset
 
-存在，那么称反常积分
+ 如果极限
+\begin_inset Formula $\underset{t\rightarrow+\infty}{\lim}\int_{a}^{b}f(x)dx$
+\end_inset
+
+存在,则称此极限值为
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[a,+\infty)$
+\end_inset
+
+上的广义积分, 记为
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}f(x)dx=\lim_{b\to+\infty}\int_{a}^{b}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+此时也称反常积分
 \begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
 \end_inset
 
 收敛，并称此极限为该反常积分的值；如果极限
-\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\int_{a}^{t}f(x)dx$
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
 \end_inset
 
 不存在, 那么称反常积分
@@ -36286,14 +36322,14 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_layout
 
 \begin_layout Definition
-\begin_inset Formula ${\displaystyle \int_{1}^{\infty}\frac{1}{x}\,dx=\lim_{u\to+\infty}\int_{1}^{u}\frac{1}{x}\,dx=+\infty}$
+\begin_inset Formula ${\displaystyle \int_{1}^{+\infty}\frac{1}{x}\,dx=\lim_{u\to+\infty}\int_{1}^{u}\frac{1}{x}\,dx=+\infty}$
 \end_inset
 
 ，即发散；
 \end_layout
 
 \begin_layout Definition
-\begin_inset Formula ${\displaystyle \int_{1}^{\infty}x\sin x\,dx=\lim_{u\to+\infty}\int_{1}^{u}x\sin x\,dx}$
+\begin_inset Formula ${\displaystyle \int_{1}^{+\infty}x\sin x\,dx=\lim_{u\to+\infty}\int_{1}^{u}x\sin x\,dx}$
 \end_inset
 
  ，振动发散
@@ -36309,7 +36345,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
 上连续,任取 
-\begin_inset Formula $t<b$
+\begin_inset Formula $a<b$
 \end_inset
 
 
@@ -36324,8 +36360,12 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $(-\infty,b]$
 \end_inset
 
- 上连续, 如果极限 
-\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{t}^{b}f(x)dx$
+ 上连续, 取
+\begin_inset Formula $a<b$
+\end_inset
+
+ , 如果极限 
+\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx$
 \end_inset
 
  存在，那么称反常积分 
@@ -36333,7 +36373,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
  收敛，并称此极限为该反常积分的值；如果极限 
-\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{t}^{b}f(x)dx$
+\begin_inset Formula $\underset{t\rightarrow-\infty}{\lim}\int_{a}^{b}f(x)dx$
 \end_inset
 
  不存在, 那么称反常积分 
@@ -36343,11 +36383,27 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
  发散.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $ $
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\int_{-\infty}^{b}f(x)dx=\lim_{a\to-\infty}\int_{a}^{b}f(x)dx
+\]
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+类似地，也可以设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-\infty,+\infty]$
+\end_inset
+
+上连续
 \end_layout
 
 \begin_layout Definition
@@ -36393,7 +36449,11 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \uwave default
 \noun default
 \color inherit
- 均收敛，那么称反常积分
+ 
+\series bold
+均收敛
+\series default
+，那么称反常积分
 \begin_inset Formula $\int_{-\infty}^{+\infty}f(x)dx$
 \end_inset
 
@@ -36405,11 +36465,22 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_layout
 
 \begin_layout Definition
+\begin_inset Formula 
+\[
+\int_{-\infty}^{+\infty}f(x)dx=\int_{-\infty}^{c}f(x)dx+\int_{-\infty}^{c}f(x)dx\thinspace(c\in(-\infty,+\infty),c\text{\text{通常取0}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
 上述反常积分统称为
 \series bold
 无穷限的积分
 \series default
-.
+(无穷区间上的广义积分).
 \end_layout
 
 \begin_layout Definition
@@ -36457,6 +36528,30 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 
 \begin_layout Standard
 其它反常积分同理.
+\end_layout
+
+\begin_layout Example
+求由曲线
+\begin_inset Formula $y=\frac{1}{x^{2}}$
+\end_inset
+
+, 直线
+\begin_inset Formula $x=1$
+\end_inset
+
+,
+\begin_inset Formula $x=b(b>1)$
+\end_inset
+
+及
+\begin_inset Formula $x$
+\end_inset
+
+轴所围成的曲边梯形的面积
+\begin_inset Formula $S(b)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -36628,7 +36723,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \begin_inset Formula $\Gamma$
 \end_inset
 
-函数
+(Gamma)函数
 \end_layout
 
 \begin_layout Subsubsection
@@ -37285,16 +37380,283 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 
 \end_layout
 
-\begin_layout Subsection
-无穷区间上的广义积分
-\end_layout
-
 \begin_layout Section
 重积分
 \end_layout
 
 \begin_layout Subsection
 二重积分
+\end_layout
+
+\begin_layout Standard
+设二元函数
+\begin_inset Formula $y=f(x,y)$
+\end_inset
+
+在有界比区域
+\begin_inset Formula $D$
+\end_inset
+
+上有定义, 将区域
+\begin_inset Formula $D$
+\end_inset
+
+任意分成
+\begin_inset Formula $n$
+\end_inset
+
+个小的闭区域:
+\begin_inset Formula $\Delta\sigma_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\Delta\sigma_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\Delta\sigma_{i}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\Delta\sigma_{n}$
+\end_inset
+
+,其中 
+\begin_inset Formula $\Delta\sigma_{i}$
+\end_inset
+
+ 代表第
+\begin_inset Formula $i$
+\end_inset
+
+个小区域, 同时也代表该小区域的面积.
+\end_layout
+
+\begin_layout Standard
+在每个小区域
+\begin_inset Formula $\Delta\sigma_{i}$
+\end_inset
+
+内任取一点(
+\begin_inset Formula $\xi_{i},\eta_{i}$
+\end_inset
+
+)(
+\begin_inset Formula $i=1,2,\cdots,n$
+\end_inset
+
+), 作和式
+\begin_inset Formula 
+\[
+\stackrel[i=1]{n}{\sum}f(\xi_{i},\eta_{i})\Delta\sigma_{i}
+\]
+
+\end_inset
+
+如果当
+\begin_inset Formula $n$
+\end_inset
+
+个小闭区域的直径中的最大值
+\begin_inset Formula $\lambda\rightarrow0$
+\end_inset
+
+时, 该和式的极限存在,则称此极限值为函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在闭区域
+\begin_inset Formula $D$
+\end_inset
+
+上的二重积分, 记为
+\begin_inset Formula $\underset{D}{\iint}f(x,y)d\sigma$
+\end_inset
+
+, 即
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)d\sigma=\underset{\lambda\rightarrow0}{\lim}\stackrel[i=1]{n}{\sum}f(\xi_{i},\eta_{i})\Delta\sigma_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+称为被积函数，
+\begin_inset Formula $f(x,y)d\sigma$
+\end_inset
+
+称为被积表达式, 
+\begin_inset Formula $d\sigma$
+\end_inset
+
+称为面积元素，
+\begin_inset Formula $x,y$
+\end_inset
+
+称为积分变量, 
+\begin_inset Formula $D$
+\end_inset
+
+称为积分区域
+\end_layout
+
+\begin_layout Standard
+由二重积分的定义及前面曲顶柱体体积的求解过程知, 二重积分的几何意义比较明显: 
+\end_layout
+
+\begin_layout Standard
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+上，当
+\begin_inset Formula $f(x,y)\geqslant0$
+\end_inset
+
+时, 二重积分
+\begin_inset Formula $\iint_{D}f(x,y)d\sigma$
+\end_inset
+
+等于相应曲顶柱体的体积;当 
+\begin_inset Formula $f(x,y)<0$
+\end_inset
+
+时
+\begin_inset Formula $\iint_{D}f(x,y)d\sigma$
+\end_inset
+
+表示相应曲顶柱体体积的相反数；而当
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+在
+\begin_inset Formula $D$
+\end_inset
+
+上的值有正 有负时, 
+\begin_inset Formula $\iint_{D}f(x,y)d\sigma$
+\end_inset
+
+表示曲顶柱体体积的代数和.
+ 
+\end_layout
+
+\begin_layout Standard
+在直角坐标系下, 若用与坐标轴平行的直线来划分积分区域，则定义中的
+\begin_inset Formula $\Delta\sigma_{i}=\Delta x\cdot\Delta y$
+\end_inset
+
+, 于是
+\begin_inset Formula $d\sigma=dx\cdot dy$
+\end_inset
+
+.
+ 因此, 在直角坐标系中，二重积分可以写成
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+二重积分的性质
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+常数积分性质
+\series default
+ 如果在区域
+\begin_inset Formula $D$
+\end_inset
+
+上
+\begin_inset Formula $f(x,y)=1$
+\end_inset
+
+,则
+\begin_inset Formula $\iint_{D}1d\sigma=\iint_{D}d\sigma=S_{D}$
+\end_inset
+
+其中，S 为区域D的面积 
+\end_layout
+
+\begin_layout Standard
+该性质给出了用二重积分计算平面图形面积的一种方法.
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+线性性质
+\series default
+ 
+\begin_inset Formula $\iint_{D}[f(x,y)\pm g(x,y)]d\sigma=\iint_{D}f(x,y)d\sigma\pm\iint_{D}g(x,y)d\sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\iint_{D}kf(x,y)d\sigma=k\iint_{D}f(x,y)d\sigma$
+\end_inset
+
+ (
+\begin_inset Formula $k$
+\end_inset
+
+为常数)
+\end_layout
+
+\begin_layout Corollary
+
+\series bold
+区域可加性
+\series default
+ 若区域
+\begin_inset Formula $D$
+\end_inset
+
+分割为
+\begin_inset Formula $D_{1}$
+\end_inset
+
+与
+\begin_inset Formula $D_{2}$
+\end_inset
+
+两部分则有
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)d\sigma=\iint_{D_{1}}f(x,y)d\sigma+\iint_{D_{2}}f(x,y)d\sigma
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+除了上述几个性质以外，二重积分写定积分类似也有不等式性质、估值定理和积分中值 定理等性质.
+ 
 \end_layout
 
 \begin_layout Section
@@ -37354,7 +37716,11 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 \begin_inset Formula $x(0<x<h)$
 \end_inset
 
-的高度取厚度为dx的很薄的一层水.
+的高度取厚度为
+\begin_inset Formula $dx$
+\end_inset
+
+的很薄的一层水.
 \end_layout
 
 \begin_layout Standard
@@ -37538,7 +37904,11 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \end_layout
 
 \begin_layout Standard
-不定积分是函数(函数簇),不定积分是求被积函数
+不定积分是函数(
+\series bold
+函数簇
+\series default
+),不定积分是求被积函数
 \begin_inset Formula $f(x)$
 \end_inset
 
