@@ -35131,7 +35131,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 
 \begin_layout Standard
 由定积分的定义,面积问题可以表述如下:由曲线
-\begin_inset Formula $y=f(x)(f(x)≥)$
+\begin_inset Formula $y=f(x)(f(x)≥0)$
 \end_inset
 
 ,直线
@@ -35151,6 +35151,19 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+定积分的值在
+\begin_inset Formula $x$
+\end_inset
+
+轴上为正, 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴下为负.
 \end_layout
 
 \begin_layout Standard
@@ -35170,15 +35183,98 @@ Q(x)=Q_{1}(x)Q_{2}(x)
  定积分的值只与被积函数及积分区间有关，而与积分变量的记法无关.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $\int_{a}^{b}dx=\int_{a}^{b}1dx=$
+\end_inset
+
+高为
+\begin_inset Formula $1$
+\end_inset
+
+,底为
+\begin_inset Formula $b-a$
+\end_inset
+
+的矩形面积
+\begin_inset Formula $=b-a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{a}^{b}\sin xdx=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在对称区间
+\begin_inset Formula $[-a,a]$
+\end_inset
+
+上
+\series bold
+连续
+\series default
+, 则有
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $f(x)$
+\end_inset
+
+为奇函数, 则
+\begin_inset Formula $\int_{-a}^{a}f(x)dx=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $f(x)$
+\end_inset
+
+为奇函数, 则
+\begin_inset Formula $\int_{-a}^{a}f(x)dx=2\int_{0}^{a}f(x)dx$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 定积分的性质
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Corollary
 线性性质
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\int_{a}^{b}\left[f(x)\pm g(x)\right]dx=\int_{a}^{b}f(x)dx\pm\int_{a}^{b}g(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\int_{a}^{b}\alpha f(x)dx=\alpha\int_{a}^{b}f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\int_{a}^{b}\left[\alpha f(x)\pm\beta g(x)dx\right]=\alpha\int_{a}^{b}f(x)dx\pm\beta\int_{a}^{b}g(x)dx
+\int_{a}^{b}\left[\alpha f(x)dx\pm\beta g(x)dx\right]=\alpha\int_{a}^{b}f(x)dx\pm\beta\int_{a}^{b}g(x)dx
 \]
 
 \end_inset
@@ -35191,7 +35287,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \begin_inset Formula $\beta$
 \end_inset
 
-均为常 
+均为常数
 \end_layout
 
 \begin_layout Paragraph
@@ -35224,10 +35320,6 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 
 \begin_layout Paragraph
 估值定理
-\begin_inset Formula $???$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -35236,13 +35328,29 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 上
-\begin_inset Formula $f(x)\equiv1$
+\begin_inset Formula $f(x)$
 \end_inset
 
-,那么
+连续, 
+\begin_inset Formula $m$
+\end_inset
+
+和
+\begin_inset Formula $M$
+\end_inset
+
+分别为
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的最小值和最大值, 那么
 \begin_inset Formula 
 \[
-\int_{a}^{b}1dx=\int_{a}^{b}dx=b-a
+m(b-a)\leqslant\int_{a}^{b}f(x)dx\leqslant M(b-a)
 \]
 
 \end_inset
@@ -35251,7 +35359,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_layout
 
 \begin_layout Paragraph
-性质1
+不等式性质
 \end_layout
 
 \begin_layout Standard
@@ -35274,8 +35382,12 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 
 \end_layout
 
-\begin_layout Corollary
-如果在区间[a,b]上
+\begin_layout Standard
+如果在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上
 \begin_inset Formula $f(x)\leqslant g(x)$
 \end_inset
 
@@ -35291,7 +35403,6 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_layout
 
 \begin_layout Proof
-利用性质1
 \begin_inset Formula 
 \[
 \int_{a}^{b}[g(x)-f(x)]dx\geqslant0
@@ -35395,6 +35506,34 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
 上的平均值.
+\end_layout
+
+\begin_layout Standard
+积分中值定理有着明显的几何意义：由连续曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+、直线
+\begin_inset Formula $x=a$
+\end_inset
+
+,
+\begin_inset Formula $x=b$
+\end_inset
+
+和
+\begin_inset Formula $x$
+\end_inset
+
+轴围成的曲边梯形的面积等于底为区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+、高为
+\begin_inset Formula $f(\xi)$
+\end_inset
+
+的矩形的面积
 \end_layout
 
 \begin_layout Section
