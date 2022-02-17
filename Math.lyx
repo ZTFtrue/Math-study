@@ -37478,7 +37478,7 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 \end_inset
 
 上的二重积分, 记为
-\begin_inset Formula $\underset{D}{\iint}f(x,y)d\sigma$
+\begin_inset Formula $\iint_{D}f(x,y)d\sigma$
 \end_inset
 
 , 即
@@ -37657,6 +37657,1156 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 \begin_layout Standard
 除了上述几个性质以外，二重积分写定积分类似也有不等式性质、估值定理和积分中值 定理等性质.
  
+\end_layout
+
+\begin_layout Subsubsection
+在直角坐标系下计算二重积分
+\end_layout
+
+\begin_layout Standard
+在直角坐标系下, 二重积分可记为
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+, 下面我们按照积分区域
+\begin_inset Formula $D$
+\end_inset
+
+的不同形状 来给出二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+在直角坐标系下的计算方法
+\end_layout
+
+\begin_layout Paragraph
+积分区域
+\begin_inset Formula $D$
+\end_inset
+
+由不等式
+\begin_inset Formula $\left\{ \begin{array}{c}
+a\leqslant x\leqslant b\\
+y_{1}(x)\leqslant y\leqslant y_{2}(x)
+\end{array}\right.$
+\end_inset
+
+确定
+\end_layout
+
+\begin_layout Standard
+此时, 穿过区域
+\begin_inset Formula $D$
+\end_inset
+
+内部且平行于
+\begin_inset Formula $y$
+\end_inset
+
+轴的任一直线与
+\begin_inset Formula $D$
+\end_inset
+
+的边界
+\series bold
+不多于两个交点
+\series default
+.
+ 设
+\begin_inset Formula $f(x,y)\geqslant0$
+\end_inset
+
+, 则二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+表示以
+\begin_inset Formula $D$
+\end_inset
+
+为底, 
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+为顶的曲顶柱体的体积.
+ 
+\end_layout
+
+\begin_layout Standard
+首先, 在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上任取一个微小区间
+\begin_inset Formula $[x,x+dx]$
+\end_inset
+
+,过
+\begin_inset Formula $x$
+\end_inset
+
+作
+\begin_inset Formula $x$
+\end_inset
+
+轴的垂直平面, 此平面与曲顶柱体相交所得截面是一个以
+\begin_inset Formula $[y_{1}(x),y_{2}(x)]$
+\end_inset
+
+为底,以曲线
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+为曲边(这里
+\begin_inset Formula $x$
+\end_inset
+
+保持不变，
+\begin_inset Formula $y$
+\end_inset
+
+是变量)的曲边梯形, 将此截面面积记为
+\begin_inset Formula $S(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/二重积分-直角坐标系.jpg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由定积分的几何意义知
+\begin_inset Formula $S(x)=\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy$
+\end_inset
+
+ .
+ 注意该式积分过程中
+\begin_inset Formula $x$
+\end_inset
+
+是常量, 
+\begin_inset Formula $y$
+\end_inset
+
+是积分变量.
+ 
+\end_layout
+
+\begin_layout Standard
+将截面在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上无限累加, 得到曲顶柱体的体积
+\begin_inset Formula $V=\int_{a}^{b}S(x)dx$
+\end_inset
+
+, 将
+\begin_inset Formula $S(x)=\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy$
+\end_inset
+
+ 代入得
+\begin_inset Formula 
+\[
+V=\int_{a}^{b}[\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy]dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们将
+\begin_inset Formula $\int_{a}^{b}(\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy)dx$
+\end_inset
+
+称为先对
+\begin_inset Formula $y$
+\end_inset
+
+再对
+\begin_inset Formula $x$
+\end_inset
+
+的二次积分, 也称为先对
+\begin_inset Formula $y$
+\end_inset
+
+再对
+\begin_inset Formula $x$
+\end_inset
+
+的累次积分.
+ 也就是说, 先将
+\begin_inset Formula $x$
+\end_inset
+
+视为常数，
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+是以
+\begin_inset Formula $y$
+\end_inset
+
+为变量的一元函数，先计算定积分
+\begin_inset Formula $\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy$
+\end_inset
+
+, 然后将算得的结果对
+\begin_inset Formula $x$
+\end_inset
+
+计算区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+上的定积分
+\end_layout
+
+\begin_layout Standard
+为书写方便，我们将
+\begin_inset Formula $\int_{a}^{b}(\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy)dx$
+\end_inset
+
+写成
+\begin_inset Formula $\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy)$
+\end_inset
+
+,即
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)dxdy=\int_{a}^{b}dx\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在上述讨论中，我们设
+\begin_inset Formula $f(x,y)\geqslant0$
+\end_inset
+
+, 实际上该计算公式并不受此条件限制.
+\end_layout
+
+\begin_layout Paragraph
+积分区域
+\begin_inset Formula $D$
+\end_inset
+
+由不等式
+\begin_inset Formula $\left\{ \begin{array}{c}
+x_{1}(y)\leqslant x\leqslant x_{2}(b)\\
+c\leqslant y\leqslant c
+\end{array}\right.$
+\end_inset
+
+确定
+\end_layout
+
+\begin_layout Standard
+此时, 穿过区域
+\begin_inset Formula $D$
+\end_inset
+
+内部且平行于
+\begin_inset Formula $x$
+\end_inset
+
+轴的任一直线与
+\begin_inset Formula $D$
+\end_inset
+
+的边界
+\series bold
+不多于两个交点
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+类似地，我们可以得到 
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)dxdy=\int_{c}^{d}[\int_{x_{1}(y)}^{x_{2}(y)}f(x,y)dx]dy
+\]
+
+\end_inset
+
+我们称 
+\begin_inset Formula $\int_{c}^{d}[\int_{x_{1}(y)}^{x_{2}(y)}f(x,y)dx]dy$
+\end_inset
+
+为先对
+\begin_inset Formula $x$
+\end_inset
+
+再对
+\begin_inset Formula $y$
+\end_inset
+
+的二次积分, 也称为先对
+\begin_inset Formula $x$
+\end_inset
+
+再对
+\begin_inset Formula $y$
+\end_inset
+
+的累次积分.也就是说，先将
+\begin_inset Formula $y$
+\end_inset
+
+视为常数，
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+是以
+\begin_inset Formula $x$
+\end_inset
+
+为变量的一元函数，先计算定积分
+\begin_inset Formula $\int_{x_{1}(y)}^{x_{2}(y)}f(x,y)dx$
+\end_inset
+
+,然后将算得的结果对
+\begin_inset Formula $y$
+\end_inset
+
+计算区间
+\begin_inset Formula $[c,d]$
+\end_inset
+
+上的定积分.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)dxdy=\int_{c}^{d}dy\int_{x_{1}(y)}^{x_{2}(y)}f(x,y)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用累次积分计算重积分, 要求积分区域
+\begin_inset Formula $D$
+\end_inset
+
+分别满足: 穿过区域
+\begin_inset Formula $D$
+\end_inset
+
+内部且平行于
+\begin_inset Formula $y$
+\end_inset
+
+轴（或
+\begin_inset Formula $x$
+\end_inset
+
+轴）的任一直线与D的边界不多于两个交点.
+ 如果D不满足这个条件，则需把D分割成几块, 然后分块计算.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/二重积分-直角坐标系2.jpg
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+需要分块计算
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+转化为两种不同次序的累次积分, 其中
+\begin_inset Formula $D$
+\end_inset
+
+由 
+\begin_inset Formula $y=x$
+\end_inset
+
+, 
+\begin_inset Formula $y=2一x$
+\end_inset
+
+ 及
+\begin_inset Formula $x$
+\end_inset
+
+ 轴围成.
+\end_layout
+
+\begin_layout Solution
+先画出积分区域
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/二重积分-直角坐标系-例1.jpg
+	lyxscale 50
+	scale 50
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+需要分块计算
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+(
+\series bold
+先积
+\begin_inset Formula $y$
+\end_inset
+
+再积
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+)将积分区域投影到x轴, 得
+\begin_inset Formula $0\leqslant x\leqslant2$
+\end_inset
+
+.
+ 若在区间
+\begin_inset Formula $[0,2]$
+\end_inset
+
+内任意固定一个
+\begin_inset Formula $x$
+\end_inset
+
+, 过
+\begin_inset Formula $x$
+\end_inset
+
+作
+\begin_inset Formula $y$
+\end_inset
+
+轴的平行线.
+ 当
+\begin_inset Formula $x$
+\end_inset
+
+在
+\begin_inset Formula $[0,2]$
+\end_inset
+
+的不同位置时, 这种平行线与区域
+\begin_inset Formula $D$
+\end_inset
+
+的边界有两种相交情况，或与直线
+\begin_inset Formula $y=x$
+\end_inset
+
+相交，或与直线
+\begin_inset Formula $y=2一x$
+\end_inset
+
+相交.
+\end_layout
+
+\begin_layout Solution
+根据两种相交情况, 我们将区间
+\begin_inset Formula $[0,2]$
+\end_inset
+
+分为两个区间
+\begin_inset Formula $[0,1]$
+\end_inset
+
+和
+\begin_inset Formula $[1,2]$
+\end_inset
+
+, 对应地将区域
+\begin_inset Formula $D$
+\end_inset
+
+分成两个区域
+\begin_inset Formula $D_{1}$
+\end_inset
+
+和
+\begin_inset Formula $D_{2}$
+\end_inset
+
+，即 
+\begin_inset Formula $D=D_{1}\cup D_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+对于区域
+\begin_inset Formula $D_{1}$
+\end_inset
+
+, 有
+\begin_inset Formula $0\leqslant x\leqslant1$
+\end_inset
+
+，当
+\begin_inset Formula $x$
+\end_inset
+
+固定时，
+\begin_inset Formula $y$
+\end_inset
+
+的范围从
+\begin_inset Formula $0$
+\end_inset
+
+变到
+\begin_inset Formula $x$
+\end_inset
+
+, 此区域
+\begin_inset Formula $D_{1}$
+\end_inset
+
+可用不等式组 
+\begin_inset Formula $\left\{ \begin{array}{c}
+0\leqslant x\leqslant1\\
+0\leqslant y\leqslant x
+\end{array}\right.$
+\end_inset
+
+表示；类似地，区域
+\begin_inset Formula $D_{2}$
+\end_inset
+
+可用不等式组
+\begin_inset Formula $\left\{ \begin{array}{c}
+1\leqslant x\leqslant2\\
+0\leqslant y\leqslant2-x
+\end{array}\right.$
+\end_inset
+
+表示
+\end_layout
+
+\begin_layout Solution
+于是(区域可加性)
+\begin_inset Formula 
+\begin{align*}
+\iint_{D}f(x,y)dxdy & =\iint_{D_{1}}f(x,y)dxdy+\iint_{D_{2}}f(x,y)dxdy\\
+ & =\int_{0}^{1}dx\int_{0}^{x}f(x,y)dy+\int_{1}^{2}dx\int_{0}^{2-x}f(x,y)dy
+\end{align*}
+
+\end_inset
+
+即
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)d\sigma=\int_{0}^{1}dx\int_{0}^{x}f(x,y)dy+\int_{1}^{2}dx\int_{0}^{2-x}f(x,y)dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+(
+\series bold
+先积
+\begin_inset Formula $x$
+\end_inset
+
+再积
+\begin_inset Formula $y$
+\end_inset
+
+
+\series default
+)将积分区域投影到
+\begin_inset Formula $y$
+\end_inset
+
+轴, 得
+\begin_inset Formula $0\leqslant y\leqslant1$
+\end_inset
+
+.
+ 若在区间
+\begin_inset Formula $[0,1]$
+\end_inset
+
+内任意固定一个
+\begin_inset Formula $y$
+\end_inset
+
+ 过
+\begin_inset Formula $y$
+\end_inset
+
+作
+\begin_inset Formula $x$
+\end_inset
+
+轴的平行线, 
+\begin_inset Formula $x$
+\end_inset
+
+的范围从
+\begin_inset Formula $y$
+\end_inset
+
+变到
+\begin_inset Formula $2一y$
+\end_inset
+
+,因此区域
+\begin_inset Formula $D$
+\end_inset
+
+可用不等式组
+\begin_inset Formula $\begin{array}{c}
+y\leqslant x\leqslant2-y\\
+0\leqslant y\leqslant1
+\end{array}$
+\end_inset
+
+表示，于是
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)dxdy=\int_{0}^{1}dy\int_{y}^{2-y}f(x,y)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+在极坐标系下计算二重积分
+\end_layout
+
+\begin_layout Standard
+当积分区域
+\begin_inset Formula $D$
+\end_inset
+
+是圆形区域、扇形区域、环形区域或它们的一部分时，在极坐标系下计算则比较方便.
+\end_layout
+
+\begin_layout Standard
+在极坐标系下计算二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+, 分成两大步.
+\end_layout
+
+\begin_layout Standard
+第一步，找到二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+在极坐标系下的表示形式.
+\end_layout
+
+\begin_layout Standard
+对于被积函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+,由直角坐标系与极坐标系的坐标转换关系，将
+\begin_inset Formula $x=r\cos\theta$
+\end_inset
+
+, 
+\begin_inset Formula $y=r\sin\theta$
+\end_inset
+
+代入, 则
+\begin_inset Formula $f(x,y)=f(r\cos\theta,r\sin\theta)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+在极坐标系下, 分割积分区域
+\begin_inset Formula $D$
+\end_inset
+
+.
+ 选取一簇以极点为圆心, 半径取一系列常数
+\begin_inset Formula $r$
+\end_inset
+
+的同心圆，另外选取一簇由极点发出的射线
+\begin_inset Formula $\theta$
+\end_inset
+
+(
+\begin_inset Formula $\theta$
+\end_inset
+
+取一系列常数), 这两组曲线将积分区域
+\begin_inset Formula $D$
+\end_inset
+
+分成许多小区域.这些区域绝大多数是扇形区域，而且当
+\begin_inset Formula $D$
+\end_inset
+
+被分割得很密时，小扇形区域的面积
+\begin_inset Formula $\Delta\sigma$
+\end_inset
+
+近似等于以
+\begin_inset Formula $r\Delta\theta$
+\end_inset
+
+及
+\begin_inset Formula $\Delta r$
+\end_inset
+
+为边长的小矩形的面积.
+\end_layout
+
+\begin_layout Standard
+于是在极坐标系下，面积元素
+\begin_inset Formula $d\sigma$
+\end_inset
+
+可以表示为
+\begin_inset Formula $d\sigma=(rd\theta)dr=rdrd\theta$
+\end_inset
+
+ .
+ 因此,在极坐标系下二重积分
+\begin_inset Formula $\iint_{D}f(x,y)dxdy$
+\end_inset
+
+可表示为
+\begin_inset Formula $\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta$
+\end_inset
+
+,即 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)dxdy=\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+第二步，考虑如何将极坐标系下的二重积分
+\begin_inset Formula $\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta$
+\end_inset
+
+转变为二次积分，从而计算出二重积分.
+ 
+\end_layout
+
+\begin_layout Standard
+由于积分区域
+\begin_inset Formula $D$
+\end_inset
+
+的边界曲线一般用
+\begin_inset Formula $r=r(\theta)$
+\end_inset
+
+表示，因此我们通常将二重积分
+\begin_inset Formula $\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta$
+\end_inset
+
+转变为"先积
+\begin_inset Formula $r$
+\end_inset
+
+再积
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+的累次积分.
+\end_layout
+
+\begin_layout Standard
+设区域
+\begin_inset Formula $D$
+\end_inset
+
+是由两条射线
+\begin_inset Formula $\theta=\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\theta=\beta$
+\end_inset
+
+及两条曲线
+\begin_inset Formula $r=r_{1}(\theta)$
+\end_inset
+
+,
+\begin_inset Formula $r=r_{2}(\theta)$
+\end_inset
+
+围成的.
+ 穿过D的内部由极点出发的射线与D的边界的交点
+\series bold
+不超过两个
+\series default
+(如果
+\begin_inset Formula $D$
+\end_inset
+
+不满足这个条件, 则只要把
+\begin_inset Formula $D$
+\end_inset
+
+分割成满足该条件的几块小区域的并集).
+ 此时, 
+\begin_inset Formula $D$
+\end_inset
+
+可以表示为
+\begin_inset Formula $\left\{ \begin{array}{c}
+r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
+\alpha\leqslant\theta\leqslant\beta
+\end{array}\right.$
+\end_inset
+
+ , 于是 
+\begin_inset Formula 
+\begin{align*}
+\iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
+ & =\int_{\alpha}^{\beta}d\theta\int_{r_{1}(\theta)}^{r_{2}(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于上述区域，极点
+\begin_inset Formula $O$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+外面.若极点
+\begin_inset Formula $O$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+的边界上，则 
+\begin_inset Formula 
+\begin{align*}
+\iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
+ & =\int_{\alpha}^{\beta}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果极点
+\begin_inset Formula $O$
+\end_inset
+
+在积分区域
+\begin_inset Formula $D$
+\end_inset
+
+的内部，则积分区域
+\begin_inset Formula $D$
+\end_inset
+
+可以表示为
+\begin_inset Formula $\left\{ \begin{array}{c}
+0\leqslant r\leqslant r(\theta)\\
+0\leqslant\theta\leqslant\pi
+\end{array}\right.$
+\end_inset
+
+, 对应的二次积分可以表示为
+\begin_inset Formula 
+\begin{align*}
+\iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
+ & =\int_{0}^{\pi}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+画出积分区域
+\begin_inset Formula $D$
+\end_inset
+
+, 将二重积分
+\begin_inset Formula $I=\iint_{D}f(x,y)d\sigma$
+\end_inset
+
+化为极坐标系下的累次积分.
+ D由曲线y=
+\begin_inset Formula $\sqrt{4-x^{2}}$
+\end_inset
+
+和直线
+\begin_inset Formula $y=\pm x$
+\end_inset
+
+围成.
+\end_layout
+
+\begin_layout Solution
+在极坐标系下，积分区域D可表示为
+\begin_inset Formula $\left\{ \begin{array}{c}
+0\leqslant r\leqslant2\\
+\frac{\pi}{4}\leqslant\theta\leqslant\frac{3\pi}{4}
+\end{array}\right.$
+\end_inset
+
+因此, 
+\begin_inset Formula $I=\iint_{D}f(x,y)d\sigma=\int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}d\theta\int_{0}^{2}f(r\cos\theta,r\sin\theta)rdr$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+计算二重积分
+\begin_inset Formula $\iint_{D}\cos(x^{2}+y^{2})d\sigma$
+\end_inset
+
+,其中
+\begin_inset Formula $D$
+\end_inset
+
+由曲线
+\begin_inset Formula $x^{2}+y^{2}\leqslant1$
+\end_inset
+
+围成
+\end_layout
+
+\begin_layout Solution
+先画出积分区域D
+\end_layout
+
+\begin_layout Solution
+D的边界曲线为一个圆，在极坐标系下，D可以表示为
+\begin_inset Formula $\left\{ \begin{array}{c}
+0\leqslant r\leqslant1\\
+0\leqslant\theta\leqslant2\pi
+\end{array}\right.$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\begin{align*}
+\iint_{D}\cos(x^{2}+y^{2})d\sigma & =\int_{0}^{2\pi}d\theta\int_{0}^{1}r\cos r^{2}dr\\
+ & =\frac{1}{2}\int_{0}^{2\pi}\sin r^{2}|_{0}^{1}d\theta\\
+ & =\frac{1}{2}\sin1\int_{0}^{2\pi}d\theta\\
+ & =\pi\sin1
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+利用二重积分计算无穷区间上的广义积分
+\begin_inset Formula $I=\intop_{0}^{+\infty}e^{-x^{2}}dx$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remark
+由于
+\begin_inset Formula $\intop_{0}^{+\infty}e^{-x^{2}}dx$
+\end_inset
+
+“积不出”, 该广义积分用定积分的方法是无法求出的，但用二重积 分却可以容易解决.
+\end_layout
+
+\begin_layout Solution
+因为
+\begin_inset Formula $I=\intop_{0}^{+\infty}e^{-x^{2}}dx$
+\end_inset
+
+,则 
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+I^{2} & =\intop_{0}^{+\infty}e^{-x^{2}}dx\cdot\intop_{0}^{+\infty}e^{-x^{2}}dx=\intop_{0}^{+\infty}e^{-x^{2}}dx\cdot\intop_{0}^{+\infty}e^{-y^{2}}dy\\
+ & =\iint_{D}e^{-(x^{2}+y^{2})}dxdy
+\end{align*}
+
+\end_inset
+
+可以看出，积分区域
+\begin_inset Formula $D$
+\end_inset
+
+为
+\begin_inset Formula $xOy$
+\end_inset
+
+坐标平面的第一象限，这是一个广义二重积分.
+ 在极坐标 系下，积分区域D可表示为
+\begin_inset Formula $\left\{ \begin{array}{c}
+0\leqslant r\leqslant+\infty\\
+0\leqslant\theta\leqslant\frac{\pi}{2}
+\end{array}\right.$
+\end_inset
+
+， 则
+\begin_inset Formula 
+\begin{align*}
+I^{2} & =\iint_{D}e^{-(x^{2}+y^{2})}dxdy\\
+ & =\int_{0}^{\frac{\pi}{2}}d\theta\int_{0}^{+\infty}e^{-r^{2}}rdr\\
+ & =\frac{\pi}{2}\int_{0}^{+\infty}e^{-r^{2}}rdr\\
+ & =-\frac{\pi}{4}e^{-r^{2}}|_{0}^{+\infty}\\
+ & =\frac{\pi}{4}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以
+\begin_inset Formula $I=\frac{\sqrt{\pi}}{4}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
