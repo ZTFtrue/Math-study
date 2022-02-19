@@ -38810,237 +38810,6 @@ I^{2} & =\iint_{D}e^{-(x^{2}+y^{2})}dxdy\\
 \end_layout
 
 \begin_layout Section
-积分的应用
-\end_layout
-
-\begin_layout Subsection
-平面图形的面积 
-\end_layout
-
-\begin_layout Subsection
-平面曲线的弧长
-\end_layout
-
-\begin_layout Subsection
-旋转体的体积 
-\end_layout
-
-\begin_layout Subsection
-函数的平均值 
-\end_layout
-
-\begin_layout Subsection
-曲面的面积
-\end_layout
-
-\begin_layout Subsection
-计算抽水功率
-\end_layout
-
-\begin_layout Standard
-将瓶中的水从瓶口抽出, 求抽水所做的功
-\begin_inset Formula $W$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-定积分计算
-\end_layout
-
-\begin_layout Standard
-设瓶高为
-\begin_inset Formula $H$
-\end_inset
-
-, 水面高为
-\begin_inset Formula $h$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-在
-\begin_inset Formula $x(0<x<h)$
-\end_inset
-
-的高度取厚度为
-\begin_inset Formula $dx$
-\end_inset
-
-的很薄的一层水.
-\end_layout
-
-\begin_layout Standard
-假设这层水的横截面面积为
-\begin_inset Formula $S(x)(0<x<h)$
-\end_inset
-
-,需要求出横截面积函数
-\end_layout
-
-\begin_layout Standard
-这层水的体积为: 
-\begin_inset Formula $dv=S(x)*dx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-这一层水抽取时受到的重力:
-\begin_inset Formula $F(x)=g\cdot\mu\cdot dv=g\cdot\mu\cdot S(x)*dx$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-其中
-\begin_inset Formula $\mu$
-\end_inset
-
-为水的密度, 
-\begin_inset Formula $g$
-\end_inset
-
- 为重力加速度,
-\begin_inset Formula $\mu*g$
-\end_inset
-
- 为水的质量.
-\end_layout
-
-\begin_layout Standard
-抽出这一层水的路程: 
-\begin_inset Formula $H-x$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-抽出这一层水的功的近似值:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $dW=F(x)\cdot(H-x)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-抽出全部水的功:
-\begin_inset Formula $W=\intop_{0}^{h}dW=\intop_{0}^{h}F(x)\cdot(H-x)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-三重积分计算
-\end_layout
-
-\begin_layout Standard
-建立空间坐标系, 使瓶底在
-\begin_inset Formula $xOy$
-\end_inset
-
-坐标平面上.
-\end_layout
-
-\begin_layout Standard
-设瓶中水所占据的空间区域为
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-在水中
-\begin_inset Formula $(x,y,z)$
-\end_inset
-
-超过一小块水, 体积为
-\begin_inset Formula $dv$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这一块水抽取时受到的重力:
-\begin_inset Formula $F=g\cdot\mu\cdot dv$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-抽出这一块水的路程: 
-\begin_inset Formula $H-z$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-抽出这一块水的功的近似值:
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $dW=F\cdot(H-z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-抽出全部水的功:
-\begin_inset Formula $W=\underset{\Omega}{\iiint_{0}^{h}}dW=\underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0}^{h}}g\cdot\mu\cdot dv\cdot(H-z)\\
- & = & \mu g\intop_{0}^{h}(H-z)dz\underset{D(z)}{\iintop}dxdy\\
- & = & \mu g\intop_{0}^{h}(H-z)S(z)dz
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 微分和导数,不定积分和定定积分的区别 
 \end_layout
 
@@ -41272,7 +41041,234 @@ x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy'+p_{n}y=f(x)
 \end_layout
 
 \begin_layout Chapter
-微分的应用
+微分和积分的应用
+\end_layout
+
+\begin_layout Section
+平面图形的面积 
+\end_layout
+
+\begin_layout Section
+平面曲线的弧长
+\end_layout
+
+\begin_layout Section
+旋转体的体积 
+\end_layout
+
+\begin_layout Section
+函数的平均值 
+\end_layout
+
+\begin_layout Section
+曲面的面积
+\end_layout
+
+\begin_layout Section
+计算抽水功率
+\end_layout
+
+\begin_layout Standard
+将瓶中的水从瓶口抽出, 求抽水所做的功
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+定积分计算
+\end_layout
+
+\begin_layout Standard
+设瓶高为
+\begin_inset Formula $H$
+\end_inset
+
+, 水面高为
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $x(0<x<h)$
+\end_inset
+
+的高度取厚度为
+\begin_inset Formula $dx$
+\end_inset
+
+的很薄的一层水.
+\end_layout
+
+\begin_layout Standard
+假设这层水的横截面面积为
+\begin_inset Formula $S(x)(0<x<h)$
+\end_inset
+
+,需要求出横截面积函数
+\end_layout
+
+\begin_layout Standard
+这层水的体积为: 
+\begin_inset Formula $dv=S(x)*dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+这一层水抽取时受到的重力:
+\begin_inset Formula $F(x)=g\cdot\mu\cdot dv=g\cdot\mu\cdot S(x)*dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\mu$
+\end_inset
+
+为水的密度, 
+\begin_inset Formula $g$
+\end_inset
+
+ 为重力加速度,
+\begin_inset Formula $\mu*g$
+\end_inset
+
+ 为水的质量.
+\end_layout
+
+\begin_layout Standard
+抽出这一层水的路程: 
+\begin_inset Formula $H-x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抽出这一层水的功的近似值:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $dW=F(x)\cdot(H-x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抽出全部水的功:
+\begin_inset Formula $W=\intop_{0}^{h}dW=\intop_{0}^{h}F(x)\cdot(H-x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+三重积分计算
+\end_layout
+
+\begin_layout Standard
+建立空间坐标系, 使瓶底在
+\begin_inset Formula $xOy$
+\end_inset
+
+坐标平面上.
+\end_layout
+
+\begin_layout Standard
+设瓶中水所占据的空间区域为
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+在水中
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+超过一小块水, 体积为
+\begin_inset Formula $dv$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这一块水抽取时受到的重力:
+\begin_inset Formula $F=g\cdot\mu\cdot dv$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抽出这一块水的路程: 
+\begin_inset Formula $H-z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抽出这一块水的功的近似值:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $dW=F\cdot(H-z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+抽出全部水的功:
+\begin_inset Formula $W=\underset{\Omega}{\iiint_{0}^{h}}dW=\underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0}^{h}}g\cdot\mu\cdot dv\cdot(H-z)\\
+ & = & \mu g\intop_{0}^{h}(H-z)dz\underset{D(z)}{\iintop}dxdy\\
+ & = & \mu g\intop_{0}^{h}(H-z)S(z)dz
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -43678,6 +43674,1366 @@ Nabla算子
 
 \begin_layout Chapter
 无穷级数
+\end_layout
+
+\begin_layout Section
+常项数级数
+\end_layout
+
+\begin_layout Standard
+对于给定的数列
+\begin_inset Formula $u_{1},u_{2},\cdots,u_{n},\cdots$
+\end_inset
+
+, 称表达式
+\begin_inset Formula $u_{1}+u_{2}+\cdots+u_{n}+\cdots$
+\end_inset
+
+为常数项无穷级数，简称
+\series bold
+级数
+\series default
+, 记作
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+, 即 
+\begin_inset Formula 
+\[
+\stackrel[n=1]{\infty}{\sum}u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots
+\]
+
+\end_inset
+
+ 其中第
+\begin_inset Formula $n$
+\end_inset
+
+项
+\begin_inset Formula $u_{n}$
+\end_inset
+
+称为级数的一般项(或通项)
+\end_layout
+
+\begin_layout Standard
+设有级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+,称
+\begin_inset Formula $S_{n}=\stackrel[k=1]{n}{\sum}u_{k}=u_{1}+u_{2}+\cdots+u_{n}$
+\end_inset
+
+为该级数的
+\series bold
+前
+\begin_inset Formula $n$
+\end_inset
+
+项和
+\series default
+(或部分和), 数列
+\begin_inset Formula ${S_{n}}$
+\end_inset
+
+称为该级数的
+\series bold
+部分和数列
+\series default
+.如果该级数的部分和数列
+\begin_inset Formula ${S_{n}}$
+\end_inset
+
+有极限
+\begin_inset Formula $S$
+\end_inset
+
+,即 
+\begin_inset Formula 
+\[
+\underset{n\rightarrow\infty}{\lim}S_{n}=S
+\]
+
+\end_inset
+
+则称级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛, 并称极限
+\begin_inset Formula $S$
+\end_inset
+
+为该级数的和, 记作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=\stackrel[n=1]{\infty}{\sum}u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots
+\]
+
+\end_inset
+
+如果部分和数列
+\begin_inset Formula ${S_{n}}$
+\end_inset
+
+没有极限，则称级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+发散
+\end_layout
+
+\begin_layout Standard
+如果级数
+\begin_inset Formula $\stackrel[k=1]{n}{\sum}u_{n}$
+\end_inset
+
+收敛于
+\begin_inset Formula $S$
+\end_inset
+
+, 则部分和
+\begin_inset Formula $S_{n}\approx S$
+\end_inset
+
+, 它们之间的差 
+\begin_inset Formula 
+\[
+r_{n}=S-S_{n}=u_{n+1}+u_{n+2}+\cdots
+\]
+
+\end_inset
+
+ 称为级数的余项，而
+\begin_inset Formula $|r_{n}|$
+\end_inset
+
+是用
+\begin_inset Formula $S_{n}$
+\end_inset
+
+近似代替
+\begin_inset Formula $S$
+\end_inset
+
+所产生的误差 
+\end_layout
+
+\begin_layout Example
+判别级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n(n+1)}=\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\cdots+\frac{1}{n(n+1)}+\cdots$
+\end_inset
+
+的敛散性
+\end_layout
+
+\begin_layout Solution
+因为级数的通项为
+\begin_inset Formula $u_{n}=\frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}$
+\end_inset
+
+,所以
+\begin_inset Formula 
+\begin{align*}
+S_{n} & =\frac{1}{1\cdot2}+\frac{1}{2\cdot3}\cdots+\frac{1}{n(n+1)}+\cdots\\
+ & =(1-\frac{1}{2})+(\frac{1}{2}-\frac{1}{3})\cdots+(\frac{1}{n}-\frac{1}{n+1})\\
+ & =1-\frac{1}{n+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n}=\underset{n\rightarrow\infty}{\lim}(1-\frac{1}{n+1})=1$
+\end_inset
+
+,因此 , 该级数收敛, 且
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n(n+1)}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+无穷级数
+\begin_inset Formula $\stackrel[k=1]{n}{\sum}aq^{n-1}=a+aq+\cdots+aq^{n-1}+\cdots$
+\end_inset
+
+称为
+\series bold
+几何级数
+\series default
+(又称为等比级数), 其中
+\begin_inset Formula $a\neq0$
+\end_inset
+
+,
+\begin_inset Formula $q\neq0$
+\end_inset
+
+ .
+ 试讨论该级数的敛散性
+\end_layout
+
+\begin_layout Solution
+该级数的前
+\begin_inset Formula $n$
+\end_inset
+
+项和为
+\begin_inset Formula 
+\[
+S_{n}=a+aq+\cdots+aq^{n-1}=\frac{a(1-q^{n})}{1-q}(q\neq1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $|q|<1$
+\end_inset
+
+时, 由于
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}q^{n}=0$
+\end_inset
+
+, 从而
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n}=\frac{a}{1-q}$
+\end_inset
+
+, 因此该级数收敛, 其和为
+\begin_inset Formula $\frac{a}{1-q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $|q|>1$
+\end_inset
+
+时，有
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n}=\infty$
+\end_inset
+
+,这时该级数发散;
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $q=1$
+\end_inset
+
+时，
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n}=na$
+\end_inset
+
+, 级数发散;
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $q=-1$
+\end_inset
+
+时，部分和
+\begin_inset Formula $S_{n}$
+\end_inset
+
+交替是
+\begin_inset Formula $a$
+\end_inset
+
+和
+\begin_inset Formula $0$
+\end_inset
+
+，从而
+\begin_inset Formula $S_{n}$
+\end_inset
+
+的极限不存在, 这时级数也发散.
+\end_layout
+
+\begin_layout Subsection
+无穷级数的基本性质
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质
+\series default
+1 设
+\begin_inset Formula $k$
+\end_inset
+
+为非零常数，则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}ku_{n}$
+\end_inset
+
+, 与级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+同时收敛或同时发散，且收敛时, 有
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}ku_{n}=k\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质
+\series default
+2 若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+与级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+都收敛，则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(u_{n}\pm v_{n})$
+\end_inset
+
+也收敛，且有 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(u_{n}\pm v_{n})=\stackrel[n=1]{\infty}{\sum}u_{n}+\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个性质说明两个收敛级数可以逐项相加或逐项相减 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质
+\series default
+3 在级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+中去掉或添加或改变有限项, 不会改变级数的敛散性(但收敛级数的和将有所改变).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质
+\series default
+4 (级数收敛的必要条件) 若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛, 则
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}u_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+证 设级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛, 其部分和
+\begin_inset Formula $S_{n}$
+\end_inset
+
+有极限
+\begin_inset Formula $S$
+\end_inset
+
+, 即
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n}=S$
+\end_inset
+
+,
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}S_{n-1}=S$
+\end_inset
+
+.
+ 而
+\begin_inset Formula $u_{n}=S_{n}-S_{n-1}$
+\end_inset
+
+, 所以 
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}(S_{n}-S_{n-1})=\underset{n\rightarrow\infty}{\lim}S_{n-1}-\underset{n\rightarrow\infty}{\lim}S_{n}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+由此性质可知, 只要级数的通项不趋于
+\begin_inset Formula $0$
+\end_inset
+
+, 则该级数一定发散.
+\end_layout
+
+\begin_layout Standard
+我们常用这个结论来判定级数发散.
+ 要强调的是, 通项趋于
+\begin_inset Formula $0$
+\end_inset
+
+的级数未必收敛,如调和级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+, 虽然有
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}u_{n}=\underset{n\rightarrow\infty}{\lim}\frac{1}{n}=0$
+\end_inset
+
+, 但它是发散的.
+\end_layout
+
+\begin_layout Example
+判别级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{3^{n-1}-1}{6^{n-1}}$
+\end_inset
+
+的敛散性.
+ 如果收敛, 求其和.
+\end_layout
+
+\begin_layout Solution
+由于
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{2^{n-1}}$
+\end_inset
+
+与
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{6^{n-1}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+均是公比小于
+\begin_inset Formula $1$
+\end_inset
+
+的几何级数, 都收敛, 且有
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{2^{n-1}}=\frac{1}{1-\frac{1}{2}}=2$
+\end_inset
+
+,
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{6^{n-1}}=\frac{6}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由性质2 可知
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{3^{n-1}-1}{6^{n-1}}=\stackrel[n=1]{\infty}{\sum}(\frac{1}{2^{n-1}}-\frac{1}{6^{n-1}})$
+\end_inset
+
+收敛, 且
+\begin_inset Formula 
+\[
+\stackrel[n=1]{\infty}{\sum}\frac{3^{n-1}-1}{6^{n-1}}=\stackrel[n=1]{\infty}{\sum}\frac{1}{2^{n-1}}-\stackrel[n=1]{\infty}{\sum}\frac{1}{6^{n-1}}=\frac{4}{5}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+正项级数
+\end_layout
+
+\begin_layout Standard
+正项级数是数项级数中比较特殊而又重要的一类.
+\end_layout
+
+\begin_layout Definition
+若
+\begin_inset Formula $u_{n}\geqslant0(n=1,2,\cdots)$
+\end_inset
+
+, 则称级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+为正项级数 
+\end_layout
+
+\begin_layout Theorem
+(比较判别法)设 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+和
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+都是正项级数, 且
+\begin_inset Formula $u_{n}\leqslant v_{n}(n=1,2,\cdots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+收敛, 则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛 
+\end_layout
+
+\begin_layout Enumerate
+若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+发散, 则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Definition
+(
+\begin_inset Formula $p-$
+\end_inset
+
+级数)当
+\begin_inset Formula $p>$
+\end_inset
+
+0时，我们把正项级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{p}}=1+\frac{1}{2^{p}}+\cdots+\frac{1}{n^{p}}+\cdots$
+\end_inset
+
+称为
+\begin_inset Formula $p-$
+\end_inset
+
+级数.
+ 显然, 调和级数为
+\begin_inset Formula $p=1$
+\end_inset
+
+时的
+\begin_inset Formula $p-$
+\end_inset
+
+级数.对于
+\begin_inset Formula $p-$
+\end_inset
+
+级数 我们有以下结论
+\end_layout
+
+\begin_layout Theorem
+(比较判别法的极限形式 )设 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+和 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+为两个正项级数，且有
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{u_{n}}{v_{n}}=l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $0<l<+\infty$
+\end_inset
+
+，则
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+与
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+同时收敛或同时发散;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $l=0$
+\end_inset
+
+,且
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+收敛, 则
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+也收敛;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $l=+\infty$
+\end_inset
+
+，且
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}v_{n}$
+\end_inset
+
+发散，则
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+也发散
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $p-$
+\end_inset
+
+级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{p}}$
+\end_inset
+
+
+\begin_inset Formula $(p>0)$
+\end_inset
+
+的敛散性如下
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $p\leqslant1$
+\end_inset
+
+时, 
+\begin_inset Formula $p-$
+\end_inset
+
+级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{p}}$
+\end_inset
+
+ 发散
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $p>1$
+\end_inset
+
+时, 
+\begin_inset Formula $p-$
+\end_inset
+
+级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{p}}$
+\end_inset
+
+ 收敛
+\end_layout
+
+\begin_layout Theorem
+(达朗贝尔比值判别法) 设
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+是正项级数, 且
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{u_{n+1}}{u_{n}}=\rho$
+\end_inset
+
+, 则
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $\rho<1$
+\end_inset
+
+时，级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛;
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $\rho>1$
+\end_inset
+
+时(或
+\begin_inset Formula $\underset{n\rightarrow\partial}{\lim}\frac{u_{n+1}}{u_{n}}$
+\end_inset
+
+=∞)，级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+发散
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $\rho=1$
+\end_inset
+
+时，级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+可能收敛,也可能发散
+\end_layout
+
+\begin_layout Standard
+比值判别法
+\series bold
+不需要寻找另外一个级数
+\series default
+，只需要通过级数自身就能判别其敛散性.
+\end_layout
+
+\begin_layout Example
+判别下列级数的敛散性
+\end_layout
+
+\begin_layout Example
+1.
+ 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n\sqrt{n+1}}$
+\end_inset
+
+ 2.
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{\sqrt{n(n+1)}}$
+\end_inset
+
+ 3.
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{\cos^{2}n}{2^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.
+ 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n\sqrt{n}}=\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{\frac{3}{2}}}$
+\end_inset
+
+ 为 
+\begin_inset Formula $p=\frac{3}{2}>1$
+\end_inset
+
+的
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $p-$
+\end_inset
+
+级数, 所以
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n\sqrt{n}}$
+\end_inset
+
+收敛, 由比较判别法得
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n\sqrt{n+1}}$
+\end_inset
+
+收敛
+\end_layout
+
+\begin_layout Solution
+2.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{1}{\sqrt{n(n+1)}}>\frac{1}{\sqrt{(n+1)^{2}}}=\frac{1}{n+1}$
+\end_inset
+
+ , 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n+1}$
+\end_inset
+
+的
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+发散, 所以
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{\sqrt{n(n+1)}}$
+\end_inset
+
+ 发散
+\end_layout
+
+\begin_layout Solution
+3.
+\begin_inset Formula $\frac{\cos^{2}n}{2^{n}}\leqslant\frac{1}{2^{n}}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ .
+ 级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{2^{n}}$
+\end_inset
+
+是公比
+\begin_inset Formula $q=\frac{1}{2}<1$
+\end_inset
+
+的等比级数,从而收敛, 所以级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{\cos^{2}n}{2^{n}}$
+\end_inset
+
+收敛.
+\end_layout
+
+\begin_layout Example
+判别级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\sin\frac{1}{n}$
+\end_inset
+
+的敛散性
+\end_layout
+
+\begin_layout Solution
+因为
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{\sin\frac{1}{n}}{\frac{1}{n}}=1$
+\end_inset
+
+,则正项级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\sin\frac{1}{n}$
+\end_inset
+
+与级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+同敛散，而调和级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+发散，根据 
+\series bold
+比较判别法的极限形式
+\series default
+ 知原级数发散.
+\end_layout
+
+\begin_layout Subsection
+交错级数
+\end_layout
+
+\begin_layout Definition
+若
+\begin_inset Formula $u_{n}>0$
+\end_inset
+
+
+\begin_inset Formula $(n=1,2,\cdots)$
+\end_inset
+
+, 则称级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}u_{n}$
+\end_inset
+
+为交错级数
+\end_layout
+
+\begin_layout Standard
+事实上, 交错级数的每一项的符号都是正负交错出现的, 它的一般形式可以为
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}u_{n}=u_{1}-u_{2}+u_{3}-u_{4}+\cdots$
+\end_inset
+
+, 也可以为
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}u_{n}=-u_{1}+u_{2}-u_{3}+u_{4}+\cdots$
+\end_inset
+
+, 其中
+\begin_inset Formula $u_{n}>0$
+\end_inset
+
+
+\begin_inset Formula $(n=1,2,\cdots)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+正项级数的审敛法不能用于判断交错级数的敛散性.
+ 
+\end_layout
+
+\begin_layout Theorem
+(莱布尼茨判别法) 如果交错级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}u_{n}$
+\end_inset
+
+满足以下两个条件:
+\end_layout
+
+\begin_layout Theorem
+1.
+ 
+\begin_inset Formula $u_{n}\geqslant u_{n+1}$
+\end_inset
+
+
+\begin_inset Formula $(n=1,2,\cdots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+2.
+ 
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}u_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}u_{n}$
+\end_inset
+
+收敛
+\end_layout
+
+\begin_layout Subsubsection
+绝对收敛与条件收敛
+\end_layout
+
+\begin_layout Standard
+若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+的每一项均为任意实数，则这种级数称为任意项级数或一般项级数.
+\end_layout
+
+\begin_layout Standard
+对于一般的任意项级数，直接判断它的敛散性是困难的，但有些可以转化为用正项级数判别法来 进行.
+ 
+\end_layout
+
+\begin_layout Definition
+若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+收敛，则称级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+是绝对收敛的；如果级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛，而级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+发散，则称级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+是条件收敛的
+\end_layout
+
+\begin_layout Standard
+例如，级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n^{2}}$
+\end_inset
+
+, 由于级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n^{2}}=\frac{1}{n^{2}}$
+\end_inset
+
+是
+\begin_inset Formula $p=2>1$
+\end_inset
+
+的
+\begin_inset Formula $p-$
+\end_inset
+
+级数收敛, 从而级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n^{2}}$
+\end_inset
+
+是绝对收敛的; 对于级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n}$
+\end_inset
+
+, 由于
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|(-1)^{n-1}\frac{1}{n}|=\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+是调和级数,发散, 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n}$
+\end_inset
+
+收敛, 从而级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n}$
+\end_inset
+
+是条件收敛的;
+\end_layout
+
+\begin_layout Theorem
+如果级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+收敛，则级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛，即绝对收敛的级数必定收敛 
+\end_layout
+
+\begin_layout Standard
+绝对收敛的级数一定是收敛的，但反之则未必.
+ 例如, 交错级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{n}$
+\end_inset
+
+收敛, 但
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|(-1)^{n-1}\frac{1}{n}|=\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+发散.
+\end_layout
+
+\begin_layout Standard
+综上讨论, 对于任意项级数 ∑，通常可按照以下步骤判别其敛散性:
+\end_layout
+
+\begin_layout Standard
+首先判别
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+的敛散性, 这时可采用正项级数判别法进行, 若
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+收敛, 则原级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+绝对收敛, 从而收敛; 若
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+发散, 再判别
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+是否收敛, 若
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+收敛, 则原级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+是条件收敛的.
+\end_layout
+
+\begin_layout Example
+判别级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{\sin na}{n^{2}}$
+\end_inset
+
+(
+\begin_inset Formula $a$
+\end_inset
+
+为常数)的敛散性
+\end_layout
+
+\begin_layout Solution
+因为
+\begin_inset Formula $\left|(-1)^{n-1}\frac{\sin na}{n^{2}}\right|\leqslant\frac{1}{n^{2}}$
+\end_inset
+
+, 而级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n^{2}}$
+\end_inset
+
+ 是
+\begin_inset Formula $p=2>1$
+\end_inset
+
+的
+\begin_inset Formula $p-$
+\end_inset
+
+级数, 收敛.由比较判别法知正向级数
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\left|(-1)^{n-1}\frac{\sin na}{n^{2}}\right|$
+\end_inset
+
+收敛, 故级数
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{\sin na}{n^{2}}$
+\end_inset
+
+绝对收敛, 从而收敛.
+\end_layout
+
+\begin_layout Example
+判别下列级数是绝对收敛还是条件收敛
+\end_layout
+
+\begin_layout Standard
+1.
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{\sqrt{n}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+2.
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{2^{n}}{n!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+1.
+ 因为
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\left|(-1)^{n-1}\frac{1}{\sqrt{n}}\right|=\stackrel[n=1]{\infty}{\sum}\frac{1}{\sqrt{n}}$
+\end_inset
+
+是
+\begin_inset Formula $p=\frac{1}{2}<1$
+\end_inset
+
+的
+\begin_inset Formula $p-$
+\end_inset
+
+级数, 发散; 而级数
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{\sqrt{n}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是交错级数, 由莱布尼茨判别法可知它收敛, 所以级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{1}{\sqrt{n}}$
+\end_inset
+
+ 是条件收敛的.
+\end_layout
+
+\begin_layout Solution
+2.
+ 因为
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|(-1)^{n-1}\frac{2^{n}}{n!}|=\stackrel[n=1]{\infty}{\sum}\frac{2^{n}}{n!}$
+\end_inset
+
+是正项级数, 它的一般项为
+\begin_inset Formula $u_{n}=\frac{2^{n}}{n!}$
+\end_inset
+
+, 则
+\begin_inset Formula $u_{n+1}=\frac{2^{n+1}}{(n+1)!}$
+\end_inset
+
+ 于是
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{u_{n+1}}{u_{n}}=\underset{n\rightarrow\infty}{\lim}\frac{2^{n+1}}{(n+1)!}\cdot\frac{n!}{2^{n}}=\underset{n\rightarrow\infty}{\lim}\frac{2}{n+1}=0<1$
+\end_inset
+
+,由
+\series bold
+达朗贝尔比值判别法
+\series default
+知级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{2^{n}}{n!}$
+\end_inset
+
+ 所以级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}(-1)^{n-1}\frac{2^{n}}{n!}$
+\end_inset
+
+绝对收敛，从而收敛.
 \end_layout
 
 \begin_layout Chapter
