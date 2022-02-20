@@ -45036,6 +45036,971 @@ S_{n}=a+aq+\cdots+aq^{n-1}=\frac{a(1-q^{n})}{1-q}(q\neq1)
 绝对收敛，从而收敛.
 \end_layout
 
+\begin_layout Section
+幂级数
+\end_layout
+
+\begin_layout Standard
+π的无穷级数表示式
+\begin_inset Formula $\frac{\pi}{4}=\stackrel[n=0]{\infty}{\sum}\frac{(-1)^{n}}{2n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把形如
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}(x-x_{0})^{n}=a_{0}+a_{1}(x-x_{0})+a_{2}(x-x_{0})^{2}+\cdots+a_{n}(x-x_{0})^{n}+\cdots$
+\end_inset
+
+的函数项叫做
+\series bold
+幂级数
+\series default
+.
+ 其中
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是常数, 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+,
+\begin_inset Formula $a_{1}$
+\end_inset
+
+,
+\begin_inset Formula $a_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $a_{n}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+ 叫做幂级数的系数, 当
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+时, 幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}(x-x_{0})^{n}$
+\end_inset
+
+就成为
+\begin_inset Formula 
+\[
+\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}=a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+事实上，由于幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}(x-x_{0})^{n}$
+\end_inset
+
+只要作变量替换, 令
+\begin_inset Formula $t=x-x_{0}$
+\end_inset
+
+,就可以化为幂级数 
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+, 当自变量
+\begin_inset Formula $x$
+\end_inset
+
+取特定值, 如
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+时, 级数就成为一个数项级数
+\begin_inset Formula 
+\[
+\stackrel[n=0]{\infty}{\sum}a_{n}x_{0}^{n}=a_{0}+a_{1}x_{0}+a_{2}x_{0}^{2}+\cdots+a_{n}x_{0}^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果该数项级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x_{0}^{n}$
+\end_inset
+
+收敛, 则称点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+为幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x_{0}^{n}$
+\end_inset
+
+的
+\series bold
+收敛点
+\series default
+; 如果数项级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x_{0}^{n}$
+\end_inset
+
+发散, 则称点
+\begin_inset Formula $x_{0}$
+\end_inset
+
+为幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x_{0}^{n}$
+\end_inset
+
+的
+\series bold
+发散点
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+收敛点的全体称为幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+的
+\series bold
+收敛域
+\series default
+, 发散点的全体称为
+\series bold
+发散域
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+对于收敛域中每个
+\begin_inset Formula $x$
+\end_inset
+
+, 幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+都对应一个唯一确定的和，记为
+\begin_inset Formula $S(x)$
+\end_inset
+
+, 则
+\begin_inset Formula $S(x)$
+\end_inset
+
+是定义在收敛域上的一个函数，称为幂级数的
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+和函数，即
+\begin_inset Formula $S(x)=\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(
+\series bold
+收敛半径
+\series default
+,
+\series bold
+收敛区间
+\series default
+) 如果幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+不是仅在
+\begin_inset Formula $x=0$
+\end_inset
+
+一点收敛, 也不是在整个数轴上都收敛，则 必存在一个确定的正数R,使得 
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $|x|<R$
+\end_inset
+
+时，幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+绝对收敛;
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $|x|>R$
+\end_inset
+
+时，幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+发散;
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+当
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $x=\pm R$
+\end_inset
+
+时，幂级数可能收敛也可能发散.
+\end_layout
+
+\begin_layout Standard
+定理中，正数
+\begin_inset Formula $R$
+\end_inset
+
+称为幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+的
+\series bold
+收敛半径
+\series default
+，开区间
+\begin_inset Formula $(-R,R)$
+\end_inset
+
+称为幂级数的
+\series bold
+收敛区间
+\series default
+.由幂级数在
+\begin_inset Formula $x=\pm R$
+\end_inset
+
+处的敛散性，就可以确定它的
+\series bold
+收敛域
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+若幂级数只在
+\begin_inset Formula $x=0$
+\end_inset
+
+处收敛, 则规定它的收敛半径
+\begin_inset Formula $R=0$
+\end_inset
+
+; 若对任何实数
+\begin_inset Formula $x$
+\end_inset
+
+,幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+都收敛, 则规定其收敛半径
+\begin_inset Formula $R=+\infty$
+\end_inset
+
+, 这时收敛区间是
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+设有幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+,若
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}|\frac{a_{n+1}}{a_{n}}|=\rho$
+\end_inset
+
+,则 
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $0<\rho<+\infty$
+\end_inset
+
+，则
+\begin_inset Formula $R=\frac{1}{\rho}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\rho=0$
+\end_inset
+
+ , 则
+\begin_inset Formula $R=+\infty$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\rho=+\infty$
+\end_inset
+
+，则
+\begin_inset Formula $R=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Example
+求下列幂级数的收敛半径和收敛区间.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{x^{n}}{n!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{(x-1)^{n}}{(n+1)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+1.
+ 因为
+\begin_inset Formula 
+\[
+\rho=\underset{n\rightarrow\infty}{\lim}|\frac{a_{n+1}}{a_{n}}|=\underset{n\rightarrow\infty}{\lim}\frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}=\underset{n\rightarrow\infty}{\lim}\frac{1}{n+1}=0
+\]
+
+\end_inset
+
+所以收敛半径
+\begin_inset Formula $R=+\infty$
+\end_inset
+
+，从而收敛区间是
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+2.
+ 该级数不是关于
+\begin_inset Formula $x$
+\end_inset
+
+的幂级数, 设
+\begin_inset Formula $x-1=t$
+\end_inset
+
+,则
+\begin_inset Formula 
+\[
+\stackrel[n=0]{\infty}{\sum}\frac{(x-1)^{n}}{(n+1)^{2}}=\stackrel[n=0]{\infty}{\sum}\frac{t^{n}}{(n+1)^{2}}
+\]
+
+\end_inset
+
+ 对于幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{t^{n}}{(n+1)^{2}}$
+\end_inset
+
+, 由于
+\begin_inset Formula 
+\[
+\rho=\underset{n\rightarrow\infty}{\lim}|\frac{a_{n+1}}{a_{n}}|=\underset{n\rightarrow\infty}{\lim}\frac{\frac{t^{n}}{(n+2)^{2}}}{\frac{t^{n}}{(n+1)^{2}}}=\underset{n\rightarrow\infty}{\lim}\frac{(n+2)^{2}}{(n+1)^{2}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{t^{n}}{(n+1)^{2}}$
+\end_inset
+
+的收敛半径
+\begin_inset Formula $R=1$
+\end_inset
+
+, 收敛区间为
+\begin_inset Formula $-1<t<1$
+\end_inset
+
+, 即
+\begin_inset Formula $-1<x-1<1$
+\end_inset
+
+, 所以
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{(x-1)^{n}}{(n+1)^{2}}$
+\end_inset
+
+的收敛区间是
+\begin_inset Formula $(0,2)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+幂级数的运算性质
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质1
+\series default
+ 设幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+和
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}b_{n}x^{n}$
+\end_inset
+
+的收敛半径分别为
+\begin_inset Formula $R_{1}$
+\end_inset
+
+和
+\begin_inset Formula $R_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $R=min\{R_{1},R_{2}\}$
+\end_inset
+
+,则幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}(a_{n}\pm b_{n})x^{n}$
+\end_inset
+
+的收敛半径为
+\begin_inset Formula $R$
+\end_inset
+
+, 且 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\stackrel[n=0]{\infty}{\sum}(a_{n}\pm b_{n})x^{n}=\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}+\stackrel[n=0]{\infty}{\sum}b_{n}x^{n}(-R<x<R)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质2
+\series default
+ 设幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+的收敛半径为
+\begin_inset Formula $R(R>0)$
+\end_inset
+
+,则其和函数
+\begin_inset Formula $S(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-R,R)$
+\end_inset
+
+ 内可导,且有逐项求导公式
+\begin_inset Formula 
+\[
+S'(x)=(\stackrel[n=0]{\infty}{\sum}a_{n}x^{n})'=\stackrel[n=0]{\infty}{\sum}(a_{n}x^{n})'=\stackrel[n=0]{\infty}{\sum}na_{n}x^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+性质3
+\series default
+ 设幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}$
+\end_inset
+
+的收敛半径为
+\begin_inset Formula $R(R>0)$
+\end_inset
+
+, 则其和函数
+\begin_inset Formula $S(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-R,R)$
+\end_inset
+
+ 内可积，且有逐项积分公式
+\begin_inset Formula 
+\[
+\int_{0}^{x}S(t)dt=\int_{0}^{x}(\stackrel[n=0]{\infty}{\sum}a_{n}x^{n})dt=\stackrel[n=0]{\infty}{\sum}\int_{0}^{x}(a_{n}x^{n})dt=\stackrel[n=0]{\infty}{\sum}\frac{a_{n}}{n+1}x^{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+逐项积分后所得的幂级数与原幂级数有相同的收敛域，但
+\series bold
+端点的敛散性要另外考察
+\end_layout
+
+\begin_layout Standard
+几何级数的和函数 
+\begin_inset Formula 
+\[
+1+x+x^{2}+\cdots+x^{n}+\cdots=\frac{1}{1-x}(-1<x<1)
+\]
+
+\end_inset
+
+是幂级数求和中的一个基本结果.
+ 我们所讨论的许多级数求和的问题都可以利用幂级数的 运算性质转化为几何级数的求和问题来解决.
+\end_layout
+
+\begin_layout Example
+求幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{x^{n}}{n}$
+\end_inset
+
+的和函数, 并求交错级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{(-1)^{n}}{n}$
+\end_inset
+
+的和.
+\end_layout
+
+\begin_layout Solution
+因为
+\begin_inset Formula $\rho=\underset{n\rightarrow\infty}{\lim}|\frac{a_{n+1}}{a_{n}}|=\underset{n\rightarrow\infty}{\lim}\frac{\frac{x^{n}}{n+1}}{\frac{x^{n}}{n}}=\underset{n\rightarrow\infty}{\lim}\frac{n}{n+1}=1$
+\end_inset
+
+, 所以收敛半径
+\begin_inset Formula $R=1$
+\end_inset
+
+.
+ 易知幂级数在
+\begin_inset Formula $x=1$
+\end_inset
+
+处不收敛，在
+\begin_inset Formula $x=-1$
+\end_inset
+
+处收敛，从而幂级数
+\begin_inset Formula $\stackrel[n=0]{\infty}{\sum}\frac{x^{n}}{n}$
+\end_inset
+
+的收敛域是
+\begin_inset Formula $[-1,1)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $S(x)=\stackrel[n=0]{\infty}{\sum}\frac{x^{n}}{n}(-1\leqslant x<1)$
+\end_inset
+
+, 则
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S'(x)=\stackrel[n=0]{\infty}{\sum}x^{n-1}=1+x+x^{2}+\cdots+x^{n}+\cdots=\frac{1}{1-x}(-1\leqslant x<1)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+对上式从
+\begin_inset Formula $0$
+\end_inset
+
+到
+\begin_inset Formula $x$
+\end_inset
+
+积分, 又
+\begin_inset Formula $S(0)=0$
+\end_inset
+
+, 得
+\begin_inset Formula 
+\[
+S(x)=\int_{0}^{x}\frac{1}{1-t}dt=-\ln(1-x)(-1\leqslant x<1)
+\]
+
+\end_inset
+
+ 令
+\begin_inset Formula $x=-1$
+\end_inset
+
+,得 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{(-1)^{n}}{n}=-\ln2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+函数的幂级数展开
+\end_layout
+
+\begin_layout Standard
+构造以下级数
+\begin_inset Formula 
+\[
+f(0)+\frac{f'(0)}{1!}x+\frac{f''(0)}{2!}x^{2}+\cdots+\frac{f^{\{n\}}(0)}{n!}x^{n}+\cdots
+\]
+
+\end_inset
+
+ 我们称之为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的
+\series bold
+麦克劳林级数.
+\end_layout
+
+\begin_layout Standard
+那么，按照上述形式得到的麦克劳林级数是否以
+\begin_inset Formula $f(x)$
+\end_inset
+
+为和函数，也就是说在收敛区间 内是否收敛于函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+呢？
+\end_layout
+
+\begin_layout Standard
+我们可以考虑差值
+\begin_inset Formula 
+\[
+R_{n}(x)=f(x)-\left[f(0)+\frac{f'(0)}{1!}x+\frac{f''(0)}{2!}x^{2}+\cdots+\frac{f^{\{n\}}(0)}{n!}x^{n}+\cdots\right]
+\]
+
+\end_inset
+
+可以证明，当
+\begin_inset Formula $f(x)$
+\end_inset
+
+有
+\begin_inset Formula $(n+1)$
+\end_inset
+
+阶导数时, 有
+\begin_inset Formula $R_{n}(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}$
+\end_inset
+
+,其中
+\begin_inset Formula $\xi)$
+\end_inset
+
+在
+\begin_inset Formula $0$
+\end_inset
+
+和
+\begin_inset Formula $x$
+\end_inset
+
+之间.
+ 因此, 若函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-R,R)$
+\end_inset
+
+内满足条件
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}R_{n}(x)=\underset{n\rightarrow\infty}{\lim}\frac{f^{(n+1)}(\xi)}{(n+1)!}x^{n+1}=0$
+\end_inset
+
+, 则有
+\begin_inset Formula 
+\[
+f(x)=f(0)+\frac{f'(0)}{1!}x+\frac{f''(0)}{2!}x^{2}+\cdots+\frac{f^{\{n\}}(0)}{n!}x^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula $f(x)$
+\end_inset
+
+能在区间
+\begin_inset Formula $(-R,R)$
+\end_inset
+
+内展开为麦克劳林级数, 此时也称函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+能展开成
+\begin_inset Formula $x$
+\end_inset
+
+的幂级数.
+ 
+\end_layout
+
+\begin_layout Standard
+我们可以将函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+关于
+\begin_inset Formula $x$
+\end_inset
+
+的幂级数展开式推广为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=f(x_{0})+\frac{f'(x_{0})}{1!}(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^{2}+\cdots+\frac{f^{\{n\}}(x_{0})}{n!}(x-x_{0})^{n}+\cdots
+\]
+
+\end_inset
+
+该式称为
+\begin_inset Formula $f(x)$
+\end_inset
+
+的
+\series bold
+泰勒展开式
+\series default
+，右边的幂级数称为
+\series bold
+泰勒级数
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+常用函数的幂级数展开式: 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e^{x}=1+x+\frac{x^{2}}{2!}+\cdots+\frac{x^{n}}{n!}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-\infty<x<+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sin x=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\cdots+(-1)^{n}\frac{x^{2n+1}}{(2n+1)!}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-\infty<x<+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\cos x=x-\frac{x^{2}}{2!}+\frac{x^{4}}{3!}-\cdots+(-1)^{n}\frac{x^{2n}}{(2n)!}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-\infty<x<+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ln(1+x)=x-\frac{x^{2}}{2}+\frac{x^{4}}{3}-\cdots+(-1)^{n}\frac{x^{2n}}{n+1}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-1<x\leqslant1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\frac{1}{1-x}=1+x+x^{2}+x^{3}+\cdots+x^{n}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-1<x<1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(1+x)^{\alpha}=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^{2}+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+\cdots$
+\end_inset
+
+ 
+\begin_inset Formula $(-1<x<1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将函数
+\begin_inset Formula $f(x)=\frac{1}{1+x^{2}}$
+\end_inset
+
+展开成
+\begin_inset Formula $x$
+\end_inset
+
+的幂级函数
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\frac{1}{1-x}=1+x+x^{2}+x^{3}+\cdots+x^{n}+\cdots(-1<x<1)$
+\end_inset
+
+, 将
+\begin_inset Formula $x$
+\end_inset
+
+换成 
+\begin_inset Formula $-x^{2}$
+\end_inset
+
+得
+\begin_inset Formula $\frac{1}{1+x^{2}}=1-x^{2}+x^{4}-x^{6}+\cdots+(-1)^{n}x^{2n}+\cdots$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(-1<x<1)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 统计简介
 \end_layout
