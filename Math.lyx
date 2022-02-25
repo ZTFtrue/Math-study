@@ -55258,6 +55258,53 @@ k\equiv z^{3}(\mod d)
 \end_layout
 
 \begin_layout Section
+朱利亚集合
+\end_layout
+
+\begin_layout Standard
+朱利亚集合可以由下式进行反复迭代得到：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle f_{c}(z)=z^{2}+c}
+\]
+
+\end_inset
+
+ 对于固定的复数
+\begin_inset Formula $c$
+\end_inset
+
+，取某一
+\begin_inset Formula $z$
+\end_inset
+
+值（如
+\begin_inset Formula ${\displaystyle z=z_{0}}$
+\end_inset
+
+），可以得到序列
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle z_{0},f_{c}(z_{0}),f_{c}(f_{c}(z_{0})),f_{c}(f_{c}(f_{c}(z_{0}))),\ldots.}$
+\end_inset
+
+ .
+ 这一序列可能发散于无穷大或始终处于某一范围之内并收敛于某一值。我们将使其
+\series bold
+不扩散
+\series default
+的
+\begin_inset Formula $z$
+\end_inset
+
+值的集合称为朱利亚集合。
+\end_layout
+
+\begin_layout Section
 一些有趣的图形
 \end_layout
 
