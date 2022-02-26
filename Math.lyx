@@ -46001,6 +46001,1037 @@ f(x)=f(x_{0})+\frac{f'(x_{0})}{1!}(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^{2}+\
 
 \end_layout
 
+\begin_layout Section
+傅里叶级数
+\end_layout
+
+\begin_layout Subsection
+三角函数系的正交性
+\end_layout
+
+\begin_layout Standard
+我们把下面的函数系称为三角函数系:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{1,\cos x,\sin x,\cdots,\cos2x,\sin2x,\cdots,\cos nx,\sin nx,\cdots\}
+\]
+
+\end_inset
+
+三角函数系中任何两个不同的函数间的乘积在区间
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+上的积分均为 0,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\int_{-\pi}^{\pi}\cos nxdx & =0\\
+\int_{-\pi}^{\pi}\sin nxdx & =0\\
+\int_{-\pi}^{\pi}\sin kx\cos nxdx & =0\\
+\int_{-\pi}^{\pi}\cos kx\cos nxdx & =0\\
+\int_{-\pi}^{\pi}\sin kx\sin nxdx & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $k,n=1,2,3,\cdots,且k\neq n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这一性质称为三角函数系的正交性.
+ 另外,在三角函数系中,两个相同函数的乘积在区间
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+上的积分不等于
+\begin_inset Formula $0$
+\end_inset
+
+, 且有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\int_{-\pi}^{\pi}1^{2}dx & =2\pi\\
+\int_{-\pi}^{\pi}\sin^{2}nxdx & =\pi\\
+\int_{-\pi}^{\pi}\cos^{2}nxdx & =\pi
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $n=1,2,3,\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+周期为 2π 的函数展开为傅里叶级数
+\end_layout
+
+\begin_layout Standard
+一般地,形如
+\begin_inset Formula $\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}(a_{n}\cos nx+b_{n}\sin nx)$
+\end_inset
+
+的级数叫做
+\series bold
+三角级数
+\series default
+,其中
+\begin_inset Formula $a_{0}$
+\end_inset
+
+,
+\begin_inset Formula $a_{n}$
+\end_inset
+
+,
+\begin_inset Formula $b_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $(n=1,2,3,\cdots)$
+\end_inset
+
+ 都是常数
+\end_layout
+
+\begin_layout Standard
+对于三角级数,我们关心它的收敛性以及给定周期为 2x的周期函数如何把它展开成三角级数。
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是周期为 
+\begin_inset Formula $2\pi$
+\end_inset
+
+的周期函数, 并且可以展开成三角级数:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(x)=\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}(a_{n}\cos nx+b_{n}\sin nx)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们自然要问系数 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+,
+\begin_inset Formula $a_{n}$
+\end_inset
+
+,
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ 如何确定? 函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+满足怎样的条件才可以展开为上述三角级数？
+\end_layout
+
+\begin_layout Standard
+对上式两边在
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+上积分,利用三角函数系的正交性,可得
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx\thinspace(n=0,1,2,\cdots)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx\thinspace(n=1,2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果上边两式中的积分都存在,这时它给出的系数
+\begin_inset Formula $a_{n}$
+\end_inset
+
+,
+\begin_inset Formula $b_{n}$
+\end_inset
+
+,称为
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶系数,
+\end_layout
+
+\begin_layout Standard
+将这些系数代人(23.3.1)式的右端所得到的三角级数
+\begin_inset Formula $\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}(a_{n}\cos nx+b_{n}\sin nx)$
+\end_inset
+
+叫做函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的
+\series bold
+傅里叶级数
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+一个定义在
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+上, 周期为 
+\begin_inset Formula $2\pi$
+\end_inset
+
+的函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ ,如果它在一个周期上可积, 则一定
+\end_layout
+
+\begin_layout Standard
+可以作出
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数, 这个级数是否收敛?如果收敛的话, 它的和是否就是
+\begin_inset Formula $f(x)$
+\end_inset
+
+?关于这个问题,有如下结论.
+\end_layout
+
+\begin_layout Theorem
+(狄利克雷收敛定理)设
+\begin_inset Formula $f(x)$
+\end_inset
+
+是周期为
+\begin_inset Formula $2\pi$
+\end_inset
+
+的周期函数,如果它在一个周期内满足连续或只有有限个第一类间断点,且至多只有有限个极值点,则 
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数收敛, 并且
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $x$
+\end_inset
+
+是
+\begin_inset Formula $f(x)$
+\end_inset
+
+的连续点时,级数收敛于
+\begin_inset Formula $f(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $x$
+\end_inset
+
+是
+\begin_inset Formula $f(x)$
+\end_inset
+
+的间断点时,级数收敛于
+\begin_inset Formula $\frac{1}{2}[f(x^{-})+f(x^{+})]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+该定理表明,只要
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+上至多有有限个第一类间断点, 并且不做无限次振荡,则函数的傅里叶级数在连续点处就收敛于该点的函数值, 在间断点处收敛于该点左,右极限的算术平均值.
+ 通常我们平时遇到的大部分周期函数都能满足收敛定理的条件。
+\end_layout
+
+\begin_layout Example
+(脉冲矩形波)设 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是周期为
+\begin_inset Formula $2\pi$
+\end_inset
+
+的周期函数, 它在
+\begin_inset Formula $[-\pi,\pi)$
+\end_inset
+
+ 上的表达式为
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+-1 & -\pi\leqslant x<0\\
+1 & 0\leqslant x<\pi
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将
+\begin_inset Formula $f(x)$
+\end_inset
+
+展开成傅里叶级数。
+\end_layout
+
+\begin_layout Solution
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+满足收敛定理的条件,它在点
+\begin_inset Formula $x=k\pi\thinspace(k=0,\pm1,\pm2,\cdots)$
+\end_inset
+
+处不连续, 而在其他点连续, 因而
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数收敛,且当
+\begin_inset Formula $x=k\pi$
+\end_inset
+
+ 时收敛
+\begin_inset Formula $\frac{(-1)+1}{2}=\frac{1+(-1)}{2}=0$
+\end_inset
+
+.当
+\begin_inset Formula $x\neq k\pi$
+\end_inset
+
+时级数收敛于 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ 又因为
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx=\frac{1}{\pi}\int_{-\pi}^{0}(-1)\cos nxdx+\frac{1}{\pi}\int_{-\pi}^{0}1\cdot\cos nxdx=0\thinspace(n=0,1,2,\cdots)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+b_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx=\frac{1}{\pi}\int_{-\pi}^{0}(-1)\sin nxdx+\frac{1}{\pi}\int_{-\pi}^{0}1\cdot\sin nxdx\\
+ & =\left.\frac{1}{\pi}(\frac{\cos nx}{n})\right|_{-\pi}^{0}+\left.\frac{1}{\pi}(-\frac{\cos nx}{n})\right|_{0}^{\pi}\\
+ & =\frac{1}{n\pi}(1-\cos n\pi-\cos n\pi+1)\\
+ & =\frac{2}{n\pi}(1-(-1)^{n})=\begin{cases}
+\frac{4}{n\pi} & n=1,3,5,\cdots\\
+0 & n=2,4,6,\cdots
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数展开式为
+\begin_inset Formula $f(x)=\frac{4}{\pi}(\sin x+\frac{1}{3}\sin3x+\frac{1}{5}\sin5x+\cdots)$
+\end_inset
+
+
+\begin_inset Formula $(-\infty<x<+\infty;x\neq0,\pm\pi,\pm2\pi,\cdots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(锯齿脉冲信号)设
+\begin_inset Formula $f(x)$
+\end_inset
+
+是以
+\begin_inset Formula $2\pi$
+\end_inset
+
+为周期的函数, 它在
+\begin_inset Formula $[-\pi,\pi)$
+\end_inset
+
+ 上的表达式为
+\begin_inset Formula $f(x)=\begin{cases}
+x, & -\pi\leqslant x<0\\
+0, & 0\leqslant x<\pi
+\end{cases}$
+\end_inset
+
+, 将
+\begin_inset Formula $f(x)$
+\end_inset
+
+展开成傅里叶级数。
+\end_layout
+
+\begin_layout Solution
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+满足收敛定理的条件,它在点
+\begin_inset Formula $x=(2k+1)\pi\thinspace(k=0,\pm1,\pm2,\cdots)$
+\end_inset
+
+处不连续, 而在其他点连续, 因此在这些点处 级数收敛于
+\begin_inset Formula $\frac{f(\pi^{-})+f(-\pi^{+})}{2}=\frac{0-\pi}{2}=-\frac{\pi}{2}$
+\end_inset
+
+, 在连续点
+\begin_inset Formula $x(x\neq(2k+1)\pi)$
+\end_inset
+
+处收敛于
+\begin_inset Formula $f(x)$
+\end_inset
+
+, 又因为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+a_{0}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)dx=\frac{1}{\pi}\int_{-\pi}^{0}xdx=\left.\frac{1}{\pi}(\frac{\pi^{2}}{2})\right|_{-\pi}^{0}=-\frac{\pi}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+a_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx=\frac{1}{\pi}\int_{-\pi}^{0}x\cos nxdx\\
+ & =\left.\frac{1}{\pi}(\frac{x\sin x}{n}+\frac{x\cos nx}{n^{2}})\right|_{-\pi}^{0}\\
+ & =\frac{1}{n^{2}\pi}(1-\cos n\pi)\\
+ & =\begin{cases}
+\frac{2}{n^{2}\pi} & n=1,3,5,\cdots\\
+0 & n=2,4,6,\cdots
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+b_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin nxdx=\frac{1}{\pi}\int_{-\pi}^{0}x\sin nxdx\\
+ & =\left.\frac{1}{\pi}(-\frac{x\cos nx}{n}+\frac{\sin nx}{n^{2}})\right|_{-\pi}^{0}=-\frac{\cos n\pi}{n}\\
+ & =-\frac{(-1)^{n+1}}{n}\thinspace(n=1,2,3,\cdots)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数展开式为
+\begin_inset Formula $f(x)=-\frac{4}{\pi}+(\frac{2}{\pi}\cos x+\sin x)-\frac{1}{2}\sin2x+(\frac{2}{3^{2}\pi}\cos3x+\frac{1}{2}\sin3x)-\frac{1}{4}\sin4x+(\frac{2}{5^{2}\pi}\cos5x+\frac{1}{5}\sin5x)-\ldots$
+\end_inset
+
+
+\begin_inset Formula $(-\infty<x<+\infty;x\neq\pm\pi,\pm3\pi,\cdots)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,周期为 
+\begin_inset Formula $2\pi$
+\end_inset
+
+的
+\series bold
+奇函数
+\series default
+ 
+\begin_inset Formula $f(x)$
+\end_inset
+
+展开成傅里叶级数时,根据奇,偶函数在关于原点对称的区间上的积分性质,其傅里叶系数为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=0\thinspace(n=0,1,2,\cdots)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b_{n}=\frac{2}{\pi}\int_{0}^{\pi}f(x)\sin nxdx\thinspace(n=1,2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是奇函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数为
+\begin_inset Formula 
+\[
+\stackrel[n=1]{\infty}{\sum}b_{n}\sin nx
+\]
+
+\end_inset
+
+它只含有
+\series bold
+正弦项
+\series default
+,称为
+\series bold
+正弦级数
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+而周期为 
+\begin_inset Formula $2\pi$
+\end_inset
+
+的偶函数
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+展开成傅里叶级数时, 其傅里叶系数为
+\begin_inset Formula 
+\begin{align*}
+a_{n} & =\frac{2}{\pi}\int_{0}^{\pi}f(x)\cos nxdx\thinspace(n=0,1,2,3,\cdots)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+b_{n} & =0\thinspace(n=1,2,3,\cdots)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是偶函数
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+的傅里叶级数为
+\begin_inset Formula 
+\[
+\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}a_{n}\cos nx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+它只含有
+\series bold
+余弦项
+\series default
+,称为
+\series bold
+余弦级数.
+\end_layout
+
+\begin_layout Example
+(脉冲三角信号)设
+\begin_inset Formula $f(x)$
+\end_inset
+
+是以
+\begin_inset Formula $2\pi$
+\end_inset
+
+为周期的函数, 它在
+\begin_inset Formula $[-\pi,\pi)$
+\end_inset
+
+ 上的表达式为
+\begin_inset Formula $f(x)=\left|x\right|$
+\end_inset
+
+, 将
+\begin_inset Formula $f(x)$
+\end_inset
+
+展开成傅里叶级数.
+\end_layout
+
+\begin_layout Solution
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+满足收敛定理的条件, 由于
+\begin_inset Formula $f(x)$
+\end_inset
+
+在区间
+\begin_inset Formula $(-\infty,+\infty)$
+\end_inset
+
+内连续, 故它的傅里叶级数处处收敛于
+\begin_inset Formula $f(x)$
+\end_inset
+
+, 又因为
+\begin_inset Formula $f(x)$
+\end_inset
+
+是以
+\begin_inset Formula $2\pi$
+\end_inset
+
+为周期的函数, 所以有
+\begin_inset Formula $b_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+a_{0}=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)dx=\frac{2}{\pi}\int_{0}^{\pi}f(x)dx=\frac{2}{\pi}\int_{0}^{\pi}xdx=\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+a_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx=\frac{2}{\pi}\int_{0}^{\pi}f(x)\cos nxdx\\
+ & =\frac{2}{\pi}\int_{0}^{\pi}x\cos nxdx\\
+ & =\frac{2}{n^{2}\pi}(\cos n\pi-1)\\
+ & =\begin{cases}
+-\frac{4}{n^{2}\pi} & n=1,3,5,\cdots\\
+0 & n=2,4,6,\cdots
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数展开式为
+\begin_inset Formula $f(x)=\frac{\pi}{2}-\frac{4}{\pi}(\cos x+\frac{1}{3^{2}}\cos3x+\frac{1}{5^{2}}\cos5x)+\ldots$
+\end_inset
+
+
+\begin_inset Formula $(-\infty<x<+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+周期不为 2π 的函数展开为傅里叶级数
+\end_layout
+
+\begin_layout Standard
+在实际问题中,我们可以通过自变量的变量代换,把不以 
+\begin_inset Formula $2\pi$
+\end_inset
+
+为周期的周期函数展开为傅里叶级数。
+\end_layout
+
+\begin_layout Standard
+设以
+\begin_inset Formula $2l$
+\end_inset
+
+为周期的函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+满足收敛定理的条件, 则
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数展开式为
+\begin_inset Formula 
+\[
+f(x)=\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}(a_{n}\cos\frac{n\pi x}{l}+b_{n}\cos\frac{n\pi x}{l})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{l}\int_{-l}^{l}f(x)\frac{n\pi x}{l}dx\thinspace(n=0,1,2,\cdots)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+b_{n}=\frac{1}{l}\int_{-l}^{l}f(x)\sin\frac{n\pi x}{l}dx\thinspace(n=1,2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+上式中, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数在
+\begin_inset Formula $f(x)$
+\end_inset
+
+的连续点处收敛于 
+\begin_inset Formula $f(x)$
+\end_inset
+
+, 在间断点
+\begin_inset Formula $x$
+\end_inset
+
+处收敛于
+\begin_inset Formula $\frac{1}{2}[f(x^{-})+f(x^{+})]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+类似地,若 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是
+\series bold
+奇函数
+\series default
+, 展开成傅里叶级数时为
+\begin_inset Formula 
+\[
+f(x)=\stackrel[n=1]{\infty}{\sum}b_{n}\sin\frac{n\pi x}{l}
+\]
+
+\end_inset
+
+其中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b_{n}=\frac{2}{l}\int_{0}^{l}f(x)\sin\frac{n\pi x}{l}dx\thinspace(n=1,2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是
+\series bold
+偶函数
+\series default
+, 展开成傅里叶级数时为
+\begin_inset Formula 
+\[
+f(x)=\frac{a_{0}}{2}+\stackrel[n=1]{\infty}{\sum}a_{n}\cos\frac{n\pi x}{l}
+\]
+
+\end_inset
+
+其中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=\frac{2}{l}\int_{0}^{l}f(x)\cos\frac{n\pi x}{l}dx\thinspace(n=0,1,2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(矩形脉冲波)设 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是周期为
+\begin_inset Formula $2$
+\end_inset
+
+的周期函数, 它在
+\begin_inset Formula $[-2,2)$
+\end_inset
+
+ 上的表达式为
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+0 & -2\leqslant x<0\\
+k & 0\leqslant x<2
+\end{cases}\thinspace k>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将
+\begin_inset Formula $f(x)$
+\end_inset
+
+展开成傅里叶级数。
+\end_layout
+
+\begin_layout Solution
+这里
+\begin_inset Formula $l=2$
+\end_inset
+
+,
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数为
+\begin_inset Formula 
+\[
+a_{0}=\frac{1}{2}\int_{-2}^{2}f(x)dx=\frac{1}{2}\int_{0}^{2}kdx=k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{2}\int_{-2}^{2}f(x)\cos\frac{n\pi x}{2}dx=\frac{1}{2}\int_{0}^{2}kf(x)\cos\frac{n\pi x}{2}dx=\left.\frac{k}{n\pi}(\sin\frac{n\pi x}{2})\right|_{0}^{2}=0(n=0,1,2,\cdots)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+b_{n} & =\frac{1}{2}\int_{-2}^{2}f(x)\cos\frac{n\pi x}{2}dx=\frac{1}{2}\int_{0}^{2}k\cos\frac{n\pi x}{2}dx\\
+ & =\left.-\frac{k}{n\pi}(\cos\frac{n\pi x}{2})\right|_{0}^{2}\\
+ & =\frac{k}{n\pi}(1-\cos n\pi)\\
+ & =\begin{cases}
+\frac{2k}{n\pi} & n=1,3,5,\cdots\\
+0 & n=2,4,6,\cdots
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的傅里叶级数展开式为
+\begin_inset Formula $f(x)=\frac{k}{2}+\frac{2k}{\pi}(\sin\frac{\pi x}{2}+\frac{1}{3}\sin\frac{3\pi x}{2}+\frac{1}{5}\sin\frac{5\pi x}{2}+\cdots)$
+\end_inset
+
+
+\begin_inset Formula $(-\infty<x<+\infty;x\neq0,\pm2,\pm4,\cdots)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 统计简介
 \end_layout
