@@ -47032,6 +47032,84 @@ b_{n} & =\frac{1}{2}\int_{-2}^{2}f(x)\cos\frac{n\pi x}{2}dx=\frac{1}{2}\int_{0}^
 
 \end_layout
 
+\begin_layout Example
+声波: 
+\end_layout
+
+\begin_layout Standard
+描述声音需要用振幅和频率这两个特征量,振幅的大小反映声音的大小,频率的高低反映声音的高低, 对于乐器发出的声音,我们称它为乐音,仅用这两个量是不够的,乐音还有一
+个非常重要的特征就是
+\series bold
+音色
+\series default
+(即波形).
+ 给定频率
+\begin_inset Formula $x$
+\end_inset
+
+,在乐音中除了含有频率
+\begin_inset Formula $x$
+\end_inset
+
+的声波外。还含有频率是
+\begin_inset Formula $x$
+\end_inset
+
+的整数倍的声波, 通常称频率
+\begin_inset Formula $x$
+\end_inset
+
+的声波为乐音的基波, 而称频率是
+\begin_inset Formula $kx\thinspace(k=2,3,\cdots)$
+\end_inset
+
+的声波是乐音的
+\begin_inset Formula $k$
+\end_inset
+
+阶谐波, 在一种乐器上弹奏一个频率 
+\begin_inset Formula $x$
+\end_inset
+
+的声音, 就会发出基波是
+\begin_inset Formula $x$
+\end_inset
+
+的乐音, 频率
+\begin_inset Formula $x$
+\end_inset
+
+和基波是
+\begin_inset Formula $x$
+\end_inset
+
+的乐音对应,这种对应关系就是函数关系,如果把乐音记作
+\begin_inset Formula $f(x)$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+的基波可表示为的k阶谐波可表示为
+\begin_inset Formula 
+\[
+a_{k}\cos kx+b_{k}\sin kx\thinspace(k=2,3,\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这些波叠加在一起,就得到
+\begin_inset Formula $f(x)=\stackrel[n=1]{\infty}{\sum}a_{k}\cos kx+b_{k}\sin kx\thinspace(k=2,3,\cdots)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 统计简介
 \end_layout
