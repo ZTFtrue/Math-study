@@ -49550,7 +49550,11 @@ P(A)=\frac{2}{12}=\frac{1}{6}
 条件概率
 \series default
 \color inherit
-(conditional probability), P(B|A)读作
+(conditional probability), 
+\begin_inset Formula $P(B|A)$
+\end_inset
+
+读作
 \begin_inset Formula $A$
 \end_inset
 
