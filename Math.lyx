@@ -47110,6 +47110,447 @@ a_{k}\cos kx+b_{k}\sin kx\thinspace(k=2,3,\cdots)
 
 \end_layout
 
+\begin_layout Section
+拉普拉斯变换
+\end_layout
+
+\begin_layout Definition
+(拉氏变换) 设函数
+\begin_inset Formula $f(t)$
+\end_inset
+
+在
+\begin_inset Formula $t\geqslant0$
+\end_inset
+
+时有定义, 而且广义积分
+\begin_inset Formula $\int_{0}^{+\infty}f(t)e^{-pt}dt$
+\end_inset
+
+在
+\begin_inset Formula $p$
+\end_inset
+
+的某一区域收敛，则此积分确定了
+\begin_inset Formula $p$
+\end_inset
+
+的函数，记作 
+\begin_inset Formula 
+\[
+F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
+\]
+
+\end_inset
+
+称为函数
+\begin_inset Formula $f(t)$
+\end_inset
+
+的拉氏变换式，记为
+\begin_inset Formula ${\displaystyle {\displaystyle \mathcal{L}[f(t)}]=F(p)}$
+\end_inset
+
+, 
+\begin_inset Formula $F(p)$
+\end_inset
+
+称为
+\begin_inset Formula $f(t)$
+\end_inset
+
+的拉氏变换 (或称为
+\begin_inset Formula $f(t)$
+\end_inset
+
+的象函数).
+ 若
+\begin_inset Formula $F(p)$
+\end_inset
+
+是
+\begin_inset Formula $f(t)$
+\end_inset
+
+的拉氏变换, 则称
+\begin_inset Formula $f(t)$
+\end_inset
+
+为
+\begin_inset Formula $F(p)$
+\end_inset
+
+的拉氏逆变换( 称为象原函数).
+ 记为
+\begin_inset Formula $f(t)=\mathcal{L}^{-1}{\displaystyle [F(p)}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+定义中, 只要求
+\begin_inset Formula $f(t)$
+\end_inset
+
+在
+\begin_inset Formula $t\geqslant0$
+\end_inset
+
+时有定义，这是由于在无线电技术等实际应用中，以时间
+\begin_inset Formula $t$
+\end_inset
+
+为自变量的函数在
+\begin_inset Formula $t<0$
+\end_inset
+
+时是无意义的, 为了方便, 假定
+\begin_inset Formula $t<0$
+\end_inset
+
+时，
+\begin_inset Formula $f(t)=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+一般地，在科学技术中遇到的函数，它的拉氏变换总是存在的.
+\end_layout
+
+\begin_layout Example
+求单位阶跃函数
+\begin_inset Formula $u(t)=\begin{cases}
+0 & t<0\\
+1 & t\geqslant0
+\end{cases}$
+\end_inset
+
+ 的拉氏变换.
+\end_layout
+
+\begin_layout Solution
+根据拉氏变换的定义
+\begin_inset Formula ${\displaystyle \mathcal{L}[u(t)}]=\int_{0}^{+\infty}1\cdot e^{-pt}dt$
+\end_inset
+
+, 这个积分在
+\begin_inset Formula $p>0$
+\end_inset
+
+时收敛，而且有 
+\begin_inset Formula 
+\[
+{\displaystyle \mathcal{L}[u(t)}]=\int_{0}^{+\infty}1\cdot e^{-pt}dt=\left.-\frac{1}{p}e^{-\mu}\right|_{0}^{+\infty}=\frac{1}{p}
+\]
+
+\end_inset
+
+所以
+\begin_inset Formula ${\displaystyle \mathcal{L}[u(t)}]=\frac{1}{p}\thinspace(p>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求指数函数
+\begin_inset Formula $f(t)=e^{at}$
+\end_inset
+
+(
+\begin_inset Formula $t\geqslant0$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+为常数) 的拉氏变换
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\mathcal{L}(e^{at})=\int_{0}^{+\infty}e^{at}\cdot e^{-pt}dt=\left.-\frac{1}{p-a}e^{-(p-a)t}\right|_{0}^{+\infty}$
+\end_inset
+
+这个积分在
+\begin_inset Formula $p>a$
+\end_inset
+
+时收敛, 此时有
+\begin_inset Formula 
+\[
+\mathcal{L}(e^{at})=-\frac{1}{p-a}(p>a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求函数
+\begin_inset Formula $f(t)=\sin\omega t$
+\end_inset
+
+的拉氏变换
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\mathcal{L}(\sin\omega t)=\int_{0}^{+\infty}e^{-pt}\cdot\sin\omega t\thinspace dt$
+\end_inset
+
+利用分部积分法有
+\begin_inset Formula 
+\begin{align*}
+\mathcal{L}(\sin\omega t) & =\int_{0}^{+\infty}e^{-pt}\cdot\sin\omega t\thinspace dt\\
+ & =\frac{\omega}{p}\int_{0}^{+\infty}e^{-pt}\cdot\cos\omega t\thinspace dt\\
+ & =\frac{\omega}{p}\left[\frac{1}{p}-\frac{\omega}{p}\int_{0}^{+\infty}e^{-pt}\cdot\sin\omega t\thinspace dt\right]\\
+ & =\frac{\omega}{p^{2}}-\frac{\omega^{2}}{p^{2}}\int_{0}^{+\infty}e^{-pt}\cdot\sin\omega t\thinspace dt\\
+ & =\frac{\omega}{p^{2}}-\frac{\omega^{2}}{p^{2}}\mathcal{L}(\sin\omega t)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{L}(\sin\omega t)=\frac{\omega}{p^{2}+\omega^{2}}\thinspace(p>0)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{L}(\cos\omega t)=\frac{\omega}{p^{2}+\omega^{2}}\thinspace(p>0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+拉氏变换的性质
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质1
+\series bold
+ 
+\series default
+(
+\series bold
+线性性质
+\series default
+) 若
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+是常数, 设
+\begin_inset Formula $\mathcal{L}[f_{1}(t)]=F_{1}(p)$
+\end_inset
+
+,
+\begin_inset Formula $\mathcal{L}[f_{2}(t)]=F_{2}(p)$
+\end_inset
+
+, 则
+\begin_inset Formula 
+\[
+\mathcal{L}[af_{1}(t)+\beta f_{2}(t)]=aF_{1}(p)+\beta F_{2}(p)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质2
+\series bold
+ 
+\series default
+(
+\series bold
+位移性质
+\series default
+) 若
+\begin_inset Formula $\mathcal{L}[f(t)]=F(p)$
+\end_inset
+
+,则
+\begin_inset Formula $\mathcal{L}[e^{at}f(t)]=F(p-a)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+这个性质表明对象原函数乘以
+\begin_inset Formula $e^{at}$
+\end_inset
+
+,相当于将象函数作位移
+\begin_inset Formula $a$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质3 (
+\series bold
+延迟性质
+\series default
+) 若
+\begin_inset Formula $\mathcal{L}[f(t)]=F(p)$
+\end_inset
+
+, 则对于任一非负实数 
+\begin_inset Formula $r$
+\end_inset
+
+,有
+\begin_inset Formula $\mathcal{L}[f(t-r)]=e^{-rp}F(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $f(t-r)$
+\end_inset
+
+与
+\begin_inset Formula $f(t)$
+\end_inset
+
+相比，
+\begin_inset Formula $f(t)$
+\end_inset
+
+是从
+\begin_inset Formula $t=0$
+\end_inset
+
+开始有非零数值, 而 
+\begin_inset Formula $f(t-r)$
+\end_inset
+
+是从
+\begin_inset Formula $t=r$
+\end_inset
+
+开始才有非零数值，即延迟了一个
+\series bold
+时间
+\series default
+.
+ 这个性质表明, 时间函数延迟
+\begin_inset Formula $r$
+\end_inset
+
+的拉氏变换等于它的象函数乘以
+\begin_inset Formula $e^{-rp}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质4 (
+\series bold
+微分性质
+\series default
+) 若
+\begin_inset Formula $\mathcal{L}[f(t)]=F(p)$
+\end_inset
+
+, 则
+\begin_inset Formula $\mathcal{L}\left[f'(t)\right]=pF(p)-f(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+此性质可推广到
+\begin_inset Formula $n$
+\end_inset
+
+阶导数, 有
+\begin_inset Formula 
+\[
+\mathcal{L}\left[f^{n}(t)\right]=p^{n}\mathcal{L}\left[f(t)\right]-p^{n-1}f(0)-p^{n-2}f'(0)-f^{(n-1)}(0)
+\]
+
+\end_inset
+
+.
+ 特别地, 当 
+\begin_inset Formula $f(0)=f'(0)=\cdots=f^{(n-1)}(0)=0$
+\end_inset
+
+时，有
+\begin_inset Formula $\mathcal{L}\left[f^{n}(t)\right]=p^{n}F(p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质5 (
+\series bold
+积分性质
+\series default
+) 若
+\begin_inset Formula $\mathcal{L}[f(t)]=F(p)$
+\end_inset
+
+, 则
+\begin_inset Formula $\mathcal{L}\left[\int_{0}^{+\infty}f(x)dx\right]=\frac{F(p)}{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+性质6 (
+\series bold
+相似性质
+\series default
+) 若
+\begin_inset Formula $\mathcal{L}[f(t)]=F(p)$
+\end_inset
+
+, 则
+\begin_inset Formula $\mathcal{L}[f(at)]=\frac{1}{a}F(\frac{p}{a})$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 统计简介
 \end_layout
