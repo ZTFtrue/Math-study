@@ -2059,7 +2059,7 @@ status open
 欧氏除法算式
 \series default
 ).
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -8352,7 +8352,7 @@ N=m\times n
 \end_layout
 
 \begin_layout Paragraph
-排列
+排列(Permutation, arrangement)
 \end_layout
 
 \begin_layout Standard
@@ -8389,6 +8389,49 @@ N=m\times n
 \end_inset
 
 表示.
+\end_layout
+
+\begin_layout Subparagraph
+公式推理：
+\end_layout
+
+\begin_layout Standard
+从n个不相同元素中取出m个排成一列（有序），第一个位置可以有n个选择，第二个位置可以有n-1个选择（已经有1个放在前一个位置），则同理可知第三个位置可以有n-2
+个选择，以此类推第m个位置可以有
+\begin_inset Formula $n-(m-1)$
+\end_inset
+
+个选择，则排列数为
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $A_{n}^{m}=n(n-1)(n-2)\cdots[n-(m-1)]$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ .
 \end_layout
 
 \begin_layout Standard
@@ -8434,8 +8477,12 @@ A_{n}^{n}=n\times(n-1)\times(n-2)\times\cdots\times3\times2\times1
 阶乘
 \series default
 \color inherit
-,用!表示.
- 所以个不同元素的全排列数公式可以写成 
+(factorial),用!表示.
+ 所以
+\begin_inset Formula $n$
+\end_inset
+
+个不同元素的全排列数公式可以写成 
 \family roman
 \series medium
 \shape up
@@ -8468,11 +8515,15 @@ A_{n}^{n}=n!
 \end_layout
 
 \begin_layout Paragraph
-组合
+组合（combinatorial）
 \end_layout
 
 \begin_layout Standard
-一般地,从n个不同元素中取出
+一般地,从
+\begin_inset Formula $n$
+\end_inset
+
+个不同元素中取出
 \begin_inset Formula $m(m\leqslant n)$
 \end_inset
 
@@ -8510,7 +8561,13 @@ A_{n}^{n}=n!
 \begin_inset Formula $m(m\leqslant n)$
 \end_inset
 
-个元素的所有不同组合的个数叫做从个n不同元素中取出m个元素的组合数,用符号
+个元素的所有不同组合的个数叫做从个n不同元素中取出m个元素的
+\series bold
+\color orange
+组合数
+\series default
+\color inherit
+,用符号
 \begin_inset Formula $C_{n}^{m}$
 \end_inset
 
@@ -8521,11 +8578,68 @@ m
 \end{array})$
 \end_inset
 
-表示.
+或
+\begin_inset Formula $C(n,m)$
+\end_inset
+
+表示.其中
+\begin_inset Formula $n$
+\end_inset
+
+表示总数，
+\begin_inset Formula $m$
+\end_inset
+
+表示不计顺序的取出数。
+\end_layout
+
+\begin_layout Subparagraph
+组合公式推理
 \end_layout
 
 \begin_layout Standard
-排列数公式:
+从
+\begin_inset Formula $n$
+\end_inset
+
+个不相同元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个成为一个全排列 有
+\begin_inset Formula $A_{n}^{m}$
+\end_inset
+
+个，由于m个元素组成的一组可以有
+\begin_inset Formula $m!$
+\end_inset
+
+种不同的排列（全排列
+\begin_inset Formula $A_{n}^{n}=n!$
+\end_inset
+
+ ），由于组合元素没有顺序要求，所以部分计算重复，不需要乘（需要除掉），组合的总数就是 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $C_{n}^{m}=\frac{A_{n}^{m}}{A_{m}^{m}}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+公式:
 \begin_inset Formula 
 \begin{eqnarray*}
 C_{n}^{m} & =\frac{A_{n}^{m}}{A_{m}^{m}} & =\frac{n(n-1)(n-2)\cdots[n-(m-1)]}{m!}\\
@@ -8562,6 +8676,21 @@ C_{n}^{m}=C_{n}^{n-m}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+这个等式的左边意义是：选择
+\begin_inset Formula $m$
+\end_inset
+
+ 个做某事(秋后问斩)，右边的意思是选择
+\begin_inset Formula $n-m$
+\end_inset
+
+个不做某事（大赦(amnesty)）。
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 C_{n+1}^{m}=C_{n}^{m}+C_{n}^{m-1}
@@ -8570,6 +8699,816 @@ C_{n+1}^{m}=C_{n}^{m}+C_{n}^{m-1}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+这个等式的左边意义是：在
+\begin_inset Formula $n+1$
+\end_inset
+
+中选择
+\begin_inset Formula $m$
+\end_inset
+
+ 个做某事(秋后问斩)，情况分为一定选择
+\begin_inset Formula $n+1$
+\end_inset
+
+中的那个
+\begin_inset Formula $1$
+\end_inset
+
+和一定
+\series bold
+不
+\series default
+选择
+\begin_inset Formula $n+1$
+\end_inset
+
+中的那个
+\begin_inset Formula $1$
+\end_inset
+
+；右边的意思是在
+\begin_inset Formula $n$
+\end_inset
+
+中选择
+\begin_inset Formula $m$
+\end_inset
+
+个做某事(问斩)，对应左边一定选择
+\begin_inset Formula $n+1$
+\end_inset
+
+中的那个
+\begin_inset Formula $1$
+\end_inset
+
+，以及选择
+\begin_inset Formula $m-1$
+\end_inset
+
+个做某事(问斩)对应左边一定
+\series bold
+不
+\series default
+选择
+\begin_inset Formula $n+1$
+\end_inset
+
+中的那个
+\begin_inset Formula $1$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{r}^{r}+C_{r+1}^{r}+\cdots+C_{n}^{r}=C_{n+1}^{r+1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\stackrel[i=0]{k}{\sum}=C_{n}^{i}C_{m}^{k-i}=C_{m+n}^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example*
+原题来自https://leetcode.cn/problems/count-sorted-vowel-strings/ 统计字典序元音字符串的数目
+\begin_inset Newline newline
+\end_inset
+
+给你一个整数 n，请返回长度为 n 、仅由元音 (a, e, i, o, u) 组成且按 
+\series bold
+字典序排列（字符串中a的位置始终在e的前面依次类推）
+\series default
+ 的字符串数量。
+\end_layout
+
+\begin_layout Solution*
+设五个元音代表 
+\begin_inset Formula $5$
+\end_inset
+
+ 个盒子，每个盒子内部都有不同数量的小球，这些小球的总和是
+\begin_inset Formula $n$
+\end_inset
+
+。假设
+\begin_inset Formula $n=2$
+\end_inset
+
+,可以有如下示例：
+\end_layout
+
+\begin_layout Solution*
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+盒子
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+e
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+i
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+o
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+结果
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数量
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aa
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ai
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ao
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+au
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ee
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+uu
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+因为盒子按 a, e, i, o, u
+\series bold
+ 
+\series default
+排列，所以字符串正好符合
+\series bold
+字典序排列。
+\end_layout
+
+\begin_layout Solution*
+因此，现在问题变成了n 个相同小球放到 
+\begin_inset Formula $m=5$
+\end_inset
+
+ 个不同的盒子里，盒子可以为空，一共有多少种方法？
+\end_layout
+
+\begin_layout Solution*
+结果为：
+\begin_inset Formula $C_{n+5-1}^{5-1}=C_{n+4}^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+先假设盒子
+\series bold
+不
+\series default
+可以为空。 这里使用隔板法，
+\begin_inset Formula $n$
+\end_inset
+
+个相同球划分成
+\begin_inset Formula $m$
+\end_inset
+
+个不同的非空部分，相当于用
+\begin_inset Formula $m-1$
+\end_inset
+
+个隔板将其隔开。这
+\begin_inset Formula $m-1$
+\end_inset
+
+个隔板可以插入
+\begin_inset Formula $n$
+\end_inset
+
+个球中间的
+\begin_inset Formula $n-1$
+\end_inset
+
+个缝隙中，也就是组合数 
+\begin_inset Formula $C_{n-1}^{m-1}$
+\end_inset
+
+ 。
+\end_layout
+
+\begin_layout Solution*
+然后，盒子可以为空，这样就相当于
+\begin_inset Formula $m-1$
+\end_inset
+
+个隔板可以和这
+\begin_inset Formula $n$
+\end_inset
+
+个球任意排列，也就是组合数
+\begin_inset Formula $C_{n+m-1}^{m-1}$
+\end_inset
+
+ 。
 \end_layout
 
 \begin_layout Section
