@@ -56944,6 +56944,81 @@ https://zh.wikipedia.org/wiki/%E5%8D%95%E7%BA%AF%E5%BD%A2%E6%B3%95
 \end_layout
 
 \begin_layout Chapter
+勒洛三角形
+\end_layout
+
+\begin_layout Enumerate
+使用一个圆规，画一个大小合适的圆弧。
+\end_layout
+
+\begin_layout Enumerate
+以同样的半径，以第一个圆弧上的一点画第二个圆弧。
+\end_layout
+
+\begin_layout Enumerate
+以2个圆的一个交点为圆心，半径不变，做第三个圆弧。
+\end_layout
+
+\begin_layout Standard
+通过勒贝格积分可以算出，勒洛三角是定宽曲线所能构成的面积最小的图形，其面积为
+\begin_inset Formula ${\displaystyle \frac{1}{2}(\pi-{\sqrt{3}})s^{2}}$
+\end_inset
+
+，s为定宽。
+\end_layout
+
+\begin_layout Standard
+勒洛三角也是“除了圆形以外，还有什么形状的下水道盖不会掉入下水道？”这个问题的一个答案。
+\end_layout
+
+\begin_layout Standard
+勒洛三角在机械工程上也可以用来钻方孔 (孔带有圆角)
+\end_layout
+
+\begin_layout Standard
+https://zh.m.wikipedia.org/zh-hans/%E5%8B%92%E6%B4%9B%E4%B8%89%E8%A7%92%E5%BD%A2#/m
+edia/File%3AReuleaux_triangle_Animation.gif
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/勒洛三角形.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+勒洛三角形，可以在蓝色方框内运动
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 趣味数学 
 \end_layout
 
