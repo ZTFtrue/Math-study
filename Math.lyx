@@ -56621,6 +56621,185 @@ Q=\left[\begin{array}{cc}
 行列式
 \end_layout
 
+\begin_layout Standard
+行数等于列数
+\end_layout
+
+\begin_layout Subsection
+二阶行列式
+\end_layout
+
+\begin_layout Standard
+二元线性方程组求解
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2} & =b_{1}\\
+a_{21}x_{1}+a_{22}x_{2} & =b_{2}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+(a_{11}a_{22}-a_{12}a_{21})x_{1}=b_{1}a_{22}-a_{12}b_{2}\\
+(a_{11}a_{22}-a_{12}a_{21})x_{2}=a_{11}b_{2}-b_{1}a_{21}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $a_{11}a_{22}-a_{12}a_{21}\neq0$
+\end_inset
+
+时，方程组有唯一解：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+x_{1}=\frac{b_{1}a_{22}-a_{12}b_{2}}{a_{11}a_{22}-a_{12}a_{21}}\\
+x_{2}=\frac{a_{11}b_{2}-b_{1}a_{21}}{a_{11}a_{22}-a_{12}a_{21}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们将
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{11}$
+\end_inset
+
+，
+\begin_inset Formula $a_{12}$
+\end_inset
+
+，
+\begin_inset Formula $a_{21}$
+\end_inset
+
+，
+\begin_inset Formula $a_{22}$
+\end_inset
+
+按如下形式列出来：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cc}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以发现
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x_{1}$
+\end_inset
+
+，
+\begin_inset Formula $x_{2}$
+\end_inset
+
+的分母就是对角线乘积的差值（主对角线
+\begin_inset Formula $a_{11}a_{22}$
+\end_inset
+
+ 减 副对角线
+\begin_inset Formula $a_{12}a_{21}$
+\end_inset
+
+ ）。
+\end_layout
+
+\begin_layout Standard
+表达式
+\begin_inset Formula $a_{11}a_{22}-a_{12}a_{21}$
+\end_inset
+
+即为
+\series bold
+二阶行列式。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=\left|\begin{array}{cc}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{array}\right|=a_{11}a_{22}-a_{12}a_{21}$
+\end_inset
+
+其中
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+称为元素，i 表示行，j 表示列。
+\end_layout
+
+\begin_layout Subsection
+三阶行列式
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left|\begin{array}{ccc}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{array}\right|=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{12}a_{21}a_{31}-a_{13}a_{22}a_{31}-a_{23}a_{32}a_{11}-a_{33}a_{21}a_{12}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 矩阵(matrix)与交换
 \end_layout
@@ -56629,7 +56808,282 @@ Q=\left[\begin{array}{cc}
 横的叫行, 竖的叫列, 从一开始计数
 \end_layout
 
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="7.2cm">
+<column alignment="center" valignment="top" width="7.2cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+行列式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+矩阵
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left|\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset Formula $=\underset{p_{1}p_{2}\cdots p_{n}}{\sum}(-1)^{t(p_{1}p_{2}\cdots p_{n})}a_{1p_{1}}a_{2p_{2}}\cdots a_{np_{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+行数等于列数
+\end_layout
+
+\begin_layout Itemize
+共有
+\begin_inset Formula $n^{2}$
+\end_inset
+
+个元素
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+行数不等于列数
+\end_layout
+
+\begin_layout Itemize
+共有
+\begin_inset Formula $m\times n$
+\end_inset
+
+个元素
+\end_layout
+
+\begin_layout Itemize
+本质上就是一个数表(比如统计结果）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
+矩阵的特殊形式
+\end_layout
+
+\begin_layout Standard
+行向量
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{1} & a_{2} & \cdots & a_{n}\end{array}\right]$
+\end_inset
+
+ 矩阵中任取的一行,
+\end_layout
+
+\begin_layout Standard
+列向量
+\begin_inset Formula $\left[\begin{array}{c}
+a_{1}\\
+a_{2}\\
+\vdots\\
+a_{n}
+\end{array}\right]$
+\end_inset
+
+矩阵中任取的一列。
+\end_layout
+
+\begin_layout Standard
+如果矩阵的行和列一样，叫做
+\series bold
+方阵
+\series default
+，一般叫做
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=A_{n\times n}=A_{n}=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right]=(a_{ij})_{n\times n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+三角矩阵
+\end_layout
+
+\begin_layout Standard
+三角矩阵（Triangular Matrix）分为上三角矩阵和下三角矩阵。
+\end_layout
+
+\begin_layout Paragraph
+上三角矩阵
+\end_layout
+
+\begin_layout Standard
+上三角矩阵（Upper Triangular Matrix）是指主对角线以下元素全为0的矩阵，如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+0 & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+0 & 0 & \cdots & a_{nn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+下三角矩阵
+\end_layout
+
+\begin_layout Standard
+下三角矩阵（Lower Triangular Matrix）是指主对角线以上元素全为0的矩阵，如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & 0 & \cdots & 0\\
+a_{21} & a_{22} & \cdots & 0\\
+\vdots & \vdots &  & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+对角矩阵
+\end_layout
+
+\begin_layout Standard
+对角矩阵（Diagonal Matrix）是指除主对角线之外其他元素都为0的矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \lambda_{2} & \cdots & 0\\
+\vdots & \vdots &  & \vdots\\
+0 & 0 & \cdots & \lambda_{3}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对角矩阵一定是三角矩阵。
+\end_layout
+
+\begin_layout Subsubsection
+单位矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & \cdots & 0\\
+0 & 1 & \cdots & 0\\
+\vdots & \vdots &  & \vdots\\
+\text{0} & 0 & \cdots & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+对称矩阵
+\end_layout
+
+\begin_layout Standard
+对称矩阵（Symmetric Matrix）是指元素以主对角线为对称轴对应相等的矩阵，例如：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & a_{21} & \cdots & a_{n1}\\
+a_{21} & a_{22} & \cdots & a_{n2}\\
+\vdots & \vdots &  & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 二阶矩阵
 \end_layout
 
@@ -56665,6 +57119,163 @@ c & d
 
 称为二阶单位矩阵, 记为
 \begin_inset Formula $E_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+同型矩阵
+\end_layout
+
+\begin_layout Standard
+两个行列数相同的矩阵，称为同型矩阵。
+\end_layout
+
+\begin_layout Standard
+如果矩阵是同型矩阵且个元素相等，就是矩阵相等（
+\begin_inset Formula $a_{ij}=b_{ij}$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Subsection
+矩阵的运算
+\end_layout
+
+\begin_layout Standard
+两个
+\begin_inset Formula $m\times n$
+\end_inset
+
+的矩阵
+\begin_inset Formula $A=(a_{ij})$
+\end_inset
+
+,
+\begin_inset Formula $B=(a_{ij})$
+\end_inset
+
+, 即必须是同型矩阵才可以相加
+\end_layout
+
+\begin_layout Standard
+加减法：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A+B=\left[\begin{array}{cccc}
+a_{11}+b_{11} & a_{12}+b_{12} & \cdots & a_{1n}+b_{1n}\\
+a_{21}+b_{21} & a_{22}+b_{22} & \cdots & a_{2n}+b_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+数乘运算：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda A=A\lambda=\left[\begin{array}{cccc}
+\lambda a_{11} & \lambda a_{12} & \cdots & \lambda a_{1n}\\
+\lambda a_{21} & \lambda a_{22} & \cdots & \lambda a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+\lambda a_{m1} & \lambda a_{m2} & \cdots & \lambda a_{mn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们叫这个数 
+\begin_inset Formula $\lambda$
+\end_inset
+
+为标量，所以这乘法也被称为"标量乘法"
+\end_layout
+
+\begin_layout Standard
+矩阵的乘法
+\end_layout
+
+\begin_layout Standard
+两个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+, 其中
+\begin_inset Formula $A$
+\end_inset
+
+的列数和
+\begin_inset Formula $B$
+\end_inset
+
+的行数相等。计算行与列的"点积"
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+C & =AB=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}\right]\left[\begin{array}{cccc}
+b_{11} & b_{12} & \cdots & b_{1m}\\
+b_{21} & b_{22} & \cdots & b_{2m}\\
+\vdots & \vdots &  & \vdots\\
+b_{n1} & b_{n2} & \cdots & b_{nm}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A的第一行乘以B的第一列的和，A的第一行乘以B的第二列的和
+\end_layout
+
+\begin_layout Standard
+没有乘法交换律,位置一定是固定的。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(AB)C=A(BC)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda(AB)=(\lambda A)B=A(\lambda B)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(B+C)=AB+AC$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(B+C)A=BA+CA$
 \end_inset
 
 
