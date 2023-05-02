@@ -57317,6 +57317,287 @@ A的第一行乘以B的第一列的和，A的第一行乘以B的第二列的和
 
 \end_layout
 
+\begin_layout Example
+矩阵乘法
+\end_layout
+
+\begin_layout Example
+矩阵
+\begin_inset Formula 
+\begin{align*}
+A\times B & =\left[\begin{array}{ccc}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{array}\right]\times\left[\begin{array}{cc}
+7 & 8\\
+9 & 10\\
+11 & 12
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+1\times7+2\times9+3\times11 & 1\times8+2\times10+3\times12\\
+4\times7+5\times9+6\times11 & 4\times8+5\times10+6\times12
+\end{array}\right]\\
+ & =\left[\begin{array}{cc}
+58 & 64\\
+143 & 154
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+矩阵乘法的实际意义
+\end_layout
+
+\begin_layout Standard
+售卖三种商品：茶卖￥3一份，可可卖￥5一份，咖啡￥4一份。过去三天售卖数量：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+周一
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+周二
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+周三
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+茶
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+可可
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+咖啡
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+提取数据，转成矩阵：
+\end_layout
+
+\begin_layout Standard
+售卖数量A=
+\begin_inset Formula $\left[\begin{array}{ccc}
+12 & 10 & 7\\
+8 & 6 & 10\\
+5 & 4 & 13
+\end{array}\right]$
+\end_inset
+
+，价格
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+3 & 5 & 4\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+周一的销售额计算如下：
+\begin_inset Formula $12\times3+8\times5+5\times4=96$
+\end_inset
+
+.
+ 其它类似
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B\times A=\left[\begin{array}{ccc}
+3 & 5 & 4\end{array}\right]\times\left[\begin{array}{ccc}
+12 & 10 & 7\\
+8 & 6 & 10\\
+5 & 4 & 13
+\end{array}\right]=\left[\begin{array}{ccc}
+96 & 76 & 120\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+图像表示
+\end_layout
+
+\begin_layout Standard
+计算机图片(非压缩后的格式)也是用矩阵表示的： 如下的灰度图像
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 255 & 0\\
+255 & 255 & 255\\
+0 & 255 & 0
+\end{array}\right]$
+\end_inset
+
+表示中间有一个白色十字，其余位置为黑色，width and height 是
+\begin_inset Formula $3$
+\end_inset
+
+像素。
+\end_layout
+
+\begin_layout Standard
+彩色图像
+\begin_inset Formula $\left[\left[\begin{array}{ccc}
+255 & 0 & 0\end{array}\right]\right]$
+\end_inset
+
+这个多维矩阵表示一个像素的红色图片。
+\end_layout
+
 \begin_layout Subsection
 方程组与矩阵
 \end_layout
@@ -57478,7 +57759,11 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \begin_inset Formula $n$
 \end_inset
 
-阶矩阵，如果存在
+阶方阵(
+\series bold
+行数、列数相等
+\series default
+的矩阵)，如果存在
 \begin_inset Formula $n$
 \end_inset
 
@@ -57535,6 +57820,127 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 
 \begin_layout Subsection
 矩阵的秩
+\end_layout
+
+\begin_layout Standard
+对于一个
+\begin_inset Formula $S*N$
+\end_inset
+
+的矩阵
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{s1} & a_{s2} & \cdots & a_{sn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的每一行可以看作一个
+\begin_inset Formula $N$
+\end_inset
+
+维向量：
+\begin_inset Formula $\alpha_{i}=(a_{i1},a_{i2},\cdots,a_{im})$
+\end_inset
+
+,
+\begin_inset Formula $i=1,2,\cdots,s$
+\end_inset
+
+。
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$
+\end_inset
+
+叫做
+\begin_inset Formula $A$
+\end_inset
+
+的行向量。
+\end_layout
+
+\begin_layout Standard
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的每一列可以看作一个
+\begin_inset Formula $S$
+\end_inset
+
+维向量：
+\begin_inset Formula $\beta_{j}=\left[\begin{array}{c}
+a_{1j}\\
+a_{2j}\\
+\vdots\\
+a_{sj}
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $j=1,2,\cdots,n$
+\end_inset
+
+。
+\begin_inset Formula $\beta_{1},\beta_{2},\cdots,\beta_{s}$
+\end_inset
+
+叫做
+\begin_inset Formula $A$
+\end_inset
+
+的行向量。 
+\end_layout
+
+\begin_layout Standard
+方阵(行数、列数相等的矩阵)的
+\series bold
+列秩和行秩总是相等
+\series default
+的，因此它们可以简单地称作矩阵A的
+\series bold
+秩
+\series default
+。通常表示为
+\begin_inset Formula $r(A)$
+\end_inset
+
+，
+\begin_inset Formula $rk(A)$
+\end_inset
+
+或 
+\begin_inset Formula $\text{、rank(A)}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m\times n$
+\end_inset
+
+矩阵的秩最大为
+\begin_inset Formula $m$
+\end_inset
+
+和
+\begin_inset Formula $n$
+\end_inset
+
+中的较小者，表示为 
+\begin_inset Formula $min(m,n)$
+\end_inset
+
+。有尽可能大的秩的矩阵被称为有满秩；类似的，否则矩阵是秩不足（或称为“欠秩”）的。
 \end_layout
 
 \begin_layout Chapter
