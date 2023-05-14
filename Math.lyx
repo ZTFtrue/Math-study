@@ -56759,7 +56759,7 @@ a_{21} & a_{22}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $D=\left|\begin{array}{cc}
+\begin_inset Formula $\left|D\right|=\left|\begin{array}{cc}
 a_{11} & a_{12}\\
 a_{21} & a_{22}
 \end{array}\right|=a_{11}a_{22}-a_{12}a_{21}$
@@ -56795,6 +56795,183 @@ a_{11} & a_{12} & a_{13}\\
 a_{21} & a_{22} & a_{23}\\
 a_{31} & a_{32} & a_{33}
 \end{array}\right|=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{12}a_{21}a_{31}-a_{13}a_{22}a_{31}-a_{23}a_{32}a_{11}-a_{33}a_{21}a_{12}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+行列式性质
+\end_layout
+
+\begin_layout Itemize
+在行列式中，一行（列）元素全为0，则此行列式的值为0
+\end_layout
+
+\begin_layout Itemize
+在行列式中，某一行（列）有公因子 
+\begin_inset Formula $k$
+\end_inset
+
+，则可以提出 
+\begin_inset Formula $k$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle D=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{blue}k}a_{i1} & {\color{blue}k}a_{i2} & \dots & {\color{blue}k}a_{in}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}={\color{blue}k}\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{i1} & a_{i2} & \dots & a_{in}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}={\color{blue}k}D_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+在行列式中，某一行（列）的每个元素是两数之和，则此行列式可拆分为两个相加的行列式
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{blue}a_{i1}}+{\color{OliveGreen}b_{i1}} & {\color{blue}a_{i2}}+{\color{OliveGreen}b_{i2}} & \dots & {\color{blue}a_{in}}+{\color{OliveGreen}b_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{blue}a_{i1}} & {\color{blue}a_{i2}} & \dots & {\color{blue}a_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}+\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{OliveGreen}b_{i1}} & {\color{OliveGreen}b_{i2}} & \dots & {\color{OliveGreen}b_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+行列式中的两行（列）互换，改变行列式正负符号
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+{\color{blue}a_{i1}} & {\color{blue}a_{i2}} & \dots & {\color{blue}a_{in}}\\
+{\color{OliveGreen}a_{j1}} & {\color{OliveGreen}a_{j2}} & \dots & {\color{OliveGreen}a_{jn}}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}=-\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+{\color{OliveGreen}a_{j1}} & {\color{OliveGreen}a_{j2}} & \dots & {\color{OliveGreen}a_{jn}}\\
+{\color{blue}a_{i1}} & {\color{blue}a_{i2}} & \dots & {\color{blue}a_{in}}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+在行列式中，有两行（列）对应成比例或相同，则此行列式的值为0
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}{\color{blue}2} & {\color{blue}2} & \dots & {\color{blue}2}\\
+{\color{blue}8} & {\color{blue}8} & \dots & {\color{blue}8}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+将一行（列）的 
+\begin_inset Formula $k$
+\end_inset
+
+倍加
+\series bold
+进
+\series default
+另一行（列）里(本行不改变)，行列式的值不变
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+a_{i1} & a_{i2} & \dots & a_{in}\\
+a_{j1} & a_{j2} & \dots & a_{jn}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}=\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+a_{i1} & a_{i2} & \dots & a_{in}\\
+a_{j1}{\color{blue}+ka_{i1}} & a_{j2}{\color{blue}+ka_{i2}} & \dots & a_{jn}{\color{blue}+ka_{in}}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+注意：一行（列）的 
+\begin_inset Formula $k$
+\end_inset
+
+倍加上另一行（列），行列式的值改变。
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+a_{i1} & a_{i2} & \dots & a_{in}\\
+a_{j1} & a_{j2} & \dots & a_{jn}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}{\color{red}\neq}\begin{vmatrix}\vdots & \vdots & \vdots & \vdots\\
+a_{i1} & a_{i2} & \dots & a_{in}\\
+{\color{red}k}a_{j1}{\color{red}+a_{i1}} & {\color{red}k}a_{j2}{\color{red}+a_{i2}} & \dots & {\color{red}k}a_{jn}{\color{red}+a_{in}}\\
+\vdots & \vdots & \vdots & \vdots
+\end{vmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+将行列式的行列互换，行列式的值不变，其中行列互换相当于转置。这个性质可以简单地记作
+\begin_inset Formula $D=\begin{vmatrix}a_{ij}\end{vmatrix}=\begin{vmatrix}a_{ji}\end{vmatrix}=D^{\textrm{T}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=\begin{vmatrix}a_{11} & a_{21} & \dots & a_{n1}\\
+a_{12} & a_{22} & \dots & a_{n2}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{1n} & a_{2n} & \dots & a_{nn}
+\end{vmatrix}$
 \end_inset
 
 
@@ -56890,6 +57067,35 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 个元素
 \end_layout
 
+\begin_layout Itemize
+细长的垂直线取代矩阵的方括号
+\end_layout
+
+\begin_layout Itemize
+记作
+\begin_inset Formula $det(A)$
+\end_inset
+
+或
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\left|D\right|$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -56909,6 +57115,14 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 
 \begin_layout Itemize
 本质上就是一个数表(比如统计结果）
+\end_layout
+
+\begin_layout Itemize
+记作
+\begin_inset Formula $A$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -57900,49 +58114,6 @@ a_{sj}
 的行向量。 
 \end_layout
 
-\begin_layout Standard
-方阵(行数、列数相等的矩阵)的
-\series bold
-列秩和行秩总是相等
-\series default
-的，因此它们可以简单地称作矩阵A的
-\series bold
-秩
-\series default
-。通常表示为
-\begin_inset Formula $r(A)$
-\end_inset
-
-，
-\begin_inset Formula $rk(A)$
-\end_inset
-
-或 
-\begin_inset Formula $\text{、rank(A)}$
-\end_inset
-
-。
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $m\times n$
-\end_inset
-
-矩阵的秩最大为
-\begin_inset Formula $m$
-\end_inset
-
-和
-\begin_inset Formula $n$
-\end_inset
-
-中的较小者，表示为 
-\begin_inset Formula $min(m,n)$
-\end_inset
-
-。有尽可能大的秩的矩阵被称为有满秩；类似的，否则矩阵是秩不足（或称为“欠秩”）的。
-\end_layout
-
 \begin_layout Subsubsection
 k阶子式
 \end_layout
@@ -57976,15 +58147,59 @@ k阶子式
 \begin_inset Formula $k^{2}$
 \end_inset
 
-个元素，不改变它们在
+个元素，
+\series bold
+不改变
+\series default
+它们在
 \begin_inset Formula $A$
 \end_inset
 
-中所处的位置次序而得的
+中所处的
+\series bold
+位置次序
+\series default
+而得的
 \begin_inset Formula $k$
 \end_inset
 
-阶组成的行列式，称为矩阵A的k阶子式。
+阶组成的
+\series bold
+行列式
+\series default
+，称为矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $k$
+\end_inset
+
+阶子式。
+\end_layout
+
+\begin_layout Standard
+由于一共有
+\begin_inset Formula ${m \choose k}$
+\end_inset
+
+种方法来选择该保留的行，有
+\begin_inset Formula ${n \choose k}$
+\end_inset
+
+种方法来选择该保留的列，因此
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $k$
+\end_inset
+
+阶余子式一共有
+\begin_inset Formula ${m \choose k}\cdot{n \choose k}$
+\end_inset
+
+个。
 \end_layout
 
 \begin_layout Standard
@@ -57995,11 +58210,43 @@ k阶子式
 \end{array}\right]$
 \end_inset
 
-取A的第一行和第三行，第一列和第二列
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 2\\
-7 & 8
-\end{array}\right]$
+取A的第一行和第二行，第一列和第三列
+\begin_inset Formula $\left|\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的二阶子式：
+\begin_inset Formula $-3$
+\end_inset
+
+， 
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的三阶子式： 
+\begin_inset Formula $2$
+\end_inset
+
+ ，
+\begin_inset Formula $\cdots$
 \end_inset
 
 
@@ -58007,6 +58254,248 @@ k阶子式
 
 \begin_layout Subsubsection
 矩阵秩
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $m\times n$
+\end_inset
+
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+中，若至少有一个 
+\begin_inset Formula $r$
+\end_inset
+
+阶非零子式，而其所有
+\begin_inset Formula ${\displaystyle r+1}$
+\end_inset
+
+阶子式全为零，即矩阵的
+\series bold
+最高阶
+\series default
+非零子式的
+\series bold
+阶数
+\series default
+为r。则称 
+\begin_inset Formula $r$
+\end_inset
+
+ 为 
+\begin_inset Formula $A$
+\end_inset
+
+的秩（个人理解 秩 是阶数）。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m\times n$
+\end_inset
+
+矩阵的秩最大为
+\begin_inset Formula $m$
+\end_inset
+
+和
+\begin_inset Formula $n$
+\end_inset
+
+中的较小者，表示为 
+\begin_inset Formula $min(m,n)$
+\end_inset
+
+，即
+\begin_inset Formula $0\leqslant R(A)\leqslant min(m,n)$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m\times n$
+\end_inset
+
+矩阵 的 秩 
+\begin_inset Formula $R(A)=m$
+\end_inset
+
+ 称为
+\series bold
+行满秩
+\series default
+， 
+\begin_inset Formula $R(A)=n$
+\end_inset
+
+ 称为
+\series bold
+列满秩
+\series default
+，行满秩或列满秩被称为有满秩
+\begin_inset Formula $R(A)=\{m,n\}$
+\end_inset
+
+；类似的，否则矩阵是秩不足（或称为“欠秩”）的
+\begin_inset Formula $R(A)<\{m,n\}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+规定零矩阵的秩为 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+行阶梯形矩阵的秩等于非零行的数。
+\end_layout
+
+\begin_layout Standard
+任何 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ 阶矩阵总可经过有限次初等行变换，变为行阶梯形，行阶梯形矩阵中的非零行的行数是唯一确定的 
+\end_layout
+
+\begin_layout Standard
+矩阵的秩反映了行的信息
+\end_layout
+
+\begin_layout Paragraph
+对于方阵
+\end_layout
+
+\begin_layout Standard
+方阵(行数、列数相等的矩阵)的
+\series bold
+列秩和行秩总是相等
+\series default
+的，因此它们可以简单地称作矩阵A的
+\series bold
+秩
+\series default
+。通常表示为
+\begin_inset Formula $r(A)$
+\end_inset
+
+，
+\begin_inset Formula $rk(A)$
+\end_inset
+
+或 
+\begin_inset Formula $\text{、rank(A)}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+对
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵
+\begin_inset Formula $A=(a_{ij})$
+\end_inset
+
+,若
+\begin_inset Formula $\left|A\right|\neq0$
+\end_inset
+
+,则
+\begin_inset Formula $R(A)=n$
+\end_inset
+
+, 称
+\begin_inset Formula $A$
+\end_inset
+
+为
+\series bold
+满秩矩阵
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+满秩矩阵 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $R(A)=n,|A|\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\series default
+ 其次线性方程组只有零解
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $A$
+\end_inset
+
+可逆，可逆矩阵的秩就等于该矩阵的阶数
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $\left|A\right|=0$
+\end_inset
+
+,则
+\begin_inset Formula $R(A)<n$
+\end_inset
+
+, 称
+\begin_inset Formula $A$
+\end_inset
+
+为
+\series bold
+降秩矩阵。
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+降秩矩阵 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $R(A)<n,|A|=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\series default
+ 其次线性方程组有非零解
+\end_layout
+
+\begin_layout Standard
+如果不
+\begin_inset Formula $A$
+\end_inset
+
+可逆，其秩小于该矩阵的阶数
 \end_layout
 
 \begin_layout Chapter
