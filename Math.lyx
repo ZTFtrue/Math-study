@@ -50354,7 +50354,11 @@ S\subset S
 
 \begin_layout Standard
 传统概率的定义是由法国数学家拉普拉斯 ( Laplace ) 提出的.
- 如果一个随机试验所包含的单位事件是有限的, 且每个单位事件发生的可能性均相等, 则这个随机试验叫做拉普拉斯试验.
+ 如果一个随机试验所包含的单位事件是有限的, 且
+\series bold
+每个单位事件发生的可能性均相等
+\series default
+, 则这个随机试验叫做拉普拉斯试验.
  在拉普拉斯试验中, 事件
 \begin_inset Formula $A$
 \end_inset
@@ -58293,6 +58297,29 @@ k阶子式
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $r(A)=r$
+\end_inset
+
+的充分必要条件有一个
+\begin_inset Formula $r$
+\end_inset
+
+阶子不为
+\begin_inset Formula $0$
+\end_inset
+
+，而其所有
+\begin_inset Formula ${\displaystyle r+1}$
+\end_inset
+
+阶子式全为零。（12：00）
+\end_layout
+
+\begin_layout Paragraph
+性质
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -58315,7 +58342,7 @@ k阶子式
 。
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula $m\times n$
 \end_inset
 
@@ -58339,14 +58366,14 @@ k阶子式
 \begin_inset Formula $R(A)=\{m,n\}$
 \end_inset
 
-；类似的，否则矩阵是秩不足（或称为“欠秩”）的
+；类似的，否则矩阵是秩不足（或称为“欠秩”、“降秩”）的
 \begin_inset Formula $R(A)<\{m,n\}$
 \end_inset
 
 。
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 规定零矩阵的秩为 
 \begin_inset Formula $0$
 \end_inset
@@ -58354,20 +58381,87 @@ k阶子式
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+
+\series bold
 行阶梯形矩阵的秩等于非零行的数。
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+
+\series bold
+矩阵的行秩与列秩相等
+\series default
+，
+\begin_inset Formula $r(A)=r(A^{T})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+矩阵的秩反映了行的信息
+\end_layout
+
+\begin_layout Itemize
 任何 
 \begin_inset Formula $m\times n$
 \end_inset
 
- 阶矩阵总可经过有限次初等行变换，变为行阶梯形，行阶梯形矩阵中的非零行的行数是唯一确定的 
+ 阶矩阵总可经过有限次初等行变换，变为行阶梯形，行阶梯形矩阵中的非零行的行数是唯一确定的 ，且不改变矩阵的秩。
 \end_layout
 
-\begin_layout Standard
-矩阵的秩反映了行的信息
+\begin_layout Itemize
+任意矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 乘以可逆矩阵，矩阵的秩不变+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{m\times n}$
+\end_inset
+
+的秩等于
+\begin_inset Formula $r$
+\end_inset
+
+，当且仅当存在一个可逆
+\begin_inset Formula $m\times m$
+\end_inset
+
+矩阵
+\begin_inset Formula $X$
+\end_inset
+
+和一个可逆的
+\begin_inset Formula $n\times n$
+\end_inset
+
+矩阵
+\begin_inset Formula $Y$
+\end_inset
+
+使得
+\begin_inset Formula $r(A)=r(XA)=r(AY)=r(XAY)$
+\end_inset
+
+或
+\begin_inset Formula $XAY=\begin{bmatrix}I_{r} & 0\\
+0 & 0
+\end{bmatrix}$
+\end_inset
+
+这里的
+\begin_inset Formula $I_{r}$
+\end_inset
+
+指示
+\begin_inset Formula $r\times r$
+\end_inset
+
+ 单位矩阵。(相当于矩阵的行变换)
 \end_layout
 
 \begin_layout Paragraph
@@ -58432,7 +58526,7 @@ k阶子式
 \end_inset
 
  
-\begin_inset Formula $R(A)=n,|A|\neq0$
+\begin_inset Formula $R(A)=n\Leftrightarrow|A|\neq0$
 \end_inset
 
  
@@ -58442,14 +58536,18 @@ k阶子式
 
 \series default
  其次线性方程组只有零解
-\end_layout
+\series bold
 
-\begin_layout Standard
-如果
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\series default
+ 
 \begin_inset Formula $A$
 \end_inset
 
-可逆，可逆矩阵的秩就等于该矩阵的阶数
+可逆
 \end_layout
 
 \begin_layout Standard
@@ -58496,6 +58594,117 @@ k阶子式
 \end_inset
 
 可逆，其秩小于该矩阵的阶数
+\end_layout
+
+\begin_layout Subsubsection
+求矩阵的秩
+\end_layout
+
+\begin_layout Paragraph
+阶梯形矩阵
+\end_layout
+
+\begin_layout Enumerate
+所有非零行（矩阵的行至少有一个非零元素）在所有全零行的上面。即全零行都在矩阵的底部。 
+\end_layout
+
+\begin_layout Enumerate
+从上到下，每行最左边的首个非零元素 （leading coefficient），称作首非零元或首项系数或主元， 严格地比上面行的首项系数更靠右，即每行左侧零的个
+数
+\series bold
+必须
+\series default
+比上一行大
+\end_layout
+
+\begin_layout Enumerate
+首项系数所在列，在该首项系数下面的元素都是零（前两条的推论）。
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+行简化阶梯形
+\series default
+ 要求非零行的首项系数必须是
+\begin_inset Formula $1$
+\end_inset
+
+。主元所在的列，除了主元以外，其它元素必须是
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+行简化阶梯形示例
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 0 & 0 & 4\\
+0 & 1 & 0 & 5\\
+0 & 0 & 1 & 6\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵A的秩的最容易的方式是
+\series bold
+高斯消元法
+\series default
+（在应用在计算机上的浮点数的时候，基本高斯这种方法可能是不稳定的），即利用矩阵的初等变换生成
+\series bold
+一个行阶梯形矩阵
+\series default
+，由于矩阵的初等变换不改变矩阵的秩，因此A的行阶梯形矩阵有同A一样的秩。经过初等变换的矩阵的
+\series bold
+非零行的数目就是原矩阵的秩
+\series default
+。
+\end_layout
+
+\begin_layout Subsubsection
+矩阵的行（列）变换
+\end_layout
+
+\begin_layout Itemize
+两行（列）互换： 
+\begin_inset Formula $R_{i}\leftrightarrow R_{j}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+把某行（列）乘以一非零常数： 
+\begin_inset Formula $kR_{i}\rightarrow R_{i}$
+\end_inset
+
+, 其中 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+把第 i 行（列）加上第 j 行（列）的 k 倍： 
+\begin_inset Formula $R_{i}+kR_{j}\rightarrow R_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+初等矩阵即是将上述 3 种初等变换应用于一单位矩阵的结果
 \end_layout
 
 \begin_layout Chapter
