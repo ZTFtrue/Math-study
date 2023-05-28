@@ -56641,7 +56641,7 @@ a_{21}x_{1}+a_{22}x_{2} & =b_{2}
 \end{cases}$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -56802,6 +56802,128 @@ a_{31} & a_{32} & a_{33}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+展开式的每一项有三个数
+\end_layout
+
+\begin_layout Subsection
+排列
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $2$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $n$
+\end_inset
+
+组成的一个有序数组叫做
+\begin_inset Formula $n$
+\end_inset
+
+级排列，一共有
+\begin_inset Formula $n(n-1)\cdots3\times2\times1=n!$
+\end_inset
+
+种
+\end_layout
+
+\begin_layout Standard
+逆序：对于排列，大的数在小的数的前面，一共有多少个逆序叫做逆序数。
+\end_layout
+
+\begin_layout Standard
+例如
+\begin_inset Formula $4,2,3,1$
+\end_inset
+
+ ，
+\begin_inset Formula $4,2$
+\end_inset
+
+ 是一个逆序，
+\begin_inset Formula $4,3$
+\end_inset
+
+与
+\begin_inset Formula $4,1$
+\end_inset
+
+同理，一共有
+\begin_inset Formula $4$
+\end_inset
+
+个逆序数
+\end_layout
+
+\begin_layout Standard
+逆序数为奇数的排列，叫做
+\series bold
+奇排列
+\series default
+；反之，
+\series bold
+偶排列
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+排列
+\begin_inset Formula $1,2,3,\cdots,n$
+\end_inset
+
+的逆序数为 0，叫做
+\series bold
+标准排列
+\series default
+（自然排列 ）
+\end_layout
+
+\begin_layout Standard
+交换一个排列的两个数字的顺序叫做
+\series bold
+对换
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+一个排列经过一次对换，
+\series bold
+奇偶性
+\series default
+会改变。
+\end_layout
+
+\begin_layout Standard
+在所有的
+\begin_inset Formula $n$
+\end_inset
+
+级排列中，奇排列和偶排列的
+\series bold
+个数相等
+\series default
+，
+\series bold
+
+\begin_inset Formula $\frac{n!}{2}$
+\end_inset
+
+。
 \end_layout
 
 \begin_layout Subsection
