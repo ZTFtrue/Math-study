@@ -56992,7 +56992,15 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \end_layout
 
 \begin_layout Itemize
-行列式中的两行（列）互换，改变行列式正负符号
+行列式中的两行（列）互换，
+\series bold
+改变
+\series default
+行列式
+\series bold
+正负
+\series default
+符号
 \begin_inset Newline newline
 \end_inset
 
@@ -57080,7 +57088,11 @@ a_{i1} & a_{i2} & \dots & a_{in}\\
 \end_layout
 
 \begin_layout Itemize
-将行列式的行列互换，行列式的值不变，其中行列互换相当于转置。这个性质可以简单地记作
+将行列式的行列互换，行列式的值不变，对行成立的性质对列成立，其中行列互换相当于
+\series bold
+转置
+\series default
+(Transform)。这个性质可以简单地记作
 \begin_inset Formula $D=\begin{vmatrix}a_{ij}\end{vmatrix}=\begin{vmatrix}a_{ji}\end{vmatrix}=D^{\textrm{T}}$
 \end_inset
 
