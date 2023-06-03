@@ -56927,7 +56927,215 @@ a_{31} & a_{32} & a_{33}
 \end_layout
 
 \begin_layout Subsection
+余因子式
+\end_layout
+
+\begin_layout Standard
+对一个 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，在 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 的子行列式（余子式）
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+定义为删掉 
+\begin_inset Formula $A$
+\end_inset
+
+ 的第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行与第
+\begin_inset Formula $j$
+\end_inset
+
+列后得到的行列式。令
+\begin_inset Formula $C_{ij}:=(-1)^{i+j}M_{ij}$
+\end_inset
+
+，称为 
+\begin_inset Formula $A$
+\end_inset
+
+在
+\begin_inset Formula $(i,j)$
+\end_inset
+
+的余因子（代数余子式）。矩阵
+\begin_inset Formula $cof(A):=(C_{ij})_{i,j}$
+\end_inset
+
+ 称作
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵（余子矩阵）。余因子矩阵的转置称为伴随矩阵，记为
+\begin_inset Formula $\mathrm{adj}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例：
+\end_layout
+
+\begin_layout Standard
+考虑三阶方阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+今将计算余因子
+\begin_inset Formula $C_{23}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
+\Box & \Box & \Box\\
+b_{31} & b_{32} & \Box
+\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
+b_{31} & b_{32}
+\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
+\]
+
+\end_inset
+
+ 根据定义得到
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{2+3}(M_{23})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{5}(b_{11}b_{32}-b_{31}b_{12})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=b_{31}b_{12}-b_{11}b_{32}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+余因子分解
+\end_layout
+
+\begin_layout Standard
+对一
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}
+\]
+
+\end_inset
+
+其行列式 
+\begin_inset Formula $\det A$
+\end_inset
+
+可以用余因子表示：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}+...+a_{nj}C_{nj}
+\]
+
+\end_inset
+
+(对第 j 列的余因子分解)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3}+...+a_{in}C_{in}
+\]
+
+\end_inset
+
+ (对第 i 行的余因子分解)
+\end_layout
+
+\begin_layout Subsection
 行列式性质
+\end_layout
+
+\begin_layout Itemize
+将行列式的行列互换，行列式的值不变，对行成立的性质对列成立，其中行列互换相当于
+\series bold
+转置
+\series default
+(Transform)。这个性质可以简单地记作
+\begin_inset Formula $D=\begin{vmatrix}a_{ij}\end{vmatrix}=\begin{vmatrix}a_{ji}\end{vmatrix}=D^{\textrm{T}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=\begin{vmatrix}a_{11} & a_{21} & \dots & a_{n1}\\
+a_{12} & a_{22} & \dots & a_{n2}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{1n} & a_{2n} & \dots & a_{nn}
+\end{vmatrix}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+证明：拉普拉斯展开式
 \end_layout
 
 \begin_layout Itemize
@@ -57081,34 +57289,6 @@ a_{j1} & a_{j2} & \dots & a_{jn}\\
 a_{i1} & a_{i2} & \dots & a_{in}\\
 {\color{red}k}a_{j1}{\color{red}+a_{i1}} & {\color{red}k}a_{j2}{\color{red}+a_{i2}} & \dots & {\color{red}k}a_{jn}{\color{red}+a_{in}}\\
 \vdots & \vdots & \vdots & \vdots
-\end{vmatrix}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-将行列式的行列互换，行列式的值不变，对行成立的性质对列成立，其中行列互换相当于
-\series bold
-转置
-\series default
-(Transform)。这个性质可以简单地记作
-\begin_inset Formula $D=\begin{vmatrix}a_{ij}\end{vmatrix}=\begin{vmatrix}a_{ji}\end{vmatrix}=D^{\textrm{T}}$
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
-a_{21} & a_{22} & \dots & a_{2n}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix}=\begin{vmatrix}a_{11} & a_{21} & \dots & a_{n1}\\
-a_{12} & a_{22} & \dots & a_{n2}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{1n} & a_{2n} & \dots & a_{nn}
 \end{vmatrix}$
 \end_inset
 
