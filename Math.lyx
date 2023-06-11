@@ -56629,6 +56629,156 @@ Q=\left[\begin{array}{cc}
 行数等于列数
 \end_layout
 
+\begin_layout Standard
+Determinant
+\end_layout
+
+\begin_layout Subsection
+排列
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $2$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $n$
+\end_inset
+
+组成的一个有序
+\series bold
+序列
+\series default
+叫做
+\begin_inset Formula $n$
+\end_inset
+
+级排列，一共有
+\begin_inset Formula $n(n-1)\cdots3\times2\times1=n!$
+\end_inset
+
+种
+\end_layout
+
+\begin_layout Standard
+逆序：对于排列，大的数在小的数的前面，一共有多少个逆序叫做逆序数。
+\end_layout
+
+\begin_layout Standard
+例如
+\begin_inset Formula $4,2,3,1$
+\end_inset
+
+ ，
+\begin_inset Formula $4,2$
+\end_inset
+
+ 是一个逆序，
+\begin_inset Formula $4,3$
+\end_inset
+
+与
+\begin_inset Formula $4,1$
+\end_inset
+
+同理，一共有
+\begin_inset Formula $4$
+\end_inset
+
+个逆序数
+\end_layout
+
+\begin_layout Standard
+逆序数为奇数的排列，叫做
+\series bold
+奇排列
+\series default
+；反之，
+\series bold
+偶排列
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+交换一个排列的两个数字的顺序叫做
+\series bold
+对换
+\series default
+。
+\end_layout
+
+\begin_layout Standard
+一个排列经过一次对换，
+\series bold
+奇偶性
+\series default
+会改变。
+\end_layout
+
+\begin_layout Standard
+在所有的
+\begin_inset Formula $n$
+\end_inset
+
+级排列中，奇排列和偶排列的
+\series bold
+个数相等
+\series default
+，
+\series bold
+
+\begin_inset Formula $\frac{n!}{2}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+序列
+\series default
+的逆序数在
+\begin_inset Formula $[0,{\displaystyle \frac{n(n-1)}{2}}]$
+\end_inset
+
+之间。
+\end_layout
+
+\begin_layout Standard
+排列
+\begin_inset Formula $1,2,3,\cdots,n$
+\end_inset
+
+的逆序数为 0，叫做
+\series bold
+标准排列
+\series default
+（自然排列 ）
+\end_layout
+
+\begin_layout Standard
+排列
+\begin_inset Formula $n,n-1,\cdots,3,2,1$
+\end_inset
+
+的逆序数为 
+\begin_inset Formula $\frac{n(n-1)}{2}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 二阶行列式
 \end_layout
@@ -56798,7 +56948,7 @@ a_{21} & a_{22}
 a_{11} & a_{12} & a_{13}\\
 a_{21} & a_{22} & a_{23}\\
 a_{31} & a_{32} & a_{33}
-\end{array}\right|=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{12}a_{21}a_{31}-a_{13}a_{22}a_{31}-a_{23}a_{32}a_{11}-a_{33}a_{21}a_{12}$
+\end{array}\right|=a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{13}a_{22}a_{31}-a_{12}a_{21}a_{33}-a_{11}a_{23}a_{32}$
 \end_inset
 
 
@@ -56809,121 +56959,475 @@ a_{31} & a_{32} & a_{33}
 \end_layout
 
 \begin_layout Subsection
-排列
+n阶行列式
 \end_layout
 
 \begin_layout Standard
-由
-\begin_inset Formula $1$
-\end_inset
-
-,
-\begin_inset Formula $2$
-\end_inset
-
-,
-\begin_inset Formula $\cdots$
-\end_inset
-
-,
-\begin_inset Formula $n$
-\end_inset
-
-组成的一个有序数组叫做
-\begin_inset Formula $n$
-\end_inset
-
-级排列，一共有
-\begin_inset Formula $n(n-1)\cdots3\times2\times1=n!$
-\end_inset
-
-种
+观察三阶行列式的展开式
 \end_layout
 
 \begin_layout Standard
-逆序：对于排列，大的数在小的数的前面，一共有多少个逆序叫做逆序数。
+行标排列：
+\begin_inset Formula $1,2,3$
+\end_inset
+
+ 标准排列
 \end_layout
 
 \begin_layout Standard
-例如
-\begin_inset Formula $4,2,3,1$
+列标排列(
+\begin_inset Formula $3!$
 \end_inset
 
- ，
-\begin_inset Formula $4,2$
-\end_inset
-
- 是一个逆序，
-\begin_inset Formula $4,3$
-\end_inset
-
-与
-\begin_inset Formula $4,1$
-\end_inset
-
-同理，一共有
-\begin_inset Formula $4$
-\end_inset
-
-个逆序数
+)：
 \end_layout
 
 \begin_layout Standard
-逆序数为奇数的排列，叫做
-\series bold
-奇排列
-\series default
-；反之，
-\series bold
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逆序数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 偶排列
-\series default
-。
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,3,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+偶排列
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
++
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+偶排列
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,2,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+奇排列
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,1,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+奇排列
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,3,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+奇排列
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+n阶行列式等于所有取自不同行不同列（行标按标准排列 ，列按全排列）的n个元素的乘积的代数和，逆序数为偶数时带正号，逆序数为奇数时带负号，共有
+\begin_inset Formula $n!$
+\end_inset
+
+项。 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $D=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=\underset{j_{1}j_{2}\cdots j_{n}}{\sum}(-1)^{inv(j_{1}j_{2}\cdots j_{n})}a_{1}j_{1}a_{2}j_{2}\cdots a_{n}j_{n}=\left|a_{ij}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中，
+\begin_inset Formula $inv(j_{1}J_{2}\cdots j_{n})$
+\end_inset
+
+表示序列
+\begin_inset Formula $(j_{1}J_{2}\cdots j_{n})$
+\end_inset
+
+的逆序数
+\end_layout
+
+\begin_layout Definition
+另外
+\begin_inset Formula $\left|a_{11}\right|=a_{11}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+这个公式在维基上没有找到（写法不一样），原来公式中
+\begin_inset Formula $inv$
+\end_inset
+
+是
+\begin_inset Formula $N$
+\end_inset
+
+,但是这个
+\begin_inset Formula $N$
+\end_inset
+
+我在维基上也没找到。
 \end_layout
 
 \begin_layout Standard
-排列
+根据这个公式可以方便求解，对于行，始终都是 
 \begin_inset Formula $1,2,3,\cdots,n$
 \end_inset
 
-的逆序数为 0，叫做
-\series bold
-标准排列
-\series default
-（自然排列 ）
+，对于列取，全排列，然后按奇偶性添加符号。
 \end_layout
 
-\begin_layout Standard
-交换一个排列的两个数字的顺序叫做
-\series bold
-对换
-\series default
-。
+\begin_layout Subsection
+特殊行列式
 \end_layout
 
-\begin_layout Standard
-一个排列经过一次对换，
-\series bold
-奇偶性
-\series default
-会改变。
-\end_layout
-
-\begin_layout Standard
-在所有的
-\begin_inset Formula $n$
+\begin_layout Itemize
+上三角行列式（Upper Triangular D）是指主对角线以下元素全为0的行列式，如：
+\begin_inset Newline newline
 \end_inset
 
-级排列中，奇排列和偶排列的
-\series bold
-个数相等
-\series default
-，
-\series bold
 
-\begin_inset Formula $\frac{n!}{2}$
+\begin_inset Formula $\left|\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+0 & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{nn}
+\end{array}\right|=a_{11}a_{22}\cdots a_{nn}$
 \end_inset
 
-。
+
+\end_layout
+
+\begin_layout Itemize
+下三角行列式（Lower Triangular D）是指主对角线以上元素全为0的行列式，如：
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|\begin{array}{cccc}
+a_{11} & 0 & \cdots & 0\\
+a_{21} & a_{22} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{array}\right|=a_{11}a_{22}\cdots a_{nn}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对角行列式（Diagonal D）是指除主对角线之外其他元素都为0的行列式
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \lambda_{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{3}
+\end{array}\right|=\lambda_{1}\lambda_{2}\cdots\lambda_{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+对角行列式一定是行列式。
+\end_layout
+
+\begin_layout Itemize
+其它特殊行列式
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
+0 & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix} & =(-1)^{inv(n(n-1)\cdot3\cdot2\cdot1)}a_{1n}a_{2n-1}\cdots a_{n1}\\
+ & =-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & 0 & \dots & 0
+\end{vmatrix}=-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
+0 & 0 & \dots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & 0 & \dots & 0
+\end{vmatrix}=-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -57135,7 +57639,11 @@ a_{1n} & a_{2n} & \dots & a_{nn}
 \begin_inset Newline newline
 \end_inset
 
-证明：拉普拉斯展开式
+证明：1.拉普拉斯展开式
+\begin_inset Newline newline
+\end_inset
+
+2.
 \end_layout
 
 \begin_layout Itemize
