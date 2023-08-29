@@ -48491,14 +48491,130 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 \end_layout
 
 \begin_layout Chapter
-统计简介
+概率论
+\end_layout
+
+\begin_layout Standard
+概率论(英语：Probability theory)是集中研究概率及随机现象的数学分支, 是研究随机性或不确定性等现象的数学.
+ 概率论主要研究对象为随机事件、随机变量以及随机过程.
+ 对于随机事件是不可能准确预测其结果的, 然而对于一系列的独立随机事件——例如掷骰子、扔硬币、抽扑克牌以及轮盘等, 会呈现出一定的、可以被用于研究及预测的规律,
+ 两个用来描述这些规律的最具代表性的数学结论分别是大数定律和中心极限定理.
+ 
+\end_layout
+
+\begin_layout Standard
+作为统计学的数学基础, 概率论对诸多涉及大量数据定量分析的人类活动极为重要, 概率论的方法同样适用于其他方面, 例如是对只知道系统部分状态的复杂系统的描述——统
+计力学, 而二十世纪物理学的重大发现是以量子力学所描述的原子尺度上物理现象的概率本质.
+ 
+\end_layout
+
+\begin_layout Standard
+数学家和精算师认为概率是在0至1闭区间内的数字, 指定给一发生与失败是随机的"事件”.
+ 概率 
+\begin_inset Formula $P(A)$
+\end_inset
+
+根据概率公理来指定给事件
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+一事件
+\begin_inset Formula $A$
+\end_inset
+
+在一事件
+\begin_inset Formula $B$
+\end_inset
+
+确定发生后会发生的概率称为
+\begin_inset Formula $B$
+\end_inset
+
+给之
+\begin_inset Formula $A$
+\end_inset
+
+的
+\series bold
+条件概率
+\series default
+；其数值为
+\begin_inset Formula ${\displaystyle \frac{P(B\cap A)}{P(B)}}$
+\end_inset
+
+.
+ 若
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+给之
+\begin_inset Formula $A$
+\end_inset
+
+的条件概率和
+\begin_inset Formula $A$
+\end_inset
+
+的概率相同时, 则称
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+为独立事件.
+ 且
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+的此一关系为对称的, 这可以由一同价叙述："当
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+为独立事件时, 
+\begin_inset Formula ${\displaystyle P(A\cap B)=P(A)P(B)}$
+\end_inset
+
+”中看出.
+ 
+\end_layout
+
+\begin_layout Standard
+概率论中的两个重要概念为
+\series bold
+随机变量
+\series default
+和
+\series bold
+随机变量的概率分布
+\series default
+两种.
+ 
 \end_layout
 
 \begin_layout Section
-抽样方法
+统计简介
 \end_layout
 
 \begin_layout Subsection
+抽样方法
+\end_layout
+
+\begin_layout Subsubsection
 随机抽样
 \end_layout
 
@@ -48530,7 +48646,7 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 随机数法
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 系统抽样(systernatic simpling)
 \end_layout
 
@@ -48567,7 +48683,7 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 分层抽样(stratified sturnpling)
 \end_layout
 
@@ -48588,11 +48704,11 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 例如:调查新冠致死率可以,可以将总体感染人群按年龄分层, 然后,从各层独立地抽取一定数量的人, 再将他们合在一起作为样本.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 总体分布的估计
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 用样本的频率分布估计总体分布
 \end_layout
 
@@ -48754,7 +48870,7 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 频率分布
 \end_layout
 
@@ -48769,7 +48885,7 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 变量间的关系
 \end_layout
 
@@ -48787,7 +48903,7 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 回归直线(regression line): 其方程称为回归方程
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 正态分布(normal distribution)
 \end_layout
 
@@ -48962,7 +49078,7 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 回归分析,线性回归与回归直线
 \end_layout
 
@@ -48997,7 +49113,7 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 有时, 如果数据不是一条直线可以通过转换转成一条直线
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 回归直线
 \end_layout
 
@@ -49015,7 +49131,7 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 求回归直线与
 \series bold
 最小二乘法
@@ -49236,7 +49352,7 @@ R^{2}=1-\frac{\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}}{\stackrel[i=1]{n}{
  越大反之.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 独立性检验
 \end_layout
 
@@ -49258,7 +49374,7 @@ R^{2}=1-\frac{\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}}{\stackrel[i=1]{n}{
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -49484,7 +49600,7 @@ a+b+c+d
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -49776,122 +49892,6 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 
 \end_layout
 
-\begin_layout Chapter
-概率论
-\end_layout
-
-\begin_layout Standard
-概率论(英语：Probability theory)是集中研究概率及随机现象的数学分支, 是研究随机性或不确定性等现象的数学.
- 概率论主要研究对象为随机事件、随机变量以及随机过程.
- 对于随机事件是不可能准确预测其结果的, 然而对于一系列的独立随机事件——例如掷骰子、扔硬币、抽扑克牌以及轮盘等, 会呈现出一定的、可以被用于研究及预测的规律,
- 两个用来描述这些规律的最具代表性的数学结论分别是大数定律和中心极限定理.
- 
-\end_layout
-
-\begin_layout Standard
-作为统计学的数学基础, 概率论对诸多涉及大量数据定量分析的人类活动极为重要, 概率论的方法同样适用于其他方面, 例如是对只知道系统部分状态的复杂系统的描述——统
-计力学, 而二十世纪物理学的重大发现是以量子力学所描述的原子尺度上物理现象的概率本质.
- 
-\end_layout
-
-\begin_layout Standard
-数学家和精算师认为概率是在0至1闭区间内的数字, 指定给一发生与失败是随机的"事件”.
- 概率 
-\begin_inset Formula $P(A)$
-\end_inset
-
-根据概率公理来指定给事件
-\begin_inset Formula $A$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-一事件
-\begin_inset Formula $A$
-\end_inset
-
-在一事件
-\begin_inset Formula $B$
-\end_inset
-
-确定发生后会发生的概率称为
-\begin_inset Formula $B$
-\end_inset
-
-给之
-\begin_inset Formula $A$
-\end_inset
-
-的
-\series bold
-条件概率
-\series default
-；其数值为
-\begin_inset Formula ${\displaystyle \frac{P(B\cap A)}{P(B)}}$
-\end_inset
-
-.
- 若
-\begin_inset Formula ${\displaystyle B}$
-\end_inset
-
-给之
-\begin_inset Formula $A$
-\end_inset
-
-的条件概率和
-\begin_inset Formula $A$
-\end_inset
-
-的概率相同时, 则称
-\begin_inset Formula ${\displaystyle A}$
-\end_inset
-
-和
-\begin_inset Formula $B$
-\end_inset
-
-为独立事件.
- 且
-\begin_inset Formula $A$
-\end_inset
-
-和
-\begin_inset Formula $B$
-\end_inset
-
-的此一关系为对称的, 这可以由一同价叙述："当
-\begin_inset Formula $A$
-\end_inset
-
-和
-\begin_inset Formula $B$
-\end_inset
-
-为独立事件时, 
-\begin_inset Formula ${\displaystyle P(A\cap B)=P(A)P(B)}$
-\end_inset
-
-”中看出.
- 
-\end_layout
-
-\begin_layout Standard
-概率论中的两个重要概念为
-\series bold
-随机变量
-\series default
-和
-\series bold
-随机变量的概率分布
-\series default
-两种.
- 
-\end_layout
-
 \begin_layout Section
 事件
 \end_layout
@@ -50036,8 +50036,8 @@ S\subset S
 事件的关系与运算
 \end_layout
 
-\begin_layout Standard
-(1) 如果事件
+\begin_layout Enumerate
+如果事件
 \begin_inset Formula $C$
 \end_inset
 
@@ -50057,6 +50057,7 @@ S\subset S
  
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 一般地,对于事件
 \begin_inset Formula $A$
@@ -50098,14 +50099,16 @@ S\subset S
   
 \end_layout
 
-\begin_layout Standard
-(2)如果事件C发生,那么事件D一定发生,反过来也对,这时我们说这两个事件相等,记作
+\end_deeper
+\begin_layout Enumerate
+如果事件C发生,那么事件D一定发生,反过来也对,这时我们说这两个事件相等,记作
 \begin_inset Formula $C=D$
 \end_inset
 
 , 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 一般地,若
 \begin_inset Formula $B\supseteq A$
@@ -50123,8 +50126,9 @@ S\subset S
  
 \end_layout
 
-\begin_layout Standard
-(3)若某事件发生当且仅当事件A发生或事件B发生,则称此事件为事件A与事件 B的
+\end_deeper
+\begin_layout Enumerate
+若某事件发生当且仅当事件A发生或事件B发生,则称此事件为事件A与事件 B的
 \series bold
 并事件
 \series default
@@ -50139,6 +50143,7 @@ S\subset S
 ), 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 例如,在掷骰子的试验中,事件
 \begin_inset Formula $C_{1}\cup C_{2}$
@@ -50151,8 +50156,9 @@ S\subset S
  
 \end_layout
 
-\begin_layout Standard
-(4)若某事件发生当且仅当事件A发生且事件B发生,则称 此事件为事件A与事件B的
+\end_deeper
+\begin_layout Enumerate
+若某事件发生当且仅当事件A发生且事件B发生,则称 此事件为事件A与事件B的
 \series bold
 交事件
 \series default
@@ -50171,6 +50177,7 @@ S\subset S
 ).
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 类似地, 称
 \begin_inset Formula $\stackrel[k=1]{n}{\cap}A_{k}$
@@ -50195,8 +50202,9 @@ S\subset S
 的积事件．
 \end_layout
 
-\begin_layout Standard
-(5)若
+\end_deeper
+\begin_layout Enumerate
+若
 \begin_inset Formula $A\cap B$
 \end_inset
 
@@ -50211,8 +50219,8 @@ S\subset S
 其含义是:事件与事件B在任何一次试验中不会同时发生.
 \end_layout
 
-\begin_layout Standard
-(6)若
+\begin_layout Enumerate
+若
 \begin_inset Formula $A\cap B$
 \end_inset
 
@@ -50226,13 +50234,17 @@ S\subset S
 
  为必然事件,那么称事件 A与事件B
 \series bold
-互为对立事件.
+互为对立事件
+\series default
+.
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 其含义是:事件A与事件B在任何一次试验中有且仅有一个发生.
 \end_layout
 
+\end_deeper
 \begin_layout Section
 概率的定义
 \end_layout
@@ -50552,7 +50564,7 @@ P(AB)=P(A)P(B|A)=P(A)P(B)
 \series default
 \color inherit
 (mutually independent).
- 可以证明 ,如果事件A与B相互独立,那么A与
+ 可以证明, 如果事件A与B相互独立,那么A与
 \begin_inset Formula $\overline{B}$
 \end_inset
 
@@ -56607,6 +56619,271 @@ Q=\left[\begin{array}{cc}
 \begin_layout Standard
 在某些情况下马尔科夫过程不足以描述我们希望发现的关系.
  
+\end_layout
+
+\begin_layout Section
+示例
+\end_layout
+
+\begin_layout Example
+What is the probability that both children are boys if at least one is a
+ boy born on a Tuesday?
+\end_layout
+
+\begin_layout Example
+A family has two children.
+ Given that at least one of the children is a boy who was born on a Tuesday,
+ what is the probability that both children are boys?
+\end_layout
+
+\begin_layout Example
+如果至少有一个孩子是在星期二出生的，那么两个孩子都是男孩的概率是多少？
+\end_layout
+
+\begin_layout Example
+来自
+\begin_inset CommandInset href
+LatexCommand href
+name "https://math.stackexchange.com/questions/2779916/what-is-the-probability-that-both-children-are-boys-if-at-least-one-is-a-boy-bor"
+target "来自"
+literal "false"
+
+\end_inset
+
+, 另外, 必须排除生物影响.
+\end_layout
+
+\begin_layout Solution
+用 
+\begin_inset Formula $B$
+\end_inset
+
+至少有一个孩子是在星期二出生, 
+\begin_inset Formula $A$
+\end_inset
+
+两个孩子都是男孩的概率.
+ 条件概率:
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $P(A|B)=\frac{P(A∩B)}{P(B)}=\frac{(\frac{1}{2})^{2}\times(1−(\frac{6}{7})^{2})}{1-(1−\frac{1}{2}\times\frac{1}{7})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $P(B)=1-(1−\frac{1}{2}\times\frac{1}{7})^{2}$
+\end_inset
+
+ 解析:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\frac{1}{2}\times\frac{1}{7}$
+\end_inset
+
+表示一个孩子 (男或女) 在
+\begin_inset Formula $7$
+\end_inset
+
+ 天内的这一天出生的概率, 
+\begin_inset Formula $(1−\frac{1}{2}\times\frac{1}{7})$
+\end_inset
+
+ 表示不在这一天出生的概率,
+\begin_inset Formula $(1−\frac{1}{2}\times\frac{1}{7})^{2}$
+\end_inset
+
+表示两个孩子 (男或女)
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+都
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+不在这一天出生的概率, 
+\begin_inset Formula $1-(1−\frac{1}{2}\times\frac{1}{7})^{2}$
+\end_inset
+
+表示两个孩子
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+至少有一个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+在这一天出生的概率.这一天可以是 星期二.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $P(A∩B)$
+\end_inset
+
+解析: 
+\begin_inset Formula $(\frac{1}{2})^{2}$
+\end_inset
+
+表示两个都是男孩的概率.
+\begin_inset Formula $(\frac{6}{7})^{2}$
+\end_inset
+
+两个男孩
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+都
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+不在这一天(星期二)的概率.
+\begin_inset Formula $(1−(\frac{6}{7})^{2})$
+\end_inset
+
+两个男孩
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+至少一个在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+这一天出生的概率.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/probability/boyGirlTue.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
