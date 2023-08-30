@@ -12398,6 +12398,78 @@ P={M||MF|=d}
 \end_layout
 
 \begin_layout Section
+悬链线
+\end_layout
+
+\begin_layout Standard
+悬链线（Catenary）是一种常用曲线，物理上用于描绘质量均匀分布而不可延伸的长链悬挂在两支点间，因均匀引力作用下而形成向下弯曲之曲线，因此而得名。
+\end_layout
+
+\begin_layout Standard
+虽然弯曲的形状看似二次方的抛物线，但是1638年在伽利略的《Two New Sciences》中证明因为绳子的张力会随著吊挂重量的不同，在底端为最小、愈高的地方
+愈大，如此一来，它所形成的形状就不是抛物线。
+\end_layout
+
+\begin_layout Standard
+随后在1670年虎克根据力学推导出悬链线的数学特性。1691年莱布尼兹、惠更斯、约翰·白努利近一步推导出数学模型。
+\end_layout
+
+\begin_layout Standard
+它的公式为：
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=a\cosh\frac{x}{a}$
+\end_inset
+
+或者简单地表示为
+\begin_inset Formula ${\displaystyle y=\frac{a\left(e^{\frac{x}{a}}+e^{-{\frac{x}{a}}}\right)}{2}}$
+\end_inset
+
+ 其中
+\begin_inset Formula $cosh$
+\end_inset
+
+是双曲余弦函数， 
+\begin_inset Formula $a$
+\end_inset
+
+ 是一个由绳子本身性质和悬挂方式决定的常数， 
+\begin_inset Formula $x$
+\end_inset
+
+轴为其准线。具体来说，
+\begin_inset Formula $a=\frac{T_{0}}{g\lambda}$
+\end_inset
+
+，其中
+\begin_inset Formula $g$
+\end_inset
+
+是重力加速度， 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 是线密度（假设绳子密度均匀），而 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+是绳子上每一点处张力的水平分量，它取决于绳子的悬挂方式；若绳子两端在同一水平面上，则下面的方程决定了
+\begin_inset Formula $\frac{L}{a}=\sinh\frac{d}{a}$
+\end_inset
+
+其中
+\begin_inset Formula $L$
+\end_inset
+
+是绳子总长的一半，
+\begin_inset Formula $d$
+\end_inset
+
+是端点距离的一半。
+\end_layout
+
+\begin_layout Section
 参数方程(参考极座标系)
 \end_layout
 
