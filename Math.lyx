@@ -23153,7 +23153,6 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 
 \begin_layout Standard
 不同的虚数都是不能比较大小的, 虚数或者说虚部不为0的复数不能比较大小.
-  
 \end_layout
 
 \begin_layout Standard
@@ -23189,7 +23188,67 @@ a+bi\text{与}c+di\text{相\text{等的充分必要条件是a=c且b=d}}
 \end_inset
 
 .
-  
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $m^{3}=27$
+\end_inset
+
+, 则 m= _和_
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m^{3}-27=0$
+\end_inset
+
+ 
+\begin_inset Formula $m^{3}-3^{3}=0$
+\end_inset
+
+ 
+\begin_inset Formula $(m-3)(m^{2}+3m+9)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m-3=0$
+\end_inset
+
+ 或 
+\begin_inset Formula $m^{2}+3m+9=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{1}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{2}=\frac{-3\pm\sqrt{9-36}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta=\sqrt{9-36}=\sqrt{-27}=3\sqrt{3}i$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{2}=\frac{-3\pm3\sqrt{3}i}{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
