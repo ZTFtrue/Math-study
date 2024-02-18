@@ -35034,7 +35034,6 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_inset
 
 称为积分常数.
- 
 \end_layout
 
 \begin_layout Standard
@@ -39920,6 +39919,71 @@ I^{2} & =\iint_{D}e^{-(x^{2}+y^{2})}dxdy\\
 \begin_layout Standard
 定积分是一个确定的实数(所以有"定"字),定积分的大小由积分区间和被积函数共同确定.
  
+\end_layout
+
+\begin_layout Section
+格林公式
+\end_layout
+
+\begin_layout Standard
+在物理学与数学中，格林定理给出了沿封闭曲线 C 的线积分与以 C 为边界的平面区域 D 上的双重积分的联系。格林定理是斯托克斯定理的二维特例，以英国数学家乔治·
+格林（George Green）命名。
+\end_layout
+
+\begin_layout Standard
+设闭区域
+\begin_inset Formula $D$
+\end_inset
+
+ 由分段光滑的简单曲线
+\begin_inset Formula $ L $
+\end_inset
+
+围成，函数 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+及 
+\begin_inset Formula $Q(x,y)$
+\end_inset
+
+在
+\begin_inset Formula $ D $
+\end_inset
+
+上有一阶连续偏导数，则有:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \iint\limits _{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\mathrm{d}x\mathrm{d}y=\oint_{L^{+}}(P\mathrm{d}x+Q\mathrm{d}y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $L^{+}$
+\end_inset
+
+是D的取正向的边界曲线。
+\end_layout
+
+\begin_layout Standard
+此公式叫做格林公式，它给出了沿着闭曲线L的曲线积分与L所包围的区域D上的二重积分之间的关系。另见格林恒等式。格林公式还可以用来计算平面图形的面积。
+ 
+\end_layout
+
+\begin_layout Paragraph
+求积仪
+\end_layout
+
+\begin_layout Standard
+求积仪，也称为面积仪（英语：Planimeter），是量度面积的仪器，为量度不规则的平面面积而设。 
 \end_layout
 
 \begin_layout Chapter
