@@ -149,7 +149,15 @@ Math
 \begin_inset Formula $SD=\sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_{i}-\mu)^{2}}(\mu\text{为平均值{\displaystyle \overline{x}})}$
 \end_inset
 
-为从i=1开始求N个
+为从
+\begin_inset Formula $i=1$
+\end_inset
+
+开始求
+\begin_inset Formula $N$
+\end_inset
+
+个
 \family roman
 \series medium
 \shape up
@@ -241,6 +249,29 @@ Math
 \end_inset
 
  全称量词, 用来指示全称量化的符号。
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \prod}$
+\end_inset
+
+积算符号，通常用于表示一系列数或表达式的乘积。类似于求和符号“∑∑”，但用于乘法。
+\begin_inset Formula $\prod_{i=1}^{n}a_{i}$
+\end_inset
+
+ 表示从
+\begin_inset Formula $i=1$
+\end_inset
+
+ 到
+\begin_inset Formula $i=n$
+\end_inset
+
+ 的所有 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+的乘积。
 \end_layout
 
 \begin_layout Chapter
@@ -8305,7 +8336,7 @@ N=m+n
 \end_layout
 
 \begin_layout Paragraph
-分步乘法计数原理
+分步乘法计数原理（乘法原理）
 \end_layout
 
 \begin_layout Standard
@@ -9511,6 +9542,22 @@ uu
  。
 \end_layout
 
+\begin_layout Subsection
+组合原理
+\end_layout
+
+\begin_layout Standard
+鸽巢原理:如果要把n个对象分配到m个容器中，必有至少一个容器容纳至少
+\begin_inset Formula ${\displaystyle \left\lceil \frac{n}{m}\right\rceil }$
+\end_inset
+
+个对象。 
+\end_layout
+
+\begin_layout Standard
+排容原理
+\end_layout
+
 \begin_layout Section
 二项式定理(binomial throrem)
 \end_layout
@@ -10549,7 +10596,7 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 
 \begin_layout Standard
 调和平均数:
-\begin_inset Formula $H_{n}=\frac{n}{\stackrel[i=1]{n}{\sum}\frac{1}{x_{i}}}=\frac{n}{\frac{1}{x_{1}}+\frac{1}{x^{2}}+\cdots+\frac{1}{x_{n}}}$
+\begin_inset Formula $H_{n}=\frac{n}{\stackrel[i=1]{n}{\sum}\frac{1}{x_{i}}}=\frac{n}{\frac{1}{x_{1}}+\frac{1}{x_{2}}+\cdots+\frac{1}{x_{n}}}$
 \end_inset
 
 
@@ -56821,6 +56868,194 @@ Q=\left[\begin{array}{cc}
 \end_layout
 
 \begin_layout Section
+经典问题
+\end_layout
+
+\begin_layout Subsection
+生日问题
+\end_layout
+
+\begin_layout Standard
+最少需要多少人，当中
+\series bold
+两人
+\series default
+同一天生日的概率才会过半？答案是23人。
+\end_layout
+
+\begin_layout Standard
+可想像一间有23人进入的房间，这23人依次进入，每个进入的人的生日都与房里其他人的生日不同的概率依次是1、 
+\begin_inset Formula ${\textstyle \frac{364}{365}}$
+\end_inset
+
+、 
+\begin_inset Formula ${\textstyle \frac{363}{365}}$
+\end_inset
+
+、
+\begin_inset Formula $\frac{362}{365}$
+\end_inset
+
+、 
+\begin_inset Formula $\frac{361}{365}$
+\end_inset
+
+等。先入房的人的生日皆不同的概率很高，前五个
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+是
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $1×{\textstyle \frac{364}{365}}×{\textstyle \frac{363}{365}}×{\textstyle \frac{362}{365}}×{\textstyle \frac{361}{365}}=97.3$
+\end_inset
+
+；而最后入房的几人就完全不同，他们入房且找不到同生日者的概率是 
+\begin_inset Formula ${\textstyle \frac{345}{365}}$
+\end_inset
+
+、 
+\begin_inset Formula ${\textstyle \frac{344}{365}}$
+\end_inset
+
+、 
+\begin_inset Formula ${\textstyle \frac{343}{365}}$
+\end_inset
+
+。23人都不在同一天的概率
+\begin_inset Formula $\frac{365!-342!}{365^{23}}=0.4927$
+\end_inset
+
+，则至少有两人在同一天的概率
+\begin_inset Formula $1-0.4927>0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let k = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+let r = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+for (let i = 365; i > 342; i--) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    r = r * i / 365
+\end_layout
+
+\begin_layout Plain Layout
+
+    console.log(k++, i,i / 365);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+console.log(r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个问题需要注意的是两人同一天的概率，只需要两人即可。
+\end_layout
+
+\begin_layout Standard
+生日问题普遍的应用于检测哈希函数：N-位长度的哈希表可能发生碰撞测试次数不是2N次而是只有2N/2次，这结论用在破解密码学散列函数的生日攻击中。
+ 
+\end_layout
+
+\begin_layout Paragraph
+生日攻击
+\end_layout
+
+\begin_layout Standard
+此攻击是对固定的重新排列模式作随机尝试攻击，仰赖较高的命中率（鸽笼原理）。生日攻击可在
+\begin_inset Formula ${\textstyle \sqrt{2^{n}}=2^{n/2}}$
+\end_inset
+
+等级的时间内找到散列碰撞，低于原像攻击的 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+。
+\end_layout
+
+\begin_layout Standard
+当老师问一个有30名学生的班级（
+\begin_inset Formula $n=30$
+\end_inset
+
+）每个人的生日在哪一天（为简便，此处省略闰年）以确定是否有两个学生同一天生日（对应碰撞 ）。
+\end_layout
+
+\begin_layout Standard
+从直觉角度考虑，概率看起来很小。若老师选择特定日期（例如9月16日），则至少有一名学生在那天出生的概率是
+\begin_inset Formula ${\displaystyle 1-(364/365)^{30}}$
+\end_inset
+
+，约为
+\begin_inset Formula $7.9\%$
+\end_inset
+
+ (
+\begin_inset Formula $364/365$
+\end_inset
+
+学生都不出生在那天的概率)。但是，与直觉相反的是，至少一名学生和另外任意一名学生有着相同生日的概率大约为70.63%（
+\begin_inset Formula $n=30$
+\end_inset
+
+时），从方程
+\begin_inset Formula $1-(\frac{365}{365}×{\textstyle \frac{365-1}{365}}×{\textstyle \frac{365-2}{365}}\times\cdots\times{\textstyle \frac{365-n}{365}})=1-(\frac{365\times(365-1)\times\cdots\times(365-(n-1))}{365^{n}})=\frac{365\times(365-1)\times\cdots\times(365-(n+1))\times(365-n)!}{(365-n)!\times365^{n}}={\displaystyle 1-\frac{365!}{(365-n)!\cdot365^{n}}}$
+\end_inset
+
+中可看出。
+\end_layout
+
+\begin_layout Section
 示例
 \end_layout
 
@@ -56931,7 +57166,7 @@ literal "false"
 \uwave off
 \noun off
 \color none
-不在这一天出生的概率, 
+不在这一天出生的概率(这种方式可以简化计算，一个孩子=都在这一天+都不在这一天+一个在一个不在), 
 \begin_inset Formula $1-(1−\frac{1}{2}\times\frac{1}{7})^{2}$
 \end_inset
 
