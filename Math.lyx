@@ -959,7 +959,15 @@ Omega
 \begin_inset Formula ${\displaystyle \prod}$
 \end_inset
 
-积算符号，通常用于表示一系列数或表达式的乘积。类似于求和符号“∑∑”，但用于乘法。
+积算符号，
+通常用于表示一系列数或表达式的乘积。
+类似于求和符号“
+\begin_inset Formula $∑$
+\end_inset
+
+”，
+但用于乘法。
+
 \begin_inset Formula $\prod_{i=1}^{n}a_{i}$
 \end_inset
 
@@ -976,6 +984,7 @@ Omega
 \end_inset
 
 的乘积。
+
 \end_layout
 
 \begin_layout Chapter
@@ -9442,7 +9451,8 @@ N=m+n
 
 \end_inset
 
- 种不同的方法.
+ 种不同的方法。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -9459,64 +9469,112 @@ N=m\times n
 
 \end_inset
 
- 种不同的方法.
+ 种不同的方法。
+
 \end_layout
 
 \begin_layout Standard
-用两个计数原理解决计数问题时,最重要的是在开始计算之前要进行仔细分析需要分类还是需要分步.
+用两个计数原理解决计数问题时，
+最重要的是在开始计算之前要进行仔细分析需要分类还是需要分步。
+
 \end_layout
 
 \begin_layout Standard
-分类要做到"不重不漏”,分类后再分别对每一类进行计数,最后用分类加法计数原 理求和,得到总数.
-  
+分类要做到"不重不漏”，
+分类后再分别对每一类进行计数，
+最后用分类加法计数原理求和，
+得到总数。
+
 \end_layout
 
 \begin_layout Standard
-分步要做到"步骤完整”完成了所有步骤,恰好完成任务,当然步与步之间要相互独立,分步后再计算每一步的方法数,最后根据分步乘法计数原理,把完成每一步的方法数相乘,得到总数.
- 
+分步要做到"步骤完整”完成了所有步骤，
+恰好完成任务，
+当然步与步之间要相互独立,分步后再计算每一步的方法数，
+最后根据分步乘法计数原理，
+把完成每一步的方法数相乘，
+得到总数。
+
 \end_layout
 
-\begin_layout Standard
-练习 n元集合
+\begin_layout Exercise
+n元集合
 \begin_inset Formula $A={a_{1},a_{2},\cdots,a_{n}}$
 \end_inset
 
-的子集有多少个?(
-\begin_inset Formula $2^{n}$
+的子集有多少个?
+\end_layout
+
+\begin_layout Solution
+对集合 
+\begin_inset Formula $A$
 \end_inset
 
-)
+中的每一个元素 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ 而言，
+有两种选择：
+要么包含在子集中，
+要么不包含在子集中。
+因为
+\begin_inset Formula $A$
+\end_inset
+
+中有 
+\begin_inset Formula $n$
+\end_inset
+
+ 个元素，
+因此：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+第一个元素有 2 种选择：
+包含或不包含。
+
+\end_layout
+
+\begin_layout Itemize
+第二个元素有 2 种选择：
+包含或不包含。
+
+\end_layout
+
+\begin_layout Itemize
+\SpecialChar ldots
+\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Itemize
+第 n 个元素有 2 种选择：
+包含或不包含。
+
+\end_layout
+
+\end_deeper
+\begin_layout Solution
+因此，
+总的子集数目就是这 n 个 2 的乘积，
+即：
+子集总数=
+\begin_inset Formula $2×2×\cdots×2=2^{n}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 排列与组合
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 排列(Permutation,
  arrangement)
-\end_layout
-
-\begin_layout Standard
-一般地,从n个不同元素中取出
-\begin_inset Formula $m(m\leqslant n)$
-\end_inset
-
-个元素,
- 按照一定的顺序排成一列,
- 叫做从 n个不同元素中取出m个元素的一个
-\series bold
-\color orange
-排列
-\series default
-\color inherit
-(arrangement).
-\end_layout
-
-\begin_layout Standard
-根据排列的定义,两个排列相同,
-\series bold
-当且仅当两个排列的元素完全相同,且元素的排列顺序也相同
 \end_layout
 
 \begin_layout Standard
@@ -9528,24 +9586,100 @@ N=m\times n
 \begin_inset Formula $m(m\leqslant n)$
 \end_inset
 
-个元素的所有不同排列的个数叫做从个n不同元素中取出m个元素的排列数,用符号
+个元素,
+ 按照一定的顺序排成一列，
+叫做从 
+\begin_inset Formula $n$
+\end_inset
+
+个不同元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个元素的一个
+\series bold
+\color orange
+排列
+\series default
+\color inherit
+(arrangement).
+\end_layout
+
+\begin_layout Standard
+根据排列的定义,两个排列相同,
+\series bold
+当且仅当两个排列的元素完全相同，
+且元素的排列顺序也相同
+\end_layout
+
+\begin_layout Standard
+从
+\begin_inset Formula $n$
+\end_inset
+
+个不同元素中取出
+\begin_inset Formula $m(m\leqslant n)$
+\end_inset
+
+个元素的所有不同排列的
+\series bold
+个数
+\series default
+叫做从个n不同元素中取出m个元素的
+\series bold
+排列数
+\series default
+,用符号
 \begin_inset Formula $A_{n}^{m}$
 \end_inset
 
-表示.
+表示。
+
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Remark
+部分书籍使用“置换”名称
+\end_layout
+
+\begin_layout Paragraph
 公式推理：
 
 \end_layout
 
 \begin_layout Standard
-从n个不相同元素中取出m个排成一列（有序），
-第一个位置可以有n个选择，
-第二个位置可以有n-1个选择（已经有1个放在前一个位置），
-则同理可知第三个位置可以有n-2个选择，
-以此类推第m个位置可以有
+从
+\begin_inset Formula $n$
+\end_inset
+
+个不相同元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个排成一列（有序），
+第一个位置可以有
+\begin_inset Formula $n$
+\end_inset
+
+个选择，
+第二个位置可以有
+\begin_inset Formula $n-1$
+\end_inset
+
+个选择（已经有
+\begin_inset Formula $1$
+\end_inset
+
+个放在前一个位置），
+则同理可知第三个位置可以有
+\begin_inset Formula $n-2$
+\end_inset
+
+个选择，
+以此类推第
+\begin_inset Formula $m$
+\end_inset
+
+个位置可以有
 \begin_inset Formula $n-(m-1)$
 \end_inset
 
@@ -9580,7 +9714,8 @@ N=m\times n
 \uwave default
 \noun default
 \color inherit
- .
+。
+
 \end_layout
 
 \begin_layout Standard
@@ -9588,7 +9723,7 @@ N=m\times n
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{n}^{m} & = & n(n-1)(n-2)\cdots[n-(m-1)]\\
- &  & =\frac{n!}{(n-m)!}=\frac{A_{n}^{n}}{A_{n-m}^{n-m}},(n,m\in N^{*},m\leqslant n)
+ & = & \frac{n!}{(n-m)!}=\frac{A_{n}^{n}}{A_{n-m}^{n-m}},(n,m\in N^{*},m\leqslant n)
 \end{eqnarray*}
 
 \end_inset
@@ -9600,40 +9735,52 @@ A_{n}^{m} & = & n(n-1)(n-2)\cdots[n-(m-1)]\\
 \begin_inset Formula $n$
 \end_inset
 
-个不同元素全部取出的一个排列,
- 叫做n个元素的一个
+个不同元素全部取出的一个排列，
+叫做
+\begin_inset Formula $n$
+\end_inset
+
+个元素的一个
 \series bold
 \color orange
 全排列
 \series default
 \color inherit
 .
- 这时公式中 m=n 即有 
+ 这时公式中
+\begin_inset Formula $m=n$
+\end_inset
+
+ 即有
 \begin_inset Formula 
 \[
-A_{n}^{n}=n\times(n-1)\times(n-2)\times\cdots\times3\times2\times1
+A_{n}^{n}=n\times(n-1)\times(n-2)\times\cdots\times3\times2\times1=n!
 \]
 
 \end_inset
 
-,
- 
-\end_layout
-
-\begin_layout Standard
-就是说,n个不同元素全部取出的排列数,等于正整数1到n的连乘积.
- 正整数1到的n连乘积,叫做n的
+，
+就是说，
+n个不同元素全部取出的排列数，
+等于正整数1到n的连乘积。
+正整数1到的n连乘积，
+叫做n的
 \series bold
 \color orange
 阶乘
 \series default
 \color inherit
-(factorial),用!表示.
- 所以
+(factorial)，
+用
+\begin_inset Formula $!$
+\end_inset
+
+表示。
+所以
 \begin_inset Formula $n$
 \end_inset
 
-个不同元素的全排列数公式可以写成 
+个不同元素的全排列数公式可以写成
 \family roman
 \series medium
 \shape up
@@ -9658,19 +9805,82 @@ A_{n}^{n}=n!
 \end_layout
 
 \begin_layout Standard
-另外,我们规定
+另外，
+我们规定
 \begin_inset Formula $0!=1$
 \end_inset
 
-.
+
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Remark
+排列其它表示方法 
+\begin_inset Formula ${\displaystyle P_{k}^{n}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula ${\displaystyle _{n}P_{k}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $^{n}P_{k}$
+\end_inset
+
+,
+\begin_inset Formula ${\displaystyle P_{n,k}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula ${\displaystyle P(n,k)}$
+\end_inset
+
+,
+ 
+\begin_inset Formula ${\displaystyle A_{n}^{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula 
+\[
+{\displaystyle P(n,k)=\underbrace{n\cdot(n-1)\cdot(n-2)\cdots(n-k+1)}_{k\ \mathrm{factors}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+当
+\begin_inset Formula $k>n$
+\end_inset
+
+时为
+\begin_inset Formula $0$
+\end_inset
+
+，
+否则为
+\begin_inset Formula $\frac{n!}{(n-k)!}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsection
 组合（combinatorial）
 \end_layout
 
 \begin_layout Standard
-一般地,从
+一般地，
+从
 \begin_inset Formula $n$
 \end_inset
 
@@ -9678,22 +9888,29 @@ A_{n}^{n}=n!
 \begin_inset Formula $m(m\leqslant n)$
 \end_inset
 
-个元素合成一组(没有顺序要求),
- 叫做从
+个元素合成一组(没有顺序要求)，
+叫做从
 \begin_inset Formula $n$
 \end_inset
 
-个不同元素中取出m个元素的一个
+个不同元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个元素的一个
 \series bold
 \color orange
 组合
 \series default
 \color inherit
-(combination).
+(combination)。
+
 \end_layout
 
 \begin_layout Standard
-例如:
+和排列不同的是，
+组合不考虑取出元素的顺序。
+ 例如:
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -9701,8 +9918,9 @@ A_{n}^{n}=n!
 \begin_inset Formula $b,a$
 \end_inset
 
- 是同一个组合,
- 不同排列.
+ 是同一个组合，
+不同排列。
+
 \end_layout
 
 \begin_layout Standard
@@ -9714,13 +9932,22 @@ A_{n}^{n}=n!
 \begin_inset Formula $m(m\leqslant n)$
 \end_inset
 
-个元素的所有不同组合的个数叫做从个n不同元素中取出m个元素的
+个元素的所有不同组合的个数叫做从个
+\begin_inset Formula $n$
+\end_inset
+
+不同元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个元素的
 \series bold
 \color orange
 组合数
 \series default
 \color inherit
-,用符号
+，
+用符号
 \begin_inset Formula $C_{n}^{m}$
 \end_inset
 
@@ -9748,7 +9975,7 @@ m
 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 组合公式推理
 \end_layout
 
@@ -9761,23 +9988,30 @@ m
 \begin_inset Formula $m$
 \end_inset
 
-个成为一个全排列 有
-\begin_inset Formula $A_{n}^{m}$
+个元素组成一个全排列有
+\begin_inset Formula $A_{n}^{m}=n(n-1)(n-2)\cdots[n-(m-1)]$
 \end_inset
 
 个，
-由于m个元素组成的一组可以有
-\begin_inset Formula $m!$
-\end_inset
-
-种不同的排列（全排列
-\begin_inset Formula $A_{n}^{n}=n!$
-\end_inset
-
- ），
 由于组合元素没有顺序要求，
-所以部分计算重复，
-不需要乘（需要除掉），
+所以有部分计算重复，
+需要消除掉。
+对于每组的 
+\begin_inset Formula $m$
+\end_inset
+
+ 个元素，
+有 
+\begin_inset Formula $m!=A_{m}^{m}$
+\end_inset
+
+ 种不同的排列方式，
+不同顺序的排列实际上是同一个组合。
+因此我们需要将排列的总数除以这些排列方式的数量以消除顺序的影响：
+
+\end_layout
+
+\begin_layout Standard
 组合的总数就是 
 \family roman
 \series medium
@@ -9800,11 +10034,13 @@ m
 \end_layout
 
 \begin_layout Standard
-公式:
+公式：
+
 \begin_inset Formula 
 \begin{eqnarray*}
-C_{n}^{m} & =\frac{A_{n}^{m}}{A_{m}^{m}} & =\frac{n(n-1)(n-2)\cdots[n-(m-1)]}{m!}\\
- &  & =\frac{n!}{m!(n-m)!},(n,m\in N^{*},m\leqslant n)
+C_{n}^{m} & = & \frac{A_{n}^{m}}{A_{m}^{m}}\\
+ & = & \frac{n(n-1)(n-2)\cdots[n-(m-1)]}{m!}\\
+ & = & \frac{n!}{m!(n-m)!},(n,m\in N^{*},m\leqslant n)
 \end{eqnarray*}
 
 \end_inset
@@ -9816,20 +10052,23 @@ C_{n}^{m} & =\frac{A_{n}^{m}}{A_{m}^{m}} & =\frac{n(n-1)(n-2)\cdots[n-(m-1)]}{m!
 \begin_inset Formula $A_{n}^{m}=C_{n}^{m}\times A_{m}^{m}$
 \end_inset
 
-,
- 即组合数乘以每个组的全排列.
+，
+即组合数乘以每个组的全排列。
+
 \end_layout
 
 \begin_layout Standard
-另外,我们规定
+另外，
+我们规定
 \begin_inset Formula $C_{n}^{0}=1$
 \end_inset
 
-.
+。
+
 \end_layout
 
-\begin_layout Standard
-性质:
+\begin_layout Subparagraph
+组合性质
 \begin_inset Formula 
 \[
 C_{n}^{m}=C_{n}^{n-m}
@@ -9960,8 +10199,11 @@ C_{r}^{r}+C_{r+1}^{r}+\cdots+C_{n}^{r}=C_{n+1}^{r+1}
 \begin_inset Newline newline
 \end_inset
 
-给你一个整数 n，
-请返回长度为 n 、仅由元音 (a,
+请返回长度为
+\begin_inset Formula $n$
+\end_inset
+
+ 、仅由元音 (a,
  e,
  i,
  o,
@@ -10632,7 +10874,11 @@ uu
 
 \begin_layout Solution*
 因此，
-现在问题变成了n 个相同小球放到 
+现在问题变成了
+\begin_inset Formula $n$
+\end_inset
+
+个相同小球放到
 \begin_inset Formula $m=5$
 \end_inset
 
@@ -10689,7 +10935,16 @@ uu
 \begin_inset Formula $C_{n-1}^{m-1}$
 \end_inset
 
- 。
+ ，
+即在
+\begin_inset Formula $n-1$
+\end_inset
+
+个缝隙中取
+\begin_inset Formula $m-1$
+\end_inset
+
+个组成组合。
 
 \end_layout
 
@@ -10706,7 +10961,7 @@ uu
 
 个球任意排列，
 也就是组合数
-\begin_inset Formula $C_{n+m-1}^{m-1}$
+\begin_inset Formula $C_{n+(m-1)}^{m-1}$
 \end_inset
 
  。
@@ -10718,11 +10973,13 @@ uu
 \end_layout
 
 \begin_layout Standard
-鸽巢原理:如果要把n个对象分配到m个容器中，必有至少一个容器容纳至少
+鸽巢原理:如果要把n个对象分配到m个容器中，
+必有至少一个容器容纳至少
 \begin_inset Formula ${\displaystyle \left\lceil \frac{n}{m}\right\rceil }$
 \end_inset
 
-个对象。 
+个对象。
+ 
 \end_layout
 
 \begin_layout Standard
@@ -10821,12 +11078,18 @@ T_{k+1}=C_{n}^{k}a^{n-k}b^{k}
 \end_layout
 
 \begin_layout Standard
-在二项式定理中,如果设
-\begin_inset Formula $a=1,b=x$
+在二项式定理中，
+如果设
+\begin_inset Formula $a=1$
 \end_inset
 
-,则得到公式:
- 
+，
+
+\begin_inset Formula $b=x$
+\end_inset
+
+则得到公式：
+
 \begin_inset Formula 
 \[
 (1+x)^{n}=C_{n}^{0}+C_{n}^{1}x+C_{n}^{2}x^{2}+\cdots+C_{n}^{k}x^{k}+\cdots+C_{n}^{n}x^{n}
@@ -21598,7 +21861,7 @@ v-e+f=2
 \series default
 \color inherit
 .
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -21684,17 +21947,6 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
-数学中,我们把这种既有大小,
- 又有方向的量叫做
-\series bold
-向量
-\series default
-(vector,
- 矢量),
- .
-\end_layout
-
-\begin_layout Standard
 标量(英语：
 scalar),
  又称纯量,
@@ -21730,12 +21982,31 @@ scalar),
  
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+向量
+\series default
+，
+数学中,我们把这种既有大小,
+ 又有方向的量叫做
+\series bold
+向量
+\series default
+(vector,
+ 矢量)。
+
+\end_layout
+
 \begin_layout Section
-平面向量
+表示方法
 \end_layout
 
 \begin_layout Standard
-由于实数与数轴上的点一一对应,所以数量常常用数轴上的一个点表示,而且不同的点表示不同的数量,对于向量,我们常用带箭头的线段来表示,线段按一定比例(标度)画出,它的长短表示向量的大小,箭头的指向表示向量的方向.
+由于实数与数轴上的点一一对应，
+所以数量常常用数轴上的一个点表示，
+而且不同的点表示不同的数量。
+
 \end_layout
 
 \begin_layout Standard
@@ -21743,45 +22014,8 @@ scalar),
 \series bold
 有向线段
 \series default
-,在有向线段的终点处画上箭头表示它的方向,
- 以
-\begin_inset Formula $A$
-\end_inset
-
-为起点、
-\begin_inset Formula $B$
-\end_inset
-
-为终点的有向线段记作
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-,起点写在终点的前面.
-\end_layout
-
-\begin_layout Standard
-已知
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-,线段
-\begin_inset Formula $AB$
-\end_inset
-
-的长度也叫做有向线段
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-的长度,
- 记作
-\begin_inset Formula $|\overrightarrow{AB}|$
-\end_inset
-
- .
- 
-\end_layout
-
-\begin_layout Standard
+，
+在有向线段的终点处画上箭头表示它的方向。
 有向线段包含三个要素:
 \series bold
 起点
@@ -21794,50 +22028,18 @@ scalar),
 \series bold
 长度
 \series default
-,知道了有向线段的起点、方向和长度,它的
+，
+知道了有向线段的起点、方向和长度，
+它的
 \series bold
 终点
 \series default
-就唯一确定.
+就唯一确定。
+
 \end_layout
 
-\begin_layout Standard
-向量可以用有向线段表示,向量
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-的大小,也就是向量
-\begin_inset Formula $\overrightarrow{AB}$
-\end_inset
-
-的长度(或称
-\series bold
-模
-\series default
-),记作
-\begin_inset Formula $|\overrightarrow{AB}|$
-\end_inset
-
-,长度为0的向量叫做
-\series bold
-零向量(zero vector)
-\series default
-,
- 记作
-\begin_inset Formula $\boldsymbol{0}$
-\end_inset
-
-或
-\begin_inset Formula $\overset{\rightarrow}{0}$
-\end_inset
-
-.长度等于1个单位的向量,
- 叫做
-\series bold
-单位向量(unit vector)
-\series default
-.
- 
+\begin_layout Paragraph
+带箭头字母
 \end_layout
 
 \begin_layout Standard
@@ -21861,6 +22063,263 @@ scalar),
 \end_layout
 
 \begin_layout Standard
+以
+\begin_inset Formula $A$
+\end_inset
+
+为起点、
+\begin_inset Formula $B$
+\end_inset
+
+为终点的有向线段记作
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+,起点写在终点的前面。
+已知
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+，
+线段
+\begin_inset Formula $AB$
+\end_inset
+
+的长度也叫做
+\series bold
+有向线段
+\series default
+
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的长度,
+ 记作
+\begin_inset Formula $|\overrightarrow{AB}|$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Standard
+有时也有用加箭头的大写字母表示数学量，
+如微积分中的面积元
+\begin_inset Formula ${\displaystyle d\vec{S}}$
+\end_inset
+
+。
+给定两点 
+\begin_inset Formula $A$
+\end_inset
+
+、 
+\begin_inset Formula $B$
+\end_inset
+
+ 时，
+也可确定一固定向量：
+如确定一个始于点从
+\begin_inset Formula $A$
+\end_inset
+
+ 终于点 
+\begin_inset Formula $B$
+\end_inset
+
+ 的向量，
+符号表示为：
+
+\begin_inset Formula ${\displaystyle \overrightarrow{AB}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+向量的性质
+\end_layout
+
+\begin_layout Subparagraph
+有向线段
+\end_layout
+
+\begin_layout Subparagraph
+大小
+\end_layout
+
+\begin_layout Standard
+向量可以用带箭头的有向线段表示,向量
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的大小,也就是向量
+\begin_inset Formula $\overrightarrow{AB}$
+\end_inset
+
+的长度(或称
+\series bold
+模
+\series default
+),记作
+\begin_inset Formula $|\overrightarrow{AB}|$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+对于三维笛卡尔坐标系下的向量 
+\begin_inset Formula $\vec{a}=(x,y,z)$
+\end_inset
+
+，
+其模长为：
+
+\begin_inset Formula ${\displaystyle \left\Vert \vec{a}\right\Vert =\sqrt{x^{2}+y^{2}+z^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设向量
+\begin_inset Formula $\vec{v}=(v_{1},v_{2},\cdots,v_{n})$
+\end_inset
+
+，
+其范数的计算表达式由弗罗贝尼乌斯范数（一种同时适用于向量和矩阵的范数计算方法）给出：
+
+\begin_inset Formula ${\displaystyle \left\Vert \vec{v}\right\Vert =\sqrt{v_{1}^{2}+v_{2}^{2}+\cdots+v_{n}^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+特殊向量
+\end_layout
+
+\begin_layout Itemize
+长度为0的向量叫做
+\series bold
+零向量(zero vector)
+\series default
+,
+ 记作
+\begin_inset Formula $\boldsymbol{0}$
+\end_inset
+
+或
+\begin_inset Formula $\overset{\rightarrow}{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+零向量依旧具有方向性，
+但方向不定。
+ 因此，
+零向量与任一向量平行。
+
+\end_layout
+
+\begin_layout Itemize
+零向量不等于数量0，
+它们是两种性质完全不同的对象，
+即 
+\begin_inset Formula $\vec{0}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+给定一 
+\begin_inset Formula $n$
+\end_inset
+
+ 维向量
+\begin_inset Formula ${\displaystyle \vec{z}}$
+\end_inset
+
+，
+若对于任意的同维向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+，
+总有 
+\begin_inset Formula $\vec{a}+\vec{z}=\vec{a}$
+\end_inset
+
+成立，
+则向量 
+\begin_inset Formula $\vec{z}$
+\end_inset
+
+ 称为n 维零向量，
+通常被记作 
+\begin_inset Formula $\vec{0}$
+\end_inset
+
+或
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+对于任意向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+，
+不论方向如何，
+若其大小为单位长度，
+则称其为
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+方向上的单位向量（Unit vector）。
+单位向量通常被记为 
+\begin_inset Formula $\vec{u}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+特殊地，
+三维笛卡尔坐标系上的三个基向量
+\begin_inset Formula $\vec{i}=(1,0,0)$
+\end_inset
+
+，
+
+\begin_inset Formula $\vec{j}=(0,1,0)$
+\end_inset
+
+，
+ 
+\begin_inset Formula $\vec{k}=(0,0,1)$
+\end_inset
+
+都是单位向量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 
 \series bold
 平行向量
@@ -21879,9 +22338,9 @@ scalar),
 \end_inset
 
 .
- 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 规定:零向量与任一向量平行,即对于任意向量
 \begin_inset Formula $\overrightarrow{a}$
@@ -21892,17 +22351,9 @@ scalar),
 \end_inset
 
 .
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-
-\series bold
-相等向量
-\series default
-:长度相等且方向相同的向量叫做(equal vector),
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 共线向量(collinear vectors)
@@ -21912,33 +22363,184 @@ scalar),
 共线向量
 \series default
 .
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+相等向量
+\series default
+:长度相等且方向相同的向量叫做(equal vector)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+对于任意向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+，
+若其一个相等向量为
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+，
+则对
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+和数字
+\begin_inset Formula $-1$
+\end_inset
+
+进行数乘运算后得到的向量
+\begin_inset Formula $-\vec{b}$
+\end_inset
+
+即
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+的反向量。
  
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+反向量：
+
+\series default
+一个向量 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+的反向量（Opposite vector）与它大小相等，
+但方向相反，
+一般记作 
+\begin_inset Formula $-\vec{v}$
+\end_inset
+
+。
+如果向量 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+是向量
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+的反向量，
+那么
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+也是 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+的反向量[6]，
+而且 
+\begin_inset Formula $\vec{a}+\vec{b}=\vec{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+方向向量：
+
+\series default
+对于任意向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+，
+若存在一个向量
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+，
+两者的方向相同（大小可以不同），
+则
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+是
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ 的一个方向向量。
+一般地，
+所有方向相同的向量之间互为方向向量。
+ 
+\end_layout
+
+\begin_layout Paragraph
 夹角
 \end_layout
 
 \begin_layout Standard
-向量的夹角(Included angle)是对于两个向量而言的概念.
- 对于任意两个给定的向量
-\begin_inset Formula $\overrightarrow{a}与{\displaystyle \overrightarrow{b}}$
+向量的夹角(Included angle)是对于两个向量而言的概念。
+对于任意两个给定的向量
+\begin_inset Formula $\overrightarrow{a}$
 \end_inset
 
-具有夹角 ,
- 二者的夹角即将二者图示化后两箭头所夹之角
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+，
+二者的夹角即将二者图示化后两箭头所夹之角
 \begin_inset Formula $\theta$
 \end_inset
 
- .
+。
  由于夹角具有互补性,
  因此在不同的出发规定、不同的旋转方向下,
- 所得夹角亦不同.
- 
+ 所得夹角亦不同。
+
 \end_layout
 
 \begin_layout Standard
-向量的夹角可由数量积的定义导出计算公式,
+向量的夹角可由数量积的定义
+\series bold
+导出
+\series default
+计算公式,
  即：
 
 \end_layout
@@ -21948,6 +22550,161 @@ scalar),
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+向量的坐标表示
+\end_layout
+
+\begin_layout Standard
+在二维平面上，
+向量通常表示为从原点 
+\begin_inset Formula $O(0,0)$
+\end_inset
+
+ 到某一点
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ 的有向线段。
+这个向量的坐标表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v=(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里，
+
+\begin_inset Formula $x$
+\end_inset
+
+和 
+\begin_inset Formula $y$
+\end_inset
+
+ 分别表示向量在
+\begin_inset Formula $x$
+\end_inset
+
+ 轴和 
+\begin_inset Formula $y$
+\end_inset
+
+ 轴方向上的分量。
+
+\end_layout
+
+\begin_layout Standard
+在三维空间中，
+向量的坐标表示类似于二维情况，
+只是多了一个 
+\begin_inset Formula $z$
+\end_inset
+
+轴分量。
+三维向量通常表示为从原点 
+\begin_inset Formula $O(0,0,0)$
+\end_inset
+
+ 到某一点
+\begin_inset Formula $P(x,y,z)$
+\end_inset
+
+ 的有向线段。
+这个向量的坐标表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v=(x,y,z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里，
+
+\begin_inset Formula $x$
+\end_inset
+
+、
+\begin_inset Formula $y$
+\end_inset
+
+ 和 
+\begin_inset Formula $z$
+\end_inset
+
+ 分别表示向量在
+\begin_inset Formula $x$
+\end_inset
+
+ 轴、
+\begin_inset Formula $y$
+\end_inset
+
+ 轴和 
+\begin_inset Formula $z$
+\end_inset
+
+ 轴方向上的分量。
+
+\end_layout
+
+\begin_layout Standard
+向量的模（或长度） 可以通过各个分量的平方和开平方得到。
+
+\end_layout
+
+\begin_layout Standard
+在二维：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\vec{v}|=\sqrt{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在三维：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\vec{v}|=\sqrt{x^{2}+y^{2}+z^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+向量运算
 \end_layout
 
 \begin_layout Subsection
@@ -22097,7 +22854,7 @@ scalar),
  
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 向量的加法符合下列运算规律:
 \end_layout
 
@@ -22176,11 +22933,15 @@ scalar),
 \end_layout
 
 \begin_layout Subsection
-向量数乘
+向量乘法
+\end_layout
+
+\begin_layout Subsubsection
+向量数乘（标量乘法）
 \end_layout
 
 \begin_layout Standard
-一般地,我们规定实数
+实数（标量）
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -22188,7 +22949,11 @@ scalar),
 \begin_inset Formula $\overrightarrow{a}$
 \end_inset
 
-的积是一个向量,这种运算叫做向量的数乘(multiplication of vectory by scalar).
+的积是一个向量,这种运算叫做向量的
+\series bold
+数乘
+\series default
+(multiplication of vectory by scalar).
  记作
 \begin_inset Formula $\lambda\overrightarrow{a}$
 \end_inset
@@ -22197,7 +22962,7 @@ scalar),
  它的模
 \begin_inset Formula 
 \[
-|\lambda\overrightarrow{a}|=|\lambda|\ |\overrightarrow{a}|
+|\lambda\overrightarrow{a}|=|\lambda||\overrightarrow{a}|
 \]
 
 \end_inset
@@ -22237,16 +23002,21 @@ scalar),
 
 时,
  
-\begin_inset Formula $|\lambda\boldsymbol{a}|=0$
+\begin_inset Formula $|\lambda\vec{\boldsymbol{a}}|=0$
 \end_inset
 
 ,
  即
-\begin_inset Formula $\lambda\boldsymbol{a}$
+\begin_inset Formula $\lambda\vec{a}$
 \end_inset
 
-为零向量,
- 这吋它的方向可以是任意的.
+为零向量
+\begin_inset Formula $\vec{0}$
+\end_inset
+
+,
+ 这吋它的方向可以是任意的。
+
 \end_layout
 
 \begin_layout Standard
@@ -22257,11 +23027,12 @@ scalar),
 
 吋，
 有
-\begin_inset Formula 
-\[
-1\boldsymbol{a}=\boldsymbol{a},(-1)a=-a
-\]
+\begin_inset Formula $1\vec{a}=\vec{a}$
+\end_inset
 
+，
+
+\begin_inset Formula $(-1)\vec{a}=-\vec{a}$
 \end_inset
 
 
@@ -22295,180 +23066,36 @@ scalar),
 
 \end_layout
 
-\begin_layout Paragraph
-
-\series bold
-平面向量基本定理
-\end_layout
-
-\begin_layout Standard
-如果
-\begin_inset Formula $\overrightarrow{e_{1}}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{e_{2}}$
-\end_inset
-
-是同一平面内的两个不共线向量,
- 那么对于这一平面内的任意向量
-\begin_inset Formula $\overrightarrow{a}$
-\end_inset
-
-,
- 有且只有一对实数
-\begin_inset Formula $\lambda_{1}$
-\end_inset
-
-,
-\begin_inset Formula $\lambda_{2}$
-\end_inset
-
-,使:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-我们把不共线的向量
-\begin_inset Formula $e_{1}$
-\end_inset
-
-,
-\begin_inset Formula $e_{2}$
-\end_inset
-
-叫做表示这一平面内所有向量的一组基底(base).
-\end_layout
-
-\begin_layout Standard
-不共线向量有不同方向,它们的位置关系可用夹角来表示.
-\end_layout
-
-\begin_layout Standard
-已知两个非零向量
-\begin_inset Formula $a$
-\end_inset
-
-和
-\begin_inset Formula $b$
-\end_inset
-
-,
- 作
-\begin_inset Formula $OA=a$
-\end_inset
-
-,
-\begin_inset Formula $OB=b$
-\end_inset
-
-,
- 则
-\begin_inset Formula $\angle AOB=\theta(0°\leqslant\theta\leqslant180°)$
-\end_inset
-
-叫做向量a与b的
-\series bold
-夹角
-\series default
-,
- 
-\end_layout
-
-\begin_layout Standard
-当
-\begin_inset Formula $\theta=90°$
-\end_inset
-
-时,
-\begin_inset Formula $a$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-同向;当
-\begin_inset Formula $180°$
-\end_inset
-
-时,
-\begin_inset Formula $a$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-反向,
- 
-\end_layout
-
-\begin_layout Standard
-如果
-\begin_inset Formula $a$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-的夹角是 
-\begin_inset Formula $90°$
-\end_inset
-
-,则
-\begin_inset Formula $a$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-垂直,记作
-\begin_inset Formula $a\bot b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Theorem
-设向量
-\begin_inset Formula $\boldsymbol{a}\neq0$
-\end_inset
-
-,则向量平行于
-\begin_inset Formula $a$
-\end_inset
-
-的充分必要条件是:
- 存在唯一的实数
-\begin_inset Formula $\lambda$
-\end_inset
-
- ,使 
-\begin_inset Formula $b=\lambda a$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-向量乘法
-\end_layout
-
 \begin_layout Subsubsection
 数量积
+\end_layout
+
+\begin_layout Standard
+数量积也叫点积，
+它是向量与向量的乘积，
+其结果为一个标量（非向量）。
+几何上，
+数量积可以定义如下：
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+、 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ 为两个任意向量，
+它们的夹角为 
+\begin_inset Formula $\theta$
+\end_inset
+
+，
+则他们的数量积为：
+ 
 \end_layout
 
 \begin_layout Standard
@@ -22487,13 +23114,17 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \begin_inset Formula $\vec{a}$
 \end_inset
 
- 向量方向上的投影长度(同方向为正反方向为负号),
- 与 
+ 向量方向上的投影长度(同方向为正反方向为负号)，
+再与
 \begin_inset Formula $\vec{a}$
 \end_inset
 
- 向量长度的乘积.
-  数量积被广泛应用于物理中,
+ 向量长度的乘积。
+
+\end_layout
+
+\begin_layout Standard
+数量积被广泛应用于物理中,
  如做功就是用力的向量乘位移的向量,
  即 
 \begin_inset Formula $W=\vec{F}\cdot\vec{s}$
@@ -22508,7 +23139,49 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \begin_inset Formula $0$
 \end_inset
 
-.
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/向量数量积.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -22546,6 +23219,26 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \end_layout
 
 \begin_layout Standard
+向量积也叫叉积、外积，
+是向量与向量的乘积，
+不过需要注意的是，
+它的
+\series bold
+结果是个向量
+\series default
+。
+它的几何意义是所得的向量与被乘向量所在平面垂直，
+方向由右手定则规定，
+大小是两个被乘向量张成的
+\series bold
+平行四边形的面积
+\series default
+。
+所以向量积不满足交换律。
+
+\end_layout
+
+\begin_layout Standard
 给定不共线的空间向量
 \begin_inset Formula $\overrightarrow{a}$
 \end_inset
@@ -22557,7 +23250,7 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 ,
  他们的
 \series bold
-叉积(或外积)
+叉积
 \series default
 是满足下列条件的向量
 \begin_inset Formula $\overrightarrow{e}$
@@ -22602,7 +23295,23 @@ a=\lambda_{1}e_{1}+\lambda_{2}e_{2}
 \begin_inset Formula $\overrightarrow{e}$
 \end_inset
 
- 构成右手系
+ 构成
+\series bold
+右手系
+\series default
+，
+将右手的四指指向第一个向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+的方向，
+并向第二个向量 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+ 方向弯曲，
+伸出的拇指所指的方向即为叉积向量的方向。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -22665,7 +23374,8 @@ a叉b
 \begin_inset Formula $\boldsymbol{b}$
 \end_inset
 
-夹角.
+夹角。
+
 \end_layout
 
 \begin_layout Standard
@@ -22772,17 +23482,18 @@ a叉b
 乘法是加法的一种延伸,
  向量加法可以用平行四边行表示,
  同理,
- 向量叉积可以表示为向量加法的延伸.
- 比如
+ 向量叉积可以表示为向量加法的延伸。
+比如
 \begin_inset Formula $5\times2$
 \end_inset
 
-是5个2相加,
- 叉积自然也是向量在某个方向的一种延伸(矢量积定义):
+是5个2相加，
+叉积自然也是向量在某个方向的一种延伸(矢量积定义):
  平行四边形的面积.
- 但是面积永远为正,所以需要一个确定的方向,
- 就是平行四边形的法线方向,
- 因为它具有唯一性.
+ 但是面积永远为正,所以需要一个确定的方向，
+就是平行四边形的法线方向,
+ 因为它具有唯一性。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -22824,163 +23535,15 @@ a叉b
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Formula $(\overrightarrow{a}+\overrightarrow{b})\times c=c\overrightarrow{a}\times\overrightarrow{b}+\overrightarrow{a}\times c\overrightarrow{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 两个向量平行，
 那么它们叉乘为零向量
-\end_layout
-
-\begin_layout Paragraph
-坐标表示
-\end_layout
-
-\begin_layout Standard
-右手坐标系中,
- 基向量
-\series bold
-
-\begin_inset Formula ${\displaystyle \mathbf{i}},{\displaystyle \mathbf{j}},{\displaystyle \mathbf{k}}$
-\end_inset
-
-
-\series default
-满足以下等式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \begin{aligned}\mathbf{i}\times\mathbf{j} & =\mathbf{k}\\
-\mathbf{j}\times\mathbf{k} & =\mathbf{i}\\
-\mathbf{k}\times\mathbf{i} & =\mathbf{j}
-\end{aligned}
-}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-根据反交换律可以得出：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \begin{aligned}\mathbf{j\times i} & =-\mathbf{k}\\
-\mathbf{k\times j} & =-\mathbf{i}\\
-\mathbf{i\times k} & =-\mathbf{j}
-\end{aligned}
-}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-显然:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbf{i}\times\mathbf{i}={\displaystyle \mathbf{j}}\times{\displaystyle \mathbf{j}}={\displaystyle \mathbf{k}}\times{\displaystyle \mathbf{k}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbf{i}\times{\displaystyle \mathbf{j}}={\displaystyle \mathbf{k}},{\displaystyle \mathbf{j}}\times{\displaystyle \mathbf{k}}=\mathbf{i},{\displaystyle \mathbf{k}}\times\mathbf{i}={\displaystyle \mathbf{j}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-如果a,b,c,d 都是正实数,
- 规定,
-\begin_inset Formula $\left|\begin{array}{cc}
-a & b\\
-c & d
-\end{array}\right|=ad-bc$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-定义
-\begin_inset Formula $\overrightarrow{a}$
-\end_inset
-
-,
-\begin_inset Formula $\overrightarrow{b}$
-\end_inset
-
-为平行于基向量的三个正交元素之和:
-\begin_inset Formula 
-\[
-{\displaystyle \begin{aligned}\mathbf{a} & =a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k}\\
-\mathbf{b} & =b_{1}\mathbf{i}+b_{2}\mathbf{j}+b_{3}\mathbf{k}
-\end{aligned}
-}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\overrightarrow{a}\times\overrightarrow{b} & = & (a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\boldsymbol{k})\times(b_{1}\boldsymbol{i}+b_{2}\mathbf{j}+b_{3}\boldsymbol{k})\\
- & = & a_{1}b_{1}(\boldsymbol{i}\times\boldsymbol{i})+a_{1}b_{2}(\boldsymbol{i}\times\boldsymbol{j})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})\\
- &  & +a_{2}b_{1}(\boldsymbol{j}\times\boldsymbol{i})+a_{2}b_{2}(\boldsymbol{j}\times\boldsymbol{j})+a_{2}b_{3}(\boldsymbol{j}\times\boldsymbol{k})\\
- &  & +a_{3}b_{1}(\boldsymbol{k}\times\boldsymbol{i})+a_{3}b_{2}(\boldsymbol{k}\times\boldsymbol{j})+a_{3}b_{3}(\boldsymbol{k}\times\boldsymbol{k})\\
- & = & a_{1}b_{2}(\boldsymbol{i}\times\boldsymbol{j})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})+a_{2}b_{1}(\boldsymbol{j}\times\boldsymbol{i})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})\\
- &  & +a_{3}b_{1}(\boldsymbol{k}\times\boldsymbol{i})+a_{3}b_{2}(\boldsymbol{k}\times\boldsymbol{j})\\
- & = & (a_{2}b_{3}-a_{3}b_{2})\mathbf{i}+(a_{3}b_{1}-a_{1}b_{3})\mathbf{j}+(a_{1}b_{2}-a_{2}b_{1})\boldsymbol{k}\\
- & = & \left|\begin{array}{cc}
-a_{2} & a_{3}\\
-b_{2} & b_{3}
-\end{array}\right|\mathbf{i}+\left|\begin{array}{cc}
-a_{3} & a_{1}\\
-b_{3} & b_{1}
-\end{array}\right|\boldsymbol{k}+\left|\begin{array}{cc}
-a_{1} & a_{2}\\
-b_{1} & b_{2}
-\end{array}\right|\boldsymbol{b}\\
- & = & \left[\left|\begin{array}{cc}
-a_{2} & a_{3}\\
-b_{2} & b_{3}
-\end{array}\right|,\left|\begin{array}{cc}
-a_{3} & a_{1}\\
-b_{3} & b_{1}
-\end{array}\right|,\left|\begin{array}{cc}
-a_{1} & a_{2}\\
-b_{1} & b_{2}
-\end{array}\right|\right]\\
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\bullet(\overrightarrow{c}\times\overrightarrow{d})=\left|\begin{array}{cc}
-\boldsymbol{a}\bullet\boldsymbol{c} & \boldsymbol{b}\bullet\boldsymbol{c}\\
-\boldsymbol{a}\bullet\boldsymbol{d} & \boldsymbol{b}\bullet\boldsymbol{d}
-\end{array}\right|$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -23122,46 +23685,235 @@ V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
 
 \end_layout
 
+\begin_layout Standard
+物理意义为三向量始于同点时所构成的体积
+\end_layout
+
 \begin_layout Subsection
-平面向量运算的坐标表示
+
+\series bold
+平面向量基本定理
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $\overrightarrow{e_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{e_{2}}$
+\end_inset
+
+是同一平面内的两个不共线向量,
+ 那么对于这一平面内的任意向量
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+ 有且只有一对实数
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+,使：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{a}=\lambda_{1}\vec{e_{1}}+\lambda_{2}\vec{e_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们把不共线的向量
+\begin_inset Formula $\vec{e_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $\vec{e_{2}}$
+\end_inset
+
+叫做表示这一平面内所有向量的一组基底(base)。
+
+\end_layout
+
+\begin_layout Standard
+不共线向量有不同方向,它们的位置关系可用夹角来表示。
+
+\end_layout
+
+\begin_layout Standard
+已知两个非零向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+和
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+,
+ 作
+\begin_inset Formula $\vec{OA}=\vec{a}$
+\end_inset
+
+,
+\begin_inset Formula $\vec{OB}=\vec{b}$
+\end_inset
+
+,
+ 则
+\begin_inset Formula $\angle AOB=\theta(0°\leqslant\theta\leqslant180°)$
+\end_inset
+
+叫做向量
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+与
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+的
+\series bold
+夹角
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\theta=0°$
+\end_inset
+
+时，
+
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+与
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+同向，
+当
+\begin_inset Formula $180°$
+\end_inset
+
+时,
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+与
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+反向,
+ 如果
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+与
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+的夹角是 
+\begin_inset Formula $90°$
+\end_inset
+
+,则
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+与
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+垂直,记作
+\begin_inset Formula $a\bot b$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+设向量
+\begin_inset Formula $\vec{a}\neq0$
+\end_inset
+
+,则向量平行于
+\begin_inset Formula $a$
+\end_inset
+
+的充分必要条件是:
+ 存在唯一的实数
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ,使 
+\begin_inset Formula $\vec{b}=\lambda\vec{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+坐标表示
+\end_layout
+
+\begin_layout Subsubsection
+坐标系运算（加，
+减，
+数量积，
+标量乘法）
 \end_layout
 
 \begin_layout Standard
 设:
  
-\begin_inset Formula $a(a_{1},a_{2})$
+\begin_inset Formula $\vec{a}(a_{1},a_{2})$
 \end_inset
 
 ,
-\begin_inset Formula $b(b_{1},b_{2})$
+\begin_inset Formula $\vec{b}(b_{1},b_{2})$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $a+b=(a_{1}+b_{1},a_{2}+b_{2})$
+\begin_inset Formula $\vec{a}+\vec{b}=(a_{1}+b_{1},a_{2}+b_{2})$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $a-b=(a_{1}-b_{1},a_{2}-b_{2})$
+\begin_inset Formula $\vec{a}-\vec{b}=(a_{1}-b_{1},a_{2}-b_{2})$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $a*b=a_{1}*b_{1}+a_{2}*b_{2}$
+\begin_inset Formula $\vec{a}\cdot\vec{b}=a_{1}\cdot b_{1}+a_{2}\cdot b_{2}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\lambda a=\lambda a_{1}+\lambda a_{2}$
+\begin_inset Formula $\lambda\vec{a}=\lambda a_{1}+\lambda a_{2}$
 \end_inset
 
 
@@ -23174,6 +23926,201 @@ V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
 只需对向量的各个坐标分别进行相应的数量运算就行了.
 \end_layout
 
+\begin_layout Standard
+单位向量是模为 
+\begin_inset Formula $1$
+\end_inset
+
+ 的向量，
+通常用于表示方向。
+给定向量
+\begin_inset Formula $v=(x,y)$
+\end_inset
+
+，
+其单位向量表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{v}=\frac{\vec{v}}{|\vec{v}|}=(\frac{x}{|\vec{v}|},\frac{y}{|\vec{v}|})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在三维情况下，
+单位向量为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{v}=\frac{\vec{v}}{|\vec{v}|}=(\frac{x}{|\vec{v}|},\frac{y}{|\vec{v}|},\frac{z}{|\vec{v}|})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+右手坐标系中，
+基向量
+\series bold
+
+\begin_inset Formula ${\displaystyle \mathbf{i}},{\displaystyle \mathbf{j}},{\displaystyle \mathbf{k}}$
+\end_inset
+
+
+\series default
+满足以下等式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \begin{aligned}\mathbf{i}\times\mathbf{j} & =\mathbf{k}\\
+\mathbf{j}\times\mathbf{k} & =\mathbf{i}\\
+\mathbf{k}\times\mathbf{i} & =\mathbf{j}
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据反交换律可以得出：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \begin{aligned}\mathbf{j\times i} & =-\mathbf{k}\\
+\mathbf{k\times j} & =-\mathbf{i}\\
+\mathbf{i\times k} & =-\mathbf{j}
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+显然:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{i}\times\mathbf{i}={\displaystyle \mathbf{j}}\times{\displaystyle \mathbf{j}}={\displaystyle \mathbf{k}}\times{\displaystyle \mathbf{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{i}\times{\displaystyle \mathbf{j}}={\displaystyle \mathbf{k}},{\displaystyle \mathbf{j}}\times{\displaystyle \mathbf{k}}=\mathbf{i},{\displaystyle \mathbf{k}}\times\mathbf{i}={\displaystyle \mathbf{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果a,b,c,d 都是正实数,
+ 规定,
+\begin_inset Formula $\left|\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right|=ad-bc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+定义
+\begin_inset Formula $\overrightarrow{a}$
+\end_inset
+
+,
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+为平行于基向量的三个正交元素之和:
+\begin_inset Formula 
+\[
+{\displaystyle \begin{aligned}\mathbf{a} & =a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k}\\
+\mathbf{b} & =b_{1}\mathbf{i}+b_{2}\mathbf{j}+b_{3}\mathbf{k}
+\end{aligned}
+}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\overrightarrow{a}\times\overrightarrow{b} & = & (a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\boldsymbol{k})\times(b_{1}\boldsymbol{i}+b_{2}\mathbf{j}+b_{3}\boldsymbol{k})\\
+ & = & a_{1}b_{1}(\boldsymbol{i}\times\boldsymbol{i})+a_{1}b_{2}(\boldsymbol{i}\times\boldsymbol{j})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})\\
+ &  & +a_{2}b_{1}(\boldsymbol{j}\times\boldsymbol{i})+a_{2}b_{2}(\boldsymbol{j}\times\boldsymbol{j})+a_{2}b_{3}(\boldsymbol{j}\times\boldsymbol{k})\\
+ &  & +a_{3}b_{1}(\boldsymbol{k}\times\boldsymbol{i})+a_{3}b_{2}(\boldsymbol{k}\times\boldsymbol{j})+a_{3}b_{3}(\boldsymbol{k}\times\boldsymbol{k})\\
+ & = & a_{1}b_{2}(\boldsymbol{i}\times\boldsymbol{j})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})+a_{2}b_{1}(\boldsymbol{j}\times\boldsymbol{i})+a_{1}b_{3}(\boldsymbol{i}\times\boldsymbol{k})\\
+ &  & +a_{3}b_{1}(\boldsymbol{k}\times\boldsymbol{i})+a_{3}b_{2}(\boldsymbol{k}\times\boldsymbol{j})\\
+ & = & (a_{2}b_{3}-a_{3}b_{2})\mathbf{i}+(a_{3}b_{1}-a_{1}b_{3})\mathbf{j}+(a_{1}b_{2}-a_{2}b_{1})\boldsymbol{k}\\
+ & = & \left|\begin{array}{cc}
+a_{2} & a_{3}\\
+b_{2} & b_{3}
+\end{array}\right|\mathbf{i}+\left|\begin{array}{cc}
+a_{3} & a_{1}\\
+b_{3} & b_{1}
+\end{array}\right|\boldsymbol{k}+\left|\begin{array}{cc}
+a_{1} & a_{2}\\
+b_{1} & b_{2}
+\end{array}\right|\boldsymbol{b}\\
+ & = & \left[\left|\begin{array}{cc}
+a_{2} & a_{3}\\
+b_{2} & b_{3}
+\end{array}\right|,\left|\begin{array}{cc}
+a_{3} & a_{1}\\
+b_{3} & b_{1}
+\end{array}\right|,\left|\begin{array}{cc}
+a_{1} & a_{2}\\
+b_{1} & b_{2}
+\end{array}\right|\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\overrightarrow{a}\times\overrightarrow{b})\bullet(\overrightarrow{c}\times\overrightarrow{d})=\left|\begin{array}{cc}
+\boldsymbol{a}\bullet\boldsymbol{c} & \boldsymbol{b}\bullet\boldsymbol{c}\\
+\boldsymbol{a}\bullet\boldsymbol{d} & \boldsymbol{b}\bullet\boldsymbol{d}
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 空间向量
 \end_layout
@@ -23183,7 +24130,8 @@ V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
 \series bold
 空间向量
 \series default
-(space vector),向量的大小叫做向量的长度或模(modulus).
+(space vector)，
+向量的大小叫做向量的长度或模(modulus).
  与平面向量一样,空间向量也用有向线段表示,有向线段的长度表示向量的模 向量
 \begin_inset Formula $\overrightarrow{a}$
 \end_inset
@@ -23301,7 +24249,7 @@ V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p=xa+yb+zc
+\vec{p}=x\vec{a}+y\vec{b}+z\vec{c}
 \]
 
 \end_inset
@@ -23328,7 +24276,7 @@ p=xa+yb+zc
 \begin_inset Formula $\overrightarrow{OM}=r$
 \end_inset
 
-.
+。
  以
 \begin_inset Formula $O$
 \end_inset
@@ -23421,7 +24369,8 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \begin_layout Standard
 对向量进行加，
 减及与数相乘，
-只需对向量的各个坐标分别进行相应的数量运算就行了.
+只需对向量的各个坐标分别进行相应的数量运算就行了。
+
 \end_layout
 
 \begin_layout Subsection
@@ -23540,7 +24489,8 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \begin_inset Formula $\boldsymbol{r}$
 \end_inset
 
-的方向余弦.
+的方向余弦。
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -23695,11 +24645,23 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_layout
 
 \begin_layout Standard
-在空间中,我们取一定点O作为基点,那么空间中任意一点P的位置就 可以用向量来表示,我们把向量 
+在空间中,我们取一定点
+\begin_inset Formula $O$
+\end_inset
+
+作为基点,那么空间中任意一点
+\begin_inset Formula $P$
+\end_inset
+
+的位置就 可以用向量来表示,我们把向量
 \begin_inset Formula $\overrightarrow{OP}$
 \end_inset
 
-称为点P的位置向量.
+称为点
+\begin_inset Formula $P$
+\end_inset
+
+的位置向量.
  
 \end_layout
 
@@ -23709,31 +24671,31 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \begin_inset Formula $l$
 \end_inset
 
-的位置可以由
+ 的位置可以由
 \begin_inset Formula $l$
 \end_inset
 
-上一个定点
+ 上一个定点
 \begin_inset Formula $A$
 \end_inset
 
-以及一个定方向来确定.
- 其中如果,
+ 以及一个定方向来确定。
+其中如果,
  
-\begin_inset Formula $a$
+\begin_inset Formula $\vec{a}$
 \end_inset
 
-表示直线
+表示直线 
 \begin_inset Formula $l$
 \end_inset
 
-的方向向量,
+ 的方向向量,
  在直线
 \begin_inset Formula $l$
 \end_inset
 
-上 取 
-\begin_inset Formula $AB=a$
+上取 
+\begin_inset Formula $\vec{AB}=\vec{a}$
 \end_inset
 
 ,那么对于直线
@@ -23753,8 +24715,12 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_layout
 
 \begin_layout Standard
-这样,点A和向量
-\begin_inset Formula $a$
+这样,点
+\begin_inset Formula $A$
+\end_inset
+
+和向量
+\begin_inset Formula $\vec{a}$
 \end_inset
 
 不仅可以确定直线
@@ -23790,11 +24756,23 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 法向量
 \series default
 (normal vectors).
- 给定一点A和一个向量
+ 给定一点
+\begin_inset Formula $A$
+\end_inset
+
+和一个向量
 \begin_inset Formula $\boldsymbol{a}$
 \end_inset
 
-,那么,过点A,以向量a为法向量的平面是完全确定的.
+,那么,过点
+\begin_inset Formula $A$
+\end_inset
+
+,以向量
+\begin_inset Formula $a$
+\end_inset
+
+为法向量的平面是完全确定的.
 \end_layout
 
 \begin_layout Standard
@@ -23858,24 +24836,23 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \begin_layout Standard
 通过定直线的所有平面的全体称为
 \series bold
-平面竖
+平面束
 \series default
-.方程叫做
+，
+方程叫做
 \series bold
-平面束的方程
-\series default
-.
+平面束的方程。
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 
 \series bold
-定理:
- 一个平面内的两条相交直线与另一个平面平行,则这两个平面平行.
+一个平面内的两条相交直线与另一个平面平行,则这两个平面平行.
 \end_layout
 
-\begin_layout Standard
-已知直线
+\begin_layout Proposition
+已知直线 
 \begin_inset Formula $l$
 \end_inset
 
@@ -23894,10 +24871,22 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 
 ,
  其中
-\begin_inset Formula $l,m\subset a$
+\begin_inset Formula $l,m\subset\alpha$
 \end_inset
 
-(l,m 在a 上 ) ,
+(
+\begin_inset Formula $l$
+\end_inset
+
+,
+\begin_inset Formula $m$
+\end_inset
+
+ 在
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 上 ) ,
 \begin_inset Formula $l$
 \end_inset
 
@@ -23922,12 +24911,24 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 
 \end_layout
 
-\begin_layout Standard
-证明:
-\end_layout
+\begin_layout Proof
+设相交直线
+\begin_inset Formula $l$
+\end_inset
 
-\begin_layout Standard
-设相交直线l,m的方向向量分别为a,b,平面
+,
+\begin_inset Formula $m$
+\end_inset
+
+的方向向量分别为
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+,
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+,平面
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -23936,17 +24937,18 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_inset
 
 的法向量分别为
-\begin_inset Formula $u$
+\begin_inset Formula $\vec{u}$
 \end_inset
 
 ,
-\begin_inset Formula $v$
+\begin_inset Formula $\vec{v}$
 \end_inset
 
+。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 因为 
 \begin_inset Formula $l//\beta\sslash$
 \end_inset
@@ -23978,30 +24980,71 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \begin_inset Formula $b\bot v$
 \end_inset
 
+，
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 所以
-\begin_inset Formula $a*v=0$
+\begin_inset Formula $\vec{a}\cdot\vec{v}=0$
 \end_inset
 
 ,
  
-\begin_inset Formula $b*v=0$
+\begin_inset Formula $\vec{b}\cdot\vec{v}=0$
 \end_inset
 
-.
- 
+。
+
 \end_layout
 
-\begin_layout Standard
-因为,
+\begin_layout Proof
+因为，
  
-\begin_inset Formula $l,m\subset a$
+\begin_inset Formula $l,m\subset\alpha$
 \end_inset
 
-(l,m 在a 上 ) 且
+(
+\begin_inset Formula $l$
+\end_inset
+
+,
+\begin_inset Formula $m$
+\end_inset
+
+ 在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 上 ) 且
 \begin_inset Formula $l$
 \end_inset
 
@@ -24014,26 +25057,26 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_inset
 
 内任一直线的方向向量
-\begin_inset Formula $p$
+\begin_inset Formula $\vec{p}$
 \end_inset
 
 可以表示为如下形式
 \begin_inset Formula 
 \[
-p=xa+yb,x,y\in R
+\vec{p}=x\vec{a}+y\vec{b},x,y\in R
 \]
 
 \end_inset
 
- 因为 
+所以
 \begin_inset Formula 
 \[
-p*v=(xa+xb)*v=xa*v+yb*v
+\vec{p}\cdot\vec{v}=(x\vec{a}+x\vec{b})\cdot\vec{v}=x\vec{a}\cdot\vec{v}+y\vec{b}\cdot\vec{v}
 \]
 
 \end_inset
 
-,即平面的法线与平面内任一直线垂直.
+即平面的法线与平面内任一直线垂直.
   所以平面
 \begin_inset Formula $\alpha$
 \end_inset
@@ -24057,7 +25100,8 @@ p*v=(xa+xb)*v=xa*v+yb*v
 
 \begin_layout Standard
 在实际工作中可以把普通问题,
- 转换成向量问题再计算.
+ 转换成向量问题再计算。
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -24074,37 +25118,29 @@ p*v=(xa+xb)*v=xa*v+yb*v
 \end_inset
 
 上的任一点,
- 则向量
-\begin_inset Formula $\overrightarrow{M_{0}M}$
+ 向量
+\begin_inset Formula $\overrightarrow{M_{0}M}=(x-x_{0},y-y_{0},z-z_{0})$
 \end_inset
 
-必与平面
+与平面
 \begin_inset Formula $S$
 \end_inset
 
 的法线向量
-\begin_inset Formula $n$
+\begin_inset Formula $\vec{n}=(A,B,C)$
 \end_inset
 
 垂直.
  即它们的数量积等于零 
-\begin_inset Formula $n\cdot\overrightarrow{M_{0}M}=0$
+\begin_inset Formula $\vec{n}\cdot\overrightarrow{M_{0}M}=0$
 \end_inset
 
-.
+。
+
 \end_layout
 
 \begin_layout Standard
-设法向量
-\begin_inset Formula $\boldsymbol{n}=(A,B,C)$
-\end_inset
-
-,向量
-\begin_inset Formula $\overrightarrow{M_{0}M}=(x-x_{0},y-y_{0},z-z_{0})$
-\end_inset
-
-,
- 所以有 
+所以有
 \begin_inset Formula 
 \[
 A(x-x_{0})+B(y-y_{0})+C(z-z_{0})=0
@@ -24136,18 +25172,25 @@ A(x-x_{0})+B(y-y_{0})+C(z-z_{0})=0
 \begin_inset Formula $z$
 \end_inset
 
-所满足的方程.
+所满足的方程（点组成面）。
+
 \end_layout
 
 \begin_layout Standard
 有这个方程确定了平面上的点,
  所以方程叫做
 \series bold
-平面的点法式方程.
+平面的点法式方程。
+
 \end_layout
 
 \begin_layout Subsubsection
 平面的一般方程
+\end_layout
+
+\begin_layout Standard
+点法式方程可以进一步展开并转换为平面的一般方程形式。
+
 \end_layout
 
 \begin_layout Standard
@@ -24189,12 +25232,16 @@ A(x-x_{0})+B(y-y_{0})+C(z-z_{0})=0
 \end_inset
 
 把它和平面的点法式方程作比较,
- 可以知道方程(12.3.1)是通过点
+ 可以知道方程是
+\series bold
+通过点
+\series default
+
 \begin_inset Formula $M_{0}(x_{0},y_{0},z_{0})$
 \end_inset
 
 且以
-\begin_inset Formula $n=(A,B,C)$
+\begin_inset Formula $\vec{n}=(A,B,C)$
 \end_inset
 
 为法线向量的平面方程.
@@ -24210,6 +25257,15 @@ Ax+By+Cz+D=0
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $D=−(Ax_{0}+By_{0}+C_{0})$
+\end_inset
+
+。
 的图形总是一个平面,
  称为平面的一般方程,其中
 \begin_inset Formula $x$
@@ -60780,15 +61836,20 @@ Q=\left[\begin{array}{cc}
 \end_layout
 
 \begin_layout Standard
-最少需要多少人，当中
+最少需要多少人，
+当中
 \series bold
 两人
 \series default
-同一天生日的概率才会过半？答案是23人。
+同一天生日的概率才会过半？
+答案是23人。
+
 \end_layout
 
 \begin_layout Standard
-可想像一间有23人进入的房间，这23人依次进入，每个进入的人的生日都与房里其他人的生日不同的概率依次是1、 
+可想像一间有23人进入的房间，
+这23人依次进入，
+每个进入的人的生日都与房里其他人的生日不同的概率依次是1、 
 \begin_inset Formula ${\textstyle \frac{364}{365}}$
 \end_inset
 
@@ -60804,7 +61865,9 @@ Q=\left[\begin{array}{cc}
 \begin_inset Formula $\frac{361}{365}$
 \end_inset
 
-等。先入房的人的生日皆不同的概率很高，前五个
+等。
+先入房的人的生日皆不同的概率很高，
+前五个
 \family roman
 \series medium
 \shape up
@@ -60834,7 +61897,9 @@ Q=\left[\begin{array}{cc}
 \begin_inset Formula $1×{\textstyle \frac{364}{365}}×{\textstyle \frac{363}{365}}×{\textstyle \frac{362}{365}}×{\textstyle \frac{361}{365}}=97.3$
 \end_inset
 
-；而最后入房的几人就完全不同，他们入房且找不到同生日者的概率是 
+；
+而最后入房的几人就完全不同，
+他们入房且找不到同生日者的概率是 
 \begin_inset Formula ${\textstyle \frac{345}{365}}$
 \end_inset
 
@@ -60846,11 +61911,13 @@ Q=\left[\begin{array}{cc}
 \begin_inset Formula ${\textstyle \frac{343}{365}}$
 \end_inset
 
-。23人都不在同一天的概率
+。
+23人都不在同一天的概率
 \begin_inset Formula $\frac{365!-342!}{365^{23}}=0.4927$
 \end_inset
 
-，则至少有两人在同一天的概率
+，
+则至少有两人在同一天的概率
 \begin_inset Formula $1-0.4927>0.5$
 \end_inset
 
@@ -60874,7 +61941,9 @@ let r = 1;
 
 \begin_layout Plain Layout
 
-for (let i = 365; i > 342; i--) {
+for (let i = 365;
+ i > 342;
+ i--) {
 \end_layout
 
 \begin_layout Plain Layout
@@ -60884,7 +61953,8 @@ for (let i = 365; i > 342; i--) {
 
 \begin_layout Plain Layout
 
-    console.log(k++, i,i / 365);
+    console.log(k++,
+ i,i / 365);
 \end_layout
 
 \begin_layout Plain Layout
@@ -60903,11 +61973,15 @@ console.log(r)
 \end_layout
 
 \begin_layout Standard
-这个问题需要注意的是两人同一天的概率，只需要两人即可。
+这个问题需要注意的是两人同一天的概率，
+只需要两人即可。
+
 \end_layout
 
 \begin_layout Standard
-生日问题普遍的应用于检测哈希函数：N-位长度的哈希表可能发生碰撞测试次数不是2N次而是只有2N/2次，这结论用在破解密码学散列函数的生日攻击中。
+生日问题普遍的应用于检测哈希函数：
+N-位长度的哈希表可能发生碰撞测试次数不是2N次而是只有2N/2次，
+这结论用在破解密码学散列函数的生日攻击中。
  
 \end_layout
 
@@ -60916,15 +61990,19 @@ console.log(r)
 \end_layout
 
 \begin_layout Standard
-此攻击是对固定的重新排列模式作随机尝试攻击，仰赖较高的命中率（鸽笼原理）。生日攻击可在
+此攻击是对固定的重新排列模式作随机尝试攻击，
+仰赖较高的命中率（鸽笼原理）。
+生日攻击可在
 \begin_inset Formula ${\textstyle \sqrt{2^{n}}=2^{n/2}}$
 \end_inset
 
-等级的时间内找到散列碰撞，低于原像攻击的 
+等级的时间内找到散列碰撞，
+低于原像攻击的 
 \begin_inset Formula $2^{n}$
 \end_inset
 
 。
+
 \end_layout
 
 \begin_layout Standard
@@ -60932,15 +62010,21 @@ console.log(r)
 \begin_inset Formula $n=30$
 \end_inset
 
-）每个人的生日在哪一天（为简便，此处省略闰年）以确定是否有两个学生同一天生日（对应碰撞 ）。
+）每个人的生日在哪一天（为简便，
+此处省略闰年）以确定是否有两个学生同一天生日（对应碰撞 ）。
+
 \end_layout
 
 \begin_layout Standard
-从直觉角度考虑，概率看起来很小。若老师选择特定日期（例如9月16日），则至少有一名学生在那天出生的概率是
+从直觉角度考虑，
+概率看起来很小。
+若老师选择特定日期（例如9月16日），
+则至少有一名学生在那天出生的概率是
 \begin_inset Formula ${\displaystyle 1-(364/365)^{30}}$
 \end_inset
 
-，约为
+，
+约为
 \begin_inset Formula $7.9\%$
 \end_inset
 
@@ -60948,15 +62032,20 @@ console.log(r)
 \begin_inset Formula $364/365$
 \end_inset
 
-学生都不出生在那天的概率)。但是，与直觉相反的是，至少一名学生和另外任意一名学生有着相同生日的概率大约为70.63%（
+学生都不出生在那天的概率)。
+但是，
+与直觉相反的是，
+至少一名学生和另外任意一名学生有着相同生日的概率大约为70.63%（
 \begin_inset Formula $n=30$
 \end_inset
 
-时），从方程
+时），
+从方程
 \begin_inset Formula $1-(\frac{365}{365}×{\textstyle \frac{365-1}{365}}×{\textstyle \frac{365-2}{365}}\times\cdots\times{\textstyle \frac{365-n}{365}})=1-(\frac{365\times(365-1)\times\cdots\times(365-(n-1))}{365^{n}})=\frac{365\times(365-1)\times\cdots\times(365-(n+1))\times(365-n)!}{(365-n)!\times365^{n}}={\displaystyle 1-\frac{365!}{(365-n)!\cdot365^{n}}}$
 \end_inset
 
 中可看出。
+
 \end_layout
 
 \begin_layout Section
@@ -61076,7 +62165,9 @@ literal "false"
 \uwave off
 \noun off
 \color none
-不在这一天出生的概率(这种方式可以简化计算，一个孩子=都在这一天+都不在这一天+一个在一个不在), 
+不在这一天出生的概率(这种方式可以简化计算，
+一个孩子=都在这一天+都不在这一天+一个在一个不在),
+ 
 \begin_inset Formula $1-(1−\frac{1}{2}\times\frac{1}{7})^{2}$
 \end_inset
 
@@ -61274,10 +62365,11 @@ Determinant
 \begin_inset Formula $n$
 \end_inset
 
-组成的一个有序
+
 \series bold
-序列
+按照一定顺序
 \series default
+重新排列，
 叫做
 \begin_inset Formula $n$
 \end_inset
@@ -61287,14 +62379,19 @@ Determinant
 \begin_inset Formula $n(n-1)\cdots3\times2\times1=n!$
 \end_inset
 
-种
+种。
+
 \end_layout
 
 \begin_layout Standard
 逆序：
 对于排列，
 大的数在小的数的前面，
-一共有多少个逆序叫做逆序数。
+一共有多少个逆序叫做
+\series bold
+逆序数
+\series default
+。
 
 \end_layout
 
@@ -61319,10 +62416,12 @@ Determinant
 
 同理，
 一共有
-\begin_inset Formula $4$
+\begin_inset Formula $5$
 \end_inset
 
-个逆序数
+个
+\series bold
+逆序数
 \end_layout
 
 \begin_layout Standard
@@ -61338,7 +62437,23 @@ Determinant
 偶排列
 \series default
 。
+例如 
+\begin_inset Formula $4,2,3,1$
+\end_inset
 
+ ，
+一共有
+\begin_inset Formula $5$
+\end_inset
+
+个
+\series bold
+逆序数
+\series default
+—
+–
+\series bold
+奇排列
 \end_layout
 
 \begin_layout Standard
@@ -61437,8 +62552,8 @@ a_{21}x_{1}+a_{22}x_{2} & =b_{2}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-(a_{11}a_{22}-a_{12}a_{21})x_{1}=b_{1}a_{22}-a_{12}b_{2}\\
-(a_{11}a_{22}-a_{12}a_{21})x_{2}=a_{11}b_{2}-b_{1}a_{21}
+(a_{11}a_{22}-a_{12}a_{21})x_{1}= & b_{1}a_{22}-a_{12}b_{2}\\
+(a_{11}a_{22}-a_{12}a_{21})x_{2}= & a_{11}b_{2}-b_{1}a_{21}
 \end{align*}
 
 \end_inset
@@ -61459,8 +62574,8 @@ a_{21}x_{1}+a_{22}x_{2} & =b_{2}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-x_{1}=\frac{b_{1}a_{22}-a_{12}b_{2}}{a_{11}a_{22}-a_{12}a_{21}}\\
-x_{2}=\frac{a_{11}b_{2}-b_{1}a_{21}}{a_{11}a_{22}-a_{12}a_{21}}
+x_{1}= & \frac{b_{1}a_{22}-a_{12}b_{2}}{a_{11}a_{22}-a_{12}a_{21}}\\
+x_{2}= & \frac{a_{11}b_{2}-b_{1}a_{21}}{a_{11}a_{22}-a_{12}a_{21}}
 \end{align*}
 
 \end_inset
@@ -61918,7 +63033,8 @@ n阶行列式
 \end_layout
 
 \begin_layout Definition
-n阶行列式等于所有取自不同行不同列（行标按标准排列 ，
+n阶行列式等于所有取自不同行不同列（行标按标准排列，
+无逆序数 ，
 列按全排列）的n个元素的乘积的代数和，
 逆序数为偶数时带正号，
 逆序数为奇数时带负号，
@@ -61935,7 +63051,7 @@ n阶行列式等于所有取自不同行不同列（行标按标准排列 ，
 a_{21} & a_{22} & \dots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix}=\underset{j_{1}j_{2}\cdots j_{n}}{\sum}(-1)^{inv(j_{1}j_{2}\cdots j_{n})}a_{1}j_{1}a_{2}j_{2}\cdots a_{n}j_{n}=\left|a_{ij}\right|$
+\end{vmatrix}=\underset{j_{1}j_{2}\cdots j_{n}}{\sum}(-1)^{inv(j_{1}j_{2}\cdots j_{n})}a_{1j_{1}}a_{2j_{2}}\cdots a_{nj_{n}}=\left|a_{ij}\right|$
 \end_inset
 
 
@@ -61951,7 +63067,15 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \begin_inset Formula $(j_{1}J_{2}\cdots j_{n})$
 \end_inset
 
-的逆序数
+的逆序数,
+\begin_inset Formula $j_{1}j_{2}\cdots j_{n}$
+\end_inset
+
+ 表示
+\begin_inset Formula $1,2,\cdots,n$
+\end_inset
+
+的全排列
 \end_layout
 
 \begin_layout Definition
@@ -61959,6 +63083,20 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \begin_inset Formula $\left|a_{11}\right|=a_{11}$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Definition
+根据这个公式可以方便求解，
+对于行，
+始终都是 
+\begin_inset Formula $1,2,3,\cdots,n$
+\end_inset
+
+，
+对于列取，
+全排列，
+然后按奇偶性添加符号。
 
 \end_layout
 
@@ -61980,17 +63118,577 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 
 \end_layout
 
-\begin_layout Standard
-根据这个公式可以方便求解，
-对于行，
-始终都是 
-\begin_inset Formula $1,2,3,\cdots,n$
+\begin_layout Remark
+\begin_inset Formula ${\displaystyle \det(A)=\sum_{\sigma\in S_{n}}sgn(\sigma)\prod_{i=1}^{n}a_{i,\sigma(i)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+其中，
+ 
+\begin_inset Formula ${\displaystyle S_{n}}$
+\end_inset
+
+是集合 
+\begin_inset Formula ${\displaystyle \left\{ 1,2,...,n\right\} }$
+\end_inset
+
+上置换的全体，
+即集合 
+\begin_inset Formula ${\displaystyle \left\{ 1,2,...,n\right\} }$
+\end_inset
+
+到自身上的一一映射（双射）的全体；
+ 
+\begin_inset Formula ${\displaystyle S_{n}}$
+\end_inset
+
+ 是 
+\begin_inset Formula $n$
+\end_inset
+
+ 个元素的所有排列的集合。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $σ$
+\end_inset
+
+ 是
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\displaystyle S_{n}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+中的一个排列。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $sgn(\sigma)$
+\end_inset
+
+是排列 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 的符号，
+即排列中逆序对的个数的奇偶性决定了符号的正负。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $a_{i,\sigma(i)}$
+\end_inset
+
+ 是矩阵中的元素。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula ${\displaystyle \prod}$
+\end_inset
+
+积算符号，
+通常用于表示一系列数或表达式的乘积。
+类似于求和符号“
+\begin_inset Formula $∑$
+\end_inset
+
+”，
+但用于乘法。
+
+\begin_inset Formula $\prod_{i=1}^{n}a_{i}$
+\end_inset
+
+ 表示从
+\begin_inset Formula $i=1$
+\end_inset
+
+ 到
+\begin_inset Formula $i=n$
+\end_inset
+
+ 的所有 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+的乘积。
+
+\end_layout
+
+\begin_layout Remark
+注意到对于任意正整数 
+\begin_inset Formula ${\displaystyle n}$
 \end_inset
 
 ，
-对于列取，
-全排列，
-然后按奇偶性添加符号。
+
+\begin_inset Formula ${\displaystyle S_{n}}$
+\end_inset
+
+共拥有
+\begin_inset Formula $n!$
+\end_inset
+
+个元素，
+因此上式中共有 
+\begin_inset Formula ${\displaystyle n!}$
+\end_inset
+
+个求和项，
+即这是一个有限多次的求和。
+ 
+\end_layout
+
+\begin_layout Remark
+对于简单的2阶和3阶的矩阵，
+行列式的表达式相对简单，
+而且恰好是每条主对角线（左上至右下）元素乘积之和减去每条副对角线（右上至左下）元素乘积之和。
+
+\end_layout
+
+\begin_layout Remark
+对于阶数 
+\begin_inset Formula $n\geq4$
+\end_inset
+
+的方阵
+\begin_inset Formula $A$
+\end_inset
+
+，
+这样的主对角线和副对角线分别只有
+\begin_inset Formula $n$
+\end_inset
+
+ 条，
+由于 
+\begin_inset Formula $A$
+\end_inset
+
+ 的主、副对角线总条数
+\begin_inset Formula $=2n<\left(n-1\right)n<n!=S_{n}$
+\end_inset
+
+的元素个数。
+因此，
+行列式的相加项中除了这样的对角线乘积之外，
+还有其他更多的项。
+例如4阶行列式中，
+项 
+\begin_inset Formula $a_{1,2}a_{2,3}a_{3,1}a_{4,4}$
+\end_inset
+
+就不是任何对角线的元素乘积。
+
+\end_layout
+
+\begin_layout Remark
+不过，
+和2、3阶行列式情况相同的是，
+n阶行列式中的每一项仍然是从矩阵中选取n个元素相乘得到，
+且保证在每行和每列中都恰好只选取一个元素，
+而整个行列式恰好将所有这样的选取方法遍历一次。
+ 
+\end_layout
+
+\begin_layout Remark
+另外，
+ 
+\begin_inset Formula ${\displaystyle n\times n}$
+\end_inset
+
+矩阵的每一行或每一列也可以看成是一个 
+\begin_inset Formula $n$
+\end_inset
+
+ 元向量，
+这时矩阵的行列式也被称为这 
+\begin_inset Formula $n$
+\end_inset
+
+个 
+\begin_inset Formula $n$
+\end_inset
+
+元向量组成的向量组的行列式。
+
+\end_layout
+
+\begin_layout Subsection
+行列式的展开
+\end_layout
+
+\begin_layout Paragraph
+Laplace 展开法则
+\end_layout
+
+\begin_layout Remark
+对于2、3阶行列式计算可以使用Sarrus（三角法则）。
+4 阶及更高阶的行列式通常使用展开法则（Laplace 展开或余子式展开法则）进行计算。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula 
+\[
+det(A)=a_{11}​C_{11}​−a_{12}​C_{12​}+a_{13}​C_{13​}−a_{14}​C_{14}​
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+其中，
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ 是 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+的余子式，
+表示从矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 中去掉第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行和第 
+\begin_inset Formula $j$
+\end_inset
+
+ 列后得到的 3×3 子矩阵的行列式。
+
+\end_layout
+
+\begin_layout Subsubsection
+余因式
+\end_layout
+
+\begin_layout Standard
+对一个
+\begin_inset Formula $n$
+\end_inset
+
+阶的行列式 
+\begin_inset Formula $M$
+\end_inset
+
+ ，
+去掉
+\begin_inset Formula $M$
+\end_inset
+
+ 的第
+\begin_inset Formula $i$
+\end_inset
+
+行第
+\begin_inset Formula $j$
+\end_inset
+
+列后形成的
+\begin_inset Formula $n−1$
+\end_inset
+
+ 阶的行列式叫做
+\begin_inset Formula $M$
+\end_inset
+
+ 关于元素 
+\begin_inset Formula $m_{ij}$
+\end_inset
+
+的余因式。
+记作 
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+例：
+
+\end_layout
+
+\begin_layout Standard
+考虑三阶方阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+计算余因子
+\begin_inset Formula $C_{23}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
+\Box & \Box & \Box\\
+b_{31} & b_{32} & \Box
+\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
+b_{31} & b_{32}
+\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+代数余子式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle M}$
+\end_inset
+
+关于元素
+\begin_inset Formula ${\displaystyle m_{ij}}$
+\end_inset
+
+的代数余子式记作
+\begin_inset Formula ${\displaystyle C_{ij}}$
+\end_inset
+
+。
+ 
+\begin_inset Formula ${\displaystyle C_{ij}=(-1)^{(i+j)}\cdot M_{ij}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+计算余因子
+\begin_inset Formula $C_{23}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
+\Box & \Box & \Box\\
+b_{31} & b_{32} & \Box
+\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
+b_{31} & b_{32}
+\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
+\]
+
+\end_inset
+
+ 根据定义得到
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{2+3}(M_{23})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{5}(b_{11}b_{32}-b_{31}b_{12})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=b_{31}b_{12}-b_{11}b_{32}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+行列式关于行和列的展开
+\end_layout
+
+\begin_layout Standard
+一个
+\begin_inset Formula $n$
+\end_inset
+
+ 阶的行列式 
+\begin_inset Formula $M$
+\end_inset
+
+可以写成一行（或一列）的元素与对应的代数余子式的乘积之和，
+叫作行列式按一行（或一列）的展开。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \det M=\sum_{i=1}^{n}m_{i;j}C_{i,j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \det M=\sum_{j=1}^{n}m_{i;j}C_{i,j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个公式又称拉普拉斯公式，
+把
+\begin_inset Formula $n$
+\end_inset
+
+维矩阵的行列式计算变为了
+\begin_inset Formula $n$
+\end_inset
+
+ 个 
+\begin_inset Formula $n−1$
+\end_inset
+
+ 维的行列式的计算。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+M & =\left|\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8\\
+9 & 10 & 11 & 12\\
+13 & 14 & 15 & 16
+\end{array}\right|=1\times C_{11}+2\times C_{12}+3\times C_{13}+4\times C_{14}\\
+ & =(-1)^{1+1}\times1\times\left|\begin{array}{ccc}
+6 & 7 & 8\\
+10 & 11 & 12\\
+14 & 15 & 16
+\end{array}\right|+(-1)^{1+2}\times2\times\left|\begin{array}{ccc}
+5 & 7 & 8\\
+9 & 11 & 12\\
+13 & 15 & 16
+\end{array}\right|\\
+ & \:+(-1)^{1+3}\times3\times\left|\begin{array}{ccc}
+5 & 6 & 8\\
+9 & 10 & 12\\
+13 & 14 & 16
+\end{array}\right|+(-1)^{1+4}\times4\times\left|\begin{array}{ccc}
+5 & 6 & 7\\
+9 & 10 & 11\\
+13 & 14 & 15
+\end{array}\right|\\
+ & =1\times1\times0+(-1)\times2\times0+(1)\times3\times0+(-1)\times4\times0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另一方面，
+拉普拉斯公式可以作为行列式的一种归纳定义：
+在定义了二维行列式后，
+
+\begin_inset Formula $n$
+\end_inset
+
+ 维矩阵的行列式可以借助拉普拉斯公式用
+\begin_inset Formula $n−1$
+\end_inset
+
+ 维的行列式来定义。
+这样定义的行列式与前面的定义是等价的。
+
+\end_layout
+
+\begin_layout Subsection
+高斯消元法或LU分解法
+\end_layout
+
+\begin_layout Subsubsection
+高斯消元法
+\end_layout
+
+\begin_layout Standard
+利用行列式性质进行一下操作：
+
+\end_layout
+
+\begin_layout Itemize
+Swapping two rows
+\end_layout
+
+\begin_layout Itemize
+Multiplying a row by a nonzero number
+\end_layout
+
+\begin_layout Itemize
+Adding a multiple of one row to another row
+\end_layout
+
+\begin_layout Standard
+Using these operations,
+ a matrix can always be transformed into an upper triangular matrix。
 
 \end_layout
 
@@ -62064,16 +63762,19 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \end_inset
 
 
-\begin_inset Formula 
-\begin{align*}
-\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
 0 & a_{22} & \dots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix} & =(-1)^{inv(n(n-1)\cdot3\cdot2\cdot1)}a_{1n}a_{2n-1}\cdots a_{n1}\\
- & =-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}
-\end{align*}
+\end{vmatrix}=(-1)^{inv(n(n-1)\cdot3\cdot2\cdot1)}a_{1n}a_{2n-1}\cdots a_{n1}=-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}$
+\end_inset
 
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -62101,192 +63802,6 @@ a_{n1} & 0 & \dots & 0
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-余因子式
-\end_layout
-
-\begin_layout Standard
-对一个 
-\begin_inset Formula $n\times n$
-\end_inset
-
- 矩阵 
-\begin_inset Formula $A$
-\end_inset
-
-，
-在 
-\begin_inset Formula $(i,j)$
-\end_inset
-
- 的子行列式（余子式）
-\begin_inset Formula $M_{ij}$
-\end_inset
-
-定义为删掉 
-\begin_inset Formula $A$
-\end_inset
-
- 的第 
-\begin_inset Formula $i$
-\end_inset
-
- 行与第
-\begin_inset Formula $j$
-\end_inset
-
-列后得到的行列式。
-令
-\begin_inset Formula $C_{ij}:=(-1)^{i+j}M_{ij}$
-\end_inset
-
-，
-称为 
-\begin_inset Formula $A$
-\end_inset
-
-在
-\begin_inset Formula $(i,j)$
-\end_inset
-
-的余因子（代数余子式）。
-矩阵
-\begin_inset Formula $cof(A):=(C_{ij})_{i,j}$
-\end_inset
-
- 称作
-\begin_inset Formula $A$
-\end_inset
-
-的余因子矩阵（余子矩阵）。
-余因子矩阵的转置称为伴随矩阵，
-记为
-\begin_inset Formula $\mathrm{adj}(A)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-例：
-
-\end_layout
-
-\begin_layout Standard
-考虑三阶方阵
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
-b_{21} & b_{22} & b_{23}\\
-b_{31} & b_{32} & b_{33}
-\end{bmatrix}
-\]
-
-\end_inset
-
-今将计算余因子
-\begin_inset Formula $C_{23}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
-\Box & \Box & \Box\\
-b_{31} & b_{32} & \Box
-\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
-b_{31} & b_{32}
-\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
-\]
-
-\end_inset
-
- 根据定义得到
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=(-1)^{2+3}(M_{23})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=(-1)^{5}(b_{11}b_{32}-b_{31}b_{12})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=b_{31}b_{12}-b_{11}b_{32}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-余因子分解
-\end_layout
-
-\begin_layout Standard
-对一
-\begin_inset Formula $n\times n$
-\end_inset
-
- 矩阵：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-A=\begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & a_{22} & \cdots & a_{2n}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{bmatrix}
-\]
-
-\end_inset
-
-其行列式 
-\begin_inset Formula $\det A$
-\end_inset
-
-可以用余因子表示：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\det(A)=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}+...+a_{nj}C_{nj}
-\]
-
-\end_inset
-
-(对第 j 列的余因子分解)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\det(A)=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3}+...+a_{in}C_{in}
-\]
-
-\end_inset
-
- (对第 i 行的余因子分解)
 \end_layout
 
 \begin_layout Subsection
@@ -62499,6 +64014,196 @@ a_{i1} & a_{i2} & \dots & a_{in}\\
 {\color{red}k}a_{j1}{\color{red}+a_{i1}} & {\color{red}k}a_{j2}{\color{red}+a_{i2}} & \dots & {\color{red}k}a_{jn}{\color{red}+a_{in}}\\
 \vdots & \vdots & \vdots & \vdots
 \end{vmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+余因子 
+\end_layout
+
+\begin_layout Subsubsection
+余因子分解
+\end_layout
+
+\begin_layout Standard
+对一
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}
+\]
+
+\end_inset
+
+其行列式 
+\begin_inset Formula $\det A$
+\end_inset
+
+可以用余因子表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}+...+a_{nj}C_{nj}
+\]
+
+\end_inset
+
+(对第 j 列的余因子分解)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3}+...+a_{in}C_{in}
+\]
+
+\end_inset
+
+ (对第 i 行的余因子分解)
+\end_layout
+
+\begin_layout Subsubsection
+代数余因子式
+\end_layout
+
+\begin_layout Standard
+对一个 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，
+在 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 的子行列式（余子式）
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+定义为删掉 
+\begin_inset Formula $A$
+\end_inset
+
+ 的第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行与第
+\begin_inset Formula $j$
+\end_inset
+
+列后得到的行列式。
+令
+\begin_inset Formula $C_{ij}:=(-1)^{i+j}M_{ij}$
+\end_inset
+
+，
+称为 
+\begin_inset Formula $A$
+\end_inset
+
+在
+\begin_inset Formula $(i,j)$
+\end_inset
+
+的余因子（代数余子式）。
+矩阵
+\begin_inset Formula $cof(A):=(C_{ij})_{i,j}$
+\end_inset
+
+ 称作
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵（余子矩阵）。
+余因子矩阵的转置称为伴随矩阵，
+记为
+\begin_inset Formula $\mathrm{adj}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例：
+
+\end_layout
+
+\begin_layout Standard
+考虑三阶方阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+计算余因子
+\begin_inset Formula $C_{23}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
+\Box & \Box & \Box\\
+b_{31} & b_{32} & \Box
+\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
+b_{31} & b_{32}
+\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
+\]
+
+\end_inset
+
+ 根据定义得到
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{2+3}(M_{23})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=(-1)^{5}(b_{11}b_{32}-b_{31}b_{12})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{23}=b_{31}b_{12}-b_{11}b_{32}$
 \end_inset
 
 
