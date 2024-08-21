@@ -23497,7 +23497,8 @@ a叉b
 \end_layout
 
 \begin_layout Paragraph
-叉积运算运算律:
+叉积运算运算律：
+
 \end_layout
 
 \begin_layout Itemize
@@ -23548,6 +23549,36 @@ a叉b
 
 \begin_layout Subsubsection
 混合积
+\end_layout
+
+\begin_layout Standard
+三个向量中的
+\series bold
+一个
+\series default
+和
+\series bold
+另两个
+\series default
+向量的
+\series bold
+叉积
+\series default
+相乘得到
+\series bold
+点积，
+
+\series default
+其结果是个
+\series bold
+赝标量
+\series default
+。
+赝标量（英语：
+pseudoscalar）为类似标量的数量，
+但在空间反演、瑕旋转时会多出负号，
+标量则不会。
+ 
 \end_layout
 
 \begin_layout Standard
@@ -23686,7 +23717,199 @@ V=(\overrightarrow{a}\times\overrightarrow{b})\bullet\overrightarrow{c}
 \end_layout
 
 \begin_layout Standard
-物理意义为三向量始于同点时所构成的体积
+物理意义为三向量始于同点时所构成的体积。
+
+\end_layout
+
+\begin_layout Paragraph
+性质
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula ${\displaystyle \mathbf{a}=a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k}}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle \mathbf{b}=b_{1}\mathbf{i}+b_{2}\mathbf{j}+b_{3}\mathbf{k}}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle \mathbf{c}=c_{1}\mathbf{i}+c_{2}\mathbf{j}+c_{3}\mathbf{k}}$
+\end_inset
+
+，
+则有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\begin{vmatrix}a_{1} & a_{2} & a_{3}\\
+b_{1} & b_{2} & b_{3}\\
+c_{1} & c_{2} & c_{3}
+\end{vmatrix}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{aligned}\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) & =(a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k})\cdot\begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+b_{1} & b_{2} & b_{3}\\
+c_{1} & c_{2} & c_{3}
+\end{vmatrix}\\
+ & =(a_{1}\mathbf{i}+a_{2}\mathbf{j}+a_{3}\mathbf{k})\cdot(\mathbf{i}\begin{vmatrix}b_{2} & b_{3}\\
+c_{2} & c_{3}
+\end{vmatrix}-\mathbf{j}\begin{vmatrix}b_{1} & b_{3}\\
+c_{1} & c_{3}
+\end{vmatrix}+\mathbf{k}\begin{vmatrix}b_{1} & b_{2}\\
+c_{1} & c_{2}
+\end{vmatrix})\\
+ & =a_{1}\begin{vmatrix}b_{2} & b_{3}\\
+c_{2} & c_{3}
+\end{vmatrix}-a_{2}\begin{vmatrix}b_{1} & b_{3}\\
+c_{1} & c_{3}
+\end{vmatrix}+a_{3}\begin{vmatrix}b_{1} & b_{2}\\
+c_{1} & c_{2}
+\end{vmatrix}\\
+ & =\begin{vmatrix}a_{1} & a_{2} & a_{3}\\
+b_{1} & b_{2} & b_{3}\\
+c_{1} & c_{2} & c_{3}
+\end{vmatrix}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用行列式的特性，
+可知顺序置换向量的位置不影响标量三重积的值：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})=\mathbf{c}\cdot(\mathbf{a}\times\mathbf{b})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+任意对换两个向量的位置，
+标量三重积与原来相差一个负号：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=-\mathbf{a}\cdot(\mathbf{c}\times\mathbf{b})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=-\mathbf{b}\cdot(\mathbf{a}\times\mathbf{c})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=-\mathbf{c}\cdot(\mathbf{b}\times\mathbf{a})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若任意两个向量相等，
+则标量三重积等于零：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\cdot(\mathbf{a}\times\mathbf{b})=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{a})=\mathbf{b}\cdot(\mathbf{a}\times\mathbf{a})=\mathbf{b}\cdot\mathbf{0}=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+拉格朗日公式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \begin{aligned}(\mathbf{a}\times\mathbf{b})\times\mathbf{c} & =-\mathbf{c}\times(\mathbf{a}\times\mathbf{b})\\
+ & =-\mathbf{a}(\mathbf{c}\cdot\mathbf{b})+\mathbf{b}(\mathbf{c}\cdot\mathbf{a})
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+雅可比恒等式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \mathbf{a}\times(\mathbf{b}\times\mathbf{c})+\mathbf{b}\times(\mathbf{c}\times\mathbf{a})+\mathbf{c}\times(\mathbf{a}\times\mathbf{b})=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle (\mathbf{a}\times\mathbf{b})\times\mathbf{c}=\mathbf{a}\times(\mathbf{b}\times\mathbf{c})-\mathbf{b}\times(\mathbf{a}\times\mathbf{c})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+拉普拉斯－德拉姆算子
+\end_layout
+
+\begin_layout Standard
+在向量分析中，
+有以下与梯度相关的一条恒等式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \nabla\times(\nabla\times\mathbf{f})=\nabla(\nabla\cdot\mathbf{f})-(\nabla\cdot\nabla)\mathbf{f}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个拉普拉斯－德拉姆算子 
+\begin_inset Formula ${\displaystyle \Delta=\mathrm{d}\delta+\delta\mathrm{d}}$
+\end_inset
+
+的特殊情形。
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -24395,12 +24618,12 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \end_inset
 
 称为向量 
-\begin_inset Formula $\boldsymbol{r}$
+\begin_inset Formula $\vec{\boldsymbol{r}}$
 \end_inset
 
 的方向角.
  设
-\begin_inset Formula $\overrightarrow{OM}=\boldsymbol{r}=(x,y,z)$
+\begin_inset Formula $\overrightarrow{OM}=\vec{\boldsymbol{r}}=(x,y,z)$
 \end_inset
 
 ,
@@ -24434,7 +24657,7 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 从而
 \begin_inset Formula 
 \[
-(\cos\alpha,\cos\beta,\cos\gamma)=(\frac{x}{|\boldsymbol{r}|},\frac{y}{|\boldsymbol{r}|},\frac{z}{|\boldsymbol{r}|})=\frac{1}{|\boldsymbol{r}|}(x,y,z)=\frac{r}{|r|}=\boldsymbol{e_{i}}
+(\cos\alpha,\cos\beta,\cos\gamma)=(\frac{x}{|\boldsymbol{r}|},\frac{y}{|\boldsymbol{r}|},\frac{z}{|\boldsymbol{r}|})=\frac{1}{|\boldsymbol{r}|}(x,y,z)=\frac{\vec{r}}{|\vec{r}|}=\boldsymbol{e_{i}}
 \]
 
 \end_inset
@@ -25540,13 +25763,15 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 \begin_inset Formula $\boldsymbol{s}$
 \end_inset
 
-平行.所以两向量的对应坐标成比例,由于
+平行。
+所以两向量的对应坐标成比例，
+由于
 \begin_inset Formula $\overrightarrow{M_{0}M}=(x-x_{0},y-y_{0},z-z_{0})$
 \end_inset
 
 ,
  
-\begin_inset Formula $s=(m,n,p)$
+\begin_inset Formula $\vec{s}=(m,n,p)$
 \end_inset
 
 ,
@@ -63033,7 +63258,10 @@ n阶行列式
 \end_layout
 
 \begin_layout Definition
-n阶行列式等于所有取自不同行不同列（行标按标准排列，
+\begin_inset Formula $n$
+\end_inset
+
+阶行列式等于所有取自不同行不同列（行标按标准排列，
 无逆序数 ，
 列按全排列）的n个元素的乘积的代数和，
 逆序数为偶数时带正号，
@@ -63115,6 +63343,8 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \end_inset
 
 我在维基上也没找到。
+以下是维基上的内容，
+置换可以理解为排列。
 
 \end_layout
 
@@ -63762,10 +63992,6 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
-
-
 \begin_inset Formula $\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
 0 & a_{22} & \dots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
@@ -64020,7 +64246,428 @@ a_{i1} & a_{i2} & \dots & a_{in}\\
 \end_layout
 
 \begin_layout Subsection
-余因子 
+几何意义
+\end_layout
+
+\begin_layout Standard
+行列式的一个自然的源起是 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积。
+行列式的定义和 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积有着本质上的关联。
+ 
+\end_layout
+
+\begin_layout Subsubsection
+向量的叉积
+\end_layout
+
+\begin_layout Standard
+叉积
+\begin_inset Formula $\vec{a}×\vec{b}$
+\end_inset
+
+ 是一个向量，
+其结果垂直于 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+，
+方向由右手定则决定，
+大小为平行四边形的面积。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​),(a_{3}​b_{1}​−a_{1}​b_{3}​),(a_{1}​b_{2}​−a_{2}​b_{1}​))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}×\vec{b}=\left|\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}\\
+a_{1} & a_{2} & a_{3}\\
+b_{1} & b_{2} & b_{3}
+\end{array}\right|$
+\end_inset
+
+其中，
+
+\begin_inset Formula $\vec{i}$
+\end_inset
+
+、
+\begin_inset Formula $\vec{j}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{k}$
+\end_inset
+
+ 是标准基向量。
+
+\end_layout
+
+\begin_layout Standard
+展开这个行列式可以得到:
+\begin_inset Formula 
+\begin{align*}
+\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​)\vec{i}-(a_{3}​b_{1}​−a_{1}​b_{3}​)\vec{j}+(a_{1}​b_{2}​−a_{2}​b_{1}​))\vec{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+二维向量组的行列式
+\end_layout
+
+\begin_layout Standard
+在一个二维平面上，
+两个向量 
+\begin_inset Formula ${\displaystyle \vec{X}=\left(a,c\right)}$
+\end_inset
+
+和 
+\begin_inset Formula ${\displaystyle \vec{X'}=\left(b,d\right)}$
+\end_inset
+
+的行列式是：
+
+\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如说，
+两个向量
+\begin_inset Formula ${\displaystyle X=\left(2,1\right)}$
+\end_inset
+
+和 
+\begin_inset Formula ${\displaystyle X'=\left(3,4\right)}$
+\end_inset
+
+的行列式是：
+
+\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}2 & 3\\
+1 & 4
+\end{vmatrix}=2\cdot4-3\cdot1=5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经计算可知，
+当系数是实数时，
+行列式表示的是向量
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{X′}$
+\end_inset
+
+ 形成的平行四边形的有向面积，
+并有如下性质：
+
+\end_layout
+
+\begin_layout Itemize
+行列式为零当且仅当两个向量共线（线性相关），
+这时平行四边形退化成一条直线。
+
+\end_layout
+
+\begin_layout Itemize
+如果以逆时针方向为正向的话，
+有向面积的意义是：
+平行四边形面积为
+\series bold
+正
+\series default
+当且仅当以原点为不动点将
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+逆时针“转到”
+\begin_inset Formula $\vec{X′}$
+\end_inset
+
+处时，
+扫过的地方在平行四边形里，
+否则的话面积就是负的。
+
+\end_layout
+
+\begin_layout Itemize
+行列式是一个双线性映射。
+也就是说，
+
+\begin_inset Formula $\det(\lambda X+\mu Y,X')=\lambda\det(X,X')+\mu\det(Y,X')$
+\end_inset
+
+，
+并且
+\begin_inset Formula $\det(X,\lambda X'+\mu Y')=\lambda\det(X,X')+\mu\det(X,Y')$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+其几何意义是：
+以同一个向量 
+\begin_inset Formula $v$
+\end_inset
+
+ 作为一条边的两个平行四边形的面积之和，
+等于它们各自另一边的向量 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $u′$
+\end_inset
+
+加起来后的向量：
+
+\begin_inset Formula $u+u′$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+所构成的平行四边形的面积，
+如图中所示。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/二维向量几何.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+三维向量组的行列式
+\end_layout
+
+\begin_layout Standard
+在三维的有向空间中，
+三个三维向量的行列式是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(X,X',X'')=\begin{vmatrix}x & x' & x''\\
+y & y' & y''\\
+z & z' & z''
+\end{vmatrix}=xy'z''+x'y''z+x''yz'-xy''z'-x'yz''-x''y'z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如说，
+三个向量
+\begin_inset Formula ${\displaystyle \left(2,1,5\right)}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle \left(6,0,8\right)}$
+\end_inset
+
+和
+\begin_inset Formula ${\displaystyle \left(3,2,4\right)}$
+\end_inset
+
+的行列式是：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\det(X,X',X'') & =\begin{vmatrix}2 & 6 & 3\\
+1 & 0 & 2\\
+5 & 8 & 4
+\end{vmatrix}\\
+ & =2\cdot0\cdot4+6\cdot2\cdot5+3\cdot1\cdot8-2\cdot2\cdot8-6\cdot1\cdot4-3\cdot0\cdot5\\
+ & =28
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当系数是实数时，
+行列式表示 
+\begin_inset Formula $X$
+\end_inset
+
+、 
+\begin_inset Formula $X′$
+\end_inset
+
+ 和 
+\begin_inset Formula $X″$
+\end_inset
+
+ 三个向量形成的平行六面体的有向体积，
+也叫做这三个向量的混合积。
+同样的，
+可以观察到如下性质：
+
+\end_layout
+
+\begin_layout Itemize
+行列式为零当且仅当三个向量共线或者共面（三者线性相关），
+这时平行六面体退化为平面图形，
+体积为零。
+
+\end_layout
+
+\begin_layout Itemize
+三维空间中有向体积的定义要比二维空间中复杂，
+一般是根据右手定则来约定。
+比如右图中
+\begin_inset Formula $(u,v,w)$
+\end_inset
+
+所形成的平行六面体的体积是正的，
+而
+\begin_inset Formula $(u,w,v)$
+\end_inset
+
+所形成的平行六面体的体积是负的。
+这个定义和行列式的计算并不矛盾，
+因为行列式中向量的坐标都是在取好坐标系后才决定的，
+而坐标系的三个方向一般也是按照右手规则来设定的。
+如果计算开始时坐标系的定向反过来的话，
+有向体积的定义也要跟着反过来，
+这样行列式才能代表有向体积
+\end_layout
+
+\begin_layout Itemize
+这时行列式是一个“三线性映射”，
+也就是说，
+对第一个向量有 
+\begin_inset Formula $\det(aX+bY,X',X'')=a\det(X,X',X'')+b\det(Y,X',X'')$
+\end_inset
+
+，
+对第二、第三个向量也是如此。
+其几何意义和二维时基本相同，
+是指当生成两个平行六面体的每组三个向量中如果有
+\series bold
+两个
+\series default
+是重合的，
+比如分别是：
+
+\begin_inset Formula $(u,v,w)$
+\end_inset
+
+和
+\begin_inset Formula $(u',v,w)$
+\end_inset
+
+，
+那么它们的体积之总和等于将
+\begin_inset Formula ${\displaystyle u}$
+\end_inset
+
+和 
+\begin_inset Formula $u′$
+\end_inset
+
+ 加起来后的向量 
+\begin_inset Formula $u+u′$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ 
+\begin_inset Formula $w$
+\end_inset
+
+ 所形成的平行六面体的体积。
+
+\end_layout
+
+\begin_layout Subsection
+余因子
 \end_layout
 
 \begin_layout Subsubsection
@@ -64427,7 +65074,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 三角矩阵
 \end_layout
 
@@ -64436,7 +65083,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 上三角矩阵
 \end_layout
 
@@ -64458,7 +65105,7 @@ a_{11} & a_{12} & \cdots & a_{1n}\\
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 下三角矩阵
 \end_layout
 
@@ -64480,7 +65127,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 对角矩阵
 \end_layout
 
@@ -64505,7 +65152,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 单位矩阵
 \end_layout
 
@@ -64561,7 +65208,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 对称矩阵
 \end_layout
 
@@ -64583,7 +65230,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 二阶矩阵
 \end_layout
 
@@ -64596,7 +65243,23 @@ c & d
 \end_inset
 
 称为二阶矩阵,
- 数a,b,c,d称为矩阵的元素.
+ 数
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+,
+\begin_inset Formula $c$
+\end_inset
+
+,
+\begin_inset Formula $d$
+\end_inset
+
+称为矩阵的元素.
 \end_layout
 
 \begin_layout Standard
@@ -64628,12 +65291,12 @@ c & d
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 同型矩阵
 \end_layout
 
 \begin_layout Standard
-两个行列数相同的矩阵，
+两个行、列数相同的矩阵，
 称为同型矩阵。
 
 \end_layout
@@ -64668,7 +65331,7 @@ c & d
  即必须是同型矩阵才可以相加
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 加减法：
 
 \end_layout
@@ -64711,7 +65374,7 @@ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
 所以这乘法也被称为"标量乘法"
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 矩阵的乘法
 \end_layout
 
@@ -65198,7 +65861,7 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(\lambda A)T=\lambda A^{T}$
+\begin_inset Formula $(\lambda A)^{T}=\lambda A^{T}$
 \end_inset
 
 
@@ -65406,7 +66069,7 @@ a_{sj}
 \begin_inset Formula $A$
 \end_inset
 
-的行向量。
+的列向量。
  
 \end_layout
 
@@ -65466,7 +66129,9 @@ k阶子式
 行列式
 \series default
 ，
-称为矩阵
+称为
+\series bold
+矩阵
 \begin_inset Formula $A$
 \end_inset
 
@@ -65474,7 +66139,9 @@ k阶子式
 \begin_inset Formula $k$
 \end_inset
 
-阶子式。
+阶子式
+\series default
+。
 
 \end_layout
 
@@ -65483,12 +66150,20 @@ k阶子式
 \begin_inset Formula ${m \choose k}$
 \end_inset
 
-种方法来选择该保留的行，
+（
+\begin_inset Formula $C_{m}^{k}$
+\end_inset
+
+）种方法来选择该保留的行，
 有
 \begin_inset Formula ${n \choose k}$
 \end_inset
 
-种方法来选择该保留的列，
+（
+\begin_inset Formula $C_{n}^{k}$
+\end_inset
+
+）种方法来选择该保留的列，
 因此
 \begin_inset Formula $A$
 \end_inset
@@ -65525,6 +66200,12 @@ k阶子式
 \end_layout
 
 \begin_layout Standard
+1 阶子式就是矩阵中的每个元素本身，
+因为它们对应于从矩阵中选择一行和一列。
+
+\end_layout
+
+\begin_layout Standard
 计算矩阵
 \begin_inset Formula $A$
 \end_inset
@@ -65549,15 +66230,98 @@ k阶子式
 
 的三阶子式：
  
-\begin_inset Formula $2$
+\begin_inset Formula $0$
 \end_inset
 
- ，
+ 
+\end_layout
 
-\begin_inset Formula $\cdots$
+\begin_layout Subsubsection
+代数余子式和伴随矩阵
+\end_layout
+
+\begin_layout Standard
+一个矩阵
+\begin_inset Formula $A$
 \end_inset
 
+的
+\begin_inset Formula $(i,j$
+\end_inset
 
+)代数余子式：
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ 是指
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+余子式
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+与
+\begin_inset Formula $(−1)^{i+j}$
+\end_inset
+
+的乘积：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{ij}=(−1)^{i+j}M_{ji}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵是指将
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+代数余子式摆在第i行第
+\begin_inset Formula $j$
+\end_inset
+
+列所得到的矩阵，
+记为
+\begin_inset Formula $C$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+的转置矩阵称为
+\begin_inset Formula $A$
+\end_inset
+
+的伴随矩阵，
+伴随矩阵类似于逆矩阵，
+并且当
+\begin_inset Formula $A$
+\end_inset
+
+可逆时可以用来计算它的逆矩阵。
+ 
 \end_layout
 
 \begin_layout Subsubsection
