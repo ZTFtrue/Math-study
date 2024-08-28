@@ -7,6 +7,13 @@
 \textclass scrbook
 \begin_preamble
 %\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{ctex}
+\usepackage{textgreek}
+\usepackage{CJKutf8}
+%\usepackage{fontspec}
+ 
 \end_preamble
 \options UTF8
 \use_default_options true
@@ -20,7 +27,7 @@ pdfform
 \maintain_unincluded_children no
 \language chinese-simplified
 \language_package default
-\inputencoding utf8-cjk
+\inputencoding utf8-plain
 \fontencoding auto
 \font_roman "NotoSerifRegular" "default"
 \font_sans "NotoSansRegular" "default"
@@ -38,10 +45,12 @@ pdfform
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf4
 \output_sync 1
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -270,6 +279,21 @@ Math
 \end_layout
 
 \begin_layout Standard
+A
+\end_layout
+
+\begin_layout Standard
+Α
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement document
 alignment document
@@ -290,7 +314,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Α α
+Α 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -328,7 +356,11 @@ Nu
 \begin_inset Text
 
 \begin_layout Plain Layout
-Β β
+Β 
+\begin_inset Formula $\beta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -373,7 +405,14 @@ Xi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Γ γ
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -411,7 +450,14 @@ Omicron
 \begin_inset Text
 
 \begin_layout Plain Layout
-Δ δ
+\begin_inset Formula $\Delta$
+\end_inset
+
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -456,7 +502,11 @@ Pi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ε ε
+Ε 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -498,7 +548,11 @@ Rho
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ζ ζ
+Ζ 
+\begin_inset Formula $\zeta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -516,7 +570,14 @@ Zeta
 \begin_inset Text
 
 \begin_layout Plain Layout
-Σ σ
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -536,7 +597,11 @@ Sigma
 \begin_inset Text
 
 \begin_layout Plain Layout
-Η η
+Η 
+\begin_inset Formula $\eta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -568,7 +633,11 @@ Eta
 \uwave off
 \noun off
 \color none
-Τ τ
+Τ 
+\begin_inset Formula $\tau$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -602,7 +671,14 @@ Tau
 \begin_inset Text
 
 \begin_layout Plain Layout
-Θ θ
+\begin_inset Formula $\Theta$
+\end_inset
+
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -634,7 +710,14 @@ Theta
 \uwave off
 \noun off
 \color none
-Υ υ
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+
+\begin_inset Formula $\upsilon$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -668,7 +751,11 @@ Upsilon
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ι ι
+Ι 
+\begin_inset Formula $\iota$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -700,7 +787,14 @@ Iota
 \uwave off
 \noun off
 \color none
-Φ φ
+\begin_inset Formula $\Phi$
+\end_inset
+
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -734,7 +828,11 @@ Phi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Κ κ
+Κ 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -766,7 +864,11 @@ Kappa
 \uwave off
 \noun off
 \color none
-Χ χ
+Χ 
+\begin_inset Formula $\chi$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -800,7 +902,14 @@ Chi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Λ λ
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -832,7 +941,14 @@ Lambda
 \uwave off
 \noun off
 \color none
-Ψ ψ
+\begin_inset Formula $\Psi$
+\end_inset
+
+ 
+\begin_inset Formula $\psi$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -866,7 +982,11 @@ Psi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Μ μ
+Μ 
+\begin_inset Formula $\mu$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -898,7 +1018,14 @@ Mu
 \uwave off
 \noun off
 \color none
-Ω ω
+\begin_inset Formula $\Omega$
+\end_inset
+
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4484,10 +4611,23 @@ Additive Inverse,
 
 \begin_layout Section
 贝塞尔曲线
-\begin_inset Formula $\mathbf{B}(t)=\sum_{i=0}^{n}{n \choose i}\mathbf{P}_{i}(1-t)^{{n-i}}t^{i}={n \choose 0}\mathbf{P}_{0}(1-t)^{n}t^{{0}}+{n \choose 1}{\mathbf{P}}_{1}(1-t)^{{n-1}}t^{{1}}+\cdots+{n \choose n-1}{\mathbf{P}}_{{n-1}}(1-t)^{{1}}t^{{n-1}}+{n \choose n}{\mathbf{P}}_{n}(1-t)^{{0}}t^{n}{\mbox{ , }}t\in[0,1]$
+\begin_inset Formula 
+\begin{align*}
+\mathbf{B}(t) & =\sum_{i=0}^{n}{n \choose i}\mathbf{P}_{i}(1-t)^{n-i}t^{i}\\
+ & ={n \choose 0}\mathbf{P}_{0}(1-t)^{n}t^{0}\\
+ & +{n \choose 1}\mathbf{P}_{1}(1-t)^{n-1}t^{1}+\\
+ & \cdots+{n \choose n-1}\mathbf{P}_{n-1}(1-t)^{1}t^{n-1}\\
+ & +{n \choose n}\mathbf{P}_{n}(1-t)^{0}t^{n}
+\end{align*}
+
 \end_inset
 
+,
  
+\begin_inset Formula $t\in[0,1]$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4506,7 +4646,7 @@ Additive Inverse,
 \end_inset
 
 也可得出.
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4518,7 +4658,7 @@ Additive Inverse,
 \begin_layout Standard
 3.
  杨辉三角第2的幂行所有数都是奇数.
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -34277,21 +34417,21 @@ y''',y^{(4)},\cdots,y^{(n)}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\pm v)=\frac{{\rm d}^{n}}{{\rm d}x^{n}}u\pm\frac{{\rm d}^{n}}{{\rm d}x^{n}}v$
+\begin_inset Formula $\frac{d^{n}}{dx^{n}}(u\pm v)=\frac{d^{n}}{dx^{n}}u\pm\frac{d^{n}}{dx^{n}}v$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(Cu)=C\frac{{\rm d}^{n}}{{\rm d}x^{n}}u$
+\begin_inset Formula $\frac{d^{n}}{dx^{n}}(Cu)=C\frac{d^{n}}{dx^{n}}u$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\frac{{\rm d}^{n}}{{\rm d}x^{n}}(u\cdot v)=\sum_{k=0}^{n}C_{k}^{n}\frac{{\rm d}^{n-k}}{{\rm d}x^{n-k}}u\frac{{\rm d}^{k}}{{\rm d}x^{k}}v$
+\begin_inset Formula $\frac{d^{n}}{dx^{n}}(u\cdot v)=\sum_{k=0}^{n}C_{k}^{n}\frac{d^{n-k}}{dx^{n-k}}u\frac{d^{k}}{dx^{k}}v$
 \end_inset
 
 (莱布尼兹公式)
@@ -52527,7 +52667,11 @@ a_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx=\frac{2}{\pi}\int_{0}^{\pi}
 \end_layout
 
 \begin_layout Subsection
-周期不为 2π 的函数展开为傅里叶级数
+周期不为 2
+\begin_inset Formula $\pi$
+\end_inset
+
+ 的函数展开为傅里叶级数
 \end_layout
 
 \begin_layout Standard
