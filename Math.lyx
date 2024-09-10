@@ -24626,7 +24626,7 @@ b_{1} & b_{2}
 
 \begin_layout Standard
 任给向量
-\begin_inset Formula $\boldsymbol{r}$
+\begin_inset Formula $\vec{r}$
 \end_inset
 
 ,
@@ -24636,7 +24636,7 @@ b_{1} & b_{2}
 
 ,
  使
-\begin_inset Formula $\overrightarrow{OM}=r$
+\begin_inset Formula $\overrightarrow{OM}=\vec{r}$
 \end_inset
 
 。
@@ -24648,13 +24648,13 @@ b_{1} & b_{2}
  则
 \begin_inset Formula 
 \[
-r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
+\vec{r}=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \]
 
 \end_inset
 
 上式称为向量
-\begin_inset Formula $r$
+\begin_inset Formula $\vec{r}$
 \end_inset
 
 的坐标分解式,
@@ -24737,6 +24737,184 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \end_layout
 
 \begin_layout Subsection
+标准基向量的定义
+\end_layout
+
+\begin_layout Standard
+在 
+\begin_inset Formula $n$
+\end_inset
+
+维向量空间（如 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+）中，
+标准基向量 
+\begin_inset Formula $\boldsymbol{e_{i}}$
+\end_inset
+
+ 是一个维度为 
+\begin_inset Formula $n$
+\end_inset
+
+ 的向量，
+其特征是该向量在第 
+\begin_inset Formula $i$
+\end_inset
+
+ 个位置为 1，
+其他位置为 0。
+用公式表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{e_{i}}=(0,0,\ldots,1,\ldots,0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $1$
+\end_inset
+
+ 出现在第 
+\begin_inset Formula $i$
+\end_inset
+
+个位置，
+其余元素全为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $i$
+\end_inset
+
+ 的范围为 
+\begin_inset Formula $1$
+\end_inset
+
+ 到 
+\begin_inset Formula $n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Paragraph
+标准基向量的性质
+\end_layout
+
+\begin_layout Itemize
+正交性：
+任何两个不同的标准基向量 
+\begin_inset Formula $\boldsymbol{e_{i}}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\boldsymbol{e_{j}}$
+\end_inset
+
+是正交的，
+即它们的点积为
+\begin_inset Formula $0$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{e_{i}}\cdot\boldsymbol{e_{j}}=0$
+\end_inset
+
+（当 i≠j 时）
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+单位向量：
+每个标准基向量的模为
+\begin_inset Formula $1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $|\boldsymbol{e_{i}}|=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+基向量性质：
+标准基向量集
+\begin_inset Formula ${\boldsymbol{e_{1}},\boldsymbol{e_{2}},…,\boldsymbol{e_{n}}}$
+\end_inset
+
+ 构成了整个 
+\begin_inset Formula $n$
+\end_inset
+
+维向量空间的基。
+这意味着任意向量 
+\begin_inset Formula $\boldsymbol{v}$
+\end_inset
+
+ 都可以表示为这些标准基向量的线性组合：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=v_{1}\boldsymbol{e_{1}}+v_{2}\boldsymbol{e_{2}}+⋯+v_{n}\boldsymbol{e_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+,
+\begin_inset Formula $v_{2}$
+\end_inset
+
+,\SpecialChar ldots
+,
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ 是向量 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+ 在各个方向上的分量。
+
+\end_layout
+
+\begin_layout Subsection
 方向角与方向余弦
 \end_layout
 
@@ -24768,6 +24946,10 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 
 ,
  所以
+\begin_inset Formula $|\boldsymbol{r}|=\sqrt{x^{2}+y^{2}+z^{2}}$
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \cos\alpha=\frac{x}{|\boldsymbol{r}|}
@@ -24804,9 +24986,13 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 
 
 \begin_inset Formula 
-\[
-\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma=1
-\]
+\begin{align*}
+\cos^{2}\alpha+\cos^{2}\beta+\cos^{2}\gamma & =(\frac{x}{|\boldsymbol{r}|})^{2}+(\frac{y}{|\boldsymbol{r}|})^{2}+(\frac{z}{|\boldsymbol{r}|})^{2}\\
+ & =\frac{x^{2}}{|\boldsymbol{r}|^{2}}+\frac{y^{2}}{|\boldsymbol{r}|^{2}}+\frac{z^{2}}{|\boldsymbol{r}|^{2}}\\
+ & =\frac{x^{2}+y^{2}+z^{2}}{|\boldsymbol{r}|^{2}}\\
+ & =\frac{x^{2}+y^{2}+z^{2}}{(\sqrt{x^{2}+y^{2}+z^{2}})^{2}}\\
+ & =1
+\end{align*}
 
 \end_inset
 
@@ -24927,7 +25113,7 @@ r=\overrightarrow{OM}=x\boldsymbol{i}+y\boldsymbol{j}+z\boldsymbol{k}
 \series default
 轴上的分向量.
  设
-\begin_inset Formula $\overrightarrow{OM'}=\lambda e$
+\begin_inset Formula $\overrightarrow{OM'}=\lambda\boldsymbol{e}$
 \end_inset
 
  ,
@@ -25132,7 +25318,7 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_inset
 
 ,以向量
-\begin_inset Formula $a$
+\begin_inset Formula $\boldsymbol{a}$
 \end_inset
 
 为法向量的平面是完全确定的.
@@ -25440,7 +25626,7 @@ a_{x}=(a)_{x},a_{y}=a_{y},a_{z}=a_{z}
 \end_inset
 
 即平面的法线与平面内任一直线垂直.
-  所以平面
+ 所以平面
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -25768,8 +25954,8 @@ cC+D=0
 
 \end_inset
 
-这个方程叫做平面的截距式方程,
- 
+这个方程叫做平面的截距式方程，
+
 \begin_inset Formula $a$
 \end_inset
 
@@ -25793,7 +25979,8 @@ cC+D=0
 \begin_inset Formula $z$
 \end_inset
 
-轴上的截距.
+轴上的截距。
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -25846,7 +26033,8 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 
 \end_inset
 
-这个方程组叫做空间直线的一般方程.
+这个方程组叫做空间直线的一般方程。
+
 \end_layout
 
 \begin_layout Standard
@@ -25859,7 +26047,8 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 \begin_inset Formula $l$
 \end_inset
 
-.
+。
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -25872,13 +26061,14 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 \series bold
 方向向量
 \series default
-.
- 
+。
+
 \end_layout
 
 \begin_layout Standard
 当直线上的一点和它的一方向向量确定时,
- 直线的位置就完全确定了.
+ 直线的位置就完全确定了。
+
 \end_layout
 
 \begin_layout Standard
@@ -25939,11 +26129,13 @@ A_{2}x+B_{2}y+C_{2}z+D_{2}=0
 \begin_inset Formula $0$
 \end_inset
 
-.
+。
+
 \end_layout
 
 \begin_layout Standard
-这个方程叫做直线的对称式方程或点向式方程.
+这个方程叫做直线的对称式方程或点向式方程。
+
 \end_layout
 
 \begin_layout Standard
@@ -29360,7 +29552,7 @@ x叫做
 
 \begin_layout Standard
 正弦函数是周期函数,
-\begin_inset Formula $2k\pi(k\in Z\text{且k\neq0})$
+\begin_inset Formula $2k\pi(k\in Z\text{且k≠0})$
 \end_inset
 
 都是它的周期,最小正周期是
@@ -32099,7 +32291,7 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $x=a$
 \end_inset
 
- = 的导数则记为:
+ 的导数则记为:
 \begin_inset Formula 
 \[
 \left.\frac{dy}{dx}\right|_{x=a}
@@ -32418,6 +32610,17 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 \begin_inset Formula $f(x)=|x|$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+不可导性可以由不连续性、尖点、角点或无穷斜率（
+\begin_inset Formula $\sqrt[3]{x}$
+\end_inset
+
+）引起。
+函数在某点不可导时，
+它的变化无法用简单的斜率描述。
 
 \end_layout
 
@@ -46628,7 +46831,7 @@ x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy'+p_{n}y=f(x)
 \end_inset
 
  为重力加速度,
-\begin_inset Formula $\mu*g$
+\begin_inset Formula $\mu*dv$
 \end_inset
 
  为水的质量.
