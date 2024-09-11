@@ -9860,6 +9860,7 @@ n元集合
 
 \begin_layout Standard
 排列数公式:
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{n}^{m} & = & n(n-1)(n-2)\cdots[n-(m-1)]\\
@@ -63037,7 +63038,7 @@ Determinant
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 一个排列经过一次对换，
 
 \series bold
@@ -63048,6 +63049,13 @@ Determinant
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
 在所有的
 \begin_inset Formula $n$
 \end_inset
