@@ -63049,30 +63049,14 @@ Determinant
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+排列
+\begin_inset Formula $n,n-1,\cdots,3,2,1$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Theorem
-在所有的
-\begin_inset Formula $n$
+的逆序数为 
+\begin_inset Formula $\frac{n(n-1)}{2}$
 \end_inset
 
-级排列中，
-奇排列和偶排列的
-\series bold
-个数相等
-\series default
-，
-
-\series bold
-
-\begin_inset Formula $\frac{n!}{2}$
-\end_inset
-
-。
 
 \end_layout
 
@@ -63102,15 +63086,24 @@ Determinant
 （自然排列 ）
 \end_layout
 
-\begin_layout Standard
-排列
-\begin_inset Formula $n,n-1,\cdots,3,2,1$
+\begin_layout Theorem
+在所有的
+\begin_inset Formula $n$
 \end_inset
 
-的逆序数为 
-\begin_inset Formula $\frac{n(n-1)}{2}$
+级排列中，
+奇排列和偶排列的
+\series bold
+个数相等
+\series default
+，
+
+\series bold
+
+\begin_inset Formula $\frac{n!}{2}$
 \end_inset
 
+。
 
 \end_layout
 
@@ -64277,6 +64270,15 @@ Using these operations,
 
 \end_layout
 
+\begin_layout Standard
+先处理第一行，
+再第二行....
+\end_layout
+
+\begin_layout Standard
+第一行处理完成后不再参与运算
+\end_layout
+
 \begin_layout Subsection
 特殊行列式
 \end_layout
@@ -64419,17 +64421,18 @@ a_{1n} & a_{2n} & \dots & a_{nn}
 \end_inset
 
 
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-证明：
+\begin_deeper
+\begin_layout Proof
 1.拉普拉斯展开式
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Proof
 2.
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 在行列式中，
 一行（列）元素全为0，
@@ -64447,11 +64450,25 @@ a_{1n} & a_{2n} & \dots & a_{nn}
 \begin_inset Formula $k$
 \end_inset
 
-
-\begin_inset Newline newline
+；
+有
+\begin_inset Formula $n$
 \end_inset
 
+行有公因子
+\begin_inset Formula $k$
+\end_inset
 
+可以提取
+\begin_inset Formula $n$
+\end_inset
+
+次。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula ${\displaystyle D=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
 \vdots & \vdots & \ddots & \vdots\\
 {\color{blue}k}a_{i1} & {\color{blue}k}a_{i2} & \dots & {\color{blue}k}a_{in}\\
@@ -64468,35 +64485,7 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 
 \end_layout
 
-\begin_layout Itemize
-在行列式中，
-某一行（列）的每个元素是两数之和，
-则此行列式可拆分为两个相加的行列式
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula ${\displaystyle \begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
-\vdots & \vdots & \ddots & \vdots\\
-{\color{blue}a_{i1}}+{\color{OliveGreen}b_{i1}} & {\color{blue}a_{i2}}+{\color{OliveGreen}b_{i2}} & \dots & {\color{blue}a_{in}}+{\color{OliveGreen}b_{in}}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix}=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
-\vdots & \vdots & \ddots & \vdots\\
-{\color{blue}a_{i1}} & {\color{blue}a_{i2}} & \dots & {\color{blue}a_{in}}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix}+\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
-\vdots & \vdots & \ddots & \vdots\\
-{\color{OliveGreen}b_{i1}} & {\color{OliveGreen}b_{i2}} & \dots & {\color{OliveGreen}b_{in}}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \dots & a_{nn}
-\end{vmatrix}}$
-\end_inset
-
-
-\end_layout
-
+\end_deeper
 \begin_layout Itemize
 行列式中的两行（列）互换，
 
@@ -64526,9 +64515,10 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Corollary
 在行列式中，
-有两行（列）对应成比例或相同，
+有两行（列）对应成比例或相等，
 则此行列式的值为0
 \begin_inset Newline newline
 \end_inset
@@ -64539,6 +64529,36 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & a_{n2} & \dots & a_{nn}
 \end{vmatrix}=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+在行列式中，
+某一行（列）的每个元素是两数之和，
+则此行列式可拆分为两个相加的行列式
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{blue}a_{i1}}+{\color{OliveGreen}b_{i1}} & {\color{blue}a_{i2}}+{\color{OliveGreen}b_{i2}} & \dots & {\color{blue}a_{in}}+{\color{OliveGreen}b_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}=\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{blue}a_{i1}} & {\color{blue}a_{i2}} & \dots & {\color{blue}a_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}+\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+\vdots & \vdots & \ddots & \vdots\\
+{\color{OliveGreen}b_{i1}} & {\color{OliveGreen}b_{i2}} & \dots & {\color{OliveGreen}b_{in}}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{vmatrix}}$
 \end_inset
 
 
