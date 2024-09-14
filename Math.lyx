@@ -63927,56 +63927,8 @@ n阶行列式中的每一项仍然是从矩阵中选取n个元素相乘得到，
 行列式的展开
 \end_layout
 
-\begin_layout Paragraph
-Laplace 展开法则
-\end_layout
-
-\begin_layout Remark
-对于2、3阶行列式计算可以使用Sarrus（三角法则）。
-4 阶及更高阶的行列式通常使用展开法则（Laplace 展开或余子式展开法则）进行计算。
-
-\end_layout
-
-\begin_layout Remark
-\begin_inset Formula 
-\[
-det(A)=a_{11}​C_{11}​−a_{12}​C_{12​}+a_{13}​C_{13​}−a_{14}​C_{14}​
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark
-其中，
-
-\begin_inset Formula $C_{ij}$
-\end_inset
-
- 是 
-\begin_inset Formula $a_{ij}$
-\end_inset
-
-的余子式，
-表示从矩阵 
-\begin_inset Formula $A$
-\end_inset
-
- 中去掉第 
-\begin_inset Formula $i$
-\end_inset
-
- 行和第 
-\begin_inset Formula $j$
-\end_inset
-
- 列后得到的 3×3 子矩阵的行列式。
-
-\end_layout
-
 \begin_layout Subsubsection
-余因式
+余因式（余子式）
 \end_layout
 
 \begin_layout Standard
@@ -64137,6 +64089,15 @@ b_{31} & b_{32}
 
 \end_layout
 
+\begin_layout Theorem
+某行元素和另一行的代数余子式乘积 之和为0。
+
+\begin_inset Formula $\sum_{i=1}^{n}m_{i;j+1}C_{i,j}=0$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 行列式关于行和列的展开
 \end_layout
@@ -64152,6 +64113,7 @@ b_{31} & b_{32}
 
 可以写成一行（或一列）的元素与对应的代数余子式的乘积之和，
 叫作行列式按一行（或一列）的展开。
+只能按某一行或某一列展开。
 
 \end_layout
 
@@ -64239,8 +64201,421 @@ M & =\left|\begin{array}{cccc}
 
 \end_layout
 
+\begin_layout Subsubsection
+Laplace 展开法则
+\end_layout
+
+\begin_layout Remark
+对于2、3阶行列式计算可以使用Sarrus（三角法则）。
+4 阶及更高阶的行列式通常使用展开法则（Laplace 展开或余子式展开法则）进行计算。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula 
+\[
+det(A)=a_{11}​C_{11}​−a_{12}​C_{12​}+a_{13}​C_{13​}−a_{14}​C_{14}​
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+其中，
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ 是 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+的余子式，
+表示从矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 中去掉第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行和第 
+\begin_inset Formula $j$
+\end_inset
+
+ 列后得到的 3×3 子矩阵的行列式。
+
+\end_layout
+
+\begin_layout Paragraph
+k阶子式
+\end_layout
+
+\begin_layout Standard
+在
+\begin_inset Formula $m\times n$
+\end_inset
+
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+中任取
+\begin_inset Formula $k$
+\end_inset
+
+行与
+\begin_inset Formula $k$
+\end_inset
+
+列（
+\begin_inset Formula $k\leqslant m$
+\end_inset
+
+,
+\begin_inset Formula $k\leqslant n$
+\end_inset
+
+），
+位于这些行列式交叉处的
+\begin_inset Formula $k^{2}$
+\end_inset
+
+个元素，
+
+\series bold
+不改变
+\series default
+它们在
+\begin_inset Formula $A$
+\end_inset
+
+中所处的
+\series bold
+位置次序
+\series default
+而得的
+\begin_inset Formula $k$
+\end_inset
+
+阶组成的
+\series bold
+行列式
+\series default
+，
+称为
+\series bold
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $k$
+\end_inset
+
+阶子式
+\series default
+。
+其剩余的元素称为
+\series bold
+k阶子式的余子式
+\end_layout
+
+\begin_layout Standard
+由于一共有
+\begin_inset Formula ${m \choose k}$
+\end_inset
+
+（
+\begin_inset Formula $C_{m}^{k}$
+\end_inset
+
+）种方法来选择该保留的行，
+有
+\begin_inset Formula ${n \choose k}$
+\end_inset
+
+（
+\begin_inset Formula $C_{n}^{k}$
+\end_inset
+
+）种方法来选择该保留的列，
+因此
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $k$
+\end_inset
+
+阶余子式一共有
+\begin_inset Formula ${m \choose k}\cdot{n \choose k}$
+\end_inset
+
+个。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{array}\right]$
+\end_inset
+
+取A的第一行和第二行，
+第一列和第三列
+\begin_inset Formula $\left|\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1 阶子式就是矩阵中的每个元素本身，
+因为它们对应于从矩阵中选择一行和一列。
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的二阶子式：
+
+\begin_inset Formula $-3$
+\end_inset
+
+，
+ 
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的三阶子式：
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+代数余子式
+\end_layout
+
+\begin_layout Standard
+一个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j$
+\end_inset
+
+)代数余子式：
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ 是指
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+余子式
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+与
+\begin_inset Formula $(−1)^{i+j}$
+\end_inset
+
+的乘积：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{ij}=(−1)^{i+j}M_{ji}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+拉普拉斯：
+取
+\begin_inset Formula $k$
+\end_inset
+
+行，
+由这
+\begin_inset Formula $k$
+\end_inset
+
+行元素组成的所有
+\begin_inset Formula $k$
+\end_inset
+
+阶余子式与代数余子式乘积之和等于行列式的值。
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\begin{align*}
+M & =\left|\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+4 & 3 & 7 & 8\\
+8 & 6 & 3 & 0\\
+1 & 5 & 7 & 9
+\end{array}\right|=\left|\begin{array}{cc}
+1 & 2\\
+4 & 3
+\end{array}\right|\times(-1)^{1+2+1+2}\times\left|\begin{array}{cc}
+3 & 0\\
+7 & 9
+\end{array}\right|\\
+ & +\left|\begin{array}{cc}
+1 & 3\\
+4 & 7
+\end{array}\right|\times(-1)^{1+2+1+3}\times\left|\begin{array}{cc}
+6 & 0\\
+5 & 9
+\end{array}\right|+\left|\begin{array}{cc}
+1 & 4\\
+4 & 8
+\end{array}\right|\times(-1)^{1+2+1+4}\times\left|\begin{array}{cc}
+6 & 3\\
+5 & 7
+\end{array}\right|\\
+ & +\left|\begin{array}{cc}
+2 & 3\\
+3 & 7
+\end{array}\right|\times(-1)^{1+2+2+3}\times\left|\begin{array}{cc}
+8 & 0\\
+1 & 9
+\end{array}\right|+\left|\begin{array}{cc}
+2 & 4\\
+3 & 8
+\end{array}\right|\times(-1)^{1+2+2+4}\times\left|\begin{array}{cc}
+8 & 3\\
+1 & 7
+\end{array}\right|\\
+ & +\left|\begin{array}{cc}
+3 & 4\\
+7 & 8
+\end{array}\right|\times(-1)^{1+2+3+4}\times\left|\begin{array}{cc}
+8 & 6\\
+1 & 5
+\end{array}\right|\\
+ & =-5\times27+(-5\times(-1)\times54)+(-8\times27)+(5\times72)+(4\times(-1)\times53)+(-4\times34)\\
+ & =-135+270-216+360-212-136=-69
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+伴随矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵是指将
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+代数余子式摆在第i行第
+\begin_inset Formula $j$
+\end_inset
+
+列所得到的矩阵，
+记为
+\begin_inset Formula $C$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+的转置矩阵称为
+\begin_inset Formula $A$
+\end_inset
+
+的伴随矩阵，
+伴随矩阵类似于逆矩阵，
+并且当
+\begin_inset Formula $A$
+\end_inset
+
+可逆时可以用来计算它的逆矩阵。
+ 
+\end_layout
+
+\begin_layout Subsubsection
+同阶行列式相乘定理
+\end_layout
+
+\begin_layout Standard
+行列式乘法是一种使用行列式运算的数学解法，
+用于求解线性方程组、计算逆矩阵和求解偏导数等问题。
+行列式相乘的原则是将第一个行列式中每行的每个元素分别与第二个行列式每列的每个元素进行相加再相乘。
+行列式乘法公式是矩阵的乘法得来的，
+即
+\begin_inset Formula $|A||B|=|AB|$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $A$
+\end_inset
+
+、
+\begin_inset Formula $B$
+\end_inset
+
+ 为同阶方阵。
+
+\end_layout
+
+\begin_layout Standard
+行列式本质是一个数，
+所以非同阶行列式可以直接计算出每个行列式然后相乘。
+
+\end_layout
+
 \begin_layout Subsection
-高斯消元法或LU分解法
+行列式计算 
 \end_layout
 
 \begin_layout Subsubsection
@@ -64279,17 +64654,188 @@ Using these operations,
 第一行处理完成后不再参与运算
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\left|\begin{array}{ccccc}
+x & a & a & \cdots & a\\
+a & x & a & \cdots & a\\
+a & a & x & \cdots & a\\
+a & a & a & \cdots & a\\
+a & a & a & \cdots & x
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{ccccc}
+x & a & a & \cdots & a\\
+a & x & a & \cdots & a\\
+a & a & x & \cdots & a\\
+a & a & a & \cdots & a\\
+a & a & a & \cdots & x
+\end{array}\right| & =\\
+\text{其余列加到第一列} & =\left|\begin{array}{ccccc}
+x+(n-1)\times a & a & a & \cdots & a\\
+x+(n-1)\times a & x & a & \cdots & a\\
+x+(n-1)\times a & a & x & \cdots & a\\
+x+(n-1)\times a & a & a & \cdots & a\\
+x+(n-1)\times a & a & a & \cdots & x
+\end{array}\right|\\
+\text{提取第一列} & (x+(n-1)\times a)\left|\begin{array}{ccccc}
+1 & a & a & \cdots & a\\
+1 & x & a & \cdots & a\\
+1 & a & x & \cdots & a\\
+1 & a & a & \cdots & a\\
+1 & a & a & \cdots & x
+\end{array}\right|\\
+\text{第一列乘-a}\text{加} & (x+(n-1)\times a)\left|\begin{array}{ccccc}
+1 & 0 & 0 & \cdots & 0\\
+1 & x-a & 0 & \cdots & 0\\
+1 & 0 & x-a & \cdots & 0\\
+1 & 0 & 0 & \cdots & 0\\
+1 & 0 & 0 & \cdots & x-a
+\end{array}\right|\\
+\text{上三角行列式} & (x+(n-1)\times a)(n-1)(x-a)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+LU分解法
+\end_layout
+
+\begin_layout Standard
+尽可能将某一行(列),转成0,然后按照Laplace 展开法则计算
+\end_layout
+
+\begin_layout Subsubsection
+特殊行列式
+\end_layout
+
+\begin_layout Example
+三叉式行列式，
+
+\series bold
+其中
+\series default
+
+\begin_inset Formula $a_{i}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{cccc}
+1+a_{1} & 1 & \cdots & 1\\
+1 & 1+a_{2} & \cdots & 1\\
+\cdots & \cdots & \cdots & \vdots\\
+1 & 1 & \cdots & 1+a_{n}
+\end{array}\right|\\
+\text{加边法}= & \left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+0 & 1+a_{1} & 1 & \cdots & 1\\
+0 & 1 & 1+a_{2} & \cdots & 1\\
+0 & \cdots & \cdots & \cdots & \vdots\\
+0 & 1 & 1 & \cdots & 1+a_{n}
+\end{array}\right|\\
+\text{第}一行×-1= & \left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+-1 & a_{1} & 0 & \cdots & 0\\
+-1 & 0 & a_{2} & \cdots & 0\\
+-1 & \cdots & \cdots & \cdots & \vdots\\
+-1 & 0 & 0 & \cdots & a_{n}
+\end{array}\right|\text{这个就是三叉式行列式}\\
+\text{第二列}×a_{1}+\text{第一列}= & \left|\begin{array}{ccccc}
+1+\frac{1}{a_{1}}+\ldots\frac{1}{a_{n}} & 1 & 1 & \cdots & 1\\
+0 & a_{1} & 0 & \cdots & 0\\
+0 & 0 & a_{2} & \cdots & 0\\
+0 & \cdots & \cdots & \cdots & \vdots\\
+0 & 0 & 0 & \cdots & a_{n}
+\end{array}\right|\\
+= & (1+\frac{1}{a_{1}}+\ldots\frac{1}{a_{n}})\times a_{1}\ldots a_{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+范徳蒙德行列式(写法可以转置)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+x_{1} & x_{2} & x_{3} & \cdots & x_{n}\\
+\cdots & \cdots & \ddots & \cdots & \vdots\\
+x_{1}^{n-2} & x_{2}^{n-2} & x_{3}^{n-2} & \cdots & x_{n}^{n-2}\\
+x_{1}^{n-1} & x_{2}^{n-1} & x_{3}^{n-1} & \cdots & x_{n}^{n-1}
+\end{array}\right|={\displaystyle \prod_{1\leq i<j\leq n}(x_{j}-x_{i})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+反对称行列式，
+
+\begin_inset Formula $a_{ij}=-a_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left|\begin{array}{cccc}
+0 & 1 & 2 & 3\\
+-1 & 0 & 5 & 4\\
+-2 & -5 & 0 & -6\\
+-3 & -4 & 6 & 0
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+主对角线全为0
+\end_layout
+
+\begin_layout Itemize
+上下对应位置成相反数
+\end_layout
+
+\begin_layout Itemize
+奇数阶，
+
+\begin_inset Formula $D=0$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 特殊行列式
 \end_layout
 
 \begin_layout Itemize
 上三角行列式（Upper Triangular D）是指主对角线以下元素全为0的行列式，
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 如：
-
-\begin_inset Newline newline
-\end_inset
-
 
 \begin_inset Formula $\left|\begin{array}{cccc}
 a_{11} & a_{12} & \cdots & a_{1n}\\
@@ -64302,6 +64848,7 @@ a_{11} & a_{12} & \cdots & a_{1n}\\
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 下三角行列式（Lower Triangular D）是指主对角线以上元素全为0的行列式，
 如：
@@ -64344,11 +64891,59 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \end_layout
 
 \begin_layout Itemize
-其它特殊行列式
-\begin_inset Newline newline
+对称行列式，
+
+\begin_inset Formula $a_{ij}=a_{ij}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{12} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{1n} & a_{2n} & \dots & \cdots
+\end{vmatrix}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+主对角线无要求
+\begin_inset Newline newline
+\end_inset
+
+上下对应位置成相反数
+\end_layout
+
+\begin_layout Itemize
+其它行列式
 \begin_inset Formula $\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
 0 & a_{22} & \dots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
@@ -64378,10 +64973,6 @@ a_{n1} & 0 & \dots & 0
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & 0 & \dots & 0
 \end{vmatrix}=-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}$
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 
