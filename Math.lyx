@@ -65606,6 +65606,251 @@ b_{31} & b_{32}
 
 \end_layout
 
+\begin_layout Subsection
+克莱姆法则
+\end_layout
+
+\begin_layout Standard
+克莱姆法则或克莱姆法则（英语：
+Cramer's rule / formula）是一个线性代数中的定理，
+用行列式来计算出线性等式组中的所有解。
+这个定理因加百列·克莱姆（1704年 - 1752年）的卓越使用而命名。
+在计算上，
+并非最有效率之法，
+因而在很多条等式的情况中没有广泛应用。
+不过，
+这一定理在理论性方面十分有效。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x_{1}+x_{2}+x_{3} & =1\\
+2x_{1}+x_{2}-x_{3} & =2\\
+-x_{1}+3x_{2}+x_{3} & =3
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+只适用于 方程个数=未知符号个数。
+
+\end_layout
+
+\begin_layout Standard
+系数行列式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=\left|\begin{array}{ccc}
+1 & 1 & 1\\
+2 & 1 & -1\\
+-1 & 3 & 1
+\end{array}\right|$
+\end_inset
+
+
+\begin_inset Formula $D_{1}=\left|\begin{array}{ccc}
+1 & 1 & 1\\
+2 & 1 & -1\\
+3 & 3 & 1
+\end{array}\right|$
+\end_inset
+
+ 
+\begin_inset Formula $D_{2}=\left|\begin{array}{ccc}
+1 & 1 & 1\\
+2 & 2 & -1\\
+-1 & 3 & 1
+\end{array}\right|$
+\end_inset
+
+ 
+\begin_inset Formula $D_{3}=\left|\begin{array}{ccc}
+1 & 1 & 1\\
+2 & 1 & 2\\
+-1 & 3 & 3
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=\frac{D_{1}}{D}$
+\end_inset
+
+，
+
+\begin_inset Formula $x_{2}=\frac{D_{2}}{D}$
+\end_inset
+
+，
+
+\begin_inset Formula $x_{3}=\frac{D_{3}}{D}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+如果是齐次方程组，
+ 方程个数=未知符号个数，
+
+\begin_inset Formula $D\neq0$
+\end_inset
+
+，
+只有零解。
+
+\end_layout
+
+\begin_layout Theorem
+齐次线性方程组指的是常数项全部为零的线性方程组。
+如果m<n(行数小于列数，
+即未知数的数量大于所给方程组数），
+则齐次线性方程组有非零解，
+否则为全零解。
+
+\end_layout
+
+\begin_layout Standard
+一个线性方程组可以用矩阵与向量的方程来表示：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Ax=c
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中的 
+\begin_inset Formula $A$
+\end_inset
+
+是一个 
+\begin_inset Formula $n\times n$
+\end_inset
+
+的方块矩阵，
+而向量 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\cdots x_{n})^{T}$
+\end_inset
+
+ 是一个长度为
+\begin_inset Formula $n$
+\end_inset
+
+的行向量(列向量）。
+
+\begin_inset Formula ${\displaystyle c=(c_{1},c_{2},\cdots c_{n})^{T}}$
+\end_inset
+
+ 也一样。
+
+\end_layout
+
+\begin_layout Standard
+克莱姆法则说明：
+如果 
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+是一个可逆矩阵（
+\begin_inset Formula $\det A\neq0$
+\end_inset
+
+ ），
+那么方程(26.1.1)有解 
+\begin_inset Formula $x=(x_{1},x_{2},\cdots x_{n})^{T}$
+\end_inset
+
+，
+其中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle x_{i}=\frac{\det(A_{i})}{\det(A)}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+当中
+\begin_inset Formula $x_{i}$
+\end_inset
+
+是列向量
+\begin_inset Formula $x$
+\end_inset
+
+的第
+\begin_inset Formula $i$
+\end_inset
+
+行（行向量与列向量不一样，
+解释默认列向量）
+\end_layout
+
+\begin_layout Standard
+当中
+\begin_inset Formula ${\displaystyle A_{i}}$
+\end_inset
+
+是列向量
+\begin_inset Formula ${\displaystyle c}$
+\end_inset
+
+取代了 
+\begin_inset Formula $A$
+\end_inset
+
+ 的第i列后得到的矩阵。
+为了方便，
+我们通常使用 
+\begin_inset Formula ${\displaystyle \Delta}$
+\end_inset
+
+来表示 
+\begin_inset Formula ${\displaystyle \det(A)}$
+\end_inset
+
+，
+用
+\begin_inset Formula ${\displaystyle \Delta_{i}}$
+\end_inset
+
+来表示
+\begin_inset Formula ${\displaystyle \det(A_{i})}$
+\end_inset
+
+。
+所以等式(26.1.1)可以写成为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle x_{i}=\frac{\Delta_{i}}{\Delta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 矩阵(matrix)与交换
 \end_layout
