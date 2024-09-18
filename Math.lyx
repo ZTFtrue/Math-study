@@ -64615,7 +64615,7 @@ M & =\left|\begin{array}{cccc}
 \end_layout
 
 \begin_layout Subsection
-高斯消元法或LU分解法
+行列式计算 
 \end_layout
 
 \begin_layout Subsubsection
@@ -64654,17 +64654,188 @@ Using these operations,
 第一行处理完成后不再参与运算
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\left|\begin{array}{ccccc}
+x & a & a & \cdots & a\\
+a & x & a & \cdots & a\\
+a & a & x & \cdots & a\\
+a & a & a & \cdots & a\\
+a & a & a & \cdots & x
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{ccccc}
+x & a & a & \cdots & a\\
+a & x & a & \cdots & a\\
+a & a & x & \cdots & a\\
+a & a & a & \cdots & a\\
+a & a & a & \cdots & x
+\end{array}\right| & =\\
+\text{其余列加到第一列} & =\left|\begin{array}{ccccc}
+x+(n-1)\times a & a & a & \cdots & a\\
+x+(n-1)\times a & x & a & \cdots & a\\
+x+(n-1)\times a & a & x & \cdots & a\\
+x+(n-1)\times a & a & a & \cdots & a\\
+x+(n-1)\times a & a & a & \cdots & x
+\end{array}\right|\\
+\text{提取第一列} & (x+(n-1)\times a)\left|\begin{array}{ccccc}
+1 & a & a & \cdots & a\\
+1 & x & a & \cdots & a\\
+1 & a & x & \cdots & a\\
+1 & a & a & \cdots & a\\
+1 & a & a & \cdots & x
+\end{array}\right|\\
+\text{第一列乘-a}\text{加} & (x+(n-1)\times a)\left|\begin{array}{ccccc}
+1 & 0 & 0 & \cdots & 0\\
+1 & x-a & 0 & \cdots & 0\\
+1 & 0 & x-a & \cdots & 0\\
+1 & 0 & 0 & \cdots & 0\\
+1 & 0 & 0 & \cdots & x-a
+\end{array}\right|\\
+\text{上三角行列式} & (x+(n-1)\times a)(n-1)(x-a)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+LU分解法
+\end_layout
+
+\begin_layout Standard
+尽可能将某一行(列),转成0,然后按照Laplace 展开法则计算
+\end_layout
+
+\begin_layout Subsubsection
+特殊行列式
+\end_layout
+
+\begin_layout Example
+三叉式行列式，
+
+\series bold
+其中
+\series default
+
+\begin_inset Formula $a_{i}\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left|\begin{array}{cccc}
+1+a_{1} & 1 & \cdots & 1\\
+1 & 1+a_{2} & \cdots & 1\\
+\cdots & \cdots & \cdots & \vdots\\
+1 & 1 & \cdots & 1+a_{n}
+\end{array}\right|\\
+\text{加边法}= & \left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+0 & 1+a_{1} & 1 & \cdots & 1\\
+0 & 1 & 1+a_{2} & \cdots & 1\\
+0 & \cdots & \cdots & \cdots & \vdots\\
+0 & 1 & 1 & \cdots & 1+a_{n}
+\end{array}\right|\\
+\text{第}一行×-1= & \left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+-1 & a_{1} & 0 & \cdots & 0\\
+-1 & 0 & a_{2} & \cdots & 0\\
+-1 & \cdots & \cdots & \cdots & \vdots\\
+-1 & 0 & 0 & \cdots & a_{n}
+\end{array}\right|\text{这个就是三叉式行列式}\\
+\text{第二列}×a_{1}+\text{第一列}= & \left|\begin{array}{ccccc}
+1+\frac{1}{a_{1}}+\ldots\frac{1}{a_{n}} & 1 & 1 & \cdots & 1\\
+0 & a_{1} & 0 & \cdots & 0\\
+0 & 0 & a_{2} & \cdots & 0\\
+0 & \cdots & \cdots & \cdots & \vdots\\
+0 & 0 & 0 & \cdots & a_{n}
+\end{array}\right|\\
+= & (1+\frac{1}{a_{1}}+\ldots\frac{1}{a_{n}})\times a_{1}\ldots a_{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+范徳蒙德行列式(写法可以转置)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1\\
+x_{1} & x_{2} & x_{3} & \cdots & x_{n}\\
+\cdots & \cdots & \ddots & \cdots & \vdots\\
+x_{1}^{n-2} & x_{2}^{n-2} & x_{3}^{n-2} & \cdots & x_{n}^{n-2}\\
+x_{1}^{n-1} & x_{2}^{n-1} & x_{3}^{n-1} & \cdots & x_{n}^{n-1}
+\end{array}\right|={\displaystyle \prod_{1\leq i<j\leq n}(x_{j}-x_{i})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+反对称行列式，
+
+\begin_inset Formula $a_{ij}=-a_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left|\begin{array}{cccc}
+0 & 1 & 2 & 3\\
+-1 & 0 & 5 & 4\\
+-2 & -5 & 0 & -6\\
+-3 & -4 & 6 & 0
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+主对角线全为0
+\end_layout
+
+\begin_layout Itemize
+上下对应位置成相反数
+\end_layout
+
+\begin_layout Itemize
+奇数阶，
+
+\begin_inset Formula $D=0$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 特殊行列式
 \end_layout
 
 \begin_layout Itemize
 上三角行列式（Upper Triangular D）是指主对角线以下元素全为0的行列式，
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 如：
-
-\begin_inset Newline newline
-\end_inset
-
 
 \begin_inset Formula $\left|\begin{array}{cccc}
 a_{11} & a_{12} & \cdots & a_{1n}\\
@@ -64677,6 +64848,7 @@ a_{11} & a_{12} & \cdots & a_{1n}\\
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 下三角行列式（Lower Triangular D）是指主对角线以上元素全为0的行列式，
 如：
@@ -64719,11 +64891,59 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \end_layout
 
 \begin_layout Itemize
-其它特殊行列式
-\begin_inset Newline newline
+对称行列式，
+
+\begin_inset Formula $a_{ij}=a_{ij}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\begin{vmatrix}a_{11} & a_{12} & \dots & a_{1n}\\
+a_{12} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{1n} & a_{2n} & \dots & \cdots
+\end{vmatrix}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+主对角线无要求
+\begin_inset Newline newline
+\end_inset
+
+上下对应位置成相反数
+\end_layout
+
+\begin_layout Itemize
+其它行列式
 \begin_inset Formula $\begin{vmatrix}0 & 0 & \dots & a_{1n}\\
 0 & a_{22} & \dots & a_{2n}\\
 \vdots & \vdots & \ddots & \vdots\\
@@ -64753,10 +64973,6 @@ a_{n1} & 0 & \dots & 0
 \vdots & \vdots & \ddots & \vdots\\
 a_{n1} & 0 & \dots & 0
 \end{vmatrix}=-1^{\frac{n(n-1)}{2}a_{1n}a_{2n-1}\cdots a_{n1}}$
-\end_inset
-
-
-\begin_inset Newline newline
 \end_inset
 
 
