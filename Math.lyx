@@ -66194,7 +66194,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \begin_inset Text
 
 \begin_layout Itemize
-行数不等于列数
+行数可以不等于列数
 \end_layout
 
 \begin_layout Itemize
@@ -66211,7 +66211,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 
 \begin_layout Itemize
 记作
-\begin_inset Formula $A$
+\begin_inset Formula $A_{m\times n}$
 \end_inset
 
 
@@ -66232,7 +66232,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end_layout
 
 \begin_layout Standard
-行向量
+行矩阵
 \begin_inset Formula $\left[\begin{array}{cccc}
 a_{1} & a_{2} & \cdots & a_{n}\end{array}\right]$
 \end_inset
@@ -66241,7 +66241,7 @@ a_{1} & a_{2} & \cdots & a_{n}\end{array}\right]$
 \end_layout
 
 \begin_layout Standard
-列向量
+列矩阵
 \begin_inset Formula $\left[\begin{array}{c}
 a_{1}\\
 a_{2}\\
@@ -66255,7 +66255,7 @@ a_{n}
 \end_layout
 
 \begin_layout Standard
-如果矩阵的行和列一样，
+如果矩阵的行和列数一样，
 叫做
 \series bold
 方阵
@@ -66265,7 +66265,12 @@ a_{n}
 \begin_inset Formula $n$
 \end_inset
 
-阶方阵。
+阶方阵，
+
+\begin_inset Formula $A_{n}$
+\end_inset
+
+。
 
 \end_layout
 
@@ -66283,6 +66288,29 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Paragraph
+零矩阵
+\end_layout
+
+\begin_layout Standard
+所有元素都是0,记作 
+\begin_inset Formula ${\displaystyle O}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+负矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=-A$
+\end_inset
+
+所有元素都取相反数
 \end_layout
 
 \begin_layout Paragraph
@@ -66350,7 +66378,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \begin_inset Formula $\left[\begin{array}{cccc}
 \lambda_{1} & 0 & \cdots & 0\\
 0 & \lambda_{2} & \cdots & 0\\
-\vdots & \vdots &  & \vdots\\
+\vdots & \vdots & \ddots & \vdots\\
 0 & 0 & \cdots & \lambda_{3}
 \end{array}\right]$
 \end_inset
@@ -66360,6 +66388,56 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \begin_layout Standard
 对角矩阵一定是三角矩阵。
+数量矩阵是特殊的对角矩阵。
+
+\end_layout
+
+\begin_layout Paragraph
+数量矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a & 0 & \cdots & 0\\
+0 & a & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a
+\end{array}\right]=aE$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(aE)B=B(aE)=aB$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $O$
+\end_inset
+
+和
+\begin_inset Formula $E$
+\end_inset
+
+都是特殊的数量矩阵。
 
 \end_layout
 
@@ -66371,7 +66449,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & 0 & \cdots & 0\\
 0 & 1 & \cdots & 0\\
-\vdots & \vdots &  & \vdots\\
+\vdots & \vdots & \ddots & \vdots\\
 0 & 0 & \cdots & 1
 \end{array}\right]$
 \end_inset
@@ -66393,7 +66471,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \begin_inset Formula $n$
 \end_inset
 
-阶矩阵称为
+阶矩阵(方阵)称为
 \begin_inset Formula $n$
 \end_inset
 
@@ -66425,6 +66503,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 
 \begin_layout Standard
 对称矩阵（Symmetric Matrix）是指元素以主对角线为对称轴对应相等的矩阵，
+主对角线无要求，
 例如：
 
 \end_layout
@@ -66433,9 +66512,66 @@ a_{n1} & a_{n2} & \cdots & a_{nn}
 \begin_inset Formula $\left[\begin{array}{cccc}
 a_{11} & a_{21} & \cdots & a_{n1}\\
 a_{21} & a_{22} & \cdots & a_{n2}\\
-\vdots & \vdots &  & \vdots\\
+\vdots & \vdots & \ddots & \vdots\\
 a_{n1} & a_{n2} & \cdots & a_{nn}
 \end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{ij}=a_{ji}$
+\end_inset
+
+,
+\begin_inset Formula $A^{T}=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A\pm B)^{T}=A^{T}\pm B^{T}=A\pm B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(kA)^{T}=kA^{^{T}}=kA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对称矩阵
+\begin_inset Formula $(AB)^{T}=B^{T}A^{T}=BA=AB$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+反对称矩阵
+\end_layout
+
+\begin_layout Standard
+对称矩阵（Symmetric Matrix）是指元素以主对角线全为0，
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{ij}=-a_{ji}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{T}=-A$
 \end_inset
 
 
@@ -66539,7 +66675,11 @@ c & d
 \end_inset
 
 ,
- 即必须是同型矩阵才可以相加
+ 即必须是
+\series bold
+同型矩阵
+\series default
+才可以相加
 \end_layout
 
 \begin_layout Paragraph
@@ -66559,7 +66699,7 @@ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 数乘运算：
 
 \end_layout
@@ -66585,6 +66725,20 @@ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
 所以这乘法也被称为"标量乘法"
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $\lambda(A+B)=\lambda A+\lambda B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\lambda+\mu)A=\lambda A+\mu A$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 矩阵的乘法
 \end_layout
@@ -66600,6 +66754,8 @@ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
 
 ,
  其中
+\series bold
+
 \begin_inset Formula $A$
 \end_inset
 
@@ -66607,7 +66763,9 @@ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn}
 \begin_inset Formula $B$
 \end_inset
 
-的行数相等。
+的行数相等
+\series default
+。
 计算行与列的"点积"
 \end_layout
 
@@ -66633,16 +66791,66 @@ b_{n1} & b_{n2} & \cdots & b_{nm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $A_{m\times n}B_{n\times k}=C_{m\times k}$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+,
+\begin_inset Formula $m$
+\end_inset
+
+ 不限制是否相等
+\end_layout
+
+\begin_layout Standard
 A的第一行乘以B的第一列的和，
-A的第一行乘以B的第二列的和
-\end_layout
-
-\begin_layout Standard
-没有乘法交换律,位置一定是固定的。
+A的第一行乘以B的第二列的和。
 
 \end_layout
 
 \begin_layout Standard
+A的第二行乘以B的第一列的和，
+A的第二行乘以B的第二列的和。
+
+\end_layout
+
+\begin_layout Standard
+结果矩阵的行数等于第一个矩阵的行数，
+结果矩阵的列等于第二个的列数。
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+没有乘法交换律,位置一定是固定的
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+与零矩阵相乘 
+\begin_inset Formula $A_{mn}O_{nk}=O_{mk}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+与单位矩阵相乘 
+\begin_inset Formula $AE=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结合律：
+
 \begin_inset Formula $(AB)C=A(BC)$
 \end_inset
 
@@ -66650,21 +66858,21 @@ A的第一行乘以B的第二列的和
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\lambda(AB)=(\lambda A)B=A(\lambda B)$
-\end_inset
+分配律：
 
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $A(B+C)=AB+AC$
 \end_inset
 
+，
+
+\begin_inset Formula $(B+C)A=BA+CA$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $(B+C)A=BA+CA$
+\begin_inset Formula $\lambda(AB)=(\lambda A)B=A(\lambda B)$
 \end_inset
 
 
@@ -66966,6 +67174,77 @@ width and height 是
 \end_layout
 
 \begin_layout Subsection
+矩阵的幂
+\end_layout
+
+\begin_layout Standard
+A 是方阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{k}=\underset{k\text{个}}{\underbrace{AAAA\cdots A}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{0}=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{k_{1}}A^{k_{2}}=A^{k_{1}+k_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A^{k_{1}})^{k_{2}}=A^{k_{1}k_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(AB)^{k}\neq A^{k}B^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A+B)^{2}\neq A^{2}+2AB+B^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-B)^{2}\neq A^{2}-2AB+B^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A+E)^{2}=A^{2}+2AE+E^{2}=A^{2}+2A+E^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-E)^{2}=A^{2}-2AE+E^{2}=A^{2}-2A+E^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 方程组与矩阵
 \end_layout
 
@@ -67026,6 +67305,53 @@ b_{n}
 \end{array}\right]$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+所以方程组可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{array}\right]$
+\end_inset
+
+或
+\begin_inset Formula $AX=b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula $X=A^{-1}B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}x_{2}\cdots x_{n}$
+\end_inset
+
+的值（X 矩阵）等于A 矩阵的逆乘以b 矩阵。
 
 \end_layout
 
@@ -67096,10 +67422,6 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 的顺序
 \end_layout
 
-\begin_layout Subsubsection
-对称矩阵
-\end_layout
-
 \begin_layout Standard
 如果
 \begin_inset Formula $A^{T}=A$
@@ -67121,7 +67443,7 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 逆矩阵
 \end_layout
 
@@ -67191,6 +67513,210 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 
 \begin_layout Standard
 \begin_inset Formula $(AB)^{-1}=A^{-1}B^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\times A^{-1}=A^{-1}A=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有些矩阵是没有逆矩阵的。
+
+\end_layout
+
+\begin_layout Standard
+首先，
+矩阵一定要是
+\series bold
+方阵
+\series default
+，
+ 行列式不能是零 （不然便要除以零了）才能有逆矩阵。
+
+\end_layout
+
+\begin_layout Subsubsection
+求逆矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2\times2$
+\end_inset
+
+形：
+
+\begin_inset Formula $\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]^{-1}=\frac{1}{ad-bc}\left[\begin{array}{cc}
+d & -b\\
+-c & a
+\end{array}\right]=\left[\begin{array}{cc}
+\frac{d}{ad-bc} & -\frac{b}{ad-bc}\\
+-\frac{c}{ad-bc} & \frac{a}{ad-bc}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+初等行运算(高斯－若尔当 方法)求逆矩阵
+\end_layout
+
+\begin_layout Standard
+构建增强广阵augmented matrix。
+它是通过将矩阵的列拼接在一起并用竖线分开而创建的。
+
+\end_layout
+
+\begin_layout Standard
+对增广矩阵
+\begin_inset Formula $[A|I]$
+\end_inset
+
+ 进行简约处理(只能行变换)变成 
+\begin_inset Formula $\left[I|A^{-1}\right]$
+\end_inset
+
+.即原来的单位矩阵变成行矩阵。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+只能进行以下运算
+\series default
+：
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+对换两行
+\series default
+的位置
+\end_layout
+
+\begin_layout Itemize
+把一行里的每个元素乘以
+\series bold
+或除以一个常数
+\end_layout
+
+\begin_layout Itemize
+把一行加上另一行的倍，
+并取代前者
+\end_layout
+
+\begin_layout Itemize
+这里和行列式不一样，
+
+\series bold
+对换两行
+\series default
+的位置和一行里的每个元素乘以
+\series bold
+或除以一个常数,
+\series default
+不需要改变符号或倍数。
+
+\end_layout
+
+\begin_layout Paragraph
+余子式、代数余子式和伴随矩阵
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}\right]$
+\end_inset
+
+逆矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}\mid\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+第一行乘以
+\begin_inset Formula $-4$
+\end_inset
+
+加在第二行
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+0 & -6
+\end{array}\mid\begin{array}{cc}
+1 & 0\\
+-4 & 1
+\end{array}\right]$
+\end_inset
+
+第二行除以
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+0 & 1
+\end{array}\mid\begin{array}{cc}
+1 & 0\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+消去第一行的第二个元素，
+用第二行称
+\begin_inset Formula $-3$
+\end_inset
+
+加第一行。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\mid\begin{array}{cc}
+-1 & \frac{1}{2}\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A^{1}=\left[\begin{array}{cc}
+-1 & \frac{1}{2}\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
 \end_inset
 
 
