@@ -64092,9 +64092,84 @@ b_{31} & b_{32}
 \begin_layout Theorem
 某行元素和另一行的代数余子式乘积 之和为0。
 
-\begin_inset Formula $\sum_{i=1}^{n}m_{i;j+1}C_{i,j}=0$
+\end_layout
+
+\begin_layout Theorem
+对于一个 
+\begin_inset Formula $n\times n$
 \end_inset
 
+ 的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，
+记第 
+\begin_inset Formula $i$
+\end_inset
+
+行的元素为 
+\begin_inset Formula $a_{i1}$
+\end_inset
+
+,
+\begin_inset Formula $a_{i2}$
+\end_inset
+
+,\SpecialChar ldots
+,
+\begin_inset Formula $a_{in}$
+\end_inset
+
+，
+第 
+\begin_inset Formula $j$
+\end_inset
+
+行的元素为 
+\begin_inset Formula $a_{j1}$
+\end_inset
+
+,
+\begin_inset Formula $a_{j2}$
+\end_inset
+
+,\SpecialChar ldots
+,
+\begin_inset Formula $a_{jn}$
+\end_inset
+
+，
+那么有：
+
+\begin_inset Formula 
+\[
+\stackrel[k=1]{n}{\sum}a_{ik}\cdot A_{jk}=0(i\neq j)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+其中 
+\begin_inset Formula $A_{jk}$
+\end_inset
+
+是矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 中第
+\begin_inset Formula $j$
+\end_inset
+
+行、第 
+\begin_inset Formula $k$
+\end_inset
+
+列的代数余子式。
 
 \end_layout
 
@@ -65208,427 +65283,6 @@ a_{i1} & a_{i2} & \dots & a_{in}\\
 \end{vmatrix}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Subsection
-几何意义
-\end_layout
-
-\begin_layout Standard
-行列式的一个自然的源起是 
-\begin_inset Formula $n$
-\end_inset
-
- 维平行体的体积。
-行列式的定义和 
-\begin_inset Formula $n$
-\end_inset
-
- 维平行体的体积有着本质上的关联。
- 
-\end_layout
-
-\begin_layout Subsubsection
-向量的叉积
-\end_layout
-
-\begin_layout Standard
-叉积
-\begin_inset Formula $\vec{a}×\vec{b}$
-\end_inset
-
- 是一个向量，
-其结果垂直于 
-\begin_inset Formula $\vec{a}$
-\end_inset
-
- 和 
-\begin_inset Formula $\vec{b}$
-\end_inset
-
-，
-方向由右手定则决定，
-大小为平行四边形的面积。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​),(a_{3}​b_{1}​−a_{1}​b_{3}​),(a_{1}​b_{2}​−a_{2}​b_{1}​))
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\vec{a}×\vec{b}=\left|\begin{array}{ccc}
-\vec{i} & \vec{j} & \vec{k}\\
-a_{1} & a_{2} & a_{3}\\
-b_{1} & b_{2} & b_{3}
-\end{array}\right|$
-\end_inset
-
-其中，
-
-\begin_inset Formula $\vec{i}$
-\end_inset
-
-、
-\begin_inset Formula $\vec{j}$
-\end_inset
-
- 和 
-\begin_inset Formula $\vec{k}$
-\end_inset
-
- 是标准基向量。
-
-\end_layout
-
-\begin_layout Standard
-展开这个行列式可以得到:
-\begin_inset Formula 
-\begin{align*}
-\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​)\vec{i}-(a_{3}​b_{1}​−a_{1}​b_{3}​)\vec{j}+(a_{1}​b_{2}​−a_{2}​b_{1}​))\vec{k}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-二维向量组的行列式
-\end_layout
-
-\begin_layout Standard
-在一个二维平面上，
-两个向量 
-\begin_inset Formula ${\displaystyle \vec{X}=\left(a,c\right)}$
-\end_inset
-
-和 
-\begin_inset Formula ${\displaystyle \vec{X'}=\left(b,d\right)}$
-\end_inset
-
-的行列式是：
-
-\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}a & b\\
-c & d
-\end{vmatrix}=ad-bc}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-比如说，
-两个向量
-\begin_inset Formula ${\displaystyle X=\left(2,1\right)}$
-\end_inset
-
-和 
-\begin_inset Formula ${\displaystyle X'=\left(3,4\right)}$
-\end_inset
-
-的行列式是：
-
-\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}2 & 3\\
-1 & 4
-\end{vmatrix}=2\cdot4-3\cdot1=5}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-经计算可知，
-当系数是实数时，
-行列式表示的是向量
-\begin_inset Formula $\vec{X}$
-\end_inset
-
- 和 
-\begin_inset Formula $\vec{X′}$
-\end_inset
-
- 形成的平行四边形的有向面积，
-并有如下性质：
-
-\end_layout
-
-\begin_layout Itemize
-行列式为零当且仅当两个向量共线（线性相关），
-这时平行四边形退化成一条直线。
-
-\end_layout
-
-\begin_layout Itemize
-如果以逆时针方向为正向的话，
-有向面积的意义是：
-平行四边形面积为
-\series bold
-正
-\series default
-当且仅当以原点为不动点将
-\begin_inset Formula $\vec{X}$
-\end_inset
-
-逆时针“转到”
-\begin_inset Formula $\vec{X′}$
-\end_inset
-
-处时，
-扫过的地方在平行四边形里，
-否则的话面积就是负的。
-
-\end_layout
-
-\begin_layout Itemize
-行列式是一个双线性映射。
-也就是说，
-
-\begin_inset Formula $\det(\lambda X+\mu Y,X')=\lambda\det(X,X')+\mu\det(Y,X')$
-\end_inset
-
-，
-并且
-\begin_inset Formula $\det(X,\lambda X'+\mu Y')=\lambda\det(X,X')+\mu\det(X,Y')$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-其几何意义是：
-以同一个向量 
-\begin_inset Formula $v$
-\end_inset
-
- 作为一条边的两个平行四边形的面积之和，
-等于它们各自另一边的向量 
-\begin_inset Formula $u$
-\end_inset
-
- 和 
-\begin_inset Formula $u′$
-\end_inset
-
-加起来后的向量：
-
-\begin_inset Formula $u+u′$
-\end_inset
-
- 和 
-\begin_inset Formula $v$
-\end_inset
-
-所构成的平行四边形的面积，
-如图中所示。
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Float figure
-placement document
-alignment document
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/二维向量几何.png
-	lyxscale 50
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-三维向量组的行列式
-\end_layout
-
-\begin_layout Standard
-在三维的有向空间中，
-三个三维向量的行列式是：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\det(X,X',X'')=\begin{vmatrix}x & x' & x''\\
-y & y' & y''\\
-z & z' & z''
-\end{vmatrix}=xy'z''+x'y''z+x''yz'-xy''z'-x'yz''-x''y'z
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-比如说，
-三个向量
-\begin_inset Formula ${\displaystyle \left(2,1,5\right)}$
-\end_inset
-
-、
-\begin_inset Formula ${\displaystyle \left(6,0,8\right)}$
-\end_inset
-
-和
-\begin_inset Formula ${\displaystyle \left(3,2,4\right)}$
-\end_inset
-
-的行列式是：
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-\det(X,X',X'') & =\begin{vmatrix}2 & 6 & 3\\
-1 & 0 & 2\\
-5 & 8 & 4
-\end{vmatrix}\\
- & =2\cdot0\cdot4+6\cdot2\cdot5+3\cdot1\cdot8-2\cdot2\cdot8-6\cdot1\cdot4-3\cdot0\cdot5\\
- & =28
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-当系数是实数时，
-行列式表示 
-\begin_inset Formula $X$
-\end_inset
-
-、 
-\begin_inset Formula $X′$
-\end_inset
-
- 和 
-\begin_inset Formula $X″$
-\end_inset
-
- 三个向量形成的平行六面体的有向体积，
-也叫做这三个向量的混合积。
-同样的，
-可以观察到如下性质：
-
-\end_layout
-
-\begin_layout Itemize
-行列式为零当且仅当三个向量共线或者共面（三者线性相关），
-这时平行六面体退化为平面图形，
-体积为零。
-
-\end_layout
-
-\begin_layout Itemize
-三维空间中有向体积的定义要比二维空间中复杂，
-一般是根据右手定则来约定。
-比如右图中
-\begin_inset Formula $(u,v,w)$
-\end_inset
-
-所形成的平行六面体的体积是正的，
-而
-\begin_inset Formula $(u,w,v)$
-\end_inset
-
-所形成的平行六面体的体积是负的。
-这个定义和行列式的计算并不矛盾，
-因为行列式中向量的坐标都是在取好坐标系后才决定的，
-而坐标系的三个方向一般也是按照右手规则来设定的。
-如果计算开始时坐标系的定向反过来的话，
-有向体积的定义也要跟着反过来，
-这样行列式才能代表有向体积
-\end_layout
-
-\begin_layout Itemize
-这时行列式是一个“三线性映射”，
-也就是说，
-对第一个向量有 
-\begin_inset Formula $\det(aX+bY,X',X'')=a\det(X,X',X'')+b\det(Y,X',X'')$
-\end_inset
-
-，
-对第二、第三个向量也是如此。
-其几何意义和二维时基本相同，
-是指当生成两个平行六面体的每组三个向量中如果有
-\series bold
-两个
-\series default
-是重合的，
-比如分别是：
-
-\begin_inset Formula $(u,v,w)$
-\end_inset
-
-和
-\begin_inset Formula $(u',v,w)$
-\end_inset
-
-，
-那么它们的体积之总和等于将
-\begin_inset Formula ${\displaystyle u}$
-\end_inset
-
-和 
-\begin_inset Formula $u′$
-\end_inset
-
- 加起来后的向量 
-\begin_inset Formula $u+u′$
-\end_inset
-
- 和 
-\begin_inset Formula $v$
-\end_inset
-
-,
- 
-\begin_inset Formula $w$
-\end_inset
-
- 所形成的平行六面体的体积。
 
 \end_layout
 
@@ -67252,7 +66906,7 @@ A 是方阵
 \begin_inset Formula $AX=b\begin{cases}
 a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n} & =b_{1}\\
 a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n} & =b_{2}\\
-\cdots\cdots\cdots\\
+\cdots\cdots\cdots & \vdots\\
 a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =b_{m}
 \end{cases}$
 \end_inset
@@ -67333,7 +66987,7 @@ b_{n}
 \end_inset
 
 或
-\begin_inset Formula $AX=b$
+\begin_inset Formula $AX=B$
 \end_inset
 
 
@@ -67351,7 +67005,11 @@ b_{n}
 \begin_inset Formula $x_{1}x_{2}\cdots x_{n}$
 \end_inset
 
-的值（X 矩阵）等于A 矩阵的逆乘以b 矩阵。
+的值（X 矩阵）等于A 矩阵的逆乘以
+\begin_inset Formula $B$
+\end_inset
+
+ 矩阵。
 
 \end_layout
 
@@ -67444,6 +67102,319 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \end_layout
 
 \begin_layout Subsection
+代数余子式和伴随矩阵
+\end_layout
+
+\begin_layout Standard
+一个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j$
+\end_inset
+
+)代数余子式：
+
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ 是指
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+余子式
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+与
+\begin_inset Formula $(−1)^{i+j}$
+\end_inset
+
+的乘积：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{ij}=(−1)^{i+j}M_{ji}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵是指将
+\begin_inset Formula $A$
+\end_inset
+
+的
+\begin_inset Formula $(i,j)$
+\end_inset
+
+代数余子式摆在第i行第
+\begin_inset Formula $j$
+\end_inset
+
+列所得到的矩阵，
+记为
+\begin_inset Formula $C$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+的转置矩阵称为
+\begin_inset Formula $A$
+\end_inset
+
+的伴随矩阵，
+伴随矩阵类似于逆矩阵，
+并且当
+\begin_inset Formula $A$
+\end_inset
+
+可逆时可以用来计算它的逆矩阵。
+ 
+\end_layout
+
+\begin_layout Subsubsection
+伴随矩阵
+\end_layout
+
+\begin_layout Standard
+只有方阵才有伴随矩阵（adjugate matrix）,对任意方阵都有伴随矩阵。
+
+\end_layout
+
+\begin_layout Standard
+A的伴随矩阵是一个
+\begin_inset Formula $n×n$
+\end_inset
+
+的矩阵（记作adj(A)或
+\begin_inset Formula $A^{*}$
+\end_inset
+
+），
+使得其第
+\begin_inset Formula $i$
+\end_inset
+
+行第
+\begin_inset Formula $j$
+\end_inset
+
+ 列的元素是
+\begin_inset Formula $A$
+\end_inset
+
+关于第
+\begin_inset Formula $j$
+\end_inset
+
+行第
+\begin_inset Formula $i$
+\end_inset
+
+列的代数余子式。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{A}=\begin{bmatrix}a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其伴随矩阵是：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+{\displaystyle adj(\mathbf{A})=} & \begin{bmatrix}+\begin{vmatrix}a_{22} & a_{23}\\
+a_{32} & a_{33}
+\end{vmatrix} & -\begin{vmatrix}a_{21} & a_{23}\\
+a_{31} & a_{33}
+\end{vmatrix} & +\begin{vmatrix}a_{21} & a_{22}\\
+a_{31} & a_{32}
+\end{vmatrix}\\
+-\begin{vmatrix}a_{12} & a_{13}\\
+a_{32} & a_{33}
+\end{vmatrix} & +\begin{vmatrix}a_{11} & a_{13}\\
+a_{31} & a_{33}
+\end{vmatrix} & -\begin{vmatrix}a_{11} & a_{12}\\
+a_{31} & a_{32}
+\end{vmatrix}\\
++\begin{vmatrix}a_{12} & a_{13}\\
+a_{22} & a_{23}
+\end{vmatrix} & -\begin{vmatrix}a_{11} & a_{13}\\
+a_{21} & a_{23}
+\end{vmatrix} & +\begin{vmatrix}a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{vmatrix}
+\end{bmatrix}^{T}\\
+= & \begin{bmatrix}A_{11} & A_{12} & A_{13}\\
+A_{21} & A_{22} & A_{23}\\
+A_{31} & A_{32} & A_{33}
+\end{bmatrix}^{T}=\begin{bmatrix}A_{11} & A_{21} & A_{31}\\
+A_{12} & A_{22} & A_{32}\\
+A_{13} & A_{23} & A_{33}
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对任意方阵 
+\begin_inset Formula $A\cdot adj(A)=adj(A)\cdot A=|A|E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\cdot adj(A)=\begin{bmatrix}a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}\begin{bmatrix}A_{11} & A_{21} & A_{31}\\
+A_{12} & A_{22} & A_{32}\\
+A_{13} & A_{23} & A_{33}
+\end{bmatrix}=\begin{bmatrix}|A| & 0 & 0\\
+0 & |A| & 0\\
+0 & 0 & |A|
+\end{bmatrix}=|A|\begin{bmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|A\cdot adj(A)|=||A|E|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|A|\cdot|adj(A)|=|A|^{n}$
+\end_inset
+
+ ，
+
+\begin_inset Formula $|adj(A)|=|A|^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆,
+ 
+\begin_inset Formula $adj(A)$
+\end_inset
+
+也可逆。
+ 
+\begin_inset Formula $adj(A)^{-1}=\frac{1}{|A|}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $adj(A\text{）}=|A|A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $adj(adj(A))=|A|^{n-2}A$
+\end_inset
+
+,
+\begin_inset Formula $(A^{*})^{*}=|A|^{n^{2}-3n+3}A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $A=[5]$
+\end_inset
+
+的伴随矩阵。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $[5]adj(A)=5E=5[1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所有
+\begin_inset Formula $adj(A)=1=[1]$
+\end_inset
+
+ ,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1$
+\end_inset
+
+和
+\begin_inset Formula $[1]$
+\end_inset
+
+没有区别。
+
+\end_layout
+
+\begin_layout Subsection
 逆矩阵
 \end_layout
 
@@ -67526,7 +67497,207 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \end_layout
 
 \begin_layout Standard
+可逆矩阵唯一。
+
+\end_layout
+
+\begin_layout Standard
 有些矩阵是没有逆矩阵的。
+
+\begin_inset Formula $O$
+\end_inset
+
+不可逆。
+
+\end_layout
+
+\begin_layout Standard
+可逆：
+
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+，
+非奇异，
+非退化，
+满秩。
+
+\end_layout
+
+\begin_layout Standard
+方阵的行列式：
+
+\begin_inset Formula $A=\text{\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]}$
+\end_inset
+
+，
+方阵A的行列式：
+
+\begin_inset Formula $|A|=\left|\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方阵性质：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|A^{T}|=|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|kA|=k^{n}|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $|AB|=|A|\cdot|B|$
+\end_inset
+
+,
+ 
+\begin_inset Formula $|ABC|=|A|\cdot|B|\cdot|ABC|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ 可逆，
+则
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+可逆。
+
+\begin_inset Formula $(A^{-1})^{-1}=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ 可逆，
+
+\begin_inset Formula $AB$
+\end_inset
+
+可逆，
+
+\begin_inset Formula $(AB)^{\ensuremath{-1}}=B^{-1}A^{-1}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $AB\cdot B^{-1}A^{-1}=AA^{-1}=E$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆，
+
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ 可逆。
+ 
+\begin_inset Formula $(kA)^{-1}=\frac{1}{k}A^{-1},k\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆，
+
+\begin_inset Formula $|A^{-1}|=\frac{1}{|A|}=|A|^{-1}$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆,
+ 
+\begin_inset Formula $adj(A)$
+\end_inset
+
+也可逆。
+ 
+\begin_inset Formula $adj(A)^{-1}=\frac{1}{|A|}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $5$
+\end_inset
+
+阶，
+
+\begin_inset Formula $|A|=3$
+\end_inset
+
+,求
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|-A|=(-1)^{5}|A|=-3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|2A^{T}|=(2)^{5}|A^{T}|=2^{5}\times3$
+\end_inset
+
 
 \end_layout
 
@@ -67538,10 +67709,718 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \series default
 ，
  行列式不能是零 （不然便要除以零了）才能有逆矩阵。
+ 
+\end_layout
+
+\begin_layout Subsection
+矩阵的初等变换
+\end_layout
+
+\begin_layout Subsubsection
+初等行变换
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+只能进行以下运算
+\series default
+：
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+交换两行
+\series default
+的位置
+\end_layout
+
+\begin_layout Itemize
+把一行里的每个元素乘以
+\series bold
+或除以一个不等于零的常数
+\end_layout
+
+\begin_layout Itemize
+另一行的
+\begin_inset Formula $l$
+\end_inset
+
+倍加上这 一行，
+并取代这行
+\end_layout
+
+\begin_layout Standard
+这里和行列式不一样（两者性质没有关系），
+
+\series bold
+对换两行
+\series default
+的位置和一行里的每个元素乘以
+\series bold
+或除以一个常数,
+\series default
+不需要改变符号或倍数。
+
+\end_layout
+
+\begin_layout Standard
+初等行变换，
+矩阵用箭头连接，
+不能用
+\begin_inset Formula $=$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+任何一个矩阵都可以通过初等变换变化为标准形
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+3 & 2 & 3 & 4\\
+2 & 1 & 0 & 0
+\end{array}\right]\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+等价
+\series default
+：
+
+\begin_inset Formula $A$
+\end_inset
+
+经初等行变换得到
+\begin_inset Formula $B$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+等价于
+\begin_inset Formula $B$
+\end_inset
+
+,记作
+\begin_inset Formula $A\cong B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+反射性 
+\begin_inset Formula $A\cong B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对称性
+\begin_inset Formula $A\cong B\rightarrow B\cong A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\cong B$
+\end_inset
+
+,
+ 
+\begin_inset Formula $B\cong C$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $A\cong C$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A\cong\text{标准形}$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Subsubsection
+初等方阵
+\end_layout
+
+\begin_layout Standard
+一个 
+\begin_inset Formula $n$
+\end_inset
+
+阶单位矩阵 
+\begin_inset Formula $E$
+\end_inset
+
+经过一次初等行变换或一次初等列变换所得矩阵称为 
+\begin_inset Formula $n$
+\end_inset
+
+ 阶初等矩阵。
+
+\end_layout
+
+\begin_layout Standard
+给定单位矩阵
+\end_layout
+
+\begin_layout Standard
+两行（列）互换：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle R_{i}\leftrightarrow R_{j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把某行（列）乘以一非零常数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle kR_{i}\rightarrow R_{i},\ }其中k≠0{\displaystyle k\neq0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把第 i 行（列）加上第 j 行（列）的 k 倍：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle R_{i}+kR_{j}\rightarrow R_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+行互换
+\end_layout
+
+\begin_layout Standard
+此变换 
+\begin_inset Formula $T_{ij}$
+\end_inset
+
+ 将单位矩阵的第 
+\begin_inset Formula $i$
+\end_inset
+
+行的所有元素与第 
+\begin_inset Formula $j$
+\end_inset
+
+行互换。
+(
+\begin_inset Formula $E(i,j)$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle T_{ij}=\begin{bmatrix}1\\
+ & \ddots\\
+ &  & 0 &  & 1\\
+ &  &  & \ddots\\
+ &  & 1 &  & 0\\
+ &  &  &  &  &  & \ddots\\
+ &  &  &  &  &  &  & 1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+性质
+\end_layout
+
+\begin_layout Itemize
+逆矩阵即自身：
+ 
+\begin_inset Formula ${\displaystyle T_{ij}^{-1}=T_{ij}}$
+\end_inset
+
+。
+逆矩阵和转置也是初等方阵。
+
+\end_layout
+
+\begin_layout Itemize
+因为单位矩阵的行列式为
+\begin_inset Formula $1$
+\end_inset
+
+，
+故 
+\begin_inset Formula ${\displaystyle \det T_{ij}=-1}$
+\end_inset
+
+。
+对所有阶数相同的方阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 亦有以下性质：
+
+\begin_inset Formula ${\displaystyle \det T_{ij}A=-\det A}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subparagraph
+把某行乘以一非零常数
+\end_layout
+
+\begin_layout Standard
+此变换 
+\begin_inset Formula $T_{i}(m)$
+\end_inset
+
+将第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行的所有元素乘以一个非零常数 
+\begin_inset Formula $m$
+\end_inset
+
+。
+(
+\begin_inset Formula $E(i(m))$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T_{i}(m)=\begin{bmatrix}1\\
+ & \ddots\\
+ &  & 1\\
+ &  &  & m\\
+ &  &  &  & 1\\
+ &  &  &  &  & \ddots\\
+ &  &  &  &  &  & 1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+性质
+\end_layout
+
+\begin_layout Itemize
+逆矩阵为 
+\begin_inset Formula $T_{i}(m)^{-1}=T_{i}(\frac{1}{m})$
+\end_inset
+
+。
+逆矩阵和转置也是初等方阵。
+
+\end_layout
+
+\begin_layout Itemize
+此矩阵及其逆矩阵均为对角矩阵。
+
+\end_layout
+
+\begin_layout Itemize
+其行列式 
+\begin_inset Formula $\det T_{i}(m)=m$
+\end_inset
+
+，
+故对所有阶数相同的方阵 A 都有 
+\begin_inset Formula $\det(T_{i}(m)A)=m\det A$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subparagraph
+把第 i 行加上第 j 行的 m 倍
+\end_layout
+
+\begin_layout Standard
+此变换
+\begin_inset Formula $T_{ij}(m)$
+\end_inset
+
+将第
+\begin_inset Formula $i$
+\end_inset
+
+行加上第
+\begin_inset Formula $j$
+\end_inset
+
+行的 
+\begin_inset Formula $m$
+\end_inset
+
+ 倍，
+其中 
+\begin_inset Formula $m$
+\end_inset
+
+ 为第 
+\begin_inset Formula $i$
+\end_inset
+
+ 列第
+\begin_inset Formula $j$
+\end_inset
+
+行的元素。
+
+\begin_inset Formula $E(i,j(m))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle T_{ij}(m)=\begin{bmatrix}1\\
+ & \ddots\\
+ &  & 1\\
+ &  &  & \ddots\\
+ &  & m &  & 1\\
+ &  &  &  &  &  & \ddots\\
+ &  &  &  &  &  &  & 1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+性质
+\end_layout
+
+\begin_layout Itemize
+逆矩阵具有性质
+\begin_inset Formula $T_{ij}(m)^{-1}=T_{ij}(-m)$
+\end_inset
+
+。
+逆矩阵和转置也是初等方阵。
+
+\end_layout
+
+\begin_layout Itemize
+此矩阵及其逆矩阵均为三角矩阵。
+
+\end_layout
+
+\begin_layout Itemize
+其行列式
+\begin_inset Formula ${\displaystyle \det T_{ij}(m)=1}$
+\end_inset
+
+，
+故对所有阶数相同的方阵 
+\begin_inset Formula $A$
+\end_inset
+
+有 
+\begin_inset Formula $\det(T_{ij}(m)A)=\det A$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $A$
+\end_inset
+
+是任意一个矩阵，
+初等方阵左乘
+\begin_inset Formula $A$
+\end_inset
+
+，
+相当于对
+\begin_inset Formula $A$
+\end_inset
+
+实施对应的行变换。
+初等方阵右乘
+\begin_inset Formula $A$
+\end_inset
+
+，
+相当于对
+\begin_inset Formula $A$
+\end_inset
+
+实施对应的列变换。
+
+\end_layout
+
+\begin_layout Theorem*
+对
+\begin_inset Formula $A$
+\end_inset
+
+是任意一个矩阵，
+都存在初等矩阵
+\begin_inset Formula $P_{1},P_{2},\cdots P_{s}$
+\end_inset
+
+,
+\begin_inset Formula $Q_{1},Q_{2},\cdots Q_{t}$
+\end_inset
+
+,使得
+\begin_inset Formula $P_{s}\cdots P_{1}AQ_{1}\cdots Q_{t}$
+\end_inset
+
+为标准形。
+即
+\begin_inset Formula $A$
+\end_inset
+
+ 可以初等行（列）变换转换为标准形。
+
+\end_layout
+
+\begin_layout Corollary
+A,B 等价
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+存在可逆 P，
+Q，
+使得 
+\begin_inset Formula $PAQ=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+A可逆
+\begin_inset Formula $\Longleftrightarrow$
+\end_inset
+
+A 的标准形为单位矩阵
+\begin_inset Formula $E$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A=P_{1}\cdots P_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+初等行运算(高斯－若尔当 方法)求逆矩阵
+\end_layout
+
+\begin_layout Standard
+通过以上定理可以理解
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q_{1}Q_{2}\cdots A=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q_{1}Q_{2}\cdots E=A^{-1}$
+\end_inset
+
+对
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $E$
+\end_inset
+
+做同样的初等行变换,
+ 当
+\begin_inset Formula $A\rightarrow E$
+\end_inset
+
+时，
+
+\begin_inset Formula $E\rightarrow A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+构建增广阵augmented matrix。
+它是通过将矩阵的列拼接在一起并用竖线分开而创建的。
+
+\end_layout
+
+\begin_layout Standard
+对增广矩阵
+\begin_inset Formula $[A|I]$
+\end_inset
+
+ 进行简约处理(只能行变换)变成 
+\begin_inset Formula $\left[I|A^{-1}\right]$
+\end_inset
+
+.即原来的单位矩阵变成行矩阵。
+
+\begin_inset Formula $(A,E)\stackrel{\text{行变换}}{\longrightarrow}(E,A^{-1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}\right]$
+\end_inset
+
+逆矩阵
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+4 & 6
+\end{array}|\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]\rightarrow$
+\end_inset
+
+第一行乘以
+\begin_inset Formula $-4$
+\end_inset
+
+加在第二行
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+0 & -6
+\end{array}\mid\begin{array}{cc}
+1 & 0\\
+-4 & 1
+\end{array}\right]\rightarrow$
+\end_inset
+
+第二行除以
+\begin_inset Formula $-6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 3\\
+0 & 1
+\end{array}\mid\begin{array}{cc}
+1 & 0\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]\rightarrow$
+\end_inset
+
+消去第一行的第二个元素，
+用第二行称
+\begin_inset Formula $-3$
+\end_inset
+
+加第一行。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\mid\begin{array}{cc}
+-1 & \frac{1}{2}\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A^{1}=\left[\begin{array}{cc}
+-1 & \frac{1}{2}\\
+\frac{2}{3} & -\frac{1}{6}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+如
+\begin_inset Formula $A$
+\end_inset
+
+无法转换成单位矩阵，
+
+\begin_inset Formula $A$
+\end_inset
+
+不可逆。
+如果原来矩阵行列式的值为零，
+初等行变换不改变它的值。
+
+\end_layout
+
+\begin_layout Subsection
 求逆矩阵
 \end_layout
 
@@ -67567,155 +68446,776 @@ d & -b\\
 \end_layout
 
 \begin_layout Paragraph
-初等行运算(高斯－若尔当 方法)求逆矩阵
+余子式、代数余子式和伴随矩阵
 \end_layout
 
 \begin_layout Standard
-构建增强广阵augmented matrix。
-它是通过将矩阵的列拼接在一起并用竖线分开而创建的。
+\begin_inset Formula $A^{-1}=\frac{1}{|A|}adj(A)$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-对增广矩阵
-\begin_inset Formula $[A|I]$
+\begin_inset Formula $A\cdot adj(A)=adj(A)\cdot A=|A|E$
 \end_inset
 
- 进行简约处理(只能行变换)变成 
-\begin_inset Formula $\left[I|A^{-1}\right]$
+同时乘
+\begin_inset Formula $\frac{1}{|A|}$
 \end_inset
 
-.即原来的单位矩阵变成行矩阵。
+(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(\frac{1}{|A|}adj(A))=\frac{1}{|A|}adj(A)A=E$
+\end_inset
+
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Example
+\begin_inset Formula $A+B=AB$
+\end_inset
 
-\series bold
-只能进行以下运算
-\series default
-：
 
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A-E$
+\end_inset
 
-\series bold
-对换两行
-\series default
-的位置
+可逆
 \end_layout
 
-\begin_layout Itemize
-把一行里的每个元素乘以
-\series bold
-或除以一个常数
+\end_deeper
+\begin_layout Solution
+\begin_inset Formula $AB-A-B=O$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-把一行加上另一行的倍，
-并取代前者
+\begin_layout Solution
+\begin_inset Formula $AB-A-B+E=E$
+\end_inset
+
+,
+ 
+\begin_inset Formula $AB-B-A+E=E$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-这里和行列式不一样，
+\begin_layout Solution
+\begin_inset Formula $(A-E)B-(A-E)=E$
+\end_inset
 
-\series bold
-对换两行
-\series default
-的位置和一行里的每个元素乘以
-\series bold
-或除以一个常数,
-\series default
-不需要改变符号或倍数。
+,
+\begin_inset Formula $(A-E)(B-E)=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $(A-E)^{-1}=B-E$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Paragraph
-余子式、代数余子式和伴随矩阵
+矩阵方程
 \end_layout
 
 \begin_layout Example
+\begin_inset Formula $AX=A+2X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $AX-2X=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+检查
+\begin_inset Formula $(A-2E)$
+\end_inset
+
+逆，
+
+\begin_inset Formula $|A-2E|\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-2E)X=A$
+\end_inset
+
+同时左乘
+\begin_inset Formula $(A-2E)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-2E)^{-1}(A-2E)X=(A-2E)^{-1}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X=(A-2E)^{-1}A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+分块矩阵
+\end_layout
+
+\begin_layout Standard
+一个分块矩阵或是分段矩阵就是将矩阵分割出较小的矩形矩阵，
+这些较小的矩阵就称为区块。
+换个方式来说，
+就是以较小的矩阵组合成一个矩阵。
+分块矩阵的分割原则是以水平线和垂直线进行划分。
+分块矩阵中，
+位在同一行（列）的每一个子矩阵，
+都拥有相同的列数（行数）。
+
+\end_layout
+
+\begin_layout Standard
+通过将大的矩阵通过分块的方式划分，
+并将每个分块看做另一个矩阵的元素，
+这样之后再参与运算，
+通常可以让计算变得清晰甚至得以大幅简化。
+例如，
+有的大矩阵可以通过分块变为对角矩阵或者是三角矩阵等特殊形式的矩阵。
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula ${\displaystyle P=\begin{bmatrix}1 & 1 & 2 & 2\\
+1 & 1 & 2 & 2\\
+3 & 3 & 4 & 4\\
+3 & 3 & 4 & 4
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以分成四个 
+\begin_inset Formula $2×2$
+\end_inset
+
+ 区块
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle P_{11}=\begin{bmatrix}1 & 1\\
+1 & 1
+\end{bmatrix},P_{12}=\begin{bmatrix}2 & 2\\
+2 & 2
+\end{bmatrix},P_{21}=\begin{bmatrix}3 & 3\\
+3 & 3
+\end{bmatrix},P_{22}=\begin{bmatrix}4 & 4\\
+4 & 4
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分块后的矩阵可以写作 
+\begin_inset Formula ${\displaystyle P=\begin{bmatrix}P_{11} & P_{12}\\
+P_{21} & P_{22}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以分成其它形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{1}=\left[\begin{array}{ccc}
+1 & 1 & 2\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $P_{2}=\left[\begin{array}{c}
+2\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $P_{3}=\begin{bmatrix}1 & 1 & 2\\
+3 & 3 & 4\\
+3 & 3 & 4
+\end{bmatrix}$
+\end_inset
+
+,
+\begin_inset Formula $P_{4}=\begin{bmatrix}2\\
+4\\
+4
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle P=\begin{bmatrix}P_{1} & P_{2}\\
+P_{3} & P_{4}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{1}=\begin{bmatrix}1 & 1 & 2 & 2\end{bmatrix}$
+\end_inset
+
+,
+\begin_inset Formula $A_{2}=\begin{bmatrix}1 & 1 & 2 & 2\end{bmatrix}$
+\end_inset
+
+,
+\begin_inset Formula $A_{3}=\begin{bmatrix}3 & 3 & 4 & 4\end{bmatrix}$
+\end_inset
+
+,
+\begin_inset Formula $A_{4}=\begin{bmatrix}3 & 3 & 4 & 4\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=\begin{bmatrix}A_{1}\\
+A_{2}\\
+A_{3}\\
+A_{4}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+标准形
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D_{m\times n}=\begin{bmatrix}1 & 1 &  &  &  & 0\\
+0 & \ddots &  &  &  & 0\\
+ &  & 1 &  &  & 0\\
+ &  &  & 0 &  & 0\\
+ &  &  &  & \ddots & \vdots\\
+0 &  &  &  & 0 & 0
+\end{bmatrix}_{m\times n}=\begin{bmatrix}E_{r} & O_{r\times(n-r)}\\
+O_{(m-r)\times r} & O_{(m-r)\times(n-r)}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+分块矩加法
+\end_layout
+
+\begin_layout Standard
+分块时保证保证对应形状一样
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle A+B=\begin{bmatrix}A_{11}+B_{11} & A_{12}+B_{12} & \cdots & A_{1q}+B_{1q}\\
+A_{21}+B_{21} & A_{22}+B_{22} & \cdots & A_{2q}+B_{2q}\\
+\vdots & \vdots & \ddots & \vdots\\
+A_{p1}+B_{p1} & A_{p2}+B_{p2} & \cdots & A_{pq}+B_{pq}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+数乘
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $kA=\begin{pmatrix}kA_{11} & \cdots & kA_{1r}\\
+\vdots &  & \vdots\\
+kA_{s1} & \cdots & kA_{sr}
+\end{pmatrix},k\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+分块对角矩阵
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $A$
+\end_inset
+
+是方阵，
+若A的分块矩阵在对角线上的子块都是方阵，
+其余子块都为零矩阵，
+那么称
+\begin_inset Formula $A$
+\end_inset
+
+为分块对角矩阵。
+
+\end_layout
+
+\begin_layout Subsubsection
+分块矩阵乘法
+\end_layout
+
+\begin_layout Standard
+一个分块的矩阵乘法可以仅用包含算符的子矩阵来表述。
+
+\end_layout
+
+\begin_layout Standard
+给定一个
+\begin_inset Formula ${\displaystyle (m\times p)}$
+\end_inset
+
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 有 
+\begin_inset Formula $q$
+\end_inset
+
+行
+\begin_inset Formula $s$
+\end_inset
+
+列。
+分块时保证子块可乘。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{A}=\begin{bmatrix}\mathbf{A}_{11} & \mathbf{A}_{12} & \cdots & \mathbf{A}_{1s}\\
+\mathbf{A}_{21} & \mathbf{A}_{22} & \cdots & \mathbf{A}_{2s}\\
+\vdots & \vdots & \ddots & \vdots\\
+\mathbf{A}_{q1} & \mathbf{A}_{q2} & \cdots & \mathbf{A}_{qs}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另外 一个 
+\begin_inset Formula ${\displaystyle (p\times n)}$
+\end_inset
+
+ 矩阵 
+\begin_inset Formula $B$
+\end_inset
+
+ 有 
+\begin_inset Formula $s$
+\end_inset
+
+ 行且 
+\begin_inset Formula $r$
+\end_inset
+
+ 列
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{B}=\begin{bmatrix}\mathbf{B}_{11} & \mathbf{B}_{12} & \cdots & \mathbf{B}_{1r}\\
+\mathbf{B}_{21} & \mathbf{B}_{22} & \cdots & \mathbf{B}_{2r}\\
+\vdots & \vdots & \ddots & \vdots\\
+\mathbf{B}_{s1} & \mathbf{B}_{s2} & \cdots & \mathbf{B}_{sr}
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+矩阵乘积
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{C}=\mathbf{A}\mathbf{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可被分成块来计算，
+矩阵
+\begin_inset Formula ${\displaystyle \mathbf{C}}$
+\end_inset
+
+ 是
+\begin_inset Formula ${\displaystyle (m\times n)}$
+\end_inset
+
+ 的矩阵有
+\begin_inset Formula $q$
+\end_inset
+
+行
+\begin_inset Formula $r$
+\end_inset
+
+列，
+你的矩阵 
+\begin_inset Formula ${\displaystyle \mathbf{C}}$
+\end_inset
+
+中的分割矩阵可以在乘法中被相乘:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{C}_{\alpha\beta}=\sum_{\gamma=1}^{s}\mathbf{A}_{\alpha\gamma}\mathbf{B}_{\gamma\beta}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $H=\left[\begin{array}{cc}
+A & C\\
+O & B
+\end{array}\right]$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $m$
+\end_inset
+
+阶可逆，
+
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\begin_inset Formula $n$
+\end_inset
+
+阶可逆。
 求
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 3\\
-4 & 6
-\end{array}\right]$
+\begin_inset Formula $H$
 \end_inset
 
-逆矩阵
+逆
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 3\\
-4 & 6
-\end{array}\mid\begin{array}{cc}
-1 & 0\\
-0 & 1
-\end{array}\right]$
+\begin_layout Example
+先证明可逆：
+
+\begin_inset Formula $|H|=\left|\begin{array}{cc}
+A & C\\
+O & B
+\end{array}\right|=|A||B|=|B||A|\neq0$
 \end_inset
 
-第一行乘以
-\begin_inset Formula $-4$
+(拉普拉斯),
+ 
+\begin_inset Formula $H$
 \end_inset
 
-加在第二行
+可逆、
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 3\\
-0 & -6
-\end{array}\mid\begin{array}{cc}
-1 & 0\\
--4 & 1
-\end{array}\right]$
-\end_inset
-
-第二行除以
-\begin_inset Formula $-6$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 3\\
-0 & 1
-\end{array}\mid\begin{array}{cc}
-1 & 0\\
-\frac{2}{3} & -\frac{1}{6}
-\end{array}\right]$
-\end_inset
-
-消去第一行的第二个元素，
-用第二行称
-\begin_inset Formula $-3$
-\end_inset
-
-加第一行。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{array}{cc}
-1 & 0\\
-0 & 1
-\end{array}\mid\begin{array}{cc}
--1 & \frac{1}{2}\\
-\frac{2}{3} & -\frac{1}{6}
+\begin_layout Example
+设
+\begin_inset Formula $H^{-1}=\left[\begin{array}{cc}
+X_{1} & X_{2}\\
+X_{3} & X_{4}
 \end{array}\right]$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $A^{1}=\left[\begin{array}{cc}
--1 & \frac{1}{2}\\
-\frac{2}{3} & -\frac{1}{6}
+\begin_layout Example
+\begin_inset Formula $HH^{-1}=\left[\begin{array}{cc}
+A & C\\
+O & B
+\end{array}\right]\left[\begin{array}{cc}
+X_{1} & X_{2}\\
+X_{3} & X_{4}
+\end{array}\right]=\left[\begin{array}{cc}
+AX_{1}+CX_{3} & AX_{2}+CX_{4}\\
+BX_{3} & BX_{4}
+\end{array}\right]=\left[\begin{array}{cc}
+E & O\\
+O & E
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left\{ \begin{array}{c}
+AX_{1}+CX_{3}=E\\
+AX_{2}+CX_{4}=O\\
+BX_{3}=O\\
+BX_{4}=E
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $B^{-1}BX_{4}=B^{-1}E$
+\end_inset
+
+,
+\begin_inset Formula $X_{4}=B^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $B^{-1}BX_{3}=B^{-1}O$
+\end_inset
+
+,
+\begin_inset Formula $X_{3}=O$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X_{4}$
+\end_inset
+
+代入
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $AX_{2}+CB^{-1}=O$
+\end_inset
+
+，
+
+\begin_inset Formula $AX_{2}=-CB^{-1}$
+\end_inset
+
+，
+
+\begin_inset Formula $A^{-1}AX_{2}=-A^{-1}CB^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X_{2}=-A^{-1}CB^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X_{3}$
+\end_inset
+
+代入
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $AX_{1}+CX_{3}=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $AX_{1}+CO=E$
+\end_inset
+
+,
+ 
+\begin_inset Formula $AX_{1}=E$
+\end_inset
+
+,
+ 
+\begin_inset Formula $X_{1}=A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所：
+
+\begin_inset Formula $H^{-1}=\left[\begin{array}{cc}
+A^{1} & -A^{-1}CB^{-1}\\
+O & B^{-1}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+为什么是从左边乘不是从右边乘？
+在于需要消去哪个矩阵，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+以
+\begin_inset Formula $BX_{4}=AE$
+\end_inset
+
+为例，
+如过要消去左边的，
+
+\begin_inset Formula $B$
+\end_inset
+
+只能在左边乘
+\begin_inset Formula $B^{-1}$
+\end_inset
+
+，
+因为矩阵乘法没有交换律,
+\begin_inset Formula $B^{-1}AE\neq AB^{-1}E\neq AEB^{-1}$
+\end_inset
+
+,
+\begin_inset Formula $B^{-1}BX_{4}=BB^{-1}X_{4}\neq BX_{4}B^{-1}$
+\end_inset
+
+，
+
+\begin_inset Formula $B^{-1}BX_{4}=B^{-1}AE$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\left[\begin{array}{ccc}
+A_{1} &  & O\\
+ & \ddots\\
+ &  & A_{n}
+\end{array}\right]^{-1}=\left[\begin{array}{ccc}
+A_{1}^{-1} &  & O\\
+ & \ddots\\
+ &  & A_{n}^{-1}
 \end{array}\right]$
 \end_inset
 
@@ -67724,90 +69224,6 @@ d & -b\\
 
 \begin_layout Subsection
 矩阵的秩
-\end_layout
-
-\begin_layout Standard
-对于一个
-\begin_inset Formula $S*N$
-\end_inset
-
-的矩阵
-\begin_inset Formula $A=\left[\begin{array}{cccc}
-a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & a_{22} & \cdots & a_{2n}\\
-\vdots & \vdots &  & \vdots\\
-a_{s1} & a_{s2} & \cdots & a_{sn}
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-矩阵
-\begin_inset Formula $A$
-\end_inset
-
-的每一行可以看作一个
-\begin_inset Formula $N$
-\end_inset
-
-维向量：
-
-\begin_inset Formula $\alpha_{i}=(a_{i1},a_{i2},\cdots,a_{im})$
-\end_inset
-
-,
-\begin_inset Formula $i=1,2,\cdots,s$
-\end_inset
-
-。
-
-\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$
-\end_inset
-
-叫做
-\begin_inset Formula $A$
-\end_inset
-
-的行向量。
-
-\end_layout
-
-\begin_layout Standard
-矩阵
-\begin_inset Formula $A$
-\end_inset
-
-的每一列可以看作一个
-\begin_inset Formula $S$
-\end_inset
-
-维向量：
-
-\begin_inset Formula $\beta_{j}=\left[\begin{array}{c}
-a_{1j}\\
-a_{2j}\\
-\vdots\\
-a_{sj}
-\end{array}\right]$
-\end_inset
-
-,
-\begin_inset Formula $j=1,2,\cdots,n$
-\end_inset
-
-。
-
-\begin_inset Formula $\beta_{1},\beta_{2},\cdots,\beta_{s}$
-\end_inset
-
-叫做
-\begin_inset Formula $A$
-\end_inset
-
-的列向量。
- 
 \end_layout
 
 \begin_layout Subsubsection
@@ -67947,7 +69363,7 @@ k阶子式
 \begin_inset Formula $A$
 \end_inset
 
-的二阶子式：
+的二阶子式行列式：
 
 \begin_inset Formula $-3$
 \end_inset
@@ -67965,7 +69381,7 @@ k阶子式
 \begin_inset Formula $A$
 \end_inset
 
-的三阶子式：
+的三阶子式行列式：
  
 \begin_inset Formula $0$
 \end_inset
@@ -67974,95 +69390,7 @@ k阶子式
 \end_layout
 
 \begin_layout Subsubsection
-代数余子式和伴随矩阵
-\end_layout
-
-\begin_layout Standard
-一个矩阵
-\begin_inset Formula $A$
-\end_inset
-
-的
-\begin_inset Formula $(i,j$
-\end_inset
-
-)代数余子式：
-
-\begin_inset Formula $C_{ij}$
-\end_inset
-
- 是指
-\begin_inset Formula $A$
-\end_inset
-
-的
-\begin_inset Formula $(i,j)$
-\end_inset
-
-余子式
-\begin_inset Formula $M_{ij}$
-\end_inset
-
-与
-\begin_inset Formula $(−1)^{i+j}$
-\end_inset
-
-的乘积：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{ij}=(−1)^{i+j}M_{ji}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A$
-\end_inset
-
-的余因子矩阵是指将
-\begin_inset Formula $A$
-\end_inset
-
-的
-\begin_inset Formula $(i,j)$
-\end_inset
-
-代数余子式摆在第i行第
-\begin_inset Formula $j$
-\end_inset
-
-列所得到的矩阵，
-记为
-\begin_inset Formula $C$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C$
-\end_inset
-
-的转置矩阵称为
-\begin_inset Formula $A$
-\end_inset
-
-的伴随矩阵，
-伴随矩阵类似于逆矩阵，
-并且当
-\begin_inset Formula $A$
-\end_inset
-
-可逆时可以用来计算它的逆矩阵。
- 
-\end_layout
-
-\begin_layout Subsubsection
-矩阵秩
+矩阵秩（rank）
 \end_layout
 
 \begin_layout Standard
@@ -68075,12 +69403,12 @@ k阶子式
 \end_inset
 
 中，
-若至少有一个 
+若至少有一个
 \begin_inset Formula $r$
 \end_inset
 
 阶非零子式，
-而其所有
+而其余所有
 \begin_inset Formula ${\displaystyle r+1}$
 \end_inset
 
@@ -68102,11 +69430,19 @@ k阶子式
 \begin_inset Formula $A$
 \end_inset
 
-的秩（个人理解 秩 是阶数）。
+的秩（ 秩就 是非
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\begin_inset Formula $r$
+\end_inset
+
+阶子式最大数）。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 \begin_inset Formula $r(A)=r$
 \end_inset
 
@@ -68124,12 +69460,44 @@ k阶子式
 \end_inset
 
 阶子式全为零。
-（12：
-00）
+（按照代数余子式，
+其余更高阶子式必定为0）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\left[\begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1\\
+2 & 2 & 2 & 2 & 2\\
+3 & 3 & 3 & 3 & 3
+\end{array}\right]$
+\end_inset
+
+秩为
+\begin_inset Formula $0$
+\end_inset
+
+ 
+\begin_inset Formula $r(A)=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 性质
+\end_layout
+
+\begin_layout Itemize
+规定零矩阵的秩为 
+\begin_inset Formula $0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r(O)=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -68181,7 +69549,7 @@ k阶子式
 \series default
 ，
 行满秩或列满秩被称为有满秩
-\begin_inset Formula $R(A)=\{m,n\}$
+\begin_inset Formula $R(A)=min\{m,n\}$
 \end_inset
 
 ；
@@ -68191,14 +69559,20 @@ k阶子式
 \end_inset
 
 。
-
-\end_layout
-
-\begin_layout Itemize
-规定零矩阵的秩为 
-\begin_inset Formula $0$
+如果
+\begin_inset Formula $m=n$
 \end_inset
 
+,即A是方阵 
+\begin_inset Formula $R(A)=n$
+\end_inset
+
+，
+
+\begin_inset Formula $\longleftrightarrow$
+\end_inset
+
+则A可逆。
 
 \end_layout
 
@@ -68209,6 +69583,43 @@ k阶子式
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left[\begin{array}{ccccc}
+1 & 1 & 1 & 1 & 2\\
+ & 2 & 3 & 0 & 0\\
+ &  &  &  & 3
+\end{array}\right]$
+\end_inset
+
+非阶梯
+\begin_inset Formula $\left[\begin{array}{ccccc}
+1 & 1 & 1 & 1 & 2\\
+ & 3 & 3 & 0 & 0\\
+ &  & 3 &  & 3\\
+ &  & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+若某行有个非零元素，
+则必在任何全零行之上。
+
+\end_layout
+
+\begin_layout Itemize
+某行最左边的（即第一个）非零元素称为首项系数（leading coefficient）。
+某列的首项系数
+\series bold
+必定比上一列的首项系数更靠右
+\series default
+（某些版本会要求非零行的首项系数必须是）
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -68227,6 +69638,7 @@ k阶子式
 \end_layout
 
 \begin_layout Itemize
+初等变换不改变矩阵的秩。
 任何 
 \begin_inset Formula $m\times n$
 \end_inset
@@ -68244,9 +69656,10 @@ k阶子式
 \end_inset
 
  乘以可逆矩阵，
-矩阵的秩不变+
+矩阵的秩不变
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 \begin_inset Formula $A_{m\times n}$
 \end_inset
@@ -68292,6 +69705,64 @@ k阶子式
 
  单位矩阵。
 (相当于矩阵的行变换)
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+行简化阶梯型
+\end_layout
+
+\begin_layout Standard
+简化列阶梯形矩阵或简约行梯形式矩阵（reduced row echelon form），
+也称作行规范形矩阵（row canonical form），
+如果满足额外的条件：
+
+\end_layout
+
+\begin_layout Standard
+每个首项系数是1，
+且是其
+\series bold
+所在列
+\series default
+的唯一的非零元素。
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
+1 & 0 & a_{1} & 0 & b_{1}\\
+0 & 1 & a_{2} & 0 & b_{2}\\
+0 & 0 & 0 & 1 & b_{3}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意，
+这并不意味着简化列阶梯形矩阵的左部总是单位阵。
+例如，
+如下的矩阵是简化行阶梯形矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
+1 & 0 & 1/2 & 0 & b_{1}\\
+0 & 1 & -1/3 & 0 & b_{2}\\
+0 & 0 & 0 & 1 & b_{3}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为第3列并不包含任何列的首项系数。
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -68476,12 +69947,17 @@ k阶子式
 \end_inset
 
 。
+
+\series bold
 主元所在的列，
 除了主元以外，
 其它元素必须是
 \begin_inset Formula $0$
 \end_inset
 
+
+\series default
+。
 
 \end_layout
 
@@ -68515,7 +69991,11 @@ k阶子式
 一个行阶梯形矩阵
 \series default
 ，
-由于矩阵的初等变换不改变矩阵的秩，
+
+\series bold
+由于矩阵的初等变换不改变矩阵的秩
+\series default
+，
 因此A的行阶梯形矩阵有同A一样的秩。
 经过初等变换的矩阵的
 \series bold
@@ -68525,44 +70005,2057 @@ k阶子式
 
 \end_layout
 
-\begin_layout Subsubsection
-矩阵的行（列）变换
-\end_layout
-
-\begin_layout Itemize
-两行（列）互换：
- 
-\begin_inset Formula $R_{i}\leftrightarrow R_{j}$
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+k & 1 & 1 & 1\\
+1 & k & 1 & 1\\
+1 & 1 & k & 1\\
+1 & 1 & 1 & k
+\end{array}\right]$
 \end_inset
 
- 
-\end_layout
 
-\begin_layout Itemize
-把某行（列）乘以一非零常数：
- 
-\begin_inset Formula $kR_{i}\rightarrow R_{i}$
+\begin_inset Formula $r(A)=3$
 \end_inset
 
-,
- 其中 
-\begin_inset Formula $k\neq0$
+,求
+\begin_inset Formula $k$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-把第 i 行（列）加上第 j 行（列）的 k 倍：
- 
-\begin_inset Formula $R_{i}+kR_{j}\rightarrow R_{i}$
+\begin_layout Solution
+矩阵的秩是
+\begin_inset Formula $3$
+\end_inset
+
+ 表示矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 至少有一个零特征值，
+即矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的行列式应为零。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+0 & =|A|=\left|\begin{array}{cccc}
+k & 1 & 1 & 1\\
+1 & k & 1 & 1\\
+1 & 1 & k & 1\\
+1 & 1 & 1 & k
+\end{array}\right|=\left|\begin{array}{cccc}
+k+3 & 1 & 1 & 1\\
+k+3 & k & 1 & 1\\
+k+3 & 1 & k & 1\\
+K+3 & 1 & 1 & k
+\end{array}\right|\text{其余列加到第一列}\\
+= & (k+3)\left|\begin{array}{cccc}
+1 & 1 & 1 & 1\\
+0 & k-1 & 0 & 1\\
+0 & 0 & k-1 & 0\\
+0 & 0 & 0 & k-1
+\end{array}\right|=(k+3)(k-1)^{3}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $k=-3$
+\end_inset
+
+或
+\begin_inset Formula $k=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+线性代数一定要将结果代回原题进行检查。
+
+\end_layout
+
+\begin_layout Solution
+将
+\begin_inset Formula $k=1$
+\end_inset
+
+代入，
+
+\begin_inset Formula $r(A)=1$
+\end_inset
+
+,所以
+\begin_inset Formula $k\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+矩阵向量
+\end_layout
+
+\begin_layout Subsection
+矩阵向量
+\end_layout
+
+\begin_layout Standard
+行列式的一个自然的源起是 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积。
+行列式的定义和 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积有着本质上的关联。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n$
+\end_inset
+
+个数组成的有序数组
+\begin_inset Formula $(a_{1},a_{2},\cdots,a_{n})$
+\end_inset
+
+叫做向量。
+每个数叫做分量，
+有
+\begin_inset Formula $n$
+\end_inset
+
+个分量。
+
+\end_layout
+
+\begin_layout Standard
+维数：
+n维。
+
+\end_layout
+
+\begin_layout Standard
+行向量：
+横着写
+\end_layout
+
+\begin_layout Standard
+列向量：
+竖着写
+\end_layout
+
+\begin_layout Standard
+行向量和列向量维数可以一样，
+可以通过转置转换。
+
+\end_layout
+
+\begin_layout Standard
+设两个
+\begin_inset Formula $n$
+\end_inset
+
+维向量，
+对应分量相等，
+则两个向量相等。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle n}$
+\end_inset
+
+维列向量可视作
+\begin_inset Formula ${\displaystyle \mathbf{n}\times1}$
+\end_inset
+
+矩阵，
+
+\begin_inset Formula ${\displaystyle n}$
+\end_inset
+
+维行向量可视作
+\begin_inset Formula ${\displaystyle 1\times\mathbf{n}}$
+\end_inset
+
+矩阵
+\end_layout
+
+\begin_layout Standard
+同维向量相加
+\begin_inset Formula $\overrightarrow{\alpha}+$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-初等矩阵即是将上述 3 种初等变换应用于一单位矩阵的结果
+减法-
+\end_layout
+
+\begin_layout Standard
+数乘
+\end_layout
+
+\begin_layout Standard
+加法交换律
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k\overrightarrow{\alpha}=0\Longleftrightarrow k=0\text{或}\overrightarrow{\alpha}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于一个
+\begin_inset Formula $S*N$
+\end_inset
+
+的矩阵
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{s1} & a_{s2} & \cdots & a_{sn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的每一行可以看作一个
+\begin_inset Formula $N$
+\end_inset
+
+维向量：
+
+\begin_inset Formula $\alpha_{i}=(a_{i1},a_{i2},\cdots,a_{im})$
+\end_inset
+
+,
+\begin_inset Formula $i=1,2,\cdots,s$
+\end_inset
+
+。
+
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$
+\end_inset
+
+叫做
+\begin_inset Formula $A$
+\end_inset
+
+的行向量。
+
+\end_layout
+
+\begin_layout Standard
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的每一列可以看作一个
+\begin_inset Formula $S$
+\end_inset
+
+维向量：
+
+\begin_inset Formula $\beta_{j}=\left[\begin{array}{c}
+a_{1j}\\
+a_{2j}\\
+\vdots\\
+a_{sj}
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $j=1,2,\cdots,n$
+\end_inset
+
+。
+
+\begin_inset Formula $\beta_{1},\beta_{2},\cdots,\beta_{s}$
+\end_inset
+
+叫做
+\begin_inset Formula $A$
+\end_inset
+
+的列向量。
+ 
+\end_layout
+
+\begin_layout Subsection
+向量线性相关性
+\end_layout
+
+\begin_layout Paragraph
+向量的线性组合
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+都是
+\begin_inset Formula $m$
+\end_inset
+
+维向量，
+若存在 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+、 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+、\SpecialChar ldots
+、
+\begin_inset Formula $a_{m}$
+\end_inset
+
+，
+使得
+\begin_inset Formula $\beta=a_{1}\alpha_{1}+a_{2}\alpha_{2}+\cdots+a_{n}\alpha_{n}$
+\end_inset
+
+,叫
+\begin_inset Formula $\beta$
+\end_inset
+
+，
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+向量组的线性组合或线性表示，
+ 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+、 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+、\SpecialChar ldots
+、
+\begin_inset Formula $a_{m}$
+\end_inset
+
+称为组合系数。
+ 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+、 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+、\SpecialChar ldots
+、
+\begin_inset Formula $a_{m}$
+\end_inset
+
+可以全取
+\begin_inset Formula $0$
+\end_inset
+
+,结果
+\begin_inset Formula $\beta$
+\end_inset
+
+为
+\begin_inset Formula $\overrightarrow{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+零向量可以用任意向量组表示。
+
+\end_layout
+
+\begin_layout Itemize
+向量组中任取一向量，
+可以用向量组表示。
+
+\begin_inset Formula $\alpha_{n}=0\times\alpha_{1}+\cdots+1\times\alpha_{n}+\cdots+0\times\alpha_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+任意一个向量都可由，
+
+\begin_inset Formula $\zeta_{1}=(1,0,\cdots,0))$
+\end_inset
+
+，
+
+\begin_inset Formula $\zeta_{2}=(0,1,\cdots,0))$
+\end_inset
+
+，
+
+\begin_inset Formula $\cdots$
+\end_inset
+
+，
+
+\begin_inset Formula $\zeta_{n}=(0,\cdots,1))$
+\end_inset
+
+线性表示。
+
+\begin_inset Formula $\zeta_{n}$
+\end_inset
+
+叫做
+\begin_inset Formula $n$
+\end_inset
+
+维单位向量组或n维基维单位向量组。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\beta=(-3,2,-4)$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{1}=(1,0,1)$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}=(2,1,0)$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{3}=(-1,1,2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $\beta=k_{1}\alpha_{1}+k_{2}\alpha_{2}+k_{3}\alpha_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $(-3,2,-4)=k_{1}(1,0,1)+k_{2}(2,1,0)+k_{3}(-1,1,-2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+k_{1}+2k_{2}-k_{3} & =-3\\
+k_{2}+k_{3} & =2\\
+k_{1}-2k_{3} & =-4
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+解的
+\begin_inset Formula $k_{1}=2,k_{2}=-1,k_{3}=3$
+\end_inset
+
+,
+\begin_inset Formula $\beta=2\alpha_{1}-\alpha_{2}+3\alpha_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+是组合
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+方程组有解
+\end_layout
+
+\begin_layout Paragraph
+线性相关
+\end_layout
+
+\begin_layout Standard
+对于 
+\begin_inset Formula $m$
+\end_inset
+
+个
+\begin_inset Formula $n$
+\end_inset
+
+维向量 
+\begin_inset Formula $\vec{v}_{1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\vec{v}_{2}$
+\end_inset
+
+，
+\SpecialChar ldots
+，
+
+\begin_inset Formula $\vec{v}_{m}$
+\end_inset
+
+，
+如果存在一组
+\series bold
+不全为零
+\series default
+的
+\begin_inset Formula $m$
+\end_inset
+
+个数 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+、 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+、\SpecialChar ldots
+、
+\begin_inset Formula $a_{m}$
+\end_inset
+
+，
+使得
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{m}a_{i}\vec{v}_{i}=\vec{0}}$
+\end_inset
+
+，
+那么，
+称
+\begin_inset Formula $m$
+\end_inset
+
+ 个向量
+\begin_inset Formula ${\displaystyle \vec{v}_{1}}$
+\end_inset
+
+，
+
+\begin_inset Formula $\vec{v}_{2}$
+\end_inset
+
+，
+
+\begin_inset Formula $\cdots$
+\end_inset
+
+，
+ 
+\begin_inset Formula $\vec{v}_{m}$
+\end_inset
+
+ 线性相关或线性相依（Linearly dependent）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2\times\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)+3\times\left(\begin{array}{c}
+0\\
+1
+\end{array}\right)-1\times\left(\begin{array}{c}
+2\\
+3
+\end{array}\right)=\overrightarrow{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+线性无关
+\end_layout
+
+\begin_layout Standard
+如果这样不全为零的 
+\begin_inset Formula $m$
+\end_inset
+
+个数不存在，
+即上述向量等式仅当
+\begin_inset Formula ${\displaystyle a_{1}}={\displaystyle a_{2}}=\cdots={\displaystyle a_{m}}=0$
+\end_inset
+
+时才能成立，
+就称向量
+\begin_inset Formula $\vec{v}_{1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\vec{v}_{2}$
+\end_inset
+
+，
+\SpecialChar ldots
+，
+
+\begin_inset Formula $\vec{v}_{m}$
+\end_inset
+
+ 线性无关或线性独立（Linearly independent）。
+ 
+\end_layout
+
+\begin_layout Itemize
+向量组中有两向量成比例，
+这向量组向量成线性相关。
+
+\end_layout
+
+\begin_layout Itemize
+还有零向量的任意向量组必定线性相关。
+
+\end_layout
+
+\begin_layout Itemize
+一个零向量必定线性相关。
+一个向量
+\begin_inset Formula $\alpha$
+\end_inset
+
+线性相关的充要条件
+\begin_inset Formula $\Leftrightarrow\alpha=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+任意一个非
+\begin_inset Formula $\overrightarrow{0}$
+\end_inset
+
+向量，
+必线性无关。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+线性相关，
+证
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{m+1}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{n}$
+\end_inset
+
+线性相关。
+
+\end_layout
+
+\begin_layout Example
+因为
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+线性相关，
+所以
+\begin_inset Formula $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}=0$
+\end_inset
+
+,
+\begin_inset Formula $k_{1}\cdots k_{m}$
+\end_inset
+
+不全为
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}+0\times\alpha_{m+1}+\cdots+0\times\alpha_{n}=k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots+k_{m}\alpha_{m}=0$
+\end_inset
+
+同样这个等式的
+\begin_inset Formula $k_{1}\cdots k_{m}$
+\end_inset
+
+不全为
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+部分组线性相关，
+则整体组也线性相关。
+
+\end_layout
+
+\begin_layout Itemize
+整体组线性无相关，
+部分组也线性无关。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\overrightarrow{\alpha}_{1}=(a_{11},\cdots,a_{1r})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\alpha_{2}=(a_{21},\cdots,a_{2r})$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{m}=(a_{m1},\cdots,a_{mr})$
+\end_inset
+
+线性无关。
+
+\end_layout
+
+\begin_layout Example
+证明
+\begin_inset Formula $\overrightarrow{\gamma_{1}}=(a_{11},\cdots,a_{1r},\cdots,a_{1r+1},\cdots,a_{1n})$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\overrightarrow{\gamma_{m}}=(a_{m1},\cdots,a_{mr},\cdots,a_{mr+1},\cdots,a_{mn})$
+\end_inset
+
+也线性无关。
+
+\end_layout
+
+\begin_layout Proof
+设
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k\overrightarrow{\gamma_{1}}+k_{2}\gamma_{m}=0$
+\end_inset
+
+的等式
+\begin_inset Formula 
+\begin{align*}
+k_{1}a_{11}+k_{2}a_{21}\cdots+k_{m}a_{m1} & =0\\
+\vdots & \vdots\\
+k_{1}a_{1n}+k_{2}a_{2n}\cdots+k_{m}a_{mn} & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+因为
+\begin_inset Formula $\overrightarrow{\alpha}$
+\end_inset
+
+向量组如果线性不相关，
+所以前
+\begin_inset Formula $r$
+\end_inset
+
+个等式中的
+\begin_inset Formula $k_{1}a_{11}+k_{2}a_{21}\cdots+k_{m}a_{m1}=0$
+\end_inset
+
+中的
+\begin_inset Formula $k$
+\end_inset
+
+全为
+\begin_inset Formula $0$
+\end_inset
+
+，
+即
+\begin_inset Formula $k_{1},\cdots,k_{m}$
+\end_inset
+
+都是0。
+所以
+\begin_inset Formula $\gamma$
+\end_inset
+
+向量组
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+线性无关。
+
+\end_layout
+
+\begin_layout Itemize
+线性无关的向量组，
+按相同位置添加的向量分量也线性无关
+\end_layout
+
+\begin_layout Itemize
+线性相关的向量组，
+截短向量分量也线性相关
+\end_layout
+
+\begin_layout Itemize
+n个n维向量，
+构成的行列式
+\begin_inset Formula $D\neq0$
+\end_inset
+
+，
+线性无关。
+
+\begin_inset Formula $D=0$
+\end_inset
+
+线性相关。
+
+\end_layout
+
+\begin_layout Itemize
+n维单位向量组，
+线性无关。
+
+\end_layout
+
+\begin_layout Itemize
+线性组合和线性相关区别：
+线性组合有解，
+线性相关有非
+\begin_inset Formula $0$
+\end_inset
+
+解。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+,
+\begin_inset Formula $\gamma$
+\end_inset
+
+线性无关，
+证
+\begin_inset Formula $\alpha+\beta$
+\end_inset
+
+,
+\begin_inset Formula $\beta+\gamma$
+\end_inset
+
+,
+\begin_inset Formula $\alpha+\gamma$
+\end_inset
+
+也线性无关。
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $k_{1}$
+\end_inset
+
+,
+\begin_inset Formula $k_{2}$
+\end_inset
+
+,
+\begin_inset Formula $k_{3}$
+\end_inset
+
+,
+\begin_inset Formula $k_{1}(\alpha+\beta)+k_{2}(\beta+\gamma)+k_{3}(\alpha+\gamma)=\overrightarrow{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(k_{1}+k_{3})\alpha+(k_{1}+k_{2})\beta+(k_{2}+k_{3})\gamma=\overrightarrow{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因为 
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+,
+\begin_inset Formula $\gamma$
+\end_inset
+
+线性无关，
+所以
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(k_{1}+k_{3})=0$
+\end_inset
+
+，
+
+\begin_inset Formula $k_{1}+k_{2}=0$
+\end_inset
+
+，
+
+\begin_inset Formula $k_{2}+k_{3}=0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $k_{1}=k_{2}=k_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+向量组的等价
+\end_layout
+
+\begin_layout Standard
+给定两
+\series bold
+同维
+\series default
+向量组
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+和
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Formula $\beta_{n}$
+\end_inset
+
+，
+两个向量组的（每个）向量可以相互线性表示，
+叫做两个向量组等价。
+记作：
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+反身性：
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对称性：
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
+\end_inset
+
+,
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+传递性：
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
+\end_inset
+
+，
+
+\begin_inset Formula $\{\beta_{1},\beta_{2},\cdots\beta_{n}\}\cong\left\{ \gamma_{1},\gamma_{2},\cdots\gamma_{n}\right\} $
+\end_inset
+
+,
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \gamma_{1},\gamma_{2},\cdots\gamma_{n}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+向量组的秩
+\end_layout
+
+\begin_layout Definition
+极大线性无关组，
+设
+\begin_inset Formula $\alpha_{1},\alpha_{2},\alpha_{3},\alpha_{4},\alpha_{5}$
+\end_inset
+
+的部分组
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+:其中
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+线性无关
+\end_layout
+
+\begin_layout Definition
+每个向量均可由
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+线性表示。
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+线性无关的向量组的向量个数最大。
+
+\end_layout
+
+\begin_layout Definition
+则
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+称为
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+极大线性无关组，
+简称极大无关组。
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\alpha_{1},\alpha_{2}$
+\end_inset
+
+线性无关。
+
+\begin_inset Formula $n+1$
+\end_inset
+
+个
+\begin_inset Formula $n$
+\end_inset
+
+维向量一定线性相关。
+
+\end_layout
+
+\begin_layout Itemize
+一般情况这个组不唯一。
+
+\end_layout
+
+\begin_layout Itemize
+全是0的向量组，
+没有极大线性无关组。
+
+\end_layout
+
+\begin_layout Itemize
+线性无关的向量组，
+的极大线性无关组就是它本身
+\end_layout
+
+\begin_layout Itemize
+传递性：
+极大线性无关组
+\begin_inset Formula $\cong$
+\end_inset
+
+向量组
+\begin_inset Formula $\cong$
+\end_inset
+
+另一个极大线性无关组
+\end_layout
+
+\begin_layout Itemize
+任意两个极大线性无关组，
+所含向量个数相同。
+
+\end_layout
+
+\begin_layout Definition
+向量组的秩，
+极大线性无关组含有向量的
+\series bold
+个数
+\series default
+就是向量组的秩,
+\begin_inset Formula $r(\alpha_{1}\cdots\alpha_{s})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+全是0的向量组的秩是0
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\leqslant r(\alpha_{1}\cdots\alpha_{s})\leqslant S$
+\end_inset
+
+，
+
+\begin_inset Formula $0\leqslant r(\alpha_{1}\cdots\alpha_{s})\leqslant\min\{\text{向量的个数，向量的维数}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+线性无关的向量组,
+\begin_inset Formula $r=s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+线性相关
+\begin_inset Formula $r<s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots\alpha_{4},\alpha_{s}$
+\end_inset
+
+可由 
+\begin_inset Formula $\beta_{1},\beta_{2},\cdots\beta_{4},\beta_{s}$
+\end_inset
+
+表示，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $r(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})\leqslant r(\beta_{1},\beta_{2},\cdots,\beta_{s})$
+\end_inset
+
+,若这两个向量组等价，
+则这两个向量组的秩相等，
+反之，
+不然。
+
+\end_layout
+
+\begin_layout Subsubsection
+行秩与列秩
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccccc}
+a_{11} &  &  &  & a_{1m}\\
+a_{21}\\
+\\\\a_{n1} &  &  &  & a_{nm}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+取矩阵所有行
+\begin_inset Formula $\alpha_{1}=a_{11}\cdots,a_{1m}$
+\end_inset
+
+ ,
+\begin_inset Formula $\alpha_{2}=a_{21}\cdots,a_{2m}$
+\end_inset
+
+ ,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{n}=a_{n1}\cdots,a_{nm}$
+\end_inset
+
+,这些向量叫做行向量组。
+行向量组的秩叫做行秩
+\end_layout
+
+\begin_layout Standard
+同理，
+取矩阵所有列
+\begin_inset Formula $\beta_{1}=a_{11}\cdots$
+\end_inset
+
+ ,
+\begin_inset Formula $\beta_{2}=a_{21}\cdots$
+\end_inset
+
+ ,这些向量叫做列向量组。
+列向量组的秩叫做列秩。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $行秩=列秩=r(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r(AB)\leqslant min\{r(A),r(B)\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求秩
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & 3 & 3\\
+2 & -1 & 5\\
+-5 & 3 & -13\\
+4 & -3 & 11
+\end{array}\right]$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+
+\series bold
+由于矩阵的初等变换不改变矩阵的秩
+\series default
+，
+因此A的
+\series bold
+行阶梯形矩阵
+\series default
+有同A一样的秩。
+经过初等变换的矩阵的
+\series bold
+非零行的数目就是原矩阵的秩
+\series default
+。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left[\begin{array}{ccc}
+3 & 3 & 3\\
+2 & -1 & 5\\
+-5 & 3 & -13\\
+4 & -3 & 11
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 1 & 1\\
+0 & -3 & 3\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $行秩=列秩=r(A)$
+\end_inset
+
+=2
+\end_layout
+
+\begin_layout Theorem
+对矩阵
+\begin_inset Formula $A$
+\end_inset
+
+仅做初等行变换，
+化成矩阵B，
+那么矩阵A的列向量组同矩阵B的列向量组有完全相同的线性关系。
+
+\end_layout
+
+\begin_layout Theorem
+初等行变换不改变矩阵列向量的线性关系。
+
+\end_layout
+
+\begin_layout Remark*
+解题技巧：
+
+\end_layout
+
+\begin_layout Enumerate
+不管原来向量组是行还是列，
+都按照列构成矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+只做初等行变换，
+化为
+\series bold
+行简化阶梯形
+\series default
+。
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+首非零元所在的列
+\series default
+做极大无关组。
+
+\end_layout
+
+\begin_layout Enumerate
+其余向量表示系数直接写出。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A(\alpha)=\left[\begin{array}{cccc}
+1 & 2 & -2 & 3\\
+-2 & -4 & 4 & -6\\
+2 & 8 & -2 & 0\\
+-1 & 0 & 3 & -6
+\end{array}\right]\rightarrow B(\beta)=\text{\left[\begin{array}{cccc}
+1 & 0 & -3 & 6\\
+ & 1 & \frac{1}{2} & -\frac{3}{2}\\
+\\\\\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于
+\begin_inset Formula $B$
+\end_inset
+
+:
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+与
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+是极大无关组。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\beta_{3}=-3\beta_{1}+\frac{1}{2}\beta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\beta_{4}=6\beta_{1}-\frac{3}{2}\beta_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+初等行变换不改变矩阵列向量的线性关系。
+
+\end_layout
+
+\begin_layout Example
+对于
+\begin_inset Formula $A$
+\end_inset
+
+:
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+与
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+是极大无关组。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\alpha_{3}=-3\alpha_{1}+\frac{1}{2}\alpha_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\alpha_{4}=6\alpha_{1}-\frac{3}{2}\alpha_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+向量的叉积
+\end_layout
+
+\begin_layout Standard
+叉积
+\begin_inset Formula $\vec{a}×\vec{b}$
+\end_inset
+
+ 是一个向量，
+其结果垂直于 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{b}$
+\end_inset
+
+，
+方向由右手定则决定，
+大小为平行四边形的面积。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​),(a_{3}​b_{1}​−a_{1}​b_{3}​),(a_{1}​b_{2}​−a_{2}​b_{1}​))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\vec{a}×\vec{b}=\left|\begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}\\
+a_{1} & a_{2} & a_{3}\\
+b_{1} & b_{2} & b_{3}
+\end{array}\right|$
+\end_inset
+
+其中，
+
+\begin_inset Formula $\vec{i}$
+\end_inset
+
+、
+\begin_inset Formula $\vec{j}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{k}$
+\end_inset
+
+ 是标准基向量。
+
+\end_layout
+
+\begin_layout Standard
+展开这个行列式可以得到:
+\begin_inset Formula 
+\begin{align*}
+\vec{a}×\vec{b} & =((a_{2}​b_{3}​−a_{3}​b_{2}​)\vec{i}-(a_{3}​b_{1}​−a_{1}​b_{3}​)\vec{j}+(a_{1}​b_{2}​−a_{2}​b_{1}​))\vec{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+二维向量组的行列式
+\end_layout
+
+\begin_layout Standard
+在一个二维平面上，
+两个向量 
+\begin_inset Formula ${\displaystyle \vec{X}=\left(a,c\right)}$
+\end_inset
+
+和 
+\begin_inset Formula ${\displaystyle \vec{X'}=\left(b,d\right)}$
+\end_inset
+
+的行列式是：
+
+\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如说，
+两个向量
+\begin_inset Formula ${\displaystyle X=\left(2,1\right)}$
+\end_inset
+
+和 
+\begin_inset Formula ${\displaystyle X'=\left(3,4\right)}$
+\end_inset
+
+的行列式是：
+
+\begin_inset Formula ${\displaystyle \det(X,X')=\begin{vmatrix}2 & 3\\
+1 & 4
+\end{vmatrix}=2\cdot4-3\cdot1=5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经计算可知，
+当系数是实数时，
+行列式表示的是向量
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\vec{X′}$
+\end_inset
+
+ 形成的平行四边形的有向面积，
+并有如下性质：
+
+\end_layout
+
+\begin_layout Itemize
+行列式为零当且仅当两个向量共线（线性相关），
+这时平行四边形退化成一条直线。
+
+\end_layout
+
+\begin_layout Itemize
+如果以逆时针方向为正向的话，
+有向面积的意义是：
+平行四边形面积为
+\series bold
+正
+\series default
+当且仅当以原点为不动点将
+\begin_inset Formula $\vec{X}$
+\end_inset
+
+逆时针“转到”
+\begin_inset Formula $\vec{X′}$
+\end_inset
+
+处时，
+扫过的地方在平行四边形里，
+否则的话面积就是负的。
+
+\end_layout
+
+\begin_layout Itemize
+行列式是一个双线性映射。
+也就是说，
+
+\begin_inset Formula $\det(\lambda X+\mu Y,X')=\lambda\det(X,X')+\mu\det(Y,X')$
+\end_inset
+
+，
+并且
+\begin_inset Formula $\det(X,\lambda X'+\mu Y')=\lambda\det(X,X')+\mu\det(X,Y')$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+其几何意义是：
+以同一个向量 
+\begin_inset Formula $v$
+\end_inset
+
+ 作为一条边的两个平行四边形的面积之和，
+等于它们各自另一边的向量 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $u′$
+\end_inset
+
+加起来后的向量：
+
+\begin_inset Formula $u+u′$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+所构成的平行四边形的面积，
+如图中所示。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/二维向量几何.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+三维向量组的行列式
+\end_layout
+
+\begin_layout Standard
+在三维的有向空间中，
+三个三维向量的行列式是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(X,X',X'')=\begin{vmatrix}x & x' & x''\\
+y & y' & y''\\
+z & z' & z''
+\end{vmatrix}=xy'z''+x'y''z+x''yz'-xy''z'-x'yz''-x''y'z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+比如说，
+三个向量
+\begin_inset Formula ${\displaystyle \left(2,1,5\right)}$
+\end_inset
+
+、
+\begin_inset Formula ${\displaystyle \left(6,0,8\right)}$
+\end_inset
+
+和
+\begin_inset Formula ${\displaystyle \left(3,2,4\right)}$
+\end_inset
+
+的行列式是：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\det(X,X',X'') & =\begin{vmatrix}2 & 6 & 3\\
+1 & 0 & 2\\
+5 & 8 & 4
+\end{vmatrix}\\
+ & =2\cdot0\cdot4+6\cdot2\cdot5+3\cdot1\cdot8-2\cdot2\cdot8-6\cdot1\cdot4-3\cdot0\cdot5\\
+ & =28
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当系数是实数时，
+行列式表示 
+\begin_inset Formula $X$
+\end_inset
+
+、 
+\begin_inset Formula $X′$
+\end_inset
+
+ 和 
+\begin_inset Formula $X″$
+\end_inset
+
+ 三个向量形成的平行六面体的有向体积，
+也叫做这三个向量的混合积。
+同样的，
+可以观察到如下性质：
+
+\end_layout
+
+\begin_layout Itemize
+行列式为零当且仅当三个向量共线或者共面（三者线性相关），
+这时平行六面体退化为平面图形，
+体积为零。
+
+\end_layout
+
+\begin_layout Itemize
+三维空间中有向体积的定义要比二维空间中复杂，
+一般是根据右手定则来约定。
+比如右图中
+\begin_inset Formula $(u,v,w)$
+\end_inset
+
+所形成的平行六面体的体积是正的，
+而
+\begin_inset Formula $(u,w,v)$
+\end_inset
+
+所形成的平行六面体的体积是负的。
+这个定义和行列式的计算并不矛盾，
+因为行列式中向量的坐标都是在取好坐标系后才决定的，
+而坐标系的三个方向一般也是按照右手规则来设定的。
+如果计算开始时坐标系的定向反过来的话，
+有向体积的定义也要跟着反过来，
+这样行列式才能代表有向体积
+\end_layout
+
+\begin_layout Itemize
+这时行列式是一个“三线性映射”，
+也就是说，
+对第一个向量有 
+\begin_inset Formula $\det(aX+bY,X',X'')=a\det(X,X',X'')+b\det(Y,X',X'')$
+\end_inset
+
+，
+对第二、第三个向量也是如此。
+其几何意义和二维时基本相同，
+是指当生成两个平行六面体的每组三个向量中如果有
+\series bold
+两个
+\series default
+是重合的，
+比如分别是：
+
+\begin_inset Formula $(u,v,w)$
+\end_inset
+
+和
+\begin_inset Formula $(u',v,w)$
+\end_inset
+
+，
+那么它们的体积之总和等于将
+\begin_inset Formula ${\displaystyle u}$
+\end_inset
+
+和 
+\begin_inset Formula $u′$
+\end_inset
+
+ 加起来后的向量 
+\begin_inset Formula $u+u′$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+,
+ 
+\begin_inset Formula $w$
+\end_inset
+
+ 所形成的平行六面体的体积。
+
 \end_layout
 
 \begin_layout Chapter
