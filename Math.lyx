@@ -53987,10 +53987,10 @@ Probability theory)是集中研究概率及随机现象的数学分支,
 按大小顺序(顺序,
  降序皆可),
  然后取中间的那个数,(如果数据个数是奇数,取平均值)
-\begin_inset Formula $\mathrm{Q}_{\frac{1}{2}}(x)={\begin{cases}
-x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
-{\frac{1}{2}}(x'_{\frac{n}{2}}+x'_{{\frac{n}{2}}+1}), & {\mbox{if }}n{\mbox{ is even number.}}
-\end{cases}}$
+\begin_inset Formula $\mathrm{Q}_{\frac{1}{2}}(x)=\begin{cases}
+x'_{\frac{n+1}{2}}, & \mbox{if }n\mbox{ is odd number.}\\
+\frac{1}{2}(x'_{\frac{n}{2}}+x'_{\frac{n}{2}+1}), & \mbox{if }n\mbox{ is even number.}
+\end{cases}$
 \end_inset
 
 
@@ -54140,193 +54140,6 @@ x'_{\frac{n+1}{2}}, & {\mbox{if }}n{\mbox{ is odd number.}}\\
 \begin_layout Itemize
 回归直线(regression line):
  其方程称为回归方程
-\end_layout
-
-\begin_layout Subsection
-正态分布(normal distribution)
-\end_layout
-
-\begin_layout Standard
-若随机变量
-\begin_inset Formula ${\displaystyle X}$
-\end_inset
-
-服从一个位置参数为
-\begin_inset Formula ${\displaystyle \mu}$
-\end_inset
-
-、尺度参数为
-\begin_inset Formula ${\displaystyle \sigma}$
-\end_inset
-
-的正态分布,
- 记为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle X\sim N(\mu,\sigma^{2})}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-则其概率密度函数为 
-\begin_inset Formula ${\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-正态分布的数学期望值或期望值
-\begin_inset Formula ${\displaystyle \mu}$
-\end_inset
-
- 等于位置参数,
- 决定了分布的位置；
-其方差
-\begin_inset Formula ${\displaystyle \sigma^{2}}$
-\end_inset
-
-的开平方或标准差
-\begin_inset Formula ${\displaystyle \sigma}$
-\end_inset
-
- 等于尺度参数,
- 决定了分布的幅度.
- 
-\end_layout
-
-\begin_layout Standard
-我们通常所说的标准正态分布是位置参数
-\begin_inset Formula ${\displaystyle \mu=0}$
-\end_inset
-
-,
- 尺度参数
-\begin_inset Formula ${\displaystyle \sigma^{2}=1}$
-\end_inset
-
-的正态分布.
-\end_layout
-
-\begin_layout Standard
-正态密度分布曲线(正态曲线):
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename image/Normal_Distribution_PDF.svg.png
-	lyxscale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-一般地,
- 如果对于任意实数
-\begin_inset Formula $a,b(a<b)$
-\end_inset
-
-,
- 随机变量
-\begin_inset Formula $X$
-\end_inset
-
-满足
-\begin_inset Formula 
-\[
-P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-则称随机变量
-\begin_inset Formula $X$
-\end_inset
-
-服从正态分布.记为
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-经验表明,
- 一个随机变量如果是众多的、互不相干的、不分主次的偶然因素作用结果之和,
- 它就服从或近似服从正态分布.
-\end_layout
-
-\begin_layout Standard
-可以发现,正态曲线有以下特点:
- 
-\end_layout
-
-\begin_layout Itemize
-曲线位于
-\begin_inset Formula $x$
-\end_inset
-
-轴上方,与x轴不相交;
- 
-\end_layout
-
-\begin_layout Itemize
-曲线是单峰的,它关于直线
-\begin_inset Formula $x=\mu$
-\end_inset
-
-对称;
-\end_layout
-
-\begin_layout Itemize
-曲线在
-\begin_inset Formula $x=\mu$
-\end_inset
-
-处达到峰值
-\begin_inset Formula $\frac{1}{\sigma\sqrt{2\pi}}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-曲线与轴之间的面积为1.
-\end_layout
-
-\begin_layout Itemize
-标准差越大曲线越矮,数值越分散.
-\end_layout
-
-\begin_layout Standard
-在实际应用中,通常认为服从于正态分布
-\begin_inset Formula $N((\mu,\sigma^{2})$
-\end_inset
-
-的随机变量
-\begin_inset Formula $X$
-\end_inset
-
-只取 
-\begin_inset Formula $((\mu,\sigma^{2},(\mu,\sigma^{2})$
-\end_inset
-
-之间的值,并简称之为
-\begin_inset Formula $3\sigma$
-\end_inset
-
-原则.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -55173,6 +54986,193 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 
 \end_layout
 
+\begin_layout Subsection
+正态分布(normal distribution)
+\end_layout
+
+\begin_layout Standard
+若随机变量
+\begin_inset Formula ${\displaystyle X}$
+\end_inset
+
+服从一个位置参数为
+\begin_inset Formula ${\displaystyle \mu}$
+\end_inset
+
+、尺度参数为
+\begin_inset Formula ${\displaystyle \sigma}$
+\end_inset
+
+的正态分布,
+ 记为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle X\sim N(\mu,\sigma^{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则其概率密度函数为 
+\begin_inset Formula ${\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正态分布的数学期望值或期望值
+\begin_inset Formula ${\displaystyle \mu}$
+\end_inset
+
+ 等于位置参数,
+ 决定了分布的位置；
+其方差
+\begin_inset Formula ${\displaystyle \sigma^{2}}$
+\end_inset
+
+的开平方或标准差
+\begin_inset Formula ${\displaystyle \sigma}$
+\end_inset
+
+ 等于尺度参数,
+ 决定了分布的幅度.
+ 
+\end_layout
+
+\begin_layout Standard
+我们通常所说的标准正态分布是位置参数
+\begin_inset Formula ${\displaystyle \mu=0}$
+\end_inset
+
+,
+ 尺度参数
+\begin_inset Formula ${\displaystyle \sigma^{2}=1}$
+\end_inset
+
+的正态分布.
+\end_layout
+
+\begin_layout Standard
+正态密度分布曲线(正态曲线):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/Normal_Distribution_PDF.svg.png
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,
+ 如果对于任意实数
+\begin_inset Formula $a,b(a<b)$
+\end_inset
+
+,
+ 随机变量
+\begin_inset Formula $X$
+\end_inset
+
+满足
+\begin_inset Formula 
+\[
+P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则称随机变量
+\begin_inset Formula $X$
+\end_inset
+
+服从正态分布.记为
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+经验表明,
+ 一个随机变量如果是众多的、互不相干的、不分主次的偶然因素作用结果之和,
+ 它就服从或近似服从正态分布.
+\end_layout
+
+\begin_layout Standard
+可以发现,正态曲线有以下特点:
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线位于
+\begin_inset Formula $x$
+\end_inset
+
+轴上方,与x轴不相交;
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线是单峰的,它关于直线
+\begin_inset Formula $x=\mu$
+\end_inset
+
+对称;
+\end_layout
+
+\begin_layout Itemize
+曲线在
+\begin_inset Formula $x=\mu$
+\end_inset
+
+处达到峰值
+\begin_inset Formula $\frac{1}{\sigma\sqrt{2\pi}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线与轴之间的面积为1.
+\end_layout
+
+\begin_layout Itemize
+标准差越大曲线越矮,数值越分散.
+\end_layout
+
+\begin_layout Standard
+在实际应用中,通常认为服从于正态分布
+\begin_inset Formula $N((\mu,\sigma^{2})$
+\end_inset
+
+的随机变量
+\begin_inset Formula $X$
+\end_inset
+
+只取 
+\begin_inset Formula $((\mu,\sigma^{2},(\mu,\sigma^{2})$
+\end_inset
+
+之间的值,并简称之为
+\begin_inset Formula $3\sigma$
+\end_inset
+
+原则.
+ 
+\end_layout
+
 \begin_layout Section
 事件
 \end_layout
@@ -55400,7 +55400,7 @@ S\subset S
  任何事件都包含不可能事件
 \series default
 .
-  
+ 
 \end_layout
 
 \end_deeper
@@ -56230,20 +56230,34 @@ P(A\setminus B)=P(A)-P(A\cap B)
 
 \end_inset
 
- 证明：
- 
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $P(A\setminus B)$
+\end_inset
+
+表示事件 
+\begin_inset Formula $A$
+\end_inset
+
+发生而事件 
+\begin_inset Formula $B$
+\end_inset
+
+不发生的概率
+\end_layout
+
+\begin_layout Proof
 事件
 \begin_inset Formula $A$
 \end_inset
 
 由下面两个事件组成：
- 
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 \begin_inset Formula $A\setminus B$
 \end_inset
 
@@ -56254,7 +56268,7 @@ P(A\setminus B)=P(A)-P(A\cap B)
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 由公理 3 得,
   
 \begin_inset Formula $P(A)=P(A\setminus B)+P(A\cap B)$
@@ -56290,7 +56304,20 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B)
 
 \end_inset
 
- 证明：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A\cup B)$
+\end_inset
+
+表示事件 A 或事件 B 发生的概率，
+或者两者都发生的概率。
+
+\end_layout
+
+\begin_layout Standard
+证明：
  事件
 \begin_inset Formula $A\cup B$
 \end_inset
@@ -56352,7 +56379,7 @@ P(B\setminus A) & = & P(B)-P(A\cap B)
  且可同时发生,
  就是说抽出的这张牌即可以是"方片",
  又可以是"
-\begin_inset Formula ${\mathcal{A}}$
+\begin_inset Formula $\mathcal{A}$
 \end_inset
 
 ",
@@ -56363,7 +56390,7 @@ P(B\setminus A) & = & P(B)-P(A\cap B)
  ( 既发生 A 又发生B ) 的值是 1 / 32,
  ( 从示意图上也可以看出,
  即是方片又是
-\begin_inset Formula ${\mathcal{A}}$
+\begin_inset Formula $\mathcal{A}$
 \end_inset
 
 只有一张,
@@ -56441,7 +56468,7 @@ P(A\cap B)=P(A)\cdot P(B\vert A)=P(B)\cdot P(A\vert B)
 条件概率
 \series default
 .
-  
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -56545,18 +56572,42 @@ P(A\vert B)=\frac{P(B\vert A)\cdot P(A)}{P(B)}
 
 \begin_layout Standard
 例如：
-一座别墅在过去的 20 年里一共发生过 2 次被盗,
+一座别墅在过去的 
+\begin_inset Formula $20$
+\end_inset
+
+ 年里一共发生过 
+\begin_inset Formula $2$
+\end_inset
+
+ 次被盗,
  别墅的主人有一条狗,
- 狗平均每周晚上叫 3 次,
- 在盗贼入侵时狗叫的概率被估计为 0.9,
- 问题是：
+ 狗平均每周晚上叫 
+\begin_inset Formula $3$
+\end_inset
+
+ 次,
+ 在盗贼入侵时狗叫的概率被估计为
+\begin_inset Formula $0.9$
+\end_inset
+
+,
+ 问题：
 在狗叫的时候发生入侵的概率是多少？
  
 \end_layout
 
 \begin_layout Standard
-我们假设A事件为狗在晚上叫,
- B为盗贼入侵,
+我们假设
+\begin_inset Formula $A$
+\end_inset
+
+事件为狗在晚上叫,
+ 
+\begin_inset Formula $B$
+\end_inset
+
+为盗贼入侵,
  则
 \begin_inset Formula $P(A)=3/7$
 \end_inset
@@ -57662,7 +57713,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \begin_layout Standard
 即在一定区间内变量取值有无限个,
  或数值无法一一列举出来.
- 例如某地区男性健康成人的身长值、体重值.
+ 例如某地区男性健康成人的身高值、体重值.
  所以我们转去研究随机变量所取的值落在一个区间
 \begin_inset Formula $(x_{1},x_{2}]$
 \end_inset
@@ -58132,7 +58183,7 @@ F(x,y)=\int_{-\infty}^{y}\int_{-\infty}^{x}f(u,v)\text{du}\text{dv}
 \end_layout
 
 \begin_layout Standard
-二位随机变量
+二维随机变量
 \begin_inset Formula $(X,Y)$
 \end_inset
 
@@ -65579,7 +65630,11 @@ x_{1}+x_{2}+x_{3} & =1\\
 \end_layout
 
 \begin_layout Theorem
-齐次线性方程组指的是常数项全部为零的线性方程组。
+齐次线性方程组指的是
+\series bold
+常数项全部为零
+\series default
+的线性方程组。
 如果m<n(行数小于列数，
 即未知数的数量大于所给方程组数），
 则齐次线性方程组有非零解，
@@ -66895,121 +66950,6 @@ A 是方阵
 \begin_inset Formula $(A-E)^{2}=A^{2}-2AE+E^{2}=A^{2}-2A+E^{2}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Subsection
-方程组与矩阵
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $AX=b\begin{cases}
-a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n} & =b_{1}\\
-a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n} & =b_{2}\\
-\cdots\cdots\cdots & \vdots\\
-a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =b_{m}
-\end{cases}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A$
-\end_inset
-
-为系数矩阵
-\begin_inset Formula $A=\left[\begin{array}{cccc}
-a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & a_{22} & \cdots & a_{2n}\\
-\vdots & \vdots &  & \vdots\\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $X$
-\end_inset
-
- 是未知数矩阵
-\begin_inset Formula $X=\left[\begin{array}{c}
-x_{1}\\
-x_{2}\\
-\vdots\\
-x_{n}
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $b$
-\end_inset
-
-是常数矩阵
-\begin_inset Formula $b=\left[\begin{array}{c}
-b_{1}\\
-b_{2}\\
-\vdots\\
-b_{n}
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-所以方程组可以写成：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{array}{cccc}
-a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & a_{22} & \cdots & a_{2n}\\
-\vdots & \vdots &  & \vdots\\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{array}\right]\left[\begin{array}{c}
-x_{1}\\
-x_{2}\\
-\vdots\\
-x_{n}
-\end{array}\right]=\left[\begin{array}{c}
-b_{1}\\
-b_{2}\\
-\vdots\\
-b_{n}
-\end{array}\right]$
-\end_inset
-
-或
-\begin_inset Formula $AX=B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-即
-\begin_inset Formula $X=A^{-1}B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $x_{1}x_{2}\cdots x_{n}$
-\end_inset
-
-的值（X 矩阵）等于A 矩阵的逆乘以
-\begin_inset Formula $B$
-\end_inset
-
- 矩阵。
 
 \end_layout
 
@@ -72056,6 +71996,990 @@ z & z' & z''
 
  所形成的平行六面体的体积。
 
+\end_layout
+
+\begin_layout Section
+方程组与矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $AX=b\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n} & =b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n} & =b_{2}\\
+\cdots\cdots\cdots & \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =b_{m}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+为系数矩阵
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+ 是未知数矩阵
+\begin_inset Formula $X=\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b$
+\end_inset
+
+是常数矩阵
+\begin_inset Formula $b=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以方程组可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc}
+a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots &  & \vdots\\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{array}\right]$
+\end_inset
+
+或
+\begin_inset Formula $AX=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即
+\begin_inset Formula $X=A^{-1}B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}x_{2}\cdots x_{n}$
+\end_inset
+
+的值（X 矩阵）等于A 矩阵的逆乘以
+\begin_inset Formula $B$
+\end_inset
+
+ 矩阵。
+
+\end_layout
+
+\begin_layout Subsection
+齐次线性方程组解 
+\end_layout
+
+\begin_layout Standard
+唯一解，
+无解，
+无穷解。
+
+\end_layout
+
+\begin_layout Subsubsection
+齐次线性方程组
+\end_layout
+
+\begin_layout Standard
+齐次线性方程组是指形如
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 的线性方程组，
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ 是一个
+\begin_inset Formula $m\times n$
+\end_inset
+
+的系数矩阵；
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x$
+\end_inset
+
+ 是 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ 的未知量列向量；
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0$
+\end_inset
+
+ 是 
+\begin_inset Formula $m×1$
+\end_inset
+
+ 的零向量。
+
+\end_layout
+
+\begin_layout Standard
+齐次线性方程组的特点是
+\series bold
+所有方程的常数项都是
+\series default
+
+\begin_inset Formula $0$
+\end_inset
+
+，
+因此称为“齐次”。
+
+\end_layout
+
+\begin_layout Paragraph
+齐次线性方程组的一般形式
+\end_layout
+
+\begin_layout Standard
+考虑一个线性方程组：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n} & =0\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n} & =0\\
+\vdots & \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+每个方程的右边都是
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Paragraph
+解的性质
+\end_layout
+
+\begin_layout Standard
+齐次线性方程组的解有两个主要性质：
+
+\end_layout
+
+\begin_layout Itemize
+零解：
+由于方程组右边都是 0，
+显然
+\begin_inset Formula $x=0$
+\end_inset
+
+ （即所有未知量都是 0）总是方程组的解。
+这叫做零解。
+
+\end_layout
+
+\begin_layout Itemize
+非零解：
+如果存在不为 0 的解
+\begin_inset Formula $x\neq0$
+\end_inset
+
+，
+这叫做非零解，
+或者称为非平凡解。
+
+\end_layout
+
+\begin_layout Paragraph
+解的情况
+\end_layout
+
+\begin_layout Standard
+解的个数取决于方程组的系数矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的秩(rank)：
+
+\end_layout
+
+\begin_layout Itemize
+唯一解（零解）：
+如果 
+\begin_inset Formula $rank(A)=n$
+\end_inset
+
+，
+即矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+的秩等于未知数的个数 
+\begin_inset Formula $n$
+\end_inset
+
+，
+那么方程组只有零解。
+
+\end_layout
+
+\begin_layout Itemize
+无穷多解：
+如果 
+\begin_inset Formula $rank(A)<n$
+\end_inset
+
+，
+即矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的秩小于未知数的个数，
+则方程组除了零解，
+还有无穷多非零解。
+
+\end_layout
+
+\begin_layout Standard
+齐次线性方程组的解空间是一个向量空间，
+称为矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的零空间（Null Space），
+其维度等于未知数个数减去矩阵的秩，
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $解空间的维数=n−rank(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个解空间就是所有满足
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的向量的集合。
+
+\end_layout
+
+\begin_layout Subsubsection
+齐次
+\begin_inset Formula $Ax=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+如果
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\eta_{2}$
+\end_inset
+
+是方程组
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的解，
+
+\begin_inset Formula $\eta_{1}\pm\eta_{2}$
+\end_inset
+
+也是解。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $A(\eta_{1}\pm\eta_{2})=A\eta_{1}\pm A\eta_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+如果
+\begin_inset Formula $\eta$
+\end_inset
+
+是方程组
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的解,则
+\begin_inset Formula $c\eta$
+\end_inset
+
+也是解。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A(c\eta)=cA(\eta)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+基础解系
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\eta_{2}$
+\end_inset
+
+，
+
+\begin_inset Formula $\eta_{3}$
+\end_inset
+
+线性无关。
+
+\end_layout
+
+\begin_layout Standard
+任意解可由 
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\eta_{2}$
+\end_inset
+
+，
+
+\begin_inset Formula $\eta_{3}$
+\end_inset
+
+表示。
+
+\end_layout
+
+\begin_layout Standard
+基础解系解的个数
+\begin_inset Formula $n-r(A)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A_{m\times n}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $B_{n\times s}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $AB=O_{m\times s}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r(A)+r(B)\leqslant n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $B=(\beta_{1},\beta_{2},\cdots\beta_{s})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $AB=A(\beta_{1},\beta_{2},\cdots\beta_{s})=(A\beta_{1},A\beta_{2},\cdots A\beta_{s})=(0,0,\cdots,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $A\beta_{i}=0,i=1,2,\cdots,s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的解。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r(A)=n$
+\end_inset
+
+唯一解，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+=0，
+
+\begin_inset Formula $r(A)\leqslant n$
+\end_inset
+
+成立
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r(A)<n$
+\end_inset
+
+ 有无穷解。
+基础解系解的个数
+\begin_inset Formula $n-r(A)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r(B)=r(\beta_{1},\beta_{2},\cdots\beta_{s})\leqslant n-r(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+非齐次线性方程组解
+\begin_inset Formula $Ax=b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax=b\rightarrow Ax=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax=0$
+\end_inset
+
+叫
+\begin_inset Formula $Ax=b$
+\end_inset
+
+的导出组
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的解，
+
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+是 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的解。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A(\alpha_{1}-\alpha_{2})=A\alpha_{1}-A\alpha_{2}=b-b=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的解，
+
+\begin_inset Formula $\eta$
+\end_inset
+
+是 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的解。
+
+\begin_inset Formula $\alpha_{0}+\eta$
+\end_inset
+
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的解。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A(\alpha_{0}+\eta)=A\alpha_{0}+A\eta=b+0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的一个解（特解），
+
+\begin_inset Formula $\eta$
+\end_inset
+
+是 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的通解
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\eta=c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\eta_{1},\eta_{2},\cdots,\eta_{n-r}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的基础解系。
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\alpha_{0}+c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+的全部解（通解）。
+
+\end_layout
+
+\begin_layout Standard
+解题步骤
+\end_layout
+
+\begin_layout Enumerate
+写出
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+只做初等行变换换位行简化阶梯形
+\end_layout
+
+\begin_layout Enumerate
+非零行的首非零元的1留在左边，
+其余留在右边。
+写出非齐次同次方程组，
+指出谁是自由位置量（不在左边的都是自由未知量）。
+
+\end_layout
+
+\begin_layout Enumerate
+一般令自由未知量都取
+\begin_inset Formula $0$
+\end_inset
+
+，
+得
+\begin_inset Formula $Ax=b$
+\end_inset
+
+的一个特解
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+令通解方程组常数项都为0，
+得
+\begin_inset Formula $Ax=0$
+\end_inset
+
+通解的方程组。
+指出谁是自由位置量（和第二步一样）。
+令自由未知量取
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+得
+\begin_inset Formula $Ax=0$
+\end_inset
+
+的基础解系。
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\alpha_{0}+c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$
+\end_inset
+
+的线性组合。
+
+\end_layout
+
+\begin_layout Example
+四元非齐次线性方程组
+\begin_inset Formula $r(A)=3$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{3}$
+\end_inset
+
+是三个未知向量。
+
+\begin_inset Formula $\alpha_{1}=(2,3,4,5)^{T}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}+\alpha_{3}=(1,2,3,4)^{T}$
+\end_inset
+
+,求通解。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $n-r(A)=4-3=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\because$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+是
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的解，
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\therefore$
+\end_inset
+
+
+\begin_inset Formula $\alpha_{1}-\alpha_{2}$
+\end_inset
+
+，
+
+\begin_inset Formula $\alpha_{1}-\alpha_{3}$
+\end_inset
+
+，
+是
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 的解，
+
+\begin_inset Formula $\alpha_{1}-\alpha_{2}+\alpha_{1}-\alpha_{3}$
+\end_inset
+
+也是
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 的解
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $2\alpha_{1}-(\alpha_{2}+\alpha_{3})$
+\end_inset
+
+是
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 的解.
 \end_layout
 
 \begin_layout Chapter
