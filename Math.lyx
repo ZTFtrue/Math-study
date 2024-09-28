@@ -29988,6 +29988,17 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+\underset{x\rightarrow a}{\lim}f(x)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 另一方面,
  如果存在十分接近于
 \begin_inset Formula ${\displaystyle p}$
@@ -29999,6 +30010,961 @@ status open
 
 的值相差较大,
  则表示函数极限不存在.
+\end_layout
+
+\begin_layout Paragraph
+ε-δ语言
+\end_layout
+
+\begin_layout Standard
+ε-δ语言是由魏尔施特拉斯在1860年代发明的，
+根据它就可以在不使用无限小和无限大的概念的情况下定义收敛性和连续性。
+
+\end_layout
+
+\begin_layout Standard
+对于实函数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle f:\mathbb{R}\to\mathbb{R}}$
+\end_inset
+
+，
+有
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \lim_{x\to a}f(x)=b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个式子也就是说：
+只要
+\begin_inset Formula $x$
+\end_inset
+
+无限接近于
+\begin_inset Formula $a$
+\end_inset
+
+，
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+则必然无限接近于
+\begin_inset Formula $b$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+利用ε-δ语言来表示的话，
+就是
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+∀
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+>
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+∃
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+>
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+∀
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+∈
+\end_layout
+
+\begin_layout Standard
+R
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+⟹
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+f
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+b
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle (
+\backslash
+forall 
+\backslash
+varepsilon >0)
+\backslash
+,(
+\backslash
+exists 
+\backslash
+delta >0)
+\backslash
+,(
+\backslash
+forall x
+\backslash
+in 
+\backslash
+mathbb {R} )
+\backslash
+,(0<|x-a|<
+\backslash
+delta 
+\backslash
+implies |f(x)-b|<
+\backslash
+varepsilon )}
+\end_layout
+
+\begin_layout Standard
+这个表达式的意思就是：
+对于任何正数ε，
+都能够找到一个正数δ，
+当x满足
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+<∣
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Standard
+∣<
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle 0<
+\backslash
+mid x-a
+\backslash
+mid <
+\backslash
+delta }时，
+对于满足上式的x都有
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+<∣
+\end_layout
+
+\begin_layout Standard
+f
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+b
+\end_layout
+
+\begin_layout Standard
+∣<
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle 0<
+\backslash
+mid f(x)-b
+\backslash
+mid <
+\backslash
+varepsilon }
+\end_layout
+
+\begin_layout Standard
+f(x)无论距离b有多近，
+它始终不是b，
+在f(x)与b之间总是能找到一个数字（而不是无穷小），
+使这个数字与f(x)与b的差为ε。
+对于每个ε都存在一个大于零的δ，
+使得满足上式的x属于a±δ。
+
+\end_layout
+
+\begin_layout Standard
+ε和δ都是确实存在的实数，
+利用他们都能取得任意一个很小的实数来明确定义了极限。
+
+\end_layout
+
+\begin_layout Standard
+当条件满足时，
+正数δ是依赖于ε的变量。
+一般而言，
+对于ε，
+δ总是存在无数个，
+我们只要找到其中一个就能说明他存在。
+比如
+\end_layout
+
+\begin_layout Standard
+lim
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+→
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+2
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle 
+\backslash
+lim _{x
+\backslash
+to 3}x^{2}=9}
+\end_layout
+
+\begin_layout Standard
+接下来我们用ε-δ语言考虑一下。
+如果我们对任何ε取
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle 
+\backslash
+delta ={
+\backslash
+sqrt {
+\backslash
+varepsilon +9}}-3}
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle 0<|x-3|<
+\backslash
+delta ={
+\backslash
+sqrt {
+\backslash
+varepsilon +9}}-3}
+\end_layout
+
+\begin_layout Standard
+则有
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+2
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+6
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+(
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
++
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+)
+\end_layout
+
+\begin_layout Standard
+=
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle |x^{2}-9|=|x+3||x-3|<(
+\backslash
+delta +6)
+\backslash
+delta =({
+\backslash
+sqrt {
+\backslash
+varepsilon +9}}+3)({
+\backslash
+sqrt {
+\backslash
+varepsilon +9}}-3)=
+\backslash
+varepsilon }
+\end_layout
+
+\begin_layout Standard
+因此
+\end_layout
+
+\begin_layout Standard
+∀
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+>
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+,
+\end_layout
+
+\begin_layout Standard
+∃
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+>
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+;
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+∈
+\end_layout
+
+\begin_layout Standard
+R
+\end_layout
+
+\begin_layout Standard
+[
+\end_layout
+
+\begin_layout Standard
+0
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+δ
+\end_layout
+
+\begin_layout Standard
+⇒
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+2
+\end_layout
+
+\begin_layout Standard
+−
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+|
+\end_layout
+
+\begin_layout Standard
+<
+\end_layout
+
+\begin_layout Standard
+ε
+\end_layout
+
+\begin_layout Standard
+]
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle {}^{
+\backslash
+forall }
+\backslash
+varepsilon >0,
+\backslash
+;{}^{
+\backslash
+exists }
+\backslash
+delta >0
+\backslash
+;;
+\backslash
+;x
+\backslash
+in 
+\backslash
+mathbb {R} 
+\backslash
+;[0<|x-3|<
+\backslash
+delta 
+\backslash
+Rightarrow |x^{2}-9|<
+\backslash
+varepsilon ]}
+\end_layout
+
+\begin_layout Standard
+成立，
+利用ε-δ语言我们知道
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+→
+\end_layout
+
+\begin_layout Standard
+3
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle x
+\backslash
+to 3}时
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+2
+\end_layout
+
+\begin_layout Standard
+→
+\end_layout
+
+\begin_layout Standard
+9
+\end_layout
+
+\begin_layout Standard
+{
+\backslash
+displaystyle x^{2}
+\backslash
+to 9}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+其实ε 是"error"(误差)、δ 是"distance"(距离)的首字母。
+实际上，
+是柯西在他的著作中用ε来表示"error"的。
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -32622,6 +33588,134 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 ）引起。
 函数在某点不可导时，
 它的变化无法用简单的斜率描述。
+
+\end_layout
+
+\begin_layout Paragraph
+魏尔施特拉斯函数
+\end_layout
+
+\begin_layout Standard
+魏尔施特拉斯函数（Weierstrass function）是一类处处连续而处处不可导的实值病态函数
+\end_layout
+
+\begin_layout Standard
+魏尔施特拉斯的原作中给出的构造是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0<a<1$
+\end_inset
+
+，
+
+\begin_inset Formula $b$
+\end_inset
+
+为正的奇数，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ab>1+\frac{3}{2}\pi$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/WeierstrassFunction.svg
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+可导
+\end_layout
+
+\begin_layout Standard
+我的理解：
+表示函数在某一点的导数是指这个函数在这一点附近的变化率（即函数在这一点的切线斜率），
+是对函数在这一点的相邻（极限的概念）
+\series bold
+两点
+\series default
+产生的一个直线斜率的近似值，
+导数就是描述函数上这一点的切线斜率。
+如果这一点，
+没有相邻两点，
+即缺少一个近似点，
+或者极限不存在 那么函数在这个点不可导，
+可以理解为这个点的斜率没有固定值。
+
+\end_layout
+
+\begin_layout Standard
+有很多视频，
+书籍都是用一个点A的一侧的另一个点B解释导数，
+我个人认为是不太对的。
 
 \end_layout
 
