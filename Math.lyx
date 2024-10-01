@@ -73366,7 +73366,7 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \begin_inset Formula $rank(A)=n$
 \end_inset
 
-，
+非奇异矩阵，
 即矩阵 
 \begin_inset Formula $A$
 \end_inset
@@ -74075,6 +74075,261 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_inset
 
  的解.
+\end_layout
+
+\begin_layout Section
+矩阵的特征值与特征向量
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $A$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵，
+对于一个数（标量 ）
+\begin_inset Formula $\lambda$
+\end_inset
+
+，
+若存在非零列向量
+\begin_inset Formula $\alpha$
+\end_inset
+
+，
+
+\begin_inset Formula $A\alpha=\lambda\alpha$
+\end_inset
+
+。
+那么 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 就是矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值，
+而
+\begin_inset Formula $\alpha$
+\end_inset
+
+是与特征值
+\begin_inset Formula $\lambda$
+\end_inset
+
+对应的特征向量。
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+可以为
+\begin_inset Formula $0$
+\end_inset
+
+，
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+是列向量且不为
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+矩阵的特征值是一个标量，
+它反映了矩阵在某种线性变换下的缩放因子。
+
+\end_layout
+
+\begin_layout Paragraph
+计算特征值的方法：
+
+\end_layout
+
+\begin_layout Standard
+对于一个 
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵 A，
+其特征值是通过求解特征方程来获得的：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A-\lambda I)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $I$
+\end_inset
+
+ 是与 
+\begin_inset Formula $A$
+\end_inset
+
+ 尺寸相同的单位矩阵，
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 是特征值，
+ 
+\begin_inset Formula $\det$
+\end_inset
+
+ 表示行列式。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\alpha=\lambda\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\alpha-\lambda\alpha=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-\lambda E)\alpha=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A-\lambda E)\alpha=0$
+\end_inset
+
+是齐次线性方程组。
+对于一个线性方程组
+\begin_inset Formula $Ax=0$
+\end_inset
+
+,如果矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 是非奇异矩阵（即它有逆矩阵），
+那么唯一解是 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+。
+要找到 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+的解，
+矩阵
+\begin_inset Formula $A-\lambda E)$
+\end_inset
+
+ 必须是奇异矩阵，
+即：
+
+\begin_inset Formula $(A-\lambda E)\alpha=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这个方程意味着 
+\begin_inset Formula $A-\lambda E$
+\end_inset
+
+ 是一个奇异矩阵（没有逆），
+因为只有奇异矩阵才有非零解 
+\begin_inset Formula $\alpha$
+\end_inset
+
+。
+而判断一个矩阵是否是奇异矩阵的标准是它的行列式为 0。
+
+\end_layout
+
+\begin_layout Itemize
+如果 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 是特征值，
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+是与特征值
+\begin_inset Formula $\lambda$
+\end_inset
+
+对应的特征向量，
+那么
+\begin_inset Formula $c\alpha$
+\end_inset
+
+也是对应的特征向量。
+
+\end_layout
+
+\begin_layout Itemize
+一个特征向量只能对应一个特征质。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+是与特征值
+\begin_inset Formula $\lambda$
+\end_inset
+
+对应的特征向量，
+
+\begin_inset Formula $c_{1}\alpha_{1}$
+\end_inset
+
++
+\begin_inset Formula $c_{2}\alpha_{2}$
+\end_inset
+
+也是与特征值
+\begin_inset Formula $\lambda$
+\end_inset
+
+对应的特征向量。
+
 \end_layout
 
 \begin_layout Chapter
