@@ -64859,7 +64859,11 @@ a_{n1} & a_{n2} & \dots & a_{nn}
 \begin_inset Formula ${\displaystyle \left\{ 1,2,...,n\right\} }$
 \end_inset
 
-上置换的全体，
+上
+\series bold
+置换
+\series default
+的全体，
 即集合 
 \begin_inset Formula ${\displaystyle \left\{ 1,2,...,n\right\} }$
 \end_inset
@@ -67461,6 +67465,309 @@ c & d
 ）
 \end_layout
 
+\begin_layout Paragraph
+置换矩阵
+\end_layout
+
+\begin_layout Standard
+置换矩阵（ permutation matrix）是一种系数只由
+\begin_inset Formula $0$
+\end_inset
+
+和
+\begin_inset Formula $1$
+\end_inset
+
+组成的
+\series bold
+方块
+\series default
+矩阵。
+置换矩阵的每一行和每一列都恰好有一个
+\begin_inset Formula $1$
+\end_inset
+
+，
+其余元素都是
+\begin_inset Formula $0$
+\end_inset
+
+。
+在线性代数中，
+每个
+\begin_inset Formula $n$
+\end_inset
+
+阶的置换矩阵都代表了一个对
+\begin_inset Formula $n$
+\end_inset
+
+个元素（n维空间的基）的置换。
+当一个矩阵乘上一个置换矩阵时，
+所得到的是原来矩阵的横行（置换矩阵在左）或纵列（置换矩阵在右）经过置换后得到的矩阵。
+
+\end_layout
+
+\begin_layout Paragraph
+unitary matrix
+\end_layout
+
+\begin_layout Standard
+在线性代数中，
+酉矩阵（又译作幺正矩阵）指其共轭转置恰为其逆矩阵的复数方阵，
+数学描述如下：
+
+\end_layout
+
+\begin_layout Standard
+（数学定义）
+\begin_inset Formula ${\displaystyle U^{*}U=UU^{*}=I_{n}}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Standard
+（推论）
+\begin_inset Formula ${\displaystyle U^{-1}=U^{*}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $U^{*}$
+\end_inset
+
+ 是 
+\begin_inset Formula $U$
+\end_inset
+
+ 的共轭转置，
+
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ 是 n×n 单位矩阵。
+
+\end_layout
+
+\begin_layout Standard
+酉矩阵是正交矩阵（元素均为实数）在复数的推广。
+
+\end_layout
+
+\begin_layout Example
+以下是一个酉矩阵的例子：
+
+\begin_inset Formula ${\displaystyle U=\begin{bmatrix}-\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+验证如下：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle U^{*}U=\begin{bmatrix}\frac{i}{\sqrt{2}} & -\frac{i}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix}\begin{bmatrix}-\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix}=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle UU^{*}=\begin{bmatrix}-\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}\\
+\frac{i}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix}\begin{bmatrix}\frac{i}{\sqrt{2}} & -\frac{i}{\sqrt{2}}\\
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix}=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+性质
+\end_layout
+
+\begin_layout Standard
+从定义可知，
+酉矩阵满足以下性质：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle U^{*}U=UU^{*}=I_{n}}$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Standard
+由此可见，
+酉矩阵与其共轭转置
+\begin_inset Formula $U^{*}$
+\end_inset
+
+矩阵乘法可交换，
+是正规矩阵。
+
+\end_layout
+
+\begin_layout Standard
+酉矩阵亦必定可逆，
+且逆矩阵等于其共轭转置：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle U^{-1}=U^{*}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+酉矩阵
+\begin_inset Formula $U$
+\end_inset
+
+的所有特征值
+\begin_inset Formula $λ_{n}$
+\end_inset
+
+ ，
+都是绝对值等于
+\begin_inset Formula $1$
+\end_inset
+
+ 的复数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left|\lambda_{n}\right|=1}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+酉矩阵 U 行列式的绝对值也是 1：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left|\det(U)\right|=1}$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Standard
+酉矩阵 U 不会改变两个复向量 x 和 y 的点积：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle (U\mathbf{x})\cdot(U\mathbf{y})=\mathbf{x}\cdot\mathbf{y}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+更一般地说，
+所有希尔伯特内积也不会改变：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \langle U\mathbf{x},U\mathbf{y}\rangle=\langle\mathbf{x},\mathbf{y}\rangle}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+若 U 及 V 都是酉矩阵，
+则 UV 也是酉矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle (UV)^{*}(UV)=(UV)(UV)^{*}=I_{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $U$
+\end_inset
+
+ 为 
+\begin_inset Formula $n×n$
+\end_inset
+
+ 矩阵，
+则下列条件等价：
+
+\end_layout
+
+\begin_layout Standard
+U 是幺正矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $U^{*}$
+\end_inset
+
+是幺正矩阵
+\end_layout
+
+\begin_layout Standard
+U 的列向量是在 Cn 上的一组标准正交基
+\end_layout
+
+\begin_layout Standard
+U 的行向量是在 Cn 上的一组标准正交基
+\end_layout
+
+\begin_layout Standard
+给定任意的 n ，
+所有 n 阶幺正矩阵的集合 G 与矩阵乘法“⋅”，
+都能构成一个群 (G,
+ ⋅ )。
+
+\end_layout
+
 \begin_layout Subsection
 矩阵的运算
 \end_layout
@@ -67680,6 +67987,28 @@ A的第二行乘以B的第二列的和。
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subparagraph
+特殊矩阵满足交换律：
+
+\end_layout
+
+\begin_layout Standard
+对角矩阵
+\end_layout
+
+\begin_layout Standard
+标量矩阵
+\end_layout
+
+\begin_layout Standard
+标量矩阵是对角矩阵的一种特殊情况，
+其中所有对角元素相等
+\end_layout
+
+\begin_layout Standard
+相似矩阵
 \end_layout
 
 \begin_layout Example
@@ -68580,9 +68909,8 @@ c & d
 
 \end_layout
 
-\begin_layout Standard
-方阵性质：
-
+\begin_layout Subsection
+方阵性质
 \end_layout
 
 \begin_layout Itemize
@@ -74202,6 +74530,36 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \begin_layout Standard
+特征多项式的定义：
+给定一个 
+\begin_inset Formula $n×n$
+\end_inset
+
+ 的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，
+它的特征多项式 
+\begin_inset Formula $p(\lambda)$
+\end_inset
+
+定义为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(\lambda)=\det(A-\lambda I)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $A\alpha=\lambda\alpha$
 \end_inset
 
@@ -74275,6 +74633,54 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
+\begin_layout Remark
+\begin_inset Formula $\det(A-\lambda I)=0$
+\end_inset
+
+和
+\begin_inset Formula $\det(\lambda I-A)=0$
+\end_inset
+
+从本质上是相同的，
+它们都是用于求解矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的特征值的方程，
+只是写法上稍有不同。
+两者都表示我们在计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的特征多项式的行列式，
+并通过令其等于零来求特征值。
+
+\begin_inset Formula 
+\[
+\det(A-\lambda I)=\det(\lambda I-A)
+\]
+
+\end_inset
+
+这源于行列式的计算本质上只取决于矩阵的元素排列顺序和符号，
+并且对称矩阵或反对称矩阵的顺序不会影响行列式的绝对值。
+
+\end_layout
+
+\begin_layout Remark
+虽然这两个方程在求解上等价，
+但在具体表达式上会有符号的不同，
+尤其是在
+\begin_inset Formula $A$
+\end_inset
+
+是数值矩阵时。
+比如如果你展开行列式，
+最终形式中两者的符号顺序可能会不同，
+但根（特征值）是相同的。
+
+\end_layout
+
 \begin_layout Itemize
 如果 
 \begin_inset Formula $\lambda$
@@ -74298,6 +74704,14 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+特征向量可以乘以任意非零常数形成等价的特征向量，
+常常将其写为比例形式。
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 一个特征向量只能对应一个特征质。
 
@@ -74330,6 +74744,2311 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 对应的特征向量。
 
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+的特征值和特征向量。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|A-\lambda E|=0=\left|\begin{array}{ccc}
+-\lambda\\
+ & -\lambda\\
+ &  & -\lambda
+\end{array}\right|=-\lambda^{3}=0$
+\end_inset
+
+,
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+（重数为 3，
+因为是三次方程）。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $(A-\lambda E)\alpha=0$
+\end_inset
+
+,
+\begin_inset Formula $A-\lambda E=0$
+\end_inset
+
+,
+\begin_inset Formula $\alpha=\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+0\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+???
+\end_layout
+
+\begin_layout Paragraph
+重数
+\end_layout
+
+\begin_layout Standard
+在特征值问题中，
+ 
+\series bold
+重数
+\series default
+ （也称为 
+\series bold
+代数重数
+\series default
+ ）指的是特征值在特征多项式中的重复次数。
+具体来说，
+矩阵的特征多项式是一个多项式方程，
+其中每个特征值 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 都可能在该方程中出现多次，
+出现的次数就是该特征值的重数。
+
+\end_layout
+
+\begin_layout Standard
+例如，
+假设矩阵的特征多项式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\lambda-2)^{2}(\lambda-3)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这个方程中：
+
+\end_layout
+
+\begin_layout Standard
+特征值 
+\begin_inset Formula $\ensuremath{\lambda=2}$
+\end_inset
+
+出现了两次，
+因此其重数为 2。
+
+\end_layout
+
+\begin_layout Standard
+特征值 
+\begin_inset Formula $\lambda=3$
+\end_inset
+
+ 出现了一次，
+因此其重数为 1。
+
+\end_layout
+
+\begin_layout Paragraph
+重数的类型：
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+代数重数
+\series default
+ ：
+特征值在特征多项式中出现的次数。
+例如，
+特征值
+\begin_inset Formula $\ensuremath{\lambda=2}$
+\end_inset
+
+在上面的多项式中有代数重数 2。
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+几何重数
+\series default
+：
+特征值所对应的线性无关特征向量的个数，
+几何重数总是小于或等于代数重数。
+
+\end_layout
+
+\begin_layout Standard
+矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征多项式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\lambda^{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解得特征值
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+。
+这个特征值在方程中出现了 3 次，
+因此 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ 的
+\series bold
+代数重数
+\series default
+为 3。
+
+\end_layout
+
+\begin_layout Paragraph
+性质
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ 有相同的特征质，
+特征向量不一定相同。
+
+\end_layout
+
+\begin_layout Itemize
+对于
+\begin_inset Formula $A$
+\end_inset
+
+，
+如果
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\sum|a_{ij}|<1,i=1,\cdots,n$
+\end_inset
+
+,矩阵A的每行元素绝对值之和小于1
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sum|a_{ij}|<1,j=1,\cdots,n$
+\end_inset
+
+，
+矩阵A的每列元素绝对值之和小于1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|\lambda_{k}|<1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+n 个特征质
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的所有特征值的和等于矩阵的迹，
+即主对角线上元素的和：
+
+\begin_inset Formula $\stackrel[i=1]{n}{\sum}\lambda_{i}=\stackrel[i=1]{n}{\sum}a_{ii}$
+\end_inset
+
+ ，
+
+\begin_inset Formula $\stackrel[i=1]{n}{\sum}a_{ii}$
+\end_inset
+
+是主对角线元素和，
+叫做矩阵的迹，
+
+\begin_inset Formula $Tr(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的所有特征值的乘积等于矩阵的行列式，
+
+\begin_inset Formula $\lambda_{1}\lambda_{2}\cdots\lambda_{n}=|A|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+可逆
+\begin_inset Formula $\Leftrightarrow|A|\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵互不相同的特征质
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{m}$
+\end_inset
+
+对应的特征向量
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$
+\end_inset
+
+线性无关。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+归纳法-反证法来证明
+\end_layout
+
+\begin_layout Standard
+假设 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$
+\end_inset
+
+ 是 
+\begin_inset Formula $𝐴$
+\end_inset
+
+ 的互不相同的特征值，
+但它们对应的特征向量 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$
+\end_inset
+
+线性相关。
+这意味着存在不全为零的常数
+\begin_inset Formula $c_{1},c_{2,\cdots,}c_{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使得：
+
+\begin_inset Formula 
+\[
+c_{1}\alpha_{1}+c_{2}\alpha_{2}+\cdots+c_{m}\alpha_{m}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对这个方程两边乘以矩阵 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A(c_{1}\alpha_{1}+c_{2}\alpha_{2}+\cdots+c_{m}\alpha_{m})=A0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为每个 
+\begin_inset Formula $𝛼_{𝑖}$
+\end_inset
+
+都是特征向量，
+代入 
+\begin_inset Formula $A\alpha_{i}=\lambda_{i}\alpha_{i}$
+\end_inset
+
+，
+得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{1}\lambda_{1}\alpha_{1}+c_{2}\lambda_{2}\alpha_{2}+\cdots+c_{m}\lambda_{m}\alpha_{m}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程和原方程：
+
+\begin_inset Formula $c_{1}\alpha_{1}+c_{2}\alpha_{2}+\cdots+c_{m}\alpha_{m}=0$
+\end_inset
+
+同时乘以
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\lambda_{m}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+构成两个关于特征向量 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$
+\end_inset
+
+的方程。
+将这两个方程相减，
+得到：
+
+\begin_inset Formula 
+\[
+c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2}+\cdots+c_{m-1}(\lambda_{m-1}-\lambda_{m})\alpha_{m-1}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$
+\end_inset
+
+互不相同，
+系数
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{m}$
+\end_inset
+
+ 不可能为零。
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+是列向量且不为
+\begin_inset Formula $0$
+\end_inset
+
+。
+这意味着所有
+\begin_inset Formula $c_{i}=0$
+\end_inset
+
+这与假设中有些常数不为零矛盾。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵互不相同的特征质
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{m}$
+\end_inset
+
+对应的特征向量
+\begin_inset Formula $\alpha_{11},\alpha_{12},\cdots,\alpha_{m}$
+\end_inset
+
+线性无关（每个特征质对应多个特征向量）
+\end_layout
+
+\begin_layout Itemize
+矩阵的特征多项式:矩阵
+\begin_inset Formula $𝐴$
+\end_inset
+
+的特征多项式为 
+\begin_inset Formula $det(𝐴−\lambda E)$
+\end_inset
+
+ 它是一个关于 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 的多项式。
+矩阵的特征值是该特征多项式的根。
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是A的特征质，
+
+\begin_inset Formula $k\lambda$
+\end_inset
+
+是
+\begin_inset Formula $kA$
+\end_inset
+
+对的特征质。
+ 
+\end_layout
+
+\begin_layout Itemize
+幂矩阵的特征值:如果
+\begin_inset Formula $𝐴$
+\end_inset
+
+的特征值为 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+，
+则矩阵 
+\begin_inset Formula $A^{k}$
+\end_inset
+
+的特征值为 
+\begin_inset Formula $\lambda_{i}^{k}$
+\end_inset
+
+。
+换句话说，
+矩阵的幂次不会改变其特征向量，
+但会改变对应的特征值为特征值的幂。
+
+\end_layout
+
+\begin_layout Itemize
+可逆矩阵的特征值:如果矩阵 
+\begin_inset Formula $𝐴$
+\end_inset
+
+ 是可逆的，
+那么其特征值都不为零。
+并且 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+的特征值是 𝐴 的特征值的倒数，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $A^{-1}\alpha=\frac{1}{\lambda}\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+是A的特征质，
+
+\begin_inset Formula $\frac{1}{\lambda}|A|$
+\end_inset
+
+是
+\begin_inset Formula $A^{*}$
+\end_inset
+
+ 
+\begin_inset Formula $(adj(A))$
+\end_inset
+
+的特征。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A^{-1}=\frac{1}{|A|}A^{*}$
+\end_inset
+
+,
+\begin_inset Formula $A^{-1}\alpha=\frac{1}{|A|}A^{*}\alpha\frac{1}{\lambda}\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+特征值的几何重数与代数重数
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+特征值的代数重数是它在特征多项式中的重数。
+
+\end_layout
+
+\begin_layout Itemize
+特征值的几何重数是对应于这个特征值的线性无关特征向量的个数。
+
+\end_layout
+
+\begin_layout Itemize
+对于矩阵
+\begin_inset Formula $𝐴$
+\end_inset
+
+，
+几何重数总是小于或等于代数重数。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+重特征根对应的特征向量的个数小于等于
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+特征向量的归一化
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+特征向量可以进行归一化（即调整其长度为 1），
+而特征值不会受到影响。
+归一化后的特征向量仍然是矩阵的特征向量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $A$
+\end_inset
+
+是
+\begin_inset Formula $4$
+\end_inset
+
+阶方阵，
+
+\begin_inset Formula $|3E+A|=0$
+\end_inset
+
+,
+\begin_inset Formula $AA^{T}=2E$
+\end_inset
+
+,
+\begin_inset Formula $|A|<0$
+\end_inset
+
+，
+求
+\begin_inset Formula $A^{*}$
+\end_inset
+
+的特征质。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+|3E+A| & =0=|-(-3E-A)|\\
+= & (-1)^{4}|-3E-A|=|-3E-A|
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征质是
+\begin_inset Formula $-3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|A||A^{T}|=|2E|=2^{4}=(|A|)^{2}=16$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|A|=\pm4$
+\end_inset
+
+,
+\begin_inset Formula $|A|<0$
+\end_inset
+
+,所以
+\begin_inset Formula $|A|=-4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{1}{\lambda}|A|=\frac{4}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+1 & -3 & 3\\
+3 & a & 3\\
+6 & -6 & b
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{1}=-2$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}=4$
+\end_inset
+
+,求
+\begin_inset Formula $\lambda_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $-2+4+\lambda_{3}=1+a+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $-2\times4\times\lambda_{3}=\left|\begin{array}{ccc}
+1 & -3 & 3\\
+3 & a & 3\\
+6 & -6 & b
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|\lambda_{1}E-A|=\left|\begin{array}{ccc}
+1 & -3 & 3\\
+3 & a & 3\\
+6 & -6 & b
+\end{array}\right|=\left|\begin{array}{ccc}
+-3 & 3 & -3\\
+-3 & -2-a & -3\\
+-6 & 6 & -2-b
+\end{array}\right|=3(5+a)(4-b)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+同理带入
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+,得出
+\begin_inset Formula $a=-1$
+\end_inset
+
+，
+
+\begin_inset Formula $b=4$
+\end_inset
+
+,得出矩阵
+\begin_inset Formula $A$
+\end_inset
+
+，
+计算
+\begin_inset Formula $\lambda_{3}=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A$
+\end_inset
+
+的特征质 
+\begin_inset Formula $4$
+\end_inset
+
+，
+
+\begin_inset Formula $-1$
+\end_inset
+
+，
+
+\begin_inset Formula $-1$
+\end_inset
+
+，
+求矩阵迹。
+
+\end_layout
+
+\begin_layout Solution
+矩阵的迹（Trace）是矩阵主对角线上元素的和，
+它也等于矩阵所有特征值的和。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|A|=4\times(-1)\times(-1)$
+\end_inset
+
+，
+
+\begin_inset Formula $Tr(A)=4-1-1=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求特征值
+\begin_inset Formula $A=\left[\begin{array}{cc}
+4 & 1\\
+2 & 3
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $|\lambda E-A|=\left|\begin{array}{cc}
+\lambda-4 & -1\\
+-2 & \lambda-3
+\end{array}\right|=(\lambda-4)(\lambda-3)-2=0=(\lambda-5)(\lambda-2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+得特征值
+\begin_inset Formula $\lambda_{1}=5$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求特征向量
+\begin_inset Formula $A\vec{\alpha}=\lambda\alpha$
+\end_inset
+
+,
+\begin_inset Formula $A\vec{\alpha}-\lambda\alpha=(A-\lambda E)\vec{\alpha}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+代入，
+
+\begin_inset Formula $(\left[\begin{array}{cc}
+4 & 1\\
+2 & 3
+\end{array}\right]-5\left[\begin{array}{cc}
+1\\
+ & 1
+\end{array}\right])\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[\begin{array}{cc}
+-1 & 1\\
+2 & -2
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这相当于以下的两个线性方程：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-x_{1}+x_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2x_{1}-2x_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+得
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+.因此，
+特征向量对应于任意比例的向量 
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+(特征向量不可为0).
+\end_layout
+
+\begin_layout Example
+对于特征值 
+\begin_inset Formula $\lambda_{2}=2$
+\end_inset
+
+代入
+\begin_inset Formula $(A-\lambda E)\vec{\alpha}=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $(\left[\begin{array}{cc}
+4 & 1\\
+2 & 3
+\end{array}\right]-2\left[\begin{array}{cc}
+1\\
+ & 1
+\end{array}\right])\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[\begin{array}{cc}
+2 & 1\\
+2 & 1
+\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这相当于以下的两个线性方程：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2x_{1}+x_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2x_{1}+x_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+得
+\begin_inset Formula $x_{1}=-\frac{1}{2}x_{2}$
+\end_inset
+
+.因此，
+特征向量对应于任意比例的向量 
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
+1\\
+-2
+\end{array}\right]$
+\end_inset
+
+(特征向量不可为0).
+\end_layout
+
+\begin_layout Example
+特征向量可以乘以任意非零常数形成等价的特征向量，
+常常将其写为比例形式。
+
+\end_layout
+
+\begin_layout Section
+相似矩阵与可对角化的条件
+\end_layout
+
+\begin_layout Subsection
+相似矩阵
+\end_layout
+
+\begin_layout Standard
+相似关系是两个矩阵之间的一种等价关系。
+
+\end_layout
+
+\begin_layout Standard
+两个
+\begin_inset Formula $n×n$
+\end_inset
+
+矩阵
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+为相似矩阵当且仅当存在一个
+\begin_inset Formula $n×n$
+\end_inset
+
+的可逆矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P^{-1}AP=B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+P被称为矩阵A与B之间的相似变换矩阵。
+
+\end_layout
+
+\begin_layout Paragraph
+严格定义
+\end_layout
+
+\begin_layout Standard
+两个系数域为
+\begin_inset Formula $K$
+\end_inset
+
+的
+\begin_inset Formula $n×n$
+\end_inset
+
+的矩阵
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+为域
+\begin_inset Formula $L$
+\end_inset
+
+上的相似矩阵当且仅当存在一个系数域为
+\begin_inset Formula $L$
+\end_inset
+
+的
+\begin_inset Formula $n×n$
+\end_inset
+
+的可逆矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P^{-1}AP=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这时，
+称矩阵
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+“相似”。
+
+\begin_inset Formula $B$
+\end_inset
+
+称作
+\begin_inset Formula $A$
+\end_inset
+
+通过相似变换矩阵：
+
+\begin_inset Formula $P$
+\end_inset
+
+得到的矩阵。
+术语相似变换的其中一个含义就是将矩阵
+\begin_inset Formula $A$
+\end_inset
+
+变成与其相似的矩阵
+\begin_inset Formula $B$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Paragraph
+判断两个矩阵是否相似的辅助方法：
+
+\end_layout
+
+\begin_layout Enumerate
+判断特征值是否相等；
+
+\end_layout
+
+\begin_layout Enumerate
+判断行列式是否相等；
+
+\end_layout
+
+\begin_layout Enumerate
+判断迹是否相等；
+
+\end_layout
+
+\begin_layout Enumerate
+判断秩是否相等；
+
+\end_layout
+
+\begin_layout Standard
+以上条件可以作为判断矩阵是否相似的必要条件，
+而非充分条件。
+
+\end_layout
+
+\begin_layout Paragraph
+性质
+\end_layout
+
+\begin_layout Standard
+相似变换是矩阵之间的一种等价关系，
+也就是说满足：
+
+\end_layout
+
+\begin_layout Itemize
+反身性：
+任意矩阵都与其自身相似,
+\begin_inset Formula $E^{-1}AE=B$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+对称性：
+如果
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+相似，
+那么
+\begin_inset Formula $B$
+\end_inset
+
+也和
+\begin_inset Formula $M$
+\end_inset
+
+相似。
+
+\end_layout
+
+\begin_layout Itemize
+传递性：
+如果
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+相似，
+
+\begin_inset Formula $B$
+\end_inset
+
+和
+\begin_inset Formula $C$
+\end_inset
+
+相似，
+那么
+\begin_inset Formula $A$
+\end_inset
+
+也和
+\begin_inset Formula $C$
+\end_inset
+
+相似。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $P^{-1}AP=B$
+\end_inset
+
+,
+\begin_inset Formula $Q^{-1}BQ=C$
+\end_inset
+
+,
+\begin_inset Formula $Q^{-1}P^{-1}APQ=C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(PQ)^{-1}A(PQ)=C$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+矩阵间的相似关系与所在的域无关：
+设
+\begin_inset Formula $K$
+\end_inset
+
+是
+\begin_inset Formula $L$
+\end_inset
+
+的一个子域，
+
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+是两个系数在
+\begin_inset Formula $K$
+\end_inset
+
+中的矩阵，
+则
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+在
+\begin_inset Formula $K$
+\end_inset
+
+上相似当且仅当它们在
+\begin_inset Formula $L$
+\end_inset
+
+上相似。
+这个性质十分有用：
+在判定两个矩阵是否相似时，
+可以随意地扩张系数域至一个代数闭域，
+然后在其上计算若尔当标准形。
+
+\end_layout
+
+\begin_layout Standard
+如果两个相似矩阵
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+之间的转换矩阵
+\begin_inset Formula $P$
+\end_inset
+
+是一个置换矩阵，
+那么就称 
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+“置换相似”。
+ 如果两个相似矩阵
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+之间的转换矩阵P是一个酉矩阵，
+那么就称 
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+“酉相似”。
+谱定理证明了每个正规矩阵都酉相似于某个对角矩阵。
+
+\end_layout
+
+\begin_layout Paragraph
+相似变换下的不变性质
+\end_layout
+
+\begin_layout Standard
+两个相似的矩阵有许多相同的性质：
+
+\end_layout
+
+\begin_layout Enumerate
+两者的秩相等。
+
+\end_layout
+
+\begin_layout Enumerate
+两者的行列式值相等。
+
+\end_layout
+
+\begin_layout Enumerate
+两者的迹数相等。
+
+\end_layout
+
+\begin_layout Enumerate
+两者拥有同样的特征值，
+尽管相应的特征向量一般不同。
+
+\end_layout
+
+\begin_layout Enumerate
+两者拥有同样的特征多项式。
+
+\end_layout
+
+\begin_layout Enumerate
+两者拥有同样的初等因子。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P^{-1}AP=B$
+\end_inset
+
+,则
+\begin_inset Formula $A$
+\end_inset
+
+，
+
+\begin_inset Formula $B$
+\end_inset
+
+同时可逆或同时不可逆，
+且
+\begin_inset Formula $P^{-1}A^{-1}P=B^{-1}$
+\end_inset
+
+。
+
+\begin_inset Formula $B^{-1}=(P^{-1}AP)^{-1}=P^{-1}AP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\sim B$
+\end_inset
+
+,则
+\begin_inset Formula $A^{m}\sim B^{m}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+B^{m} & =(P^{-1}AP)^{m}\\
+= & P^{-1}AP\cdots P^{-1}AP\\
+= & P^{-1}A^{m}P
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+这种现象的原因有两个：
+
+\end_layout
+
+\begin_layout Enumerate
+两个相似的矩阵可以看做是同一个线性变换的“两面”，
+即在两个不同的基下的表现。
+
+\end_layout
+
+\begin_layout Enumerate
+映射
+\begin_inset Formula $X{\displaystyle \mapsto}P^{-1}XP$
+\end_inset
+
+是从
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵射到
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵的一个双射同构，
+因为
+\begin_inset Formula $P$
+\end_inset
+
+是可逆的。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+在给定了矩阵
+\begin_inset Formula $A$
+\end_inset
+
+后，
+只要能找到一个与之相似而又足够“简单”的“规范形式”
+\begin_inset Formula $B$
+\end_inset
+
+，
+那么对A的研究就可以转化为对更简单的矩阵B的研究。
+比如说A被称为可对角化的，
+如果它与一个对角矩阵相似。
+不是所有的矩阵都可以对角化，
+但至少在复数域（或任意的代数闭域）内，
+所有的矩阵都相似于一些被称为若尔当标准形的简单的矩阵。
+另一种标准形：
+弗罗贝尼乌斯标准形则在任意的域上都适用。
+只要查看A和B所对应的标准形是否一致，
+就能知道两者是否相似。
+
+\end_layout
+
+\begin_layout Subsection
+矩阵可对角化
+\end_layout
+
+\begin_layout Standard
+可对角化矩阵是可化简为对角矩阵的方阵。
+矩阵对角化后大幅降低了某些属性的计算难度，
+比如其行列式就是对角线上所有数字的乘积，
+而对角线上的数字就是其特征值。
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula ${\displaystyle A\in K^{n\times n}}$
+\end_inset
+
+ 是一个定义在标量域
+\begin_inset Formula ${\displaystyle K}$
+\end_inset
+
+ 上的 
+\begin_inset Formula ${\displaystyle n}$
+\end_inset
+
+阶方阵，
+若存在一个 
+\begin_inset Formula ${\displaystyle n}$
+\end_inset
+
+阶的可逆方阵
+\begin_inset Formula ${\displaystyle P\in K^{n\times n}}$
+\end_inset
+
+ 使得 
+\begin_inset Formula ${\displaystyle P^{-1}AP}$
+\end_inset
+
+是
+\series bold
+对角矩阵
+\series default
+，
+则 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+就被称为可对角化的。
+
+\end_layout
+
+\begin_layout Standard
+一个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+如果能通过相似变换转换为一个
+\series bold
+对角矩阵
+\series default
+，
+就称为可对角化。
+即存在一个可逆矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得：
+
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ 其中 
+\begin_inset Formula $D$
+\end_inset
+
+ 是一个对角矩阵。
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $A$
+\end_inset
+
+相似于对角矩阵，
+
+\begin_inset Formula $A$
+\end_inset
+
+有
+\begin_inset Formula $n$
+\end_inset
+
+个线性无关的特征向量。
+
+\begin_inset Formula $P^{-1}AP=\left[\begin{array}{ccc}
+\lambda_{1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \lambda_{n}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+一个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+是否可对角化，
+取决于它是否有足够的线性无关的特征向量。
+如果矩阵有 
+\begin_inset Formula $n$
+\end_inset
+
+ 个线性无关的特征向量（对于 
+\begin_inset Formula $n×n$
+\end_inset
+
+矩阵），
+那么该矩阵是可对角化的。
+
+\end_layout
+
+\begin_layout Subsubsection
+矩阵对角化的方法
+\end_layout
+
+\begin_layout Paragraph
+对角化的步骤：
+
+\end_layout
+
+\begin_layout Standard
+求特征值：
+解出矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的特征值
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求特征向量：
+对于每个特征值 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ ，
+求对应的特征向量
+\begin_inset Formula $\vec{v}_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+构造矩阵P：
+将所有线性无关的特征向量组成矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+即P=
+\begin_inset Formula $[\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+构造对角矩阵
+\begin_inset Formula $D$
+\end_inset
+
+:矩阵 
+\begin_inset Formula $D$
+\end_inset
+
+的对角线元素是特征值 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\cdots,\lambda_{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+如果能找到这样的矩阵
+\begin_inset Formula $P$
+\end_inset
+
+ 和对角矩阵
+\begin_inset Formula $D$
+\end_inset
+
+，
+就说明矩阵
+\begin_inset Formula $A$
+\end_inset
+
+是可对角化的。
+
+\end_layout
+
+\begin_layout Example
+考虑矩阵
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula ${\displaystyle A=\begin{bmatrix}1 & 2 & 0\\
+0 & 3 & 0\\
+2 & -4 & 2
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+这个矩阵有特征值
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula ${\displaystyle \lambda_{1}=3,\lambda_{2}=2,\lambda_{3}=1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以 
+\begin_inset Formula $A$
+\end_inset
+
+ 是有三个不同特征值的 
+\begin_inset Formula $3×3$
+\end_inset
+
+ 矩阵，
+所以它是可对角化的。
+
+\end_layout
+
+\begin_layout Solution
+如果我们要对角化 A，
+我们需要计算对应的特征向量。
+它们是
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula ${\displaystyle v_{1}=\begin{bmatrix}-1\\
+-1\\
+2
+\end{bmatrix}\quad v_{2}=\begin{bmatrix}0\\
+0\\
+1
+\end{bmatrix}\quad v_{3}=\begin{bmatrix}-1\\
+0\\
+2
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+我们可以轻易的验证
+\begin_inset Formula ${\displaystyle Av_{k}=\lambda_{k}v_{k}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+现在，
+设 P 是由这些特征向量作为纵列的矩阵:
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula ${\displaystyle P=\begin{bmatrix}-1 & 0 & -1\\
+-1 & 0 & 0\\
+2 & 1 & 2
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+则 P 对角化了 A，
+简单的计算可验证:
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula ${\displaystyle P^{-1}AP=\begin{bmatrix}0 & -1 & 0\\
+2 & 0 & 1\\
+-1 & 1 & 0
+\end{bmatrix}\begin{bmatrix}1 & 2 & 0\\
+0 & 3 & 0\\
+2 & -4 & 2
+\end{bmatrix}\begin{bmatrix}-1 & 0 & -1\\
+-1 & 0 & 0\\
+2 & 1 & 2
+\end{bmatrix}=\begin{bmatrix}3 & 0 & 0\\
+0 & 2 & 0\\
+0 & 0 & 1
+\end{bmatrix}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+注意特征值 
+\begin_inset Formula ${\displaystyle \lambda_{k}}$
+\end_inset
+
+ 出现在对角矩阵中。
+
+\end_layout
+
+\begin_layout Example
+对角化可被用来有效的计算矩阵 A 的幂，
+假如矩阵是可对角化的。
+
+\end_layout
+
+\begin_layout Solution
+比如我们找到了
+\begin_inset Formula ${\displaystyle P^{-1}AP=D}$
+\end_inset
+
+是对角矩阵，
+因为矩阵的积是结合的，
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula ${\displaystyle \begin{aligned}A^{k} & =(PDP^{-1})^{k}=(PDP^{-1})\cdot(PDP^{-1})\cdots(PDP^{-1})\\
+ & =PD(P^{-1}P)D(P^{-1}P)\cdots(P^{-1}P)DP^{-1}=PD^{k}P^{-1}
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+而后者容易计算，
+因为它只涉及对角矩阵的幂。
+
+\end_layout
+
+\begin_layout Solution
+在找到线性递归序列比如斐波那契数列的项的闭合形式的表达中这是非常有用的。
+
+\end_layout
+
+\begin_layout Corollary
+如果A有n个互异的特征矩阵，
+
+\begin_inset Formula $A\sim\text{对角形}=\left[\begin{array}{ccc}
+\lambda_{1} & 0 & 0\\
+0 & \ddots & 0\\
+0 & 0 & \lambda_{n}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+3 & 2 & -1\\
+-2 & -2 & 2\\
+3 & 6 & -1
+\end{array}\right]$
+\end_inset
+
+，
+是否相似对角形，
+
+\begin_inset Formula $P=?$
+\end_inset
+
+
+\begin_inset Formula $\land=?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $|\lambda E-A|=\left|\begin{array}{ccc}
+\lambda-3 & -2 & 1\\
+2 & \lambda+2 & -2\\
+-3 & -6 & \lambda+1
+\end{array}\right|=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\lambda_{1}=4$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\lambda_{2}=\lambda_{3}=2$
+\end_inset
+
+表示二重 重根。
+
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $\lambda_{1}=4$
+\end_inset
+
+时,
+\begin_inset Formula $\left[\begin{array}{ccc}
+-7 & -2 & 1\\
+2 & -2 & -2\\
+-3 & -6 & -3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\land=\text{\left[\begin{array}{ccc}
+2\\
+ & -4\\
+ &  & 2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\land=\text{\left[\begin{array}{ccc}
+4\\
+ & 2\\
+ &  & 2
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $A\sim\land$
+\end_inset
+
+ 的充分必要条件，
+
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ 重的特征根基础解系有
+\begin_inset Formula $r_{i}$
+\end_inset
+
+ 个解。
+
+\end_layout
+
+\begin_layout Example
+有3阶矩阵
+\begin_inset Formula $A$
+\end_inset
+
+，
+特征质
+\begin_inset Formula $\lambda_{1}=1$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}=2$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{3}=3$
+\end_inset
+
+,特征向量
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{ccc}
+1 & 1 & 1\end{array}\right]^{T}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}=\left[\begin{array}{ccc}
+1 & 2 & 3\end{array}\right]^{T}$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{3}=\left[\begin{array}{ccc}
+1 & 2 & 6\end{array}\right]^{T}$
+\end_inset
+
+.
+ 求
+\begin_inset Formula $A$
+\end_inset
+
+，
+求
+\begin_inset Formula $A^{T}$
+\end_inset
+
+的特征质。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $P=(\alpha_{1},\alpha_{2},\alpha_{3})$
+\end_inset
+
+,
+\begin_inset Formula $P^{-1}AP=\left[\begin{array}{ccc}
+1\\
+ & 2\\
+ &  & 3
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A=P\land P^{-1}=\left[\begin{array}{ccc}
+0 & 1 & 0\\
+0 & -1 & 2\\
+3 & -9 & 7
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A^{T}$
+\end_inset
+
+ 的特征值
+\begin_inset Formula $\lambda_{1}=1$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{2}=2$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{3}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+实对称矩阵的对角化
 \end_layout
 
 \begin_layout Chapter
