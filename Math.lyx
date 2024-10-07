@@ -23212,7 +23212,7 @@ v=(x,y,z)
 \end_layout
 
 \begin_layout Standard
-数量积也叫点积，
+数量积也叫点积（内积），
 它是向量与向量的乘积，
 其结果为一个标量（非向量）。
 几何上，
@@ -23265,6 +23265,28 @@ v=(x,y,z)
 \end_layout
 
 \begin_layout Standard
+在欧几里得空间中，
+两个向量 
+\begin_inset Formula $\overrightarrow{u}=[u_{1},u_{2},\cdots,u_{n}]$
+\end_inset
+
+和 
+\begin_inset Formula $\overrightarrow{v}=[v_{1},v_{2},\cdots,v_{n}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+的内积定义为：
+
+\begin_inset Formula $\overrightarrow{u}\cdot\overrightarrow{v}=u_{1}v_{1}+\cdots u_{n}v_{n}=\stackrel[i=1]{n}{\sum}u_{i}v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 数量积被广泛应用于物理中,
  如做功就是用力的向量乘位移的向量,
  即 
@@ -23278,6 +23300,78 @@ v=(x,y,z)
 \begin_layout Standard
 垂直向量数量积等于
 \begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ 同向 时，
+夹角 
+\begin_inset Formula $\theta=0^{\circ}$
+\end_inset
+
+，
+此时内积为正的最大值，
+等于 
+\begin_inset Formula $\|\mathbf{u}\|\|\mathbf{v}\|$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{\mathbf{v}}$
+\end_inset
+
+ 正交时，
+夹角 
+\begin_inset Formula $\theta=90^{\circ}$
+\end_inset
+
+，
+此时内积为
+\begin_inset Formula $0$
+\end_inset
+
+，
+这说明两个向量彼此垂直。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $\ensuremath{\mathbf{u}}$
+\end_inset
+
+和 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ 反向时，
+夹角
+\begin_inset Formula $\theta=180^{\circ}$
+\end_inset
+
+，
+此时内积为负，
+等于 
+\begin_inset Formula $-\|\mathbf{u}\|\|\mathbf{v}\|$
 \end_inset
 
 。
@@ -76601,7 +76695,330 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \end_layout
 
 \begin_layout Subsubsection
-矩阵对角化的方法
+内积
+\end_layout
+
+\begin_layout Standard
+参考向量内积
+\end_layout
+
+\begin_layout Paragraph
+矩阵形式的内积
+\end_layout
+
+\begin_layout Standard
+对于向量 
+\begin_inset Formula $\overrightarrow{u},\overrightarrow{v}\in\mathbb{R}^{n}$
+\end_inset
+
+，
+内积也可以表示为矩阵形式：
+
+\begin_inset Formula $\overrightarrow{u}\cdot\overrightarrow{v}=u^{T}v$
+\end_inset
+
+,这里
+\begin_inset Formula $u^{T}$
+\end_inset
+
+是
+\begin_inset Formula $u$
+\end_inset
+
+的转置向量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha=\left[\begin{array}{c}
+\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{n}
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\beta=\left[\begin{array}{c}
+\beta_{1}\\
+\beta_{2}\\
+\vdots\\
+\beta_{n}
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\alpha\beta=\alpha_{1}\beta_{1}+\alpha_{2}\beta_{2}+\cdots+\alpha_{n}\beta_{n}=\alpha^{T}\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+交换律:
+ 
+\begin_inset Formula $\boldsymbol{a}\cdot\boldsymbol{b}=\boldsymbol{b}\cdot\boldsymbol{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+分配律:
+ 
+\begin_inset Formula $(\boldsymbol{a}+\boldsymbol{b})\cdot\boldsymbol{c}=\boldsymbol{a}\cdot\boldsymbol{c}+\boldsymbol{b}\cdot\boldsymbol{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+结合律:
+\begin_inset Formula $(\lambda\boldsymbol{a})\cdot\boldsymbol{b}=\lambda\cdot(\boldsymbol{a}\cdot\boldsymbol{b})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\cdot\alpha\geqslant0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k\alpha\cdot k\beta=k^{2}(\alpha\cdot\beta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+向量的长度
+\end_layout
+
+\begin_layout Standard
+向量的长度，
+也叫做模（magnitude）或范数（norm），
+是向量在空间中延伸的量度。
+对于一个 
+\begin_inset Formula $n$
+\end_inset
+
+ 维向量
+\begin_inset Formula $\mathbf{v}=[v_{1},v_{2},\dots,v_{n}]$
+\end_inset
+
+，
+它的长度定义为该向量各个分量平方和的平方根：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\|\mathbf{v}\|=\sqrt{(v\cdot v)}=\sqrt{v_{1}^{2}+v_{2}^{2}+\dots+v_{n}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(v\cdot v)=(\|\mathbf{v}\|)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+二维和三维向量的长度
+\end_layout
+
+\begin_layout Standard
+二维向量 
+\begin_inset Formula $\mathbf{v}=[v_{1},v_{2}]$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\|\mathbf{v}\|=\sqrt{v_{1}^{2}+v_{2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 三维向量
+\begin_inset Formula $\mathbf{v}=[v_{1},v_{2},v_{3}]$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\|\mathbf{v}\|=\sqrt{v_{1}^{2}+v_{2}^{2}+v_{3}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+假设我们有一个二维向量 
+\begin_inset Formula $\mathbf{v}=[3,4]$
+\end_inset
+
+，
+它的长度为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\|\mathbf{v}\|=\sqrt{3^{2}+4^{2}}=\sqrt{9+16}=\sqrt{25}=5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于一个三维向量 
+\begin_inset Formula $\mathbf{v}=[1,2,2]$
+\end_inset
+
+，
+它的长度为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\|\mathbf{v}\|=\sqrt{1^{2}+2^{2}+2^{2}}=\sqrt{1+4+4}=\sqrt{9}=3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+符号和表示
+\end_layout
+
+\begin_layout Standard
+向量的长度通常使用 
+\begin_inset Formula $\|\mathbf{v}\|$
+\end_inset
+
+ 来表示，
+也称为向量的欧几里得范数（Euclidean norm）。
+在其他范数的定义下，
+向量长度可能有所不同，
+但欧几里得范数是最常用的定义。
+
+\end_layout
+
+\begin_layout Subparagraph
+几何意义
+\end_layout
+
+\begin_layout Standard
+向量的长度在几何上可以理解为从原点到该向量的终点的距离。
+例如，
+二维向量 
+\begin_inset Formula $\mathbf{v}=[3,4]$
+\end_inset
+
+ 可以看作在直角坐标系中，
+从原点 
+\begin_inset Formula $\ensuremath{(0,0)}$
+\end_inset
+
+到点 
+\begin_inset Formula $\ensuremath{(3,4)}$
+\end_inset
+
+的距离，
+这个距离就是
+\begin_inset Formula $5$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subparagraph
+单位向量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\|\mathbf{v}\|=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+归一化向量
+\end_layout
+
+\begin_layout Standard
+归一化向量是指将向量的长度缩放为 1 的过程。
+若给定一个向量 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+，
+它的归一化向量
+\begin_inset Formula $\ensuremath{\hat{\mathbf{v}}}$
+\end_inset
+
+可以通过将每个分量除以向量的长度来得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\mathbf{v}}=\frac{\mathbf{v}}{\|\mathbf{v}\|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+归一化向量保留了原向量的方向，
+但长度变为 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+实对称矩阵对角化的方法
 \end_layout
 
 \begin_layout Paragraph
@@ -77045,10 +77462,6 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-实对称矩阵的对角化
 \end_layout
 
 \begin_layout Chapter
