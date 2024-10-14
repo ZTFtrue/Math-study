@@ -73848,6 +73848,10 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \begin_layout Subsubsection
+高斯消去法
+\end_layout
+
+\begin_layout Subsubsection
 齐次
 \begin_inset Formula $Ax=0$
 \end_inset
@@ -77017,8 +77021,791 @@ B^{m} & =(P^{-1}AP)^{m}\\
 
 \end_layout
 
+\begin_layout Paragraph
+正交矩阵
+\end_layout
+
+\begin_layout Standard
+正交矩阵（Orthogonal Matrix）是一个方阵，
+其行向量和列向量都是正交且单位长度的。
+换句话说，
+一个矩阵 
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是正交矩阵当且仅当它满足以下条件：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A^{T}A=AA^{T}=I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $\ensuremath{A^{T}}$
+\end_inset
+
+是
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的转置矩阵，
+
+\begin_inset Formula $\ensuremath{I}$
+\end_inset
+
+是单位矩阵。
+简单来说，
+正交矩阵的转置矩阵等于它的逆矩阵，
+即:
+ 
+\begin_inset Formula $A^{T}=A^{-1}$
+\end_inset
+
+,且均是正交矩阵。
+
+\end_layout
+
+\begin_layout Subparagraph
+正交矩阵的性质
+\end_layout
+
+\begin_layout Enumerate
+保持向量的长度：
+如果
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是正交矩阵，
+那么对任意向量
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+，
+有 
+\begin_inset Formula $\|A\mathbf{v}\|=\|\mathbf{v}\|$
+\end_inset
+
+。
+也就是说，
+正交矩阵的变换保持了向量的长度。
+
+\end_layout
+
+\begin_layout Enumerate
+保持内积：
+正交矩阵保持向量之间的内积。
+对于任意两个向量
+\begin_inset Formula $\ensuremath{\mathbf{u}}$
+\end_inset
+
+和 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+，
+如果 
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是正交矩阵，
+则有：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $(A\mathbf{u})\cdot(A\mathbf{v})=\mathbf{u}\cdot\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这表明正交矩阵变换不会改变向量之间的夹角或方向关系。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+行与列正交：
+正交矩阵的行向量和列向量分别是标准正交的向量组，
+即任意两行或两列的内积为零。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+一个标准正交向量组
+\begin_inset Formula $\ensuremath{\mathbf{v}_{1},\mathbf{v}_{2},\dots,\mathbf{v}_{n}}$
+\end_inset
+
+具有以下两个性质：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 正交性：
+任意两向量之间的内积为 0，
+即：
+
+\begin_inset Formula 
+\[
+\mathbf{v}_{i}\cdot\mathbf{v}_{j}=0\quad\text{对于}\quad i\neq j
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这意味着它们彼此垂直。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 单位长度：
+每个向量的范数（长度）为 1，
+即：
+
+\begin_inset Formula 
+\[
+\|\mathbf{v}_{i}\|=1\quad\text{对于每个}\quad i
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这意味着每个向量是单位向量。
+
+\end_layout
+
+\begin_layout Standard
+标准正交向量组的构造
+\end_layout
+
+\begin_layout Standard
+一个常见的方法是使用施密特正交化（Gram-Schmidt Orthogonalization）过程。
+给定一个非正交的向量组，
+我们可以通过这个过程将它转换为标准正交向量组。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 第一步：
+将第一个向量标准化，
+得到单位向量
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{v}_{1}=\frac{\mathbf{u}_{1}}{\|\mathbf{u}_{1}\|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 第二步：
+从
+\begin_inset Formula $\ensuremath{\mathbf{u}_{2}}$
+\end_inset
+
+中减去它在
+\begin_inset Formula $\ensuremath{\mathbf{v}_{1}}$
+\end_inset
+
+上的投影，
+得到与 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ 正交的向量：
+
+\begin_inset Formula 
+\[
+\mathbf{v}_{2}=\mathbf{u}_{2}-(\mathbf{u}_{2}\cdot\mathbf{v}_{1})\mathbf{v}_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+然后将
+\begin_inset Formula $\ensuremath{\mathbf{v}_{2}}$
+\end_inset
+
+标准化：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{v}_{2}=\frac{\mathbf{v}_{2}}{\|\mathbf{v}_{2}\|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 第三步：
+从
+\begin_inset Formula $\ensuremath{\mathbf{u}_{3}}$
+\end_inset
+
+中减去它在
+\begin_inset Formula $\ensuremath{\mathbf{v}_{1}}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{\mathbf{v}_{2}}$
+\end_inset
+
+上的投影，
+得到与
+\begin_inset Formula $\ensuremath{\mathbf{v}_{1}}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{\mathbf{v}_{2}}$
+\end_inset
+
+都正交的向量
+\begin_inset Formula $\mathbf{v}_{3}$
+\end_inset
+
+，
+并将其标准化。
+
+\end_layout
+
+\begin_layout Standard
+依次进行下去，
+直到得到所有正交向量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+行列式的值为 
+\begin_inset Formula $\pm1$
+\end_inset
+
+：
+正交矩阵的行列式要么是 1，
+要么是
+\begin_inset Formula $-1$
+\end_inset
+
+。
+行列式为 1 的正交矩阵称为特殊正交矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+A,B正交矩阵，
+
+\begin_inset Formula $AB$
+\end_inset
+
+也是正交矩阵。
+
+\end_layout
+
+\begin_layout Subparagraph
+正交矩阵的几何意义
+\end_layout
+
+\begin_layout Standard
+正交矩阵常用于描述旋转或反射变换。
+特别地：
+
+\end_layout
+
+\begin_layout Enumerate
+旋转矩阵：
+正交矩阵表示不改变向量长度的旋转。
+二维旋转矩阵 
+\begin_inset Formula $R$
+\end_inset
+
+ 表示绕原点的旋转，
+可以写为：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R(\theta)=\begin{bmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的
+\begin_inset Formula $\ensuremath{\theta}$
+\end_inset
+
+是旋转角度。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+反射矩阵：
+某些正交矩阵可以表示关于某一条直线或一个平面的反射。
+例如，
+二维平面中关于
+\begin_inset Formula $x$
+\end_inset
+
+-轴的反射矩阵可以表示为：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subparagraph
+例子
+\end_layout
+
+\begin_layout Standard
+1.
+ 二维旋转矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R(\theta)=\begin{bmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个常见的正交矩阵，
+表示二维平面中的旋转。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 单位矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+单位矩阵是正交矩阵的一个特殊例子。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 反射矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个关于
+\begin_inset Formula $x$
+\end_inset
+
+-轴的反射矩阵，
+它也是一个正交矩阵。
+
+\end_layout
+
+\begin_layout Subparagraph
+正交矩阵的应用
+\end_layout
+
+\begin_layout Standard
+1.
+ 计算机图形学：
+正交矩阵广泛用于描述旋转、反射等几何变换。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 信号处理：
+在正交变换（如傅里叶变换、离散余弦变换）中，
+正交矩阵被用于信号的压缩与分析。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 线性代数：
+正交矩阵在分解方法（如 QR 分解）中有重要应用。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+4 & -4 & 2\\
+-4 & 4 & -2\\
+2 & -2 & 1
+\end{array}\right]$
+\end_inset
+
+,求正交矩阵。
+
+\end_layout
+
+\begin_layout Solution
+|
+\begin_inset Formula $\lambda E-A|=\left|\begin{array}{ccc}
+\lambda-4 & -4 & -2\\
+4 & \lambda-4 & 2\\
+-2 & 2 & \lambda-1
+\end{array}\right|=\lambda^{2}(\lambda-9)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{3}=9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
+\end_inset
+
+，
+
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}=\left[\begin{array}{c}
+-1\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\lambda_{3}=9$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{3}=\left[\begin{array}{c}
+2\\
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+构造正交矩阵
+\end_layout
+
+\begin_layout Solution
+对角矩阵
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 9
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+三阶实对称矩阵A，
+特征值
+\begin_inset Formula $6,3,3$
+\end_inset
+
+，
+6对应的特征向量
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
+1\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+,求矩阵
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\alpha_{1}\cdot\alpha_{3}=0$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 实对称矩阵对角化的方法
+\end_layout
+
+\begin_layout Theorem
+实对称矩阵A的不同特征值的对应特征向量正交
+\end_layout
+
+\begin_layout Paragraph
+正交相似
+\end_layout
+
+\begin_layout Standard
+给定两个
+\begin_inset Formula $\ensuremath{n\times n}$
+\end_inset
+
+矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+ ，
+如果存在一个正交矩阵
+\begin_inset Formula $Q$
+\end_inset
+
+（即
+\begin_inset Formula $Q^{T}Q=I$
+\end_inset
+
+），
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=Q^{T}AQ=Q^{-1}AQ
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则矩阵 A 和 B 称为正交相似的。
+
+\end_layout
+
+\begin_layout Subparagraph
+正交相似与一般相似的区别
+\end_layout
+
+\begin_layout Standard
+1.
+ 一般相似矩阵：
+两个矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+是相似矩阵，
+如果存在一个可逆矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得
+\begin_inset Formula $B=P^{-1}AP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里
+\begin_inset Formula $P$
+\end_inset
+
+ 可以是任意的可逆矩阵。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 正交相似矩阵 ：
+如果相似矩阵中的可逆矩阵
+\begin_inset Formula $\ensuremath{P}$
+\end_inset
+
+是正交矩阵
+\begin_inset Formula $Q$
+\end_inset
+
+，
+即满足 
+\begin_inset Formula $Q^{-1}=Q^{T}$
+\end_inset
+
+，
+则称它们是正交相似矩阵。
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=Q^{T}AQ
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+正交相似矩阵的性质
+\end_layout
+
+\begin_layout Standard
+**正交对角化**：
+如果一个矩阵可以被正交相似变换为一个对角矩阵，
+则称其是**正交可对角化**的。
+这意味着存在一个正交矩阵
+\begin_inset Formula $Q$
+\end_inset
+
+，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D=Q^{T}AQ
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+是一个对角矩阵。
+正交可对角化矩阵通常是对称矩阵。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -77461,6 +78248,773 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \begin_inset Formula $\lambda_{3}=3$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+二次型化标准型
+\end_layout
+
+\begin_layout Subsection
+二次型
+\end_layout
+
+\begin_layout Standard
+二次型（Quadratic Form）是指一个由多个变量的二次项组成的表达式。
+一般来说，
+二次型与矩阵密切相关，
+可以用矩阵表示为：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(\mathbf{x})=\mathbf{x}^{T}A\mathbf{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{\mathbf{x}}$
+\end_inset
+
+是一个 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ 的列向量：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\mathbf{x}=\begin{bmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ 是一个 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 的对称矩阵（即 
+\begin_inset Formula $A=A^{T}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{x}^{T}$
+\end_inset
+
+ 是 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ 的转置。
+
+\end_layout
+
+\begin_layout Subsection
+二次型的结构
+\end_layout
+
+\begin_layout Standard
+二次型 
+\begin_inset Formula $Q(\mathbf{x})$
+\end_inset
+
+ 包含变量 
+\begin_inset Formula $x_{1},x_{2},\dots,x_{n}$
+\end_inset
+
+ 的所有二次项，
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这种形式中，
+矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+可以通过系数来构造。
+例如，
+对于二次型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x_{1},x_{2})=3x_{1}^{2}+2x_{1}x_{2}+4x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对应的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\begin{bmatrix}3 & 1\\
+1 & 4
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+二次型的标准形式
+\end_layout
+
+\begin_layout Standard
+通过对二次型进行对角化处理，
+或者通过正交变换，
+可以将二次型化为标准形式，
+也称为
+\series bold
+规范形
+\series default
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(\mathbf{x})=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{n}y_{n}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $\ensuremath{y_{1},y_{2},\dots,y_{n}}$
+\end_inset
+
+是通过线性变换得到的新变量，
+
+\begin_inset Formula $\ensuremath{\lambda_{1},\lambda_{2},\dots,\lambda_{n}}$
+\end_inset
+
+是矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值。
+
+\end_layout
+
+\begin_layout Subsubsection
+如何将二次型化为标准形式
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+求矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值和特征向量
+\series default
+：
+通过计算 
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值和特征向量，
+可以将原始的变量转化为新的变量
+\begin_inset Formula $y_{i}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+对角化矩阵
+\series default
+：
+通过正交变换，
+将二次型转化为特征值的线性组合形式，
+即标准形式。
+
+\end_layout
+
+\begin_layout Subsection
+二次型的分类
+\end_layout
+
+\begin_layout Standard
+根据二次型的性质，
+它可以分为以下几类：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 正定二次型：
+如果二次型 
+\begin_inset Formula $\ensuremath{Q(\mathbf{x})>0}$
+\end_inset
+
+对于任何非零向量
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+，
+则称为正定二次型。
+对应的矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是正定矩阵（所有特征值为正）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 负定二次型：
+如果二次型 
+\begin_inset Formula $Q(\mathbf{x})<0$
+\end_inset
+
+ 对于任何非零向量 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+，
+则称为负定二次型。
+对应的矩阵 
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是负定矩阵（所有特征值为负）。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 不定二次型：
+如果二次型
+\begin_inset Formula $\ensuremath{Q(\mathbf{x})}$
+\end_inset
+
+可以取正值或负值，
+则称为不定二次型。
+对应的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 有正有负的特征值。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 半正定二次型：
+如果
+\begin_inset Formula $\ensuremath{Q(\mathbf{x})\geq0}$
+\end_inset
+
+对于任何向量
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+，
+则称为半正定二次型。
+对应的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 是半正定矩阵。
+
+\end_layout
+
+\begin_layout Example
+假设我们有如下二次型：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $Q(x_{1},x_{2})=2x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将其转化为矩阵形式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\begin{bmatrix}2 & 2\\
+2 & 5
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们可以求出矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征值和特征向量，
+然后通过正交变换将二次型化为标准形式。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 求特征值和特征向量：
+
+\end_layout
+
+\begin_layout Standard
+- 计算特征值 
+\begin_inset Formula $\lambda_{1}=1,\lambda_{2}=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 对应的特征向量为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{v}_{1}=\begin{bmatrix}-2\\
+1
+\end{bmatrix},\quad\mathbf{v}_{2}=\begin{bmatrix}1\\
+1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 标准形式：
+
+\end_layout
+
+\begin_layout Standard
+将二次型化为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(y_{1},y_{2})=y_{1}^{2}+6y_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是二次型
+\begin_inset Formula $Q(x_{1},x_{2})$
+\end_inset
+
+的标准形式。
+
+\end_layout
+
+\begin_layout Subsection
+二次型化标准型
+\end_layout
+
+\begin_layout Standard
+二次型化为标准型可以通过几种不同的方法来实现，
+包括初等变换法、正交替换法和配方法。
+这些方法都将二次型转化为一个简化的形式，
+使得理解和计算变得更加容易。
+
+\end_layout
+
+\begin_layout Subsubsection
+初等变换法
+\end_layout
+
+\begin_layout Standard
+初等变换法通过对矩阵进行行列变换，
+最终将二次型化为对角形式。
+
+\end_layout
+
+\begin_layout Enumerate
+构造二次型对应的对称矩阵
+\begin_inset Formula $A$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+通过初等行变换和列变换，
+将矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+化为对角矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+对角矩阵的元素就是二次型标准形式的系数。
+
+\end_layout
+
+\begin_layout Example
+假设有二次型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x_{1},x_{2})=2x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对应的矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}2 & 2\\
+2 & 5
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通过初等行列变换将矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+化为对角矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}2 & 2\\
+2 & 5
+\end{bmatrix}\rightarrow\begin{bmatrix}6 & 0\\
+0 & 1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以标准型为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+正交替换法
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+正交替换法
+\series default
+利用矩阵的特征值和特征向量，
+将二次型转化为标准型。
+具体来说，
+通过求解矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征值和特征向量来对角化矩阵，
+从而将二次型转化为特征值的线性组合形式。
+
+\end_layout
+
+\begin_layout Enumerate
+求出二次型对应的矩阵 
+\backslash
+( A 
+\backslash
+) 的特征值和特征向量。
+
+\end_layout
+
+\begin_layout Enumerate
+利用特征向量构造正交矩阵，
+将原变量线性替换为新的变量。
+
+\end_layout
+
+\begin_layout Enumerate
+使用新的变量表示二次型的标准形式。
+
+\end_layout
+
+\begin_layout Example
+考虑二次型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x_{1},x_{2})=2x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对应的矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\begin{bmatrix}2 & 2\\
+2 & 5
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求解
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征值 
+\begin_inset Formula $\lambda_{1}=1$
+\end_inset
+
+，
+
+\begin_inset Formula $\lambda_{2}=6$
+\end_inset
+
+ 以及对应的特征向量：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{v}_{1}=\begin{bmatrix}-2\\
+1
+\end{bmatrix},\quad\mathbf{v}_{2}=\begin{bmatrix}1\\
+1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将特征向量作为线性替换，
+将二次型化为标准形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(y_{1},y_{2})=y_{1}^{2}+6y_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+配方法
+\end_layout
+
+\begin_layout Standard
+配方法（也称为“完全平方法”）是一种将二次型中的交叉项（如 
+\begin_inset Formula $x_{1}x_{2}$
+\end_inset
+
+）去掉的方法，
+使得二次型变为仅含平方项的形式。
+
+\end_layout
+
+\begin_layout Enumerate
+识别二次项和交叉项。
+
+\end_layout
+
+\begin_layout Enumerate
+通过添加和减去适当的项，
+将二次型变为平方项的和。
+
+\end_layout
+
+\begin_layout Enumerate
+如果可能，
+将每个平方项配成完全平方的形式。
+
+\end_layout
+
+\begin_layout Standard
+考虑二次型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x_{1},x_{2})=3x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了消去交叉项 
+\begin_inset Formula $4x_{1}x_{2}$
+\end_inset
+
+，
+我们可以配方：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x_{1},x_{2})=3x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}=(3(x_{1}+\frac{2}{3}x_{2})^{2}-\frac{4}{3}x_{2}^{2}+5x_{2}^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=3(x_{1}+\frac{2}{3}x_{2})^{2}+\frac{11}{3}x_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样二次型变为标准形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(y_{1},y_{2})=3y_{1}^{2}+\frac{11}{3}y_{2}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $y_{1}=x_{1}+\frac{2}{3}x_{2}$
+\end_inset
+
+，
+
+\begin_inset Formula $y_{2}=x_{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+比较这三种方法
+\end_layout
+
+\begin_layout Itemize
+初等变换法：
+直接对矩阵进行操作，
+不涉及特征值的计算，
+适用于较小的矩阵。
+
+\end_layout
+
+\begin_layout Itemize
+正交替换法：
+通过特征值和特征向量进行对角化处理，
+适合求解高维矩阵的二次型。
+
+\end_layout
+
+\begin_layout Itemize
+配方法：
+通过代数运算去掉交叉项，
+更适合处理低维二次型，
+尤其是带有交叉项的二次型。
 
 \end_layout
 
