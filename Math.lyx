@@ -77775,9 +77775,13 @@ B=Q^{T}AQ
 \end_layout
 
 \begin_layout Standard
-**正交对角化**：
+
+\series bold
+正交对角化
+\series default
+：
 如果一个矩阵可以被正交相似变换为一个对角矩阵，
-则称其是**正交可对角化**的。
+则称其是正交可对角化 的。
 这意味着存在一个正交矩阵
 \begin_inset Formula $Q$
 \end_inset
@@ -78255,6 +78259,88 @@ D=Q^{T}AQ
 二次型化标准型
 \end_layout
 
+\begin_layout Standard
+在数学中，
+二次型（Quadratic form）是关于一些变量的二次齐次多项式。
+例如
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle 4x^{2}+2xy-3y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+二次型是n个变量上的二次齐次多项式。
+下面给出一个、两个、和三个变量的二次形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle q(x)=ax^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle q(x,y)=ax^{2}+by^{2}+cxy}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle q(x,y,z)=ax^{2}+by^{2}+cz^{2}+dxy+exz+fyz}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $a,...,f$
+\end_inset
+
+是系数。
+ 
+\end_layout
+
+\begin_layout Standard
+注意一般的二次函数和二次方程不是二次形式的例子，
+因为它们不总是齐次的。
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x^{2}$
+\end_inset
+
+平方项，
+
+\begin_inset Formula $xy$
+\end_inset
+
+交叉项。
+
+\end_layout
+
 \begin_layout Subsection
 二次型
 \end_layout
@@ -78399,6 +78485,51 @@ Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
 \end{bmatrix}$
 \end_inset
 
+,叫做二次型矩阵。
+
+\end_layout
+
+\begin_layout Standard
+二次型转矩阵：
+
+\end_layout
+
+\begin_layout Enumerate
+平方项的系数作主对角线的元素
+\end_layout
+
+\begin_layout Enumerate
+交叉项的系数除以2 放到两个对称的相应位置上，
+例如
+\begin_inset Formula $x_{2}x_{3}$
+\end_inset
+
+在矩阵位置为第二行第三列和第二列和第三行值为
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Q(x_{1},x_{2})=3x_{1}^{2}+2x_{1}x_{2}+4x_{2}^{2}=\left[\begin{array}{cc}
+x_{1} & x_{2}\end{array}\right]\begin{bmatrix}3 & 1\\
+1 & 4
+\end{bmatrix}\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+二次型矩阵一定是对称矩阵
+\begin_inset Formula $A^{T}=A$
+\end_inset
+
+。
 
 \end_layout
 
@@ -78422,7 +78553,8 @@ Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
 \begin_inset Formula $Q(\mathbf{x})=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{n}y_{n}^{2}$
 \end_inset
 
-
+,只有平方项，
+没有交叉项
 \end_layout
 
 \begin_layout Standard
@@ -78441,6 +78573,53 @@ Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
 
  的特征值。
 
+\end_layout
+
+\begin_layout Paragraph
+线性替换
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X=CY$
+\end_inset
+
+:
+\begin_inset Formula $f(x)=X^{T}AX$
+\end_inset
+
+,，
+
+\begin_inset Formula 
+\begin{align*}
+f(x) & =X^{T}AX\\
+ & =(CY)^{T}A(CY)\\
+ & =Y^{T}(C^{T}AC)Y
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B=C^{T}AC$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|C|\neq0$
+\end_inset
+
+可逆替换
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|C|=0$
+\end_inset
+
+退化
 \end_layout
 
 \begin_layout Subsubsection
@@ -78479,6 +78658,314 @@ Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
 通过正交变换，
 将二次型转化为特征值的线性组合形式，
 即标准形式。
+
+\end_layout
+
+\begin_layout Subsection
+合同矩阵的定义
+\end_layout
+
+\begin_layout Standard
+两个 
+\begin_inset Formula $\ensuremath{n\times n}$
+\end_inset
+
+的矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $B$
+\end_inset
+
+ ，
+如果存在一个可逆矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B=P^{T}AP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $P^{T}$
+\end_inset
+
+ 是
+\begin_inset Formula $P$
+\end_inset
+
+ 的转置矩阵,
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $B$
+\end_inset
+
+称为
+\series bold
+合同矩阵
+\series default
+。
+这种变换关系叫做 
+\begin_inset Formula $合同变换$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+两个矩阵的合同关系可以用来判断它们是否表示相同的二次型。
+
+\end_layout
+
+\begin_layout Standard
+合同变换保持了二次型的性质，
+但改变了其表示的具体矩阵形式。
+
+\end_layout
+
+\begin_layout Standard
+正交相似。
+
+\end_layout
+
+\begin_layout Paragraph
+合同与二次型的关系
+\end_layout
+
+\begin_layout Standard
+假设有一个二次型
+\begin_inset Formula $Q(\mathbf{x})=\mathbf{x}^{T}A\mathbf{x}$
+\end_inset
+
+，
+通过线性变换
+\begin_inset Formula $\mathbf{y}=P\mathbf{x}$
+\end_inset
+
+，
+新的变量下二次型的表达变为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(\mathbf{x})=\mathbf{y}^{T}(P^{T}AP)\mathbf{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+
+\begin_inset Formula $P^{T}AP$
+\end_inset
+
+ 是与
+\begin_inset Formula $A$
+\end_inset
+
+ 合同的矩阵，
+它表示相同的二次型。
+合同变换通过合适的矩阵
+\begin_inset Formula $\ensuremath{P}$
+\end_inset
+
+可以将二次型化为更简单的形式（例如标准型）。
+
+\end_layout
+
+\begin_layout Subsubsection
+合同矩阵的性质
+\end_layout
+
+\begin_layout Enumerate
+反身性：
+
+\begin_inset Formula ${\displaystyle A=I_{n}^{\mathrm{T}}AI_{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对称性：
+
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+合同于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，
+则可以推出
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+合同于
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+传递性：
+
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+合同于
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，
+
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+合同于
+\begin_inset Formula ${\displaystyle C}$
+\end_inset
+
+，
+则可以推出
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+合同于
+\begin_inset Formula ${\displaystyle C}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+A是对称 B也是对称
+\end_layout
+
+\begin_layout Enumerate
+逆矩阵和转置矩阵也是合同关系
+\end_layout
+
+\begin_layout Enumerate
+保持二次型的惯性：
+如果两个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+通过合同关系相连，
+即
+\begin_inset Formula $B=P^{T}AP$
+\end_inset
+
+，
+那么它们的正惯性指数、负惯性指数和零惯性指数相同。
+这些指数表征了二次型中正、负、零的特征值的个数。
+
+\end_layout
+
+\begin_layout Enumerate
+不变的秩：
+合同矩阵的秩是相同的。
+也就是说，
+如果
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+ 是合同矩阵，
+那么 
+\begin_inset Formula $\text{rank}(A)=\text{rank}(B)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+正定性：
+如果矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是正定的，
+那么所有与
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+合同的矩阵也是正定的。
+这意味着正定性在合同变换下保持不变。
+
+\end_layout
+
+\begin_layout Subsubsection
+合同变换的应用
+\end_layout
+
+\begin_layout Enumerate
+二次型的标准化：
+通过合同变换，
+可以将二次型化为标准型。
+对于矩阵
+\begin_inset Formula $A$
+\end_inset
+
+，
+可以找到一个矩阵
+\begin_inset Formula $P$
+\end_inset
+
+，
+使得
+\begin_inset Formula $\ensuremath{P^{T}AP}$
+\end_inset
+
+成为对角矩阵，
+从而将二次型
+\begin_inset Formula $\ensuremath{Q(\mathbf{x})}$
+\end_inset
+
+化为标准形式。
+
+\end_layout
+
+\begin_layout Enumerate
+惯性定理：
+通过合同变换，
+可以得出两个二次型在不同基下表示的矩阵具有相同的惯性（即正、负和零的个数相同）。
+
+\end_layout
+
+\begin_layout Enumerate
+正定矩阵的判定：
+正定矩阵和正定二次型之间的关系，
+可以通过合同变换更加清晰地理解。
+如果能找到一个合适的合同矩阵，
+使得原矩阵化为单位矩阵的形式，
+则证明原矩阵是正定的。
 
 \end_layout
 
@@ -78807,11 +79294,11 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 \end_layout
 
 \begin_layout Enumerate
-求出二次型对应的矩阵 
-\backslash
-( A 
-\backslash
-) 的特征值和特征向量。
+求出二次型对应的矩阵
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征值和特征向量。
 
 \end_layout
 
@@ -78823,7 +79310,7 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 
 \begin_layout Enumerate
 使用新的变量表示二次型的标准形式。
-
+ 
 \end_layout
 
 \begin_layout Example
