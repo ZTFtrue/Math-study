@@ -78741,52 +78741,6 @@ f(x) & =X^{T}AX\\
 
 \end_layout
 
-\begin_layout Paragraph
-合同与二次型的关系
-\end_layout
-
-\begin_layout Standard
-假设有一个二次型
-\begin_inset Formula $Q(\mathbf{x})=\mathbf{x}^{T}A\mathbf{x}$
-\end_inset
-
-，
-通过线性变换
-\begin_inset Formula $\mathbf{y}=P\mathbf{x}$
-\end_inset
-
-，
-新的变量下二次型的表达变为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Q(\mathbf{x})=\mathbf{y}^{T}(P^{T}AP)\mathbf{y}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-因此，
-
-\begin_inset Formula $P^{T}AP$
-\end_inset
-
- 是与
-\begin_inset Formula $A$
-\end_inset
-
- 合同的矩阵，
-它表示相同的二次型。
-合同变换通过合适的矩阵
-\begin_inset Formula $\ensuremath{P}$
-\end_inset
-
-可以将二次型化为更简单的形式（例如标准型）。
-
-\end_layout
-
 \begin_layout Subsubsection
 合同矩阵的性质
 \end_layout
@@ -78966,6 +78920,52 @@ A是对称 B也是对称
 如果能找到一个合适的合同矩阵，
 使得原矩阵化为单位矩阵的形式，
 则证明原矩阵是正定的。
+
+\end_layout
+
+\begin_layout Subsubsection
+合同与二次型的关系
+\end_layout
+
+\begin_layout Standard
+假设有一个二次型
+\begin_inset Formula $Q(\mathbf{x})=\mathbf{x}^{T}A\mathbf{x}$
+\end_inset
+
+，
+通过线性变换
+\begin_inset Formula $\mathbf{y}=P\mathbf{x}$
+\end_inset
+
+，
+新的变量下二次型的表达变为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(\mathbf{x})=\mathbf{y}^{T}(P^{T}AP)\mathbf{y}=\mathbf{x}^{T}A\mathbf{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+
+\begin_inset Formula $P^{T}AP$
+\end_inset
+
+ 是与
+\begin_inset Formula $A$
+\end_inset
+
+ 合同的矩阵，
+它表示相同的二次型。
+合同变换通过合适的矩阵
+\begin_inset Formula $\ensuremath{P}$
+\end_inset
+
+可以将二次型化为更简单的形式（例如标准型）。
 
 \end_layout
 
