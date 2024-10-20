@@ -78714,7 +78714,7 @@ f(x) & =X^{T}AX\\
 
 称为
 \series bold
-合同矩阵
+合同
 \series default
 。
 这种变换关系叫做 
@@ -78742,7 +78742,7 @@ f(x) & =X^{T}AX\\
 \end_layout
 
 \begin_layout Subsubsection
-合同矩阵的性质
+合同的性质
 \end_layout
 
 \begin_layout Enumerate
@@ -78961,7 +78961,7 @@ A是对称 B也是对称
 
  合同的矩阵，
 它表示相同的二次型。
-合同变换通过合适的矩阵
+合同变换(初等变换)通过合适的矩阵
 \begin_inset Formula $\ensuremath{P}$
 \end_inset
 
@@ -79174,6 +79174,32 @@ A是对称 B也是对称
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $f(x)=X^{T}AX$
+\end_inset
+
+,令
+\begin_inset Formula $X=CY$
+\end_inset
+
+，
+则
+\begin_inset Formula $f(x)=Y^{T}C^{T}ACY$
+\end_inset
+
+,其中
+\begin_inset Formula $C^{T}AC$
+\end_inset
+
+是对角矩阵，
+
+\begin_inset Formula $C$
+\end_inset
+
+是可逆矩阵。
+
+\end_layout
+
 \begin_layout Enumerate
 构造二次型对应的对称矩阵
 \begin_inset Formula $A$
@@ -79193,8 +79219,161 @@ A是对称 B也是对称
 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+对
+\begin_inset Formula $A$
+\end_inset
+
+，
+
+\begin_inset Formula $E$
+\end_inset
+
+做同样的初等列变换
+\end_layout
+
+\begin_layout Enumerate
+只对A做相应的初等行变换，
+如：
+a) 交换 
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $3$
+\end_inset
+
+列，
+b) 交换
+\begin_inset Formula $1$
+\end_inset
+
+,
+\begin_inset Formula $3$
+\end_inset
+
+行
+\end_layout
+
+\begin_layout Enumerate
+列变换和行变换一回合，
+没回合的结果是对称矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+A 变成 对角矩阵结束，
+E 变成的就是 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{c}
+A\\
+E
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+对角线全部可以化成
+\begin_inset Formula $1$
+\end_inset
+
+或
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 对角矩阵的元素就是二次型标准形式的系数。
+
+\end_layout
+
+\begin_layout Standard
+规范形：
+
+\begin_inset Formula $y_{1}^{2}+\cdots+y_{p}^{2}-y_{p+1}^{2}-\cdots-y_{r}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1$
+\end_inset
+
+和
+\begin_inset Formula $-1$
+\end_inset
+
+的总个数是二次形的秩。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccccccccc}
+1\\
+ & \ddots\\
+ &  & 1\\
+ &  &  & -1\\
+ &  &  &  & \ddots\\
+ &  &  &  &  & -1\\
+ &  &  &  &  &  & 0\\
+ &  &  &  &  &  &  & \ddots\\
+ &  &  &  &  &  &  &  & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+惯性定理（合同变换的应用）：
+任意二次形都可以化成规范形。
+正系数：
+正惯性指数。
+负系数：
+负惯性指数。
+符号差：
+正系数-负系数。
+
+\end_layout
+
+\begin_layout Standard
+任意矩阵
+\begin_inset Formula $A$
+\end_inset
+
+都与
+\begin_inset Formula $\left[\begin{array}{ccccccccc}
+1\\
+ & \ddots\\
+ &  & 1\\
+ &  &  & -1\\
+ &  &  &  & \ddots\\
+ &  &  &  &  & -1\\
+ &  &  &  &  &  & 0\\
+ &  &  &  &  &  &  & \ddots\\
+ &  &  &  &  &  &  &  & 0
+\end{array}\right]$
+\end_inset
+
+合同
+\end_layout
+
+\begin_layout Standard
+合同的冲要条件有相同的秩，
+相同的正惯性指数。
 
 \end_layout
 
@@ -79273,7 +79452,7 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 \end_layout
 
 \begin_layout Subsubsection
-正交替换法
+正交替换法(实对称矩阵的对角化)
 \end_layout
 
 \begin_layout Standard
@@ -79410,9 +79589,87 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+从
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+
+\begin_inset Formula $\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+解决
+\begin_inset Formula $x_{1}$
+\end_inset
+
+可以适当+并- 某些数。
+
+\end_layout
+
+\begin_layout Enumerate
+解决完
+\begin_inset Formula $x_{1}$
+\end_inset
+
+，
+解决
+\begin_inset Formula $x_{2}$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,不能再出现
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 如果可能，
 将每个平方项配成完全平方的形式。
+
+\end_layout
+
+\begin_layout Enumerate
+写出替换
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+x_{1}^{2}-3x_{2}^{2}+4x_{3}^{2}-2x_{1}x_{2}+2x_{1}x_{3}-6x_{2}x_{3}\\
+=x_{1}^{2}-2x_{1}x_{2}+2x_{1}x_{3}-3x_{2}^{2}+4x_{3}^{2}-6x_{2}x_{3}\\
+=x_{1}^{2}+(2x_{1}x_{3}-2x_{1}x_{2})-3x_{2}^{2}+4x_{3}^{2}-6x_{2}x_{3}\\
+=x_{1}^{2}+2x_{1}(x_{3}-x_{2})-3x_{2}^{2}+4x_{3}^{2}-6x_{2}x_{3}\\
+=x_{1}^{2}-2x_{1}(x_{3}+x_{2})-3x_{2}^{2}+4x_{3}^{2}-6x_{2}x_{3}\\
+=x_{1}^{2}+2x_{1}(x_{2}-x_{3})+(x_{2}-x_{3})^{2}-(x_{2}-x_{3})^{2}-3x_{2}^{2}+4x_{3}^{2}-6x_{2}x_{3}\\
+(x_{1}-x_{2}+x_{3})^{2}-(4x_{2}^{2}+4x_{2}x_{3}+x_{3}^{2})+x_{3}^{2}+3x_{2}^{2}\\
+=(x_{1}-x_{2}+x_{3})^{2}-(2x_{2}+x_{3})^{2}+4x_{3}^{2}\\
+=y_{1}^{2}-y_{2}^{2}+4y_{3}^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=$
+\end_inset
+
+,
+\begin_inset Formula $x_{3}=y_{3}$
+\end_inset
+
 
 \end_layout
 
@@ -79475,6 +79732,46 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}=$
+\end_inset
+
+,
+\begin_inset Formula $x_{2}=y_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+只有交叉项
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2x_{1}x_{2}-4x_{1}x_{3}+10x_{2}x_{3}+5x_{3}x_{4}+x_{1}x_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令：
+
+\begin_inset Formula 
+\begin{align*}
+\begin{cases}
+x_{1} & =y_{1}-y_{2}\\
+x_{2} & =y_{1}+y_{2}\\
+x_{3} & =y_{3}\\
+x_{4} & =y_{4}
+\end{cases}
+\end{align*}
+
+\end_inset
+
 
 \end_layout
 
