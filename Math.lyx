@@ -68873,137 +68873,6 @@ A_{13} & A_{23} & A_{33}
 \end_layout
 
 \begin_layout Subsection
-逆矩阵
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A$
-\end_inset
-
-为
-\begin_inset Formula $n$
-\end_inset
-
-阶方阵(
-\series bold
-行数、列数相等
-\series default
-的矩阵)，
-如果存在
-\begin_inset Formula $n$
-\end_inset
-
-矩阵
-\begin_inset Formula $B$
-\end_inset
-
-,使得:
- 
-\begin_inset Formula $AB=BA=I(单位矩阵)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-记作：
-
-\begin_inset Formula $B=A^{-1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-性质（可逆前提下）：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{-T}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $(A^{-1})^{-1}=A$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $(\lambda A)^{-1}=\frac{1}{\lambda}A^{-1}$
-\end_inset
-
-(常数对应倒数)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $(AB)^{-1}=A^{-1}B^{-1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A\times A^{-1}=A^{-1}A=E$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-可逆矩阵唯一。
-
-\end_layout
-
-\begin_layout Standard
-有些矩阵是没有逆矩阵的。
-
-\begin_inset Formula $O$
-\end_inset
-
-不可逆。
-
-\end_layout
-
-\begin_layout Standard
-可逆：
-
-\begin_inset Formula $|A|\neq0$
-\end_inset
-
-，
-非奇异，
-非退化，
-满秩。
-
-\end_layout
-
-\begin_layout Standard
-方阵的行列式：
-
-\begin_inset Formula $A=\text{\left[\begin{array}{cc}
-a & b\\
-c & d
-\end{array}\right]}$
-\end_inset
-
-，
-方阵A的行列式：
-
-\begin_inset Formula $|A|=\left|\begin{array}{cc}
-a & b\\
-c & d
-\end{array}\right|$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
 方阵性质
 \end_layout
 
@@ -69878,7 +69747,142 @@ A 的标准形为单位矩阵
 \end_layout
 
 \begin_layout Subsection
+逆矩阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+为
+\begin_inset Formula $n$
+\end_inset
+
+阶方阵(
+\series bold
+行数、列数相等
+\series default
+的矩阵)，
+如果存在
+\begin_inset Formula $n$
+\end_inset
+
+矩阵
+\begin_inset Formula $B$
+\end_inset
+
+,使得:
+ 
+\begin_inset Formula $AB=BA=I(单位矩阵)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+记作：
+
+\begin_inset Formula $B=A^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+性质（可逆前提下）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A^{T})^{-1}=(A^{-1})^{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A^{-1})^{-1}=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\lambda A)^{-1}=\frac{1}{\lambda}A^{-1}$
+\end_inset
+
+(常数对应倒数)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(AB)^{-1}=A^{-1}B^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\times A^{-1}=A^{-1}A=E$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可逆矩阵唯一。
+
+\end_layout
+
+\begin_layout Standard
+有些矩阵是没有逆矩阵的。
+
+\begin_inset Formula $O$
+\end_inset
+
+不可逆。
+
+\end_layout
+
+\begin_layout Standard
+可逆：
+
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+，
+非奇异，
+非退化，
+满秩。
+
+\end_layout
+
+\begin_layout Standard
+方阵的行列式：
+
+\begin_inset Formula $A=\text{\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]}$
+\end_inset
+
+，
+方阵A的行列式：
+
+\begin_inset Formula $|A|=\left|\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 求逆矩阵
+\end_layout
+
+\begin_layout Subparagraph
+余子式、代数余子式和伴随矩阵
 \end_layout
 
 \begin_layout Standard
@@ -69900,10 +69904,6 @@ d & -b\\
 \end_inset
 
 
-\end_layout
-
-\begin_layout Paragraph
-余子式、代数余子式和伴随矩阵
 \end_layout
 
 \begin_layout Standard
@@ -70002,7 +70002,7 @@ d & -b\\
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 矩阵方程
 \end_layout
 
