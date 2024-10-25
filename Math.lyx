@@ -65793,7 +65793,7 @@ k阶子式的余子式
 \begin_inset Formula $k$
 \end_inset
 
-阶余子式与代数余子式乘积之和等于行列式的值。
+阶子式与代数余子式乘积之和等于行列式的值。
 
 \end_layout
 
@@ -68572,8 +68572,7 @@ a_{1n} & a_{2n} & \cdots & a_{mn}
 \begin_inset Formula $(i,j$
 \end_inset
 
-)代数余子式：
-
+)代数余子式
 \begin_inset Formula $C_{ij}$
 \end_inset
 
