@@ -71165,63 +71165,6 @@ k阶子式
 
 \end_deeper
 \begin_layout Paragraph
-行简化阶梯型
-\end_layout
-
-\begin_layout Standard
-简化列阶梯形矩阵或简约行梯形式矩阵（reduced row echelon form），
-也称作行规范形矩阵（row canonical form），
-如果满足额外的条件：
-
-\end_layout
-
-\begin_layout Standard
-每个首项系数是1，
-且是其
-\series bold
-所在列
-\series default
-的唯一的非零元素。
-例如：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
-1 & 0 & a_{1} & 0 & b_{1}\\
-0 & 1 & a_{2} & 0 & b_{2}\\
-0 & 0 & 0 & 1 & b_{3}
-\end{array}\right]}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-注意，
-这并不意味着简化列阶梯形矩阵的左部总是单位阵。
-例如，
-如下的矩阵是简化行阶梯形矩阵：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
-1 & 0 & 1/2 & 0 & b_{1}\\
-0 & 1 & -1/3 & 0 & b_{2}\\
-0 & 0 & 0 & 1 & b_{3}
-\end{array}\right]}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-因为第3列并不包含任何列的首项系数。
- 
-\end_layout
-
-\begin_layout Paragraph
 对于方阵
 \end_layout
 
@@ -71366,61 +71309,82 @@ k阶子式
 \end_layout
 
 \begin_layout Paragraph
-阶梯形矩阵
+阶梯形矩阵（Echelon Form Matrix）
 \end_layout
 
 \begin_layout Enumerate
+所有非零行在零行的上方：
 所有非零行（矩阵的行至少有一个非零元素）在所有全零行的上面。
 即全零行都在矩阵的底部。
  
 \end_layout
 
 \begin_layout Enumerate
+主元位置：
 从上到下，
 每行最左边的首个非零元素 （leading coefficient），
-称作首非零元或首项系数或主元，
+称作主元(首非零元或首项系数或)，
  严格地比上面行的首项系数更靠右，
-即每行左侧零的个数
-\series bold
-必须
-\series default
-比上一行大
+即每行的首非零元（主元）比上一行的主元更靠右。
+
 \end_layout
 
 \begin_layout Enumerate
+主元列下方全为零：
 首项系数所在列，
 在该首项系数下面的元素都是零（前两条的推论）。
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-行简化阶梯形
-\series default
- 要求非零行的首项系数必须是
-\begin_inset Formula $1$
-\end_inset
-
-。
-
-\series bold
-主元所在的列，
-除了主元以外，
-其它元素必须是
-\begin_inset Formula $0$
-\end_inset
-
-
-\series default
-。
 
 \end_layout
 
 \begin_layout Paragraph
 
 \series bold
-行简化阶梯形示例
+行简化阶梯形（Reduced Row Echelon Form,
+ RREF）
+\end_layout
+
+\begin_layout Standard
+行简化阶梯形矩阵（简约行梯形式矩阵，
+也称作行规范形矩阵（row canonical form））在阶梯形矩阵的基础上，
+进一步满足以下条件：
+
+\end_layout
+
+\begin_layout Enumerate
+主元为 1：
+要求非零行的首项系数必须是
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+主元列唯一非零：
+
+\series default
+每个主元所在列中的其它元素必须为零，
+即主元所在列中除主元外的其它元素全为零。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
+1 & 0 & a_{1} & 0 & b_{1}\\
+0 & 1 & a_{2} & 0 & b_{2}\\
+0 & 0 & 0 & 1 & b_{3}
+\end{array}\right]}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -71433,6 +71397,38 @@ k阶子式
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+注意，
+这并不意味着简化列阶梯形矩阵的左部总是单位阵。
+例如，
+如下的矩阵是简化行阶梯形矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \left[\begin{array}{cccc|c}
+1 & 0 & 1/2 & 0 & b_{1}\\
+0 & 1 & -1/3 & 0 & b_{2}\\
+0 & 0 & 0 & 1 & b_{3}
+\end{array}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个矩阵是行简化阶梯形矩阵，
+因为它满足所有的要求，
+但第三列并不包含主元（即不满足单位矩阵的形式，
+因为第3列并不包含任何列的首项系数），
+但它依然符合 RREF 的定义。
+
+\end_layout
+
+\begin_layout Paragraph
+计算矩阵的秩
 \end_layout
 
 \begin_layout Standard
@@ -71453,11 +71449,17 @@ k阶子式
 \series default
 ，
 因此A的行阶梯形矩阵有同A一样的秩。
+
+\end_layout
+
+\begin_layout Standard
 经过初等变换的矩阵的
 \series bold
 非零行的数目就是原矩阵的秩
 \series default
 。
+只需化简到阶梯形矩阵就能求出矩阵的秩。
+阶梯形矩阵中非零行的数量就是矩阵的秩。
 
 \end_layout
 
@@ -71470,6 +71472,7 @@ k & 1 & 1 & 1\\
 \end{array}\right]$
 \end_inset
 
+，
 
 \begin_inset Formula $r(A)=3$
 \end_inset
@@ -71568,112 +71571,200 @@ K+3 & 1 & 1 & k
 \end_layout
 
 \begin_layout Standard
-行列式的一个自然的源起是 
-\begin_inset Formula $n$
+向量是由
+\begin_inset Formula $\ensuremath{n}$
 \end_inset
 
- 维平行体的体积。
-行列式的定义和 
-\begin_inset Formula $n$
-\end_inset
-
- 维平行体的体积有着本质上的关联。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $n$
-\end_inset
-
-个数组成的有序数组
+个数构成的有序数组
 \begin_inset Formula $(a_{1},a_{2},\cdots,a_{n})$
 \end_inset
 
-叫做向量。
-每个数叫做分量，
-有
-\begin_inset Formula $n$
+，
+其中每个数称为一个分量，
+包含
+\begin_inset Formula $\ensuremath{n}$
 \end_inset
 
 个分量。
+向量的 
+\begin_inset Formula $维数$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-维数：
-n维。
-
-\end_layout
-
-\begin_layout Standard
-行向量：
-横着写
-\end_layout
-
-\begin_layout Standard
-列向量：
-竖着写
-\end_layout
-
-\begin_layout Standard
-行向量和列向量维数可以一样，
-可以通过转置转换。
-
-\end_layout
-
-\begin_layout Standard
-设两个
+ 为
 \begin_inset Formula $n$
 \end_inset
 
-维向量，
-对应分量相等，
-则两个向量相等。
+ 维。
+
+\end_layout
+
+\begin_layout Itemize
+行向量：
+横向排列，
+表示为
+\begin_inset Formula $(a_{1},a_{2},\cdots,a_{n})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+列向量：
+纵向排列，
+表示为 
+\begin_inset Formula $\begin{pmatrix}a_{1}\\
+a_{2}\\
+\vdots\\
+a_{n}
+\end{pmatrix}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula ${\displaystyle n}$
-\end_inset
-
-维列向量可视作
-\begin_inset Formula ${\displaystyle \mathbf{n}\times1}$
-\end_inset
-
-矩阵，
-
-\begin_inset Formula ${\displaystyle n}$
-\end_inset
-
-维行向量可视作
-\begin_inset Formula ${\displaystyle 1\times\mathbf{n}}$
-\end_inset
-
-矩阵
-\end_layout
-
-\begin_layout Standard
-同维向量相加
-\begin_inset Formula $\overrightarrow{\alpha}+$
-\end_inset
-
+行向量和列向量的维数可以相同，
+且可以通过转置进行转换。
 
 \end_layout
 
 \begin_layout Standard
-减法-
+若两个
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+维向量对应分量均相等，
+则这两个向量相等。
+
+\end_layout
+
+\begin_layout Paragraph
+矩阵表示
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+
+\series bold
+维列向量
+\series default
+可视作
+\begin_inset Formula $n\times1$
+\end_inset
+
+ 矩阵。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+
+\series bold
+维行向量
+\series default
+ 可视作 
+\begin_inset Formula $1\times n$
+\end_inset
+
+ 矩阵。
+
+\end_layout
+
+\begin_layout Subsubsection
+向量运算
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+同维向量的加法
+\series default
+：
+若
+\begin_inset Formula $\ensuremath{\overrightarrow{\alpha}}$
+\end_inset
+
+和
+\begin_inset Formula $\overrightarrow{\beta}$
+\end_inset
+
+ 为同维向量，
+则有 
+\begin_inset Formula $\overrightarrow{\alpha}+\overrightarrow{\beta}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+同维向量的减法
+\series default
+：
+可以将向量相减，
+如
+\begin_inset Formula $\overrightarrow{\alpha}-\overrightarrow{\beta}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 数乘
+\series default
+：
+标量
+\begin_inset Formula $k$
+\end_inset
+
+ 乘以向量
+\begin_inset Formula $\overrightarrow{\alpha}$
+\end_inset
+
+ 得
+\begin_inset Formula $k\overrightarrow{\alpha}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+数乘条件
+\begin_inset Formula $k\overrightarrow{\alpha}=0$
+\end_inset
+
+ 成立的情况为：
+
+\begin_inset Formula 
+\[
+k=0\quad\text{或}\quad\overrightarrow{\alpha}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+向量加法的交换律
 \end_layout
 
 \begin_layout Standard
-加法交换律
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $k\overrightarrow{\alpha}=0\Longleftrightarrow k=0\text{或}\overrightarrow{\alpha}=0$
+\begin_inset Formula $\overrightarrow{\alpha}+\overrightarrow{\beta}=\overrightarrow{\beta}+\overrightarrow{\alpha}$
 \end_inset
 
 
@@ -71912,7 +72003,23 @@ a_{sj}
 \begin_inset Formula $n$
 \end_inset
 
-维单位向量组或n维基维单位向量组。
+维单位向量组或n维标准基向量。
+
+\end_layout
+
+\begin_layout Itemize
+由于这些单位向量组可以表示 
+\begin_inset Formula $n$
+\end_inset
+
+ 维空间中的任意向量，
+因此它们构成了这个空间的 基。
+这也意味着它们是 线性无关 的，
+并且 张成了整个 
+\begin_inset Formula $n$
+\end_inset
+
+ 维空间。
 
 \end_layout
 
@@ -72125,19 +72232,73 @@ k_{1}-2k_{3} & =-4
 
 \end_layout
 
-\begin_layout Itemize
-还有零向量的任意向量组必定线性相关。
+\begin_deeper
+\begin_layout Standard
+若两个向量
+\begin_inset Formula $\vec{v}_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\vec{v}_{2}$
+\end_inset
+
+成比例，
+即存在一个非零常数
+\begin_inset Formula $k$
+\end_inset
+
+ 使得 
+\begin_inset Formula $\vec{v}_{1}=k\vec{v}_{2}$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $\vec{v}_{1}-k\vec{v}_{2}=\overrightarrow{0}$
+\end_inset
+
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-一个零向量必定线性相关。
-一个向量
-\begin_inset Formula $\alpha$
+包含零向量的任意向量组必定线性相关。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果一个向量组中包含零向量 
+\begin_inset Formula $\overrightarrow{0}$
 \end_inset
 
-线性相关的充要条件
-\begin_inset Formula $\Leftrightarrow\alpha=0$
+，
+则这个向量组可以写为 
+\begin_inset Formula $\overrightarrow{0}=0⋅\overrightarrow{v_{1}}+0⋅\overrightarrow{v_{2}}+…+k\overrightarrow{0}$
+\end_inset
+
+，
+其中
+\begin_inset Formula $\vec{v}_{1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\vec{v}_{2}$
+\end_inset
+
+ 是其他向量,k是不为零的任意常数。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一个零向量组成的向量组必定线性相关。
+一个向量
+\begin_inset Formula $\overrightarrow{\alpha}$
+\end_inset
+
+组成的向量组线性相关的充要条件
+\begin_inset Formula $\Leftrightarrow\overrightarrow{\alpha}=\overrightarrow{0}$
 \end_inset
 
 
@@ -72148,7 +72309,7 @@ k_{1}-2k_{3} & =-4
 \begin_inset Formula $\overrightarrow{0}$
 \end_inset
 
-向量，
+向量组成的向量组，
 必线性无关。
 
 \end_layout
@@ -72282,10 +72443,6 @@ k_{1}-2k_{3} & =-4
 \end_inset
 
 线性无关。
-
-\end_layout
-
-\begin_layout Example
 证明
 \begin_inset Formula $\overrightarrow{\gamma_{1}}=(a_{11},\cdots,a_{1r},\cdots,a_{1r+1},\cdots,a_{1n})$
 \end_inset
@@ -72526,7 +72683,7 @@ n维单位向量组，
 \noun off
 \color none
 
-\begin_inset Formula $(k_{1}+k_{3})=0$
+\begin_inset Formula $k_{1}+k_{3}=0$
 \end_inset
 
 ，
@@ -72598,6 +72755,106 @@ n维单位向量组，
 \begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
 \end_inset
 
+。
+
+\end_layout
+
+\begin_layout Standard
+具体而言，
+两个向量组
+\begin_inset Formula $\{\alpha_{1},\alpha_{2},\ldots,\alpha_{m}\}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\ensuremath{\{\beta_{1},\beta_{2},\ldots,\beta_{n}\}}$
+\end_inset
+
+等价的条件是：
+
+\end_layout
+
+\begin_layout Enumerate
+每个向量
+\begin_inset Formula $\ensuremath{\alpha_{i}}$
+\end_inset
+
+都可以表示
+\begin_inset Formula $为\ensuremath{\beta_{1},\beta_{2},\ldots,\beta_{n}}$
+\end_inset
+
+的线性组合，
+即存在标量
+\begin_inset Formula $\ensuremath{c_{i1},c_{i2},\ldots,c_{in}}$
+\end_inset
+
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{i}=c_{i1}\beta_{1}+c_{i2}\beta_{2}+\ldots+c_{in}\beta_{n},\quad\forall i=1,2,\ldots,m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 反之，
+每个向量
+\begin_inset Formula $\ensuremath{\beta_{j}}$
+\end_inset
+
+也可以表示为
+\begin_inset Formula $\ensuremath{\alpha_{1},\alpha_{2},\ldots,\alpha_{m}}$
+\end_inset
+
+的线性组合，
+即存在标量
+\begin_inset Formula $d_{j1},d_{j2},\ldots,d_{jm}$
+\end_inset
+
+ 使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta_{j}=d_{j1}\alpha_{1}+d_{j2}\alpha_{2}+\ldots+d_{jm}\alpha_{m},\quad\forall j=1,2,\ldots,n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果上述两个条件都成立，
+那么我们就说向量组
+\begin_inset Formula $\ensuremath{\{\alpha_{1},\alpha_{2},\ldots,\alpha_{m}\}}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{\{\beta_{1},\beta_{2},\ldots,\beta_{n}\}}$
+\end_inset
+
+是 
+\series bold
+等价的
+\series default
+ 。
+
+\end_layout
+
+\begin_layout Standard
+等价向量组在本质上表示了它们张成的线性空间是相同的，
+也就是说，
+它们生成了相同的子空间。
 
 \end_layout
 
@@ -72617,7 +72874,7 @@ n维单位向量组，
 \end_inset
 
 ,
-\begin_inset Formula $\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}\cong\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} $
+\begin_inset Formula $\left\{ \beta_{1},\beta_{2},\cdots\beta_{n}\right\} \cong\{\alpha_{1},\alpha_{2},\cdots\alpha_{m}\}$
 \end_inset
 
 
@@ -72659,33 +72916,74 @@ n维单位向量组，
 \begin_inset Formula $\alpha_{1},\alpha_{2}$
 \end_inset
 
-:其中
+，
+其中：
+
 \end_layout
 
-\begin_layout Definition
+\begin_deeper
+\begin_layout Enumerate
+线性无关性：
+
 \begin_inset Formula $\alpha_{1},\alpha_{2}$
 \end_inset
 
-线性无关
+线性无关。
+这意味着不存在非零常数
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{c_{2}}$
+\end_inset
+
+使得
+\begin_inset Formula $c_{1}\alpha_{1}+c_{2}\alpha_{2}=\mathbf{0}$
+\end_inset
+
+。
+
 \end_layout
 
-\begin_layout Definition
+\begin_layout Enumerate
+生成原向量组：
 每个向量均可由
 \begin_inset Formula $\alpha_{1},\alpha_{2}$
 \end_inset
 
 线性表示。
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Formula $\alpha_{1},\alpha_{2}$
+如
+\begin_inset Formula $\alpha_{3}=a\alpha_{1}+b\alpha_{2}$
 \end_inset
 
-线性无关的向量组的向量个数最大。
 
 \end_layout
 
+\begin_layout Enumerate
+线性无关的最大集合：
+
+\begin_inset Formula $\{\alpha_{1},\alpha_{2}\}$
+\end_inset
+
+是在原向量组中能找到的
+\series bold
+最大个数
+\series default
+的线性无关向量。
+如果在
+\begin_inset Formula $\ensuremath{\alpha_{1},\alpha_{2}}$
+\end_inset
+
+的基础上再加入其他向量（如 
+\begin_inset Formula $\alpha_{3}$
+\end_inset
+
+），
+就会导致新的向量组变得线性相关。
+
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 则
 \family roman
@@ -72729,32 +73027,73 @@ n维单位向量组，
 \end_inset
 
 线性无关。
-
+并且给定 
 \begin_inset Formula $n+1$
 \end_inset
 
-个
+ 个 
 \begin_inset Formula $n$
 \end_inset
 
-维向量一定线性相关。
+ 维向量，
+那么这
+\begin_inset Formula $n+1$
+\end_inset
+
+ 个向量必定是线性相关的。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是因为 
+\begin_inset Formula $n$
+\end_inset
+
+ 维空间中，
+最多只能有 n 个线性无关的向量。
+如果超过 
+\begin_inset Formula $n$
+\end_inset
+
+ 个向量（即
+\begin_inset Formula $n+1$
+\end_inset
+
+个或更多），
+这些向量一定会线性相关。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+一般情况这个组不唯一。
+尽管极大线性无关组的个数可以不同，
+但它们的向量数量都是一样的。
 
 \end_layout
 
 \begin_layout Itemize
-一般情况这个组不唯一。
+任意两个极大线性无关组，
+所含向量个数相同。
 
 \end_layout
 
 \begin_layout Itemize
 全是0的向量组，
 没有极大线性无关组。
+如果一个向量组中的所有向量都是零向量，
+那么它不能形成任何线性无关组。
+因此，
+它没有极大线性无关组。
 
 \end_layout
 
 \begin_layout Itemize
 线性无关的向量组，
-的极大线性无关组就是它本身
+的极大线性无关组就是它本身，
+因为不能再从中选出更大的线性无关子集。
+
 \end_layout
 
 \begin_layout Itemize
@@ -72768,12 +73107,6 @@ n维单位向量组，
 \end_inset
 
 另一个极大线性无关组
-\end_layout
-
-\begin_layout Itemize
-任意两个极大线性无关组，
-所含向量个数相同。
-
 \end_layout
 
 \begin_layout Definition
@@ -72791,14 +73124,24 @@ n维单位向量组，
 \end_layout
 
 \begin_layout Itemize
-全是0的向量组的秩是0
+全是0的向量组的秩是0。
+线性无关的向量组中至少要有一个非零向量(一个零向量组成的向量组必定线性相关，
+无法组成极大线性无关组)，
+而一个全零向量组中没有非零向量，
+所以这个组不能线性无关。
+
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0\leqslant r(\alpha_{1}\cdots\alpha_{s})\leqslant S$
+\begin_inset Formula $0\leqslant r(\alpha_{1}\cdots\alpha_{s})\leqslant s$
 \end_inset
 
 ，
+
+\begin_inset Formula $s$
+\end_inset
+
+是向量的个数，
 
 \begin_inset Formula $0\leqslant r(\alpha_{1}\cdots\alpha_{s})\leqslant\min\{\text{向量的个数，向量的维数}\}$
 \end_inset
@@ -72811,6 +73154,8 @@ n维单位向量组，
 \begin_inset Formula $r=s$
 \end_inset
 
+，
+因为每个向量都无法由其他向量线性表示。
 
 \end_layout
 
@@ -72819,14 +73164,36 @@ n维单位向量组，
 \begin_inset Formula $r<s$
 \end_inset
 
+，
+如
+\begin_inset Formula $果\ensuremath{\alpha_{1},\ldots,\alpha_{s}}$
+\end_inset
+
+是线性相关的，
+那么它们的秩
+\begin_inset Formula $r$
+\end_inset
+
+ 小于
+\begin_inset Formula $s$
+\end_inset
+
+，
+因为至少有一个向量可以由其他向量线性表示，
+因此最大线性无关的向量个数会少于
+\begin_inset Formula $s$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Theorem
+向量组
 \begin_inset Formula $\alpha_{1},\alpha_{2},\cdots\alpha_{4},\alpha_{s}$
 \end_inset
 
-可由 
+可由 向量组
 \begin_inset Formula $\beta_{1},\beta_{2},\cdots\beta_{4},\beta_{s}$
 \end_inset
 
@@ -72856,6 +73223,140 @@ n维单位向量组，
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+如果向量组 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$
+\end_inset
+
+ 可以由
+\begin_inset Formula $\ensuremath{\beta_{1},\beta_{2},\cdots,\beta_{s}}$
+\end_inset
+
+表示，
+这意味着每个
+\begin_inset Formula $\ensuremath{\alpha_{i}}$
+\end_inset
+
+都可以通过
+\begin_inset Formula $\beta_{1},\beta_{2},\cdots,\beta_{s}$
+\end_inset
+
+ 的线性组合得到：
+
+\begin_inset Formula 
+\[
+\alpha_{i}=c_{1}\beta_{1}+c_{2}\beta_{2}+\cdots+c_{s}\beta_{s}\quad(i=1,2,\ldots,s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这说明向量组
+\begin_inset Formula $\ensuremath{\alpha}$
+\end_inset
+
+位于由向量组
+\begin_inset Formula $\ensuremath{\beta}$
+\end_inset
+
+生成的向量空间内，
+即 
+\begin_inset Formula $\text{span}(\alpha)\subseteq\text{span}(\beta)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+由于 
+\begin_inset Formula $\ensuremath{\alpha_{1},\alpha_{2},\cdots,\alpha_{s}}$
+\end_inset
+
+可以由
+\begin_inset Formula $\ensuremath{\beta_{1},\beta_{2},\cdots,\beta_{s}}$
+\end_inset
+
+线性表示，
+这意味着 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 向量组的秩
+\begin_inset Formula $r(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})$
+\end_inset
+
+ 至多等于 
+\begin_inset Formula $\ensuremath{\beta}$
+\end_inset
+
+向量组的秩
+\begin_inset Formula $r(\beta_{1},\beta_{2},\cdots,\beta_{s})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因此：
+
+\begin_inset Formula 
+\[
+r(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})\leqslant r(\beta_{1},\beta_{2},\cdots,\beta_{s})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果两个向量组的秩相等，
+并不能说明它们一定等价。
+举个例子：
+
+\end_layout
+
+\begin_layout Standard
+设有两个向量组
+\begin_inset Formula $\ensuremath{\alpha_{1},\alpha_{2}}$
+\end_inset
+
+和
+\begin_inset Formula $\beta_{1},\beta_{2}$
+\end_inset
+
+，
+它们的秩都为 1，
+但
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\ensuremath{\beta_{1}}$
+\end_inset
+
+互不相关，
+这样
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{\beta}$
+\end_inset
+
+的秩虽然相等，
+但它们无法互相表示，
+不是等价向量组。
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 行秩与列秩
 \end_layout
@@ -72914,6 +73415,23 @@ a_{21}\\
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+利用矩阵的初等变换可以把矩阵化简为行阶梯形矩阵或列阶梯形矩阵，
+这些变换不会改变行秩和列秩。
+矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 的行秩等于矩阵 
+\begin_inset Formula $A^{T}$
+\end_inset
+
+的列秩。
+
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $r(AB)\leqslant min\{r(A),r(B)\}$
 \end_inset
@@ -72991,6 +73509,140 @@ a_{21}\\
 
 \begin_layout Theorem
 初等行变换不改变矩阵列向量的线性关系。
+
+\end_layout
+
+\begin_layout Subsection
+求极大无关组
+\end_layout
+
+\begin_layout Standard
+求一个矩阵的极大无关组（即一组线性无关的列向量的最大集合）通常用的是矩阵的秩和列向量的线性无关性。
+极大无关组的求法步骤如下：
+
+\end_layout
+
+\begin_layout Standard
+求一个矩阵的**极大无关组**（即一组线性无关的列向量的最大集合）通常用的是矩阵的**秩**和**列向量的线性无关性**。
+ 
+\end_layout
+
+\begin_layout Paragraph
+步骤：
+
+\end_layout
+
+\begin_layout Enumerate
+将矩阵化为
+\series bold
+阶梯形矩阵
+\series default
+或
+\series bold
+行简化阶梯形矩阵
+\series default
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+化为阶梯形矩阵后，
+可以看到每一行的
+\series bold
+主元位置
+\series default
+（即第一个非零元素的位置），
+这些主元位置对应的列向量是线性无关的。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+找到主元列：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+阶梯形矩阵中的每一个主元所在的列即为主元列。
+
+\end_layout
+
+\begin_layout Enumerate
+原矩阵中与这些主元列对应的列向量就是线性无关的向量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+构造极大无关组：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+取出原矩阵中对应主元列的向量集合，
+这组向量就是矩阵的极大无关组。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+假设有一个矩阵
+\begin_inset Formula $A$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\begin{pmatrix}1 & 2 & 3\\
+0 & 1 & 4\\
+0 & 0 & 1
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+化为阶梯形矩阵后，
+我们看到主元出现在第 
+\begin_inset Formula $1$
+\end_inset
+
+ 列、第 
+\begin_inset Formula $2$
+\end_inset
+
+ 列和第 
+\begin_inset Formula $3$
+\end_inset
+
+ 列，
+这三列对应的列向量就是矩阵的极大无关组。
+
+\end_layout
+
+\begin_layout Standard
+注意
+\end_layout
+
+\begin_layout Standard
+在求极大无关组时，
+通常只需关注主元列对应的列向量，
+而不需要进一步化简到行简化阶梯形矩阵（根据复杂程度判断，
+建议化为
+\series bold
+行简化阶梯形
+\series default
+）。
 
 \end_layout
 
@@ -73185,6 +73837,20 @@ b_{1} & b_{2} & b_{3}
 
 \begin_layout Subsection
 二维向量组的行列式
+\end_layout
+
+\begin_layout Standard
+行列式的一个自然的源起是 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积。
+行列式的定义和 
+\begin_inset Formula $n$
+\end_inset
+
+ 维平行体的体积有着本质上的关联。
+
 \end_layout
 
 \begin_layout Standard
