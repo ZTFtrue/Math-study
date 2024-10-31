@@ -65267,6 +65267,91 @@ b_{31} & b_{32}
 \end_layout
 
 \begin_layout Standard
+对一个 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，
+在 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 的子行列式（余子式）
+\begin_inset Formula $M_{ij}$
+\end_inset
+
+定义为删掉 
+\begin_inset Formula $A$
+\end_inset
+
+ 的第 
+\begin_inset Formula $i$
+\end_inset
+
+ 行与第
+\begin_inset Formula $j$
+\end_inset
+
+列后得到的行列式。
+令
+\begin_inset Formula $C_{ij}:=(-1)^{i+j}M_{ij}$
+\end_inset
+
+，
+称为 
+\begin_inset Formula $A$
+\end_inset
+
+在
+\begin_inset Formula $(i,j)$
+\end_inset
+
+的余因子（代数余子式）。
+矩阵
+\begin_inset Formula $cof(A):=(C_{ij})_{i,j}$
+\end_inset
+
+ 称作
+\begin_inset Formula $A$
+\end_inset
+
+的余因子矩阵（余子矩阵）。
+余因子矩阵的转置称为伴随矩阵，
+记为
+\begin_inset Formula $\mathrm{adj}(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例：
+
+\end_layout
+
+\begin_layout Standard
+考虑三阶方阵
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
+b_{21} & b_{22} & b_{23}\\
+b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula ${\displaystyle M}$
 \end_inset
 
@@ -65289,7 +65374,7 @@ b_{31} & b_{32}
 
 \begin_layout Standard
 计算余因子
-\begin_inset Formula $C_{23}$
+\begin_inset Formula $M_{23}$
 \end_inset
 
 。
@@ -65414,109 +65499,6 @@ b_{31} & b_{32}
 \end_inset
 
 列的代数余子式。
-
-\end_layout
-
-\begin_layout Subsubsection
-行列式关于行和列的展开
-\end_layout
-
-\begin_layout Standard
-一个
-\begin_inset Formula $n$
-\end_inset
-
- 阶的行列式 
-\begin_inset Formula $M$
-\end_inset
-
-可以写成一行（或一列）的元素与对应的代数余子式的乘积之和，
-叫作行列式按一行（或一列）的展开。
-只能按某一行或某一列展开。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \det M=\sum_{i=1}^{n}m_{i;j}C_{i,j}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \det M=\sum_{j=1}^{n}m_{i;j}C_{i,j}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个公式又称拉普拉斯公式，
-把
-\begin_inset Formula $n$
-\end_inset
-
-维矩阵的行列式计算变为了
-\begin_inset Formula $n$
-\end_inset
-
- 个 
-\begin_inset Formula $n−1$
-\end_inset
-
- 维的行列式的计算。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-M & =\left|\begin{array}{cccc}
-1 & 2 & 3 & 4\\
-5 & 6 & 7 & 8\\
-9 & 10 & 11 & 12\\
-13 & 14 & 15 & 16
-\end{array}\right|=1\times C_{11}+2\times C_{12}+3\times C_{13}+4\times C_{14}\\
- & =(-1)^{1+1}\times1\times\left|\begin{array}{ccc}
-6 & 7 & 8\\
-10 & 11 & 12\\
-14 & 15 & 16
-\end{array}\right|+(-1)^{1+2}\times2\times\left|\begin{array}{ccc}
-5 & 7 & 8\\
-9 & 11 & 12\\
-13 & 15 & 16
-\end{array}\right|\\
- & \:+(-1)^{1+3}\times3\times\left|\begin{array}{ccc}
-5 & 6 & 8\\
-9 & 10 & 12\\
-13 & 14 & 16
-\end{array}\right|+(-1)^{1+4}\times4\times\left|\begin{array}{ccc}
-5 & 6 & 7\\
-9 & 10 & 11\\
-13 & 14 & 15
-\end{array}\right|\\
- & =1\times1\times0+(-1)\times2\times0+(1)\times3\times0+(-1)\times4\times0
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-另一方面，
-拉普拉斯公式可以作为行列式的一种归纳定义：
-在定义了二维行列式后，
-
-\begin_inset Formula $n$
-\end_inset
-
- 维矩阵的行列式可以借助拉普拉斯公式用
-\begin_inset Formula $n−1$
-\end_inset
-
- 维的行列式来定义。
-这样定义的行列式与前面的定义是等价的。
 
 \end_layout
 
@@ -65697,7 +65679,10 @@ k阶子式的余子式
 \end_layout
 
 \begin_layout Standard
-1 阶子式就是矩阵中的每个元素本身，
+\begin_inset Formula $1$
+\end_inset
+
+ 阶子式就是矩阵中的每个元素本身，
 因为它们对应于从矩阵中选择一行和一列。
 
 \end_layout
@@ -65854,54 +65839,161 @@ M & =\left|\begin{array}{cccc}
 
 \end_layout
 
+\begin_layout Standard
+对一
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}
+\]
+
+\end_inset
+
+其行列式 
+\begin_inset Formula $\det A$
+\end_inset
+
+可以用余因子表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}+...+a_{nj}C_{nj}
+\]
+
+\end_inset
+
+(对第 j 列的余因子分解)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3}+...+a_{in}C_{in}
+\]
+
+\end_inset
+
+ (对第 i 行的余因子分解)
+\end_layout
+
 \begin_layout Paragraph
-伴随矩阵
+行列式关于行和列的展开
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $A$
+一个
+\begin_inset Formula $n$
 \end_inset
 
-的余因子矩阵是指将
-\begin_inset Formula $A$
+ 阶的行列式 
+\begin_inset Formula $M$
 \end_inset
 
-的
-\begin_inset Formula $(i,j)$
-\end_inset
-
-代数余子式摆在第i行第
-\begin_inset Formula $j$
-\end_inset
-
-列所得到的矩阵，
-记为
-\begin_inset Formula $C$
-\end_inset
-
-。
+可以写成一行（或一列）的元素与对应的代数余子式的乘积之和，
+叫作行列式按一行（或一列）的展开。
+只能按某一行或某一列展开。
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $C$
+\begin_inset Formula ${\displaystyle \det M=\sum_{i=1}^{n}m_{i;j}C_{i,j}}$
 \end_inset
 
-的转置矩阵称为
-\begin_inset Formula $A$
-\end_inset
 
-的伴随矩阵，
-伴随矩阵类似于逆矩阵，
-并且当
-\begin_inset Formula $A$
-\end_inset
-
-可逆时可以用来计算它的逆矩阵。
- 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \det M=\sum_{j=1}^{n}m_{i;j}C_{i,j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个公式又称拉普拉斯公式，
+把
+\begin_inset Formula $n$
+\end_inset
+
+维矩阵的行列式计算变为了
+\begin_inset Formula $n$
+\end_inset
+
+ 个 
+\begin_inset Formula $n−1$
+\end_inset
+
+ 维的行列式的计算。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+M & =\left|\begin{array}{cccc}
+1 & 2 & 3 & 4\\
+5 & 6 & 7 & 8\\
+9 & 10 & 11 & 12\\
+13 & 14 & 15 & 16
+\end{array}\right|=1\times C_{11}+2\times C_{12}+3\times C_{13}+4\times C_{14}\\
+ & =(-1)^{1+1}\times1\times\left|\begin{array}{ccc}
+6 & 7 & 8\\
+10 & 11 & 12\\
+14 & 15 & 16
+\end{array}\right|+(-1)^{1+2}\times2\times\left|\begin{array}{ccc}
+5 & 7 & 8\\
+9 & 11 & 12\\
+13 & 15 & 16
+\end{array}\right|\\
+ & \:+(-1)^{1+3}\times3\times\left|\begin{array}{ccc}
+5 & 6 & 8\\
+9 & 10 & 12\\
+13 & 14 & 16
+\end{array}\right|+(-1)^{1+4}\times4\times\left|\begin{array}{ccc}
+5 & 6 & 7\\
+9 & 10 & 11\\
+13 & 14 & 15
+\end{array}\right|\\
+ & =1\times1\times0+(-1)\times2\times0+(1)\times3\times0+(-1)\times4\times0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+另一方面，
+拉普拉斯公式可以作为行列式的一种归纳定义：
+在定义了二维行列式后，
+
+\begin_inset Formula $n$
+\end_inset
+
+ 维矩阵的行列式可以借助拉普拉斯公式用
+\begin_inset Formula $n−1$
+\end_inset
+
+ 维的行列式来定义。
+这样定义的行列式与前面的定义是等价的。
+
+\end_layout
+
+\begin_layout Subsection
 同阶行列式相乘定理
 \end_layout
 
@@ -66525,196 +66617,6 @@ a_{i1} & a_{i2} & \dots & a_{in}\\
 {\color{red}k}a_{j1}{\color{red}+a_{i1}} & {\color{red}k}a_{j2}{\color{red}+a_{i2}} & \dots & {\color{red}k}a_{jn}{\color{red}+a_{in}}\\
 \vdots & \vdots & \vdots & \vdots
 \end{vmatrix}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-余因子
-\end_layout
-
-\begin_layout Subsubsection
-余因子分解
-\end_layout
-
-\begin_layout Standard
-对一
-\begin_inset Formula $n\times n$
-\end_inset
-
- 矩阵：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-A=\begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n}\\
-a_{21} & a_{22} & \cdots & a_{2n}\\
-\vdots & \vdots & \ddots & \vdots\\
-a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{bmatrix}
-\]
-
-\end_inset
-
-其行列式 
-\begin_inset Formula $\det A$
-\end_inset
-
-可以用余因子表示：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\det(A)=a_{1j}C_{1j}+a_{2j}C_{2j}+a_{3j}C_{3j}+...+a_{nj}C_{nj}
-\]
-
-\end_inset
-
-(对第 j 列的余因子分解)
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\det(A)=a_{i1}C_{i1}+a_{i2}C_{i2}+a_{i3}C_{i3}+...+a_{in}C_{in}
-\]
-
-\end_inset
-
- (对第 i 行的余因子分解)
-\end_layout
-
-\begin_layout Subsubsection
-代数余因子式
-\end_layout
-
-\begin_layout Standard
-对一个 
-\begin_inset Formula $n\times n$
-\end_inset
-
- 矩阵 
-\begin_inset Formula $A$
-\end_inset
-
-，
-在 
-\begin_inset Formula $(i,j)$
-\end_inset
-
- 的子行列式（余子式）
-\begin_inset Formula $M_{ij}$
-\end_inset
-
-定义为删掉 
-\begin_inset Formula $A$
-\end_inset
-
- 的第 
-\begin_inset Formula $i$
-\end_inset
-
- 行与第
-\begin_inset Formula $j$
-\end_inset
-
-列后得到的行列式。
-令
-\begin_inset Formula $C_{ij}:=(-1)^{i+j}M_{ij}$
-\end_inset
-
-，
-称为 
-\begin_inset Formula $A$
-\end_inset
-
-在
-\begin_inset Formula $(i,j)$
-\end_inset
-
-的余因子（代数余子式）。
-矩阵
-\begin_inset Formula $cof(A):=(C_{ij})_{i,j}$
-\end_inset
-
- 称作
-\begin_inset Formula $A$
-\end_inset
-
-的余因子矩阵（余子矩阵）。
-余因子矩阵的转置称为伴随矩阵，
-记为
-\begin_inset Formula $\mathrm{adj}(A)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-例：
-
-\end_layout
-
-\begin_layout Standard
-考虑三阶方阵
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-B=\begin{bmatrix}b_{11} & b_{12} & b_{13}\\
-b_{21} & b_{22} & b_{23}\\
-b_{31} & b_{32} & b_{33}
-\end{bmatrix}
-\]
-
-\end_inset
-
-计算余因子
-\begin_inset Formula $C_{23}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle M_{23}=\begin{vmatrix}b_{11} & b_{12} & \Box\\
-\Box & \Box & \Box\\
-b_{31} & b_{32} & \Box
-\end{vmatrix}=\begin{vmatrix}b_{11} & b_{12}\\
-b_{31} & b_{32}
-\end{vmatrix}=b_{11}b_{32}-b_{31}b_{12}}
-\]
-
-\end_inset
-
- 根据定义得到
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=(-1)^{2+3}(M_{23})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=(-1)^{5}(b_{11}b_{32}-b_{31}b_{12})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $C_{23}=b_{31}b_{12}-b_{11}b_{32}$
 \end_inset
 
 
@@ -74296,78 +74198,11 @@ b_{n}
 \end_layout
 
 \begin_layout Subsection
-齐次线性方程组解 
-\end_layout
-
-\begin_layout Standard
-唯一解，
-无解，
-无穷解。
-
+齐次线性方程组
 \end_layout
 
 \begin_layout Subsubsection
 齐次线性方程组
-\end_layout
-
-\begin_layout Standard
-齐次线性方程组是指形如
-\begin_inset Formula $Ax=0$
-\end_inset
-
- 的线性方程组，
-其中：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $A$
-\end_inset
-
- 是一个
-\begin_inset Formula $m\times n$
-\end_inset
-
-的系数矩阵；
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $x$
-\end_inset
-
- 是 
-\begin_inset Formula $n\times1$
-\end_inset
-
- 的未知量列向量；
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $0$
-\end_inset
-
- 是 
-\begin_inset Formula $m×1$
-\end_inset
-
- 的零向量。
-
-\end_layout
-
-\begin_layout Standard
-齐次线性方程组的特点是
-\series bold
-所有方程的常数项都是
-\series default
-
-\begin_inset Formula $0$
-\end_inset
-
-，
-因此称为“齐次”。
-
 \end_layout
 
 \begin_layout Paragraph
@@ -74398,6 +74233,66 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Definition
+齐次线性方程组是指形如
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 的线性方程组，
+其中：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $A$
+\end_inset
+
+ 是一个
+\begin_inset Formula $m\times n$
+\end_inset
+
+的系数矩阵；
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $x$
+\end_inset
+
+ 是 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ 的未知量列向量；
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $0$
+\end_inset
+
+ 是 
+\begin_inset Formula $m×1$
+\end_inset
+
+ 的零向量。
+
+\end_layout
+
+\begin_layout Standard
+齐次线性方程组的特点是
+\series bold
+所有方程的常数项都是
+\series default
+
+\begin_inset Formula $0$
+\end_inset
+
+，
+因此称为“齐次”。
 
 \end_layout
 
@@ -74443,7 +74338,12 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \begin_inset Formula $A$
 \end_inset
 
- 的秩(rank)：
+ 的秩(rank)，
+
+\begin_inset Formula $rank(A)$
+\end_inset
+
+：
 
 \end_layout
 
@@ -74490,7 +74390,11 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \begin_inset Formula $A$
 \end_inset
 
- 的零空间（Null Space），
+ 的
+\series bold
+零空间
+\series default
+（Null Space），
 其维度等于未知数个数减去矩阵的秩，
 即：
 
@@ -74512,8 +74416,53 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
-\begin_layout Subsubsection
-高斯消去法
+\begin_layout Standard
+有效”的方程的个数就是矩阵
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+中线性无关的行向量的个数，
+或者说行向量线性张成的空间的维数。
+这个数也被称为矩阵的秩。
+当矩阵
+\begin_inset Formula ${\displaystyle \mathbf{A}}$
+\end_inset
+
+的秩 
+\begin_inset Formula ${\displaystyle r}$
+\end_inset
+
+小于未知数的个数 
+\begin_inset Formula $n$
+\end_inset
+
+ 时，
+方程组的解会有无穷多个，
+构成一个 
+\begin_inset Formula ${\displaystyle n-r}$
+\end_inset
+
+维的线性空间。
+而当
+\begin_inset Formula ${\displaystyle r}$
+\end_inset
+
+等于未知数的个数 
+\begin_inset Formula $n$
+\end_inset
+
+时，
+方程组有唯一零解，
+
+\begin_inset Formula $r$
+\end_inset
+
+不可能大于
+\begin_inset Formula $n$
+\end_inset
+
+。
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -74521,7 +74470,175 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \begin_inset Formula $Ax=0$
 \end_inset
 
+的解 - 高斯消去法
+\end_layout
 
+\begin_layout Standard
+求解齐次线性方程组：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x+2y-2z+3w=0\\
+-2x-4y+4z-6w=0\\
+2x+8y-2z=0\\
+-x+3z-6w=0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将方程组写成增广矩阵的形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{cccc|c}
+1 & 2 & -2 & 3 & 0\\
+-2 & -4 & 4 & -6 & 0\\
+2 & 8 & -2 & 0 & 0\\
+-1 & 0 & 3 & -6 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+接下来将其化为行简化阶梯形矩阵。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc|c}
+1 & 0 & -3 & 6 & 0\\
+0 & 1 & \frac{1}{2} & -\frac{3}{2} & 0\\
+0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在得到的行简化阶梯形矩阵对应的方程组为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x-3z+6w=0\\
+y+\frac{1}{2}z-\frac{3}{2}w=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令
+\begin_inset Formula $z=t$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{w=s}$
+\end_inset
+
+（其中
+\begin_inset Formula $\ensuremath{t}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{s}$
+\end_inset
+
+是自由变量），
+则得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x=3t-6s\\
+y=-\frac{1}{2}t+\frac{3}{2}s\\
+z=t\\
+w=s
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+解可以表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{pmatrix}x\\
+y\\
+z\\
+w
+\end{pmatrix}=t\begin{pmatrix}3\\
+-\frac{1}{2}\\
+1\\
+0
+\end{pmatrix}+s\begin{pmatrix}-6\\
+\frac{3}{2}\\
+0\\
+1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是方程组的通解，
+包含零解和所有可能的非零解。
+其中这两个向量
+\begin_inset Formula $\left\{ \begin{pmatrix}3\\
+-\frac{1}{2}\\
+1\\
+0
+\end{pmatrix},\begin{pmatrix}-6\\
+\frac{3}{2}\\
+0\\
+1
+\end{pmatrix}\right\} $
+\end_inset
+
+就是解空间的
+\series bold
+基础解系
+\series default
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+基础解系
 \end_layout
 
 \begin_layout Itemize
@@ -74595,10 +74712,6 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \end_deeper
-\begin_layout Subsubsection
-基础解系
-\end_layout
-
 \begin_layout Standard
 \begin_inset Formula $\eta_{1}$
 \end_inset
@@ -74682,6 +74795,17 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \begin_layout Proof
+\begin_inset Formula $\because$
+\end_inset
+
+
+\begin_inset Formula $AB=O_{m\times s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
 
 \family roman
 \series medium
@@ -74696,6 +74820,10 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \uwave off
 \noun off
 \color none
+\begin_inset Formula $\therefore$
+\end_inset
+
+
 \begin_inset Formula $A\beta_{i}=0,i=1,2,\cdots,s$
 \end_inset
 
@@ -74729,11 +74857,115 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \begin_layout Proof
+若
 \begin_inset Formula $r(A)=n$
 \end_inset
 
-唯一解，
+,则
+\begin_inset Formula $A$
+\end_inset
 
+的列秩为
+\begin_inset Formula $n$
+\end_inset
+
+，
+说明
+\begin_inset Formula $A$
+\end_inset
+
+是满秩矩阵唯一解，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+因此，
+方程 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 只有零解，
+即
+\begin_inset Formula $\beta_{i}=0$
+\end_inset
+
+，
+矩阵
+\begin_inset Formula $B$
+\end_inset
+
+ 的所有列都是零向量，
+
+\begin_inset Formula $r(A)\leqslant n$
+\end_inset
+
+成立。
+
+\end_layout
+
+\begin_layout Proof
+若
+\begin_inset Formula $r(A)<n$
+\end_inset
+
+ ，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+方程 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+有无穷解。
+基础解系解的个数
+\begin_inset Formula $n-r(A)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+因为矩阵 
+\begin_inset Formula $B=(\beta_{1},\beta_{2},\cdots\beta_{s})$
+\end_inset
+
+ 的列向量
 \family roman
 \series medium
 \shape up
@@ -74751,28 +74983,94 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \begin_inset Formula $\beta_{i}$
 \end_inset
 
-=0，
 
-\begin_inset Formula $r(A)\leqslant n$
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+都是
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $Ax=0$
 \end_inset
 
-成立
+的解，
+因此，
+
+\begin_inset Formula $B$
+\end_inset
+
+ 的列向量空间是方程 Ax=0Ax=0 的解空间的子空间，
+这意味着
+\begin_inset Formula $B$
+\end_inset
+
+ 的列空间的所有向量都可以表示为方程
+\begin_inset Formula $Ax=0$
+\end_inset
+
+解空间中的向量。
+
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula $r(A)<n$
+因为矩阵
+\begin_inset Formula $B$
 \end_inset
 
- 有无穷解。
-基础解系解的个数
-\begin_inset Formula $n-r(A)$
+的列向量是方程
+\begin_inset Formula $Ax=0$
 \end_inset
 
-。
+的解，
+而这个解空间的维数为 
+\begin_inset Formula $n−r(A)$
+\end_inset
 
-\end_layout
+，
+所以矩阵
+\begin_inset Formula $B$
+\end_inset
 
-\begin_layout Proof
+ 的列向量最多只能有
+\begin_inset Formula $n−r(A)$
+\end_inset
+
+个线性无关向量。
+这意味着 
+\begin_inset Formula $B$
+\end_inset
+
+ 的列秩 
+\begin_inset Formula $r(B)$
+\end_inset
+
+ 必然小于或等于
+\begin_inset Formula $n−r(A)$
+\end_inset
+
+所以
 \begin_inset Formula $r(B)=r(\beta_{1},\beta_{2},\cdots\beta_{s})\leqslant n-r(A)$
 \end_inset
 
@@ -74780,10 +75078,70 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \begin_layout Subsection
-非齐次线性方程组解
+非齐次线性方程组
 \begin_inset Formula $Ax=b$
 \end_inset
 
+、
+\end_layout
+
+\begin_layout Definition
+形如
+\begin_inset Formula $Ax=b,b\neq0$
+\end_inset
+
+的方程组，
+其中：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $A$
+\end_inset
+
+ 是一个
+\begin_inset Formula $m\times n$
+\end_inset
+
+的系数矩阵；
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $x$
+\end_inset
+
+ 是 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ 的未知量列向量；
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $b$
+\end_inset
+
+ 是 
+\begin_inset Formula $m×1$
+\end_inset
+
+ 的非零向量。
+
+\end_layout
+
+\begin_layout Remark*
+因为
+\begin_inset Formula $b$
+\end_inset
+
+的位置数
+\begin_inset Formula $x$
+\end_inset
+
+的次方为0，
+所以不是齐次。
 
 \end_layout
 
@@ -74803,6 +75161,10 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_inset
 
 的导出组
+\end_layout
+
+\begin_layout Paragraph
+解的性质
 \end_layout
 
 \begin_layout Enumerate
@@ -74882,7 +75244,7 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\begin_layout Enumerate
 \begin_inset Formula $\alpha_{0}$
 \end_inset
 
@@ -74902,6 +75264,7 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 的通解
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula $\eta=c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$
 \end_inset
@@ -74959,23 +75322,176 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
+\end_deeper
+\begin_layout Paragraph
+解的分类
+\end_layout
+
 \begin_layout Standard
+非齐次线性方程组的解的情况主要取决于系数矩阵
+\begin_inset Formula $A$
+\end_inset
+
+的秩和增广矩阵 
+\begin_inset Formula $(A∣b)$
+\end_inset
+
+ 的秩。
+
+\end_layout
+
+\begin_layout Enumerate
+唯一解：
+如果
+\begin_inset Formula $r(A)=r(A|\mathbf{b})=n$
+\end_inset
+
+，
+则方程组有唯一解。
+
+\end_layout
+
+\begin_layout Enumerate
+无解：
+如果
+\begin_inset Formula $r(A)\neq r(A|\mathbf{b})$
+\end_inset
+
+，
+则方程组无解。
+
+\end_layout
+
+\begin_layout Enumerate
+无穷多解：
+如果
+\begin_inset Formula $r(A)=r(A|\mathbf{b})<n$
+\end_inset
+
+，
+则方程组有无穷多解。
+
+\end_layout
+
+\begin_layout Paragraph
+解的结构
+\end_layout
+
+\begin_layout Standard
+对于有解的非齐次线性方程组
+\begin_inset Formula $A\mathbf{x}=\mathbf{b}$
+\end_inset
+
+，
+其解可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{x}=\mathbf{x_{p}}+\mathbf{x_{h}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{x_{p}}$
+\end_inset
+
+ 是非齐次方程
+\begin_inset Formula $\ensuremath{A\mathbf{x}=\mathbf{b}}$
+\end_inset
+
+的一个特解。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{\mathbf{x_{h}}}$
+\end_inset
+
+是对应的齐次方程
+\begin_inset Formula $\ensuremath{A\mathbf{x}=0}$
+\end_inset
+
+的通解。
+
+\end_layout
+
+\begin_layout Paragraph
+解的表示方法
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $\ensuremath{A\mathbf{x}=\mathbf{b}}$
+\end_inset
+
+的解的一个特解
+\begin_inset Formula $为\ensuremath{\mathbf{x_{p}}}$
+\end_inset
+
+，
+那么该方程组的所有解可以表示为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{x}=\mathbf{x_{p}}+c_{1}\mathbf{v_{1}}+c_{2}\mathbf{v_{2}}+\cdots+c_{k}\mathbf{v_{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\mathbf{v_{1}},\mathbf{v_{2}},\dots,\mathbf{v_{k}}$
+\end_inset
+
+ 是对应的齐次方程
+\begin_inset Formula $\ensuremath{A\mathbf{x}=0}$
+\end_inset
+
+的基础解系，
+
+\begin_inset Formula $c_{1},c_{2},\dots,c_{k}$
+\end_inset
+
+ 是任意常数。
+
+\end_layout
+
+\begin_layout Paragraph
 解题步骤
 \end_layout
 
 \begin_layout Enumerate
+求特解
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 写出
-\begin_inset Formula $\bar{A}$
+\begin_inset Formula $A$
 \end_inset
 
-只做初等行变换换位行简化阶梯形
+只做初等行变换换位行简化阶梯形。
+
 \end_layout
 
 \begin_layout Enumerate
 非零行的首非零元的1留在左边，
 其余留在右边。
 写出非齐次同次方程组，
-指出谁是自由位置量（不在左边的都是自由未知量）。
+指出谁是自由未知量（不在左边的都是自由未知量）。
 
 \end_layout
 
@@ -74997,6 +75513,12 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+求齐次方程的解
+\end_layout
+
+\begin_deeper
 \begin_layout Enumerate
 令通解方程组常数项都为0，
 得
@@ -75020,6 +75542,7 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 
 \family roman
@@ -75035,6 +75558,8 @@ a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n} & =0
 \uwave off
 \noun off
 \color none
+组合得到通解:
+ 
 \begin_inset Formula $\alpha_{0}+c_{1}\eta_{1}+c_{2}\eta_{2}+\cdots+c_{n-r}\eta_{n-r}$
 \end_inset
 
