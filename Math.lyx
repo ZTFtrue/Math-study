@@ -75818,7 +75818,11 @@ w
 \end_layout
 
 \begin_layout Standard
-特征多项式的定义：
+
+\series bold
+特征多项式
+\series default
+的定义：
 给定一个 
 \begin_inset Formula $n×n$
 \end_inset
@@ -75840,6 +75844,48 @@ w
 \begin_inset Formula 
 \[
 p(\lambda)=\det(A-\lambda I)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+特征多项式
+\begin_inset Formula $\ensuremath{p(\lambda)}$
+\end_inset
+
+的根是矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{p(\lambda)}$
+\end_inset
+
+是一个
+\begin_inset Formula $n$
+\end_inset
+
+ 次多项式，
+对于 
+\begin_inset Formula $\ensuremath{n\times n}$
+\end_inset
+
+的矩阵，
+特征多项式的形式通常为：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula 
+\[
+p(\lambda)=(-1)^{n}\lambda^{n}+c_{n-1}\lambda^{n-1}+\dots+c_{1}\lambda+c_{0}
 \]
 
 \end_inset
@@ -76088,7 +76134,18 @@ p(\lambda)=\det(A-\lambda I)
 \end{array}\right]$
 \end_inset
 
-???
+，
+由于特征向量不可以为
+\begin_inset Formula $0$
+\end_inset
+
+，
+所有任意的非零向量都是
+\begin_inset Formula $A$
+\end_inset
+
+的特征向量。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -76306,7 +76363,11 @@ n 个特征质
 \end_inset
 
 是主对角线元素和，
-叫做矩阵的迹，
+叫做
+\series bold
+矩阵的迹
+\series default
+，
 
 \begin_inset Formula $Tr(A)$
 \end_inset
@@ -76378,7 +76439,7 @@ n 个特征质
 \end_inset
 
 线性无关。
-
+（每个特征质可以对应多个特征向量）
 \end_layout
 
 \begin_deeper
@@ -76547,33 +76608,6 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-\begin_inset Formula $n$
-\end_inset
-
-阶方阵互不相同的特征质
-\begin_inset Formula $\lambda_{1}$
-\end_inset
-
-,
-\begin_inset Formula $\lambda_{2}$
-\end_inset
-
-,
-\begin_inset Formula $\cdots$
-\end_inset
-
-,
-\begin_inset Formula $\lambda_{m}$
-\end_inset
-
-对应的特征向量
-\begin_inset Formula $\alpha_{11},\alpha_{12},\cdots,\alpha_{m}$
-\end_inset
-
-线性无关（每个特征质对应多个特征向量）
-\end_layout
-
 \begin_layout Itemize
 矩阵的特征多项式:矩阵
 \begin_inset Formula $𝐴$
@@ -77409,7 +77443,7 @@ P被称为矩阵A与B之间的相似变换矩阵。
 \begin_layout Itemize
 反身性：
 任意矩阵都与其自身相似,
-\begin_inset Formula $E^{-1}AE=B$
+\begin_inset Formula $E^{-1}AE=A$
 \end_inset
 
 。
@@ -77432,7 +77466,7 @@ P被称为矩阵A与B之间的相似变换矩阵。
 \end_inset
 
 也和
-\begin_inset Formula $M$
+\begin_inset Formula $A$
 \end_inset
 
 相似。
@@ -77804,9 +77838,6 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \series default
 ，
 则 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula ${\displaystyle A}$
 \end_inset
 
@@ -77819,7 +77850,11 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \begin_inset Formula $A$
 \end_inset
 
-如果能通过相似变换转换为一个
+如果能通过
+\series bold
+相似变换转换
+\series default
+为一个
 \series bold
 对角矩阵
 \series default
@@ -77868,7 +77903,7 @@ B^{m} & =(P^{-1}AP)^{m}\\
 
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Remark*
 一个矩阵
 \begin_inset Formula $A$
 \end_inset
