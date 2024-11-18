@@ -73425,7 +73425,15 @@ a_{21}\\
 \end_layout
 
 \begin_layout Standard
-求一个矩阵的**极大无关组**（即一组线性无关的列向量的最大集合）通常用的是矩阵的**秩**和**列向量的线性无关性**。
+求一个矩阵的极大无关组（即一组线性无关的列向量的最大集合）通常用的是矩阵的
+\series bold
+秩
+\series default
+和
+\series bold
+列向量的线性无关性
+\series default
+。
  
 \end_layout
 
@@ -74548,6 +74556,50 @@ y+\frac{1}{2}z-\frac{3}{2}w=0
 \end_layout
 
 \begin_layout Standard
+这个方程组只有两个方程，
+而有四个变量（
+\begin_inset Formula $x$
+\end_inset
+
+、
+\begin_inset Formula $y$
+\end_inset
+
+、
+\begin_inset Formula $z$
+\end_inset
+
+、
+\begin_inset Formula $w$
+\end_inset
+
+），
+这意味着有两个自由变量。
+一般来说，
+非主变量（无法由其他变量唯一确定的变量）就成为自由变量，
+而在行简化阶梯形矩阵中，
+
+\begin_inset Formula $z$
+\end_inset
+
+ 和 
+\begin_inset Formula $w$
+\end_inset
+
+ 没有对应的主元（pivot），
+因此我们可以选择将 
+\begin_inset Formula $z$
+\end_inset
+
+ 和 
+\begin_inset Formula $w$
+\end_inset
+
+ 作为自由变量。
+
+\end_layout
+
+\begin_layout Standard
 令
 \begin_inset Formula $z=t$
 \end_inset
@@ -74582,6 +74634,44 @@ w=s
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+向量 
+\begin_inset Formula $\ensuremath{\begin{pmatrix}3\\
+-\frac{1}{2}\\
+1\\
+0
+\end{pmatrix}}$
+\end_inset
+
+表示当
+\begin_inset Formula $z=t=1$
+\end_inset
+
+ 且
+\begin_inset Formula $w=s=0$
+\end_inset
+
+时的解，
+而向量
+\begin_inset Formula $\ensuremath{\begin{pmatrix}-6\\
+\frac{3}{2}\\
+0\\
+1
+\end{pmatrix}}$
+\end_inset
+
+表示当
+\begin_inset Formula $z=t=0$
+\end_inset
+
+ 且
+\begin_inset Formula $w=s=1$
+\end_inset
+
+时的解。
 
 \end_layout
 
@@ -76438,7 +76528,11 @@ n 个特征质
 \begin_inset Formula $\alpha_{1},\alpha_{2},\cdots,\alpha_{m}$
 \end_inset
 
-线性无关。
+
+\series bold
+线性无关
+\series default
+。
 （每个特征质可以对应多个特征向量）
 \end_layout
 
@@ -76658,7 +76752,11 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \uwave default
 \noun default
 \color inherit
-是A的特征质，
+是
+\begin_inset Formula $A$
+\end_inset
+
+的特征质，
 
 \begin_inset Formula $k\lambda$
 \end_inset
@@ -76667,12 +76765,13 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \begin_inset Formula $kA$
 \end_inset
 
-对的特征质。
+对应的特征质。
  
 \end_layout
 
 \begin_layout Itemize
-幂矩阵的特征值:如果
+幂矩阵的特征值：
+如果
 \begin_inset Formula $𝐴$
 \end_inset
 
@@ -76726,6 +76825,7 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \begin_inset Formula $A^{-1}\alpha=\frac{1}{\lambda}\alpha$
 \end_inset
 
+。
 
 \end_layout
 
@@ -76787,6 +76887,7 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \begin_inset Formula $A^{-1}\alpha=\frac{1}{|A|}A^{*}\alpha\frac{1}{\lambda}\alpha$
 \end_inset
 
+。
 
 \end_layout
 
@@ -77185,6 +77286,7 @@ x_{2}
 \end_inset
 
 。
+。
 
 \end_layout
 
@@ -77258,6 +77360,102 @@ x_{2}
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+4 & -4 & 2\\
+-4 & 4 & -2\\
+2 & -2 & 1
+\end{array}\right]$
+\end_inset
+
+,求特征向量和特征质。
+
+\end_layout
+
+\begin_layout Solution
+求矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+的特征值
+\end_layout
+
+\begin_layout Solution
+|
+\begin_inset Formula $\lambda E-A|=\left|\begin{array}{ccc}
+\lambda-4 & -4 & -2\\
+4 & \lambda-4 & 2\\
+-2 & 2 & \lambda-1
+\end{array}\right|=\lambda^{2}(\lambda-9)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+特征值：
+
+\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
+\end_inset
+
+,
+\begin_inset Formula $\lambda_{3}=9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
+\end_inset
+
+，
+代入解方程，
+特征向量：
+
+\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
+1\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\alpha_{2}=\left[\begin{array}{c}
+-1\\
+0\\
+2
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\lambda_{3}=9$
+\end_inset
+
+,代入解方程，
+
+\begin_inset Formula $\alpha_{3}=\left[\begin{array}{c}
+2\\
+-2\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+如果出现多个位置未知变量，
+通常固定部分变量，
+计算其它变量。
+
+\end_layout
+
 \begin_layout Section
 相似矩阵与可对角化的条件
 \end_layout
@@ -77309,7 +77507,18 @@ P^{-1}AP=B
 \end_layout
 
 \begin_layout Standard
-P被称为矩阵A与B之间的相似变换矩阵。
+\begin_inset Formula $P$
+\end_inset
+
+被称为矩阵
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+之间的相似变换矩阵。
 
 \end_layout
 
@@ -78247,6 +78456,63 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \end_layout
 
 \begin_layout Paragraph
+正交
+\end_layout
+
+\begin_layout Standard
+是线性代数的概念，
+是垂直这一直观概念的推广。
+作为一个形容词，
+只有在一个确定的内积空间中才有意义。
+若
+\series bold
+内积空间
+\series default
+中两向量的
+\series bold
+内积
+\series default
+为
+\begin_inset Formula $0$
+\end_inset
+
+，
+则称它们是
+\series bold
+正交
+\series default
+的。
+如果能够定义向量间的夹角，
+则正交可以直观的理解为垂直。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\alpha=\left[\begin{array}{c}
+\alpha_{1}\\
+\alpha_{2}\\
+\vdots\\
+\alpha_{n}
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\beta=\left[\begin{array}{c}
+\beta_{1}\\
+\beta_{2}\\
+\vdots\\
+\beta_{n}
+\end{array}\right]$
+\end_inset
+
+,
+\begin_inset Formula $\alpha\beta=\alpha_{1}\beta_{1}+\alpha_{2}\beta_{2}+\cdots+\alpha_{n}\beta_{n}=\alpha^{T}\beta=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 正交矩阵
 \end_layout
 
@@ -78265,7 +78531,7 @@ B^{m} & =(P^{-1}AP)^{m}\\
 \begin_layout Standard
 \begin_inset Formula 
 \[
-A^{T}A=AA^{T}=I
+A^{T}=A^{-1}\Longleftrightarrow A^{T}A=AA^{T}=I
 \]
 
 \end_inset
@@ -78300,7 +78566,34 @@ A^{T}A=AA^{T}=I
 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
+正交矩阵示例
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}}$
+\end_inset
+
+ 恒等变换。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{bmatrix}0.96 & -0.28\\
+0.28 & 0.96
+\end{bmatrix}$
+\end_inset
+
+旋转
+\begin_inset Formula $16.26\textdegree$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
 正交矩阵的性质
 \end_layout
 
@@ -78559,7 +78852,14 @@ A^{T}A=AA^{T}=I
 \end_layout
 
 \begin_layout Enumerate
-A,B正交矩阵，
+\begin_inset Formula $A$
+\end_inset
+
+,
+\begin_inset Formula $B$
+\end_inset
+
+正交矩阵，
 
 \begin_inset Formula $AB$
 \end_inset
@@ -78568,7 +78868,7 @@ A,B正交矩阵，
 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 正交矩阵的几何意义
 \end_layout
 
@@ -78723,7 +79023,7 @@ I=\begin{bmatrix}1 & 0\\
 
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 正交矩阵的应用
 \end_layout
 
@@ -78750,105 +79050,13 @@ I=\begin{bmatrix}1 & 0\\
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula $A=\left[\begin{array}{ccc}
-4 & -4 & 2\\
--4 & 4 & -2\\
-2 & -2 & 1
-\end{array}\right]$
-\end_inset
-
-,求正交矩阵。
-
-\end_layout
-
-\begin_layout Solution
-|
-\begin_inset Formula $\lambda E-A|=\left|\begin{array}{ccc}
-\lambda-4 & -4 & -2\\
-4 & \lambda-4 & 2\\
--2 & 2 & \lambda-1
-\end{array}\right|=\lambda^{2}(\lambda-9)=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
-\end_inset
-
-,
-\begin_inset Formula $\lambda_{3}=9$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-对
-\begin_inset Formula $\lambda_{1}=\lambda_{2}=0$
-\end_inset
-
-，
-
-\begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
-1\\
-1\\
-0
-\end{array}\right]$
-\end_inset
-
-,
-\begin_inset Formula $\alpha_{2}=\left[\begin{array}{c}
--1\\
-0\\
-2
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-对
-\begin_inset Formula $\lambda_{3}=9$
-\end_inset
-
-,
-\begin_inset Formula $\alpha_{3}=\left[\begin{array}{c}
-2\\
--2\\
-1
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Solution
-构造正交矩阵
-\end_layout
-
-\begin_layout Solution
-对角矩阵
-\begin_inset Formula $\left[\begin{array}{ccc}
-0 & 0 & 0\\
-0 & 0 & 0\\
-0 & 0 & 9
-\end{array}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
 三阶实对称矩阵A，
 特征值
 \begin_inset Formula $6,3,3$
 \end_inset
 
 ，
-6对应的特征向量
+对应的特征向量
 \begin_inset Formula $\alpha_{1}=\left[\begin{array}{c}
 1\\
 1\\
@@ -78860,7 +79068,7 @@ I=\begin{bmatrix}1 & 0\\
 \begin_inset Formula $A$
 \end_inset
 
-.
+.???
 \end_layout
 
 \begin_layout Solution
@@ -78868,14 +79076,6 @@ I=\begin{bmatrix}1 & 0\\
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsubsection
-实对称矩阵对角化的方法
-\end_layout
-
-\begin_layout Theorem
-实对称矩阵A的不同特征值的对应特征向量正交
 \end_layout
 
 \begin_layout Paragraph
@@ -79035,6 +79235,14 @@ D=Q^{T}AQ
 是一个对角矩阵。
 正交可对角化矩阵通常是对称矩阵。
 
+\end_layout
+
+\begin_layout Subsubsection
+实对称矩阵对角化的方法
+\end_layout
+
+\begin_layout Theorem
+实对称矩阵A的不同特征值的对应特征向量正交
 \end_layout
 
 \begin_layout Paragraph
@@ -79274,7 +79482,8 @@ D=Q^{T}AQ
 \end_layout
 
 \begin_layout Corollary
-如果A有n个互异的特征矩阵，
+n 阶方阵有 n 个互异的特征值，
+则必可对角化，
 
 \begin_inset Formula $A\sim\text{对角形}=\left[\begin{array}{ccc}
 \lambda_{1} & 0 & 0\\
@@ -79283,6 +79492,23 @@ D=Q^{T}AQ
 \end{array}\right]$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Corollary
+使矩阵没有 
+\begin_inset Formula $n$
+\end_inset
+
+ 个互异的特征值，
+只要它有 
+\begin_inset Formula $n$
+\end_inset
+
+ 个线性无关的特征向量，
+它就可以对角化。
+如果特征向量的数量不够，
+则不能对角化。
 
 \end_layout
 
@@ -79486,7 +79712,11 @@ D=Q^{T}AQ
 
 \begin_layout Standard
 在数学中，
-二次型（Quadratic form）是关于一些变量的二次齐次多项式。
+二次型（Quadratic form）是关于一些变量的二次
+\series bold
+齐次
+\series default
+多项式。
 例如
 \end_layout
 
@@ -79554,6 +79784,7 @@ D=Q^{T}AQ
 \uwave off
 \noun off
 \color none
+其中
 \begin_inset Formula $x^{2}$
 \end_inset
 
@@ -79711,7 +79942,7 @@ Q(x_{1},x_{2})=a_{11}x_{1}^{2}+a_{22}x_{2}^{2}+2a_{12}x_{1}x_{2}
 \end_inset
 
 ,叫做二次型矩阵。
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -79778,7 +80009,8 @@ x_{2}
 \begin_inset Formula $Q(\mathbf{x})=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{n}y_{n}^{2}$
 \end_inset
 
-,只有平方项，
+，
+这种形式只有平方项，
 没有交叉项
 \end_layout
 
@@ -79812,7 +80044,7 @@ x_{2}
 \begin_inset Formula $f(x)=X^{T}AX$
 \end_inset
 
-,，
+，
 
 \begin_inset Formula 
 \begin{align*}
@@ -79847,7 +80079,7 @@ f(x) & =X^{T}AX\\
 退化
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 如何将二次型化为标准形式
 \end_layout
 
@@ -79921,6 +80153,17 @@ f(x) & =X^{T}AX\\
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+B=P^{T}AP=P^{-1}AP
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 其中
 \begin_inset Formula $P^{T}$
 \end_inset
@@ -79961,8 +80204,64 @@ f(x) & =X^{T}AX\\
 
 \end_layout
 
+\begin_layout Paragraph
+与正交相似区别
+\end_layout
+
 \begin_layout Standard
-正交相似。
+正交相似：
+
+\begin_inset Formula $B=P^{T}AP=P^{-1}AP$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+正交相似要求
+\begin_inset Formula $P^{T}P^{-1}=E$
+\end_inset
+
+，
+合同矩阵没有这个要求，
+即合同矩阵不要求
+\begin_inset Formula $P$
+\end_inset
+
+是正交矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+合同变换关注的是通过矩阵 
+\begin_inset Formula $P$
+\end_inset
+
+ 变换来保持矩阵的二次型性质，
+它不要求 
+\begin_inset Formula $P$
+\end_inset
+
+ 是正交矩阵。
+
+\end_layout
+
+\begin_layout Enumerate
+正交相似变换是一种特殊的相似变换，
+强调矩阵 
+\begin_inset Formula $Q$
+\end_inset
+
+ 必须是正交的，
+因此不仅保持了矩阵的特征值，
+还保持了向量的欧几里得长度和角度。
+
+\end_layout
+
+\begin_layout Enumerate
+在某些情况下，
+矩阵可能既是合同的又是正交相似的，
+但这取决于具体的矩阵和变换形式。
 
 \end_layout
 
@@ -80035,11 +80334,20 @@ f(x) & =X^{T}AX\\
 \end_layout
 
 \begin_layout Enumerate
-A是对称 B也是对称
+\begin_inset Formula $A$
+\end_inset
+
+是对称
+\begin_inset Formula $B$
+\end_inset
+
+也是对称。
+
 \end_layout
 
 \begin_layout Enumerate
-逆矩阵和转置矩阵也是合同关系
+逆矩阵和转置矩阵也是合同关系。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -80204,9 +80512,8 @@ A是对称 B也是对称
 
 \end_layout
 
-\begin_layout Standard
-1.
- 正定二次型：
+\begin_layout Enumerate
+正定二次型：
 如果二次型 
 \begin_inset Formula $\ensuremath{Q(\mathbf{x})>0}$
 \end_inset
@@ -80225,9 +80532,42 @@ A是对称 B也是对称
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-2.
- 负定二次型：
+正定矩阵有以下等价条件：
+
+\end_layout
+
+\begin_layout Enumerate
+所有特征值均为正。
+
+\end_layout
+
+\begin_layout Enumerate
+对任意非零向量 
+\begin_inset Formula $x$
+\end_inset
+
+，
+
+\begin_inset Formula $x^{T}Ax>0$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ 的主子矩阵的顺序主子式（主导子式）均为正。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+负定二次型：
 如果二次型 
 \begin_inset Formula $Q(\mathbf{x})<0$
 \end_inset
@@ -80246,9 +80586,8 @@ A是对称 B也是对称
 
 \end_layout
 
-\begin_layout Standard
-3.
- 不定二次型：
+\begin_layout Enumerate
+不定二次型：
 如果二次型
 \begin_inset Formula $\ensuremath{Q(\mathbf{x})}$
 \end_inset
@@ -80263,9 +80602,8 @@ A是对称 B也是对称
 
 \end_layout
 
-\begin_layout Standard
-4.
- 半正定二次型：
+\begin_layout Enumerate
+半正定二次型：
 如果
 \begin_inset Formula $\ensuremath{Q(\mathbf{x})\geq0}$
 \end_inset
@@ -80281,99 +80619,6 @@ A是对称 B也是对称
 \end_inset
 
  是半正定矩阵。
-
-\end_layout
-
-\begin_layout Example
-假设我们有如下二次型：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $Q(x_{1},x_{2})=2x_{1}^{2}+4x_{1}x_{2}+5x_{2}^{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-将其转化为矩阵形式：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $A=\begin{bmatrix}2 & 2\\
-2 & 5
-\end{bmatrix}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们可以求出矩阵
-\begin_inset Formula $\ensuremath{A}$
-\end_inset
-
-的特征值和特征向量，
-然后通过正交变换将二次型化为标准形式。
-
-\end_layout
-
-\begin_layout Standard
-1.
- 求特征值和特征向量：
-
-\end_layout
-
-\begin_layout Standard
-- 计算特征值 
-\begin_inset Formula $\lambda_{1}=1,\lambda_{2}=6$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-- 对应的特征向量为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mathbf{v}_{1}=\begin{bmatrix}-2\\
-1
-\end{bmatrix},\quad\mathbf{v}_{2}=\begin{bmatrix}1\\
-1
-\end{bmatrix}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-2.
- 标准形式：
-
-\end_layout
-
-\begin_layout Standard
-将二次型化为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $Q(y_{1},y_{2})=y_{1}^{2}+6y_{2}^{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这就是二次型
-\begin_inset Formula $Q(x_{1},x_{2})$
-\end_inset
-
-的标准形式。
 
 \end_layout
 
@@ -80715,6 +80960,175 @@ Q(y_{1},y_{2})=6y_{1}^{2}+y_{2}^{2}
 \begin_layout Enumerate
 使用新的变量表示二次型的标准形式。
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=X^{T}AX$
+\end_inset
+
+，
+给定
+\begin_inset Formula $y=P^{T}x$
+\end_inset
+
+，
+
+\begin_inset Formula $P$
+\end_inset
+
+是正交矩阵，
+
+\begin_inset Formula $P^{-1}=P^{T}$
+\end_inset
+
+，
+令
+\begin_inset Formula $y=P^{T}x=P^{1}x$
+\end_inset
+
+ 同时左乘
+\begin_inset Formula $P$
+\end_inset
+
+，
+则有
+\begin_inset Formula $x=Py$
+\end_inset
+
+，
+将
+\begin_inset Formula $x=Py$
+\end_inset
+
+ 代入 
+\begin_inset Formula $f(x)=X^{T}AX$
+\end_inset
+
+得 
+\begin_inset Formula $f(x)=X^{T}AX=(Py)^{T}A(Py)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $于\ensuremath{(P\mathbf{y})^{T}=\mathbf{y}^{T}P^{T}}$
+\end_inset
+
+，
+所以：
+
+\begin_inset Formula 
+\[
+f(\mathbf{x})=\mathbf{y}^{T}P^{T}AP\mathbf{y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+是对称矩阵，
+我们可以通过特征值分解得到
+\begin_inset Formula $A=PDP^{T}$
+\end_inset
+
+，
+其中
+\begin_inset Formula $D$
+\end_inset
+
+ 是
+\begin_inset Formula $A$
+\end_inset
+
+ 的对角矩阵，
+
+\begin_inset Formula $\ensuremath{P}$
+\end_inset
+
+是由
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征向量组成的正交矩阵。
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P^{T}AP=D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入
+\begin_inset Formula $P^{T}AP=D$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(\mathbf{x})=\mathbf{y}^{T}D\mathbf{y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这说明
+\begin_inset Formula $\ensuremath{Q(\mathbf{x})}$
+\end_inset
+
+在新的变量
+\begin_inset Formula $\ensuremath{\mathbf{y}}$
+\end_inset
+
+下变成了对角形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(\mathbf{y})=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{n}y_{n}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\ensuremath{\lambda_{i}}$
+\end_inset
+
+是矩阵 
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+的特征值。
+
 \end_layout
 
 \begin_layout Example
