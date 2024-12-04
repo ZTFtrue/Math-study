@@ -1850,7 +1850,19 @@ Omega
 \begin_layout Standard
 基本的数学概念,
  它是集合论的研究对象,
- 指具有某种特定性质的事物的总体,
+ 指具有某种
+\series bold
+特定
+\series default
+性质的
+\series bold
+事物
+\series default
+的
+\series bold
+总体
+\series default
+,
  (在最原始的集合论─朴素集合论─中的定义,
  集合就是"一堆东西”.
  )
@@ -1922,7 +1934,11 @@ Omega
 \end_inset
 
 等大写字母来表示.
- 当元素
+ 
+\end_layout
+
+\begin_layout Itemize
+当元素
 \begin_inset Formula ${\displaystyle a}$
 \end_inset
 
@@ -1936,7 +1952,10 @@ Omega
 \end_inset
 
 .
- 当元素
+\end_layout
+
+\begin_layout Itemize
+当元素
 \begin_inset Formula ${\displaystyle a}$
 \end_inset
 
@@ -1950,7 +1969,10 @@ Omega
 \end_inset
 
 .
- 如果 
+\end_layout
+
+\begin_layout Itemize
+如果 
 \begin_inset Formula ${\displaystyle \mathbf{A,B}}$
 \end_inset
 
@@ -1961,14 +1983,13 @@ Omega
 \end_inset
 
 .
-  
 \end_layout
 
 \begin_layout Standard
 常用表示:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 全体非负整数集合称为非负整数集(自然数集),
  记作
 \begin_inset Formula $N$
@@ -1977,7 +1998,7 @@ Omega
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 所有正整数组成的集合称为正整数集,
  记作
 \begin_inset Formula $N^{*}$
@@ -1990,7 +2011,7 @@ Omega
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 全体整数组成的集合称为整数集,
  记作
 \begin_inset Formula $Z$
@@ -1999,7 +2020,7 @@ Omega
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 全体有理数组成的集合称为有理数集,
  记作
 \begin_inset Formula $Q$
@@ -2008,21 +2029,73 @@ Omega
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 实数集合,记作
 \begin_inset Formula $R$
+\end_inset
+
+，
+
+\begin_inset Formula $R^{+}$
+\end_inset
+
+正数,
+\begin_inset Formula $R^{-}$
+\end_inset
+
+,
+\begin_inset Formula $R^{*}$
+\end_inset
+
+非零实数
+\end_layout
+
+\begin_layout Itemize
+空集，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\displaystyle \varnothing}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-集合的表示 
+\begin_layout Paragraph
+集合的表示
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+列举法：
 用文字或数学符号描述 在大括号中列出其元素,
- 称为列举法
+ 称为列举法。
+
+\end_layout
+
+\begin_layout Itemize
+描述法：
+
+\begin_inset Formula $\{x|x\in A,\text{或x\ensuremath{\in B}}\}$
+\end_inset
+
+，
+
+\begin_inset Formula ${\displaystyle B=}$
+\end_inset
+
+光的三原色和白色
 \end_layout
 
 \begin_layout Section
@@ -2213,6 +2286,13 @@ Omega
 )
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \varnothing}\subset A$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 集合的运算
 \end_layout
@@ -2238,6 +2318,482 @@ Omega
 \begin_inset Formula $C_{u}A=\{x|x\in U,\text{且}X\notin A\}$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Paragraph
+基本性质
+\end_layout
+
+\begin_layout Itemize
+作为集合间的二元运算，
+ 
+\begin_inset Formula ${\displaystyle \cup}$
+\end_inset
+
+运算具有以下性质。
+
+\end_layout
+
+\begin_layout Itemize
+交换律：
+
+\begin_inset Formula ${\displaystyle A\cup B=B\cup A}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+结合律：
+
+\begin_inset Formula ${\displaystyle \left(A\cup B\right)\cup C=A\cup\left(B\cup C\right)}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+幂等律：
+
+\begin_inset Formula ${\displaystyle A\cup A=A}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+幺元：
+
+\begin_inset Formula ${\displaystyle \forall}$
+\end_inset
+
+集合
+\begin_inset Formula $A$
+\end_inset
+
+，
+ 
+\begin_inset Formula ${\displaystyle A\cup\varnothing=A}$
+\end_inset
+
+；
+（
+\begin_inset Formula ${\displaystyle \varnothing}$
+\end_inset
+
+是 
+\begin_inset Formula ${\displaystyle \cup}$
+\end_inset
+
+运算的幺元）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \cap}$
+\end_inset
+
+运算具有以下性质。
+
+\end_layout
+
+\begin_layout Itemize
+交换律：
+ 
+\begin_inset Formula ${\displaystyle A\cap B=B\cap A}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+结合律：
+
+\begin_inset Formula ${\displaystyle (A\cap B)\cap C=A\cap(B\cap C)}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+幂等律：
+ 
+\begin_inset Formula ${\displaystyle A\cap A=A}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+空集合：
+
+\begin_inset Formula ${\displaystyle \forall}$
+\end_inset
+
+集合
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+，
+ 
+\begin_inset Formula ${\displaystyle A\cap\varnothing=\varnothing}$
+\end_inset
+
+；
+（ 
+\begin_inset Formula ${\displaystyle \varnothing}$
+\end_inset
+
+是 
+\begin_inset Formula ${\displaystyle \cap}$
+\end_inset
+
+运算的空集合）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle A\subseteq B\Rightarrow A\cap B=A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+补集
+\end_layout
+
+\begin_layout Standard
+给定集合 
+\begin_inset Formula ${\displaystyle A}$
+\end_inset
+
+，
+ 
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+，
+定义运算-如下：
+
+\begin_inset Formula ${\displaystyle A-B=\{e|e\in A}且{\displaystyle e\not\in B\}}$
+\end_inset
+
+。
+ 
+\begin_inset Formula ${\displaystyle A-B}$
+\end_inset
+
+称为
+\begin_inset Formula $B$
+\end_inset
+
+对于
+\begin_inset Formula $A$
+\end_inset
+
+的
+\series bold
+差集
+\series default
+，
+
+\series bold
+相对补集
+\series default
+或
+\series bold
+相对余集
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+在上下文确定了全集
+\begin_inset Formula ${\displaystyle U}$
+\end_inset
+
+时，
+对于
+\begin_inset Formula ${\displaystyle U}$
+\end_inset
+
+的某个子集 A {
+\backslash
+displaystyle A}，
+一般称 
+\begin_inset Formula ${\displaystyle U-A}$
+\end_inset
+
+为
+\begin_inset Formula $A$
+\end_inset
+
+（对于 
+\begin_inset Formula ${\displaystyle U}$
+\end_inset
+
+）的
+\series bold
+补集
+\series default
+或
+\series bold
+余集
+\series default
+，
+通常记为 
+\begin_inset Formula ${\displaystyle A'}$
+\end_inset
+
+或 
+\begin_inset Formula ${\displaystyle \bar{A}}$
+\end_inset
+
+，
+也有记为 
+\begin_inset Formula ${\displaystyle A^{\text{c}}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula ${\displaystyle A'}$
+\end_inset
+
+,
+\begin_inset Formula ${\displaystyle \complement_{U}A}$
+\end_inset
+
+，
+以及 
+\begin_inset Formula ${\displaystyle \complement A}$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+分配律:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle A\cup(B\cap C)=(A\cup B)\cap(A\cup C)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle A\cap(B\cup C)=(A\cap B)\cup(A\cap C)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对偶律:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \overline{A\cup B}=\overline{A}\cap\overline{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \overline{A\cap B}=\overline{A}\cup\overline{B}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+直积
+\end_layout
+
+\begin_layout Standard
+在数学中，
+
+\series bold
+直积
+\series default
+（也称为笛卡尔积）是两个集合之间的一种基本运算，
+用来生成所有可能的有序对。
+
+\end_layout
+
+\begin_layout Definition
+给定两个集合
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+，
+它们的直积
+\begin_inset Formula $A\times B$
+\end_inset
+
+ 定义为一个集合，
+其中的每个元素是来自
+\begin_inset Formula $A$
+\end_inset
+
+ 的一个元素和来自
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+的一个元素组成的有序对：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\times B=\{(a,b)\mid a\in A,b\in B\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+特性
+\end_layout
+
+\begin_layout Itemize
+顺序性 ：
+有序对
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ 和 
+\begin_inset Formula $(b,a)$
+\end_inset
+
+ 是不同的，
+除非 
+\backslash
+(a = b
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Itemize
+维度性 ：
+若
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和 
+\begin_inset Formula $B$
+\end_inset
+
+ 是有限集合，
+且 
+\begin_inset Formula $|A|=m$
+\end_inset
+
+，
+
+\begin_inset Formula $|B|=n$
+\end_inset
+
+，
+则
+\begin_inset Formula $|A\times B|=m\times n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+扩展性 ：
+直积可以扩展到多个集合，
+例如 
+\begin_inset Formula $A\times B\times C$
+\end_inset
+
+，
+结果是三元组
+\begin_inset Formula $\ensuremath{(a,b,c)}$
+\end_inset
+
+的集合。
+
+\end_layout
+
+\begin_layout Example
+如果
+\begin_inset Formula $A=\{1,2\}$
+\end_inset
+
+，
+
+\begin_inset Formula $B=\{x,y\}$
+\end_inset
+
+，
+则：
+
+\begin_inset Formula 
+\[
+A\times B=\{(1,x),(1,y),(2,x),(2,y)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果
+\begin_inset Formula $A=\{1,2\}$
+\end_inset
+
+，
+
+\begin_inset Formula $B=\emptyset$
+\end_inset
+
+，
+则
+\begin_inset Formula $A\times B=\emptyset$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsection
+高维直积
+\end_layout
+
+\begin_layout Standard
+在向量空间中，
+直积可以表示为张量积的一种特例，
+例如笛卡尔坐标系中的笛卡尔积表示二维或多维空间的组合点。
+
+\end_layout
+
+\begin_layout Standard
+如果指的是具体应用或更高级的数学结构（比如群、环的直积），
+可以详细讨论其代数特性。
 
 \end_layout
 
@@ -28191,7 +28747,8 @@ x, & x\geqslant0
 \begin_inset Formula $[a,b]$
 \end_inset
 
-;
+;包含两端点的区间。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -28208,7 +28765,8 @@ x, & x\geqslant0
 \end_inset
 
 ;
- 
+ 不包含两端点的区间。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -28220,7 +28778,8 @@ x, & x\geqslant0
 \begin_inset Formula $a<x\leqslant b$
 \end_inset
 
-的实数的集合叫做半开半闭区间,分别表示为 
+的实数的集合叫做半开半闭区间,分别表示为：
+左闭右开 
 \family roman
 \series medium
 \shape up
@@ -28237,7 +28796,7 @@ x, & x\geqslant0
 \begin_inset Formula $[a,b)$
 \end_inset
 
-,
+
 \family default
 \series default
 \shape default
@@ -28250,12 +28809,26 @@ x, & x\geqslant0
 \uwave default
 \noun default
 \color inherit
-
+、左开右闭
 \begin_inset Formula $(a,b]$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout Enumerate
+无限区间：
+一端或两端延伸到无穷
+\begin_inset Formula $(-\infty,b]$
+\end_inset
+
+，
+
+\begin_inset Formula $(-\infty,b)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -28319,6 +28892,28 @@ R
 \end_inset
 
 ”读作"正无穷大”.
+\end_layout
+
+\begin_layout Itemize
+区间的长度（适用于有限区间）,若区间为
+\begin_inset Formula $[a,b]$
+\end_inset
+
+，
+长度为
+\begin_inset Formula $b−a$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+两个区间的交集是它们的重叠部分
+\end_layout
+
+\begin_layout Itemize
+两个区间的并集是它们共同覆盖的范围
 \end_layout
 
 \begin_layout Section
