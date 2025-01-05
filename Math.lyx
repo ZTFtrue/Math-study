@@ -28508,7 +28508,11 @@ R_{f}=f(X)=f(x)|x\in X
 \end_inset
 
  ,
- 都有唯一的实数y与之对应,
+ 都有
+\series bold
+唯一
+\series default
+的实数y与之对应,
  则简称y是x的函数,
  记为
 \begin_inset Formula $y=f(x)$
@@ -28704,6 +28708,19 @@ x, & x\geqslant0
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+圆
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+是一个方程，
+是由两个函数组成
+\begin_inset Formula $y=\pm\sqrt{1-x^{2}}$
 \end_inset
 
 
@@ -28923,7 +28940,7 @@ R
 \begin_layout Standard
 如果函数仅包含一个自变量,
  所以我们也称之为一元函数.
-  
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -28943,6 +28960,281 @@ R
 
 \begin_layout Standard
 在定义域内不同的区间上用不同的解析表达式表示 
+\end_layout
+
+\begin_layout Subsubsection
+取整函数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方法
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+符号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+数学描述
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+示例
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+向下取整
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\lfloor x\rfloor}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+最大的 
+\begin_inset Formula $n\leq x$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lfloor3.7\rfloor=3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+向上取整
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\lceil x\rceil}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+最小的 
+\begin_inset Formula $n\geq x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lceil3.2\rceil=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+四舍五入
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\text{round}(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+最接近 
+\begin_inset Formula $n$
+\end_inset
+
+ 的整数 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\text{round}(3.5)=4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+截断
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\text{trunc}(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+去掉小数部分 
+\begin_inset Formula $\ensuremath{x\to n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\text{trunc}(-3.7)=-3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+取整函数
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -29128,7 +29420,11 @@ R
 \begin_inset Formula $f(x)$
 \end_inset
 
-在区间
+在
+\series bold
+区间
+\series default
+
 \begin_inset Formula $D$
 \end_inset
 
@@ -29232,7 +29528,11 @@ R
 \series bold
 偶函数
 \series default
-(even fuction).
+(even fuction),关于
+\begin_inset Formula $y$
+\end_inset
+
+轴对称.
 \end_layout
 
 \begin_layout Standard
@@ -29253,7 +29553,12 @@ R
 \begin_inset Formula $f(x)$
 \end_inset
 
-就叫做奇函数(even fuction).
+就叫做
+\series bold
+奇函数
+\series default
+(even fuction)，
+关于原点对称.
 \end_layout
 
 \begin_layout Subsection
@@ -29377,7 +29682,7 @@ R
 \end_layout
 
 \begin_layout Section
-反函数(定义域与值域反过来,域的值不重复)
+反函数
 \end_layout
 
 \begin_layout Standard
@@ -29419,6 +29724,25 @@ R
 
 ;
  
+\end_layout
+
+\begin_layout Standard
+原函数和反函数的图像关于
+\begin_inset Formula $y=x$
+\end_inset
+
+对称。
+
+\end_layout
+
+\begin_layout Standard
+定义域与值域反过来,域的值不重复，
+原函数
+\begin_inset Formula $y$
+\end_inset
+
+值不能有重复。
+
 \end_layout
 
 \begin_layout Section
@@ -30754,485 +31078,172 @@ status open
 \end_layout
 
 \begin_layout Standard
-利用ε-δ语言来表示的话，
+利用
+\begin_inset Formula $\varepsilon-\delta$
+\end_inset
+
+语言来表示的话，
 就是
 \end_layout
 
 \begin_layout Standard
-(
-\end_layout
+\begin_inset Formula ${\displaystyle (\forall\varepsilon>0)\,(\exists\delta>0)\,(\forall x\in\mathbb{R})\,(0<|x-a|<\delta\implies|f(x)-b|<\varepsilon)}$
+\end_inset
 
-\begin_layout Standard
-∀
-\end_layout
 
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
->
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-∃
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
->
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-∀
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-∈
-\end_layout
-
-\begin_layout Standard
-R
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-a
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-⟹
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-f
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-b
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle (
-\backslash
-forall 
-\backslash
-varepsilon >0)
-\backslash
-,(
-\backslash
-exists 
-\backslash
-delta >0)
-\backslash
-,(
-\backslash
-forall x
-\backslash
-in 
-\backslash
-mathbb {R} )
-\backslash
-,(0<|x-a|<
-\backslash
-delta 
-\backslash
-implies |f(x)-b|<
-\backslash
-varepsilon )}
 \end_layout
 
 \begin_layout Standard
 这个表达式的意思就是：
-对于任何正数ε，
-都能够找到一个正数δ，
-当x满足
+对于任何正数
+\begin_inset Formula $ε$
+\end_inset
+
+，
+都能够找到一个正数
+\begin_inset Formula $δ$
+\end_inset
+
+，
+当
+\begin_inset Formula $x$
+\end_inset
+
+满足
 \end_layout
 
 \begin_layout Standard
-0
+\begin_inset Formula ${\displaystyle 0<\mid x-a\mid<\delta}$
+\end_inset
+
+时，
+对于满足上式的
+\begin_inset Formula $x$
+\end_inset
+
+都有
+\begin_inset Formula ${\displaystyle 0<\mid f(x)-b\mid<\varepsilon}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-<∣
-\end_layout
+\begin_inset Formula $f(x)$
+\end_inset
 
-\begin_layout Standard
-x
-\end_layout
+无论距离
+\begin_inset Formula $b$
+\end_inset
 
-\begin_layout Standard
-−
-\end_layout
+有多近，
+它始终不是
+\begin_inset Formula $b$
+\end_inset
 
-\begin_layout Standard
-a
-\end_layout
-
-\begin_layout Standard
-∣<
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle 0<
-\backslash
-mid x-a
-\backslash
-mid <
-\backslash
-delta }时，
-对于满足上式的x都有
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-<∣
-\end_layout
-
-\begin_layout Standard
-f
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-b
-\end_layout
-
-\begin_layout Standard
-∣<
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle 0<
-\backslash
-mid f(x)-b
-\backslash
-mid <
-\backslash
-varepsilon }
-\end_layout
-
-\begin_layout Standard
-f(x)无论距离b有多近，
-它始终不是b，
+，
 在f(x)与b之间总是能找到一个数字（而不是无穷小），
-使这个数字与f(x)与b的差为ε。
-对于每个ε都存在一个大于零的δ，
-使得满足上式的x属于a±δ。
+使这个数字与
+\begin_inset Formula $f(x)$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+的差为
+\begin_inset Formula $ε$
+\end_inset
+
+。
+对于每个
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+都存在一个大于零的
+\begin_inset Formula $\delta$
+\end_inset
+
+，
+使得满足上式的
+\begin_inset Formula $x$
+\end_inset
+
+属于
+\begin_inset Formula $a\pm\delta$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-ε和δ都是确实存在的实数，
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+和 
+\begin_inset Formula $\delta$
+\end_inset
+
+都是确实存在的实数，
 利用他们都能取得任意一个很小的实数来明确定义了极限。
 
 \end_layout
 
 \begin_layout Standard
 当条件满足时，
-正数δ是依赖于ε的变量。
+正数
+\begin_inset Formula $\delta$
+\end_inset
+
+是依赖于
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+的变量。
 一般而言，
-对于ε，
-δ总是存在无数个，
+对于
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+，
+
+\begin_inset Formula $\delta$
+\end_inset
+
+总是存在无数个，
 我们只要找到其中一个就能说明他存在。
 比如
 \end_layout
 
 \begin_layout Standard
-lim
+\begin_inset Formula ${\displaystyle \lim_{x\to3}x^{2}=9}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-x
-\end_layout
+接下来我们用
+\begin_inset Formula $\varepsilon-\delta$
+\end_inset
 
-\begin_layout Standard
-→
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-2
-\end_layout
-
-\begin_layout Standard
-=
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle 
-\backslash
-lim _{x
-\backslash
-to 3}x^{2}=9}
-\end_layout
-
-\begin_layout Standard
-接下来我们用ε-δ语言考虑一下。
+语言考虑一下。
 如果我们对任何ε取
 \end_layout
 
 \begin_layout Standard
-δ
+\begin_inset Formula ${\displaystyle \delta={\sqrt{\varepsilon+9}}-3}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-=
-\end_layout
+\begin_inset Formula ${\displaystyle 0<|x-3|<\delta={\sqrt{\varepsilon+9}}-3}$
+\end_inset
 
-\begin_layout Standard
-ε
-\end_layout
 
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle 
-\backslash
-delta ={
-\backslash
-sqrt {
-\backslash
-varepsilon +9}}-3}
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-=
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle 0<|x-3|<
-\backslash
-delta ={
-\backslash
-sqrt {
-\backslash
-varepsilon +9}}-3}
 \end_layout
 
 \begin_layout Standard
@@ -31240,187 +31251,10 @@ varepsilon +9}}-3}
 \end_layout
 
 \begin_layout Standard
-|
-\end_layout
+\begin_inset Formula ${\displaystyle |x^{2}-9|=|x+3||x-3|<(\delta+6)\delta=({\sqrt{\varepsilon+9}}+3)({\sqrt{\varepsilon+9}}-3)=\varepsilon}$
+\end_inset
 
-\begin_layout Standard
-x
-\end_layout
 
-\begin_layout Standard
-2
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-=
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-6
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-=
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-(
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-+
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-)
-\end_layout
-
-\begin_layout Standard
-=
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle |x^{2}-9|=|x+3||x-3|<(
-\backslash
-delta +6)
-\backslash
-delta =({
-\backslash
-sqrt {
-\backslash
-varepsilon +9}}+3)({
-\backslash
-sqrt {
-\backslash
-varepsilon +9}}-3)=
-\backslash
-varepsilon }
 \end_layout
 
 \begin_layout Standard
@@ -31428,216 +31262,23 @@ varepsilon }
 \end_layout
 
 \begin_layout Standard
-∀
-\end_layout
+\begin_inset Formula ${\displaystyle ^{\forall}\varepsilon>0,\;{}^{\exists}\delta>0\;;\;x\in\mathbb{R}\;[0<|x-3|<\delta\Rightarrow|x^{2}-9|<\varepsilon]}$
+\end_inset
 
-\begin_layout Standard
-ε
-\end_layout
 
-\begin_layout Standard
->
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-,
-\end_layout
-
-\begin_layout Standard
-∃
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
->
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-;
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-∈
-\end_layout
-
-\begin_layout Standard
-R
-\end_layout
-
-\begin_layout Standard
-[
-\end_layout
-
-\begin_layout Standard
-0
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-δ
-\end_layout
-
-\begin_layout Standard
-⇒
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-2
-\end_layout
-
-\begin_layout Standard
-−
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-|
-\end_layout
-
-\begin_layout Standard
-<
-\end_layout
-
-\begin_layout Standard
-ε
-\end_layout
-
-\begin_layout Standard
-]
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle {}^{
-\backslash
-forall }
-\backslash
-varepsilon >0,
-\backslash
-;{}^{
-\backslash
-exists }
-\backslash
-delta >0
-\backslash
-;;
-\backslash
-;x
-\backslash
-in 
-\backslash
-mathbb {R} 
-\backslash
-;[0<|x-3|<
-\backslash
-delta 
-\backslash
-Rightarrow |x^{2}-9|<
-\backslash
-varepsilon ]}
 \end_layout
 
 \begin_layout Standard
 成立，
 利用ε-δ语言我们知道
-\end_layout
+\begin_inset Formula ${\displaystyle x\to3}$
+\end_inset
 
-\begin_layout Standard
-x
-\end_layout
+时
+\begin_inset Formula ${\displaystyle x^{2}\to9}$
+\end_inset
 
-\begin_layout Standard
-→
-\end_layout
 
-\begin_layout Standard
-3
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle x
-\backslash
-to 3}时
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-2
-\end_layout
-
-\begin_layout Standard
-→
-\end_layout
-
-\begin_layout Standard
-9
-\end_layout
-
-\begin_layout Standard
-{
-\backslash
-displaystyle x^{2}
-\backslash
-to 9}
 \end_layout
 
 \begin_layout Standard
@@ -31645,9 +31286,21 @@ to 9}
 status open
 
 \begin_layout Plain Layout
-其实ε 是"error"(误差)、δ 是"distance"(距离)的首字母。
+其实
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ 是"error"(误差)、
+\begin_inset Formula $\delta$
+\end_inset
+
+ 是"distance"(距离)的首字母。
 实际上，
-是柯西在他的著作中用ε来表示"error"的。
+是柯西在他的著作中用
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+来表示"error"的。
 
 \end_layout
 
