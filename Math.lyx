@@ -27942,7 +27942,11 @@ Leonhard Paul Euler,
 \end_layout
 
 \begin_layout Standard
-数列是一列两个以上按顺序排列的数,
+
+\series bold
+数列
+\series default
+是一列两个以上按顺序排列的数,
  所组成的序列,
  记为 
 \begin_inset Formula $\left\{ a_{n}\right\} $
@@ -27956,7 +27960,7 @@ Leonhard Paul Euler,
 \end_inset
 
  ,
-  其中 
+ 其中 
 \begin_inset Formula $n∈Z+$
 \end_inset
 
@@ -27966,38 +27970,48 @@ Leonhard Paul Euler,
 \end_inset
 
  是正整数集.
- 
+ 每一个数叫做
+\series bold
+项
+\series default
+，
+
+\begin_inset Formula $a_{n}$
+\end_inset
+
+第n项，
+
+\begin_inset Formula $\left\{ a_{k}\right\} _{k=1}^{n}$
+\end_inset
+
+一般叫做通项公式。
+
 \end_layout
 
 \begin_layout Paragraph
-单调性 
+
+\series bold
+通项公式
 \end_layout
 
 \begin_layout Standard
-若对所有 n ∈ Z+ ,
- an+1 ≥ an ,
- 则称数列 ⟨ak⟩ 为"递增数列”.
- 把 ≥ 换成 > ,
- 则称为"严格递增数列”.
-  若对所有 n ∈ Z+ ,
-  
-\begin_inset Formula $an+1\leqslant an$ 
-
+如果数列
+\begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- ,
- 则称数列 ⟨ak⟩ 为"递减数列”.
- 把 
-\begin_inset Formula ${\displaystyle \leqslant}$ 
-
+的第
+\begin_inset Formula $1$
 \end_inset
 
-换成 < ,
- 则称为"严格递减数列”.
-  若对所有 n ∈ Z+ ,
- an+1 = an ,
- 则称数列 ⟨ak⟩ 为"常数数列”.
-  
+项与序号
+\begin_inset Formula $n$
+\end_inset
+
+之间的关系可以用一个式子来表示,那么这个公式叫做这个数列的
+\series bold
+通项公式
+\series default
+,我们可以根据数列的通项公式算出数列的各项.
 \end_layout
 
 \begin_layout Paragraph
@@ -28029,35 +28043,117 @@ Leonhard Paul Euler,
 \end_inset
 
 为"无穷数列”.
-  
+ 
 \end_layout
 
 \begin_layout Paragraph
-收敛性
+单调性 
+\end_layout
+
+\begin_layout Standard
+若对所有 
+\begin_inset Formula $n\in Z^{+}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a_{n+1}\geqslant a_{n}$
+\end_inset
+
+,
+ 则称数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 为"递增数列”.
+ 把 
+\begin_inset Formula $\geqslant$
+\end_inset
+
+ 换成 
+\begin_inset Formula $>$
+\end_inset
+
+ ，
+则称为"严格递增数列”。
+
+\end_layout
+
+\begin_layout Standard
+若对所有
+\begin_inset Formula $n\in Z^{+}$
+\end_inset
+
+，
+
+\begin_inset Formula $a_{n+1}\leqslant a_{n}$
+\end_inset
+
+,
+ 则称数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 为"递减数列”.
+ 把 
+\begin_inset Formula \leqslant
+
+\end_inset
+
+换成 
+\begin_inset Formula $<$
+\end_inset
+
+ ，
+则称为"严格递减数列”。
+ 
+\end_layout
+
+\begin_layout Standard
+若对所有
+\begin_inset Formula $n\in Z^{+}$
+\end_inset
+
+ ,
+ 
+\begin_inset Formula $a_{n+1}=a_{n}$
+\end_inset
+
+ ,
+ 则称数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 为"常数数列”.
+ 
+\end_layout
+
+\begin_layout Paragraph
+收敛性（参考极限）
 \end_layout
 
 \begin_layout Standard
 对于含有无穷多项的数列
-\begin_inset Formula ${a_{k}}$
+\begin_inset Formula ${a_{n}}$
 \end_inset
 
-,
- 我们可以为其定义"数列的极限”为常数 
+，
+我们可以为其定义"数列的极限”为常数
 \begin_inset Formula $L$
 \end_inset
 
 :
  
-\begin_inset Formula ${\displaystyle L=\lim_{k\to\infty}a_{k}}$
+\begin_inset Formula ${\displaystyle L=\lim_{n\to\infty}a_{n}}$
 \end_inset
 
 .
  若上述极限存在,
  则称该数列是"收敛数列”,
- 且收敛于 L .
-  若上述极限不存在,
- 则称该数列为"发散数列”.
- 
+ 且收敛于L。
+若上述极限不存在，
+则称该数列为"发散数列”。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -28090,7 +28186,7 @@ Leonhard Paul Euler,
 \end_inset
 
 称为"上界”.
-  如果数列收敛,那么数列一定有界
+ 如果数列收敛,那么数列一定有界
 \end_layout
 
 \begin_layout Standard
@@ -28116,41 +28212,234 @@ Leonhard Paul Euler,
  
 \end_layout
 
-\begin_layout Paragraph
-
-\series bold
-通项公式
-\end_layout
-
-\begin_layout Standard
-如果数列
-\begin_inset Formula $\{a_{n}\}$
-\end_inset
-
-的第
-\begin_inset Formula $1$
-\end_inset
-
-项与序号
-\begin_inset Formula $n$
-\end_inset
-
-之间的关系可以用一个式子来表示,那么这个公式叫做这个数列的
-\series bold
-通项公式
-\series default
-,我们可以根据数列的通项公式算出数列的各项.
-\end_layout
-
 \begin_layout Section
+特殊数列
+\end_layout
+
+\begin_layout Subsection
 等差数列
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 等比数列
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+等比数列（Geometric Sequence）是指一种数列，
+其中从第二项起，
+每一项与前一项的比值是一个固定的常数，
+这个常数称为
+\series bold
+公比
+\series default
+Common Ratio）。
+ 
+\end_layout
+
+\begin_layout Standard
+等比数列的一般形式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a,ar,ar^{2},ar^{3},\dots,ar^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ 是首项；
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r$
+\end_inset
+
+ 是公比（
+\begin_inset Formula $r\neq0$
+\end_inset
+
+）；
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+ 是项数。
+
+\end_layout
+
+\begin_layout Subsubsection
+常用公式
+\end_layout
+
+\begin_layout Itemize
+第 
+\begin_inset Formula $n$
+\end_inset
+
+ 项公式
+\begin_inset Formula $a_{n}=a\cdot r^{n-1}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 是数列的第 
+\begin_inset Formula $n$
+\end_inset
+
+ 项。
+
+\end_layout
+
+\begin_layout Itemize
+前 
+\begin_inset Formula $n$
+\end_inset
+
+ 项和公式
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+当 
+\begin_inset Formula $r\neq1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $S_{n}=a\cdot\frac{1-r^{n}}{1-r}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+当 
+\begin_inset Formula $r=1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $S_{n}=n\cdot a$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Solution*
+设等比数列为：
+
+\begin_inset Formula $a,ar,ar^{2},ar^{3},\dots,ar^{n-1}$
+\end_inset
+
+，
+其中
+\begin_inset Formula $\ensuremath{a}$
+\end_inset
+
+为首项，
+
+\begin_inset Formula $r$
+\end_inset
+
+ 为公比，
+
+\begin_inset Formula $r\neq1$
+\end_inset
+
+。
+前 
+\begin_inset Formula $n$
+\end_inset
+
+ 项和
+\begin_inset Formula $S_{n}$
+\end_inset
+
+：
+
+\begin_inset Formula $S_{n}=a+ar+ar^{2}+ar^{3}+\dots+ar^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+将 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 乘以公比
+\begin_inset Formula $r$
+\end_inset
+
+：
+ 
+\begin_inset Formula $rS_{n}=ar+ar^{2}+ar^{3}+\dots+ar^{n-1}+ar^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+两式相减：
+
+\begin_inset Formula $S_{n}-rS_{n}=a-ar^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+提取公因式：
+
+\begin_inset Formula $S_{n}(1-r)=a(1-r^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution*
+解得：
+
+\begin_inset Formula $S_{n}=a\cdot\frac{1-r^{n}}{1-r},\quad r\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 斐波那契数列
 \end_layout
 
@@ -28232,17 +28521,17 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-对于数列 
+对于数列
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- ,
- 当
+，
+当
 \begin_inset Formula $n$
 \end_inset
 
 无限增大时,
- 如果 
+ 如果
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
@@ -28268,7 +28557,7 @@ literal "false"
  记为 
 \begin_inset Formula 
 \[
-lim(n\rightarrow\infty)\{a_{n}\}=A
+\underset{n\rightarrow\infty}{\lim}\{a_{n}\}=A
 \]
 
 \end_inset
@@ -28290,6 +28579,209 @@ lim(n\rightarrow\infty)\{a_{n}\}=A
 发散.
 \end_layout
 
+\begin_layout Standard
+用正式的逻辑语言来表示即
+\begin_inset Formula ${\displaystyle (\forall\epsilon>0)(\exists n\in\mathbb{N})(\forall i\in\mathbb{N})[\,(i>n)\Rightarrow(|z_{i}-z|<\epsilon)\,]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则称数列
+\begin_inset Formula $\{a_{i}\in\mathbb{C}\}_{i\in\mathbb{N}}$
+\end_inset
+
+收敛于
+\begin_inset Formula ${\displaystyle z}$
+\end_inset
+
+（convergent to 
+\begin_inset Formula ${\displaystyle z}$
+\end_inset
+
+ ），
+并记作
+\begin_inset Formula $\underset{i\rightarrow\infty}{\lim}\{z_{i}\}=z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+对于任意的正实数 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+我们总能找到一个正整数 
+\begin_inset Formula ${\displaystyle n\in\mathbb{N}}$
+\end_inset
+
+，
+使得对于所有满足
+\begin_inset Formula $i>n$
+\end_inset
+
+ 的项 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+，
+数列项
+\begin_inset Formula $\ensuremath{z_{i}}$
+\end_inset
+
+与极
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+限
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\ensuremath{z}$
+\end_inset
+
+ 的距离 
+\begin_inset Formula $|z_{i}-z|$
+\end_inset
+
+ 小于
+\begin_inset Formula $\epsilon$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\epsilon>0$
+\end_inset
+
+：
+对任意一个正的误差
+\begin_inset Formula $\epsilon$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall$
+\end_inset
+
+ 全称量词 “对于所有”或“任意”
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\exists n\in\mathbb{N}$
+\end_inset
+
+：
+存在一个正整数
+\begin_inset Formula $n$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\exists$
+\end_inset
+
+ 存在量词，
+读作“存在”或“至少有一个”
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall i\in\mathbb{N}$
+\end_inset
+
+：
+对所有的
+\begin_inset Formula $i$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(i>n)\Rightarrow(|z_{i}-z|<\epsilon)$
+\end_inset
+
+：
+如果
+\begin_inset Formula $\ensuremath{i}$
+\end_inset
+
+比
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+大，
+则
+\begin_inset Formula $\ensuremath{|z_{i}-z|}$
+\end_inset
+
+小于
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+复数
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 如果数列有极限,
  则数列的极限是唯一的.
@@ -28309,6 +28801,65 @@ lim(n\rightarrow\infty)\{a_{n}\}=A
 
 \begin_layout Enumerate
 保号性
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{n}{n+1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于等比数列
+\begin_inset Formula $a_{n}=a\cdot r^{n-1}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Enumerate
+如果 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $|r|=1$
+\end_inset
+
+，
+则数列极限为 
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $|r|=-1$
+\end_inset
+
+,无极限（交替发散）
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $|r|>1$
+\end_inset
+
+，
+则数列发散（趋向无穷大或负无穷大）
 \end_layout
 
 \begin_layout Chapter
