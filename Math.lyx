@@ -28803,8 +28803,92 @@ literal "false"
 保号性
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 \begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{n}{n+1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+根据极限的定义，
+我们需要证明：
+ 
+\end_layout
+
+\begin_layout Proof
+对于任意 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+存在一个正整数
+\begin_inset Formula $N$
+\end_inset
+
+，
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+ 时，
+满足：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left|\frac{n}{n+1}-1\right|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即，
+任
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+
+\begin_inset Formula $|x_{n}-a|=|\frac{n}{n+1}-1|=|\frac{-1}{n+1}|=\frac{1}{n+1}<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+只需证明
+\begin_inset Formula $\frac{1}{n+1}<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\frac{1}{n+1}<\epsilon\Rightarrow n+1>\frac{1}{\epsilon}\Rightarrow n>\frac{1}{\epsilon}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $N=\lceil\frac{1}{\epsilon}-1\rceil$
+\end_inset
+
+，
+则对于所有
+\begin_inset Formula $n>N$
+\end_inset
+
+，
+我们有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $n+1>\frac{1}{\epsilon}\quad\Rightarrow\quad\frac{1}{n+1}<\epsilon$
 \end_inset
 
 
