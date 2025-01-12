@@ -28581,7 +28581,7 @@ literal "false"
 
 \begin_layout Standard
 用正式的逻辑语言来表示即
-\begin_inset Formula ${\displaystyle (\forall\epsilon>0)(\exists n\in\mathbb{N})(\forall i\in\mathbb{N})[\,(i>n)\Rightarrow(|z_{i}-z|<\epsilon)\,]}$
+\begin_inset Formula ${\displaystyle (\forall\epsilon>0)(\exists n\in\mathbb{N})(\forall i\in\mathbb{N})[\,(i>N)\Rightarrow(|z_{i}-z|<\epsilon)\,]}$
 \end_inset
 
 
@@ -28784,8 +28784,8 @@ literal "false"
 \end_deeper
 \begin_layout Enumerate
 如果数列有极限,
- 则数列的极限是唯一的.
- 
+ 则数列的极限是唯一的。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -28796,7 +28796,7 @@ literal "false"
 \end_inset
 
 .
-  
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -28862,10 +28862,8 @@ literal "false"
 \begin_inset Formula $\frac{1}{n+1}<\epsilon$
 \end_inset
 
+，
 
-\end_layout
-
-\begin_layout Proof
 \begin_inset Formula $\frac{1}{n+1}<\epsilon\Rightarrow n+1>\frac{1}{\epsilon}\Rightarrow n>\frac{1}{\epsilon}-1$
 \end_inset
 
@@ -28874,7 +28872,7 @@ literal "false"
 
 \begin_layout Proof
 设
-\begin_inset Formula $N=\lceil\frac{1}{\epsilon}-1\rceil$
+\begin_inset Formula $N=\lceil|\frac{1}{\epsilon}-1|\rceil+1$
 \end_inset
 
 ，
@@ -28885,6 +28883,12 @@ literal "false"
 ，
 我们有：
 
+\begin_inset Formula $n>N$
+\end_inset
+
+。
+即，
+
 \end_layout
 
 \begin_layout Proof
@@ -28894,7 +28898,328 @@ literal "false"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+\begin_inset Formula $|Q|<1$
+\end_inset
+
+,
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}Q^{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+证明
+\begin_inset Formula $\lim_{n\to\infty}Q^{n}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $Q=0$
+\end_inset
+
+,
+\begin_inset Formula $0^{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+根据极限的定义，
+要证明：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\forall\epsilon>0,\exists N\in\mathbb{N},\forall n>N,\,|Q^{n}|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+化简
+\begin_inset Formula $|Q^{n}|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由
+\begin_inset Formula $Q^{n}$
+\end_inset
+
+ 的绝对值性质：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|Q^{n}|=|Q|^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $|Q|=r$
+\end_inset
+
+，
+其中
+\begin_inset Formula $r<1$
+\end_inset
+
+，
+于是：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|Q^{n}|=r^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $r<1$
+\end_inset
+
+，
+
+\begin_inset Formula $r^{n}$
+\end_inset
+
+ 是一个严格递减的数列，
+并且随着
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+，
+
+\begin_inset Formula $r^{n}$
+\end_inset
+
+ 越来越小。
+
+\end_layout
+
+\begin_layout Proof
+我们需要找到 
+\begin_inset Formula $\ensuremath{N}$
+\end_inset
+
+使得当 
+\begin_inset Formula $n>N$
+\end_inset
+
+ 时：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+r^{n}<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对不等式
+\begin_inset Formula $\ensuremath{r^{n}<\epsilon}$
+\end_inset
+
+两边取对数：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\ln(r^{n})<\ln(\epsilon)\quad\text{（注意：\ensuremath{r<1}，所以 \ensuremath{\ln(r)<0}）}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+化简：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+n\ln(r)<\ln(\epsilon)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+将 
+\begin_inset Formula $\ln(r)$
+\end_inset
+
+ 移到右边，
+注意 
+\begin_inset Formula $\ln(r)<0$
+\end_inset
+
+，
+需要反转不等号：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+n>\frac{\ln(\epsilon)}{\ln(r)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+N=\left\lceil \frac{\ln(\epsilon)}{\ln(r)}\right\rceil +1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当 
+\begin_inset Formula $n>N$
+\end_inset
+
+ 时，
+有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+r^{n}<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $a>0$
+\end_inset
+
+,
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}\frac{1}{n^{a}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall\epsilon>0$
+\end_inset
+
+,
+\begin_inset Formula $|\frac{1}{n^{a}}-0|<\epsilon$
+\end_inset
+
+,
+\begin_inset Formula $\frac{1}{n^{a}}<\epsilon$
+\end_inset
+
+,
+\begin_inset Formula $n^{a}>\frac{1}{\epsilon}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(
+\begin_inset Formula $n^{a})^{\frac{1}{a}}>(\frac{1}{\epsilon})^{\frac{1}{a}}$
+\end_inset
+
+,
+\begin_inset Formula $n>(\frac{1}{\epsilon})^{\frac{1}{a}}$
+\end_inset
+
+,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $N=\left\lceil (\frac{1}{\epsilon})^{\frac{1}{a}}\right\rceil +1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+时,
+\begin_inset Formula $|\frac{1}{n^{a}}-0|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
 对于等比数列
 \begin_inset Formula $a_{n}=a\cdot r^{n-1}$
 \end_inset
@@ -28903,7 +29228,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Corollary
 如果 
 \begin_inset Formula $|r|<1$
 \end_inset
@@ -28916,7 +29241,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Corollary
 如果
 \begin_inset Formula $|r|=1$
 \end_inset
@@ -28929,7 +29254,7 @@ literal "false"
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Corollary
 如果
 \begin_inset Formula $|r|=-1$
 \end_inset
@@ -28937,13 +29262,1104 @@ literal "false"
 ,无极限（交替发散）
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Corollary
 如果
 \begin_inset Formula $|r|>1$
 \end_inset
 
 ，
 则数列发散（趋向无穷大或负无穷大）
+\end_layout
+
+\begin_layout Subsection
+数列极限的性质
+\end_layout
+
+\begin_layout Subsubsection
+极限唯一性 
+\end_layout
+
+\begin_layout Standard
+若数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 收敛，
+则它的极限唯一：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}a_{n}=L\quad\text{且}\quad\lim_{n\to\infty}a_{n}=M\implies L=M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+假设数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+收敛，
+且存在两个极限
+\begin_inset Formula $\ensuremath{L_{1}}$
+\end_inset
+
+和 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Proof
+根据数列极限的定义：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\forall\epsilon>0,\exists N_{1}\in\mathbb{N},\forall n>N_{1},|a_{n}-L_{1}|<\frac{\epsilon}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\forall\epsilon>0,\exists N_{2}\in\mathbb{N},\forall n>N_{2},|a_{n}-L_{2}|<\frac{\epsilon}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取 
+\begin_inset Formula $N=\max(N_{1},N_{2})$
+\end_inset
+
+。
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+ 时，
+同时满足：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|a_{n}-L_{1}|<\frac{\epsilon}{2},\quad|a_{n}-L_{2}|<\frac{\epsilon}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+利用不等式三角运算法则，
+考虑
+\begin_inset Formula $|L_{1}-L_{2}|$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+|L_{1}-L_{2}| & =|(a_{n}-L_{2})-(a_{n}-L_{1})|=\\
+= & |L_{1}-a_{n}+a_{n}-L_{2}|\leq|L_{1}-a_{n}|+|a_{n}-L_{2}|
+\end{align*}
+
+\end_inset
+
+根据前述条件，
+当 
+\begin_inset Formula $\ensuremath{n>N}$
+\end_inset
+
+时，
+有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|L_{1}-L_{2}|\leq|L_{1}-a_{n}|+|a_{n}-L_{2}|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon
+\]
+
+\end_inset
+
+因为
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ 是任意的，
+所以
+\begin_inset Formula $|L_{1}-L_{2}|\leqslant\epsilon$
+\end_inset
+
+ 对所有
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ 成立。
+这意味着：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|L_{1}-L_{2}|=0
+\]
+
+\end_inset
+
+于是，
+得出结论：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+L_{1}=L_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+反证法
+\end_layout
+
+\begin_layout Example
+数列
+\begin_inset Formula $x_{n}=(-1)^{n+1}(n=1,2,\cdots)$
+\end_inset
+
+是发散的。
+
+\end_layout
+
+\begin_layout Proof
+一个数列
+\begin_inset Formula $\ensuremath{\{x_{n}\}}$
+\end_inset
+
+如果不收敛于任何有限值
+\begin_inset Formula $L$
+\end_inset
+
+，
+则称它是发散的。
+要证明 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ 发散，
+可以证明不存在一个
+\begin_inset Formula $\ensuremath{L}$
+\end_inset
+
+满足以下条件：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\forall\epsilon>0,\exists N\in\mathbb{N},\forall n>N,|x_{n}-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+给定数列为：
+
+\begin_inset Formula 
+\[
+x_{n}=(-1)^{n+1},\quad n=1,2,\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这个数列的项依次是：
+
+\begin_inset Formula 
+\[
+x_{1}=1,\,x_{2}=-1,\,x_{3}=1,\,x_{4}=-1,\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因此，
+
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ 在奇数项时取值为
+\begin_inset Formula $1$
+\end_inset
+
+，
+在偶数项时取值为
+\begin_inset Formula $-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+反证，
+假设收敛：
+ 
+\end_layout
+
+\begin_layout Proof
+假设数列 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ 收敛于某个有限值 
+\begin_inset Formula $L$
+\end_inset
+
+。
+根据数列极限的定义，
+对于任意 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+存在正整数
+\begin_inset Formula $N$
+\end_inset
+
+，
+使得当
+\begin_inset Formula $\ensuremath{n>N}$
+\end_inset
+
+时：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x_{n}-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当 
+\begin_inset Formula $n=2k-1$
+\end_inset
+
+（奇数项）时，
+
+\begin_inset Formula $x_{n}=1$
+\end_inset
+
+。
+此时：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x_{n}-L|=|1-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $n=2k$
+\end_inset
+
+（偶数项）时，
+
+\begin_inset Formula $x_{n}=-1$
+\end_inset
+
+。
+此时：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x_{n}-L|=|-1-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因此，
+
+\begin_inset Formula $L$
+\end_inset
+
+ 必须同时满足：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|1-L|<\epsilon\quad\text{和}\quad|-1-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+将这两个不等式写展开：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+-\epsilon<1-L<\epsilon\quad\implies\quad L\in(1-\epsilon,1+\epsilon)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+-\epsilon<-1-L<\epsilon\quad\implies\quad L\in(-1-\epsilon,-1+\epsilon)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这表明 
+\begin_inset Formula $L$
+\end_inset
+
+ 必须同时属于两个不相交的区间 
+\begin_inset Formula $\ensuremath{(1-\epsilon,1+\epsilon)}$
+\end_inset
+
+和 
+\begin_inset Formula $(-1-\epsilon,-1+\epsilon)$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Proof
+由于这两个区间不相交，
+矛盾出现。
+
+\end_layout
+
+\begin_layout Subsubsection
+有界性
+\end_layout
+
+\begin_layout Standard
+如果数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+收敛，
+则它是有界的：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{若}\lim_{n\to\infty}a_{n}=L\quad\text{则存在}M>0\quad\text{使得}|a_{n}|\leq M,\forall n\in\mathbb{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+数列为
+\begin_inset Formula $x_{n}$
+\end_inset
+
+收敛，
+设
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\underset{n\to\infty}{\lim}x_{n}=L$
+\end_inset
+
+.根据数列极限的定义，
+对于
+\begin_inset Formula $\epsilon=1$
+\end_inset
+
+,
+\begin_inset Formula $\exists$
+\end_inset
+
+正整数
+\begin_inset Formula $N$
+\end_inset
+
+，
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+时，
+不等式
+\begin_inset Formula 
+\[
+|x_{n}-L|<1
+\]
+
+\end_inset
+
+都成立。
+于是，
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+时，
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x_{n}|=|(x_{n}-L)+L|\leqslant|x_{n}-L|+|L|<1+|L|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取
+\begin_inset Formula $M=max\{|x_{1}|,\cdots,1+|L|\}$
+\end_inset
+
+,数列中的任意
+\begin_inset Formula $x_{n}$
+\end_inset
+
+都小于
+\begin_inset Formula $M$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+如果数列收敛，
+则一定有界。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{n}=(-1)^{n+1}(n=1,2,\cdots)$
+\end_inset
+
+有界，
+但不收敛。
+
+\end_layout
+
+\begin_layout Subsubsection
+收敛数列的保号性
+\end_layout
+
+\begin_layout Theorem
+若数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+收敛于极限
+\begin_inset Formula $L$
+\end_inset
+
+，
+即 
+\begin_inset Formula $\underset{n\to\infty}{\lim}a_{n}=L$
+\end_inset
+
+，
+且
+\begin_inset Formula $L>0$
+\end_inset
+
+，
+ 那么存在 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+，
+使得对所有
+\begin_inset Formula $n>N$
+\end_inset
+
+，
+都有
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Theorem
+类似地，
+若
+\begin_inset Formula $L<0$
+\end_inset
+
+，
+有
+\begin_inset Formula $a_{n}<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+以
+\begin_inset Formula $L\geq0$
+\end_inset
+
+为例，
+设
+\begin_inset Formula $\epsilon=\frac{L}{2}>0$
+\end_inset
+
+,存在正整数
+\begin_inset Formula $N$
+\end_inset
+
+，
+当
+\begin_inset Formula $n>N$
+\end_inset
+
+时，
+有
+\begin_inset Formula 
+\[
+|a_{n}-L|<\frac{L}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $a_{n}>L-\frac{L}{2}>\frac{L}{2}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+如果数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+从某项起，
+有
+\begin_inset Formula $a_{n}\geqslant0$
+\end_inset
+
+(或
+\begin_inset Formula $a_{n}\leqslant0$
+\end_inset
+
+)，
+且
+\begin_inset Formula $\underset{n\to\infty}{\lim}a_{n}=L$
+\end_inset
+
+，
+那么
+\begin_inset Formula $L\geqslant0$
+\end_inset
+
+(或
+\begin_inset Formula $L\leqslant0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Theorem
+如果数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+收敛于极限
+\begin_inset Formula $L$
+\end_inset
+
+，
+那么它的任一子序列也收敛于
+\begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+如果一个数列能找到一个子数列不收敛，
+那么原数列也不收敛.
+\end_layout
+
+\begin_layout Corollary
+如果找到两个子数列，
+虽然都收敛，
+但是极限不相同，
+则原数列也是发散的。
+
+\end_layout
+
+\begin_layout Corollary
+原数列收敛的充分必要条件是，
+奇数项和偶数项的子数列都收敛且极限相同。
+
+\end_layout
+
+\begin_layout Subsubsection
+四则运算规则
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=A$
+\end_inset
+
+ 且 
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=B$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Standard
+和与差
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}(a_{n}+b_{n})=A+B,\quad\lim_{n\to\infty}(a_{n}-b_{n})=A-B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+积 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}(a_{n}\cdot b_{n})=A\cdot B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+商（B ≠ 0） 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{a_{n}}{b_{n}}=\frac{A}{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+保序性
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=A$
+\end_inset
+
+，
+
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=B$
+\end_inset
+
+，
+且从某项开始总有
+\begin_inset Formula $a_{n}\leq b_{n}$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A\leq B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+夹逼准则
+\end_layout
+
+\begin_layout Standard
+若存在数列 
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 和
+\begin_inset Formula $\{b_{n}\}$
+\end_inset
+
+，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}\leq c_{n}\leq b_{n}\quad(\forall n\geq N)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+且：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}a_{n}=\lim_{n\to\infty}b_{n}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}c_{n}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+单调有界收敛定理
+\end_layout
+
+\begin_layout Standard
+若数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+单调递增且有界，
+则它必收敛：
+
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}a_{n}=L,\quad L\in\mathbb{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+类似地，
+若数列单调递减且有界，
+则也必收敛。
+
+\end_layout
+
+\begin_layout Subsubsection
+无穷小与无穷大的关系
+\end_layout
+
+\begin_layout Enumerate
+若 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=0$
+\end_inset
+
+，
+则称
+\begin_inset Formula $\{a_{n}\}$
+\end_inset
+
+ 为
+\series bold
+无穷小量
+\series default
+。
+
+\end_layout
+
+\begin_layout Enumerate
+若 
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=\infty$
+\end_inset
+
+，
+则称
+\begin_inset Formula $\{b_{n}\}$
+\end_inset
+
+ 为
+\series bold
+无穷大量
+\series default
+。
+
+\end_layout
+
+\begin_layout Enumerate
+如果
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+是无穷小量且
+\begin_inset Formula $\ensuremath{\{b_{n}\}}$
+\end_inset
+
+有界，
+则：
+
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}(a_{n}\cdot b_{n})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+极限乘法性质（无穷小与常量）**
+\end_layout
+
+\begin_layout Standard
+若
+\begin_inset Formula $\ensuremath{\lim_{n\to\infty}a_{n}=0}$
+\end_inset
+
+且
+\begin_inset Formula $\ensuremath{C}$
+\end_inset
+
+为常数，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}(C\cdot a_{n})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+趋于无穷大的数列极限规则
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $a_{n}>0$
+\end_inset
+
+ 且 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{n\to\infty}\frac{1}{a_{n}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对于任意 
+\begin_inset Formula $k>0$
+\end_inset
+
+，
+有：
+
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{a_{n}^{k}}{n^{k}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+复合极限规则
+\end_layout
+
+\begin_layout Standard
+若数列
+\begin_inset Formula $\ensuremath{\{a_{n}\}}$
+\end_inset
+
+收敛于
+\begin_inset Formula $A$
+\end_inset
+
+，
+且函数 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $x=A$
+\end_inset
+
+ 处连续，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}f(a_{n})=f(A)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
