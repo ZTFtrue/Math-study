@@ -33077,11 +33077,17 @@ status open
 \end_layout
 
 \begin_layout Paragraph
-ε-δ语言
+\begin_inset Formula $\varepsilon-\delta$
+\end_inset
+
+语言
 \end_layout
 
 \begin_layout Standard
-ε-δ语言是由魏尔施特拉斯在1860年代发明的，
+\begin_inset Formula $\varepsilon-\delta$
+\end_inset
+
+语言是由魏尔施特拉斯在1860年代发明的，
 根据它就可以在不使用无限小和无限大的概念的情况下定义收敛性和连续性。
 
 \end_layout
@@ -33193,7 +33199,15 @@ status open
 \end_inset
 
 ，
-在f(x)与b之间总是能找到一个数字（而不是无穷小），
+在
+\begin_inset Formula $f(x)$
+\end_inset
+
+与
+\begin_inset Formula $b$
+\end_inset
+
+之间总是能找到一个数字（而不是无穷小），
 使这个数字与
 \begin_inset Formula $f(x)$
 \end_inset
@@ -33267,66 +33281,217 @@ status open
 比如
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+证明
 \begin_inset Formula ${\displaystyle \lim_{x\to3}x^{2}=9}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-接下来我们用
-\begin_inset Formula $\varepsilon-\delta$
+\begin_layout Proof
+根据极限的
+\begin_inset Formula $\ensuremath{\varepsilon-\delta}$
 \end_inset
 
-语言考虑一下。
-如果我们对任何ε取
+定义，
+我们需要证明：
+ 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \delta={\sqrt{\varepsilon+9}}-3}$
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\forall\varepsilon>0,\exists\delta>0,\text{使得当 }0<|x-3|<\delta\text{ 时，}|x^{2}-9|<\varepsilon
+\]
+
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle 0<|x-3|<\delta={\sqrt{\varepsilon+9}}-3}$
+ 分析
+\begin_inset Formula $|x^{2}-9|$
 \end_inset
 
+,
+ 展开表达式：
 
 \end_layout
 
-\begin_layout Standard
-则有
-\end_layout
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x^{2}-9|=|x-3||x+3|
+\]
 
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle |x^{2}-9|=|x+3||x-3|<(\delta+6)\delta=({\sqrt{\varepsilon+9}}+3)({\sqrt{\varepsilon+9}}-3)=\varepsilon}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-因此
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle ^{\forall}\varepsilon>0,\;{}^{\exists}\delta>0\;;\;x\in\mathbb{R}\;[0<|x-3|<\delta\Rightarrow|x^{2}-9|<\varepsilon]}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-成立，
-利用ε-δ语言我们知道
-\begin_inset Formula ${\displaystyle x\to3}$
+\begin_layout Proof
+当
+\begin_inset Formula $\ensuremath{x}$
 \end_inset
 
-时
-\begin_inset Formula ${\displaystyle x^{2}\to9}$
+足够接近
+\begin_inset Formula $\ensuremath{3}$
+\end_inset
+
+时，
+
+\begin_inset Formula $\ensuremath{|x+3|}$
+\end_inset
+
+也足够接近
+\begin_inset Formula $6$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+为了简化不等式，
+假设 
+\begin_inset Formula $|x-3|<1$
+\end_inset
+
+，
+这意味着：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x-3|<1\implies2<x<4\implies5<x+3<7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+所以：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x+3|<7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+从
+\begin_inset Formula $|x^{2}-9|=|x-3||x+3|$
+\end_inset
+
+，
+我们希望：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x-3||x+3|<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于我们已经限制了
+\begin_inset Formula $|x+3|<7$
+\end_inset
+
+，
+只需保证：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x-3|\cdot7<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x-3|<\frac{\varepsilon}{7}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $\delta=\min\left(1,\frac{\varepsilon}{7}\right)$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Proof
+当 
+\begin_inset Formula $0<|x-3|<\delta$
+\end_inset
+
+ 时：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x-3|<\frac{\varepsilon}{7}\quad\text{且}\quad|x+3|<7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因此：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+|x^{2}-9|=|x-3||x+3|<\frac{\varepsilon}{7}\cdot7=\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
