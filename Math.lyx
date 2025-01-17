@@ -31550,7 +31550,184 @@ status open
 \begin_inset Formula $y=f(x)$
 \end_inset
 
-的单调区间,
+的单调区间。
+
+\end_layout
+
+\begin_layout Example
+不等式取对数的算法其实就是
+\series bold
+ 对数函数的单调性
+\series default
+ 在不等式中的应用。
+它的核心原理是：
+ 
+\end_layout
+
+\begin_layout Example
+如果
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+是一个严格单调递增的函数（如
+\begin_inset Formula $\ensuremath{\log_{a}x}$
+\end_inset
+
+当 
+\begin_inset Formula $\ensuremath{a>1}）$
+\end_inset
+
+，
+那么：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}>\log_{a}x_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是一个严格单调递减的函数（如
+\begin_inset Formula $\log_{a}x$
+\end_inset
+
+ 当
+\begin_inset Formula $\ensuremath{0<a<1}$
+\end_inset
+
+），
+那么：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+不等式取对数的一般方法 
+\end_layout
+
+\begin_layout Example
+算法步骤
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+确保不等式两边都是正数 （因为对数函数只对正数定义）。
+
+\end_layout
+
+\begin_layout Itemize
+根据底数
+\begin_inset Formula $\ensuremath{a}$
+\end_inset
+
+选择合适的对数：
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+如果 
+\begin_inset Formula $a>1$
+\end_inset
+
+，
+如
+\begin_inset Formula $\log_{2}$
+\end_inset
+
+、
+\begin_inset Formula $\ln$
+\end_inset
+
+（自然对数），
+不等式方向保持不变。
+
+\end_layout
+
+\begin_layout Example
+如果
+\begin_inset Formula $0<a<1$
+\end_inset
+
+，
+如
+\begin_inset Formula $\log_{1/2}$
+\end_inset
+
+，
+不等式方向翻转。
+
+\end_layout
+
+\begin_layout Example
+应用对数公式，
+把指数或乘法变成加法或线性表达式。
+ 
+\end_layout
+
+\begin_layout Example
+不等式取对数的用途 
+\end_layout
+
+\begin_layout Example
+1.
+ 解指数不等式（如
+\begin_inset Formula $a^{x}>b$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 解对数不等式（如 
+\begin_inset Formula $\log_{a}(x)>b$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Example
+3.
+ 简化复杂的乘法和幂运算（如
+\begin_inset Formula $x^{n}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Example
+4.
+ 分析算法的时间复杂度（如
+\begin_inset Formula $O(2^{n})$
+\end_inset
+
+ 复杂度求解）。
+
 \end_layout
 
 \begin_layout Subsection
@@ -33608,7 +33785,15 @@ status open
 与无穷大的关系
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subparagraph
+正无穷大
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
 对于函数
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -33643,6 +33828,98 @@ status open
 f(x)\rightarrow A（x\rightarrow+\infty)
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\exists a,\forall\varepsilon>0$
+\end_inset
+
+,
+\begin_inset Formula $\exists X$
+\end_inset
+
+,
+\begin_inset Formula $x>X$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $|f(x)-a|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}f(\frac{1}{2})^{x}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\forall\varepsilon>0$
+\end_inset
+
+,要使
+\begin_inset Formula $|f(x)-0|<\epsilon$
+\end_inset
+
+,
+ 都有
+\begin_inset Formula $(\frac{1}{2})^{x}<\epsilon$
+\end_inset
+
+,
+\begin_inset Formula $1^{x}\div2^{x}<\epsilon$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{1}{\epsilon}<2^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对两侧取对数，
+这样指数 
+\begin_inset Formula $x$
+\end_inset
+
+ 会变成一个线性表达式：
+
+\begin_inset Formula $x\lg^{2}>\lg^{\frac{1}{\epsilon}}$
+\end_inset
+
+ ,
+\begin_inset Formula $x>\frac{\lg^{\frac{1}{\epsilon}}}{\lg^{2}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $X=\frac{\lg^{\frac{1}{\epsilon}}}{\lg^{2}}$
+\end_inset
+
+,
+ 当
+\begin_inset Formula $x>X$
+\end_inset
+
+时
+\begin_inset Formula $|f(x)-0|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+负无穷大
+\begin_inset Formula $-\infty$
 \end_inset
 
 
@@ -33687,6 +33964,26 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 
 \end_layout
 
+\begin_layout Definition
+\begin_inset Formula $\exists a,\forall\varepsilon>0$
+\end_inset
+
+,
+\begin_inset Formula $\exists X(>0)$
+\end_inset
+
+,
+\begin_inset Formula $x<-X$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $|f(x)-a|<\epsilon$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 例如,
 \begin_inset Formula $\underset{x\rightarrow-\infty}{\lim}\frac{5}{x}=0$
@@ -33694,6 +33991,10 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 
 .
  
+\end_layout
+
+\begin_layout Paragraph
+无穷大
 \end_layout
 
 \begin_layout Definition
@@ -33759,7 +34060,11 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 \begin_inset Formula $y=\frac{(x+1)}{x}$
 \end_inset
 
-的x 无限增大极限为1,
+的
+\begin_inset Formula $x$
+\end_inset
+
+无限增大极限为1,
  而
 \begin_inset Formula $y=(\frac{1}{2})^{x}$
 \end_inset
@@ -33822,6 +34127,26 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 
 \end_layout
 
+\begin_layout Definition
+\begin_inset Formula $\exists a,\forall\varepsilon>0$
+\end_inset
+
+,
+\begin_inset Formula $\exists X>0$
+\end_inset
+
+,
+\begin_inset Formula $|x|>X$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $|f(x)-a|<\epsilon$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 当
 \begin_inset Formula $x\rightarrow x_{0}$
@@ -33840,7 +34165,11 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 \begin_inset Formula $x\rightarrow x_{0}$
 \end_inset
 
-时,
+(函数在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处可以无定义)时,
  相应的函数值
 \begin_inset Formula $f(x)$
 \end_inset
@@ -33871,6 +34200,220 @@ f(x)\rightarrow A(x\rightarrow-\infty)
 \begin_inset Formula 
 \[
 f(x)\rightarrow A（x\rightarrow x_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\exists a,\forall\varepsilon>0$
+\end_inset
+
+,
+\begin_inset Formula $\exists\delta>0$
+\end_inset
+
+,
+\begin_inset Formula $|x|>X$
+\end_inset
+
+ 时，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $0<|x-x_{0}|<\delta$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (
+\begin_inset Formula $x$
+\end_inset
+
+趋于
+\begin_inset Formula $x_{0}$
+\end_inset
+
+,
+\begin_inset Formula $x\neq0$
+\end_inset
+
+)，
+
+\begin_inset Formula $|f(x)-a|<\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}(2x+1)=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于任意 
+\begin_inset Formula $\ensuremath{\varepsilon>0}$
+\end_inset
+
+，
+找到一个
+\begin_inset Formula $\delta>0$
+\end_inset
+
+，
+使得当满足：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+0<|x-1|<\delta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+时，
+也满足：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+|(2x+1)-3|<\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+首先化简左侧：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $|(2x+1)-3|=|2x+1-3|=|2x-2|=|2(x-1)|=2|x-1|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们希望：
+
+\begin_inset Formula $2|x-1|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果让：
+
+\begin_inset Formula $\delta=\frac{\varepsilon}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+那么当
+\begin_inset Formula $\ensuremath{0<|x-1|<\delta}$
+\end_inset
+
+时，
+有：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2|x-1|<2\delta=2\times\frac{\varepsilon}{2}=\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这就证明了：
+
+\begin_inset Formula $|(2x+1)-3|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+选取：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\delta=\frac{\varepsilon}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+可以保证当 
+\begin_inset Formula $0<|x-1|<\delta$
+\end_inset
+
+ 时，
+满足
+\begin_inset Formula $|(2x+1)-3|<\varepsilon$
+\end_inset
+
+，
+从而证明了：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim\limits_{x\to1}(2x+1)=3
 \]
 
 \end_inset
@@ -33918,7 +34461,7 @@ f(x)\rightarrow A（x\rightarrow x_{0})
  记为
 \begin_inset Formula 
 \[
-\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=A\text{ }\text{(}\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=A\text{)}
+\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=A\text{ }\text{(}\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=A\text{)}
 \]
 
 \end_inset
@@ -33955,11 +34498,169 @@ f(x)\rightarrow A（x\rightarrow x_{0})
  即
 \begin_inset Formula 
 \[
-\underset{x\rightarrow x_{0}}{\lim}f(x)=A\Longleftrightarrow\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=A
+\underset{x\rightarrow x_{0}}{\lim}f(x)=A\Longleftrightarrow\underset{x\rightarrow x_{0}^{-}}{\lim}f(x)=\underset{x\rightarrow x_{0}^{+}}{\lim}f(x)=A
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Paragraph
+函数极限性质
+\end_layout
+
+\begin_layout Itemize
+唯一性 极限如果存在，
+则唯一
+\end_layout
+
+\begin_layout Itemize
+局部性 只依赖于 
+\begin_inset Formula $x$
+\end_inset
+
+ 附近的值，
+不考虑 
+\begin_inset Formula $x=a$
+\end_inset
+
+ 本身
+\end_layout
+
+\begin_layout Itemize
+保号性 如果
+\begin_inset Formula $f(x)≥g(x)$
+\end_inset
+
+，
+则 
+\begin_inset Formula $limf(x)≥limg(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underset{x\rightarrow x_{0}}{\lim}f(x)=A$
+\end_inset
+
+，
+的充分必要条件
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+,任意
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+,
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}x_{n}\rightarrow x_{0}$
+\end_inset
+
+，
+则
+\begin_inset Formula $\underset{x\rightarrow x_{0}}{\lim}f(x)=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\sin\frac{1}{x}$
+\end_inset
+
+极限不存在
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $x_{n}=\frac{2}{(2n+1)\pi}$
+\end_inset
+
+，
+则
+\begin_inset Formula $\frac{1}{x_{n}}=\frac{(2n+1)\pi}{2}$
+\end_inset
+
+，
+满足：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sin\frac{1}{x_{n}}=\sin\frac{(2n+1)\pi}{2}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+即在
+\begin_inset Formula $\ensuremath{x_{n}}$
+\end_inset
+
+处，
+函数值趋向 1。
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $y_{n}=\frac{2}{(2n+2)\pi}$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\frac{1}{y_{n}}=\frac{(2n+2)\pi}{2}$
+\end_inset
+
+，
+满足：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sin\frac{1}{y_{n}}=\sin\frac{(2n+2)\pi}{2}=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+即在
+\begin_inset Formula $\ensuremath{y_{n}}$
+\end_inset
+
+处，
+函数值趋向
+\begin_inset Formula $-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+函数值在不同点处振荡到不同的极限值（
+\begin_inset Formula $1$
+\end_inset
+
+ 或 
+\begin_inset Formula $-1$
+\end_inset
+
+），
+不收敛到一个固定的数 ，
+因此极限不存在。
 
 \end_layout
 
@@ -34000,12 +34701,20 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_layout
 
 \begin_layout Enumerate
-无穷大是极限不存在的一种情形,
+无穷大是
+\series bold
+极限不存
+\series default
+在的一种情形,
  
 \begin_inset Formula $\lim f(x)=\infty$
 \end_inset
 
-只是借用极限记号,
+只是借用
+\series bold
+极限记号
+\series default
+,
  并不表示极限存在.
 \end_layout
 
@@ -34033,6 +34742,63 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Enumerate
+无穷相加结果：
+0，
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $+\infty$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $-\infty$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -34260,7 +35026,7 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_layout
 
 \begin_layout Standard
-几组重要的无穷小的等价关系:>>>>>>> 59f1dd4cd84964a7bcecd1d8b468a1c8c5d26c5b
+几组重要的无穷小的等价关系:
 \end_layout
 
 \begin_layout Standard
@@ -34326,7 +35092,7 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $\lim\frac{1}{f(x)}=0$
 \end_inset
 
-;反之,
+ (同一变化过程);反之,
  若
 \begin_inset Formula $limf(x)=0$
 \end_inset
@@ -34370,6 +35136,13 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 
 \begin_layout Proof
 设
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{sin(x)}{x}=\underset{x\rightarrow\infty}{\lim}(\frac{1}{x}\times sin(x))=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Corollary
@@ -34444,6 +35217,201 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow2}{\lim}\frac{x+2}{x-2}=\frac{4}{0}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\begin{align*}
+\underset{x\rightarrow\infty}{\lim}\frac{2x^{2}+3x+1}{5x^{2}+4x+3} & =\underset{x\rightarrow\infty}{\lim}\frac{(2x^{2}+3x+1)\frac{1}{x^{2}}}{(5x^{2}+4x+3)\frac{1}{x^{2}}}\\
+ & =\underset{x\rightarrow\infty}{\lim}\frac{2+\frac{3}{x}+\frac{1}{x^{2}}}{5+\frac{4}{x}+\frac{3}{x^{2}}}\\
+ & =\underset{x\rightarrow\infty}{\lim}\frac{2+0+0}{5+0+0}\\
+ & =\frac{2}{5}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\frac{x\rightarrow\infty}{x\rightarrow\infty}$
+\end_inset
+
+分子分母同次，
+极限是最高次数系数之比。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{5x^{2}+4x+3}{3x^{3}-2}=\underset{x\rightarrow\infty}{\lim}\frac{5}{x}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{3x^{3}+4x+3}{2x^{2}-2}=\underset{x\rightarrow\infty}{\lim}\frac{x}{0}=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\frac{x\rightarrow\infty}{x\rightarrow\infty}$
+\end_inset
+
+分母次数高，
+极限是
+\begin_inset Formula $0$
+\end_inset
+
+，
+否则
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}\frac{x-1}{x^{2}-1}=\underset{x\rightarrow1}{\lim}\frac{x-1}{(x-1)(x+1)}=\underset{x\rightarrow1}{\lim}\frac{1}{(x+1)}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\begin{align*}
+\underset{x\rightarrow0}{\lim}\frac{\sqrt{x+1}-1}{x} & =\underset{x\rightarrow0}{\lim}\frac{(\sqrt{x+1}-1)(\sqrt{x+1}+1)}{x(\sqrt{x+1}+1)}\\
+ & =\underset{x\rightarrow0}{\lim}\frac{x}{x(\sqrt{x+1}+1)}\\
+ & =\underset{x\rightarrow0}{\lim}\frac{1}{\sqrt{x+1}+1}\\
+ & =\frac{1}{\sqrt{1+1}+1}=\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分子有理化
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}(\frac{1}{n^{2}}+\frac{2}{n^{2}}+\cdots+\frac{n}{n^{2}})=\underset{n\rightarrow\infty}{\lim}(\frac{\frac{1}{2}n(n+1)}{n^{2}})=\underset{n\rightarrow\infty}{\lim}(\frac{1}{2}\times\frac{(n+1)}{n})=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}(\sqrt{x^{2}+x+1}-\sqrt{x^{2}-x+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=\underset{x\rightarrow+\infty}{\lim}\frac{x^{2}+x+1-(x^{2}-x+1)}{\sqrt{x^{2}+x+1}+\sqrt{x^{2}-x+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=\underset{x\rightarrow+\infty}{\lim}\frac{2x}{\sqrt{x^{2}+x+1}+\sqrt{x^{2}-x+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=\underset{x\rightarrow+\infty}{\lim}\frac{2}{\left(\frac{\sqrt{x^{2}+x+1}+\sqrt{x^{2}-x+1}}{x}\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=\underset{x\rightarrow+\infty}{\lim}\frac{2}{\left(\frac{\sqrt{x^{2}+x+1}+\sqrt{x^{2}-x+1}}{x}\right)}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+3}{\lim}\frac{x^{2}-2x+k}{x-3}=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow3}{\lim}x^{2}-2x+k=3+k=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $k=-3$
+\end_inset
+
+(因式分解验证
+\begin_inset Formula $x^{2}-2x-3=(x-3)(x+1)$
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Subsubsection
 复合函数的极限运算法则
 \end_layout
@@ -34500,6 +35468,293 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 \begin_inset Formula 
 \[
 \underset{x\rightarrow x_{0}}{\lim}f[g(x)]=\underset{x\rightarrow x_{0}}{\lim}f(u)=A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+极限存在的重要准则
+\end_layout
+
+\begin_layout Standard
+极限存在的几个重要准则如下：
+
+\end_layout
+
+\begin_layout Standard
+左右极限相等
+\end_layout
+
+\begin_layout Standard
+设函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在某点 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 附近有定义，
+则极限 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+存在的充要条件是 左极限 和 右极限 都存在且相等，
+即 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}^{-}}f(x)=\lim_{x\to x_{0}^{+}}f(x)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 无穷小量判别法
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+和
+\begin_inset Formula $g(x)$
+\end_inset
+
+ 在
+\begin_inset Formula $x\to x_{0}$
+\end_inset
+
+ 时满足 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=g(x)+o(g(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\ensuremath{o(g(x))}$
+\end_inset
+
+表示比
+\begin_inset Formula $g(x)$
+\end_inset
+
+ 高阶的无穷小，
+则 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}f(x)=\lim_{x\to x_{0}}g(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 函数的单调有界性 
+\end_layout
+
+\begin_layout Standard
+如果函数
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在某个区间内单调递增（或递减）且有上（或下）界，
+则 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在该区间的上（或下）确界存在，
+且极限存在。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ Cauchy 极限准则（柯西极限准则）
+\end_layout
+
+\begin_layout Standard
+若对任意
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+都存在 
+\begin_inset Formula $\ensuremath{\delta>0}$
+\end_inset
+
+使得当
+\begin_inset Formula $\ensuremath{0<|x-x_{0}|<\delta}$
+\end_inset
+
+时，
+满足 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|f(x)-L|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则称
+\begin_inset Formula $\ensuremath{L}$
+\end_inset
+
+是
+\begin_inset Formula $x\to x_{0}$
+\end_inset
+
+ 时 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+的极限，
+即 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}f(x)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ 连续函数的极限传递性
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $\ensuremath{\lim_{x\to x_{0}}g(x)=a}$
+\end_inset
+
+且 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $\ensuremath{x=a}$
+\end_inset
+
+处连续，
+则 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}f(g(x))=f(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这些准则可以帮助判断函数在某点或无穷远处的极限是否存在，
+以及如何计算极限。
+
+\end_layout
+
+\begin_layout Theorem
+夹逼准则（夹逼定理） 
+\end_layout
+
+\begin_layout Standard
+如果存在两个函数
+\begin_inset Formula $g(x)$
+\end_inset
+
+ 和
+\begin_inset Formula $h(x)$
+\end_inset
+
+ 使得在某个区域内
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(x)\leq f(x)\leq h(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+且
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}g(x)=\lim_{x\to x_{0}}h(x)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to x_{0}}f(x)=L
 \]
 
 \end_inset
