@@ -35484,7 +35484,7 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 左右极限相等
 \end_layout
 
@@ -35528,9 +35528,8 @@ lim[Cf(x)]=Climf(x)(C\text{为常数})
 
 \end_layout
 
-\begin_layout Standard
-2.
- 无穷小量判别法
+\begin_layout Subsubsection
+无穷小量判别法
 \end_layout
 
 \begin_layout Standard
@@ -35584,9 +35583,8 @@ f(x)=g(x)+o(g(x))
 
 \end_layout
 
-\begin_layout Standard
-4.
- 函数的单调有界性 
+\begin_layout Subsubsection
+函数的单调有界性
 \end_layout
 
 \begin_layout Standard
@@ -35604,9 +35602,253 @@ f(x)=g(x)+o(g(x))
 
 \end_layout
 
-\begin_layout Standard
-5.
- Cauchy 极限准则（柯西极限准则）
+\begin_layout Example
+\begin_inset Formula $a>0$
+\end_inset
+
+,
+\begin_inset Formula $x=\sqrt{a}$
+\end_inset
+
+,
+\begin_inset Formula $x_{n}=\sqrt{a+x_{n-1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+证明单调性 
+\end_layout
+
+\begin_layout Proof
+我们先猜测数列是递增的，
+即
+\begin_inset Formula $x_{n}\geq x_{n-1}$
+\end_inset
+
+，
+即：
+
+\begin_inset Formula 
+\[
+\sqrt{a+x_{n-1}}\geq x_{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+平方两边（注意保持不等式方向，
+因为两边都为正数）：
+
+\begin_inset Formula 
+\[
+a+x_{n-1}\geq x_{n-1}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+整理得：
+
+\begin_inset Formula 
+\[
+a\geq x_{n-1}(x_{n-1}-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+若
+\begin_inset Formula $x_{n-1}\leq1$
+\end_inset
+
+，
+显然成立；
+若 
+\begin_inset Formula $x_{n-1}\geq1$
+\end_inset
+
+，
+由于
+\begin_inset Formula $x_{n-1}^{2}>x_{n-1}$
+\end_inset
+
+,则
+\begin_inset Formula $a\geq x_{n-1}^{2}-x_{n-1}$
+\end_inset
+
+ 恒成立；
+可以保证递增性。
+
+\end_layout
+
+\begin_layout Proof
+证明有界性
+\end_layout
+
+\begin_layout Proof
+设
+\begin_inset Formula $x_{1}=\sqrt{a}<\sqrt{a}+1$
+\end_inset
+
+,
+\begin_inset Formula $x_{n}=\sqrt{a+x_{n-1}}<\sqrt{a}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $x_{n+1}=\sqrt{a+x_{n}}<\sqrt{a+\sqrt{a}+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+需要证明
+\begin_inset Formula $\sqrt{a+\sqrt{a}+1}<\sqrt{a}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sqrt{a+\sqrt{a}+1}<\sqrt{a+2\sqrt{a}+1}<\sqrt{(\sqrt{a}+1)^{2}}<\sqrt{a}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+数列应有上界，
+即
+\begin_inset Formula $x_{n}\leq M$
+\end_inset
+
+ 对某个
+\begin_inset Formula $M$
+\end_inset
+
+ 成立。
+假设
+\begin_inset Formula $\ensuremath{x_{n}}$
+\end_inset
+
+收敛于某个极限 
+\begin_inset Formula $L$
+\end_inset
+
+，
+则应满足：
+
+\begin_inset Formula 
+\[
+L=\sqrt{a+L}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+两边平方：
+
+\begin_inset Formula 
+\[
+L^{2}=a+L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+整理成标准二次方程：
+
+\begin_inset Formula 
+\[
+L^{2}-L-a=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+求解该二次方程：
+
+\begin_inset Formula 
+\[
+L=\frac{1\pm\sqrt{1+4a}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ 为正数且递增，
+我们取正根：
+
+\begin_inset Formula 
+\[
+L=\frac{1+\sqrt{1+4a}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于数列 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+ 是递增有界的（上界为
+\begin_inset Formula $L$
+\end_inset
+
+），
+根据单调有界定理，
+它必然收敛。
+因此，
+数列的极限为：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}x_{n}=\frac{1+\sqrt{1+4a}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cauchy 极限准则（柯西极限准则）
 \end_layout
 
 \begin_layout Standard
@@ -35705,6 +35947,10 @@ f(x)=g(x)+o(g(x))
 
 \end_layout
 
+\begin_layout Subsubsection
+夹逼定理
+\end_layout
+
 \begin_layout Theorem
 夹逼准则（夹逼定理） 
 \end_layout
@@ -35718,7 +35964,12 @@ f(x)=g(x)+o(g(x))
 \begin_inset Formula $h(x)$
 \end_inset
 
- 使得在某个区域内
+ 使得在某个区域内，
+去心邻域
+\begin_inset Formula $U(\hat{x_{0}},r)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -35762,11 +36013,32 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\underset{n\to\infty}{\lim}=\frac{2^{n}}{n!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $0<\frac{2^{n}}{n!}=\frac{2\times2\times\cdots\times2}{1\times2\times3\times\cdots\times(n-1)\times n}<\frac{2\times2}{1\times n}=\frac{4}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{n\to\infty}{\lim}=\frac{2^{n}}{n!}=0$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 两个重要极限
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 第一个重要极限
 \begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\sin x}{x}=1$
 \end_inset
@@ -35774,7 +36046,42 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\sin\alpha x}{x}=\underset{x\rightarrow0}{\lim}[\alpha\times\frac{1}{\alpha}\times\frac{\sin\alpha x}{x}]=\alpha\underset{x\rightarrow0}{\lim}\frac{\sin\alpha x}{\alpha x}=\alpha\times1=\alpha$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\rightarrow\infty}{\lim}n\sin\frac{2}{n}=\underset{n\rightarrow\infty}{\lim}2\frac{\sin\frac{2}{n}}{\frac{2}{n}}=\underset{\frac{2}{n}\rightarrow0}{\lim}2\frac{\sin x}{x}=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\tan x}{x}=\underset{x\rightarrow0}{\lim}[\frac{\sin x}{x}\times\frac{1}{\cos x}]=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{1-\cos x}{x^{2}}=\underset{x\rightarrow0}{\lim}[\frac{2\sin^{2}\frac{x}{2}}{x^{2}}]=\frac{1}{2}\underset{x\rightarrow0}{\lim}[\frac{2\sin^{2}\frac{x}{2}}{\frac{x^{2}}{4}}]=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
 第二个重要极限
 \begin_inset Formula $\underset{x\rightarrow\infty}{\lim}(1+\frac{1}{x})^{x}=e$
 \end_inset
@@ -35786,6 +36093,7 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 当函数的极限类型是
 \begin_inset Quotes erd
@@ -35807,6 +36115,7 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\end_deeper
 \begin_layout Section
 函数的连续性
 \end_layout
