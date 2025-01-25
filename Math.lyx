@@ -33253,6 +33253,20 @@ status open
  则表示函数极限不存在.
 \end_layout
 
+\begin_layout Standard
+这个
+\begin_inset Formula $L$
+\end_inset
+
+不是
+\begin_inset Formula $\pm\infty$
+\end_inset
+
+，
+它是一个固定的数值。
+
+\end_layout
+
 \begin_layout Paragraph
 \begin_inset Formula $\varepsilon-\delta$
 \end_inset
@@ -34701,6 +34715,12 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_layout
 
 \begin_layout Enumerate
+无穷是一个记号，
+并非一个确定的数。
+
+\end_layout
+
+\begin_layout Enumerate
 无穷大是
 \series bold
 极限不存
@@ -34742,6 +34762,26 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Enumerate
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+是无穷大（无穷小），
+是与自变量的
+\begin_inset Formula $x$
+\end_inset
+
+的变化方式紧密相连的，
+因此说函数是无穷大（无穷小），
+必须指明
+\begin_inset Formula $x$
+\end_inset
+
+的变化方式。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -34872,8 +34912,12 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 无穷小的比较
 \end_layout
 
-\begin_layout Standard
-设在自变量的某一变化过程下,
+\begin_layout Definition
+设在自变量
+\begin_inset Formula $x$
+\end_inset
+
+的某一变化过程下,
  
 \begin_inset Formula $f(x)$
 \end_inset
@@ -34882,7 +34926,15 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $g(x)$
 \end_inset
 
-均是无穷小,
+均是无穷小
+\begin_inset Formula $\lim f(x)=0$
+\end_inset
+
+,
+\begin_inset Formula $\lim g(x)=0$
+\end_inset
+
+,
  且
 \begin_inset Formula $g(x)\neq0$
 \end_inset
@@ -34890,7 +34942,8 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 .
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Itemize
 若
 \begin_inset Formula $\lim\frac{f(x)}{g(x)}=0$
 \end_inset
@@ -34903,7 +34956,11 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $g(x)$
 \end_inset
 
-的高阶无穷小,或称
+的
+\series bold
+高阶无穷小
+\series default
+,或称
 \begin_inset Formula $g(x)$
 \end_inset
 
@@ -34911,11 +34968,12 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $f(x)$
 \end_inset
 
-的低阶无穷小,记为 
+的低阶无穷小,记为
 \begin_inset Formula $f(x)=o(g(x))$
 \end_inset
 
 .
+
 \family roman
 \series medium
 \shape up
@@ -34928,8 +34986,12 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \uwave off
 \noun off
 \color none
+ 
+\nospellcheck off
+意思是在某一变化过程下
+\nospellcheck default
 
-\begin_inset Formula $\text{ 意思是在某一变化过程下}f(x)\rightarrow0$
+\begin_inset Formula $f(x)\rightarrow0$
 \end_inset
 
 比
@@ -34939,7 +35001,61 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 快一些.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+若
+\begin_inset Formula $\lim\frac{f(x)}{g(x)}=\infty$
+\end_inset
+
+,则称 
+\begin_inset Formula $f(x)$
+\end_inset
+
+是
+\begin_inset Formula $g(x)$
+\end_inset
+
+的
+\series bold
+低阶无穷小
+\series default
+,或称
+\begin_inset Formula $g(x)$
+\end_inset
+
+是
+\begin_inset Formula $f(x)$
+\end_inset
+
+的高阶无穷小.
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\nospellcheck off
+意思是在某一变化过程下
+\nospellcheck default
+
+\begin_inset Formula $f(x)\rightarrow0$
+\end_inset
+
+比
+\begin_inset Formula $g(x)\rightarrow0$
+\end_inset
+
+慢一些.
+\end_layout
+
+\begin_layout Itemize
 若
 \begin_inset Formula $\lim\frac{f(x)}{g(x)}=C(C\neq0)$
 \end_inset
@@ -34952,7 +35068,11 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $g(x)$
 \end_inset
 
-是同阶无穷小.
+是
+\series bold
+同阶无穷小
+\series default
+.
  特别地,
  若
 \begin_inset Formula $C=1$
@@ -34966,14 +35086,18 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $g(x)$
 \end_inset
 
-是等价无穷小,记为
+是
+\series bold
+等价无穷小
+\series default
+,记为
 \begin_inset Formula $f(x)\sim g(x)$
 \end_inset
 
 .
- 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 例如,当
 \begin_inset Formula $x\rightarrow0$
@@ -35029,31 +35153,128 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 几组重要的无穷小的等价关系:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 当
 \begin_inset Formula $x\rightarrow0$
 \end_inset
 
 时,
- 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $x\sim\sin x\sim\tan x\sim\ln(1+x)\sim e^{x}-1\sim\arctan x\sim\arcsin x$
 \end_inset
 
 ;
- 
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $1-\cos x\sim\frac{1}{2}x^{2}$
 \end_inset
 
 ;
- 
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $(1+x)^{\alpha}-1\sim\alpha x$
 \end_inset
 
 
 \end_layout
 
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\ln(1+x)}{x}=\underset{x\rightarrow0}{\lim}\ln(1+x)^{\frac{1}{x}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt[n]{1+x}-1\sim\frac{1}{n}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a^{n}-1=(a-1)(a^{n-1}+a^{n-2}+\cdots+a+1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a-1)=\frac{a^{n}-1}{(a^{n-1}+a^{n-2}+\cdots+a+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(1+x)^{\frac{1}{n}}=a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\sqrt[n]{1+x}-1}{\frac{1}{n}x}=\underset{x\rightarrow0}{\lim}\frac{(1+x)^{\frac{1}{n}}-1}{\frac{1}{n}x}=\underset{x\rightarrow0}{\lim}\frac{a-1}{\frac{1}{n}x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\underset{x\rightarrow0}{\lim}\frac{\frac{a^{n}-1}{(a^{n-1}+a^{n-2}+\cdots+a+1)}}{\frac{1}{n}x}=\underset{x\rightarrow0}{\lim}\frac{a^{n}-1}{(a^{n-1}+a^{n-2}+\cdots+a+1)\frac{1}{n}x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\underset{x\rightarrow0}{\lim}\frac{(a^{n}-1)n}{(a^{n-1}+a^{n-2}+\cdots+a+1)x}=\underset{x\rightarrow0}{\lim}\frac{n}{(a^{n-1}+a^{n-2}+\cdots+a+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\underset{x\rightarrow0}{\lim}\frac{n}{(1+1+\cdots+1+1)}=\underset{x\rightarrow0}{\lim}\frac{n}{n*1}=1$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Theorem
-无穷小量等价代换定理.
+
+\series bold
+无穷小量
+\series default
+等价代换定理.
  设
 \begin_inset Formula $x$
 \end_inset
@@ -35071,7 +35292,7 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 \begin_inset Formula $\lim\frac{g(x)}{r(x)}=A(\text{或}\infty)$
 \end_inset
 
-,
+存在,
  则 
 \begin_inset Formula $\lim\frac{f(x)}{h(x)}=\lim\frac{g(x)}{r(x)}=A(\text{或}\infty)$
 \end_inset
@@ -35079,6 +35300,16 @@ f(x)\rightarrow A（x\rightarrow x_{0})
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+两个无穷小之比
+\end_layout
+
+\begin_layout Itemize
+分子或分母是因子的乘积
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 无穷大与无穷小的关系
 \end_layout
@@ -36567,96 +36798,494 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\begin_layout Paragraph
+第一类间断点（可定义极限）
+\end_layout
+
 \begin_layout Standard
-那么函数
-\begin_inset Formula $f(x)$
+即在
+\begin_inset Formula $\ensuremath{x_{0}}$
 \end_inset
 
-在点
+处，
+ 左极限 
+\begin_inset Formula $\lim\limits_{x\to x_{0}^{-}}f(x)$
+\end_inset
+
+ 和右极限 
+\begin_inset Formula $\lim\limits_{x\to x_{0}^{+}}f(x)$
+\end_inset
+
+ 都存在。
+根据它们的相对关系，
+可以进一步分成：
+
+\end_layout
+
+\begin_layout Itemize
+跳跃间断点：
+左右极限存在但不相等，
+即
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to x_{0}^{-}}f(x)\neq\lim\limits_{x\to x_{0}^{+}}f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这表示函数在
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+处有一个“跳跃”，
+但不趋于无穷。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+可去间断点：
+左右极限存在且相等，
+但 函数值
+\begin_inset Formula $\ensuremath{f(x_{0})}$
+\end_inset
+
+要么不存在，
+要么不等于这个极限，
+即：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to x_{0}^{-}}f(x)=\lim\limits_{x\to x_{0}^{+}}f(x)=A,\quad但f(x_{0})\neq A\text{ 或 }f(x_{0})\text{ 不存在}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这意味着可以通过重新定义
+\begin_inset Formula $\ensuremath{f(x_{0})=A}$
+\end_inset
+
+使函数在
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+处连续。
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+第二类间断点（极限不存在）**
+\end_layout
+
+\begin_layout Standard
+即在 
 \begin_inset Formula $x_{0}$
 \end_inset
 
-为不连续,
- 点
-\begin_inset Formula $x_{0}$
+ 处，
+至少一个极限不存在。
+主要分为：
+
+\end_layout
+
+\begin_layout Itemize
+无穷间断点：
+当 
+\begin_inset Formula $x\to x_{0}$
 \end_inset
 
-称为函数
+ 时，
+
 \begin_inset Formula $f(x)$
 \end_inset
 
-的
-\series bold
-不连续点
-\series default
-或
-\series bold
+ 趋向 
+\begin_inset Formula $\pm\infty$
+\end_inset
+
+，
+即：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to x_{0}^{-}}f(x)=\pm\infty\text{ 或 }\lim\limits_{x\to x_{0}^{+}}f(x)=\pm\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如 
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+ 在 
+\begin_inset Formula $\ensuremath{x_{0}=0}$
+\end_inset
+
+处有无穷间断点。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+震荡间断点（或称本性间断点）：
+
+\begin_inset Formula $x\to x_{0}$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 不趋向某个有限值或无穷，
+而是“乱跳”或震荡，
+例如：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\sin\frac{1}{x}\text{ 在 }x_{0}=0\text{ 处震荡}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $\ensuremath{\sin(1/x)}$
+\end_inset
+
+在 
+\begin_inset Formula $x\to0$
+\end_inset
+
+ 时不断震荡，
+所以在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处极限不存在。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 间断点
-\series default
-.
 \end_layout
 
-\begin_layout Standard
-设
-\begin_inset Formula $x_{0}$
 \end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-为函数
-\begin_inset Formula $f(x)$
-\end_inset
-
-的间断点,若
-\begin_inset Formula $f(x)$
-\end_inset
-
-在
-\begin_inset Formula $x_{0}$
-\end_inset
-
-处的左､右极限都存在,
- 则称 
-\begin_inset Formula $x_{0}$
-\end_inset
-
- 为 
-\begin_inset Formula $f(x)$
-\end_inset
-
- 的 
-\series bold
-第一类间断点
-\series default
-;
- 除第一类间断点以外的间断点都称为
-\series bold
-第二类间断点
-\series default
-.
- 
+\begin_layout Plain Layout
+左右极限存在
 \end_layout
 
-\begin_layout Standard
-在第一类间断点中,如果左､右极限
-\series bold
-存在但不相等
-\series default
-,这种间断点又称为
-\series bold
-跳跃间断点
-\series default
-;
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+左右极限相等
 \end_layout
 
-\begin_layout Standard
-如果 左､右极限
-\series bold
-存在且相等
-\series default
-,这种间断点称为
-\series bold
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+例子
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 可去间断点
-\series default
-.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✅
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✅
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{f(x)=\begin{cases}
+x, & x\neq0\\
+2, & x=0
+\end{cases}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+跳跃间断点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+✅
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+❌
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{f(x)=\begin{cases}
+1, & x<0\\
+2, & x>0
+\end{cases}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+无穷间断点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+❌（趋于无穷）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{f(x)=\frac{1}{x}}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 在
+\begin_inset Formula $\ensuremath{x=0}$
+\end_inset
+
+处
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+震荡间断点
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+❌（震荡）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{f(x)=\sin(1/x)}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+在
+\begin_inset Formula $\ensuremath{x=0}$
+\end_inset
+
+处
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+间断点
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -36701,7 +37330,7 @@ g(x)\leq f(x)\leq h(x)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+\begin_inset Separator plain
 \end_inset
 
 
@@ -36732,7 +37361,7 @@ g(x)\leq f(x)\leq h(x)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+\begin_inset Separator plain
 \end_inset
 
 
@@ -36784,7 +37413,7 @@ g(x)\leq f(x)\leq h(x)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+\begin_inset Separator plain
 \end_inset
 
 
