@@ -37329,6 +37329,15 @@ x, & x\neq0\\
 连续.
 \end_layout
 
+\begin_layout Theorem
+多项式：
+
+\begin_inset Formula $a_{0}x^{n}+a_{1}x^{n-1}+\cdots+a_{n}$
+\end_inset
+
+连续
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -37358,6 +37367,10 @@ x, & x\neq0\\
 \end_inset
 
 上单调增加(或单调减少)且连续.
+\end_layout
+
+\begin_layout Theorem
+单调条件保证反函数存在.
 \end_layout
 
 \begin_layout Standard
@@ -37610,6 +37623,257 @@ f(\xi)=C\text{ }(a<\xi<b)
 
 ,使
 \begin_inset Formula $f(\xi)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=\begin{cases}
+a+x & x\leqslant0\\
+x^{2}+1 & x<1\\
+\frac{b}{x} & x\geqslant1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x=0$
+\end_inset
+
+ 
+\begin_inset Formula $f(0)=a$
+\end_inset
+
+ 
+\begin_inset Formula $\underset{x\rightarrow0^{-}}{\lim}f(x)=a$
+\end_inset
+
+,
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}f(x)=1$
+\end_inset
+
+,
+\begin_inset Formula $a=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x=1$
+\end_inset
+
+ 
+\begin_inset Formula $f(1)=2$
+\end_inset
+
+ 
+\begin_inset Formula $\underset{x\rightarrow1^{-}}{\lim}f(x)=2$
+\end_inset
+
+,
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}f(x)=b$
+\end_inset
+
+,
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=\begin{cases}
+\frac{\sin2x}{x} & x<0\\
+(x+k)^{2} & x\geqslant0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x=0$
+\end_inset
+
+ 
+\begin_inset Formula $f(0)=k^{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\underset{x\rightarrow0^{-}}{\lim}f(x)=2$
+\end_inset
+
+,
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}f(x)=k^{2}$
+\end_inset
+
+,
+\begin_inset Formula $k^{2}=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\ln\sqrt{x^{2}+4}}{\sin(1+x^{2})}=\underset{x\rightarrow0}{\lim}\frac{\ln2}{\sin(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\ln(1+x)}{x}=\underset{x\rightarrow0}{\lim}\ln(1+x)^{\frac{1}{x}}=\ln e=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}(1+2x)^{\frac{3}{\sin x}}=\underset{x\rightarrow0}{\lim}e^{\ln\left[(1+2x)^{\frac{1}{2x}}\right]^{2x\frac{3}{\sin x}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\underset{x\rightarrow0}{\lim}e^{\ln\left[(1+2x)^{\frac{1}{2x}}\right]^{2x\frac{3}{\sin x}}}=\underset{x\rightarrow0}{\lim}e^{\ln\left[(1+2x)^{\frac{1}{2x}}\right]^{\frac{6x}{\sin x}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $=\underset{x\rightarrow0}{\lim}e^{6\times\frac{x}{\sin x}\times\ln\left[(1+2x)^{\frac{1}{2x}}\right]}=e^{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $e^{-3x}-x=2$
+\end_inset
+
+,在
+\begin_inset Formula $(0,1)$
+\end_inset
+
+至少有一个实根。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=e^{-3x}-x-2$
+\end_inset
+
+ 在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $[0,1]$
+\end_inset
+
+连续（初等函数在任意定义域内连续），
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(0)=-1<0$
+\end_inset
+
+，
+
+\begin_inset Formula $f(1)=e^{3}-3>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由零点存在定理，
+
+\begin_inset Formula $\exists\xi\in(0,1)$
+\end_inset
+
+,
+\begin_inset Formula $f(\xi)=e^{-3x}-x-2=0$
 \end_inset
 
 
@@ -37979,7 +38243,15 @@ f(\xi)=C\text{ }(a<\xi<b)
 \begin_inset Formula $x_{0}$
 \end_inset
 
-及其附近有定义,
+及其附近有定义
+\begin_inset Formula $x_{0}$
+\end_inset
+
+邻域
+\begin_inset Formula $U(x_{0})$
+\end_inset
+
+,
  当自变量由
 \begin_inset Formula $x_{0}$
 \end_inset
@@ -38207,6 +38479,38 @@ f(\xi)=C\text{ }(a<\xi<b)
 的微分,
  对于一元函数
 \begin_inset Formula $dy=f'(x)\Delta x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x\rightarrow x+\Delta x$
+\end_inset
+
+ 
+\begin_inset Formula $f(x)=f(x+\Delta x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\Delta y=f(x+\Delta x)-f(x)=x^{2}+(\Delta x)^{2}+2x\Delta x-x^{2}=\Delta x(\Delta x+2x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f'(x)=\underset{(Δx\rightarrow0)}{lim}\frac{\Delta y}{\Delta x}=\underset{(Δx\rightarrow0)}{lim}\frac{\Delta x(\Delta x+2x)}{\Delta x}=\underset{(Δx\rightarrow0)}{lim}\Delta x+2x=2x$
 \end_inset
 
 
@@ -38566,35 +38870,6 @@ status open
 
 \end_layout
 
-\begin_layout Paragraph
-可导
-\end_layout
-
-\begin_layout Standard
-我的理解：
-表示函数在某一点的导数是指这个函数在这一点附近的变化率（即函数在这一点的切线斜率），
-是对函数在这一点的相邻（极限的概念）
-\series bold
-两点
-\series default
-产生的一个直线斜率的近似值，
-导数就是描述函数上这一点的切线斜率。
-如果这一点，
-没有相邻两点，
-即缺少一个近似点，
-或者极限不存在 那么函数在这个点不可导，
-可以理解为这个点的斜率没有固定值。
-
-\end_layout
-
-\begin_layout Standard
-有很多视频，
-书籍都是用一个点A的一侧的另一个点B解释导数，
-我个人认为是不太对的，
-这种应该是对极限的描述。
-
-\end_layout
-
 \begin_layout Section
 求导方法
 \end_layout
@@ -38928,11 +39203,35 @@ c处
 \begin_inset Formula $(u\pm v)'=u'\pm v'$
 \end_inset
 
-
+，
+有限个函数
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $(uv)'=u'v+uv'$
+\end_inset
+
+，
+
+\begin_inset Formula $(Cv)'=Cv'$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(uvz)'=u'vz+uv'z+uvz'$
 \end_inset
 
 
@@ -38940,6 +39239,13 @@ c处
 
 \begin_layout Itemize
 \begin_inset Formula $(\frac{u}{v})'=\frac{u'v-uv'}{v^{2}}(v(x)\neq0)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -39085,6 +39391,34 @@ y'_{x}=y'_{u}\cdot u'_{x}
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $(\ln\sin x)'=\frac{1}{\sin x}\cdot\sin'x=\frac{1}{\sin x}\cdot\cos x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[(1+2x+3x^{2}\right]^{5'}=5\left[(1+2x+3x^{2})\right]^{4}\times(1+2x+3x^{2})'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=5\left[(1+2x+3x^{2})\right]^{4}\times(2+6x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[e^{\sin^{2}\frac{1}{x}}\right]^{'}=e^{\sin^{2}\frac{1}{x}}\cdot2\sin\frac{1}{x}\cdot\cos\frac{1}{x}\cdot(-\frac{1}{x^{2}})$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 参数方程导数
 \end_layout
@@ -39198,6 +39532,40 @@ y=g(t)
 \end_inset
 
 ,即y关于参数t的导数除以x 关于t 的导数.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+x=R\cos t\\
+y=R\sin t
+\end{cases}$
+\end_inset
+
+
+\begin_inset Formula $R>0$
+\end_inset
+
+为常数，
+
+\begin_inset Formula $0<t<\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{t}^{'}=-R\sin t$
+\end_inset
+
+,
+\begin_inset Formula $y_{t}^{'}=R\cos t$
+\end_inset
+
+,所以
+\begin_inset Formula $\frac{dy}{dx}=\frac{y_{t}^{'}}{x_{t}^{'}}=\frac{R\cos t}{-R\sin t}=-\cot t,(0<t<\pi)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -39419,6 +39787,16 @@ y=g(t)
 
 \begin_layout Section
 多元函数的偏导数
+\end_layout
+
+\begin_layout Standard
+一般地，
+对于多元函数，
+其自变量不止一个，
+我们考虑多元函数关于其中一个变量的变化率时，
+其余变量暂时认为是常量。
+这就产生了多元函数偏导数的概念。
+
 \end_layout
 
 \begin_layout Subsection
@@ -39680,7 +40058,43 @@ f'_{y}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\De
 \end_layout
 
 \begin_layout Standard
-例如
+例如,三元函数
+\begin_inset Formula $u=f(x,y,z)$
+\end_inset
+
+，
+偏导数可以分别记为
+\begin_inset Formula $u_{x}^{'}$
+\end_inset
+
+,
+\begin_inset Formula $u_{y}^{'}$
+\end_inset
+
+,
+\begin_inset Formula $u_{z}^{'}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+对于偏导数记号
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+是一个整体符合，
+不能看作
+\begin_inset Formula $\partial z$
+\end_inset
+
+与
+\begin_inset Formula $\partial x$
+\end_inset
+
+ 的形式。
+
 \end_layout
 
 \begin_layout Example
@@ -39720,6 +40134,848 @@ f(x,0)=\ln x^{2}=2\ln x
 ,
  所以
 \begin_inset Formula $f'_{x}(2,0)=\frac{2}{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $z=x^{2}+3xy+y^{2}$
+\end_inset
+
+的偏导数。
+
+\end_layout
+
+\begin_layout Solution
+对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求偏导数,将
+\begin_inset Formula $y$
+\end_inset
+
+视为常量：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\frac{\partial}{\partial x}(x^{2}+3xy+y^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial}{\partial x}(x^{2})=2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial}{\partial x}(3xy)=3y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial}{\partial x}(y^{2})=0$
+\end_inset
+
+（因为 
+\begin_inset Formula $y^{2}$
+\end_inset
+
+ 与 
+\begin_inset Formula $x$
+\end_inset
+
+ 无关,当成常数求导）
+\end_layout
+
+\end_deeper
+\begin_layout Solution
+因此：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=2x+3y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对 
+\begin_inset Formula $y$
+\end_inset
+
+ 求偏导数,将
+\begin_inset Formula $x$
+\end_inset
+
+视为常量：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=\frac{\partial}{\partial y}(x^{2}+3xy+y^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(x^{2})=0$
+\end_inset
+
+（因为 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 与 
+\begin_inset Formula $y$
+\end_inset
+
+ 无关）
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(3xy)=3x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(y^{2})=2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=3x+2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+最终结果：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=2x+3y,\quad\frac{\partial z}{\partial y}=3x+2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $z=y^{x}$
+\end_inset
+
+,证
+\begin_inset Formula $\frac{y}{x}\frac{\partial z}{\partial y}+\frac{1}{\ln y}\frac{\partial z}{\partial x}=2z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求 
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+求偏导数，
+先取自然对数：
+
+\end_layout
+
+\begin_layout Solution
+两边对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求偏导：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=y^{x}\ln y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对 
+\begin_inset Formula $y$
+\end_inset
+
+ 求偏导数：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=xy^{x-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入原式
+\begin_inset Formula 
+\[
+\frac{y}{x}\frac{\partial z}{\partial y}+\frac{1}{\ln y}\frac{\partial z}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入求出的偏导数：
+
+\begin_inset Formula 
+\[
+\frac{y}{x}\cdot\left(x\frac{z}{y}\right)+\frac{1}{\ln y}\cdot\left(z\ln y\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=z+z=2z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求三元函数
+\begin_inset Formula $f(x,y,z)=\sin(x+y^{2}-e^{z})$
+\end_inset
+
+的偏导数
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial f}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{z})\cdot\frac{\partial}{\partial x}(x+y^{2}-e^{z})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(y^{2})=0$
+\end_inset
+
+（因为
+\begin_inset Formula $\ensuremath{y^{2}}$
+\end_inset
+
+与
+\begin_inset Formula $x$
+\end_inset
+
+无关）
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(-e^{0})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{z})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial f}{\partial y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{z})\cdot\frac{\partial}{\partial y}(x+y^{2}-e^{z})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(x)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(y^{2})=2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(-e^{z})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{z})\cdot2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算
+\begin_inset Formula $\frac{\partial f}{\partial z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\ensuremath{f(x,y,z)}$
+\end_inset
+
+不含
+\begin_inset Formula $z$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial z}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+最终结果
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{z})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{z})\cdot2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial z}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有一类函数比较有趣,当函数的两个自变量相互替換后函数形式不变,此时我们称函数关于这两个自变量具有自对称性,如函数
+\begin_inset Formula $z=\sin(xy)$
+\end_inset
+
+关于
+\begin_inset Formula $x,y$
+\end_inset
+
+具有自对称性.
+\end_layout
+
+\begin_layout Standard
+一般具有自对称性的函数在求偏导教时,可以用相应自变量相互替换,以简化计算。
+
+\end_layout
+
+\begin_layout Example
+求三元函数
+\begin_inset Formula $f(x,y,z)=\sin(x+y^{2}-e^{x})$
+\end_inset
+
+的偏导数
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial f}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{x})\cdot\frac{\partial}{\partial x}(x+y^{2}-e^{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(y^{2})=0$
+\end_inset
+
+（因为
+\begin_inset Formula $\ensuremath{y^{2}}$
+\end_inset
+
+与
+\begin_inset Formula $x$
+\end_inset
+
+无关,当成常数求导）
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial x}(-e^{x})=-e^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{x})\cdot(1-e^{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial f}{\partial y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{x})\cdot\frac{\partial}{\partial y}(x+y^{2}-e^{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(x)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(y^{2})=2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial y}(-e^{x})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{x})\cdot2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算
+\begin_inset Formula $\frac{\partial f}{\partial z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\ensuremath{f(x,y,z)}$
+\end_inset
+
+不含
+\begin_inset Formula $z$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial z}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+最终结果
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\cos(x+y^{2}-e^{x})\cdot(1-e^{x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\cos(x+y^{2}-e^{x})\cdot2y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial z}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知理想气态方程
+\begin_inset Formula $PV=RT$
+\end_inset
+
+(R是常数),证明
+\begin_inset Formula $\frac{\partial P}{\partial V}\cdot\frac{\partial V}{\partial T}\cdot\frac{\partial T}{\partial P}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+求 
+\begin_inset Formula $\frac{\partial P}{\partial V}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Solution
+从方程
+\begin_inset Formula $PV=RT$
+\end_inset
+
+ 得：
+
+\begin_inset Formula 
+\[
+P=\frac{RT}{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对 
+\begin_inset Formula $V$
+\end_inset
+
+ 求偏导数：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial P}{\partial V}=-\frac{RT}{V^{2}}=-\frac{P}{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求 
+\begin_inset Formula $\frac{\partial V}{\partial T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+从方程 
+\begin_inset Formula $V=\frac{RT}{P}$
+\end_inset
+
+，
+对
+\begin_inset Formula $\ensuremath{T}$
+\end_inset
+
+求偏导数：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial V}{\partial T}=\frac{R}{P}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求
+\begin_inset Formula $\frac{\partial T}{\partial P}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+从方程
+\begin_inset Formula $T=\frac{PV}{R}$
+\end_inset
+
+，
+对 
+\begin_inset Formula $P$
+\end_inset
+
+ 求偏导数：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial T}{\partial P}=\frac{V}{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\left(-\frac{P}{V}\right)\cdot\left(\frac{R}{P}\right)\cdot\left(\frac{V}{R}\right)=\frac{\partial P}{\partial V}\cdot\frac{\partial V}{\partial T}\cdot\frac{\partial T}{\partial P}=-1$
 \end_inset
 
 
@@ -39777,11 +41033,531 @@ f(x,0)=\ln x^{2}=2\ln x
  需要将多项复合函数的偏导数相加.
 \end_layout
 
+\begin_layout Example
+设
+\begin_inset Formula $z=e^{u}\sin v$
+\end_inset
+
+,
+\begin_inset Formula $u=xy$
+\end_inset
+
+，
+
+\begin_inset Formula $v=x+y$
+\end_inset
+
+,
+ 求
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+和
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+根据链式法则：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+首先计算偏导数：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial u}=e^{u}\sin v,\quad\frac{\partial u}{\partial x}=y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial v}=e^{u}\cos v,\quad\frac{\partial v}{\partial x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=e^{u}\sin v\cdot y+e^{u}\cos v\cdot1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=e^{xy}\left[y\sin(x+y)+\cos(x+y)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+同样应用链式法则：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算偏导数：
+
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial y}=x,\quad\frac{\partial v}{\partial y}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=e^{u}\sin v\cdot x+e^{u}\cos v\cdot1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=e^{xy}\left[x\sin(x+y)+\cos(x+y)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $z=uv^{2}$
+\end_inset
+
+,
+\begin_inset Formula $u=\sin(x+y)$
+\end_inset
+
+,
+\begin_inset Formula $v=\cos x$
+\end_inset
+
+,求
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+和
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+,使用链式法则，
+我们有：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\frac{\partial v}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分别计算各项：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial u}=v^{2},\quad\frac{\partial u}{\partial x}=\cos(x+y),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial v}=2uv,\quad\frac{\partial v}{\partial x}=-\sin(x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此，
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=v^{2}\cdot\cos(x+y)+2uv\cdot(-\sin(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入 
+\begin_inset Formula $u=\sin(x+y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $v=\cos(x)$
+\end_inset
+
+，
+得到：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\cos^{2}(x)\cos(x+y)-2\sin(x+y)\cos(x)\sin(x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+,使用链式法则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=\frac{\partial z}{\partial u}\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\frac{\partial v}{\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分别计算各项：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial y}=\cos(x+y),\quad\frac{\partial v}{\partial y}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对于因此，
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=v^{2}\cdot\cos(x+y)+2uv\cdot0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入
+\begin_inset Formula $\ensuremath{u=\sin(x+y)}$
+\end_inset
+
+和 
+\begin_inset Formula $v=\cos(x)$
+\end_inset
+
+，
+得到：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial y}=\cos^{2}(x)\cos(x+y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $z=u^{2}v$
+\end_inset
+
+,
+\begin_inset Formula $u=e^{x}$
+\end_inset
+
+,
+\begin_inset Formula $v=\sin x$
+\end_inset
+
+,求
+\begin_inset Formula $\frac{dz}{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+函数代入
+\begin_inset Formula $z=e^{2x}\sin x=2e^{2x}\sin x+e^{2x}\cos x=e^{2x}(2\sin x+\cos x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $z=uv+\sin t$
+\end_inset
+
+,
+\begin_inset Formula $u=e^{t}$
+\end_inset
+
+,
+\begin_inset Formula $v=\cos t$
+\end_inset
+
+,求
+\begin_inset Formula $\frac{dz}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+使用链式法则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{dz}{dt}=\frac{\partial z}{\partial u}\cdot\frac{du}{dt}+\frac{\partial z}{\partial u}\cdot\frac{dv}{dt}+\frac{\partial z}{\partial u}\cdot\frac{\partial z}{\partial t}\frac{dt}{dt}=e^{t}v+u(-\sin t)+\cos t\cdot1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $=e^{t}\cos t+e^{t}(-\sin t)+\cos t\cdot1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $=(\cos t-\sin t)e^{t}+\cos t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $z=f(2x-2y,2x-y)$
+\end_inset
+
+,求
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $u=2x−2y$
+\end_inset
+
+,
+\begin_inset Formula $v=2x−y$
+\end_inset
+
+，
+
+\begin_inset Formula $z$
+\end_inset
+
+ 可以表示为：
+
+\begin_inset Formula 
+\[
+z=f(u,v)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+使用链式法则：
+
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\frac{\partial v}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分别计算各项：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=2,\quad\frac{\partial v}{\partial x}=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+令 
+\begin_inset Formula $f_{u}=\frac{\partial f}{\partial u}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f_{v}=\frac{\partial f}{\partial v}$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial z}{\partial x}=f_{u}\cdot2+f_{v}\cdot2.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=2(f_{u}+f_{v}).
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 隐函数的求导方法
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 一般地,如果变量x和y满足一个方程
 \begin_inset Formula $F(x,y)=0$
 \end_inset
@@ -39803,7 +41579,11 @@ f(x,0)=\ln x^{2}=2\ln x
 一元隐函数
 \series default
 .
- 类似的,
+ 
+\end_layout
+
+\begin_layout Definition
+类似的,
  由方程
 \begin_inset Formula $F(x,y,z)=0$
 \end_inset
@@ -40009,7 +41789,9 @@ e^{x}-e^{y}y'-(y+xy')=0
 \begin_inset Formula $y$
 \end_inset
 
-,因此求
+,
+\series bold
+因此求
 \begin_inset Formula $y'(x_{0})$
 \end_inset
 
@@ -40021,6 +41803,8 @@ e^{x}-e^{y}y'-(y+xy')=0
 \begin_inset Formula $F(x,y)=0$
 \end_inset
 
+
+\series default
 .
 \end_layout
 
@@ -40068,7 +41852,41 @@ y'|_{(3,3)}=-1
 \end_inset
 
 ,
- 即x+y=6.
+ 即
+\begin_inset Formula $x+y=6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x^{2}+2xy-y^{2}=2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $2x+(2y+2xy')+2yy'=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $y^{2}$
+\end_inset
+
+复合函数先对
+\begin_inset Formula $y^{2}$
+\end_inset
+
+求导，
+再对
+\begin_inset Formula $y$
+\end_inset
+
+求导
 \end_layout
 
 \begin_layout Example
@@ -40276,12 +42094,55 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 得
 \begin_inset Formula 
 \[
-\frac{dy}{dx}=\frac{F'_{x}}{F'_{y}}
+\frac{dy}{dx}=-\frac{F'_{x}}{F'_{y}}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+由方程
+\begin_inset Formula $y=x\ln y$
+\end_inset
+
+确定，
+求
+\begin_inset Formula $y'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y'=-\frac{F'_{x}}{F'_{y}}=\frac{\ln y}{1-\frac{x}{y}}=\frac{y\ln y}{y-x}(y-x\neq0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+首先要构造辅助函数,
+ 当对该函数的某个坐标分量求偏导数时,其它坐标分量都视为常量.
 \end_layout
 
 \begin_layout Subsection
@@ -40326,9 +42187,63 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 ,并有 
 \begin_inset Formula 
 \[
-\frac{\partial z}{\partial x}=-\frac{F_{x}}{F_{z}},\frac{\partial z}{\partial y}=-\frac{F_{y}}{F_{z}}
+\frac{\partial z}{\partial x}=-\frac{F_{x}^{'}}{F_{z}^{'}},\frac{\partial z}{\partial y}=-\frac{F_{y}^{'}}{F_{z}^{'}}
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $e^{3xy}-z^{2}+e^{-z}=0$
+\end_inset
+
+,确定了隐函数
+\begin_inset Formula $z=z(x,y)$
+\end_inset
+
+,
+ 求
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{\partial z}{\partial y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+令
+\begin_inset Formula $F(x,y,z)=e^{3xy}-z^{2}+e^{-z}$
+\end_inset
+
+,则
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{x}^{'}=3ye^{3xy},F_{y}^{'}=3xe^{3xy},F_{z}^{'}=-2z-e^{-z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial z}{\partial x}=-\frac{3ye^{3xy}}{-2z-e^{-z}}=\frac{3ye^{3xy}}{2z+e^{-z}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial z}{\partial y}=-\frac{3xe^{3xy}}{-2z-e^{-z}}=\frac{3xe^{3xy}}{2z+e^{-z}}$
 \end_inset
 
 
@@ -40339,6 +42254,8 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \end_layout
 
 \begin_layout Standard
+
+\strikeout on
 设
 \begin_inset Formula $F(x,y,u,v)$
 \end_inset
@@ -40365,6 +42282,8 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \end_layout
 
 \begin_layout Standard
+
+\strikeout on
 \begin_inset Formula 
 \[
 {\displaystyle \mathbf{J}=\frac{\partial(F,G)}{\partial(u,v)}=\left|\begin{array}{cc}
@@ -40379,6 +42298,8 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \end_layout
 
 \begin_layout Standard
+
+\strikeout on
 在点
 \begin_inset Formula $P(x_{0},y_{0},u_{0},v_{0})$
 \end_inset
@@ -40416,6 +42337,8 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 
 ,
  并有(...89)
+\strikeout default
+
 \begin_inset Formula 
 \[
 \]
@@ -40427,6 +42350,10 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 
 \begin_layout Section
 高阶导数
+\end_layout
+
+\begin_layout Subsection
+一元函数的高阶偏导数
 \end_layout
 
 \begin_layout Standard
@@ -40456,6 +42383,10 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \end_inset
 
 的二阶导数,记作
+\begin_inset Formula $f^{''}(x)$
+\end_inset
+
+,
 \begin_inset Formula $y''$
 \end_inset
 
@@ -40475,7 +42406,7 @@ y''=(y')'
 或
 \begin_inset Formula 
 \[
-\frac{d^{2}y}{dx^{2}}=\frac{d}{dx}(\frac{dy}{dx})
+\frac{d^{2}y}{dx^{2}}=\frac{d}{dx}(\frac{dy}{dx})=\frac{d}{dx}(\frac{df}{dx})=\frac{d^{2}f}{dx^{2}}
 \]
 
 \end_inset
@@ -40501,7 +42432,8 @@ y''=(y')'
 \end_layout
 
 \begin_layout Standard
-类似地,二阶导数的导数,叫做三阶导数,三阶导数的导数叫做四阶导数……一般地,
+类似地,二阶导数的导数,叫做三阶导数,三阶导数的导数叫做四阶导数等，
+一般地,
 \begin_inset Formula $(n-1)$
 \end_inset
 
@@ -40578,10 +42510,7 @@ y''',y^{(4)},\cdots,y^{(n)}
 \begin_layout Standard
 二阶及二阶以上的导数统称
 \series bold
-高阶导数
-\series default
-.
- 
+高阶导数.
 \end_layout
 
 \begin_layout Subsection
@@ -40729,7 +42658,7 @@ y''',y^{(4)},\cdots,y^{(n)}
 二元函数的高阶偏导数
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 设
 \begin_inset Formula $z=f(x,y)$
 \end_inset
@@ -40758,28 +42687,28 @@ y''',y^{(4)},\cdots,y^{(n)}
 的二阶偏导数,这样的二阶偏导数共有四个,分别记作
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial x})=\frac{\partial^{2}z}{\partial x^{2}}=f_{xx}^{''}(x,y)=z_{xx}^{''}(x,y)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $\frac{\partial}{\partial y}(\frac{\partial z}{\partial y})=\frac{\partial^{2}z}{\partial y^{2}}=f_{yy}^{''}(x,y)=z_{yy}^{''}(x,y)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $\frac{\partial}{\partial y}(\frac{\partial z}{\partial x})=\frac{\partial^{2}z}{\partial x\partial y}=f_{xy}^{''}(x,y)=z_{xy}^{''}(x,y)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial y})=\frac{\partial^{2}z}{\partial y\partial x}=f_{yx}^{''}(x,y)=z_{yx}^{''}(x,y)$
 \end_inset
 
@@ -40796,54 +42725,583 @@ y''',y^{(4)},\cdots,y^{(n)}
 \end_inset
 
 称为二阶混合偏导数.
- 我们将二阶以及二阶以上的偏导数统称为高阶偏导数.
+ 同样可以定义
+\begin_inset Formula $n$
+\end_inset
+
+阶偏导数，
+我们将二阶以及二阶以上的偏导数统称为高阶偏导数.
+\end_layout
+
+\begin_layout Theorem
+若函数
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+的两个二阶混合偏导数
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x\partial y}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{\partial^{2}z}{\partial y\partial x}$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+内连续，
+则在区域
+\begin_inset Formula $D$
+\end_inset
+
+内有
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x\partial y}\text{=}\frac{\partial^{2}z}{\partial y\partial x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $u=\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}$
+\end_inset
+
+,试证：
+
+\begin_inset Formula $\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}u}{\partial z^{2}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $r=\sqrt{x^{2}+y^{2}+z^{2}}$
+\end_inset
+
+，
+则
+\begin_inset Formula $u=\frac{1}{\sqrt{x^{2}+y^{2}+z^{2}}}$
+\end_inset
+
+可以看成
+\begin_inset Formula $u=\frac{1}{r}$
+\end_inset
+
+,
+\begin_inset Formula $r=\sqrt{x^{2}+y^{2}+z^{2}}$
+\end_inset
+
+复合而成，
+于是
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial u}{\partial x}=-\frac{1}{r^{2}}\cdot\frac{2x}{2r}=-\frac{x}{r^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial^{2}u}{\partial x^{2}}=-\frac{1}{r^{3}}+x\cdot\frac{3}{r^{4}}\cdot\frac{x}{r}=-\frac{1}{r^{3}}+\frac{3x^{2}}{r^{5}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由函数的自对称性,有
+\begin_inset Formula $\frac{\partial^{2}u}{\partial y^{2}}=-\frac{1}{r^{3}}+\frac{3x^{2}}{r^{5}}$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{\partial^{2}u}{\partial z^{2}}=-\frac{1}{r^{3}}+\frac{3x^{2}}{r^{5}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以
+\begin_inset Formula $\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}+\frac{\partial^{2}u}{\partial z^{2}}=0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-函数的单调性与导数
+函数的单调性
 \end_layout
 
 \begin_layout Standard
-在某个区间
-\begin_inset Formula $(a,b)$
-\end_inset
+函数的
+\series bold
+单调性
+\series default
+是指函数在某个区间内是
+\series bold
+单调递增
+\series default
+或
+\series bold
+单调递减
+\series default
+的性质。
+简单来说，
+就是函数的值随着自变量的变化是始终增加还是始终减少。
 
-内,如果
-\begin_inset Formula $f'(x)\geqslant0$
-\end_inset
-
-,那么函数 
-\begin_inset Formula $y=f(x)$
-\end_inset
-
-在这个区间内单调增加(所有点
-\begin_inset Formula $>0$
-\end_inset
-
-时为递增);
 \end_layout
 
 \begin_layout Standard
-如果
-\begin_inset Formula $f'(x)\leqslant0$
+设函数 
+\begin_inset Formula $f(x)$
 \end_inset
 
-,那么函数 
-\begin_inset Formula $y=f(x)$
+ 在区间 
+\begin_inset Formula $I$
 \end_inset
 
-在这个区间内单调减少(所有点
-\begin_inset Formula $<0$
+ 内可定义，
+对于任意的 
+\begin_inset Formula $x_{1},x_{2}\in I$
 \end_inset
 
-时为递减).
+，
+如果满足：
+
+\end_layout
+
+\begin_layout Itemize
+单调递增（严格递增）：
+ 若
+\begin_inset Formula $\ensuremath{x_{1}<x_{2}}$
+\end_inset
+
+时，
+总有 
+\begin_inset Formula $f(x_{1})<f(x_{2})$
+\end_inset
+
+，
+则称
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在区间 
+\begin_inset Formula $I$
+\end_inset
+
+ 上是严格单调递增 的。
+
+\end_layout
+
+\begin_layout Itemize
+单调递减（严格递减）：
+ 若
+\begin_inset Formula $\ensuremath{x_{1}<x_{2}}$
+\end_inset
+
+时，
+总有
+\begin_inset Formula $f(x_{1})>f(x_{2})$
+\end_inset
+
+，
+则称
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在区间 
+\begin_inset Formula $\ensuremath{I}$
+\end_inset
+
+上是严格单调递减 的。
+
+\end_layout
+
+\begin_layout Itemize
+非严格单调性：
+如果上面的不等号允许取等号，
+即 
+\begin_inset Formula $f(x_{1})\leq f(x_{2})$
+\end_inset
+
+（单调不减）或 
+\begin_inset Formula $f(x_{1})\geq f(x_{2})$
+\end_inset
+
+（单调不增），
+那么函数的单调性是**非严格**的。
+
+\end_layout
+
+\begin_layout Standard
+利用导数判断单调性 
+\end_layout
+
+\begin_layout Standard
+如果函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间
+\begin_inset Formula $\ensuremath{I}$
+\end_inset
+
+上可导，
+可以通过其一阶导数 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ 来判断单调性：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+ 对于所有 
+\begin_inset Formula $x\in I$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $I$
+\end_inset
+
+ 上单调递增。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ 对于所有 
+\begin_inset Formula $x\in I$
+\end_inset
+
+，
+则 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在 
+\begin_inset Formula $I$
+\end_inset
+
+ 上单调递减。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+ 仅在个别点上，
+函数可能仍然保持单调性。
+ 
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ 在某个区间内改变符号，
+函数在该区间可能不是单调的，
+需要进一步分析。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=x^{3}-3x^{2}+2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算导数：
+
+\begin_inset Formula $f'(x)=3x^{2}-6x+2.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+令 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+，
+求解：
+
+\begin_inset Formula $3x^{2}-6x+2=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+使用求根公式：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x=\frac{6\pm\sqrt{(-6)^{2}-4\cdot3\cdot2}}{2\cdot3}=\frac{6\pm\sqrt{36-24}}{6}=\frac{6\pm\sqrt{12}}{6}=\frac{6\pm2\sqrt{3}}{6}=1\pm\frac{\sqrt{3}}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+在这些临界点附近分析 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ 符号，
+划分区间：
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $x<1-\frac{\sqrt{3}}{3}$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+，
+即函数递增。
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $1-\frac{\sqrt{3}}{3}<x<1+\frac{\sqrt{3}}{3}$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+，
+即函数递减。
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $\ensuremath{x>1+\frac{\sqrt{3}}{3}}$
+\end_inset
+
+时，
+
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+，
+即函数递增。
+
+\end_layout
+
+\begin_layout Solution
+因此，
+函数在 
+\begin_inset Formula $\left(-\infty,1-\frac{\sqrt{3}}{3}\right)$
+\end_inset
+
+ 和 
+\begin_inset Formula $\left(1+\frac{\sqrt{3}}{3},+\infty\right)$
+\end_inset
+
+ 单调递增，
+而在 
+\begin_inset Formula $\left(1-\frac{\sqrt{3}}{3},1+\frac{\sqrt{3}}{3}\right)$
+\end_inset
+
+ 单调递减。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\sqrt[3]{x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x\neq0$
+\end_inset
+
+,
+\begin_inset Formula $y'=\frac{2}{3}\frac{1}{\sqrt[3]{x}}$
+\end_inset
+
+,
+\begin_inset Formula $x<0,y'<0$
+\end_inset
+
+,
+\begin_inset Formula $x>0,y'>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x=0$
+\end_inset
+
+是 驻点。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{\Delta x\rightarrow0^{-}}{\lim}\frac{\Delta x^{\frac{2}{3}}-0}{\Delta x}=\underset{\Delta x\rightarrow0^{-}}{\lim}\frac{1}{\Delta x^{\frac{1}{3}}}=-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{\Delta x\rightarrow0^{+}}{\lim}\frac{\Delta x^{\frac{2}{3}}-0}{\Delta x}=\underset{\Delta x\rightarrow0^{+}}{\lim}\frac{1}{\Delta x^{\frac{1}{3}}}=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x>1$
+\end_inset
+
+,证明：
+
+\begin_inset Formula $2\sqrt{x}>3-\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $f(x)=2\sqrt{x}-3+\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f'(x)=\frac{1}{\sqrt{x}}-\frac{1}{x^{2}}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以
+\begin_inset Formula $f(x)$
+\end_inset
+
+单调递增.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)>f(1)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以
+\begin_inset Formula $2\sqrt{x}>3-\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+单调性的应用
+\end_layout
+
+\begin_layout Itemize
+求函数的单调区间:
+ 利用导数符号变化确定函数在哪些区间内是递增或递减的。
+
+\end_layout
+
+\begin_layout Itemize
+判断极值点:
+ 如果函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在某点
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+处由递增变为递减，
+则 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处为局部最大值；
+如果由递减变为递增，
+则 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处为局部最小值。
+
+\end_layout
+
+\begin_layout Itemize
+解不等式:
+ 单调性可以用于求解关于
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+的不等式，
+例如 
+\begin_inset Formula $f(x)>0$
+\end_inset
+
+ 或 
+\begin_inset Formula $\ensuremath{f(x)<0}$
+\end_inset
+
+的解集。
+
 \end_layout
 
 \begin_layout Section
 一元函数的极值与最值
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+极值
+\end_layout
+
+\begin_layout Definition
 设函数
 \begin_inset Formula $f(x)$
 \end_inset
@@ -40852,41 +43310,94 @@ y''',y^{(4)},\cdots,y^{(n)}
 \begin_inset Formula $x_{0}$
 \end_inset
 
-的定义域
-\begin_inset Formula $I$
-\end_inset
-
-内有定义,
- 如果任一
-\begin_inset Formula $x$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-f(x)<f(x_{0})
-\]
-
-\end_inset
-
- 那么就称
+的某邻域内有定义，
+如果对该领域内任何异于
 \begin_inset Formula $x_{0}$
 \end_inset
 
-是函数
+的
+\begin_inset Formula $x$
+\end_inset
+
+都有
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f(x)<f(x_{0})$
+\end_inset
+
+,则称
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+为
 \begin_inset Formula $f(x)$
 \end_inset
 
-的一个
-\series bold
-极大值
-\series default
-;
- 反之
-\series bold
-极小值
-\series default
-.
+的一个极大值，
+称
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+的极大值点。
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $f(x)>f(x_{0})$
+\end_inset
+
+,则称
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+为
+\begin_inset Formula $f(x)$
+\end_inset
+
+的一个极小值，
+称
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+的极小值点。
+
 \end_layout
 
 \begin_layout Standard
@@ -40897,11 +43408,30 @@ f(x)<f(x_{0})
 ,
  使数取得极值的点称为
 \series bold
-极值点.
+极值点
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+一般地，
+我们称使得
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+的点为函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的
+\series bold
+驻点
+\series default
+.
 \end_layout
 
 \begin_layout Theorem
-必要条 .
+必要条件.
  设函数
 \begin_inset Formula $f(x)$
 \end_inset
@@ -40911,19 +43441,75 @@ f(x)<f(x_{0})
 \end_inset
 
 处可导,
- 如果 
-\begin_inset Formula $f'(x_{0})=0$
-\end_inset
-
- ,
- 则
+ 且在
 \begin_inset Formula $x_{0}$
 \end_inset
 
-为函数的极值.
+处取得极值，
+则 
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+ .
 \end_layout
 
 \begin_layout Standard
+函数
+\begin_inset Formula $f(x)$
+\end_inset
+
+的可导极值点必定是它的驻点，
+但驻点未必是可导极值点。
+
+\end_layout
+
+\begin_layout Standard
+函数
+\begin_inset Formula $y=x^{3}$
+\end_inset
+
+,虽然
+\begin_inset Formula $x=0$
+\end_inset
+
+是它的驻点，
+但不是极值点。
+
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $x_{0}$
+\end_inset
+
+不是函数的驻点,那么它ー定不是函数的可导的极值点.另外,我们还发现不可导的点也可能成为极值点.
+ 例如,
+\begin_inset Formula $|x|$
+\end_inset
+
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+处不可导,
+\begin_inset Formula $x=0$
+\end_inset
+
+ 是
+\begin_inset Formula $|x|$
+\end_inset
+
+的极小值点.
+\end_layout
+
+\begin_layout Standard
+因此,驻点以及导数不存在的点才有可能成为函数的极值点,当我们求出了函数的驻点或导数不存在的点,还需要判定它们是否是极值点,是极大值点还是极小值点.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
@@ -40989,7 +43575,7 @@ f(x)<f(x_{0})
 \begin_inset Formula $f'(x)<0$
 \end_inset
 
-则
+,则
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -41049,7 +43635,7 @@ f(x)<f(x_{0})
 \begin_inset Formula $f'(x)>0$
 \end_inset
 
-则
+,则
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -41110,6 +43696,7 @@ f(x)<f(x_{0})
 ,则
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 当
 \begin_inset Formula $f''(x_{0})<0$
@@ -41140,6 +43727,207 @@ f(x)<f(x_{0})
 \end_inset
 
 处取得极小值.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+若
+\begin_inset Formula $f^{''}(x_{0})=0$
+\end_inset
+
+，
+无法判断，
+需要继续分析高阶导数或使用一阶导数法。
+该定理也无法判断导数不存在的点是否为极值点。
+
+\end_layout
+
+\begin_layout Subsection
+最值
+\end_layout
+
+\begin_layout Standard
+函数的最值是指在整个定义域内取得的
+\series bold
+最大值
+\series default
+或
+\series bold
+最小值
+\series default
+，
+即全局最大值和全局最小值（也称绝对最大值和绝对最小值）。
+
+\end_layout
+
+\begin_layout Definition
+设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $D$
+\end_inset
+
+ 上定义：
+
+\end_layout
+
+\begin_layout Definition
+最大值：
+如果存在
+\begin_inset Formula $x_{0}\in D$
+\end_inset
+
+，
+使得对于所有 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ 都有：
+
+\begin_inset Formula 
+\[
+f(x)\leq f(x_{0}),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称 
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+ 为最大值，
+
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 为最大值点。
+
+\end_layout
+
+\begin_layout Definition
+最小值：
+如果存在
+\begin_inset Formula $x_{0}\in D$
+\end_inset
+
+，
+使得对于所有 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ 都有：
+
+\begin_inset Formula 
+\[
+f(x)\geq f(x_{0}),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称 
+\begin_inset Formula $\ensuremath{f(x_{0})}$
+\end_inset
+
+为最小值，
+
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+为最小值点。
+
+\end_layout
+
+\begin_layout Subsubsection
+求最值的一般步骤
+\end_layout
+
+\begin_layout Enumerate
+确定定义域
+\end_layout
+
+\begin_layout Enumerate
+最值必须在整个定义域内讨论，
+因此需要明确区间范围
+\end_layout
+
+\begin_layout Enumerate
+求导数，
+找到驻点和导数是否不存在的点
+\end_layout
+
+\begin_layout Enumerate
+计算函数值区间端点、驻点、不可导点，
+比较大小
+\end_layout
+
+\begin_layout Enumerate
+取函数值最大者为最大值，
+最小者为最小值
+\end_layout
+
+\begin_layout Standard
+如果区间不是闭区间，
+则可能没有最大值或最小值。
+例如：
+
+\end_layout
+
+\begin_layout Standard
+函数 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ 在 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 上没有最小值，
+因为可以取 
+\begin_inset Formula $x\to0^{+}$
+\end_inset
+
+，
+但 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 不在区间内。
+
+\end_layout
+
+\begin_layout Standard
+函数 
+\begin_inset Formula $f(x)=-x^{3}$
+\end_inset
+
+ 在 
+\begin_inset Formula $\ensuremath{(-\infty,+\infty)}$
+\end_inset
+
+上没有最大值，
+因为随 
+\begin_inset Formula $x\to-\infty$
+\end_inset
+
+，
+函数值无限增大。
+
+\end_layout
+
+\begin_layout Standard
+最值唯一，
+最值点不唯一。
+
 \end_layout
 
 \begin_layout Section
@@ -41723,7 +44511,7 @@ M_{b}(a,b)=0
 凹凸性
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Definition
 设
 \begin_inset Formula $f(x)$
 \end_inset
@@ -41823,7 +44611,7 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 \end_inset
 
 内
-\begin_inset Formula $f''(x)>0$
+\begin_inset Formula $f''(x)<0$
 \end_inset
 
 ,
@@ -41838,14 +44626,1099 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 上的图形是凸的.
 \end_layout
 
+\begin_layout Standard
+设 
+\backslash
+( f''(x) > 0 
+\backslash
+)，
+证明 
+\backslash
+( f(x) 
+\backslash
+) 是凹的**
+\end_layout
+
+\begin_layout Proof
+由拉格朗日中值定理，
+对任意
+\begin_inset Formula $x_{1},x_{2}\in(a,b)$
+\end_inset
+
+，
+且 
+\begin_inset Formula $x_{1}<x_{2}$
+\end_inset
+
+，
+存在一点 
+\begin_inset Formula $\ensuremath{c\in(x_{1},x_{2})}$
+\end_inset
+
+使得：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f'(x_{2})-f'(x_{1})=f''(c)(x_{2}-x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+，
+则 
+\begin_inset Formula $f''(c)>0$
+\end_inset
+
+，
+从而：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f'(x_{2})-f'(x_{1})>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这意味着 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ 是严格**递增**的。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{e^{a}+e^{b}}{2}>e^{\frac{a+b}{2}},a\neq b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+,
+\begin_inset Formula $f^{''}(x)=e^{x}>0$
+\end_inset
+
+,函数图形是凹的。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(\frac{a+b}{2})<f\frac{f(a)+f(b)}{2}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 拐点 
+\end_layout
+
+\begin_layout Standard
+拐点是曲线在某点的凹凸性发生变化的点，
+即曲率方向改变的点。
+在数学上，
+拐点通常通过二阶导数来判断。
+
+\end_layout
+
+\begin_layout Definition
+设函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在某点 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处具有二阶导数，
+且：
+
+\end_layout
+
+\begin_layout Definition
+在 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 左侧，
+
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $f''(x_{0})$
+\end_inset
+
+ 的符号不同
+\end_layout
+
+\begin_layout Definition
+在 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 右侧，
+
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $\ensuremath{f''(x_{0})}$
+\end_inset
+
+的符号不同
+\end_layout
+
+\begin_layout Definition
+则 
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+处是拐点，
+即曲线在该点由上凸变为下凸，
+或由下凸变为上凸。
+
+\end_layout
+
+\begin_layout Paragraph
+拐点的求法
+\end_layout
+
+\begin_layout Itemize
+计算函数的定义域和二阶导数 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+若
+\begin_inset Formula $f''(x)=0$
+\end_inset
+
+ 的解为
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+，
+该点是可能的拐点；
+若 
+\begin_inset Formula $\ensuremath{f''(x)}$
+\end_inset
+
+不存在，
+同样需要进一步判断
+\end_layout
+
+\begin_layout Itemize
+令
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+左侧取一点
+\begin_inset Formula $x_{1}$
+\end_inset
+
+，
+计算
+\begin_inset Formula $f''(x_{1})$
+\end_inset
+
+，
+令 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 右侧取一点 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $f''(x_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+若 
+\begin_inset Formula $\ensuremath{f''(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 处前后符号相反，
+则 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 是拐点，
+否则 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 不是拐点
+\end_layout
+
+\begin_layout Example
+求函数 
+\begin_inset Formula $f(x)=x^{3}-3x^{2}+2x+1$
+\end_inset
+
+ 的拐点
+\end_layout
+
+\begin_layout Solution
+计算一阶导数
+\begin_inset Formula 
+\[
+f'(x)=3x^{2}-6x+2.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算二阶导数
+\begin_inset Formula 
+\[
+f''(x)=6x-6.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+解方程 
+\begin_inset Formula $f''(x)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+6x-6=0\quad\Rightarrow\quad x=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以，
+
+\begin_inset Formula $x=1$
+\end_inset
+
+ 是可能的拐点。
+
+\end_layout
+
+\begin_layout Solution
+检查二阶导数的符号变化
+\end_layout
+
+\begin_layout Solution
+取 
+\begin_inset Formula $x=0$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $f''(0)=6(0)-6=-6$
+\end_inset
+
+（负）
+\end_layout
+
+\begin_layout Solution
+取 
+\begin_inset Formula $x=2$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $f''(2)=6(2)-6=6$
+\end_inset
+
+（正）
+\end_layout
+
+\begin_layout Solution
+因为 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 由负变正，
+
+\begin_inset Formula $x=1$
+\end_inset
+
+ 是拐点。
+
+\end_layout
+
+\begin_layout Solution
+计算拐点坐标
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+f(1)=(1)^{3}-3(1)^{2}+2(1)+1=1-3+2+1=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+拐点坐标为
+\begin_inset Formula $(1,1)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Remark
+二阶导数等于零但不一定是拐点
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f''(x)=0$
+\end_inset
+
+，
+但左右两侧 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 符号相同，
+则该点不是拐点。
+
+\end_layout
+
+\begin_layout Standard
+例：
+函数 
+\begin_inset Formula $f(x)=x^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(x)=12x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(0)=0$
+\end_inset
+
+，
+但 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 左右都是正数，
+因此 
+\begin_inset Formula $\ensuremath{x=0}$
+\end_inset
+
+不是拐点（曲线仍然保持上凸）
+\end_layout
+
+\begin_layout Remark
+有些函数的拐点是二阶导数不存在的点
+\end_layout
+
+\begin_layout Standard
+例：
+函数 
+\begin_inset Formula $f(x)=|x|^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'(x)=3x|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(x)=6|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 不存在，
+但左右二阶导数符号不同，
+所以 
+\begin_inset Formula $\ensuremath{x=0}$
+\end_inset
+
+是拐点.
 \end_layout
 
 \begin_layout Subsection
 渐进线
 \end_layout
 
+\begin_layout Standard
+渐进线（Asymptote）是曲线上的一点无线远离原点时，
+该点与一固定的直线
+\begin_inset Formula $l$
+\end_inset
+
+的距离趋于零，
+则称此直线
+\begin_inset Formula $l$
+\end_inset
+
+为曲线
+\begin_inset Formula $c$
+\end_inset
+
+的渐进线。
+
+\end_layout
+
+\begin_layout Standard
+渐进线可分为：
+
+\end_layout
+
+\begin_layout Itemize
+铅直渐进线（垂直渐进线，
+Vertical Asymptote）(x=A)
+\end_layout
+
+\begin_layout Itemize
+水平渐进线（Horizontal Asymptote）(y=A)
+\end_layout
+
+\begin_layout Itemize
+斜渐进线（Oblique Asymptote）
+\end_layout
+
+\begin_layout Standard
+当然并不是任何曲线都有渐进线。
+
+\end_layout
+
+\begin_layout Subsubsection
+垂直渐进线
+\end_layout
+
+\begin_layout Definition
+若函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 在某个有限点 
+\begin_inset Formula $x=a$
+\end_inset
+
+ 处满足：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lim\limits_{x\to a^{+}}f(x)=\pm\infty\quad\text{或}\quad\lim\limits_{x\to a^{-}}f(x)=\pm\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则 
+\begin_inset Formula $x=a$
+\end_inset
+
+ 是该曲线的垂直渐进线。
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+令分母为零，
+求可能的渐近点
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+计算左右极限，
+若极限为 
+\begin_inset Formula $\pm\infty$
+\end_inset
+
+，
+则存在垂直渐进线。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{1}{x-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令分母为 0，
+解得 
+\begin_inset Formula $x=2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+计算极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to2^{+}}\frac{1}{x-2}=+\infty,\quad\lim\limits_{x\to2^{-}}\frac{1}{x-2}=-\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以 
+\begin_inset Formula $x=2$
+\end_inset
+
+ 是垂直渐进线。
+
+\end_layout
+
+\begin_layout Subsubsection
+水平渐进线
+\end_layout
+
+\begin_layout Standard
+若函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to\pm\infty}f(x)=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $L$
+\end_inset
+
+ 为常数，
+则直线 
+\begin_inset Formula $\ensuremath{y=L}$
+\end_inset
+
+是水平渐进线。
+
+\end_layout
+
+\begin_layout Standard
+计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to+\infty}f(x)=L_{1},\quad\lim\limits_{x\to-\infty}f(x)=L_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果极限为常数 
+\begin_inset Formula $L$
+\end_inset
+
+，
+则 
+\begin_inset Formula $y=L$
+\end_inset
+
+ 为渐进线。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{3x}{x+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to\infty}\frac{3x}{x+1}=\lim\limits_{x\to\infty}\frac{3}{1+\frac{1}{x}}=3.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to-\infty}\frac{3x}{x+1}=3.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以 
+\begin_inset Formula $y=3$
+\end_inset
+
+ 是水平渐进线。
+
+\end_layout
+
+\begin_layout Subsubsection
+斜渐进线
+\end_layout
+
+\begin_layout Standard
+若函数 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim\limits_{x\to\pm\infty}\left(f(x)-(Ax+B)\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则直线
+\begin_inset Formula $\ensuremath{y=Ax+B}$
+\end_inset
+
+是斜渐进线。
+
+\end_layout
+
+\begin_layout Standard
+斜率公式：
+计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\lim\limits_{x\to\pm\infty}\frac{f(x)}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若极限存在且有限，
+则斜渐进线的斜率为
+\begin_inset Formula $A$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+截距公式：
+ 计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\lim\limits_{x\to\pm\infty}(f(x)-Ax)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{x^{2}+x+1}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 计算斜率：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\lim\limits_{x\to\infty}\frac{x^{2}+x+1}{x^{2}}=\lim\limits_{x\to\infty}\left(1+\frac{1}{x}+\frac{1}{x^{2}}\right)=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 计算截距：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\lim\limits_{x\to\infty}\left(\frac{x^{2}+x+1}{x}-x\right)=\lim\limits_{x\to\infty}\left(x+1+\frac{1}{x}-x\right)=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 所以斜渐进线方程为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=x+1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+微分法做图(利用导数绘制函数图像)
+\end_layout
+
+\begin_layout Enumerate
+确定函数的定义域
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+找出函数
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+的定义域，
+即函数在什么范围内有意义。
+
+\end_layout
+
+\begin_layout Standard
+主要检查：
+
+\end_layout
+
+\begin_layout Standard
+分母是否为 0
+\end_layout
+
+\begin_layout Standard
+偶次根号内是否出现负数
+\end_layout
+
+\begin_layout Standard
+对数函数的真数部分是否小于等于 0
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+奇偶性，
+周期性
+\end_layout
+
+\begin_layout Enumerate
+求导数并分析单调性
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+计算一阶导数：
+
+\begin_inset Formula $f'(x)$
+\end_inset
+
+，
+解方程 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+，
+求出驻点（可能的极值点）。
+
+\end_layout
+
+\begin_layout Standard
+在驻点的两侧取值，
+判断导数的正负：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+，
+函数单调递增。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+，
+函数单调递减。
+
+\end_layout
+
+\begin_layout Standard
+确定单调区间，
+标记可能的极大值和极小值。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+求二阶导数并分析曲率（拐点）
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+计算二阶导数 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解方程 
+\begin_inset Formula $f''(x)=0$
+\end_inset
+
+，
+求可能的拐点。
+
+\end_layout
+
+\begin_layout Standard
+在拐点的两侧取值：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+，
+图像向上凸（凹形）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(x)<0$
+\end_inset
+
+，
+图像向下凸（凸形）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+求渐近线
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+水平渐近线：
+
+\begin_inset Formula $\lim\limits_{x\to\pm\infty}f(x)=L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+垂直渐近线：
+如果分母
+\begin_inset Formula $\ensuremath{g(x)\to0}$
+\end_inset
+
+且分子不为 
+\begin_inset Formula $0$
+\end_inset
+
+，
+则可能存在无穷大的垂直渐近线。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算特殊点
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+计算函数值 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在关键点（如
+\begin_inset Formula $0$
+\end_inset
+
+或对称轴）处的值。
+
+\end_layout
+
+\begin_layout Standard
+确定对称性：
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $f(-x)=f(x)$
+\end_inset
+
+，
+则关于 
+\begin_inset Formula $y$
+\end_inset
+
+ 轴对称。
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $f(-x)=-f(x)$
+\end_inset
+
+，
+则关于原点对称。
+
+\end_layout
+
+\end_deeper
 \begin_layout Section
 曲率
 \end_layout
@@ -42541,7 +46414,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 微分
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 设函数
 \begin_inset Formula ${\displaystyle y=f(x)}$
 \end_inset
@@ -42646,7 +46519,20 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $\Delta y$
 \end_inset
 
-的线性主部.
+的线性主部,
+\begin_inset Formula $\Delta y$
+\end_inset
+
+是变化的精确值，
+
+\begin_inset Formula $\textrm{d}y$
+\end_inset
+
+是变化的近似值
+\begin_inset Formula $\Delta y\approx\textrm{d}y$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -42667,12 +46553,11 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_inset
 
 。
- 
+
 \end_layout
 
 \begin_layout Standard
-对于一元函数来说,可微与可导是完全等价的概念.
- 可微的函数,
+可微的函数,
  其微分等于导数乘以自变量的微分
 \begin_inset Formula $\textrm{d}x$
 \end_inset
@@ -42680,10 +46565,36 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 ,
  函数的微分与自变量的微分之商等于该函数的导数(因此,导数也叫做微商).
  即
-\begin_inset Formula $\textrm{d}y=f'(x)Δx=f'(x)\textrm{d}x$
+\begin_inset Formula $\textrm{d}y=f'(x)Δx=f'(x)\textrm{d}x=A\Delta x\approx\Delta y$
 \end_inset
 
  .
+\begin_inset Formula $A$
+\end_inset
+
+就是
+\begin_inset Formula $f(x)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处的导数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\textrm{d}y}{\textrm{d}x}=f'(x)$
+\end_inset
+
+，
+导数也叫做微商。
+
+\end_layout
+
+\begin_layout Standard
+对于一元函数来说,可微与可导是完全等价的概念.
 \end_layout
 
 \begin_layout Standard
@@ -42744,13 +46655,21 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_layout Example
 有一块正方形的金属片，
 它的边长原来是3，
-受热后增加了 ，
+受热后增加了
+\begin_inset Formula $\Delta x$
+\end_inset
+
+ ，
 问这块金属片的面积增加了多少?
 \end_layout
 
 \begin_layout Standard
 设加热前正方形金属片的面积为 ，
-即 A，
+即 
+\begin_inset Formula $A$
+\end_inset
+
+，
 加热后正方形金属片的面积为 
 \begin_inset Formula $A+\Delta A$
 \end_inset
@@ -42766,7 +46685,7 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_layout Standard
 因此正方形金属片在加热后面积增加了 ：
  
-\begin_inset Formula $(x+\Delta x)^{2}-x^{2}=2x\Delta x+(\Delta x)^{2}$
+\begin_inset Formula $(x+\Delta x)^{2}-x^{2}=2x\Delta x+(\Delta x)^{2}\approx2x\Delta x$
 \end_inset
 
 .
@@ -42797,6 +46716,192 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+,求
+\begin_inset Formula $x=2$
+\end_inset
+
+处微分，
+
+\begin_inset Formula $\Delta x=0.01$
+\end_inset
+
+,改变量和微分值。
+
+\end_layout
+
+\begin_layout Example
+微分：
+
+\begin_inset Formula $dy=2x\Delta x$
+\end_inset
+
+,
+\begin_inset Formula $dy|_{x=2}4\Delta x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+改变量：
+
+\begin_inset Formula $\Delta y=0.0401$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+微分：
+
+\begin_inset Formula $dy|_{x=2,\Delta x=0.01}=0.04$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+的近似值
+\end_layout
+
+\begin_layout Example
+因为
+\begin_inset Formula $\sqrt{2}=\sqrt{1.96+0.04}$
+\end_inset
+
+，
+取函数
+\begin_inset Formula $f(x)=\sqrt{x}$
+\end_inset
+
+,设
+\begin_inset Formula $x_{0}=1.96$
+\end_inset
+
+，
+由于
+\begin_inset Formula $f'(x)=\frac{1}{2\sqrt{x}}$
+\end_inset
+
+,所以
+\begin_inset Formula $f'(1.96)=\frac{1}{2.8}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\textrm{d}y=f'(x)Δx=f'(x)\textrm{d}x=A\Delta x\approx\Delta y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\Delta y=f(x_{0}+\Delta x)-f(x_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=f(x_{0}+\Delta x)=f(x_{0})+dy\approx f(x_{0})+\Delta y=f(x_{0})+f'(x_{0})Δx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(2)\approx f(1.96)+f'(1.96)\cdot(2-1.96)=1.4143$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\varDelta x$
+\end_inset
+
+取值要小，
+
+\begin_inset Formula $\varDelta x$
+\end_inset
+
+越大误差越大。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\ln1.03=\ln(1+0.03)=\ln1+(\ln1)Δx\approx0.03$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 微分的几何意义
 \end_layout
@@ -42822,7 +46927,15 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \begin_inset Formula $M_{0}$
 \end_inset
 
-处切线的纵坐标的改变量.
+处
+\series bold
+切线
+\series default
+的
+\series bold
+纵坐标
+\series default
+的改变量.
 \end_layout
 
 \begin_layout Enumerate
@@ -43525,6 +47638,35 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_layout
 
+\begin_layout Example
+求微分
+\begin_inset Formula $y=x^{2}+\ln x-3^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $dy=dx^{2}+d\ln x-d3^{x}=2xdx+\frac{1}{x}dx-3^{x}\ln3dx=(2x+\frac{1}{x}-3^{x}\ln3)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $dy=y'dx=(2x+\frac{1}{x}-3^{x}\ln3)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 复合函数微分法则
 \end_layout
@@ -43556,6 +47698,46 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \mathrm{d}y=f'(u)du
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一阶微分形式不变形
+\series bold
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+全微分形式不变性：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u$
+\end_inset
+
+是自变量：
+
+\begin_inset Formula $dy=f'(u)du$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u$
+\end_inset
+
+是函数，
+
+\begin_inset Formula $u=\varphi(x)$
+\end_inset
+
+：
+
+\begin_inset Formula $dy=y_{x}^{'}dx=f'(u)\varphi'(x)dx=f'(u)du$
 \end_inset
 
 
@@ -43746,7 +47928,11 @@ dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
 \end_layout
 
 \begin_layout Standard
-全微分形式不变性:
+
+\series bold
+全微分形式不变性
+\series default
+:
  设函数
 \begin_inset Formula $z=f(u,v)$
 \end_inset
@@ -43778,7 +47964,34 @@ dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
 
 是中间变量还是自变量，
 全微分都保持上述形式，
-这称为全微分形式不变性
+这称为全微分形式不变性.
+\end_layout
+
+\begin_layout Example
+求函数
+\begin_inset Formula $z=\ln(\frac{y}{x}+xy)$
+\end_inset
+
+的全微分。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial z}{\partial x}=\frac{-\frac{y}{x^{2}}+y}{\frac{y}{x}+xy}=\frac{x^{2}-1}{x+x^{3}}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{\partial z}{\partial y}=\frac{-\frac{1}{x}+x}{\frac{y}{x}+xy}=\frac{x^{2}+1}{y+x^{2}y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dz=\frac{x^{2}-1}{x+x^{3}}dx+\frac{x^{2}+1}{y+x^{2}y}dy$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -44356,7 +48569,11 @@ status open
 \begin_inset Formula $[x,x+\Delta x]$
 \end_inset
 
-(当A% > 0时)或在区间
+(当
+\begin_inset Formula $\Delta x>0$
+\end_inset
+
+时)或在区间
 \begin_inset Formula $[x+\Delta x,x]$
 \end_inset
 
@@ -44411,7 +48628,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $ $
+\begin_inset Separator plain
 \end_inset
 
 
@@ -44440,6 +48657,109 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_inset
 
  .
+\end_layout
+
+\begin_layout Example
+证
+\begin_inset Formula $\frac{x}{1+x}<\ln(1+x)<x(x>0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设肺
+\begin_inset Formula $f(t)=\ln t,t\in[1,1+x]$
+\end_inset
+
+,则
+\begin_inset Formula $f(t)$
+\end_inset
+
+在闭区间
+\begin_inset Formula $[1,1+x](x>0)$
+\end_inset
+
+上满足拉格朗日中值定理的条件，
+因此至少存在一点
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\xi\in(1,1+x)$
+\end_inset
+
+
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ ,
+\series default
+使得
+\series bold
+
+\begin_inset Formula $f'(\xi)=\frac{f(1+x)-f(x)}{1+x-1}$
+\end_inset
+
+ ,
+\series default
+即
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{1}{\xi}=\frac{\ln(1+x)}{x}$
+\end_inset
+
+.
+ 由于
+\begin_inset Formula $1<\xi<1+x$
+\end_inset
+
+,则
+\begin_inset Formula $\frac{1}{1+x}<\frac{1}{\xi}<1$
+\end_inset
+
+,于是
+\begin_inset Formula $\frac{1}{1+x}<\frac{1}{\xi}=\frac{\ln(1+x)}{x}<1$
+\end_inset
+
+.
+ 因此
+\begin_inset Formula $\frac{x}{1+x}<\frac{\ln(1+x)}{x}<x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -44512,10 +48832,6 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 洛必达法则
 \end_layout
 
-\begin_layout Subsection
-未定式
-\end_layout
-
 \begin_layout Standard
 如果当
 \begin_inset Formula $x\rightarrow a$
@@ -44553,7 +48869,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
  对于这类极限,即使它存在也不能用“商的极限等于极限的商”这一 法则.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 设函数
 \begin_inset Formula $f(x)$
 \end_inset
@@ -44565,6 +48881,7 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 满足下列条件
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\lim f(x)=0,\lim g(x)=0$
 \end_inset
@@ -44602,12 +48919,13 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
  
 \end_layout
 
-\begin_layout Enumerate
+\end_deeper
+\begin_layout Theorem
 则
 \begin_inset Formula $lim\frac{f(x)}{g(x)}=lim\frac{f'(x)}{g'(x)}$
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
@@ -44627,6 +48945,10 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 \end_layout
 
 \begin_layout Proof
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+证明，
 因为求
 \begin_inset Formula $\frac{f(x)}{g(x)}$
 \end_inset
@@ -44689,10 +49011,147 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
 ,并对上式两端求极限.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
+如果计算过程中
+\begin_inset Formula $\lim\frac{f'(x)}{g'(x)}$
+\end_inset
 
-\series bold
-注意 
+仍然是
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型或者
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+,且
+\begin_inset Formula $f'(x)$
+\end_inset
+
+，
+
+\begin_inset Formula $g'(x)$
+\end_inset
+
+仍然满足洛必达法则中的条件，
+可以继续使用洛必达法则中的条件。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $lim\frac{f(x)}{g(x)}=lim\frac{f'(x)}{g'(x)}=lim\frac{f''(x)}{g''(x)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}\frac{x^{5}-1}{2x^{5}-x-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+该极限为
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型，
+因此
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}\frac{x^{5}-1}{2x^{5}-x-1}=\underset{x\rightarrow1}{\lim}\frac{(x^{5}-1)'}{(2x^{5}-x-1)'}=\frac{5}{9}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\tan x-1}{\sec x+2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+该极限为
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型，
+因此
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\sec^{2}x}{\sec x\cdot\tan x}=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{1}{\sin x}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{x^{n}}{e^{\lambda x}}$
+\end_inset
+
+,
+\begin_inset Formula $n\in R^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+该极限为
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型，
+因此
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{x^{n}}{e^{\lambda x}}=\underset{x\rightarrow\infty}{\lim}\frac{nx^{n-1}}{\lambda e^{\lambda x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=\underset{x\rightarrow\infty}{\lim}\frac{n(n-2)x^{n-2}}{\lambda^{2}e^{\lambda x}}=\cdots=\underset{x\rightarrow\infty}{\lim}\frac{n!}{\lambda^{n}e^{\lambda x}}=\frac{n!}{\infty}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\ln x<\underset{x\rightarrow\infty}{\lim}\sqrt{x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}x^{n}<\underset{x\rightarrow\infty}{\lim}e^{\lambda x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对数
+\begin_inset Formula $<$
+\end_inset
+
+幂
+\begin_inset Formula $<$
+\end_inset
+
+指数
 \end_layout
 
 \begin_layout Enumerate
@@ -44709,15 +49168,423 @@ f(x+\Delta x)-f(x)=f'(x+\theta\Delta x)\cdot\Delta x\text{ }(0<\theta<1)
  
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{e^{x}-e^{-x}}{\sin x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{e^{x}-e^{-x}}{\sin x}=\underset{x\rightarrow0}{\lim}\frac{e^{x}-e^{-x}}{x}=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\tan x-x}{x-\sin x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\tan x-x}{x-\sin x}=\underset{x\rightarrow0}{\lim}\frac{\sec^{2}x-1}{1-\cos x}=\underset{x\rightarrow0}{\lim}\frac{\tan^{2}x}{1-\cos x}=\underset{x\rightarrow0}{\lim}\frac{x^{2}}{\frac{1}{2}x^{2}}=2$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 在极限计算过程中,
  无穷小量等价代换和洛必达法则应结合使用,
  能用等价代换则先用等价代换,
  这样可以简化计算过程.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\tan3x}{\tan x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\tan3x}{\tan x}=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{3\sec^{2}3x}{sec^{2}x}=3\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\cos^{2}x}{\cos^{2}3x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{-2\cos x\cdot\sin x}{-2\cos3x\cdot\sin3x}=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{\sin2x}{\sin6x}=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{2\cos2x}{6\cos6x}=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+如果计算过程中
+\begin_inset Formula $\lim\frac{f'(x)}{g'(x)}$
+\end_inset
+
+仍然是
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型或者
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+,且
+\begin_inset Formula $f'(x)$
+\end_inset
+
+，
+
+\begin_inset Formula $g'(x)$
+\end_inset
+
+仍然满足洛必达法则中的条件，
+可以继续使用洛必达法则中的条件。
+
+\end_layout
+
+\begin_layout Itemize
+如果用洛必达法则计算到某一步回到原题时,应选用其他方法处理;另外,当
+\begin_inset Formula $\lim\frac{f'(x)}{g'(x)}$
+\end_inset
+
+不存在(不包括
+\begin_inset Formula $\infty$
+\end_inset
+
+的情形),不能断定
+\begin_inset Formula $\lim\frac{f'(x)}{g'(x)}$
+\end_inset
+
+也不存在,此时也应应选用其他方法处理。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\frac{x}{\sqrt{1+x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+该极限为
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型，
+
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\frac{x}{\sqrt{1+x^{2}}}=\underset{x\rightarrow+\infty}{\lim}\frac{1}{\frac{x}{\sqrt{1+x^{2}}}}=\underset{x\rightarrow+\infty}{\lim}\frac{\sqrt{1+x^{2}}}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $=\underset{x\rightarrow+\infty}{\lim}\frac{(\sqrt{1+x^{2}})'}{(x)'}=\underset{x\rightarrow+\infty}{\lim}\frac{x}{\sqrt{1+x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+利用两次洛必达法则后,又回到了原来的问題,故洛必达法则失效,应选用其他方法.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\frac{x}{\sqrt{1+x^{2}}}=\underset{x\rightarrow+\infty}{\lim}\frac{x}{\sqrt{x^{2}(\frac{1}{x^{2}}+1)}}=\underset{x\rightarrow+\infty}{\lim}\frac{1}{\sqrt{1+\frac{1}{x^{2}}}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算极限
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{x+\sin x}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+该极限为
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型，
+
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{x+\sin x}{x}=\underset{x\rightarrow\infty}{\lim}\frac{1+\cos x}{1}$
+\end_inset
+
+,极限不存在,所给极限不能用洛必达法则求出。
+
+\end_layout
+
+\begin_layout Solution
+选用其它方法
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{x+\sin x}{x}=\underset{x\rightarrow\infty}{\lim}(1+\frac{1}{x}\cdot\sin x)=1+0=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+除了
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型和
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型外，
+还有一些未定型，
+如
+\begin_inset Formula $0\cdot\infty$
+\end_inset
+
+,
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+,
+\begin_inset Formula $0^{0}$
+\end_inset
+
+,
+\begin_inset Formula $1^{\infty}$
+\end_inset
+
+,
+\begin_inset Formula $\infty^{0}$
+\end_inset
+
+等未定型，
+它们虽然不能直接使用洛必达法则,但是可进行适当的转换，
+变成
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型或
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型的未定型，
+再用洛必达法则来计算.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}x\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这是“
+\begin_inset Formula $0\cdot\infty$
+\end_inset
+
+"型的极限,可将其中一个函数除到分母上,变为
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型或
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+型的未定型.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}x\ln x=\underset{x\rightarrow0^{+}}{\lim}\frac{\ln x}{\frac{1}{x}}=\underset{x\rightarrow0^{+}}{\lim}\frac{\frac{1}{x}}{-\frac{1}{x^{2}}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}(\sec x-\tan x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这是“
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+"型的极限,可以通分后变为
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+型的未定型.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sec x=\frac{1}{\cos x},\quad\tan x=\frac{\sin x}{\cos x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sec x-\tan x=\frac{1}{\cos x}-\frac{\sin x}{\cos x}=\frac{1-\sin x}{\cos x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow\frac{\pi}{2}}{\lim}(\sec x-\tan x)=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{1-\sin x}{\cos x}=\underset{x\rightarrow\frac{\pi}{2}}{\lim}\frac{-\cos x}{-\sin x}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于
+\begin_inset Formula $0^{0}$
+\end_inset
+
+,
+\begin_inset Formula $1^{\infty}$
+\end_inset
+
+,
+\begin_inset Formula $\infty^{0}$
+\end_inset
+
+等未定型，
+由于函数形式都是变量的变量次方，
+可以通过取对数的方法转变。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}x^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+这是“
+\begin_inset Formula $0^{0}$
+\end_inset
+
+"型的极限.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}x^{x}=\underset{x\rightarrow0^{+}}{\lim}e^{lnx^{x}}=\underset{x\rightarrow0^{+}}{\lim}e^{xlnx}=e^{\underset{x\rightarrow0^{+}}{\lim}xlnx}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}x^{\frac{1}{x-1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+这是“
+\begin_inset Formula $1^{\infty}$
+\end_inset
+
+"型的极限.可以用第二个重要极限计算,这里我们仍用取对数的方法处理。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{x\rightarrow1}{\lim}x^{\frac{1}{x-1}}=\underset{x\rightarrow1}{\lim}e^{\frac{1}{x-1}\ln x}=e^{\underset{x\rightarrow1}{\lim}\frac{1}{x-1}\ln x}=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}(1+\frac{1}{x})^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这是“
+\begin_inset Formula $\infty^{0}$
+\end_inset
+
+"型的极限.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}(1+\frac{1}{x})^{x}=\underset{x\rightarrow0^{+}}{\lim}e^{x\ln(1+\frac{1}{x})}=e^{\underset{x\rightarrow0^{+}}{\lim}x\ln(1+\frac{1}{x})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因为
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}x\ln(1+\frac{1}{x})=\underset{x\rightarrow0^{+}}{\lim}\frac{\ln(1+\frac{1}{x})}{\frac{1}{x}}=\underset{x\rightarrow0^{+}}{\lim}\frac{\frac{x}{1+x}\cdot(-\frac{1}{x^{2}})}{(-\frac{1}{x^{2}})}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以
+\begin_inset Formula $\underset{x\rightarrow0^{+}}{\lim}(1+\frac{1}{x})^{x}=e^{\underset{x\rightarrow0^{+}}{\lim}x\ln(1+\frac{1}{x})}=e^{0}=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 泰勒公式(Taylor's Formula)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=f(x_{0}+\Delta x)=f(x_{0})+dy\approx f(x_{0})+\Delta y=f(x_{0})+f'(x_{0})\Delta x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -44806,7 +49673,7 @@ R_{n}(x)=e^{x}-\left(1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Theorem
@@ -44935,12 +49802,230 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 \end_layout
 
 \begin_layout Quotation
+\begin_inset Formula $R_{n}(x)=\frac{f^{n+1}(\xi)(x-x_{0})^{n+1}}{(n+1)!}$
+\end_inset
+
+，
+
+\begin_inset Formula $\xi$
+\end_inset
+
+取值在
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $x$
+\end_inset
+
+至
+\begin_inset Formula $x_{0}$
+\end_inset
+
+之间
+\end_layout
+
+\begin_layout Quotation
 积分型余项(可以看做微积分基本定理的推广):
  
 \end_layout
 
 \begin_layout Quotation
 \begin_inset Formula $R_{n}(x)=\int_{a}^{x}\frac{f^{(n+1)}(t)}{n!}(x-t)^{n}dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+马克劳林公式
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula $R_{n}(x)=\frac{f^{(n+1)}(\xi)(x)^{n+1}}{(n+1)!},(0<\xi<x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+余项估计
+\end_layout
+
+\begin_layout Quotation
+拉格朗日型余项或积分型余项可以帮助估计泰勒展开式和函数在一定区间之内的误差。
+设函数在区间
+\begin_inset Formula $[a−r,a+r]$
+\end_inset
+
+上
+\begin_inset Formula $n$
+\end_inset
+
+次连续可微并且在区间
+\begin_inset Formula $(a−r,a+r)$
+\end_inset
+
+上
+\begin_inset Formula $n+1$
+\end_inset
+
+次可导。
+如果存在正实数
+\begin_inset Formula $M_{n}$
+\end_inset
+
+使得区间
+\begin_inset Formula $(a−r,a+r)$
+\end_inset
+
+里的任意
+\begin_inset Formula $x$
+\end_inset
+
+都有 
+\begin_inset Formula ${\displaystyle |f^{(n+1)}(x)|\leq M_{n}}$
+\end_inset
+
+，
+那么：
+
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula ${\displaystyle f(x)=f(a)+\frac{f'(a)}{1!}(x-a)+\frac{f^{(2)}(a)}{2!}(x-a)^{2}+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^{n}+R_{n}(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+其中
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Formula ${\displaystyle |R_{n}(x)|\leq M_{n}\frac{r^{n+1}}{(n+1)!}}$
+\end_inset
+
+。
+这个上界估计对区间
+\begin_inset Formula $(a−r,a+r)$
+\end_inset
+
+ 里的任意
+\begin_inset Formula $x$
+\end_inset
+
+ 都成立，
+是一个一致估计。
+
+\end_layout
+
+\begin_layout Quotation
+如果当n 趋向于无穷大时，
+还有
+\begin_inset Formula ${\displaystyle M_{n}\frac{r^{n+1}}{(n+1)!}\rightarrow0}$
+\end_inset
+
+，
+那么可以推出
+\begin_inset Formula ${\displaystyle R_{n}(x)\rightarrow0}$
+\end_inset
+
+，
+
+\begin_inset Formula $f$
+\end_inset
+
+是区间
+\begin_inset Formula $(a−r,a+r)$
+\end_inset
+
+上解析函数。
+
+\begin_inset Formula $f$
+\end_inset
+
+在区间
+\begin_inset Formula $(a−r,a+r)$
+\end_inset
+
+上任一点的值都等于在这一点的泰勒展开式的极限。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=e^{x}$
+\end_inset
+
+ 的马克劳林公式
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $f'(x)=f''(x)=\cdots=f^{(n)}(x)=e^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $f'(0)=f''(0)=\cdots=f^{(n)}(0)=1$
+\end_inset
+
+
+\begin_inset Formula $e^{x}=1+\frac{1}{1!}x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}+\frac{e^{\theta x}(x)^{n+1}}{(n+1)!},(0<\theta<1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $R_{n}(x)<\frac{e^{|x|}(x)^{n+1}}{(n+1)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $e^{x}\approx1+\frac{1}{1!}x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=\sin x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sin x=x-\frac{1}{3!}x^{3}+\frac{1}{5!}x^{5}-\cdots+\frac{(-1)^{n-1}}{(2n-1)!}x^{2n-1}+R_{2n}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sin x\approx x-\frac{1}{3!}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sin x\approx x-\frac{1}{3!}x^{3}+\frac{1}{5!}x^{5}$
 \end_inset
 
 
