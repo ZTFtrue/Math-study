@@ -45723,15 +45723,69 @@ y=x+1.
 曲率
 \end_layout
 
+\begin_layout Standard
+弧微分（arc differential）通常指的是弧长的微小变化，
+数学上一般用 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ds$
+\end_inset
+
+ 表示。
+在二维和三维空间中，
+弧微分可以通过微积分的方法来求得。
+
+\end_layout
+
 \begin_layout Subsection
 弧微分
 \end_layout
 
+\begin_layout Subsubsection
+二维平面上的弧微分
+\end_layout
+
 \begin_layout Standard
-弧微分公式:
+在二维平面上，
+给定曲线 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+，
+其弧长微分
+\begin_inset Formula $ds$
+\end_inset
+
+ 由以下公式给出：
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-ds=\sqrt{1+y'^{2}}dx
+ds=\sqrt{dx^{2}+dy^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于 
+\begin_inset Formula $dy=f'(x)dx$
+\end_inset
+
+，
+所以可以改写为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{1+(f'(x))^{2}}\,dx
 \]
 
 \end_inset
@@ -45998,10 +46052,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename image/弧微分.png
 	lyxscale 50
@@ -46021,9 +46071,117 @@ status open
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
+
 
 \end_layout
+
+\begin_layout Paragraph
+参数方程形式
+\end_layout
+
+\begin_layout Standard
+如果曲线由参数方程 
+\begin_inset Formula $x=x(t),y=y(t)$
+\end_inset
+
+ 给出，
+则弧微分为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{\left(\frac{dx}{dt}\right)^{2}+\left(\frac{dy}{dt}\right)^{2}}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+三维空间中的弧微分
+\end_layout
+
+\begin_layout Standard
+对于三维曲线，
+设其参数方程为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=x(t),\quad y=y(t),\quad z=z(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则弧微分为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{\left(\frac{dx}{dt}\right)^{2}+\left(\frac{dy}{dt}\right)^{2}+\left(\frac{dz}{dt}\right)^{2}}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+极坐标系中的弧微分
+\end_layout
+
+\begin_layout Standard
+在极坐标系 
+\begin_inset Formula $\ensuremath{(r,\theta)}$
+\end_inset
+
+中，
+若曲线由
+\begin_inset Formula $\ensuremath{r=r(\theta)}$
+\end_inset
+
+表示，
+则弧微分为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{\left(\frac{dr}{d\theta}\right)^{2}+r^{2}}\,d\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或者若直接给出
+\begin_inset Formula $\ensuremath{(r,\theta)}$
+\end_inset
+
+作为参数方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ds=\sqrt{r^{2}+\left(\frac{dr}{d\theta}\right)^{2}}\,d\theta
+\]
 
 \end_inset
 
@@ -46035,21 +46193,54 @@ status open
 \end_layout
 
 \begin_layout Standard
-在
-\begin_inset Formula $xOy$
+曲率描述的是曲线在某一点的弯曲程度，
+通常用
+\begin_inset Formula $\kappa$
 \end_inset
 
-坐标系中,
+（kappa）表示。
+曲率的倒数称为 曲率半径 
+\begin_inset Formula $R$
+\end_inset
+
+，
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\frac{1}{\kappa}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+曲率可以帮助分析曲线的几何性质，
+例如曲线的“弯曲程度”、拐点、轨迹的变化趋势等。
+
+\end_layout
+
+\begin_layout Subsubsection
+直角坐标系下的曲率
+\end_layout
+
+\begin_layout Standard
+在直角坐标系中,
  设曲线
 \begin_inset Formula $C$
 \end_inset
 
  是光滑的(连续可导),
- 在曲线 
+ 在曲线
 \begin_inset Formula $C$
 \end_inset
 
- 上选定一点 
+ 上选定一点
 \begin_inset Formula $M_{0}$
 \end_inset
 
@@ -46166,7 +46357,7 @@ K=\underset{\Delta s\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid
 
 \end_inset
 
-.曲率是曲线弯曲程度的定量描述,
+曲率是曲线弯曲程度的定量描述,
  曲率大,
  曲线的弯曲程度大；
 去率小曲线的,
@@ -46179,10 +46370,482 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $f'(x)$
+\end_inset
+
+ 是曲线的一阶导数，
+表示切线的斜率。
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $f''(x)$
+\end_inset
+
+ 是曲线的二阶导数，
+表示曲率的变化趋势。
+
+\end_layout
+
+\begin_layout Subparagraph
+参数方程形式
+\end_layout
+
+\begin_layout Standard
+如果曲线用参数方程表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=x(t),\quad y=y(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则曲率为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\kappa=\frac{|x'y''-y'x''|}{(x'^{2}+y'^{2})^{\frac{3}{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $x',y'$
+\end_inset
+
+ 是对参数
+\begin_inset Formula $\ensuremath{t}$
+\end_inset
+
+的一阶导数（速度分量）。
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $x'',y''$
+\end_inset
+
+ 是对参数
+\begin_inset Formula $\ensuremath{t}$
+\end_inset
+
+的二阶导数（加速度分量）。
+
+\end_layout
+
+\begin_layout Subsubsection
+三维曲线的曲率
+\end_layout
+
+\begin_layout Standard
+对于三维曲线，
+设其参数方程为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{r}(t)=(x(t),y(t),z(t))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则曲率的计算公式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\kappa=\frac{|\mathbf{r}'(t)\times\mathbf{r}''(t)|}{|\mathbf{r}'(t)|^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{r}'(t)$
+\end_inset
+
+ 是速度向量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{r}''(t)$
+\end_inset
+
+ 是加速度向量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\times$
+\end_inset
+
+ 表示向量叉积，
+其结果的模长表示法向加速度的大小。
+
+\end_layout
+
+\begin_layout Paragraph
+极坐标系下的曲率
+\end_layout
+
+\begin_layout Standard
+如果曲线在极坐标系中表示为
+\begin_inset Formula $r=r(\theta)$
+\end_inset
+
+，
+则曲率为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\kappa=\frac{|r^{2}+2(r')^{2}-rr''|}{(r^{2}+(r')^{2})^{\frac{3}{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r'=\frac{dr}{d\theta}$
+\end_inset
+
+ 是径向变化率。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{r''=\frac{d^{2}r}{d\theta^{2}}}$
+\end_inset
+
+是径向加速度。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+曲线表示方式
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+曲率公式
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{y=f(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa=\frac{|f''(x)|}{(1+(f'(x))^{2})^{\frac{3}{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+参数方程
+\begin_inset Formula $\ensuremath{x(t),y(t)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa=\frac{|x'y''-y'x''|}{(x'^{2}+y'^{2})^{\frac{3}{2}}}$
+\end_inset
+
  
 \end_layout
 
-\begin_layout Subsection
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+三维曲线 
+\begin_inset Formula $\mathbf{r}(t)=(x(t),y(t),z(t))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa=\frac{|\mathbf{r}'(t)\times\mathbf{r}''(t)|}{|\mathbf{r}'(t)|^{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+极坐标 
+\begin_inset Formula $\ensuremath{r=r(\theta)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{\kappa=\frac{|r^{2}+2(r')^{2}-rr''|}{(r^{2}+(r')^{2})^{\frac{3}{2}}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+圆（半径 
+\begin_inset Formula $R$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+直线 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求椭圆
+\begin_inset Formula $4x^{2}+y^{2}=4$
+\end_inset
+
+在点
+\begin_inset Formula $(0,2)$
+\end_inset
+
+处的曲率.
+\end_layout
+
+\begin_layout Solution
+由隐函数求导法,得
+\begin_inset Formula $8x+2yy'=0$
+\end_inset
+
+,
+\begin_inset Formula $y'=-\frac{4x}{y}$
+\end_inset
+
+,
+\begin_inset Formula $y'(0,2)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+又
+\begin_inset Formula $y''=-\frac{4y-4xy'}{y^{2}}=-\frac{16}{y^{3}}$
+\end_inset
+
+,
+\begin_inset Formula $y''(0,2)=-2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\kappa=|\frac{-2}{(1+0^{2})^{\frac{3}{2}}}|=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x^{2}+y^{2}=R^{2}$
+\end_inset
+
+的圆的曲率为
+\begin_inset Formula $\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由隐函数求导法,得
+\begin_inset Formula $y'=-\frac{x}{y}$
+\end_inset
+
+,
+\begin_inset Formula $y''=-\frac{R^{3}}{y^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\kappa=|\frac{y''}{(1+y'^{2})^{\frac{3}{2}}}|=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 曲率圆与曲率半径
 \end_layout
 
@@ -46317,6 +46980,66 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
+渐屈线和渐伸线是微分几何中的一对互相关联的曲线，
+主要用于描述曲线的局部几何特性。
+
+\end_layout
+
+\begin_layout Standard
+在曲线上选一定点
+\begin_inset Formula $S$
+\end_inset
+
+。
+有一动点
+\begin_inset Formula $P$
+\end_inset
+
+由
+\begin_inset Formula $S$
+\end_inset
+
+出发沿曲线移动，
+选在
+\begin_inset Formula $P$
+\end_inset
+
+的切线上的
+\begin_inset Formula $Q$
+\end_inset
+
+，
+使得曲线长
+\begin_inset Formula $SP$
+\end_inset
+
+和直线段长
+\begin_inset Formula $PQ$
+\end_inset
+
+相同。
+
+\series bold
+渐伸线
+\series default
+就是Q的轨迹。
+
+\end_layout
+
+\begin_layout Standard
+曲线的
+\series bold
+渐屈线
+\series default
+是该曲线每点的
+\series bold
+曲率中心
+\series default
+的集。
+
+\end_layout
+
+\begin_layout Standard
 设已知曲线的方程是
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -46350,45 +47073,6 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \end_layout
 
 \begin_layout Standard
-当点 
-\begin_inset Formula $(x,f(x))$
-\end_inset
-
- 沿曲线 
-\begin_inset Formula $C$
-\end_inset
-
- 移动时，
-相应的曲率中心
-\begin_inset Formula $D$
-\end_inset
-
-的轨迹曲线
-\begin_inset Formula $G$
-\end_inset
-
-称为曲线 C的
-\series bold
-渐屈线
-\series default
-，
-而曲线
-\begin_inset Formula $C$
-\end_inset
-
-称为曲线
-\begin_inset Formula $G$
-\end_inset
-
-的
-\series bold
-渐伸线
-\series default
-.
- 
-\end_layout
-
-\begin_layout Standard
 所以曲线
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -46407,6 +47091,111 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsubsection
+圆的渐伸线
+\end_layout
+
+\begin_layout Standard
+圆的渐伸线会形成一个类似阿基米德螺线的图形。
+
+\end_layout
+
+\begin_layout Standard
+在笛卡儿坐标系中，
+一个圆的渐开线的参数方程可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,x=a\left(\cos\ t+t\sin\ t\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,y=a\left(\sin\ t-t\cos\ t\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula ${\displaystyle \,a}$
+\end_inset
+
+是圆的半径，
+
+\begin_inset Formula ${\displaystyle \,t}$
+\end_inset
+
+为参数
+\end_layout
+
+\begin_layout Standard
+在极坐标系中，
+
+\begin_inset Formula ${\displaystyle \,r,\theta}$
+\end_inset
+
+ 一个圆的渐开线的参数方程可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,r=a\sec\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,\theta=\tan\alpha-\alpha}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula ${\displaystyle \,a}$
+\end_inset
+
+是圆的半径
+\begin_inset Formula ${\displaystyle \,\alpha}$
+\end_inset
+
+为参数
+\end_layout
+
+\begin_layout Standard
+通常，
+一个圆的渐开线常被写成写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,r=a\sqrt{1+t^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \,\theta=\arctan\frac{\cos t+t\sin t}{\sin t-t\cos t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+欧拉建议使用圆的渐开线作为齿轮的形状,
+ 这个设计普遍存在于目前使用，
+称为渐开线齿轮。
 
 \end_layout
 
@@ -46646,6 +47435,45 @@ K=\underset{\Delta x\rightarrow0}{\lim}\mid\frac{\Delta\alpha}{\Delta s}\mid=\le
 \[
 \underset{\Delta x\rightarrow0}{\lim}\frac{\Delta y}{\Delta x}=A=f'(x_{0})
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/Dydx_zh.svg
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -50120,7 +50948,7 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 不定积分的定义
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 如果
 \begin_inset Formula $F(x)$
 \end_inset
@@ -50307,8 +51135,244 @@ R_{n}(x_{0})=R_{n}^{'}(x_{0})=R_{n}^{n}(x_{0})=\cdots=R_{n}^{(n)}(x_{0})=0
 积分表
 \end_layout
 
-\begin_layout Subsection
-不定积分的直接积分法 
+\begin_layout Standard
+基本积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int a\,dx=ax+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int x^{n}\,dx=\frac{x^{n+1}}{n+1}+C\quad(n\neq-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{x}\,dx=\ln|x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int e^{x}\,dx=e^{x}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int a^{x}\,dx=\frac{a^{x}}{\ln a}+C\quad(a>0,a\neq1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+三角函数积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\sin x\,dx=-\cos x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\cos x\,dx=\sin x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\tan x\,dx=\ln|\sec x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\cot x\,dx=\ln|\sin x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\sec x\,dx=\ln|\sec x+\tan x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\csc x\,dx=\ln|\csc x-\cot x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+反三角函数积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{\sqrt{1-x^{2}}}\,dx=\arcsin x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{1+x^{2}}\,dx=\arctan x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\frac{1}{|x|\sqrt{x^{2}-1}}\,dx=\text{arcsec}x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+双曲函数积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\sinh x\,dx=\cosh x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\cosh x\,dx=\sinh x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\tanh x\,dx=\ln|\cosh x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\coth x\,dx=\ln|\sinh x|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对数函数积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int\ln x\,dx=x\ln x-x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int x^{m}\ln x\,dx=\frac{x^{m+1}\ln x}{m+1}-\frac{x^{m+1}}{(m+1)^{2}}+C,\quad(m\neq-1)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -50372,7 +51436,33 @@ F'(u)=f(u),\int f(u)du=F(u)+C
 
 可微,
  那么,
- 根据复合函数微分法,
+ 根据
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+复合函数微分法
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+,
  有
 \begin_inset Formula 
 \[
@@ -50385,12 +51475,122 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $dy=y'dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 从而根据不定积分的定义就得
 \begin_inset Formula 
 \[
 \int f[\varphi(x)]\varphi'(x)dx=F[\varphi(x)]+C=[\int f(u)du]_{u=\varphi(x)}
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+凑成基本积分公式。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $3\cos(3x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+积分的线性性质允许我们把 3 提出：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+I=3\int\cos(3x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+换元
+\end_layout
+
+\begin_layout Example
+令：
+
+\begin_inset Formula $u=3x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对两边求导：
+
+\begin_inset Formula $du=3dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以：
+
+\begin_inset Formula $dx=\frac{du}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代换积分
+\begin_inset Formula $I=3\int\cos u\cdot\frac{du}{3}=\int\cos udu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int\cos udu=\sin u+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int3\cos(3x)dx=\sin(3x)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int3\cos(3x)dx=\int\cos(3x)d(3x)=\sin(3x)+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -50415,9 +51615,78 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \end_inset
 
 
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $du=2dx$
+\end_inset
+
+,
+\begin_inset Formula $dx=\frac{du}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $I=\int\frac{1}{u}\cdot\frac{du}{2}=\frac{1}{2}\int\frac{du}{u}=\frac{1}{2}\ln|u|+C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int\frac{1}{3+2x}dx=\frac{1}{2}\int\frac{1}{3+2x}\cdot2dx=\frac{1}{2}\int\frac{1}{3+2x}\cdot2dx=\frac{1}{2}\int\frac{1}{3+2x}d(2x+3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $=\frac{1}{2}\int\frac{1}{u}d(u)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $d$
+\end_inset
+
+内部的项可任意
+\begin_inset Formula $\pm C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+计算 
+\begin_inset Formula $\int xe^{x^{2}}\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令：
+
+\begin_inset Formula $u=x^{2}$
+\end_inset
+
+,
+ 则 
+\begin_inset Formula $du=2xdx$
+\end_inset
+
+,
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{1}{3+2x}=\frac{1}{2}\cdot\frac{1}{3+2x}\cdot2=\frac{1}{2}\cdot\frac{1}{3+2x}(3+2x)'
+xdx=\frac{du}{2}
 \]
 
 \end_inset
@@ -50425,12 +51694,95 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 
 \end_layout
 
-\begin_layout Solution
+\begin_layout Standard
+代入积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\int xe^{x^{2}}\,dx=\int e^{u}\cdot\frac{du}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{2}\int e^{u}\,du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{2}e^{u}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+换回 
+\begin_inset Formula $u=x^{2}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\frac{1}{2}e^{x^{2}}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{dx}{a^{2}+x^{2}}=\int\frac{1}{a^{2}}\frac{1}{1+\frac{x}{a}^{2}}d\frac{x}{a}=\frac{1}{a}\arctan\frac{x}{a}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int\frac{dx}{a^{2}+x^{2}}=\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 \begin_inset Formula 
 \begin{align*}
-\int\frac{1}{3+2x}dx & =\int\frac{1}{2}\cdot\frac{1}{3+2x}(3+2x)'dx\\
- & =\int\frac{1}{2}\cdot\frac{1}{u}du\\
- & =\frac{1}{2}\ln|u|+C
+\int\sin^{3}xdx= & \int\sin^{2}x\sin xd(\cos x)\\
+= & -\int(1-\cos^{2}x)d\cos x\\
+= & -\cos x+\frac{1}{3}\cos^{3}x+C
 \end{align*}
 
 \end_inset
@@ -50475,7 +51827,8 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 
 ,此时,为新的积分变量且容易积出结果.
  这种代换方法称为第二换元法.
- 对于第二换元法,这里介绍和三角换元 两种情形.
+ 对于第二换元法,
+ 
 \end_layout
 
 \begin_layout Standard
@@ -50571,7 +51924,8 @@ dF[\varphi(x)]=f[\varphi(x)]\varphi'(x)dx
 \series bold
 根式换元
 \series default
-,
+。
+
 \end_layout
 
 \begin_layout Example
@@ -51133,7 +52487,11 @@ uv'=(uv)'-u'v
 \end_layout
 
 \begin_layout Standard
-两个多项式的商
+两个
+\series bold
+多项式
+\series default
+的商
 \begin_inset Formula $\frac{P(x)}{Q(x)}$
 \end_inset
 
@@ -51178,6 +52536,10 @@ uv'=(uv)'-u'v
 假分式
 \series default
 .
+\end_layout
+
+\begin_layout Subsection
+多项式除法
 \end_layout
 
 \begin_layout Standard
@@ -51272,6 +52634,891 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 \end_inset
 
 次的多项式).
+\end_layout
+
+\begin_layout Standard
+多项式除法类似于我们在小学学过的长除法，
+但它用于**两个多项式之间的除法**。
+ 
+\end_layout
+
+\begin_layout Standard
+如果分子多项式 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 的次数大于或等于分母多项式 
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 的次数，
+我们可以使用多项式除法，
+将其拆分成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{P(x)}{Q(x)}=H(x)+\frac{R(x)}{Q(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H(x)$
+\end_inset
+
+ 是商（一个多项式）。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R(x)$
+\end_inset
+
+ 是余数，
+使得 
+\begin_inset Formula $\deg(R)<\deg(Q)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+余数的次数必须小于分母的次数，
+否则说明除法还没完成。
+
+\end_layout
+
+\begin_layout Standard
+然后我们可以分别对 
+\begin_inset Formula $H(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $\frac{R(x)}{Q(x)}$
+\end_inset
+
+ 进行积分。
+
+\end_layout
+
+\begin_layout Example
+简单多项式除法 求解：
+
+\begin_inset Formula $\int\frac{x^{3}+2x^{2}-x+3}{x^{2}+1}\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+进行多项式除法
+\end_layout
+
+\begin_layout Solution
+被除式（分子）：
+
+\begin_inset Formula $\ensuremath{x^{3}+2x^{2}-x+3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+除式（分母）：
+
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第一步：
+最高次项相除
+\end_layout
+
+\begin_layout Solution
+用 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ 除以 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+，
+得到商 
+\begin_inset Formula $x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+然后用 
+\begin_inset Formula $x$
+\end_inset
+
+ 乘以 
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+(x^{2}+1)\cdot x=x^{3}+x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将它们相减：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+(x^{3}+2x^{2}-x+3)-(x^{3}+x)=2x^{2}-2x+3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第二步：
+继续除法
+\end_layout
+
+\begin_layout Solution
+用 
+\begin_inset Formula $2x^{2}$
+\end_inset
+
+ 除以 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+，
+得到商 
+\begin_inset Formula $2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+然后用 
+\begin_inset Formula $2$
+\end_inset
+
+ 乘以 
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+(x^{2}+1)\cdot2=2x^{2}+2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+相减：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+(2x^{2}-2x+3)-(2x^{2}+2)=-2x+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+此时，
+余数 
+\begin_inset Formula $-2x+1$
+\end_inset
+
+ 的次数比分母
+\begin_inset Formula $x^{2}+1$
+\end_inset
+
+ 低，
+所以多项式除法完成。
+
+\end_layout
+
+\begin_layout Solution
+拆分积分
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{x^{3}+2x^{2}-x+3}{x^{2}+1}=x+2+\frac{-2x+1}{x^{2}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以原积分变为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int(x+2)\,dx+\int\frac{-2x+1}{x^{2}+1}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算每个部分
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int x\,dx=\frac{x^{2}}{2},\quad\int2\,dx=2x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对于第二个积分：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int\frac{-2x}{x^{2}+1}\,dx+\int\frac{1}{x^{2}+1}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第一个积分：
+
+\end_layout
+
+\begin_layout Solution
+令 
+\begin_inset Formula $u=x^{2}+1$
+\end_inset
+
+，
+则 
+\begin_inset Formula $du=2x\,dx$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int\frac{-2x}{x^{2}+1}\,dx=-\ln|x^{2}+1|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第二个积分是标准的：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int\frac{1}{x^{2}+1}\,dx=\tan^{-1}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+合并结果
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+I=\frac{x^{2}}{2}+2x-\ln|x^{2}+1|+\tan^{-1}x+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+高次多项式除法,
+ 求：
+
+\begin_inset Formula $\int\frac{x^{4}-3x^{2}+2x+5}{x^{2}-x+1}\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+用 
+\begin_inset Formula $x^{4}$
+\end_inset
+
+ 除以 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+，
+得到商 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+乘回去：
+
+\begin_inset Formula $(x^{2}-x+1)\cdot x^{2}=x^{4}-x^{3}+x^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+相减：
+
+\begin_inset Formula $(x^{4}-3x^{2}+2x+5)-(x^{4}-x^{3}+x^{2})=x^{3}-4x^{2}+2x+5$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+用 
+\begin_inset Formula $x^{3}$
+\end_inset
+
+ 除以 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+，
+得到商 
+\begin_inset Formula $x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+5.
+ 乘回去：
+
+\begin_inset Formula $(x^{2}-x+1)\cdot x=x^{3}-x^{2}+x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+6.
+ 相减：
+
+\begin_inset Formula $(x^{3}-4x^{2}+2x+5)-(x^{3}-x^{2}+x)=-3x^{2}+x+5$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+7.
+ 用 
+\begin_inset Formula $-3x^{2}$
+\end_inset
+
+ 除以 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+，
+得到商 
+\begin_inset Formula $-3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+8.
+ 乘回去：
+
+\begin_inset Formula $(x^{2}-x+1)\cdot(-3)=-3x^{2}+3x-3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+9.
+ 相减：
+
+\begin_inset Formula $(-3x^{2}+x+5)-(-3x^{2}+3x-3)=-2x+8$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{x^{4}-3x^{2}+2x+5}{x^{2}-x+1}=x^{2}+x-3+\frac{-2x+8}{x^{2}-x+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+积分
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+I=\int(x^{2}+x-3)\,dx+\int\frac{-2x+8}{x^{2}-x+1}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第一部分：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int x^{2}\,dx=\frac{x^{3}}{3},\quad\int x\,dx=\frac{x^{2}}{2},\quad\int-3\,dx=-3x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第二部分：
+
+\end_layout
+
+\begin_layout Solution
+令
+\begin_inset Formula $u=x^{2}-x+1$
+\end_inset
+
+，
+则 
+\begin_inset Formula $du=(2x-1)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int\frac{-2x+8}{x^{2}-x+1}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+可以拆分并用换元法计算。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $-2x+8=-2(x-\frac{1}{2})+8-1=-2x+1+7=-2(x-\frac{1}{2})+7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $I=\int\frac{-2(x-\frac{1}{2})+7}{x^{2}-x+1}\,dx=\int\frac{-2(x-\frac{1}{2})}{x^{2}-x+1}\,dx+\int\frac{7}{x^{2}-x+1}\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+令
+\begin_inset Formula $u=x^{2}-x+1$
+\end_inset
+
+，
+则 
+\begin_inset Formula $du=(2x-1)dx$
+\end_inset
+
+，
+我们需要凑
+\begin_inset Formula $2x-1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int\frac{-2(x-\frac{1}{2})}{x^{2}-x+1}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+注意 
+\begin_inset Formula $-2(x-\frac{1}{2})=-2x+1$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int\frac{-2(x-\frac{1}{2})}{x^{2}-x+1}\,dx=-\int\frac{(2x-1)dx}{x^{2}-x+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $-\int\frac{du}{u}=-\ln|u|=-\ln|x^{2}-x+1|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+最终答案：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+I=\frac{x^{3}}{3}+\frac{x^{2}}{2}-3x-2\ln|x^{2}-x+1|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+待定系数法
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{x^{3}}{(x+1)^{4}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int(\frac{A_{1}}{(x+1)^{4}}+\frac{A_{2}}{(x+1)^{3}}+\frac{A_{3}}{(x+1)^{2}}+\frac{A_{4}}{(x+1)})dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x^{3}=A_{1}+A_{2}(x+1)+A_{3}(x+1)^{2}+A_{4}(x+1)^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x^{3}=(A_{4})x^{3}+(A_{3}+3A_{4})x^{2}+(A_{2}+2A_{3}+3A_{4})x+(A_{1}+A_{2}+A_{3}+A_{4})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\ensuremath{x^{3}}$
+\end_inset
+
+项：
+
+\begin_inset Formula $1=A_{4}$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $A_{4}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A_{3}=-3$
+\end_inset
+
+,
+\begin_inset Formula $\ensuremath{A_{2}+2(-3)+3(1)=0\Rightarrow A_{2}-6+3=0\Rightarrow A_{2}=3}$
+\end_inset
+
+,
+\begin_inset Formula $A_{1}=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $I=\int\left(\frac{-1}{(x+1)^{4}}+\frac{3}{(x+1)^{3}}-\frac{3}{(x+1)^{2}}+\frac{1}{x+1}\right)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分别积分：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{-1}{(x+1)^{4}}dx=\int-(x+1)^{-4}dx=\frac{(x+1)^{-3}}{3}=-\frac{1}{3(x+1)^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{3}{(x+1)^{3}}dx=\int3(x+1)^{-3}dx=\frac{3(x+1)^{-2}}{-2}=-\frac{3}{2(x+1)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{-3}{(x+1)^{2}}dx=\int-3(x+1)^{-2}dx=\frac{-3(x+1)^{-1}}{-1}=\frac{3}{x+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\frac{1}{x+1}dx=\ln|x+1|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+I=-\frac{1}{3(x+1)^{3}}-\frac{3}{2(x+1)^{2}}+\frac{3}{x+1}+\ln|x+1|+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+部分分式分解
+\end_layout
+
+\begin_layout Subsection
+特殊代换
+\end_layout
+
+\begin_layout Standard
+某些有理函数的积分可以通过三角代换或其他换元简化。
+
+\end_layout
+
+\begin_layout Standard
+常见的特殊代换 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=a\tan\theta$
+\end_inset
+
+ 适用于 
+\begin_inset Formula $\frac{dx}{a^{2}+x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=a\sinh t$
+\end_inset
+
+ 适用于 
+\begin_inset Formula $\frac{dx}{\sqrt{x^{2}+a^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=a\cosh t$
+\end_inset
+
+ 适用于 
+\begin_inset Formula $\frac{dx}{\sqrt{x^{2}-a^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $I=\int\frac{dx}{x^{2}+4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+令 
+\begin_inset Formula $x=2\tan\theta$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dx=2\sec^{2}\theta\,d\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+积分化简为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int\frac{2\sec^{2}\theta\,d\theta}{4(1+\tan^{2}\theta)}=\frac{1}{2}\int\frac{d\theta}{1+\tan^{2}\theta}=\frac{1}{2}\int d\theta=\frac{1}{2}\theta+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+换回 
+\begin_inset Formula $\theta=\tan^{-1}(x/2)$
+\end_inset
+
+，
+最终结果：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{1}{2}\tan^{-1}\frac{x}{2}+C$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
