@@ -53788,6 +53788,168 @@ I=-\frac{1}{3(x+1)^{3}}-\frac{3}{2(x+1)^{2}}+\frac{3}{x+1}+\ln|x+1|+C
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\int_{0}^{1}x^{2}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+根据定积分的定义：
+
+\begin_inset Formula $\int_{a}^{b}f(x)dx=\lim_{n\to\infty}\sum_{i=1}^{n}f(x_{i})\Delta x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中，
+
+\begin_inset Formula $\Delta x=\frac{b-a}{n}$
+\end_inset
+
+ 是区间 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 被均分成
+\begin_inset Formula $n$
+\end_inset
+
+ 份后的子区间宽度，
+取等距划分点 
+\begin_inset Formula $\ensuremath{x_{i}}$
+\end_inset
+
+为区间左端点，
+则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $a=0,b=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\Delta x=\frac{1-0}{n}=\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+划分点 
+\begin_inset Formula $x_{i}=\frac{i-1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+函数 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+，
+因此在每个小区间的左端点处取值：
+
+\begin_inset Formula $f(x_{i})=\left(\frac{i-1}{n}\right)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此，
+黎曼和为：
+
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}\left(\frac{i-1}{n}\right)^{2}\cdot\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $S_{n}=\frac{1}{n^{3}}\sum_{i=1}^{n}(i-1)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+利用平方数求和公式：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\sum_{i=1}^{n}(i-1)^{2}=\sum_{i=0}^{n-1}i^{2}=\frac{(n-1)n(2n-1)}{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $S_{n}=\frac{(n-1)n(2n-1)}{6n^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{n\to\infty}{\lim}S_{n}=\underset{n\to\infty}{\lim}\frac{(n-1)n(2n-1)}{6n^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分子展开并取主导项：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $(n-1)n(2n-1)=2n^{3}-n^{2}-2n+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{(n-1)n(2n-1)}{6n^{3}}=\frac{2n^{3}-n^{2}-2n+1}{6n^{3}}=\frac{2}{6}-\frac{1}{6n}-\frac{2}{6n^{2}}+\frac{1}{6n^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $\ensuremath{n\to\infty}$
+\end_inset
+
+时，
+后三项趋于 
+\begin_inset Formula $0$
+\end_inset
+
+，
+最终得：
+
+\begin_inset Formula $\underset{n\to\infty}{\lim}S_{n}=\frac{2}{6}=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 定积分的性质
 \end_layout
@@ -53805,6 +53967,33 @@ I=-\frac{1}{3(x+1)^{3}}-\frac{3}{2(x+1)^{2}}+\frac{3}{x+1}+\ln|x+1|+C
 
 \begin_layout Corollary
 \begin_inset Formula $\int_{a}^{b}\alpha f(x)dx=\alpha\int_{a}^{b}f(x)dx$
+\end_inset
+
+(
+\begin_inset Formula $\alpha$
+\end_inset
+
+是常数，
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+是变量需要和
+\begin_inset Formula $x$
+\end_inset
+
+无关)
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\int_{a}^{b}\alpha f(x)dx=-\int_{b}^{a}f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\int_{a}^{a}\alpha f(x)dx=0$
 \end_inset
 
 
@@ -53849,7 +54038,7 @@ I=-\frac{1}{3(x+1)^{3}}-\frac{3}{2(x+1)^{2}}+\frac{3}{x+1}+\ln|x+1|+C
 两部分,则
 \begin_inset Formula 
 \[
-\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
+\int_{a}^{c}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
 \]
 
 \end_inset
@@ -54098,7 +54287,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 
 \begin_layout Theorem
 设函数
-\begin_inset Formula $f(x)$
+\begin_inset Formula $f(t)$
 \end_inset
 
 在区间
@@ -54119,7 +54308,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 
 \begin_layout Theorem
 如果函数
-\begin_inset Formula $f(x)$
+\begin_inset Formula $f(t)$
 \end_inset
 
 在区间
@@ -54131,15 +54320,11 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \series bold
 积分上限
 \series default
-的函数
-\begin_inset Formula 
-\[
-\varPhi(x)=\int_{a}^{x}f(t)dt
-\]
-
+的函
+\begin_inset Formula $\varPhi(x)=\int_{a}^{x}f(t)dt$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Theorem
@@ -54148,15 +54333,8 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
 上可导,
- 并且它的导数
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula 
-\[
-\varPhi'(x)=(\int_{a}^{x}f(t)dt)'=f(x)
-\]
-
+ 并且它的导数 
+\begin_inset Formula $\varPhi'(x)=(\int_{a}^{x}f(t)dt)'=f(x)$
 \end_inset
 
 
@@ -54172,18 +54350,11 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
 上连续,
- 那么函数
-\end_layout
-
-\begin_layout Theorem
-\begin_inset Formula 
-\[
-\varPhi(x)=\int_{a}^{x}f(t)dt
-\]
-
+ 那么函数 
+\begin_inset Formula $\varPhi(x)=\int_{a}^{x}f(t)dt$
 \end_inset
 
-就是
+ 就是
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -54217,7 +54388,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \series default
 ,
  也即连续函数的原函数一定存在.
- 连续函数的变上限积分函数的导数就是被积函数 
+ 连续函数的变上限积分函数的导数就是被积函数.
 \end_layout
 
 \begin_layout Proof
@@ -54363,6 +54534,35 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $(\int_{x}^{5}\cos tdt)'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{\int_{0}^{x}\int_{0}^{x^{2}}\arctan(1+t)dt}{x(1-\cos x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+设
+\begin_inset Formula $u=\int_{0}^{x^{2}}\arctan(1+t)d$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 牛顿-莱布尼茨公式(N-L) 
 \end_layout
@@ -54414,6 +54614,207 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 
 \end_layout
 
+\begin_layout Remark*
+绝对值在积分中的影响主要体现在 区间的分割 和 函数的符号变化。
+以下是一些关键点：
+
+\end_layout
+
+\begin_layout Standard
+在计算积分时，
+如果被积函数包含绝对值符号 
+\begin_inset Formula $|f(x)|$
+\end_inset
+
+，
+则必须分析 函数在积分区间内的符号变化 ，
+并拆分积分区间以去掉绝对值。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{-2}^{2}|x|dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $x\geq0$
+\end_inset
+
+，
+
+\begin_inset Formula $|x|=x$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $x<0$
+\end_inset
+
+，
+
+\begin_inset Formula $|x|=-x$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+因此，
+将积分拆分为：
+
+\begin_inset Formula $\int_{-2}^{2}|x|dx=\int_{-2}^{0}-xdx+\int_{0}^{2}xdx.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x)=\begin{cases}
+2x & 0\leqslant x\leqslant1\\
+2+x & 1<x\leqslant2
+\end{cases}$
+\end_inset
+
+,求
+\begin_inset Formula $p(x)=\int_{0}^{x}f(t)dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $f(x)=\begin{cases}
+2x, & 0\leq x\leq1,\\
+2+x, & 1<x\leq2.
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $0\leq x\leq1$
+\end_inset
+
+，
+被积函数为
+\begin_inset Formula $f(t)=2t$
+\end_inset
+
+，
+所以积分计算如下：
+
+\begin_inset Formula $p(x)=\int_{0}^{x}2tdt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $p(x)=\left[t^{2}\right]_{0}^{x}=x^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+所以在 
+\begin_inset Formula $\ensuremath{0\leq x\leq1}$
+\end_inset
+
+时：
+
+\begin_inset Formula $p(x)=x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $\ensuremath{x>1}$
+\end_inset
+
+时，
+积分需要拆分：
+
+\begin_inset Formula $p(x)=\int_{0}^{1}f(t)dt+\int_{1}^{x}f(t)dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+前一部分
+\begin_inset Formula $\int_{0}^{1}f(t)dt$
+\end_inset
+
+ 已知：
+
+\begin_inset Formula $\int_{0}^{1}2tdt=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+后一部分积分：
+
+\begin_inset Formula $\int_{1}^{x}(2+t)dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算该积分：
+
+\begin_inset Formula $\int_{1}^{x}(2+t)dt=\left[2t+\frac{t^{2}}{2}\right]_{1}^{x}=\left(2x+\frac{x^{2}}{2}\right)-\left(2\cdot1+\frac{1^{2}}{2}\right)2x+\frac{x^{2}}{2}-2-\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $=2x+\frac{x^{2}}{2}-\frac{5}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以在 
+\begin_inset Formula $\ensuremath{1<x\leq2}$
+\end_inset
+
+时，
+
+\begin_inset Formula $p(x)=1+2x+\frac{x^{2}}{2}-\frac{5}{2}=2x+\frac{x^{2}}{2}-\frac{3}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $p(x)=\begin{cases}
+x^{2}, & 0\leq x\leq1,\\
+2x+\frac{x^{2}}{2}-\frac{3}{2}, & 1<x\leq2.
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 定积分的换元积分法与分部积分法
 \end_layout
@@ -54439,6 +54840,7 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
  满足条件:
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $\varphi(\alpha)=a$
 \end_inset
@@ -54533,15 +54935,16 @@ f(\xi)=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \end_inset
 
 上单调且具有连续导数.
- 则有
-\begin_inset Formula 
-\[
-\int_{b}^{a}f(x)dx\overset{x=\varphi(t)}{=}\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt
-\]
+ 则
+\end_layout
 
+\end_deeper
+\begin_layout Theorem
+有 
+\begin_inset Formula $\int_{b}^{a}f(x)dx\overset{x=\varphi(t)}{=}\int_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)dt$
 \end_inset
 
-叫做定积分的换元公式.
+ 叫做定积分的换元公式.
 \end_layout
 
 \begin_layout Proof
@@ -57725,7 +58128,11 @@ Planimeter），
 
 \begin_layout Standard
 一般地，
-凡表示未知函数、未知函数的导数与自变量之间的关系的方程，
+凡表示未知函数、
+\series bold
+未知函数的导数
+\series default
+与自变量之间的关系的方程，
 叫做微分方程,
  有时也简称方程.
 \end_layout
@@ -57792,6 +58199,18 @@ F(x,y,y',\cdots,y^{(n)}=0
 如果微分方程的解中含有任意常数，
 且任意常数的个数与微分方程的阶数相同，
 这样的解叫做微分方程的通解.
+\end_layout
+
+\begin_layout Enumerate
+常微分方程一元函数
+\end_layout
+
+\begin_layout Enumerate
+偏微分方程 多元函数
+\end_layout
+
+\begin_layout Enumerate
+阶 导数的最高阶数
 \end_layout
 
 \begin_layout Paragraph
@@ -57899,7 +58318,57 @@ y|_{x=x_{0}}=y_{0}, & y'|_{x=x_{0}}=y'_{0}
 \end_layout
 
 \begin_layout Section
+一阶微分方程
+\end_layout
+
+\begin_layout Subsection
 分离变量的微分方程
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+分离变量的微分方程
+\series default
+是指可以通过分离
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+和 
+\begin_inset Formula $y$
+\end_inset
+
+（即将 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $\ensuremath{dx}$
+\end_inset
+
+放在一侧，
+
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{dy}$
+\end_inset
+
+放在另一侧）来求解的微分方程。
+其一般形式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=f(x)g(y)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -57976,6 +58445,271 @@ P(x,y)dx+Q(x,y)dy=0
 
 \end_layout
 
+\begin_layout Enumerate
+分离变量：
+将方程改写为：
+
+\begin_inset Formula $\frac{dy}{g(y)}=f(x)dx$
+\end_inset
+
+，
+使得
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+相关的项在左边，
+
+\begin_inset Formula $x$
+\end_inset
+
+ 相关的项在右边。
+
+\end_layout
+
+\begin_layout Enumerate
+积分两边：
+
+\begin_inset Formula $\int\frac{dy}{g(y)}=\int f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求出不定积分，
+得到隐式或显式的解：
+
+\begin_inset Formula $F(y)=G(x)+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+如果有初始条件
+\begin_inset Formula $y(x_{0})=y_{0}$
+\end_inset
+
+，
+代入求出常数
+\begin_inset Formula $C$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Paragraph
+为什么可以对两边进行积分呢？
+
+\end_layout
+
+\begin_layout Standard
+当我们解分离变量的微分方程时，
+我们的目标是通过积分求解未知函数 
+\begin_inset Formula $y(x)$
+\end_inset
+
+。
+让我们从数学原理上理解这个过程。
+
+\end_layout
+
+\begin_layout Standard
+微分方程的本质
+\end_layout
+
+\begin_layout Standard
+一个一阶微分方程
+\begin_inset Formula $\frac{dy}{dx}=f(x,y)$
+\end_inset
+
+ 本质上是描述
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+相对于
+\begin_inset Formula $x$
+\end_inset
+
+ 的变化率。
+解这个方程的目标是找到
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+关于 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+的显式或隐式表达式。
+
+\end_layout
+
+\begin_layout Standard
+对于 可分离变量的微分方程：
+
+\begin_inset Formula $\frac{dy}{dx}=f(x)g(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以 分离变量：
+
+\begin_inset Formula $\frac{dy}{g(y)}=f(x)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{dy}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{dx}$
+\end_inset
+
+代表无穷小量，
+我们可以视作“变量分离”进行操作（严格来说，
+微积分的黎曼定义不直接支持“微元”计算，
+但从微分形式的角度是合理的）。
+
+\end_layout
+
+\begin_layout Standard
+基于等号的性质 
+\begin_inset Formula $\int\frac{dy}{g(y)}=\int f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从代数角度来看，
+积分的本质是求“反导函数”，
+如果两个表达式相等（例如，
+
+\begin_inset Formula $\frac{dy}{g(y)}=f(x)dx$
+\end_inset
+
+），
+那么对等式两边做相同的操作（比如积分），
+仍然保持等式成立。
+
+\end_layout
+
+\begin_layout Standard
+微积分基本定理
+\end_layout
+
+\begin_layout Standard
+假设
+\begin_inset Formula $\ensuremath{F(y)}$
+\end_inset
+
+是
+\begin_inset Formula $\ensuremath{\frac{1}{g(y)}}$
+\end_inset
+
+的一个原函数，
+
+\begin_inset Formula $\ensuremath{G(x)}$
+\end_inset
+
+是
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+的一个原函数，
+那么：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dx}F(y)=\frac{dy}{dx}\cdot\frac{1}{g(y)}=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+所以两边积分后：
+
+\begin_inset Formula $F(y)=G(x)+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+原来的方程 
+\begin_inset Formula $\frac{dy}{dx}=f(x)g(y)$
+\end_inset
+
+ 只是描述了变化率；
+
+\end_layout
+
+\begin_layout Standard
+通过积分，
+我们找到使这个变化率成立的函数
+\begin_inset Formula $y(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+就像求导是局部的（描述瞬时变化），
+而积分是全局的（累积这些变化），
+所以积分可以帮助我们从微分方程恢复原函数。
+
+\end_layout
+
+\begin_layout Example
+假设有微分方程：
+
+\begin_inset Formula $\frac{dy}{dx}=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这意味着 
+\begin_inset Formula $y$
+\end_inset
+
+ 的变化率等于
+\begin_inset Formula $x$
+\end_inset
+
+。
+要求
+\begin_inset Formula $y$
+\end_inset
+
+，
+我们两边积分：
+
+\begin_inset Formula $\int dy=\int xdx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+得到：
+
+\begin_inset Formula $y=\frac{x^{2}}{2}+C$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
 求
 \begin_inset Formula $\frac{dy}{dx}=2xy^{2}$
@@ -57985,7 +58719,7 @@ P(x,y)dx+Q(x,y)dy=0
 \end_layout
 
 \begin_layout Solution
-方程两端同时乘
+方程两端同时除
 \begin_inset Formula $\frac{dx}{y^{2}}$
 \end_inset
 
@@ -58041,7 +58775,7 @@ P(x,y)dx+Q(x,y)dy=0
 ,那么原方程就称为可分离变量得微分方程.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 齐次方程
 \end_layout
 
@@ -58367,7 +59101,7 @@ x\cdot\frac{du}{dx}=\frac{u^{2}}{u-1}-u=\frac{u}{u-1}
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 可化为齐次的方程
 \end_layout
 
@@ -58575,7 +59309,7 @@ a_{1} & b_{1}
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 一阶线性微分方程
 \end_layout
 
@@ -58607,7 +59341,7 @@ a_{1} & b_{1}
  称为非齐次的.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 
 \series bold
 次线性方程通解
@@ -58680,11 +59414,11 @@ y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
 上式就是对应的齐次线性方程的通解
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 非齐次线性方程通解
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 
 \series bold
 常数易变法
@@ -59083,6 +59817,40 @@ z=y^{1-n}
 \end_layout
 
 \begin_layout Section
+高阶线性微分方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f(x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+叫做二阶微分方程.
+\end_layout
+
+\begin_layout Standard
+右端
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+时,
+ 方程叫做齐次的;
+ 当
+\begin_inset Formula $f(x)\neq0$
+\end_inset
+
+时,
+ 方程叫做非齐次的.
+\end_layout
+
+\begin_layout Section
 可降阶的高阶微分方程
 \end_layout
 
@@ -59441,40 +60209,6 @@ y'=p=\varphi(y,C_{1})
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-高阶线性微分方程
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-y''+P(x)y'+Q(x)y=f(x)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-叫做二阶微分方程.
-\end_layout
-
-\begin_layout Standard
-右端
-\begin_inset Formula $f(x)=0$
-\end_inset
-
-时,
- 方程叫做齐次的;
- 当
-\begin_inset Formula $f(x)\neq0$
-\end_inset
-
-时,
- 方程叫做非齐次的.
 \end_layout
 
 \begin_layout Subsection
@@ -60037,7 +60771,7 @@ x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy'+p_{n}y=f(x)
 \end_layout
 
 \begin_layout Section
-平面图形的面积 
+平面图形的面积
 \end_layout
 
 \begin_layout Section
