@@ -14176,7 +14176,15 @@ status open
 \end_inset
 
 ,椭圆越扁平,这样,
- c和a这两个量,可以刻画椭圆的扁平程度.
+ 
+\begin_inset Formula $c$
+\end_inset
+
+和
+\begin_inset Formula $a$
+\end_inset
+
+这两个量,可以刻画椭圆的扁平程度.
 \end_layout
 
 \begin_layout Standard
@@ -14522,6 +14530,21 @@ status open
 \end_inset
 
 ;
+\end_layout
+
+\begin_layout Standard
+参考
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "subsec:渐进线"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -20336,14 +20359,49 @@ G的乘法满足结合律,即对任意的
 \end_layout
 
 \begin_layout Standard
-过空间某定点O(原点)作三条互相垂直的数轴(它们都以O为原点,
+过空间某定点
+\begin_inset Formula $O$
+\end_inset
+
+(原点)作三条互相垂直的数轴(它们都以
+\begin_inset Formula $O$
+\end_inset
+
+为原点,
  通常取相同的长度单位),
  分别称为x轴、y轴和z轴.
- 每两轴组成的面称为坐标平面(xOy,yOz,xOz),
- 三个坐标平面把空间分成八个部分,
+ 每两轴组成的面称为坐标平面
+\begin_inset Formula $(xOy,yOz,xOz)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+三个坐标平面把空间分成八个部分,
  称为八个挂限.
- 空间两点P(x1,y1,z1),
- P2距离:|P1P2|=(x1-x2)^2+()+() 
+ 空间两点
+\begin_inset Formula $P_{1}$
+\end_inset
+
+
+\begin_inset Formula $(x_{1},y_{1},z_{1})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+
+\begin_inset Formula $(x_{2},y_{2},z_{2})$
+\end_inset
+
+ 距离:
+\begin_inset Formula $|P_{1}P_{2}|=\sqrt{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}+(z_{1}-z_{2})^{2}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -20434,6 +20492,25 @@ G(x,y,z)=0
 \end_layout
 
 \begin_layout Subsection
+平面方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax+By+Cz=0$
+\end_inset
+
+,
+\begin_inset Formula $A,B,C$
+\end_inset
+
+不全为
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 球面
 \end_layout
 
@@ -20496,8 +20573,12 @@ G(x,y,z)=0
  平行滑动形成的轨迹称为柱面；
 平面
 \series bold
-曲线c
+曲线
 \series default
+
+\begin_inset Formula $c$
+\end_inset
+
 称为
 \series bold
 柱面的准线
@@ -20505,8 +20586,12 @@ G(x,y,z)=0
 ,
  动直
 \series bold
-线l
+线
 \series default
+
+\begin_inset Formula $l$
+\end_inset
+
 称为柱面的
 \series bold
 母线
@@ -20518,8 +20603,12 @@ G(x,y,z)=0
 \begin_layout Standard
 
 \series bold
-平面曲线c
+平面曲线
 \series default
+
+\begin_inset Formula $c$
+\end_inset
+
 绕着同一平面内的一条
 \series bold
 定直线l
@@ -20527,7 +20616,16 @@ G(x,y,z)=0
 旋转而形成的曲面称为旋转曲面,
  曲线c称为母线,
  定直线l称为旋转轴.
-  
+ 
+\end_layout
+
+\begin_layout Standard
+圆柱面 ：
+
+\begin_inset Formula $x^{2}+y^{2}=R^{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -37883,7 +37981,7 @@ x^{2}+1 & x<1\\
 多元函数
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 多元函数是指定义域为
 \begin_inset Formula ${\displaystyle {\scriptstyle \mathbb{R}^{n}}}$
 \end_inset
@@ -38010,6 +38108,833 @@ x^{2}+1 & x<1\\
  它的定义域不再特別标出.
 \end_layout
 
+\begin_layout Standard
+几何意义：
+一元函数,
+ 曲线；
+二元函数，
+曲面，
+定义域是在
+\begin_inset Formula $xOy$
+\end_inset
+
+平面上的投影。
+
+\end_layout
+
+\begin_layout Definition
+多元函数的邻域：
+在高维空间（如 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+），
+邻域的概念可以推广为：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+U_{\epsilon}(\mathbf{a})=\{\mathbf{x}\in\mathbb{R}^{n}\mid\|\mathbf{x}-\mathbf{a}\|<\epsilon\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中
+\begin_inset Formula $\ensuremath{\|\mathbf{x}-\mathbf{a}\|}$
+\end_inset
+
+是欧几里得距离，
+即：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\sqrt{(x_{1}-a_{1})^{2}+(x_{2}-a_{2})^{2}+\dots+(x_{n}-a_{n})^{2}}<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+这表示的是一个 以
+\begin_inset Formula $\ensuremath{\mathbf{a}}$
+\end_inset
+
+为中心、半径为 
+\begin_inset Formula $\ensuremath{\epsilon}$
+\end_inset
+
+的超球。
+
+\end_layout
+
+\begin_layout Definition
+删除邻域（去心邻域）：
+
+\begin_inset Formula $U_{\epsilon}(\mathbf{a})=\{\mathbf{x}\in\mathbb{R}^{n}\mid0<\|\mathbf{x}-\mathbf{a}\|<\epsilon\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+内点：
+设
+\begin_inset Formula $S$
+\end_inset
+
+ 是实数集
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ 的一个子集，
+点 
+\begin_inset Formula $a$
+\end_inset
+
+ 是
+\begin_inset Formula $S$
+\end_inset
+
+ 内的一个点。
+如果存在一个
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-邻域 
+\begin_inset Formula $U_{\epsilon}(a)$
+\end_inset
+
+，
+使得：
+
+\begin_inset Formula 
+\[
+U_{\epsilon}(a)\subseteq S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+即
+\series bold
+ 存在一个足够小的开区间
+\series default
+ 
+\begin_inset Formula $(a-\epsilon,a+\epsilon)$
+\end_inset
+
+，
+它完全属于
+\begin_inset Formula $S$
+\end_inset
+
+，
+那么
+\begin_inset Formula $\ensuremath{a}$
+\end_inset
+
+就是
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+的一个 
+\series bold
+内点
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+边界点：
+设 
+\begin_inset Formula $S$
+\end_inset
+
+ 是实数集
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ 的一个子集，
+点
+\begin_inset Formula $a$
+\end_inset
+
+ 是
+\begin_inset Formula $S$
+\end_inset
+
+ 的边界点（boundary point），
+如果：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\forall\epsilon>0,\quad U_{\epsilon}(a)\cap S\neq\emptyset\quad\text{且}\quad U_{\epsilon}(a)\cap S^{c}\neq\emptyset
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+即：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在任意小的 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-邻域
+\begin_inset Formula $\ensuremath{U_{\epsilon}(a)}$
+\end_inset
+
+内，
+至少有一点属于
+\begin_inset Formula $S$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+在相同的
+\begin_inset Formula $\epsilon$
+\end_inset
+
+-邻域内，
+至少有一点不属于
+\begin_inset Formula $S$
+\end_inset
+
+（即属于 
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+的补集 
+\begin_inset Formula $S^{c}$
+\end_inset
+
+）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+如果一个点满足上述两个条件，
+则它是
+\begin_inset Formula $S$
+\end_inset
+
+ 的边界点。
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $S=(0,1)$
+\end_inset
+
+，
+即所有
+\begin_inset Formula $\ensuremath{0<x<1}$
+\end_inset
+
+的点：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0$
+\end_inset
+
+ 和
+\begin_inset Formula $1$
+\end_inset
+
+ 是
+\begin_inset Formula $S$
+\end_inset
+
+ 的 边界点 ，
+因为对于任意 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+，
+邻域
+\begin_inset Formula $\ensuremath{(0-\epsilon,0+\epsilon)}$
+\end_inset
+
+既包含
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+内的点（如 
+\begin_inset Formula $0.1$
+\end_inset
+
+），
+也包含
+\begin_inset Formula $S$
+\end_inset
+
+ 外的点（如
+\begin_inset Formula $-0.1$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Enumerate
+任何
+\begin_inset Formula $0<x<1$
+\end_inset
+
+ 内的点都不是边界点，
+因为其邻域完全落在
+\begin_inset Formula $S$
+\end_inset
+
+ 内，
+不会包含
+\begin_inset Formula $S^{c}$
+\end_inset
+
+ 的点。
+
+\end_layout
+
+\begin_layout Enumerate
+边界 ：
+
+\begin_inset Formula $\partial S=\{0,1\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设 
+\begin_inset Formula $S=[0,1]$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0$
+\end_inset
+
+ 和 
+\begin_inset Formula $1$
+\end_inset
+
+ 仍然是边界点，
+因为它们的邻域同时包含
+\begin_inset Formula $S$
+\end_inset
+
+ 内和
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+外的点。
+
+\end_layout
+
+\begin_layout Enumerate
+任何
+\begin_inset Formula $\ensuremath{0<x<1}$
+\end_inset
+
+内的点都不是边界点，
+因为它们的邻域不会包含
+\begin_inset Formula $\ensuremath{S^{c}}$
+\end_inset
+
+的点。
+
+\end_layout
+
+\begin_layout Enumerate
+边界：
+
+\begin_inset Formula $\partial S=\{0,1\}$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+离散集合 ：
+设 
+\begin_inset Formula $S=\{0,1,2,3\}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+由离散点组成，
+每个点的任意小邻域都会包含非 
+\begin_inset Formula $S$
+\end_inset
+
+ 的点，
+因此所有 
+\begin_inset Formula $\ensuremath{0,1,2,3}$
+\end_inset
+
+都是边界点。
+
+\end_layout
+
+\begin_layout Example
+边界：
+
+\begin_inset Formula $\partial S=\{0,1,2,3\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Definition
+边界的定义
+\end_layout
+
+\begin_layout Definition
+集合 
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+的 边界（boundary），
+记作 
+\begin_inset Formula $\partial S$
+\end_inset
+
+，
+是所有边界点的集合：
+
+\begin_inset Formula 
+\[
+\partial S=\{x\in\mathbb{R}\mid x\text{ 是 }S\text{ 的边界点}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+边界的性质
+\end_layout
+
+\begin_layout Itemize
+开集
+\begin_inset Formula $S$
+\end_inset
+
+ 的边界是其
+\series bold
+闭包
+\series default
+减去它本身：
+
+\begin_inset Formula $\partial S=\overline{S}-S$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+闭集
+\begin_inset Formula $S$
+\end_inset
+
+ 的边界是其
+\series bold
+闭包
+\series default
+减去其内部：
+
+\begin_inset Formula $\partial S=\overline{S}-int(S)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+开区间
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 的边界是
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+闭区间 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ 的边界仍然是
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+实数集
+\begin_inset Formula $\ensuremath{\mathbb{R}}$
+\end_inset
+
+本身的边界为空集，
+因为没有外部点。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+多维空间中的边界点
+\end_layout
+
+\begin_layout Definition
+在 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ 中，
+边界点的定义类似：
+
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $S\subset\mathbb{R}^{n}$
+\end_inset
+
+，
+点
+\begin_inset Formula $\ensuremath{\mathbf{x}}$
+\end_inset
+
+是
+\begin_inset Formula $S$
+\end_inset
+
+ 的边界点，
+如果对于任意小的
+\begin_inset Formula $\epsilon-$
+\end_inset
+
+球：
+
+\begin_inset Formula 
+\[
+B_{\epsilon}(\mathbf{x})=\{\mathbf{y}\in\mathbb{R}^{n}\mid\|\mathbf{y}-\mathbf{x}\|<\epsilon\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其内部同时包含
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+的点和 
+\begin_inset Formula $\ensuremath{S^{c}}$
+\end_inset
+
+的点。
+
+\end_layout
+
+\begin_layout Example
+单位开球
+\begin_inset Formula $\ensuremath{S=\{(x,y)\mid x^{2}+y^{2}<1\}}$
+\end_inset
+
+的边界是 单位圆 
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+单位闭球
+\begin_inset Formula $\ensuremath{S=\{(x,y)\mid x^{2}+y^{2}\leq1\}}$
+\end_inset
+
+的边界仍然是 
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+概念
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+定义
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+内点（Interior Point）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+存在邻域完全属于集合
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+外点（Exterior Point）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+存在邻域完全属于 
+\begin_inset Formula $S^{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+边界点（Boundary Point）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+邻域同时包含
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+内和外的点
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+聚点（Accumulation Point）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+邻域包含无限多个
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+内的点
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+闭包（Closure）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{S}$
+\end_inset
+
+内点 + 边界点
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 极限与连续性
 \end_layout
@@ -38018,7 +38943,7 @@ x^{2}+1 & x<1\\
 极限
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 设二元函数
 \begin_inset Formula $f(P)=f(x,y)$
 \end_inset
@@ -38101,6 +39026,272 @@ x^{2}+1 & x<1\\
 二重极限
 \series default
 .
+\end_layout
+
+\begin_layout Standard
+在计算二重极限时，
+我们需要验证 极限是否唯一 ，
+也就是从不同路径趋近
+\begin_inset Formula $\ensuremath{(0,0)}$
+\end_inset
+
+是否得到相同的值。
+如果不同路径得到的极限不同，
+则该极限 不存在。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x,y)=\begin{cases}
+\frac{xy}{x^{2}+y^{2}} & x^{2}+y^{2}\neq0\\
+0 & x^{2}+y^{2}=0
+\end{cases}$
+\end_inset
+
+,
+\begin_inset Formula $(x,y)\rightarrow0$
+\end_inset
+
+时的极限。
+
+\end_layout
+
+\begin_layout Solution
+沿
+\begin_inset Formula $x$
+\end_inset
+
+ 轴
+\begin_inset Formula $(\ensuremath{y=0})$
+\end_inset
+
+,
+ 设
+\begin_inset Formula $y=0$
+\end_inset
+
+，
+则：
+
+\begin_inset Formula $f(x,0)=\frac{x\cdot0}{x^{2}+0^{2}}=0$
+\end_inset
+
+,
+ 所以：
+
+\begin_inset Formula $\lim\limits_{x\to0}f(x,0)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+沿
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+轴
+\begin_inset Formula $(\ensuremath{x=0})$
+\end_inset
+
+,
+ 设
+\begin_inset Formula $x=0$
+\end_inset
+
+，
+则：
+
+\begin_inset Formula $f(0,y)=\frac{0\cdot y}{0^{2}+y^{2}}=0$
+\end_inset
+
+,
+ 所以：
+
+\begin_inset Formula $\lim\limits_{y\to0}f(0,y)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+沿 
+\begin_inset Formula $y=x$
+\end_inset
+
+,
+ 设
+\begin_inset Formula $y=x$
+\end_inset
+
+，
+则：
+
+\begin_inset Formula $f(x,x)=\frac{x\cdot x}{x^{2}+x^{2}}=\frac{x^{2}}{2x^{2}}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以：
+
+\begin_inset Formula $\lim\limits_{x\to0}f(x,x)=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+不同路径得到了不同的极限值,
+ 由于极限值依赖于路径，
+极限不存在。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\lim\limits_{x\to0,y\rightarrow5}\frac{x}{\sin xy}=\lim\limits_{x\to0,y\rightarrow5}\frac{xy}{\sin xy}\cdot\frac{1}{y}=\frac{1}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\lim\limits_{x\to\infty,y\rightarrow\infty}\frac{x+y}{x^{2}+y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+找到上下界,
+ 考虑绝对值：
+
+\begin_inset Formula $\left|\frac{x+y}{x^{2}+y^{2}}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $|x|\leq\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+ 且 
+\begin_inset Formula $|y|\leq\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+，
+所以有：
+
+\begin_inset Formula 
+\[
+|x+y|\leq|x|+|y|\leq2\sqrt{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+另一方面，
+分母满足：
+
+\begin_inset Formula 
+\[
+x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此，
+我们得到不等式：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+0\leq\left|\frac{x+y}{x^{2}+y^{2}}\right|\leq\frac{2\sqrt{x^{2}+y^{2}}}{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将分子、分母同时除以
+\begin_inset Formula $\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+：
+
+\begin_inset Formula 
+\[
+\frac{2\sqrt{x^{2}+y^{2}}}{x^{2}+y^{2}}=\frac{2}{\sqrt{x^{2}+y^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于当
+\begin_inset Formula $x,y\to\infty$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\ensuremath{x^{2}+y^{2}\to\infty}$
+\end_inset
+
+，
+所以
+\begin_inset Formula $\sqrt{x^{2}+y^{2}}\to\infty$
+\end_inset
+
+，
+于是：
+
+\begin_inset Formula 
+\[
+\frac{2}{\sqrt{x^{2}+y^{2}}}\to0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由夹逼定理可得：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\lim\limits_{x\to\infty,y\rightarrow\infty}\frac{x+y}{x^{2}+y^{2}}=0
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -38764,7 +39955,7 @@ f'(x_{0})=\underset{h\rightarrow0}{\lim}\frac{f(x_{0}+h)-f(x_{0})}{h}
 \begin_inset Formula $\sqrt[3]{x}$
 \end_inset
 
-）引起。
+在点0处）引起。
 函数在某点不可导时，
 它的变化无法用简单的斜率描述。
 
@@ -39799,8 +40990,34 @@ y=R\sin t
 
 \end_layout
 
+\begin_layout Standard
+一元函数：
+可导必定连续
+\end_layout
+
+\begin_layout Standard
+多元函数：
+偏导存在不一定连续，
+偏导存在只能证明这几个方向连续，
+不能证明其它方向连续。
+
+\end_layout
+
 \begin_layout Subsection
 二元函数的偏导数
+\end_layout
+
+\begin_layout Standard
+偏改变量
+\begin_inset Formula $\Delta_{x}Z=f(x_{0}+\Delta x,y_{0})-f(x_{0},y_{0})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Delta_{y}Z=f(x_{0},y_{0}+\Delta y)-f(x_{0},y_{0})$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -40053,7 +41270,11 @@ f'_{y}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\De
 \series default
 .
  在求多元函数对某个变量的偏导数时,
- 其余变量均可视为常量,
+ 
+\series bold
+其余变量均可视为常量
+\series default
+,
  本质上是一元函数的求导因此并不需要建立新的运算法则.
 \end_layout
 
@@ -40076,6 +41297,15 @@ f'_{y}(x_{0},y_{0})=\underset{\Delta x\rightarrow0}{\lim}\frac{f(x_{0},y_{0}+\De
 \end_inset
 
 。
+这些偏导数表示了函数
+\begin_inset Formula $f(x,y,z)$
+\end_inset
+
+在
+\series bold
+各个方向上
+\series default
+的瞬时变化率。
 
 \end_layout
 
@@ -40473,7 +41703,7 @@ f(x,0)=\ln x^{2}=2\ln x
 \end_layout
 
 \begin_layout Solution
-\begin_inset Formula $\frac{\partial}{\partial x}(-e^{0})=0$
+\begin_inset Formula $\frac{\partial}{\partial x}(-e^{z})=0$
 \end_inset
 
 
@@ -40565,15 +41795,24 @@ f(x,0)=\ln x^{2}=2\ln x
 \end_layout
 
 \begin_layout Solution
-由于
-\begin_inset Formula $\ensuremath{f(x,y,z)}$
+\begin_inset Formula $\frac{\partial f}{\partial z}=\cos(x+y^{2}-e^{z})\cdot\frac{\partial}{\partial z}(x+y^{2}-e^{z})$
 \end_inset
 
-不含
-\begin_inset Formula $z$
+
+\end_layout
+
+\begin_layout Solution
+其中:
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial}{\partial z}(-e^{z})=-e^{z}$
 \end_inset
 
-，
+
+\end_layout
+
+\begin_layout Solution
 所以：
 
 \end_layout
@@ -40581,7 +41820,7 @@ f(x,0)=\ln x^{2}=2\ln x
 \begin_layout Solution
 \begin_inset Formula 
 \[
-\frac{\partial f}{\partial z}=0
+\frac{\partial f}{\partial z}=\cos(x+y^{2}-e^{z})\cdot(-e^{z})
 \]
 
 \end_inset
@@ -40618,7 +41857,7 @@ f(x,0)=\ln x^{2}=2\ln x
 \begin_layout Solution
 \begin_inset Formula 
 \[
-\frac{\partial f}{\partial z}=0
+\frac{\partial f}{\partial z}=\cos(x+y^{2}-e^{z})\cdot(-e^{z})
 \]
 
 \end_inset
@@ -40846,6 +42085,159 @@ f(x,0)=\ln x^{2}=2\ln x
 \frac{\partial f}{\partial z}=0
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x,y)=\begin{cases}
+\frac{xy}{x^{2}+y^{2}} & x^{2}+y^{2}\neq0\\
+0 & x^{2}+y^{2}=0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f}{\partial x}$
+\end_inset
+
+ ,
+\begin_inset Formula $(x,y)\neq(0,0)$
+\end_inset
+
+ 时 ,
+\begin_inset Formula $\frac{\partial f}{\partial x}=\lim\limits_{h\to0}\frac{f(x+h,y)-f(x,y)}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+使用偏导数定义：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $f(x+h,y)=\frac{(x+h)y}{(x+h)^{2}+y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f}{\partial x}=\lim\limits_{h\to0}\frac{\frac{(x+h)y}{(x+h)^{2}+y^{2}}-\frac{xy}{x^{2}+y^{2}}}{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f}{\partial x}=\frac{y(x^{2}-y^{2})}{(x^{2}+y^{2})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+在
+\begin_inset Formula $\ensuremath{(0,0)}$
+\end_inset
+
+处,
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f}{\partial x}(0,0)=\lim\limits_{h\to0}\frac{f(h,0)-f(0,0)}{h}=\lim\limits_{h\to0}\frac{0}{h}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\ensuremath{(x,y)\neq(0,0)}$
+\end_inset
+
+时 
+\begin_inset Formula $\frac{\partial f}{\partial y}=\frac{x(y^{2}-x^{2})}{(x^{2}+y^{2})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+在
+\begin_inset Formula $\ensuremath{(0,0)}$
+\end_inset
+
+处,
+ 
+\begin_inset Formula $\frac{\partial f}{\partial y}(0,0)=\lim\limits_{h\to0}\frac{f(0,h)-f(0,0)}{h}=\lim\limits_{h\to0}\frac{0}{h}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+因此，
+
+\begin_inset Formula $\frac{\partial f}{\partial y}(0,0)=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=\begin{cases}
+\frac{y(x^{2}-y^{2})}{(x^{2}+y^{2})^{2}}, & (x,y)\neq(0,0)\\
+0, & (x,y)=(0,0)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=\begin{cases}
+\frac{x(y^{2}-x^{2})}{(x^{2}+y^{2})^{2}}, & (x,y)\neq(0,0)\\
+0, & (x,y)=(0,0)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个函数在
+\begin_inset Formula $(0,0)$
+\end_inset
+
+偏导存在，
+但不连续，
+其极限也不存在。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
@@ -42353,7 +43745,7 @@ F_{x}^{'}=3ye^{3xy},F_{y}^{'}=3xe^{3xy},F_{z}^{'}=-2z-e^{-z}
 \end_layout
 
 \begin_layout Subsection
-一元函数的高阶偏导数
+一元函数的高阶导数
 \end_layout
 
 \begin_layout Standard
@@ -42724,7 +44116,11 @@ y''',y^{(4)},\cdots,y^{(n)}
 \begin_inset Formula $\frac{\partial}{\partial x}(\frac{\partial z}{\partial y})$
 \end_inset
 
-称为二阶混合偏导数.
+称为
+\series bold
+二阶混合偏导数
+\series default
+.
  同样可以定义
 \begin_inset Formula $n$
 \end_inset
@@ -42750,7 +44146,11 @@ y''',y^{(4)},\cdots,y^{(n)}
 \begin_inset Formula $D$
 \end_inset
 
-内连续，
+内
+\series bold
+连续
+\series default
+，
 则在区域
 \begin_inset Formula $D$
 \end_inset
@@ -45117,6 +46517,13 @@ f(1)=(1)^{3}-3(1)^{2}+2(1)+1=1-3+2+1=1.
 
 \begin_layout Subsection
 渐进线
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:渐进线"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -45407,11 +46814,7 @@ Vertical Asymptote）(x=A)
 
 \begin_layout Standard
 斜率公式：
-计算：
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $A=\lim\limits_{x\to\pm\infty}\frac{f(x)}{x}$
 \end_inset
 
@@ -48592,62 +49995,80 @@ status open
 \begin_layout Standard
 一般地,
  如果二元函数
-\begin_inset Formula $z=f(x,y)$
+\begin_inset Formula $f$
 \end_inset
 
 在点
-\begin_inset Formula $(x,y)$
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
 \end_inset
 
-处的增量为
-\begin_inset Formula $\Delta x$
-\end_inset
-
-与
-\begin_inset Formula $\Delta y$
-\end_inset
-
-,
- 当 
-\begin_inset Formula $\Delta x\rightarrow0$
-\end_inset
-
-与
-\begin_inset Formula $\Delta y\rightarrow0$
-\end_inset
-
-时,
- 称 
-\begin_inset Formula $A\Delta x+B\Delta y$
-\end_inset
-
- (其中
-\begin_inset Formula $A$
-\end_inset
-
-,
+的某个邻域内有定义，
  
-\begin_inset Formula $B$
+\begin_inset Formula ${\displaystyle {\scriptstyle (x_{0}+\Delta x,y_{0}+\Delta y)}}$
 \end_inset
 
-与
-\begin_inset Formula $\Delta x$
+ 为该邻域内的任意一点，
+则该函数在点
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
 \end_inset
 
-及
-\begin_inset Formula $\Delta y$
+的变化量 
+\begin_inset Formula ${\displaystyle {\scriptstyle \Delta f=f(x_{0}+\Delta x,y_{0}+\Delta y)-f(x_{0},y_{0})}}$
 \end_inset
 
-无关)是函数
-\begin_inset Formula $z=f(x,y)$
+ 可表示为
+\begin_inset Formula ${\displaystyle \Delta f=A\Delta x+B\Delta y+o(\rho)}$
 \end_inset
 
-在点
-\begin_inset Formula $(x,y)$
+，
+其中 
+\begin_inset Formula ${\displaystyle A}$
 \end_inset
 
-处的全微分,
- 记作
+，
+
+\begin_inset Formula ${\displaystyle B}$
+\end_inset
+
+ 皆为常数且仅与点
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+有关，
+而与
+\begin_inset Formula ${\displaystyle \Delta x}$
+\end_inset
+
+，
+
+\begin_inset Formula ${\displaystyle \Delta y}$
+\end_inset
+
+无关，
+ 
+\begin_inset Formula ${\displaystyle {\scriptstyle \rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}}}$
+\end_inset
+
+。
+若
+\begin_inset Formula ${\displaystyle o(\rho)}$
+\end_inset
+
+是当 
+\begin_inset Formula ${\displaystyle \rho\rightarrow0}$
+\end_inset
+
+时的高阶无穷小，
+则称此函数 
+\begin_inset Formula ${\displaystyle f}$
+\end_inset
+
+ 在点
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+可微分，
+记作
 \begin_inset Formula $dz$
 \end_inset
 
@@ -48793,6 +50214,72 @@ dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
 是中间变量还是自变量，
 全微分都保持上述形式，
 这称为全微分形式不变性.
+\end_layout
+
+\begin_layout Paragraph
+必要条件
+\end_layout
+
+\begin_layout Standard
+一个多元函数在某点的全微分存在的必要条件是：
+若多元函数在某点可微，
+则此函数在该点必连续,
+ 且偏导数连续。
+
+\end_layout
+
+\begin_layout Standard
+对于二元函数，
+此定理可表述为：
+若二元函数
+\begin_inset Formula ${\displaystyle z=f(x,y)}$
+\end_inset
+
+在点 
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+可微，
+则此函数在点 
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+必连续。
+
+\end_layout
+
+\begin_layout Standard
+全微分存在另一个必要条件是：
+若多元函数在某点可微，
+则此函数在该点的全微分可表示为各自变量的变化量与该自变量在该点的偏导数之积的和。
+
+\end_layout
+
+\begin_layout Standard
+对于二元函数，
+此定理可表述为：
+二元函数 
+\begin_inset Formula ${\displaystyle z=f(x,y)}$
+\end_inset
+
+在点 
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+可微，
+则此函数在点 
+\begin_inset Formula ${\displaystyle (x_{0},y_{0})}$
+\end_inset
+
+的全微分为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \boldsymbol{d}z|_{(x_{0},\ y_{0})}=f_{x}(x_{0},y_{0})\Delta x+f_{y}(x_{0},y_{0})\Delta y}$
+\end_inset
+
+。
+
 \end_layout
 
 \begin_layout Example
@@ -55216,7 +56703,12 @@ x^{2}, & 0\leq x\leq1,\\
 \end_layout
 
 \begin_layout Section
-反常积分(Improper integral)
+反常(广义)积分(Improper integral)
+\end_layout
+
+\begin_layout Standard
+反常积分指的是 被积函数在积分区间内无界或积分区间为无穷区间的定积分。
+
 \end_layout
 
 \begin_layout Standard
@@ -55226,7 +56718,7 @@ x^{2}, & 0\leq x\leq1,\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 第一类反常积分，
 称为
 \series bold
@@ -55241,7 +56733,7 @@ x^{2}, & 0\leq x\leq1,\\
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 第二类反常积分，
 称为
 \series bold
@@ -55253,7 +56745,7 @@ x^{2}, & 0\leq x\leq1,\\
 不连续点
 \series default
 的积分。
- 
+
 \end_layout
 
 \begin_layout Definition
@@ -55536,10 +57028,141 @@ x^{2}, & 0\leq x\leq1,\\
 \end_inset
 
 发散.
+ 如果
+\begin_inset Formula $F(+\infty)$
+\end_inset
+
+存在，
+该积分收敛，
+否则发散。
+
 \end_layout
 
 \begin_layout Standard
 其它反常积分同理.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}f(x)dx=\underset{x\rightarrow+\infty}{\lim}F(x)-F(a)=F(+\infty)-F(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{-\infty}^{a}f(x)dx=\underset{x\rightarrow-\infty}{\lim}F(x)-F(a)=F(-\infty)-F(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}f(x)dx=\underset{x\rightarrow-\infty}{\lim}F(-\infty)-F(\infty)=F(-\infty)-F(\infty)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x}dx=\sideset{\underset{b\rightarrow\infty}{\lim}}{e^{-x}dx}\int_{0}^{b}=\sideset{\underset{b\rightarrow\infty}{\lim}}{e^{-x}|_{0}^{b}}-=\underset{b\rightarrow\infty}{\lim}(-\frac{1}{e^{b}}+1)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int_{-\infty}^{+\infty}\frac{dx}{1+x^{2}}dx=\arctan x|_{-\infty}^{+\infty}=\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int_{0}^{+\infty}\cos xdx=\sin x|_{0}^{+\infty}$
+\end_inset
+
+,
+ 由于积分的上限 
+\begin_inset Formula $\infty$
+\end_inset
+
+ 处的值不存在有限极限，
+该积分不收敛。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int_{1}^{+\infty}\frac{1}{x^{p}}dx=\begin{cases}
+\frac{1}{p-1} & p>1\\
+\text{发散} & p\leqslant1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{1}^{+\infty}\frac{dx}{x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\int\frac{dx}{x}=\ln|x|+C$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\lim\limits_{b\to+\infty}\ln b-\ln1=+\infty$
+\end_inset
+
+发散
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -55564,6 +57187,338 @@ x^{2}, & 0\leq x\leq1,\\
 \begin_inset Formula $S(b)$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+反常积分的基本性质
+\end_layout
+
+\begin_layout Itemize
+线性性质
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{\int_{a}^{+\infty}g(x)dx}$
+\end_inset
+
+都收敛，
+则对于任意常数
+\begin_inset Formula $c_{1},c_{2}$
+\end_inset
+
+，
+有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}[c_{1}f(x)\pm c_{2}g(x)]dx=c_{1}\int_{a}^{+\infty}f(x)dx\pm c_{2}\int_{a}^{+\infty}g(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+区间可加性
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+若 
+\begin_inset Formula $\int_{a}^{c}f(x)dx$
+\end_inset
+
+ 收敛 ，
+且
+\begin_inset Formula $\int_{c}^{+\infty}f(x)dx$
+\end_inset
+
+ 收敛 ，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{+\infty}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+反之 ，
+如果
+\begin_inset Formula $\int_{a}^{+\infty}f(x)dx$
+\end_inset
+
+ 收敛，
+则
+\begin_inset Formula $\ensuremath{\int_{a}^{c}f(x)dx}$
+\end_inset
+
+必然收敛，
+但 
+\begin_inset Formula $\ensuremath{\int_{c}^{+\infty}f(x)dx}$
+\end_inset
+
+可能发散。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+比较判别法
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+比较收敛性 ：
+如果存在一个函数
+\begin_inset Formula $g(x)$
+\end_inset
+
+，
+使得在某个
+\begin_inset Formula $x\geq A$
+\end_inset
+
+ 时有：
+
+\begin_inset Formula 
+\[
+0\leq f(x)\leq g(x)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\ensuremath{\int_{A}^{+\infty}g(x)dx}$
+\end_inset
+
+收敛，
+则
+\begin_inset Formula $\int_{A}^{+\infty}f(x)dx$
+\end_inset
+
+ 也收敛。
+
+\end_layout
+
+\begin_layout Itemize
+比较发散性：
+如果存在
+\begin_inset Formula $g(x)$
+\end_inset
+
+，
+使得：
+
+\begin_inset Formula 
+\[
+f(x)\geq g(x)\geq0
+\]
+
+\end_inset
+
+且
+\begin_inset Formula $\int_{A}^{+\infty}g(x)dx$
+\end_inset
+
+ 发散，
+则
+\begin_inset Formula $\ensuremath{\int_{A}^{+\infty}f(x)dx}$
+\end_inset
+
+也发散。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+绝对收敛性
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果
+\begin_inset Formula $\int_{a}^{+\infty}|f(x)|dx$
+\end_inset
+
+ 收敛，
+则 
+\begin_inset Formula $\ensuremath{\int_{a}^{+\infty}f(x)dx}$
+\end_inset
+
+也收敛（但反之不一定成立）。
+
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $\ensuremath{\int_{a}^{+\infty}f(x)dx}$
+\end_inset
+
+收敛，
+
+\begin_inset Formula $\int_{a}^{+\infty}|f(x)|dx$
+\end_inset
+
+，
+叫作条件收敛。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+交错级数法
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+若
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+单调递减且
+\begin_inset Formula $\lim\limits_{x\to+\infty}f(x)=0$
+\end_inset
+
+，
+则交错积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{+\infty}(-1)^{n}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可能收敛（类似于交错级数判别法）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+判断收敛
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x^{2}}dx$
+\end_inset
+
+，
+比较
+\begin_inset Formula $e^{-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x^{2}}dx=\int_{0}^{1}e^{-x^{2}}dx+\int_{1}^{+\infty}e^{-x^{2}}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{2}\geqslant x$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-x^{2}\leqslant-x$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e^{-x^{2}}\leqslant e^{-x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{1}^{+\infty}e^{-x}=-e^{-x}|_{1}^{+\infty}=\frac{1}{e}$
+\end_inset
+
+,收敛
+\end_layout
+
+\begin_layout Subsection
+反常积分的计算方法
+\end_layout
+
+\begin_layout Itemize
+使用极限计算：
+将无穷上限或无界点变为极限：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{+\infty}e^{-x}dx=\lim\limits_{b\to+\infty}\int_{0}^{b}e^{-x}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+比较判别法 ：
+与
+\begin_inset Formula $\frac{1}{x^{p}}$
+\end_inset
+
+ 形式的标准积分进行比较。
+
+\end_layout
+
+\begin_layout Itemize
+无穷小替换：
+如
+\begin_inset Formula $\ensuremath{\sin x}$
+\end_inset
+
+等振荡函数的积分，
+可用不等式估计。
+
+\end_layout
+
+\begin_layout Itemize
+分部积分法：
+对某些类型的反常积分（如对数、指数等）使用分部积分化简。
 
 \end_layout
 
@@ -58775,6 +60730,34 @@ P(x,y)dx+Q(x,y)dy=0
 ,那么原方程就称为可分离变量得微分方程.
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\frac{dy}{dx}=-\frac{x}{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\int ydy=\int-xdx+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{y^{2}}{2}=-\frac{x^{2}}{2}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $y^{2}+x^{2}=2C$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 齐次方程
 \end_layout
@@ -58794,6 +60777,153 @@ P(x,y)dx+Q(x,y)dy=0
 \begin_layout Standard
 的形式，
 那么就称这方程为齐次方程
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{dy}{dx}=2\sqrt{\frac{y}{x}}+\frac{y}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $u=\frac{y}{x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=xu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $y=xu$
+\end_inset
+
+两边求导（使用乘积法则）：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{dy}{dx}=u+x\frac{du}{dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{du}{dx}$
+\end_inset
+
+ 表示
+\begin_inset Formula $u$
+\end_inset
+
+ 对 
+\begin_inset Formula $x$
+\end_inset
+
+ 的导数
+\end_layout
+
+\begin_layout Solution
+将其代入原方程：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $u+x\frac{du}{dx}=2\sqrt{u}+u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+消去 
+\begin_inset Formula $u$
+\end_inset
+
+：
+
+\begin_inset Formula $x\frac{du}{dx}=2\sqrt{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+可分离变量：
+
+\begin_inset Formula $\frac{du}{\sqrt{u}}=\frac{2}{x}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+写成可分离变量形式：
+
+\begin_inset Formula $\int\frac{du}{\sqrt{u}}=\int\frac{2}{x}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+左边的积分：
+
+\begin_inset Formula $\int u^{-\frac{1}{2}}du=\int\frac{du}{\sqrt{u}}=2\sqrt{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+右边的积分：
+
+\begin_inset Formula $\int\frac{2}{x}dx=2\ln|x|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+整理：
+
+\begin_inset Formula $\sqrt{u}=\ln|x|+\frac{C}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+还原回 
+\begin_inset Formula $y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\sqrt{\frac{y}{x}}=\ln|x|+\frac{C}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $y=x\left(\ln|x|+\frac{C}{2}\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -59336,15 +61466,19 @@ a_{1} & b_{1}
 \end_inset
 
 ,
- 那么方程称为齐次的,
+ 
+\begin_inset Formula $\frac{dy}{dx}+P(x)y=0$
+\end_inset
+
+那么方程称为齐次的,
  否则,
  称为非齐次的.
 \end_layout
 
 \begin_layout Subparagraph
-
+一阶
 \series bold
-次线性方程通解
+线性齐次方程通解
 \end_layout
 
 \begin_layout Standard
@@ -59399,7 +61533,20 @@ a_{1} & b_{1}
 \end_layout
 
 \begin_layout Standard
-或
+或，
+由于对数的定义，
+
+\begin_inset Formula $e^{c_{1}}$
+\end_inset
+
+ 只能取正值，
+但是 
+\begin_inset Formula $y$
+\end_inset
+
+ 可以为正或负，
+因此我们一般写成：
+
 \begin_inset Formula 
 \begin{equation}
 y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
@@ -59411,13 +61558,46 @@ y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
 \end_layout
 
 \begin_layout Standard
-上式就是对应的齐次线性方程的通解
+上式就是对应的齐次线性方程的通解。
+
 \end_layout
 
 \begin_layout Subparagraph
 非齐次线性方程通解
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dy}{dx}+P(x)y=Q(x)\label{eq:非齐次线性方程}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{Q(x)}$
+\end_inset
+
+是关于 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+的已知函数，
+
+\begin_inset Formula $y$
+\end_inset
+
+ 是要求的未知函数。
+
+\end_layout
+
 \begin_layout Subparagraph
 
 \series bold
@@ -59425,183 +61605,146 @@ y=Ce^{-\int P(x)dx}\text{ }(C=\pm e^{c_{1}})
 \end_layout
 
 \begin_layout Standard
-使用
-\series bold
-常数易变法
-\series default
-来求非齐次线性方程的通解.
- 
+求解对应的齐次方程
 \end_layout
 
 \begin_layout Standard
-把齐次线性方程的通解
-\begin_inset Formula $C$
+忽略
+\begin_inset Formula $Q(x)$
 \end_inset
 
-换成
-\begin_inset Formula $x$
+，
+得到齐次方程：
+
+\begin_inset Formula $\frac{dy}{dx}+P(x)y=0.$
 \end_inset
 
-得已知函数
-\series bold
+ 这是齐次方程的通解
+\begin_inset Formula $y=Ce^{-\int P(x)dx}$
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+令常数变为函数：
+
+\end_layout
+
+\begin_layout Standard
+将齐次方程通解中的常数 
+\begin_inset Formula $\ensuremath{C}$
+\end_inset
+
+变为一个待求函数
 \begin_inset Formula $u(x)$
 \end_inset
 
+，
+即设：
 
-\series default
-,即
-\begin_inset Formula 
-\begin{equation}
-y=ue^{-\int P(x)dx}
-\end{equation}
-
+\begin_inset Formula $y=u(x)e^{-\int P(x)dx}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-于是
-\begin_inset Formula 
-\begin{equation}
-\frac{dy}{dx}=u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}
-\end{equation}
+那么：
 
+\begin_inset Formula $\frac{dy}{dx}=u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Standard
+将它代入原方程：
 
 \end_layout
 
 \begin_layout Standard
-将方程
-\begin_inset Formula $(21.3.4)$
+\begin_inset Formula $\left(u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}\right)+P(x)ue^{-\int P(x)dx}=Q(x)$
 \end_inset
 
-和
-\begin_inset Formula $(21.3.5)$
-\end_inset
-
-代入
-\begin_inset Formula $(21.3.1)$
-\end_inset
-
-得
-\begin_inset Formula 
-\begin{align*}
-u'e^{-\int P(x)dx}-uP(x)e^{-\int P(x)dx}+P(x)ue^{-\int P(x)dx}\\
-=Q(x)
-\end{align*}
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Standard
-即
+化简后：
+
 \begin_inset Formula $u'e^{-\int P(x)dx}=Q(x)$
 \end_inset
 
-,
+.
+\end_layout
+
+\begin_layout Standard
+解出 
+\begin_inset Formula $u'$
+\end_inset
+
+：
+
 \begin_inset Formula $u'=Q(x)e^{\int P(x)dx}$
 \end_inset
 
+.
+\end_layout
+
+\begin_layout Standard
+两边积分：
+
+\begin_inset Formula $u=\int Q(x)e^{\int P(x)dx}dx+C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+得到非齐次方程的通解：
 
 \end_layout
 
 \begin_layout Standard
-两端积分，
-得
-\begin_inset Formula 
-\[
-u=\int Q(x)e^{\int P(x)dx}dx+C
-\]
-
+代回
+\begin_inset Formula $y=ue^{-\int P(x)dx}$
 \end_inset
 
-把上式代 
-\begin_inset Formula $(21.3.4)$
-\end_inset
-
-得非齐次线性方程
-\begin_inset Formula $(21.3.1)$
-\end_inset
-
-的通解
-\begin_inset Formula 
-\begin{align}
-y & =(\int Q(x)e^{\int P(x)dx}dx+C)\cdot e^{-\int P(x)dx}\\
- & =C\cdot e^{-\int P(x)dx}+e^{-\int P(x)dx}\cdot\int Q(x)e^{\int P(x)dx}dx\nonumber 
-\end{align}
-
-\end_inset
-
+：
 
 \end_layout
 
 \begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-上式中
-\begin_inset Formula $C\cdot e^{-\int P(x)dx}$
+\begin_inset Formula $y=\left(\int Q(x)e^{\int P(x)dx}dx+C\right)e^{-\int P(x)dx}$
 \end_inset
 
-对应的齐次线性方程的通解,
- 
-\begin_inset Formula $e^{-\int P(x)dx}\cdot\int Q(x)e^{\int P(x)dx}dx$
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=Ce^{-\int P(x)dx}+e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx$
 \end_inset
 
-是非齐次线性方程
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
+.
+\end_layout
 
-\begin_inset Formula $(21.3.1)$
+\begin_layout Standard
+第一项
+\begin_inset Formula $Ce^{-\int P(x)dx}$
 \end_inset
 
+ 是齐次方程的通解。
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-的一个特解(另公式
-\begin_inset Formula $21.3.6$
+\end_layout
+
+\begin_layout Standard
+第二项 
+\begin_inset Formula $\ensuremath{e^{-\int P(x)dx}\int Q(x)e^{\int P(x)dx}dx}$
 \end_inset
 
-中
-\begin_inset Formula $C=0$
-\end_inset
+是非齐次方程的一个特解。
 
-便可求得特解)
 \end_layout
 
 \begin_layout Standard
@@ -59619,6 +61762,199 @@ y & =(\int Q(x)e^{\int P(x)dx}dx+C)\cdot e^{-\int P(x)dx}\\
 非齐次方程的 一个特解之和
 \series default
 .
+\end_layout
+
+\begin_layout Problem
+关于令常数变为函数：
+
+\end_layout
+
+\begin_layout Standard
+对于非齐次方程，
+我们知道齐次解已经涵盖了所有可能的解的结构，
+只不过是乘了一个常数。
+ 
+\end_layout
+
+\begin_layout Standard
+但非齐次项 
+\begin_inset Formula $\ensuremath{Q(x)}$
+\end_inset
+
+的存在打破了简单的常数倍关系，
+因此我们猜想：
+如果常数变成一个关于
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+的函数，
+是否还能满足方程？
+ 
+\end_layout
+
+\begin_layout Standard
+于是我们假设非齐次方程的解形式为：
+
+\begin_inset Formula $y=u(x)e^{-\int P(x)dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 是我们要确定的未知函数，
+它代替了齐次解中的常数 
+\begin_inset Formula $C$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+把常数变成一个函数，
+实际上是让解具备更多的灵活性！
+ 
+\end_layout
+
+\begin_layout Standard
+齐次解：
+仅仅描述了解的基本结构。
+ 
+\end_layout
+
+\begin_layout Standard
+非齐次项：
+带来了一个外部驱动力，
+可能使解的振幅、增减变化更复杂。
+ 
+\end_layout
+
+\begin_layout Standard
+让
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 代替常数，
+就好像允许解根据
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 的变化动态调整自身，
+以适应非齐次项的影响！
+
+\end_layout
+
+\begin_layout Standard
+比如：
+ 
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 很小，
+
+\begin_inset Formula $\ensuremath{u(x)}$
+\end_inset
+
+可能变化缓慢。
+ 
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 很大，
+
+\begin_inset Formula $\ensuremath{u(x)}$
+\end_inset
+
+可能快速增长。
+ 
+\end_layout
+
+\begin_layout Standard
+所以我们要通过代入方程找到这个
+\begin_inset Formula $\ensuremath{u(x)}$
+\end_inset
+
+的具体表达式！
+
+\end_layout
+
+\begin_layout Standard
+齐次解的形式正确，
+只是常数太“死板”而不能适配非齐次项，
+所以我们把常数变成函数，
+给它更多自由度去补偿非齐次项。
+
+\end_layout
+
+\begin_layout Problem
+为什么乘以
+\begin_inset Formula $e^{-\int P(x)\,dx}$
+\end_inset
+
+？
+
+\end_layout
+
+\begin_layout Standard
+这是因为齐次解的结构由 
+\begin_inset Formula $e^{-\int P(x)\,dx}$
+\end_inset
+
+ 决定，
+非齐次解也应保留相同的指数因子，
+以确保解的形式和微分方程的结构一致。
+
+\end_layout
+
+\begin_layout Problem
+为什么这种方法有效？
+
+\end_layout
+
+\begin_layout Enumerate
+线性叠加原理,
+ 线性微分方程的解空间具有加法封闭性，
+即:
+ 
+\begin_inset Formula $y=y_{\text{特解}}+y_{\text{齐次解}}$
+\end_inset
+
+,
+ 这种方法通过引入变化的常数
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 来捕捉非齐次项的贡献。
+
+\end_layout
+
+\begin_layout Enumerate
+自由度的引入,
+ 在齐次解中，
+常数
+\begin_inset Formula $C$
+\end_inset
+
+ 可以任意选取，
+变成函数 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 后可以适应更多的函数形式。
+
 \end_layout
 
 \begin_layout Example
@@ -59693,6 +62029,48 @@ u-\ln|u+1|=x+C
  即可解.
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $ydx+(x-y^{3})dy=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $(x-y^{3})dy=-ydx$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{dy}{dx}=-\frac{y}{x-y^{3}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{dx}{dy}=-\frac{x-y^{3}}{y}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{dx}{dy}=-\frac{1}{y}x+y^{2}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{dx}{dy}+\frac{1}{y}x=y^{2}$
+\end_inset
+
+,带入
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x'+P(y)x=Q(y)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 伯努利方程
 \end_layout
@@ -59764,7 +62142,15 @@ z=y^{1-n}
 \end_layout
 
 \begin_layout Standard
-那么
+那么：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{1-n}\cdot\frac{dy^{1-n}}{dx}+P(x)z=Q(x)$
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \frac{dz}{dx}=(1-n)y^{-n}\frac{dy}{dx}
@@ -59776,7 +62162,7 @@ z=y^{1-n}
 \end_layout
 
 \begin_layout Standard
-方程21.4.1 同时乘以
+方程同时乘以
 \begin_inset Formula $(1-n)$
 \end_inset
 
@@ -59795,7 +62181,7 @@ z=y^{1-n}
 即
 \begin_inset Formula 
 \[
-\frac{dz}{dx}+(1-n)P(x)y^{1-n}=(1-n)Q(x)
+\frac{dz}{dx}+[(1-n)P(x)]z=(1-n)Q(x)
 \]
 
 \end_inset
@@ -59814,6 +62200,257 @@ z=y^{1-n}
 \end_inset
 
 便得到伯努利方程的通解.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[(1-n)P(x)]$
+\end_inset
+
+看做一阶线性微分方程的
+\begin_inset Formula $P(x)$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(1-n)Q(x)$
+\end_inset
+
+看作
+\begin_inset Formula $Q(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y'+\frac{1}{x}y=(\ln x)y^{2}$
+\end_inset
+
+,求
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设：
+
+\begin_inset Formula $z=y^{1-2}=y^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对两边求导：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{dz}{dx}=-y^{-2}\frac{dy}{dx}=-\frac{1}{y^{2}}y'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+整理得：
+
+\begin_inset Formula $y'=-y^{2}\frac{dz}{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将
+\begin_inset Formula $\ensuremath{y'}$
+\end_inset
+
+代入原方程：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-y^{2}\frac{dz}{dx}+\frac{1}{x}y=(\ln x)y^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+两边同时除以
+\begin_inset Formula $y^{2}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-\frac{dz}{dx}+\frac{1}{x}\frac{1}{y}=\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $\frac{1}{y}=z$
+\end_inset
+
+，
+代入：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-\frac{dz}{dx}+\frac{1}{x}z=\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+整理：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{dz}{dx}-\frac{1}{x}z=-\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\mu(x)=e^{\int P(x)dx}=e^{\int-\frac{1}{x}dx}=e^{-\ln x}=\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+两边乘以积分因子
+\begin_inset Formula $\frac{1}{x}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{1}{x}\frac{dz}{dx}-\frac{1}{x^{2}}z=-\frac{\ln x}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+左边是乘积求导公式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{d}{dx}\left(\frac{z}{x}\right)=-\frac{\ln x}{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{z}{x}=-\int\frac{\ln x}{x}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+利用分部积分：
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $u=\ln x$
+\end_inset
+
+，
+
+\begin_inset Formula $dv=\frac{dx}{x}$
+\end_inset
+
+，
+则：
+
+\begin_inset Formula $du=\frac{dx}{x},\quad v=\ln x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int\ln x\frac{dx}{x}=\frac{(\ln x)^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以：
+
+\begin_inset Formula $\frac{z}{x}=-\frac{(\ln x)^{2}}{2}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $z=x\left(-\frac{(\ln x)^{2}}{2}+C\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $z=y^{-1}$
+\end_inset
+
+，
+即：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{1}{z}=\frac{1}{x\left(-\frac{(\ln x)^{2}}{2}+C\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+其中 
+\begin_inset Formula $\ensuremath{C}$
+\end_inset
+
+是积分常数。
+
 \end_layout
 
 \begin_layout Section
@@ -60774,12 +63411,795 @@ x^{n}y^{(n)}+p_{1}x^{n-1}y^{(n-1)}+\cdots+p_{n-1}xy'+p_{n}y=f(x)
 平面图形的面积
 \end_layout
 
+\begin_layout Standard
+基本思想是将曲线围成的区域划分为无穷多个小矩形，
+并通过积分求和得到面积。
+
+\end_layout
+
+\begin_layout Standard
+若曲线
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 与
+\begin_inset Formula $x$
+\end_inset
+
+轴围成的区域在区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 内，
+则面积计算公式为：
+
+\begin_inset Formula $S=\int_{a}^{b}|f(x)|\,dx$
+\end_inset
+
+,
+ 这里取绝对值是为了确保面积始终为正。
+
+\end_layout
+
+\begin_layout Standard
+几种常见情况 
+\end_layout
+
+\begin_layout Itemize
+单函数围成的面积
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+若曲线
+\begin_inset Formula $\ensuremath{y=f(x)}$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上不变号（即始终在
+\begin_inset Formula $x$
+\end_inset
+
+ 轴的同一侧），
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=\int_{a}^{b}f(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $\ensuremath{[a,b]}$
+\end_inset
+
+上有正有负，
+则需要分段积分：
+
+\begin_inset Formula $S=\int_{a}^{c}f(x)\,dx+\int_{c}^{b}|f(x)|\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\ensuremath{c}$
+\end_inset
+
+是
+\begin_inset Formula $\ensuremath{f(x)=0}$
+\end_inset
+
+的解。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+两条曲线围成的面积
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+若
+\begin_inset Formula $\ensuremath{y=f(x)}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{y=g(x)}$
+\end_inset
+
+在
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上围成封闭区域，
+且
+\begin_inset Formula $f(x)\geq g(x)$
+\end_inset
+
+ ，
+则面积为：
+
+\begin_inset Formula $S=\int_{a}^{b}[f(x)-g(x)]\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $\ensuremath{f(x)}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{g(x)}$
+\end_inset
+
+相交多次，
+则需分段积分。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+竖直方向积分（以 y 为积分变量）
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果区域是由
+\begin_inset Formula $x=f(y)$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{x=g(y)}$
+\end_inset
+
+围成，
+并且在
+\begin_inset Formula $\ensuremath{[c,d]}$
+\end_inset
+
+之间，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=\int_{c}^{d}[f(y)-g(y)]\,dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这种方法适用于左右边界是函数的情况，
+例如旋转抛物线围成的区域。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+求曲线 
+\begin_inset Formula $\ensuremath{y=x^{3}-x}$
+\end_inset
+
+在区间
+\begin_inset Formula $\ensuremath{[-1,1]}$
+\end_inset
+
+上围成的面积
+\end_layout
+
+\begin_layout Solution
+先找零点：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+x^{3}-x=0\Rightarrow x(x^{2}-1)=0\Rightarrow x=-1,0,1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分段计算：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+S=\int_{-1}^{0}|x^{3}-x|\,dx+\int_{0}^{1}|x^{3}-x|\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+观察可知：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\ensuremath{x^{3}-x}$
+\end_inset
+
+在
+\begin_inset Formula $\ensuremath{[-1,0]}$
+\end_inset
+
+上负，
+在
+\begin_inset Formula $\ensuremath{[0,1]}$
+\end_inset
+
+上正。
+
+\end_layout
+
+\begin_layout Solution
+绝对值去负号：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+S=\int_{-1}^{0}-(x^{3}-x)\,dx+\int_{0}^{1}(x^{3}-x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+S=\left[-\frac{x^{4}}{4}+\frac{x^{2}}{2}\right]_{-1}^{0}+\left[\frac{x^{4}}{4}-\frac{x^{2}}{2}\right]_{0}^{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=\left(0-\left(-\frac{1}{4}+\frac{1}{2}\right)\right)+\left(\frac{1}{4}-\frac{1}{2}-0\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=\left(\frac{1}{4}+\frac{1}{2}\right)+\left(\frac{1}{4}-\frac{1}{2}\right)=\frac{3}{4}+\left(-\frac{1}{4}\right)=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{1}{1+x^{2}}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=\frac{x^{2}}{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $0$
+\end_inset
+
+到
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+围成的面积。
+
+\end_layout
+
+\begin_layout Example
+找到交点
+\end_layout
+
+\begin_layout Example
+设 
+\begin_inset Formula $\frac{1}{1+x^{2}}=\frac{x^{2}}{2}$
+\end_inset
+
+，
+求解
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+的值：
+
+\begin_inset Formula $\frac{1}{1+x^{2}}=\frac{x^{2}}{2}$
+\end_inset
+
+,
+\begin_inset Formula $x^{2}=\frac{-1+\sqrt{5}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于 
+\begin_inset Formula $[0,\sqrt{3}]$
+\end_inset
+
+，
+取正根：
+
+\begin_inset Formula $x=\sqrt{\frac{-1+\sqrt{5}}{2}}$
+\end_inset
+
+,
+ 我们记作 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+在
+\begin_inset Formula $[0,x_{0}]$
+\end_inset
+
+ 上，
+
+\begin_inset Formula $\ensuremath{y=\frac{1}{1+x^{2}}}$
+\end_inset
+
+在上方，
+
+\begin_inset Formula $\ensuremath{y=\frac{x^{2}}{2}}$
+\end_inset
+
+在下方：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{1}=\int_{0}^{x_{0}}\left(\frac{1}{1+x^{2}}-\frac{x^{2}}{2}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在
+\begin_inset Formula $[x_{0},\sqrt{3}]$
+\end_inset
+
+ 上，
+
+\begin_inset Formula $y=\frac{x^{2}}{2}$
+\end_inset
+
+ 在上方，
+
+\begin_inset Formula $\ensuremath{y=\frac{1}{1+x^{2}}}$
+\end_inset
+
+在下方：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{2}=\int_{x_{0}}^{\sqrt{3}}\left(\frac{x^{2}}{2}-\frac{1}{1+x^{2}}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+总面积：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S=S_{1}+S_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{1}=\left[\tan^{-1}x-\frac{x^{3}}{6}\right]_{0}^{x_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{2}=\left[\frac{x^{3}}{6}-\tan^{-1}x\right]_{x_{0}}^{\sqrt{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 平面曲线的弧长
 \end_layout
 
 \begin_layout Section
 旋转体的体积 
+\end_layout
+
+\begin_layout Standard
+横截面
+\begin_inset Formula $A(x)$
+\end_inset
+
+,
+ 高度
+\begin_inset Formula $\Delta x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=\sum A(x_{i})\Delta x_{i}=\int_{a}^{b}A(x)\Delta x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+经济应用
+\end_layout
+
+\begin_layout Subsection
+计算总成本（Total Cost）
+\end_layout
+
+\begin_layout Standard
+在生产过程中，
+边际成本
+\begin_inset Formula $C'(x)$
+\end_inset
+
+ 代表生产 每增加一单位产量所增加的成本，
+总成本可以用定积分求得：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(x)=\int C'(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知边际成本，
+如果某商品的边际成本为：
+
+\begin_inset Formula $C'(x)=5+0.2x$
+\end_inset
+
+，
+且已知固定成本
+\begin_inset Formula $C(0)=100$
+\end_inset
+
+，
+求生产 
+\begin_inset Formula $x$
+\end_inset
+
+ 单位的总成本。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(x)=\int(5+0.2x)dx=5x+0.1x^{2}+C_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入 
+\begin_inset Formula $C(0)=100$
+\end_inset
+
+，
+得
+\begin_inset Formula $C_{0}=100$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(x)=5x+0.1x^{2}+100$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+计算总收益（Total Revenue）
+\end_layout
+
+\begin_layout Standard
+在市场经济中，
+边际收益 （Marginal Revenue）表示销售每一单位商品所增加的收益，
+总收益可通过积分求得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R(x)=\int R'(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知边际收益，
+如果某产品的边际收益函数：
+
+\begin_inset Formula $R'(x)=20-0.5x$
+\end_inset
+
+，
+求销售 
+\begin_inset Formula $x$
+\end_inset
+
+ 单位的总收益。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $R(x)=\int(20-0.5x)dx=20x-0.25x^{2}+C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+如果已知当
+\begin_inset Formula $\ensuremath{x=0}$
+\end_inset
+
+时
+\begin_inset Formula $R(0)=0$
+\end_inset
+
+，
+则
+\begin_inset Formula $C=0$
+\end_inset
+
+，
+最终得到：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $R(x)=20x-0.25x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+计算消费者剩余（Consumer Surplus）
+\end_layout
+
+\begin_layout Standard
+衡量消费者愿意支付的价格与实际支付价格之间的差额，
+可用定积分计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CS=\int_{0}^{x_{0}}D(x)dx-P_{0}x_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D(x)$
+\end_inset
+
+ 是需求函数（消费者愿意支付的价格）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{P_{0}}$
+\end_inset
+
+是市场均衡价格。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 是均衡数量。
+
+\end_layout
+
+\begin_layout Standard
+求消费者剩余
+\end_layout
+
+\begin_layout Standard
+假设需求函数：
+
+\begin_inset Formula $D(x)=50-x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+市场均衡价格 
+\begin_inset Formula $P_{0}=30$
+\end_inset
+
+，
+均衡数量
+\begin_inset Formula $x_{0}=20$
+\end_inset
+
+，
+求消费者剩余。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CS=\int_{0}^{20}(50-x)dx-30\times20$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int(50-x)dx=50x-\frac{x^{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CS=\left[50x-\frac{x^{2}}{2}\right]_{0}^{20}-600$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CS=(50\times20-\frac{20^{2}}{2})-600=(1000-200)-600=200$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+计算生产者剩余（Producer Surplus）
+\end_layout
+
+\begin_layout Standard
+衡量生产者收到的价格与愿意接受的最低价格之间的差额，
+计算公式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $PS=P_{0}x_{0}-\int_{0}^{x_{0}}S(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{S(x)}$
+\end_inset
+
+是供给函数（生产者愿意接受的最低价格）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ 是市场均衡价格。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{x_{0}}$
+\end_inset
+
+是均衡数量。
+
 \end_layout
 
 \begin_layout Section
