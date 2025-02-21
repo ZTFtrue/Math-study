@@ -39393,7 +39393,7 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 什么是导数
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Definition
 
 \series bold
 平均变化率
@@ -39425,7 +39425,7 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 设函数
 \begin_inset Formula $y=f(x)$
 \end_inset
