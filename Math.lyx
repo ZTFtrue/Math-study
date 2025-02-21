@@ -50149,6 +50149,45 @@ dz=A\Delta x+B\Delta y
 \end_layout
 
 \begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{\partial z}{\partial x}\Delta x$
+\end_inset
+
+和
+\begin_inset Formula $\frac{\partial z}{\partial y}\Delta y$
+\end_inset
+
+叫作
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+偏微分
+\end_layout
+
+\begin_layout Standard
 类似于一元函数,记
 \begin_inset Formula $\Delta x=dx$
 \end_inset
@@ -50275,10 +50314,352 @@ dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula ${\displaystyle \boldsymbol{d}z|_{(x_{0},\ y_{0})}=f_{x}(x_{0},y_{0})\Delta x+f_{y}(x_{0},y_{0})\Delta y}$
+\begin_inset Formula ${\displaystyle \boldsymbol{d}z|_{(x_{0},y_{0})}=f_{x}(x_{0},y_{0})\Delta x+f_{y}(x_{0},y_{0})\Delta y}$
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Proof
+可微必连续
+\end_layout
+
+\begin_layout Proof
+命题：
+如果
+\begin_inset Formula $\ensuremath{f(x,y)}$
+\end_inset
+
+在
+\begin_inset Formula $\ensuremath{(x_{0},y_{0})}$
+\end_inset
+
+处可微，
+则它在该点连续。
+
+\end_layout
+
+\begin_layout Proof
+证明：
+根据可微性的定义，
+函数
+\begin_inset Formula $\ensuremath{f(x,y)}$
+\end_inset
+
+在 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ 处可微，
+意味着对于任意
+\begin_inset Formula $\ensuremath{(\Delta x,\Delta y)}$
+\end_inset
+
+使得 
+\begin_inset Formula $(x_{0}+\Delta x,y_{0}+\Delta y)$
+\end_inset
+
+ 仍在定义域内，
+有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\Delta f=f(x_{0}+\Delta x,y_{0}+\Delta y)-f(x_{0},y_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+可以表示为
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\Delta f=A\Delta x+B\Delta y+o(\rho)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+其中
+\begin_inset Formula $\ensuremath{A,B}$
+\end_inset
+
+为常数，
+且
+\begin_inset Formula $o(\rho)$
+\end_inset
+
+ 是比
+\begin_inset Formula $\ensuremath{\rho}$
+\end_inset
+
+更高阶的无穷小，
+
+\begin_inset Formula $\rho=\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+当
+\begin_inset Formula $(\Delta x,\Delta y)\to(0,0)$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $o(\rho)\to0$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f(x_{0}+\Delta x,y_{0}+\Delta y)-f(x_{0},y_{0})=A\Delta x+B\Delta y+o(\rho)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取极限 
+\begin_inset Formula $(\Delta x,\Delta y)\to(0,0)$
+\end_inset
+
+，
+由于
+\begin_inset Formula $A\Delta x+B\Delta y+o(\rho)\to0$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\lim_{(x,y)\to(x_{0},y_{0})}f(x,y)=f(x_{0},y_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+即 函数 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 在点 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ 处连续。
+
+\end_layout
+
+\begin_layout Proof
+可微性与偏导数的连续性 
+\end_layout
+
+\begin_layout Proof
+命题：
+如果 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 在
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ 处可微，
+则其偏导数
+\begin_inset Formula $\frac{\partial f}{\partial x}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\frac{\partial f}{\partial y}$
+\end_inset
+
+ 在 
+\begin_inset Formula $\ensuremath{(x_{0},y_{0})}$
+\end_inset
+
+处也连续。
+
+\end_layout
+
+\begin_layout Proof
+证明 
+\end_layout
+
+\begin_layout Proof
+可微性意味着 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 可以表示为
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\Delta f=\frac{\partial f}{\partial x}(x_{0},y_{0})\Delta x+\frac{\partial f}{\partial y}(x_{0},y_{0})\Delta y+o(\rho)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这表明 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 的增量主要由 线性主部（即偏导数的线性组合）决定，
+而剩余部分是高阶无穷小。
+
+\end_layout
+
+\begin_layout Proof
+为了证明偏导数在 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ 处连续，
+我们考察偏导数的定义：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}(x,y)=\lim_{h\to0}\frac{f(x+h,y)-f(x,y)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+由于 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 可微，
+可以用可微定义来替代 
+\begin_inset Formula $\ensuremath{f(x+h,y)-f(x,y)}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+f(x+h,y)=f(x,y)+\frac{\partial f}{\partial x}(x_{0},y_{0})h+o(h)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+所以
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{f(x+h,y)-f(x,y)}{h}=\frac{\partial f}{\partial x}(x_{0},y_{0})+\frac{o(h)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+取极限
+\begin_inset Formula $h\to0$
+\end_inset
+
+，
+由于
+\begin_inset Formula $\frac{o(h)}{h}\to0$
+\end_inset
+
+，
+可得
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}(x,y)\to\frac{\partial f}{\partial x}(x_{0},y_{0})\quad\text{当 }(x,y)\to(x_{0},y_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+类似地，
+可以对 
+\begin_inset Formula $\frac{\partial f}{\partial y}$
+\end_inset
+
+ 进行相同的推导，
+得到
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}(x,y)\to\frac{\partial f}{\partial y}(x_{0},y_{0})\quad\text{当 }(x,y)\to(x_{0},y_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这表明 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 的偏导数在 
+\begin_inset Formula $\ensuremath{(x_{0},y_{0})}$
+\end_inset
+
+处连续。
 
 \end_layout
 
@@ -50304,6 +50685,225 @@ dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy
 
 \begin_layout Solution
 \begin_inset Formula $dz=\frac{x^{2}-1}{x+x^{3}}dx+\frac{x^{2}+1}{y+x^{2}y}dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算
+\begin_inset Formula $(1.04)^{2.02}$
+\end_inset
+
+近似值。
+
+\end_layout
+
+\begin_layout Example
+使用
+\series bold
+全微分
+\series default
+来近似计算
+\begin_inset Formula $(1.04)^{2.02}$
+\end_inset
+
+，
+我们设 
+\begin_inset Formula 
+\[
+f(x,y)=x^{y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+近似计算
+\begin_inset Formula $f(x+\Delta x,y+\Delta y)\approx f(x,y)+f_{x}^{'}dx+f_{y}^{'}dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+并取 
+\begin_inset Formula $x=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=2$
+\end_inset
+
+ 的邻近点 
+\begin_inset Formula $x=1.04$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=2.02$
+\end_inset
+
+，
+考虑全微分公式：
+ 
+\begin_inset Formula 
+\[
+df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求偏导数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=yx^{y-1}=2x^{2-1}=2x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在
+\begin_inset Formula $\ensuremath{x=1,y=2}$
+\end_inset
+
+处：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial x}=2(1)=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y$
+\end_inset
+
+ 求偏导数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=x^{y}\ln x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+在 
+\begin_inset Formula $x=1,y=2$
+\end_inset
+
+ 处：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial y}=1^{2}\ln1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算全微分
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+df=2dx+0dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+取 
+\begin_inset Formula $dx=1.04-1=0.04$
+\end_inset
+
+，
+
+\begin_inset Formula $dy=2.02-2=0.02$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+df=2(0.04)+0(0.02)=0.08
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+近似计算
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+(1.04)^{2.02}\approx f(1,2)+df=1^{2}+0.08=1.08
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于三元或以上全微分类似
+\begin_inset Formula $du=f_{x}^{'}dx+f_{y}^{'}dy+f_{z}^{'}dz$
 \end_inset
 
 
