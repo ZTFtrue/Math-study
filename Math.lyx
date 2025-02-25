@@ -42498,7 +42498,7 @@ P=\frac{RT}{V}
 
 \begin_inset Formula 
 \[
-\frac{\partial z}{\partial x}=e^{u}\sin v\cdot y+e^{u}\cos v\cdot1
+\frac{\partial z}{\partial x}=e^{u}y\sin v+e^{u}\times1\times\cos v
 \]
 
 \end_inset
@@ -42910,12 +42910,12 @@ z=f(u,v)
 
 \begin_layout Solution
 令 
-\begin_inset Formula $f_{u}=\frac{\partial f}{\partial u}$
+\begin_inset Formula $f_{u}^{'}=\frac{\partial f}{\partial u}$
 \end_inset
 
 ,
  
-\begin_inset Formula $f_{v}=\frac{\partial f}{\partial v}$
+\begin_inset Formula $f_{v}^{'}=\frac{\partial f}{\partial v}$
 \end_inset
 
 ，
@@ -42926,7 +42926,7 @@ z=f(u,v)
 \begin_layout Solution
 \begin_inset Formula 
 \[
-\frac{\partial z}{\partial x}=f_{u}\cdot2+f_{v}\cdot2.
+\frac{\partial z}{\partial x}=f_{u}^{'}\cdot2+f_{v}^{'}\cdot2.
 \]
 
 \end_inset
@@ -42937,9 +42937,217 @@ z=f(u,v)
 \begin_layout Solution
 \begin_inset Formula 
 \[
-=2(f_{u}+f_{v}).
+=2(f_{u}^{'}+f_{v}^{'}).
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $z=f(xy,x^{2}+y^{2})$
+\end_inset
+
+,求
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{\partial^{2}z}{\partial xy}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算
+\begin_inset Formula $\frac{\partial z}{\partial x}$
+\end_inset
+
+,设
+\begin_inset Formula $u=xy$
+\end_inset
+
+,
+ 
+\begin_inset Formula $v=x^{2}+y^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+使用链式法则：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial z}{\partial x}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算：
+
+\begin_inset Formula $\frac{\partial u}{\partial x}=y,\frac{\partial v}{\partial x}=2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入：
+
+\begin_inset Formula $\frac{\partial z}{\partial x}=f_{u}^{'}\cdot y+f_{v}^{'}\cdot2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\ensuremath{\frac{\partial z}{\partial x}=f_{u}y+f_{v}2x}$
+\end_inset
+
+再对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求导：
+
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}=\frac{\partial}{\partial x}(f_{u}^{'}\cdot y+f_{v}^{'}\cdot2x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+使用链式法则：
+
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}=\frac{\partial f_{u}^{'}}{\partial x}y+f_{u}^{'}\frac{\partial y}{\partial x}+\frac{\partial f_{v}^{'}}{\partial x}2x+f_{v}^{'}\cdot2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算：
+
+\begin_inset Formula $\frac{\partial f_{u}^{'}}{\partial x}=f_{uu}^{''}\frac{\partial u}{\partial x}+f_{uv}^{''}\frac{\partial v}{\partial x}=f_{uu}^{''}y+f_{uv}^{''}2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f_{v}^{''}}{\partial x}=f_{vu}^{''}\frac{\partial u}{\partial x}+f_{vv}^{''}\frac{\partial v}{\partial x}=f_{vu}^{''}y+f_{vv}^{''}2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入：
+
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}=(f_{uu}^{''}y+f_{uv}^{''}2x)y+f_{u}^{'}\cdot0+(f_{vu}^{''}y+f_{vv}^{''}2x)2x+f_{v}^{'}\cdot2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+整理：
+
+\begin_inset Formula $\frac{\partial^{2}z}{\partial x^{2}}=f_{uu}^{''}y^{2}+2xf_{uv}^{''}y+2xf_{vu}^{''}y+4x^{2}f_{vv}^{''}+2f_{v}^{'}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算 
+\begin_inset Formula $\frac{\partial^{2}z}{\partial xy}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $\ensuremath{\frac{\partial z}{\partial x}=f_{u}^{'}y+f_{v}^{'}2x}$
+\end_inset
+
+再对 
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+求导：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial^{2}z}{\partial xy}=\frac{\partial}{\partial y}(f_{u}^{'}y+f_{v}^{'}2x)=\frac{\partial f_{u}^{'}}{\partial y}y+f_{u}^{'}\frac{\partial y}{\partial y}+\frac{\partial f_{v}^{'}}{\partial y}2x+f_{v}^{'}\cdot0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+计算：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f_{u}^{'}}{\partial y}=f_{uu}^{''}\frac{\partial u}{\partial y}+f_{uv}^{''}\frac{\partial v}{\partial y}=f_{uu}^{''}x+f_{uv}^{''}2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial f_{v}^{'}}{\partial y}=f_{vu}^{''}\frac{\partial u}{\partial y}+f_{vv}^{''}\frac{\partial v}{\partial y}=f_{vu}^{''}x+f_{vv}^{''}2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial^{2}z}{\partial xy}=(f_{uu}^{''}x+f_{uv}^{''}2y)y+f_{u}^{'}+(f_{vu}^{''}x+f_{vv}^{''}2y)2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+整理：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\frac{\partial^{2}z}{\partial xy}=f_{uu}^{''}xy+2yf_{uv}^{''}+f_{u}^{'}+2xf_{vu}^{''}+4xyf_{vv}^{''}$
 \end_inset
 
 
@@ -43486,7 +43694,7 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 得
 \begin_inset Formula 
 \[
-\frac{dy}{dx}=-\frac{F'_{x}}{F'_{y}}
+\frac{dy}{dx}=-\frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial y}}=-\frac{F'_{x}}{F'_{y}}
 \]
 
 \end_inset
@@ -43613,7 +43821,7 @@ y' & = & y(\cos x\ln(1+x^{2})+\sin x\frac{1}{1+x^{2}})\\
 \begin_inset Formula $F(x,y,z)=e^{3xy}-z^{2}+e^{-z}$
 \end_inset
 
-,则
+,则 
 \end_layout
 
 \begin_layout Example
@@ -43646,41 +43854,646 @@ F_{x}^{'}=3ye^{3xy},F_{y}^{'}=3xe^{3xy},F_{z}^{'}=-2z-e^{-z}
 \end_layout
 
 \begin_layout Standard
-
-\strikeout on
-设
-\begin_inset Formula $F(x,y,u,v)$
+隐函数是指变量之间的关系无法直接写成显式表达式（如 
+\begin_inset Formula $y=f(x)$
 \end_inset
 
-、
-\begin_inset Formula $G(x,y,u,v)$
-\end_inset
+），
+而是由方程隐式确定，
+例如：
 
-在点
-\begin_inset Formula $P(x_{0},y_{0},u_{0},v_{0})$
-\end_inset
-
-的某一 邻域内具有对各个变量的连续偏导数，
-又
-\begin_inset Formula $F(x_{0},y_{0},u_{0},v_{0})=0$
-\end_inset
-
-,
-\begin_inset Formula $G(x_{0},y_{0},u_{0},v_{0})=0$
-\end_inset
-
-,
- 且偏导数所组成的函数行列式(或称雅可比(Jacobi)式)
 \end_layout
 
 \begin_layout Standard
-
-\strikeout on
 \begin_inset Formula 
 \[
-{\displaystyle \mathbf{J}=\frac{\partial(F,G)}{\partial(u,v)}=\left|\begin{array}{cc}
-\frac{\partial F}{\partial u} & \frac{\partial F}{\partial v}\\
-\frac{\partial G}{\partial u} & \frac{\partial G}{\partial v}
+F(x,y)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于多元情况，
+有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{1}(x,y,z)=0,F_{2}(x,y,z)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就形成了隐函数方程组。
+
+\end_layout
+
+\begin_layout Remark*
+隐函数求偏导数（单个方程）
+\end_layout
+
+\begin_layout Remark*
+设隐函数
+\begin_inset Formula $F(x,y)=0$
+\end_inset
+
+，
+其中
+\begin_inset Formula $\ensuremath{y}$
+\end_inset
+
+是 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+的隐函数，
+即 
+\begin_inset Formula $y=y(x)$
+\end_inset
+
+，
+求
+\begin_inset Formula $\frac{dy}{dx}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Remark*
+对两边求全导数：
+
+\begin_inset Formula $\frac{d}{dx}F(x,y)=F_{x}^{'}+F_{y}^{'}\frac{dy}{dx}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark*
+解得：
+
+\begin_inset Formula $\frac{dy}{dx}=-\frac{F_{x}^{'}}{F_{y}^{'}}$
+\end_inset
+
+,
+ 其中
+\begin_inset Formula $F_{x}=\frac{\partial F}{\partial x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $F_{y}=\frac{\partial F}{\partial y}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+多元隐函数方程组求偏导
+\end_layout
+
+\begin_layout Example
+对于隐函数方程组：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{1}(x,y,z)=0,F_{2}(x,y,z)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+假设
+\begin_inset Formula $y=y(x),z=z(x)$
+\end_inset
+
+，
+求
+\begin_inset Formula $\ensuremath{\frac{dy}{dx}}$
+\end_inset
+
+和
+\begin_inset Formula $\frac{dz}{dx}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+对两个方程求全导数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{1x}+F_{1y}\frac{dy}{dx}+F_{1z}\frac{dz}{dx}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{2x}+F_{2y}\frac{dy}{dx}+F_{2z}\frac{dz}{dx}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+写成矩阵形式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\begin{bmatrix}F_{1y} & F_{1z}\\
+F_{2y} & F_{2z}
+\end{bmatrix}\begin{bmatrix}\frac{dy}{dx}\\
+\frac{dz}{dx}
+\end{bmatrix}=\begin{bmatrix}-F_{1x}\\
+-F_{2x}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+解方程组得：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{F_{1z}F_{2x}-F_{2z}F_{1x}}{F_{1y}F_{2z}-F_{2y}F_{1z}},\frac{dz}{dx}=\frac{F_{2y}F_{1x}-F_{1y}F_{2x}}{F_{1y}F_{2z}-F_{2y}F_{1z}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x^{2}+y^{2}+z^{2}-1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x+y+z-1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\ensuremath{\frac{dy}{dx}},\ensuremath{\frac{dz}{dx}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+计算偏导：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{1x}=2x,\quad F_{1y}=2y,\quad F_{1z}=2z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{2x}=1,\quad F_{2y}=1,\quad F_{2z}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+构造矩阵：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\begin{bmatrix}2y & 2z\\
+1 & 1
+\end{bmatrix}\begin{bmatrix}\frac{dy}{dx}\\
+\frac{dz}{dx}
+\end{bmatrix}=\begin{bmatrix}-2x\\
+-1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+解得：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{dy}{dx}=\frac{2z(-1)-1(-2x)}{2y\cdot1-2z\cdot1}=\frac{-2z+2x}{2y-2z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{dz}{dx}=\frac{1(-2x)-2y(-1)}{2y\cdot1-2z\cdot1}=\frac{-2x+2y}{2y-2z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $xu-yv=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $yu+xv=1$
+\end_inset
+
+,
+ 求 
+\begin_inset Formula $\frac{\partial u}{\partial x}$
+\end_inset
+
+ ,
+ 
+\begin_inset Formula $\frac{\partial u}{\partial y}$
+\end_inset
+
+ ,
+ 
+\begin_inset Formula $\frac{\partial v}{\partial x}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{\partial v}{\partial y}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+给定隐函数方程组：
+
+\begin_inset Formula 
+\[
+F_{1}(x,u,v)=xu-yv=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{2}(x,u,v)=yu+xv=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们把 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 视为 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+ 的隐函数，
+即
+\begin_inset Formula $u=u(x,y)$
+\end_inset
+
+,
+ 
+\begin_inset Formula $v=v(x,y)$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+对方程组两边分别对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求偏导，
+使用全微分：
+
+\begin_inset Formula 
+\[
+F_{1x}^{'}+F_{1u}^{'}\frac{\partial u}{\partial x}+F_{1v}^{'}\frac{\partial v}{\partial x}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{2x}^{'}+F_{2u}^{'}\frac{\partial u}{\partial x}+F_{2v}^{'}\frac{\partial v}{\partial x}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算各偏导数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{1}=xu-yv$
+\end_inset
+
+，
+对其求偏导：
+
+\begin_inset Formula 
+\[
+F_{1x}^{'}=u,\quad F_{1u}^{'}=x,\quad F_{1v}^{'}=-y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F_{2}=yu+xv-1$
+\end_inset
+
+，
+对其求偏导：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{2x}^{'}=v,\quad F_{2u}^{'}=y,\quad F_{2v}^{'}=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u+x\frac{\partial u}{\partial x}-y\frac{\partial v}{\partial x}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v+y\frac{\partial u}{\partial x}+x\frac{\partial v}{\partial x}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+写成矩阵方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}x & -y\\
+y & x
+\end{bmatrix}\begin{bmatrix}\frac{\partial u}{\partial x}\\
+\frac{\partial v}{\partial x}
+\end{bmatrix}=\begin{bmatrix}-u\\
+-v
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解线性方程组
+\end_layout
+
+\begin_layout Standard
+设：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\begin{bmatrix}x & -y\\
+y & x
+\end{bmatrix},\quad B=\begin{bmatrix}-u\\
+-v
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵
+\begin_inset Formula $A$
+\end_inset
+
+ 的行列式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\det(A)=x\cdot x-(-y)\cdot y=x^{2}+y^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求逆矩阵
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A^{-1}=\frac{1}{x^{2}+y^{2}}\begin{bmatrix}x & y\\
+-y & x
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}\frac{\partial u}{\partial x}\\
+\frac{\partial v}{\partial x}
+\end{bmatrix}=A^{-1}B=\frac{1}{x^{2}+y^{2}}\begin{bmatrix}x & y\\
+-y & x
+\end{bmatrix}\begin{bmatrix}-u\\
+-v
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+矩阵乘法：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{x^{2}+y^{2}}\begin{bmatrix}-ux-vy\\
+uy-vx
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{-ux-vy}{x^{2}+y^{2}}=\frac{\left|\begin{array}{cc}
+-u & -y\\
+-v & x
+\end{array}\right|}{\left|\begin{array}{cc}
+x & -y\\
+y & x
 \end{array}\right|}
 \]
 
@@ -43690,53 +44503,482 @@ F_{x}^{'}=3ye^{3xy},F_{y}^{'}=3xe^{3xy},F_{z}^{'}=-2z-e^{-z}
 \end_layout
 
 \begin_layout Standard
-
-\strikeout on
-在点
-\begin_inset Formula $P(x_{0},y_{0},u_{0},v_{0})$
-\end_inset
-
-不等于零,
- 则方程组
-\begin_inset Formula $F(x,y,u,v)=0$
-\end_inset
-
-,
- 
-\begin_inset Formula $G(x,y,u,r)=0$
-\end_inset
-
- 在点 
-\begin_inset Formula $P(x_{0},y_{0},u_{0},v_{0})$
-\end_inset
-
-的某一邻域内恒能唯一确定一组连续且具有连续偏导数的函数 
-\begin_inset Formula $u=u(x,y)$
-\end_inset
-
-,
-\begin_inset Formula $v=v(x,y)$
-\end_inset
-
-,
- 它们满足条件
-\begin_inset Formula $u_{0}=u(x_{0},y_{0})$
-\end_inset
-
-,
-\begin_inset Formula $v_{0}=v(x_{0},y_{0})$
-\end_inset
-
-,
- 并有(...89)
-\strikeout default
-
 \begin_inset Formula 
 \[
+\frac{\partial v}{\partial x}=\frac{uy-vx}{x^{2}+y^{2}}=-\frac{\left|\begin{array}{cc}
+u & x\\
+v & y
+\end{array}\right|}{\left|\begin{array}{cc}
+x & -y\\
+y & x
+\end{array}\right|}
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{-ux-vy}{x^{2}+y^{2}},\quad\frac{\partial v}{\partial x}=\frac{uy-vx}{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+雅可比式
+\end_layout
+
+\begin_layout Standard
+雅可比式 （Jacobian determinant）是多变量微积分中一个非常重要的概念，
+通常用来描述向量值函数在某点附近的局部线性近似。
+对于多元函数的映射，
+雅可比式表示的是该映射在某一点处的线性变换的体积缩放因子。
+
+\end_layout
+
+\begin_layout Definition
+设有一个向量值函数 
+\begin_inset Formula $\mathbf{F}:\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+，
+即
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mathbf{F}(x_{1},x_{2},\dots,x_{n})=\begin{bmatrix}f_{1}(x_{1},x_{2},\dots,x_{n})\\
+f_{2}(x_{1},x_{2},\dots,x_{n})\\
+\vdots\\
+f_{n}(x_{1},x_{2},\dots,x_{n})
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中 
+\begin_inset Formula $\ensuremath{f_{1},f_{2},\dots,f_{n}}$
+\end_inset
+
+是
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+个分量函数。
+
+\end_layout
+
+\begin_layout Definition
+雅可比矩阵是一个
+\begin_inset Formula $\ensuremath{n\times n}$
+\end_inset
+
+的矩阵，
+表示函数
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 对
+\begin_inset Formula $\ensuremath{x_{1},x_{2},\dots,x_{n}}$
+\end_inset
+
+的偏导数，
+即：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+J_{\mathbf{F}}(x_{1},x_{2},\dots,x_{n})=\begin{bmatrix}\frac{\partial f_{1}}{\partial x_{1}} & \frac{\partial f_{1}}{\partial x_{2}} & \dots & \frac{\partial f_{1}}{\partial x_{n}}\\
+\frac{\partial f_{2}}{\partial x_{1}} & \frac{\partial f_{2}}{\partial x_{2}} & \dots & \frac{\partial f_{2}}{\partial x_{n}}\\
+\vdots & \vdots & \ddots & \vdots\\
+\frac{\partial f_{n}}{\partial x_{1}} & \frac{\partial f_{n}}{\partial x_{2}} & \dots & \frac{\partial f_{n}}{\partial x_{n}}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+雅可比式是雅可比矩阵的行列式，
+表示为：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\text{Jacobian determinant}=\det(J_{\mathbf{F}}(x_{1},x_{2},\dots,x_{n}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+几何意义
+\end_layout
+
+\begin_layout Standard
+雅可比式的几何意义是描述函数
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 在某点处的局部变换对空间体积的影响。
+如果雅可比式的值为零，
+表示在该点处函数无法生成局部可逆映射，
+或者说该点发生了“折叠”或“塌缩”。
+如果雅可比式的值不为零，
+表示在该点附近的变换是局部可逆的，
+并且雅可比式的绝对值表示变换时体积的缩放因子。
+
+\end_layout
+
+\begin_layout Example
+假设有一个简单的映射：
+
+\begin_inset Formula 
+\[
+\mathbf{F}(x,y)=\begin{bmatrix}x^{2}y\\
+xy^{2}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+此时雅可比矩阵为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+J_{\mathbf{F}}(x,y)=\begin{bmatrix}\frac{\partial}{\partial x}(x^{2}y) & \frac{\partial}{\partial y}(x^{2}y)\\
+\frac{\partial}{\partial x}(xy^{2}) & \frac{\partial}{\partial y}(xy^{2})
+\end{bmatrix}=\begin{bmatrix}2xy & x^{2}\\
+y^{2} & 2xy
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+然后，
+雅可比式为行列式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\det(J_{\mathbf{F}}(x,y))=\det\begin{bmatrix}2xy & x^{2}\\
+y^{2} & 2xy
+\end{bmatrix}=(2xy)(2xy)-(x^{2})(y^{2})=4x^{2}y^{2}-x^{2}y^{2}=3x^{2}y^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+雅可比式为
+\begin_inset Formula $3x^{2}y^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+雅可比式求偏导
+\end_layout
+
+\begin_layout Standard
+对于一个隐函数方程组：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{1}(x,y,u,v)=0,\quad F_{2}(x,y,u,v)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果可以解出 
+\begin_inset Formula $u=u(x,y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $v=v(x,y)$
+\end_inset
+
+，
+则
+\begin_inset Formula $\ensuremath{u}$
+\end_inset
+
+和
+\begin_inset Formula $v$
+\end_inset
+
+ 关于
+\begin_inset Formula $x$
+\end_inset
+
+、
+\begin_inset Formula $y$
+\end_inset
+
+ 的偏导数可以通过 隐函数求导法 或 雅可比矩阵 来求得。
+
+\end_layout
+
+\begin_layout Paragraph
+雅可比矩阵表示
+\end_layout
+
+\begin_layout Standard
+定义 雅可比矩阵 ：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J=\begin{bmatrix}\frac{\partial F_{1}}{\partial u} & \frac{\partial F_{1}}{\partial v}\\
+\frac{\partial F_{2}}{\partial u} & \frac{\partial F_{2}}{\partial v}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设 偏导数矩阵 为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+而
+\begin_inset Formula $F_{1},F_{2}$
+\end_inset
+
+ 对 
+\begin_inset Formula $x,y$
+\end_inset
+
+ 的偏导数矩阵为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}\frac{\partial F_{1}}{\partial x} & \frac{\partial F_{1}}{\partial y}\\
+\frac{\partial F_{2}}{\partial x} & \frac{\partial F_{2}}{\partial y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据隐函数定理：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{bmatrix}=-J^{-1}B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{bmatrix}=-\begin{bmatrix}\frac{\partial F_{1}}{\partial u} & \frac{\partial F_{1}}{\partial v}\\
+\frac{\partial F_{2}}{\partial u} & \frac{\partial F_{2}}{\partial v}
+\end{bmatrix}^{-1}\begin{bmatrix}\frac{\partial F_{1}}{\partial x} & \frac{\partial F_{1}}{\partial y}\\
+\frac{\partial F_{2}}{\partial x} & \frac{\partial F_{2}}{\partial y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J=\begin{bmatrix}A & B\\
+C & D
+\end{bmatrix}=\begin{bmatrix}\frac{\partial F_{1}}{\partial u} & \frac{\partial F_{1}}{\partial v}\\
+\frac{\partial F_{2}}{\partial u} & \frac{\partial F_{2}}{\partial v}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则其逆矩阵：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J^{-1}=\frac{1}{AD-BC}\begin{bmatrix}D & -B\\
+-C & A
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=\begin{bmatrix}E & F\\
+G & H
+\end{bmatrix}=\begin{bmatrix}\frac{\partial F_{1}}{\partial x} & \frac{\partial F_{1}}{\partial y}\\
+\frac{\partial F_{2}}{\partial x} & \frac{\partial F_{2}}{\partial y}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{bmatrix}\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}
+\end{bmatrix}=-\frac{1}{AD-BC}\begin{bmatrix}D & -B\\
+-C & A
+\end{bmatrix}\begin{bmatrix}E & F\\
+G & H
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算矩阵乘法，
+得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{DE-BG}{AD-BC},\quad\frac{\partial u}{\partial y}=\frac{DF-BH}{AD-BC}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial x}=\frac{-CE+AG}{AD-BC},\quad\frac{\partial v}{\partial y}=\frac{-CF+AH}{AD-BC}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+这个公式适用于任何隐函数方程组，
+只需要代入偏导数值即可求解。
 
 \end_layout
 
