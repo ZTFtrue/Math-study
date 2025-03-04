@@ -46767,6 +46767,35 @@ f_{y}^{'}(x_{0},y_{0})=0
  的符号,据此判定极值.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+最值
+\end_layout
+
+\begin_layout Enumerate
+无约束最值：
+求偏导数、二阶导数判别法。
+
+\end_layout
+
+\begin_layout Enumerate
+有约束最值：
+拉格朗日乘数法。
+
+\end_layout
+
+\begin_layout Enumerate
+边界最值：
+将约束代入或逐一计算边界上的最值。
+
+\end_layout
+
 \begin_layout Subsection
 条件极值
 \end_layout
@@ -46780,16 +46809,24 @@ f_{y}^{'}(x_{0},y_{0})=0
 \begin_inset Formula $x,y$
 \end_inset
 
-在其定义域内变化之外,
+在其
+\series bold
+定义域内变化
+\series default
+之外,
  再无其它任何限制,
  称之外无极值条件.
-  
+ 
 \end_layout
 
 \begin_layout Standard
-自变量需要满足一定约束条件(附加条件)的极值问题,
- 称为条件极值.
- 如
+自变量需要满足一定约束条件(附加条件,约束条件)的极值问题,
+ 称为条件极值.这种问题叫做优化问题。
+
+\end_layout
+
+\begin_layout Standard
+如
 \begin_inset Formula $y=f(x,y,z)$
 \end_inset
 
@@ -46879,6 +46916,19 @@ F'_{\lambda}=\varphi(x,y)=0,
 的极值点,
  在实际问题中往往可由其实际定义加以判断.
  
+\end_layout
+
+\begin_layout Standard
+如果有多个条件，
+构造多个
+\begin_inset Formula $\lambda$
+\end_inset
+
+,
+\begin_inset Formula $F(x,y,\lambda_{1},\text{\ensuremath{\lambda_{2}}})=f(x,y)+\lambda_{1}\varphi(x,y)+\lambda_{2}\varphi(x,y)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
