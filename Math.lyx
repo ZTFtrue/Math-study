@@ -60521,7 +60521,7 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 二重积分的性质
 \end_layout
 
-\begin_layout Corollary
+\begin_layout Theorem
 
 \series bold
 常数积分性质
@@ -60539,14 +60539,21 @@ e^{-x}\cdot x^{x-1}=\frac{1}{e^{x}}\cdot\frac{1}{x^{1-x}}<\frac{1}{x^{1-x}}
 \end_inset
 
 其中，
-S 为区域D的面积 
+S 为区域D的面积
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 该性质给出了用二重积分计算平面图形面积的一种方法.
 \end_layout
 
-\begin_layout Corollary
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
 
 \series bold
 线性性质
@@ -60558,7 +60565,7 @@ S 为区域D的面积
 ;
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 \begin_inset Formula $\iint_{D}kf(x,y)d\sigma=k\iint_{D}f(x,y)d\sigma$
 \end_inset
 
@@ -60569,7 +60576,14 @@ S 为区域D的面积
 为常数)
 \end_layout
 
-\begin_layout Corollary
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
 
 \series bold
 区域可加性
@@ -60594,13 +60608,281 @@ S 为区域D的面积
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
-除了上述几个性质以外，
-二重积分写定积分类似也有不等式性质、估值定理和积分中值 定理等性质.
- 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+不等式性质
+\end_layout
+
+\begin_layout Theorem
+积分单调性
+\end_layout
+
+\begin_layout Theorem
+如果在区域
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上，
+函数
+\begin_inset Formula $\ensuremath{f(x,y)}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{g(x,y)}$
+\end_inset
+
+满足：
+
+\begin_inset Formula $f(x,y)\leq g(x,y),\forall(x,y)\in D$
+\end_inset
+
+,
+ 则有：
+
+\begin_inset Formula $\iint_{D}f(x,y)\,dA\leq\iint_{D}g(x,y)\,dA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+该性质可用于估计二重积分的范围，
+例如比较复杂函数的积分值时，
+可以用一个简单的函数来估计上界或下界。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+夹逼定理
+\end_layout
+
+\begin_layout Theorem
+如果在区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 上，
+函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 被两个函数
+\begin_inset Formula $g(x,y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $h(x,y)$
+\end_inset
+
+ 夹住，
+即：
+
+\begin_inset Formula $g(x,y)\leq f(x,y)\leq h(x,y),\quad\forall(x,y)\in D$
+\end_inset
+
+,
+ 且
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\iint_{D}g_{n}(x,y)\,dA=I,\quad\lim_{n\to\infty}\iint_{D}h_{n}(x,y)\,dA=I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+则
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\iint_{D}f_{n}(x,y)\,dA=I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+该定理常用于证明二重积分的收敛性。
+
+\end_layout
+
+\begin_layout Corollary
+绝对值积分不等式
+\end_layout
+
+\begin_layout Corollary
+若 
+\begin_inset Formula $\ensuremath{|f(x,y)|\leq M}$
+\end_inset
+
+对所有
+\begin_inset Formula $\ensuremath{(x,y)\in D}$
+\end_inset
+
+成立，
+则：
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+\left|\iint_{D}f(x,y)\,dA\right|\leq\iint_{D}|f(x,y)|\,dA
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+该性质用于积分估计，
+避免计算复杂的积分。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+估值定理 
+\end_layout
+
+\begin_layout Corollary
+二重积分的估值定理
+\end_layout
+
+\begin_layout Corollary
+如果在区域
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上，
+函数 
+\begin_inset Formula $\ensuremath{f(x,y)}$
+\end_inset
+
+满足：
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+m\leq f(x,y)\leq M,\quad\forall(x,y)\in D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+其中 
+\begin_inset Formula $\ensuremath{m,M}$
+\end_inset
+
+是两个常数，
+则二重积分可以估计如下：
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+m\cdot\text{面积}(D)\leq\iint_{D}f(x,y)\,dA\leq M\cdot\text{面积}(D)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+这个定理可以用于快速估算二重积分的数值范围。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+积分中值定理
+\end_layout
+
+\begin_layout Corollary
+二重积分的积分中值定理 
+\end_layout
+
+\begin_layout Corollary
+如果函数
+\begin_inset Formula $\ensuremath{f(x,y)}$
+\end_inset
+
+在区域
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上连续，
+则存在
+\begin_inset Formula $\ensuremath{(x_{0},y_{0})\in D}$
+\end_inset
+
+使得：
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula 
+\[
+\iint_{D}f(x,y)\,dA=f(x_{0},y_{0})\cdot\text{面积}(D)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+该定理说明，
+在区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内，
+总存在一个点使得 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 的值与平均值相等。
+
 \end_layout
 
 \begin_layout Subsubsection
