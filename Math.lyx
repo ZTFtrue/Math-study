@@ -60908,6 +60908,10 @@ m\cdot\text{面积}(D)\leq\iint_{D}f(x,y)\,dA\leq M\cdot\text{面积}(D)
 \end_layout
 
 \begin_layout Paragraph
+X型
+\end_layout
+
+\begin_layout Paragraph
 积分区域
 \begin_inset Formula $D$
 \end_inset
@@ -61177,6 +61181,10 @@ V=\int_{a}^{b}[\int_{y_{1}(x)}^{y_{2}(x)}f(x,y)dy]dx
 \end_layout
 
 \begin_layout Paragraph
+Y型
+\end_layout
+
+\begin_layout Paragraph
 积分区域
 \begin_inset Formula $D$
 \end_inset
@@ -61359,7 +61367,7 @@ status open
 
 ,
  
-\begin_inset Formula $y=2一x$
+\begin_inset Formula $y=2-x$
 \end_inset
 
  及
@@ -61635,7 +61643,7 @@ status open
 \end_inset
 
 变到
-\begin_inset Formula $2一y$
+\begin_inset Formula $2-y$
 \end_inset
 
 ,因此区域
@@ -61658,6 +61666,709 @@ y\leqslant x\leqslant2-y\\
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{D}{\iint}x^{2}e^{-y^{2}}dxdy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+我们计算二重积分：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+iint_D x^2 e^{-y^2} 
+\backslash
+,dx
+\backslash
+,dy
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+假设区域 
+\backslash
+( D 
+\backslash
+) 是整个平面 
+\backslash
+( 
+\backslash
+mathbb{R}^2 
+\backslash
+)（如果有特定区域，
+请提供）。
+
+\end_layout
+
+\begin_layout Solution
+### **步骤 1：
+拆分积分**
+\end_layout
+
+\begin_layout Solution
+由于被积函数可以分离成 
+\backslash
+( x^2 
+\backslash
+) 和 
+\backslash
+( e^{-y^2} 
+\backslash
+) 的乘积，
+我们可以拆分积分：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} e^{-y^2} dy 
+\backslash
+cdot 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 dx
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+### **步骤 2：
+计算 
+\backslash
+( x 
+\backslash
+) 方向的积分**
+\end_layout
+
+\begin_layout Solution
+计算高斯型积分：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 dx
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+使用标准高斯积分公式：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} e^{-x^2} dx = 
+\backslash
+sqrt{
+\backslash
+pi}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+以及二阶矩公式：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 e^{-x^2} dx = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+对 
+\backslash
+( x 
+\backslash
+) 变量进行变量替换 
+\backslash
+( u = x 
+\backslash
+)，
+得到：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 dx = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+### **步骤 3：
+计算 
+\backslash
+( y 
+\backslash
+) 方向的积分**
+\end_layout
+
+\begin_layout Solution
+积分
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} e^{-y^2} dy
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+是标准高斯积分，
+结果为：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+sqrt{
+\backslash
+pi}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+### **步骤 4：
+合并结果**
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+sqrt{
+\backslash
+pi} 
+\backslash
+cdot 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2} = 
+\backslash
+frac{
+\backslash
+pi^{3/2}}{2}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+### **最终结果**
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+frac{
+\backslash
+pi^{3/2}}{2}
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+我们计算二重积分：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+iint_D x^2 e^{-y^2} 
+\backslash
+,dx
+\backslash
+,dy
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+假设积分区域 
+\backslash
+( D 
+\backslash
+) 是整个平面 
+\backslash
+( 
+\backslash
+mathbb{R}^2 
+\backslash
+)，
+我们按照 
+\backslash
+( y 
+\backslash
+) 先积分，
+再对 
+\backslash
+( x 
+\backslash
+) 积分。
+
+\end_layout
+
+\begin_layout Solution
+---
+\end_layout
+
+\begin_layout Solution
+### **步骤 1：
+交换积分顺序**
+\end_layout
+
+\begin_layout Solution
+写成迭代积分：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 
+\backslash
+left( 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} e^{-y^2} dy 
+\backslash
+right) dx.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+由于 
+\backslash
+( 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} e^{-y^2} dy = 
+\backslash
+sqrt{
+\backslash
+pi} 
+\backslash
+) 是标准高斯积分，
+我们得到：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+sqrt{
+\backslash
+pi} 
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 dx.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+---
+\end_layout
+
+\begin_layout Solution
+### **步骤 2：
+计算 
+\backslash
+( x 
+\backslash
+) 的积分**
+\end_layout
+
+\begin_layout Solution
+我们计算：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 e^{-x^2} dx.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+使用高斯积分的二阶矩公式：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 e^{-x^2} dx = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2}.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+因此：
+
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+int_{-
+\backslash
+infty}^{
+\backslash
+infty} x^2 dx = 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2}.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+---
+\end_layout
+
+\begin_layout Solution
+### **步骤 3：
+合并结果**
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+sqrt{
+\backslash
+pi} 
+\backslash
+times 
+\backslash
+frac{
+\backslash
+sqrt{
+\backslash
+pi}}{2} = 
+\backslash
+frac{
+\backslash
+pi^{3/2}}{2}.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+---
+\end_layout
+
+\begin_layout Solution
+### **最终结果**
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+[
+\end_layout
+
+\begin_layout Solution
+I = 
+\backslash
+frac{
+\backslash
+pi^{3/2}}{2}.
+\end_layout
+
+\begin_layout Solution
+
+\backslash
+]
+\end_layout
+
+\begin_layout Solution
+无论先对 
+\backslash
+( x 
+\backslash
+) 还是 
+\backslash
+( y 
+\backslash
+) 积分，
+最终答案相同。
 
 \end_layout
 
