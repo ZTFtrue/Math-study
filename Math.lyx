@@ -12852,6 +12852,10 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \end_layout
 
 \begin_layout Standard
+Polar Coordinate System
+\end_layout
+
+\begin_layout Standard
 平面中任意位置点
 \begin_inset Formula $M$
 \end_inset
@@ -12884,7 +12888,8 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \begin_inset Formula $M(p,\theta)$
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -12914,6 +12919,80 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 	filename image/极坐标系.png
 	lyxscale 40
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+极坐标的常见曲线
+\end_layout
+
+\begin_layout Itemize
+圆环
+\begin_inset Formula $1\leqslant\rho\leqslant1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+圆：
+
+\begin_inset Formula $r=R$
+\end_inset
+
+（半径为 
+\backslash
+( R 
+\backslash
+)）
+\end_layout
+
+\begin_layout Itemize
+射线：
+
+\begin_inset Formula $\theta=\theta_{0}$
+\end_inset
+
+（固定角度）
+\end_layout
+
+\begin_layout Itemize
+螺旋线（阿基米德螺旋）：
+
+\begin_inset Formula $r=a+b\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+玫瑰曲线：
+
+\begin_inset Formula $r=a\cos(k\theta)$
+\end_inset
+
+ 或
+\begin_inset Formula $r=a\sin(k\theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+穿过极点的直线：
+
+\begin_inset Formula $\theta=\theta_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+不穿过极点的直线：
+
+\begin_inset Formula $r\cos(\theta-\theta_{0})=d$
 \end_inset
 
 
@@ -12965,7 +13044,11 @@ a_{1}b_{n}+a_{2}b_{n-1}+...+a_{n}b_{1}\\
 \end_layout
 
 \begin_layout Standard
-原点与点P之间的"径向距离”(radial distance)
+原点与点
+\begin_inset Formula $P$
+\end_inset
+
+之间的"径向距离”(radial distance)
 \begin_inset Formula ${\displaystyle r}$
 \end_inset
 
@@ -61677,6 +61760,7 @@ y\leqslant x\leqslant2-y\\
 \end_layout
 
 \begin_layout Example
+计算二重积分
 \begin_inset Formula $\underset{D}{\iint}x^{2}e^{-y^{2}}dxdy$
 \end_inset
 
@@ -61684,691 +61768,9 @@ y\leqslant x\leqslant2-y\\
 \end_layout
 
 \begin_layout Solution
-我们计算二重积分：
+\begin_inset Formula $ $
+\end_inset
 
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-iint_D x^2 e^{-y^2} 
-\backslash
-,dx
-\backslash
-,dy
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-假设区域 
-\backslash
-( D 
-\backslash
-) 是整个平面 
-\backslash
-( 
-\backslash
-mathbb{R}^2 
-\backslash
-)（如果有特定区域，
-请提供）。
-
-\end_layout
-
-\begin_layout Solution
-### **步骤 1：
-拆分积分**
-\end_layout
-
-\begin_layout Solution
-由于被积函数可以分离成 
-\backslash
-( x^2 
-\backslash
-) 和 
-\backslash
-( e^{-y^2} 
-\backslash
-) 的乘积，
-我们可以拆分积分：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} e^{-y^2} dy 
-\backslash
-cdot 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 dx
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-### **步骤 2：
-计算 
-\backslash
-( x 
-\backslash
-) 方向的积分**
-\end_layout
-
-\begin_layout Solution
-计算高斯型积分：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 dx
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-使用标准高斯积分公式：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} e^{-x^2} dx = 
-\backslash
-sqrt{
-\backslash
-pi}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-以及二阶矩公式：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 e^{-x^2} dx = 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-对 
-\backslash
-( x 
-\backslash
-) 变量进行变量替换 
-\backslash
-( u = x 
-\backslash
-)，
-得到：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 dx = 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-### **步骤 3：
-计算 
-\backslash
-( y 
-\backslash
-) 方向的积分**
-\end_layout
-
-\begin_layout Solution
-积分
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} e^{-y^2} dy
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-是标准高斯积分，
-结果为：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-sqrt{
-\backslash
-pi}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-### **步骤 4：
-合并结果**
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-sqrt{
-\backslash
-pi} 
-\backslash
-cdot 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2} = 
-\backslash
-frac{
-\backslash
-pi^{3/2}}{2}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-### **最终结果**
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-frac{
-\backslash
-pi^{3/2}}{2}
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-我们计算二重积分：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-iint_D x^2 e^{-y^2} 
-\backslash
-,dx
-\backslash
-,dy
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-假设积分区域 
-\backslash
-( D 
-\backslash
-) 是整个平面 
-\backslash
-( 
-\backslash
-mathbb{R}^2 
-\backslash
-)，
-我们按照 
-\backslash
-( y 
-\backslash
-) 先积分，
-再对 
-\backslash
-( x 
-\backslash
-) 积分。
-
-\end_layout
-
-\begin_layout Solution
----
-\end_layout
-
-\begin_layout Solution
-### **步骤 1：
-交换积分顺序**
-\end_layout
-
-\begin_layout Solution
-写成迭代积分：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 
-\backslash
-left( 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} e^{-y^2} dy 
-\backslash
-right) dx.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-由于 
-\backslash
-( 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} e^{-y^2} dy = 
-\backslash
-sqrt{
-\backslash
-pi} 
-\backslash
-) 是标准高斯积分，
-我们得到：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-sqrt{
-\backslash
-pi} 
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 dx.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
----
-\end_layout
-
-\begin_layout Solution
-### **步骤 2：
-计算 
-\backslash
-( x 
-\backslash
-) 的积分**
-\end_layout
-
-\begin_layout Solution
-我们计算：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 e^{-x^2} dx.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-使用高斯积分的二阶矩公式：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 e^{-x^2} dx = 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2}.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-因此：
-
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-int_{-
-\backslash
-infty}^{
-\backslash
-infty} x^2 dx = 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2}.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
----
-\end_layout
-
-\begin_layout Solution
-### **步骤 3：
-合并结果**
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-sqrt{
-\backslash
-pi} 
-\backslash
-times 
-\backslash
-frac{
-\backslash
-sqrt{
-\backslash
-pi}}{2} = 
-\backslash
-frac{
-\backslash
-pi^{3/2}}{2}.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
----
-\end_layout
-
-\begin_layout Solution
-### **最终结果**
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-[
-\end_layout
-
-\begin_layout Solution
-I = 
-\backslash
-frac{
-\backslash
-pi^{3/2}}{2}.
-\end_layout
-
-\begin_layout Solution
-
-\backslash
-]
-\end_layout
-
-\begin_layout Solution
-无论先对 
-\backslash
-( x 
-\backslash
-) 还是 
-\backslash
-( y 
-\backslash
-) 积分，
-最终答案相同。
 
 \end_layout
 
@@ -62383,6 +61785,18 @@ pi^{3/2}}{2}.
 
 是圆形区域、扇形区域、环形区域或它们的一部分时，
 在极坐标系下计算则比较方便.
+\begin_inset Formula $x^{2}+y^{2}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{y}{x}$
+\end_inset
+
+,
+\begin_inset Formula $\frac{x}{y}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -62410,6 +61824,8 @@ pi^{3/2}}{2}.
 
 ,由直角坐标系与极坐标系的坐标转换关系，
 将
+\series bold
+ 
 \begin_inset Formula $x=r\cos\theta$
 \end_inset
 
@@ -62418,7 +61834,9 @@ pi^{3/2}}{2}.
 \begin_inset Formula $y=r\sin\theta$
 \end_inset
 
-代入,
+
+\series default
+ 代入,
  则
 \begin_inset Formula $f(x,y)=f(r\cos\theta,r\sin\theta)$
 \end_inset
@@ -62433,8 +61851,8 @@ pi^{3/2}}{2}.
 \begin_inset Formula $D$
 \end_inset
 
-.
- 选取一簇以极点为圆心,
+。
+选取一簇以极点为圆心,
  半径取一系列常数
 \begin_inset Formula $r$
 \end_inset
@@ -62471,7 +61889,8 @@ pi^{3/2}}{2}.
 \begin_inset Formula $\Delta r$
 \end_inset
 
-为边长的小矩形的面积.
+为边长的小矩形的面积。
+
 \end_layout
 
 \begin_layout Standard
@@ -62484,7 +61903,7 @@ pi^{3/2}}{2}.
 \begin_inset Formula $d\sigma=(rd\theta)dr=rdrd\theta$
 \end_inset
 
- .
+。
  因此,在极坐标系下二重积分
 \begin_inset Formula $\iint_{D}f(x,y)dxdy$
 \end_inset
@@ -62547,7 +61966,16 @@ pi^{3/2}}{2}.
 的累次积分.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Case
+极点
+\begin_inset Formula $O$
+\end_inset
+
+在区域
+\begin_inset Formula $D$
+\end_inset
+
+外面，
 设区域
 \begin_inset Formula $D$
 \end_inset
@@ -62600,7 +62028,7 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 \begin_inset Formula 
 \begin{align*}
 \iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
- & =\int_{\alpha}^{\beta}d\theta\int_{r_{1}(\theta)}^{r_{2}(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+ & =\int_{\alpha}^{\beta}d\theta\int_{r_{1}(\theta)}^{r_{2}(\theta)}f(r\cos\theta,r\sin\theta)rdr
 \end{align*}
 
 \end_inset
@@ -62608,8 +62036,7 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 
 \end_layout
 
-\begin_layout Standard
-对于上述区域，
+\begin_layout Case
 极点
 \begin_inset Formula $O$
 \end_inset
@@ -62618,20 +62045,12 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 \begin_inset Formula $D$
 \end_inset
 
-外面.若极点
-\begin_inset Formula $O$
-\end_inset
-
-在区域
-\begin_inset Formula $D$
-\end_inset
-
 的边界上，
-则 
+
 \begin_inset Formula 
 \begin{align*}
 \iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
- & =\int_{\alpha}^{\beta}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+ & =\int_{\alpha}^{\beta}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdr
 \end{align*}
 
 \end_inset
@@ -62639,8 +62058,8 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 
 \end_layout
 
-\begin_layout Standard
-如果极点
+\begin_layout Case
+极点
 \begin_inset Formula $O$
 \end_inset
 
@@ -62656,7 +62075,7 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 可以表示为
 \begin_inset Formula $\left\{ \begin{array}{c}
 0\leqslant r\leqslant r(\theta)\\
-0\leqslant\theta\leqslant\pi
+0\leqslant\theta\leqslant2\pi
 \end{array}\right.$
 \end_inset
 
@@ -62665,7 +62084,7 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 \begin_inset Formula 
 \begin{align*}
 \iint_{D}f(x,y)d\sigma & =\iint_{D}f(r\cos\theta,r\sin\theta)rdrd\theta\\
- & =\int_{0}^{\pi}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdrd\theta
+ & =\int_{0}^{2\pi}d\theta\int_{0}^{r(\theta)}f(r\cos\theta,r\sin\theta)rdr
 \end{align*}
 
 \end_inset
@@ -62710,6 +62129,31 @@ r_{1}(\theta)\leqslant r\leqslant r_{2}(\theta)\\
 \end_inset
 
  
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{D}{\iint}e^{-x^{2}-y^{2}}dxdy$
+\end_inset
+
+,
+\begin_inset Formula $D:x^{2}+y^{2}\leqslant a^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $D=\{(r,\theta)|0\leqslant\theta\leqslant2\pi,0\leqslant r\leqslant a\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\underset{D}{\iint}e^{-r^{2}\cos^{2}\theta-r\sin^{2}\theta}rdrd\theta=\int_{0}^{2\pi}d\theta\int_{0}^{a}\frac{1}{2}e^{-r^{2}}dr^{2}=\left[-\frac{1}{2}e^{-r^{2}}|_{0}^{a}\right]\cdot2\pi$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -65372,11 +64816,11 @@ y''+P(x)y'+Q(x)y=f(x)
  方程叫做非齐次的.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 可降阶的高阶微分方程
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Formula $y^{(n)}=f(x)$
 \end_inset
 
@@ -65479,7 +64923,33 @@ y=\frac{1}{8}e^{2x}+\sin x+C_{1}x^{2}+C_{2}x+C_{3}\ (C_{1}=\frac{C_{2}}{2})
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
+\begin_inset Formula $y^{(n)}=f(x,y^{n-1})$
+\end_inset
+
+型得微分方程
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $u=y^{n-1}$
+\end_inset
+
+，
+
+\begin_inset Formula $u'=y^{n}$
+\end_inset
+
+,则 
+\begin_inset Formula $u'=f(x,u)$
+\end_inset
+
+,转变为一阶，
+再计算。
+
+\end_layout
+
+\begin_layout Subsubsection
 \begin_inset Formula $y^{''}=f(x,y')$
 \end_inset
 
@@ -65638,7 +65108,7 @@ y=\int C_{1}x^{2}dx+C_{2}\ (C_{1}=\pm e^{C})
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 \begin_inset Formula $y^{''}=f(y,y')$
 \end_inset
 
@@ -65733,11 +65203,65 @@ y'=p=\varphi(y,C_{1})
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Example
+\begin_inset Formula $yy^{''}=(y^{'})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $yu\frac{du}{dy}=u^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $u\neq0$
+\end_inset
+
+,
+\begin_inset Formula $y\frac{du}{dy}=u$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\frac{du}{u}=\frac{dy}{y}+C$
+\end_inset
+
+,
+\begin_inset Formula $u=C_{1}y$
+\end_inset
+
+,
+\begin_inset Formula $y'=C_{1}y$
+\end_inset
+
+,
+\begin_inset Formula $y=C_{2}e^{C_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $u=0$
+\end_inset
+
+,
+\begin_inset Formula $C_{2}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 二阶线性微分方程举例
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 二阶齐次线性方程
 \end_layout
 
@@ -65817,7 +65341,7 @@ y=C_{1}y_{1}(x)+C_{2}y_{2}(x)
  不是通解
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 函数组的线性相关与线性无关
 \end_layout
 
