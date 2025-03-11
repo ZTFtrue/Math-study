@@ -65257,12 +65257,31 @@ y'=p=\varphi(y,C_{1})
 
 \end_layout
 
-\begin_layout Subsubsection
-二阶线性微分方程举例
+\begin_layout Subsection
+二阶常系数线性微分方程
+\end_layout
+
+\begin_layout Standard
+二阶线性非齐次微分方程的标准形式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y''+P(x)y'+Q(x)y=f(x)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
-二阶齐次线性方程
+二阶常系数线性齐次微分方程
+\end_layout
+
+\begin_layout Standard
+二阶齐次线性微分方程
 \end_layout
 
 \begin_layout Standard
@@ -65273,6 +65292,243 @@ y''+P(x)y'+Q(x)y=0
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+中，
+如果
+\begin_inset Formula $y'$
+\end_inset
+
+,
+\begin_inset Formula $y$
+\end_inset
+
+的系数
+\begin_inset Formula $P(x)$
+\end_inset
+
+,
+\begin_inset Formula $Q(x)$
+\end_inset
+
+均为常数,即
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y''+py'+qy=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中p,q 是常数,那么称为二阶
+\series bold
+常系数
+\series default
+齐次线性微分方程.如果p,q不全是常数,那么称为二阶变系数齐次线性微分方程.
+\end_layout
+
+\begin_layout Definition
+特征方程：
+对二阶线性齐次微分方程：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+y''+py'+qy=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+假设解的形式为指数函数：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+y=e^{\lambda x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+代入方程，
+计算导数：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+y'=\lambda e^{\lambda x},\quad y''=\lambda^{2}e^{\lambda x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+将它们代入原方程：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lambda^{2}e^{\lambda x}+p\lambda e^{\lambda x}+qe^{\lambda x}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+由于 
+\begin_inset Formula $e^{\lambda x}\neq0$
+\end_inset
+
+，
+可以消去它，
+得到 特征方程 （也称 特征多项式）：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\lambda^{2}+p\lambda+q=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+这是一个关于
+\begin_inset Formula $\lambda$
+\end_inset
+
+的二次方程，
+解法如下：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lambda=\frac{-p\pm\sqrt{p^{2}-4q}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+不同情况的解：
+
+\end_layout
+
+\begin_layout Definition
+1.
+ 实且不同的根
+\begin_inset Formula $\lambda_{1},\lambda_{2}$
+\end_inset
+
+（判别式 
+\begin_inset Formula $p^{2}-4q>0$
+\end_inset
+
+） 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+y=C_{1}e^{\lambda_{1}x}+C_{2}e^{\lambda_{2}x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+2.
+ 重根 
+\begin_inset Formula $\lambda_{1}=\lambda_{2}=\lambda$
+\end_inset
+
+（判别式 
+\begin_inset Formula $p^{2}-4q=0$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+y=(C_{1}+C_{2}x)e^{\lambda x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+3.
+ 复根
+\begin_inset Formula $\lambda=\alpha\pm i\beta$
+\end_inset
+
+（判别式 
+\begin_inset Formula $p^{2}-4q<0$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\lambda=\alpha\pm i\beta$
+\end_inset
+
+，
+则通解为：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $y=e^{\alpha x}(C_{1}\cos\beta x+C_{2}\sin\beta x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+ 是任意常数。
 
 \end_layout
 
@@ -65752,6 +66008,773 @@ y''+P(x)y'+Q(x)y=f_{2}(x)
 这一定理通常称为线性微分方程的解的叠加定理
 \end_layout
 
+\begin_layout Section
+差分方程
+\end_layout
+
+\begin_layout Standard
+差分方程（Difference Equation） 是离散系统中的方程，
+对应于微分方程在连续系统中的作用。
+它描述了序列 
+\begin_inset Formula $\ensuremath{y_{n}}$
+\end_inset
+
+的递推关系。
+
+\end_layout
+
+\begin_layout Subsection
+离散函数
+\end_layout
+
+\begin_layout Standard
+**离散函数（Discrete Function）**是定义在**离散变量**上的数学函数，
+通常表示为序列 
+\backslash
+( f(n) 
+\backslash
+)，
+其中 
+\backslash
+( n 
+\backslash
+) 取离散值（如整数）。
+与**连续函数**不同，
+离散函数的定义域是**离散的数集**（如整数集 
+\backslash
+( 
+\backslash
+mathbb{Z} 
+\backslash
+)），
+而不是实数集 
+\backslash
+( 
+\backslash
+mathbb{R} 
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## **1.
+ 离散函数的表示**
+\end_layout
+
+\begin_layout Standard
+离散函数通常写成：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f:
+ 
+\backslash
+mathbb{Z} 
+\backslash
+to 
+\backslash
+mathbb{R},
+ 
+\backslash
+quad f(n) = y_n
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( n 
+\backslash
+) 是离散变量（整数）。
+
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( y_n 
+\backslash
+) 是对应的函数值。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n) = 2^n,
+ 
+\backslash
+quad n = 0,1,2,3,
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+表示指数序列 
+\backslash
+( 1,2,4,8,
+\backslash
+dots 
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## **2.
+ 常见的离散函数**
+\end_layout
+
+\begin_layout Standard
+### **(1) 斜阶函数（单位阶跃函数）**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+u(n) =
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Standard
+1,
+ & n 
+\backslash
+geq 0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+0,
+ & n < 0
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+end{cases}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+用于描述信号的开启（如数字信号）。
+
+\end_layout
+
+\begin_layout Standard
+### **(2) 冲激函数（单位冲激函数）**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+delta(n) =
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Standard
+1,
+ & n = 0 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+0,
+ & n 
+\backslash
+neq 0
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+end{cases}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+表示一个时刻的激励（类似于 Dirac δ 函数的离散版本）。
+
+\end_layout
+
+\begin_layout Standard
+### **(3) 等差序列**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n) = a + (n-1)d
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n) = 3 + (n-1)2 = 3,5,7,9,
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+### **(4) 等比序列**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n) = a r^n
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n) = 2 
+\backslash
+cdot 3^n = 2,6,18,54,
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## **3.
+ 离散函数的运算**
+\end_layout
+
+\begin_layout Standard
+### **(1) 平移**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(n-k)
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+表示将 
+\backslash
+( f(n) 
+\backslash
+) **向右平移** 
+\backslash
+( k 
+\backslash
+) 个单位。
+
+\end_layout
+
+\begin_layout Standard
+### **(2) 反转**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(-n)
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+表示关于 
+\backslash
+( n=0 
+\backslash
+) **对称翻转**。
+
+\end_layout
+
+\begin_layout Standard
+### **(3) 累加（离散积分）**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+S(n) = 
+\backslash
+sum_{k=0}^{n} f(k)
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+类似于连续函数的积分。
+
+\end_layout
+
+\begin_layout Standard
+### **(4) 差分（离散微分）**
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+Delta f(n) = f(n+1) - f(n)
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+类似于连续函数的微分。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## **4.
+ 离散函数的应用**
+\end_layout
+
+\begin_layout Standard
+- **数字信号处理（DSP）**：
+音频、图像、信号分析
+\end_layout
+
+\begin_layout Standard
+- **计算机算法**：
+递归方程、动态规划
+\end_layout
+
+\begin_layout Standard
+- **数值计算**：
+离散微积分
+\end_layout
+
+\begin_layout Standard
+- **经济学 & 统计学**：
+时间序列分析
+\end_layout
+
+\begin_layout Subsection
+线性齐次差分方程
+\end_layout
+
+\begin_layout Standard
+形式如下：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n+2}+py_{n+1}+qy_{n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $p$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{q}$
+\end_inset
+
+是常数。
+
+\end_layout
+
+\begin_layout Standard
+特征方程 
+\end_layout
+
+\begin_layout Standard
+假设解的形式为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=r^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入差分方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r^{n+2}+pr^{n+1}+qr^{n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+消去
+\begin_inset Formula $r^{n}$
+\end_inset
+
+（前提是
+\begin_inset Formula $r^{n}\neq0$
+\end_inset
+
+），
+得到特征方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r^{2}+pr+q=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+该方程的解决定了序列
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ 的一般解。
+
+\end_layout
+
+\begin_layout Standard
+根据特征方程的根
+\begin_inset Formula $r_{1},r_{2}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Itemize
+实且不同的根 
+\begin_inset Formula $(r_{1}\neq r_{2})$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=C_{1}r_{1}^{n}+C_{2}r_{2}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+重根 
+\begin_inset Formula $(r_{1}=r_{2}=r)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=(C_{1}+C_{2}n)r^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+复根
+\begin_inset Formula $r=\alpha\pm i\beta$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+设 
+\begin_inset Formula $r=e^{\theta i}$
+\end_inset
+
+，
+即 
+\begin_inset Formula $\alpha\pm i\beta=e^{i\theta}$
+\end_inset
+
+，
+则通解为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=C_{1}\alpha^{n}\cos(n\theta)+C_{2}\alpha^{n}\sin(n\theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+线性非齐次差分方程
+\end_layout
+
+\begin_layout Standard
+形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n+2}+py_{n+1}+qy_{n}=f_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ 是非齐次项。
+
+\end_layout
+
+\begin_layout Standard
+解法：
+
+\end_layout
+
+\begin_layout Enumerate
+先求齐次解 
+\begin_inset Formula $y_{h}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+再求特解 
+\begin_inset Formula $y_{p}$
+\end_inset
+
+，
+方法有：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+待定系数法（适用于 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ 为多项式、指数、三角函数）
+\end_layout
+
+\begin_layout Itemize
+常数变易法（通用方法）
+\end_layout
+
+\end_deeper
 \begin_layout Section
 欧拉方程
 \end_layout
