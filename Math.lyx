@@ -66028,42 +66028,29 @@ y''+P(x)y'+Q(x)y=f_{2}(x)
 \end_layout
 
 \begin_layout Standard
-**离散函数（Discrete Function）**是定义在**离散变量**上的数学函数，
-通常表示为序列 
-\backslash
-( f(n) 
-\backslash
-)，
+离散函数（Discrete Function） 是定义在 离散变量 上的数学函数，
+通常表示为序列
+\begin_inset Formula $f(n)$
+\end_inset
+
+，
 其中 
-\backslash
-( n 
-\backslash
-) 取离散值（如整数）。
-与**连续函数**不同，
-离散函数的定义域是**离散的数集**（如整数集 
-\backslash
-( 
-\backslash
-mathbb{Z} 
-\backslash
-)），
-而不是实数集 
-\backslash
-( 
-\backslash
-mathbb{R} 
-\backslash
-)。
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
 
-\end_layout
+取离散值（如整数）。
+与 连续函数 不同，
+离散函数的定义域是 离散的数集 （如整数集
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
 
-\begin_layout Standard
----
-\end_layout
+），
+而不是实数集
+\begin_inset Formula $\mathbb{R}$
+\end_inset
 
-\begin_layout Standard
-## **1.
- 离散函数的表示**
+。
+
 \end_layout
 
 \begin_layout Standard
@@ -66072,51 +66059,28 @@ mathbb{R}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f:\mathbb{Z}\to\mathbb{R},f(n)=y_{n}
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-f:
- 
-\backslash
-mathbb{Z} 
-\backslash
-to 
-\backslash
-mathbb{R},
- 
-\backslash
-quad f(n) = y_n
-\end_layout
 
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
 其中：
 
-\end_layout
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
 
-\begin_layout Standard
-- 
-\backslash
-( n 
-\backslash
-) 是离散变量（整数）。
+是离散变量（整数），
 
-\end_layout
+\begin_inset Formula $\ensuremath{y_{n}}$
+\end_inset
 
-\begin_layout Standard
-- 
-\backslash
-( y_n 
-\backslash
-) 是对应的函数值。
+是对应的函数值。
 
 \end_layout
 
@@ -66126,92 +66090,45 @@ quad f(n) = y_n
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=2^{n},n=0,1,2,3,\dots
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-f(n) = 2^n,
- 
-\backslash
-quad n = 0,1,2,3,
-\backslash
-dots
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
-表示指数序列 
-\backslash
-( 1,2,4,8,
-\backslash
-dots 
-\backslash
-)。
 
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
+表示指数序列
+\begin_inset Formula $1,2,4,8,\dots$
+\end_inset
 
-\begin_layout Standard
-## **2.
- 常见的离散函数**
-\end_layout
-
-\begin_layout Standard
-### **(1) 斜阶函数（单位阶跃函数）**
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-[
-\end_layout
-
-\begin_layout Standard
-u(n) =
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-begin{cases}
-\end_layout
-
-\begin_layout Standard
-1,
- & n 
-\backslash
-geq 0 
-\backslash
-
-\backslash
+。
 
 \end_layout
 
-\begin_layout Standard
-0,
- & n < 0
+\begin_layout Subsubsection
+常见的离散函数
 \end_layout
 
 \begin_layout Standard
-
-\backslash
-end{cases}
+斜阶函数（单位阶跃函数） 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+u(n)=\begin{cases}
+1, & n\geq0\\
+0, & n<0
+\end{cases}
+\]
 
-\backslash
-]
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66220,53 +66137,21 @@ end{cases}
 \end_layout
 
 \begin_layout Standard
-### **(2) 冲激函数（单位冲激函数）**
+冲激函数（单位冲激函数） 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+\delta(n)=\begin{cases}
+1, & n=0\\
+0, & n\neq0
+\end{cases}
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
 
-\backslash
-delta(n) =
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-begin{cases}
-\end_layout
-
-\begin_layout Standard
-1,
- & n = 0 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-0,
- & n 
-\backslash
-neq 0
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{cases}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -66275,23 +66160,18 @@ end{cases}
 \end_layout
 
 \begin_layout Standard
-### **(3) 等差序列**
+等差序列 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=a+(n-1)d
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-f(n) = a + (n-1)d
-\end_layout
 
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -66300,41 +66180,29 @@ f(n) = a + (n-1)d
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=3+(n-1)2=3,5,7,9,\dots
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-f(n) = 3 + (n-1)2 = 3,5,7,9,
-\backslash
-dots
+等比序列 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=ar^{n}
+\]
 
-\backslash
-]
-\end_layout
+\end_inset
 
-\begin_layout Standard
-### **(4) 等比序列**
-\end_layout
 
-\begin_layout Standard
-
-\backslash
-[
-\end_layout
-
-\begin_layout Standard
-f(n) = a r^n
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -66343,116 +66211,90 @@ f(n) = a r^n
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=2\cdot3^{n}=2,6,18,54,\dots
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-f(n) = 2 
-\backslash
-cdot 3^n = 2,6,18,54,
-\backslash
-dots
+\begin_layout Subsubsection
+离散函数的运算
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-]
+\begin_layout Itemize
+平移
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-## **3.
- 离散函数的运算**
-\end_layout
-
-\begin_layout Standard
-### **(1) 平移**
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-[
-\end_layout
-
-\begin_layout Standard
+\begin_inset Formula 
+\[
 f(n-k)
-\end_layout
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
-表示将 
-\backslash
-( f(n) 
-\backslash
-) **向右平移** 
-\backslash
-( k 
-\backslash
-) 个单位。
 
 \end_layout
 
 \begin_layout Standard
-### **(2) 反转**
+表示将
+\begin_inset Formula $f(n)$
+\end_inset
+
+ 向右平移
+\begin_inset Formula $\ensuremath{k}$
+\end_inset
+
+个单位。
+
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-[
+\end_deeper
+\begin_layout Itemize
+反转
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+\begin_inset Formula 
+\[
 f(-n)
-\end_layout
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-]
+
 \end_layout
 
 \begin_layout Standard
 表示关于 
-\backslash
-( n=0 
-\backslash
-) **对称翻转**。
+\begin_inset Formula $n=0$
+\end_inset
+
+ 对称翻转。
 
 \end_layout
 
-\begin_layout Standard
-### **(3) 累加（离散积分）**
+\end_deeper
+\begin_layout Itemize
+累加（离散积分）
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+\begin_inset Formula 
+\[
+S(n)=\sum_{k=0}^{n}f(k)
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-S(n) = 
-\backslash
-sum_{k=0}^{n} f(k)
-\end_layout
 
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -66460,26 +66302,134 @@ sum_{k=0}^{n} f(k)
 
 \end_layout
 
-\begin_layout Standard
-### **(4) 差分（离散微分）**
+\end_deeper
+\begin_layout Subsubsection
+离散函数的应用
+\end_layout
+
+\begin_layout Itemize
+数字信号处理（DSP）：
+音频、图像、信号分析
+\end_layout
+
+\begin_layout Itemize
+计算机算法：
+递归方程、动态规划
+\end_layout
+
+\begin_layout Itemize
+数值计算：
+离散微积分
+\end_layout
+
+\begin_layout Itemize
+经济学 & 统计学：
+时间序列分析
+\end_layout
+
+\begin_layout Subsection
+差分方程
 \end_layout
 
 \begin_layout Standard
+差分方程（Difference Equation）是描述离散时间系统的一类递推方程，
+类似于微分方程在连续系统中的作用。
+它用于描述一个序列 
+\begin_inset Formula $y_{n}$
+\end_inset
 
-\backslash
-[
+ 的变化关系。
+ 
 \end_layout
 
 \begin_layout Standard
+一般的
+\begin_inset Formula $\ensuremath{k}$
+\end_inset
 
-\backslash
-Delta f(n) = f(n+1) - f(n)
+阶线性齐次差分方程：
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+a_{k}y_{n+k}+a_{k-1}y_{n+k-1}+\dots+a_{1}y_{n+1}+a_{0}y_{n}=0
+\]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ 是未知序列，
+-
+\begin_inset Formula $a_{0},a_{1},\dots,a_{k}$
+\end_inset
+
+ 是常数或依赖于 
 \backslash
-]
+( n 
+\backslash
+) 的函数，
+
+\begin_inset Formula $\ensuremath{k}$
+\end_inset
+
+是方程的阶数（最高的延迟次数）。
+
+\end_layout
+
+\begin_layout Standard
+如果右侧不为零，
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{k}y_{n+k}+a_{k-1}y_{n+k-1}+\dots+a_{1}y_{n+1}+a_{0}y_{n}=f(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则是 非齐次差分方程 ，
+其中
+\begin_inset Formula $\ensuremath{f(n)}$
+\end_inset
+
+是外部输入。
+
+\end_layout
+
+\begin_layout Itemize
+差分（离散微分） 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta f(n)=f(n+1)-f(n)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66487,41 +66437,123 @@ Delta f(n) = f(n+1) - f(n)
 
 \end_layout
 
-\begin_layout Standard
----
+\end_deeper
+\begin_layout Itemize
+二阶差分
 \end_layout
 
 \begin_layout Standard
-## **4.
- 离散函数的应用**
+\begin_inset Formula 
+\begin{align*}
+\Delta^{2}f(n) & =\Delta f(n+1)-\Delta f(n)\\
+ & =\Delta f(n+2)-\Delta f(n+1)-(f(n+1)-f(n))\\
+ & =\Delta f(n+2)-2\Delta f(n+1)+f(n))
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+一阶差分方程
 \end_layout
 
 \begin_layout Standard
-- **数字信号处理（DSP）**：
-音频、图像、信号分析
+最简单的形式：
+
 \end_layout
 
 \begin_layout Standard
-- **计算机算法**：
-递归方程、动态规划
+\begin_inset Formula 
+\[
+y_{n+1}-y_{n}=f(n)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-- **数值计算**：
-离散微积分
+齐次一阶差分方程
 \end_layout
 
 \begin_layout Standard
-- **经济学 & 统计学**：
-时间序列分析
+\begin_inset Formula 
+\[
+y_{n+1}=ry_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解法：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=Cr^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $\ensuremath{C}$
+\end_inset
+
+是常数，
+由初值决定。
+
+\end_layout
+
+\begin_layout Subsubsection
+非齐次一阶差分方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n+1}=ry_{n}+f(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常见求解方法：
+
+\end_layout
+
+\begin_layout Standard
+迭代法
+\end_layout
+
+\begin_layout Standard
+待定系数法
+\end_layout
+
+\begin_layout Standard
+常数变易法
 \end_layout
 
 \begin_layout Subsection
-线性齐次差分方程
+二阶线性差分方程
 \end_layout
 
 \begin_layout Standard
-形式如下：
+一般形式：
 
 \end_layout
 
@@ -66554,7 +66586,7 @@ y_{n+2}+py_{n+1}+qy_{n}=0
 \end_layout
 
 \begin_layout Standard
-假设解的形式为：
+假设解的形式：
 
 \end_layout
 
@@ -66570,7 +66602,7 @@ y_{n}=r^{n}
 \end_layout
 
 \begin_layout Standard
-代入差分方程：
+代入方程：
 
 \end_layout
 
@@ -66615,16 +66647,13 @@ r^{2}+pr+q=0
 \begin_inset Formula $y_{n}$
 \end_inset
 
- 的一般解。
-
-\end_layout
-
-\begin_layout Standard
-根据特征方程的根
+ 的一般解，
+解出
 \begin_inset Formula $r_{1},r_{2}$
 \end_inset
 
-：
+ 后，
+通解分情况：
 
 \end_layout
 
@@ -66709,19 +66738,14 @@ y_{n}=C_{1}\alpha^{n}\cos(n\theta)+C_{2}\alpha^{n}\sin(n\theta)
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-线性非齐次差分方程
-\end_layout
-
-\begin_layout Standard
-形式：
-
+\begin_layout Subsubsection
+非齐次二阶差分方程
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-y_{n+2}+py_{n+1}+qy_{n}=f_{n}
+y_{n+2}+py_{n+1}+qy_{n}=f(n)
 \]
 
 \end_inset
@@ -66744,20 +66768,20 @@ y_{n+2}+py_{n+1}+qy_{n}=f_{n}
 \end_layout
 
 \begin_layout Enumerate
-先求齐次解 
+求齐次解 
 \begin_inset Formula $y_{h}$
 \end_inset
 
+（解特征方程）。
 
 \end_layout
 
 \begin_layout Enumerate
-再求特解 
+求特解 
 \begin_inset Formula $y_{p}$
 \end_inset
 
-，
-方法有：
+（待定系数法或常数变易法）。
 
 \end_layout
 
@@ -66775,6 +66799,89 @@ y_{n+2}+py_{n+1}+qy_{n}=f_{n}
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+通解：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=y_{h}+y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+高阶差分方程
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n+k}+a_{k-1}y_{n+k-1}+\dots+a_{0}y_{n}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+特征方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r^{k}+a_{k-1}r^{k-1}+\dots+a_{0}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解出 
+\begin_inset Formula $\ensuremath{k}$
+\end_inset
+
+个根，
+构造通解。
+
+\end_layout
+
+\begin_layout Subsubsection
+差分方程的应用
+\end_layout
+
+\begin_layout Itemize
+数列分（斐波那契数列、几何级数）
+\end_layout
+
+\begin_layout Itemize
+动态规划（递归公式）
+\end_layout
+
+\begin_layout Itemize
+信号处理（数字滤波器）
+\end_layout
+
+\begin_layout Itemize
+经济学（时间序列分析）
+\end_layout
+
+\begin_layout Itemize
+物理建模（离散动力系统）
+\end_layout
+
 \begin_layout Section
 欧拉方程
 \end_layout
