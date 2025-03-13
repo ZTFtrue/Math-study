@@ -13098,6 +13098,234 @@ Polar Coordinate System
 \end_layout
 
 \begin_layout Chapter
+方程
+\end_layout
+
+\begin_layout Standard
+线性方程（Linear Equation） 
+\end_layout
+
+\begin_layout Standard
+线性方程是指所有变量的最高次幂为
+\begin_inset Formula $1$
+\end_inset
+
+，
+且变量之间没有乘积项的方程。
+ 
+\end_layout
+
+\begin_layout Standard
+其一般形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{1}x_{1}+a_{2}x_{2}+\dots+a_{n}x_{n}=b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $\ensuremath{a_{1},a_{2},\dots,a_{n},b}$
+\end_inset
+
+为常数，
+
+\begin_inset Formula $x_{1},x_{2},\dots,x_{n}$
+\end_inset
+
+ 为变量。
+
+\end_layout
+
+\begin_layout Standard
+示例：
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ 一元一次方程：
+
+\begin_inset Formula $2x+3=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 二元一次方程：
+
+\begin_inset Formula $x+2y=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 三元一次方程：
+
+\begin_inset Formula $x-y+3z=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+线性方程组 
+\end_layout
+
+\begin_layout Standard
+多个线性方程构成的方程组，
+如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+x+2y=5\\
+3x-y=4
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以用 矩阵、行列式、高斯消元法、逆矩阵等方法 求解。
+图形为直线或者平面。
+
+\end_layout
+
+\begin_layout Standard
+非线性方程（Nonlinear Equation） 
+\end_layout
+
+\begin_layout Standard
+如果一个方程中存在 变量的高次幂、变量之间的乘积、三角函数、指数函数、对数函数等非线性项 ，
+则为非线性方程。
+
+\end_layout
+
+\begin_layout Standard
+示例：
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ 二次方程：
+
+\begin_inset Formula $x^{2}+3x+2=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 指数方程：
+
+\begin_inset Formula $2^{x}=8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 对数方程：
+
+\begin_inset Formula $\log(x+1)=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 三角方程：
+
+\begin_inset Formula $\sin x+x=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+非线性方程求解 
+\end_layout
+
+\begin_layout Standard
+- 解析解 ：
+部分方程可用代数方法求解，
+如求根公式、换元法等。
+
+\end_layout
+
+\begin_layout Standard
+- 数值解 ：
+大多数非线性方程无法直接求出解析解，
+需用 牛顿迭代法、二分法、梯度下降等数值方法 求解。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+总结
+\end_layout
+
+\begin_layout Standard
+| 类型 | 形式 | 例子 | 解法 |
+\end_layout
+
+\begin_layout Standard
+|------|------|------|------|
+\end_layout
+
+\begin_layout Standard
+| 线性方程| 变量最高次幂为 
+\begin_inset Formula $1$
+\end_inset
+
+，
+无乘积 | 
+\begin_inset Formula $x+2y=5$
+\end_inset
+
+ | 代数方法（消元、矩阵） |
+\end_layout
+
+\begin_layout Standard
+| 非线性方程 | 变量有高次幂、乘积、指数、三角等 | 
+\begin_inset Formula $x^{2}+3x=2$
+\end_inset
+
+,
+\begin_inset Formula $e^{x}=x+2$
+\end_inset
+
+ | 解析解或数值方法 |
+\end_layout
+
+\begin_layout Chapter
 平面图形
 \end_layout
 
@@ -61764,7 +61992,21 @@ y\leqslant x\leqslant2-y\\
 \begin_inset Formula $\underset{D}{\iint}x^{2}e^{-y^{2}}dxdy$
 \end_inset
 
+，
 
+\begin_inset Formula $D$
+\end_inset
+
+由 
+\begin_inset Formula $y=x$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y=1$
+\end_inset
+
+ 及y 轴围成.
 \end_layout
 
 \begin_layout Solution
@@ -66377,10 +66619,10 @@ a_{k}y_{n+k}+a_{k-1}y_{n+k-1}+\dots+a_{1}y_{n+1}+a_{0}y_{n}=0
 \end_inset
 
  是常数或依赖于 
-\backslash
-( n 
-\backslash
-) 的函数，
+\begin_inset Formula $n$
+\end_inset
+
+ 的函数，
 
 \begin_inset Formula $\ensuremath{k}$
 \end_inset
@@ -66482,7 +66724,7 @@ y_{n+1}-y_{n}=f(n)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-y_{n+1}=ry_{n}
+y_{n+1}+ry_{n}=0
 \]
 
 \end_inset
@@ -66498,7 +66740,18 @@ y_{n+1}=ry_{n}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-y_{n}=Cr^{n}
+y_{n+1}=-ry_{n}=-r(-ry_{n-1})=-r^{3}y_{n-2}=\cdots=(-r)^{t}y_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}=C(-r)^{t}
 \]
 
 \end_inset
@@ -66546,6 +66799,411 @@ y_{n+1}=ry_{n}+f(n)
 
 \begin_layout Standard
 常数变易法
+\end_layout
+
+\begin_layout Standard
+非齐次一阶差分方程（Non-homogeneous First-Order Difference Equation）一般形如下：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n+1}=ax_{n}+b_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\begin_inset Formula $a$
+\end_inset
+
+ 是一个常数（如果是变量，
+则更复杂），
+
+\begin_inset Formula $\ensuremath{b_{n}}$
+\end_inset
+
+是非齐次项（可以是常数，
+也可以是一个序列）
+\end_layout
+
+\begin_layout Paragraph
+求解方法
+\end_layout
+
+\begin_layout Standard
+非齐次一阶差分方程的通解由 齐次解 和 特解 之和组成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}=x_{n}^{(h)}+x_{n}^{(p)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求齐次解 
+\end_layout
+
+\begin_layout Standard
+先求解对应的 齐次方程 ：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n+1}=ax_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其通解为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}^{(h)}=Ca^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $C$
+\end_inset
+
+ 是待定的常数，
+由初值条件确定。
+
+\end_layout
+
+\begin_layout Standard
+求特解 
+\end_layout
+
+\begin_layout Standard
+特解 
+\begin_inset Formula $x_{n}^{(p)}$
+\end_inset
+
+ 取决于 
+\begin_inset Formula $\ensuremath{b_{n}}$
+\end_inset
+
+的形式：
+
+\end_layout
+
+\begin_layout Itemize
+若 
+\begin_inset Formula $b_{n}=b$
+\end_inset
+
+ 是常数，
+设特解为
+\begin_inset Formula $x_{n}^{(p)}=A$
+\end_inset
+
+，
+代入方程：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=aA+b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\frac{b}{1-a},\quad\text{(当 \ensuremath{a\neq1} 时)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以特解是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}^{(p)}=\frac{b}{1-a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+若 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ 是某种特定的函数（如 
+\begin_inset Formula $b_{n}=cn$
+\end_inset
+
+ 或 
+\begin_inset Formula $b_{n}=ca^{n}$
+\end_inset
+
+），
+可以用待定系数法来求特解。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+组合通解
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}=Ca^{n}+\frac{b}{1-a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula $\ensuremath{C}$
+\end_inset
+
+由初始条件
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 确定。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+求解差分方程：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x_{n+1}=2x_{n}+3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求齐次解**
+\end_layout
+
+\begin_layout Standard
+对应的齐次方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n+1}^{(h)}=2x_{n}^{(h)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其通解：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}^{(h)}=C2^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求特解 
+\end_layout
+
+\begin_layout Standard
+设特解为 
+\begin_inset Formula $x_{n}^{(p)}=A$
+\end_inset
+
+，
+代入方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=2A+3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=-3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以特解是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}^{(p)}=-3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+组合通解 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}=C2^{n}-3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由初值确定 
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+若已知 
+\begin_inset Formula $x_{0}=1$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1=C2^{0}-3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C=4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最终解：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{n}=4\cdot2^{n}-3
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
