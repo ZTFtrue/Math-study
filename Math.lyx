@@ -71241,7 +71241,7 @@ Nabla算子
 称为级数的一般项(或通项)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 设有级数
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
@@ -71296,7 +71296,7 @@ Nabla算子
  记作
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula 
 \[
 S=\stackrel[n=1]{\infty}{\sum}u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots
@@ -71313,10 +71313,17 @@ S=\stackrel[n=1]{\infty}{\sum}u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
 
-发散
+发散 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
 如果级数
 \begin_inset Formula $\stackrel[k=1]{n}{\sum}u_{n}$
 \end_inset
@@ -71339,7 +71346,11 @@ r_{n}=S-S_{n}=u_{n+1}+u_{n+2}+\cdots
 
 \end_inset
 
- 称为级数的余项，
+ 称为级数的
+\series bold
+余项
+\series default
+，
 而
 \begin_inset Formula $|r_{n}|$
 \end_inset
@@ -71352,7 +71363,7 @@ r_{n}=S-S_{n}=u_{n+1}+u_{n+2}+\cdots
 \begin_inset Formula $S$
 \end_inset
 
-所产生的误差 
+所产生的误差
 \end_layout
 
 \begin_layout Example
@@ -71404,7 +71415,11 @@ S_{n} & =\frac{1}{1\cdot2}+\frac{1}{2\cdot3}\cdots+\frac{1}{n(n+1)}+\cdots\\
 \series bold
 几何级数
 \series default
-(又称为等比级数),
+(又称为
+\series bold
+等比级数
+\series default
+),
  其中
 \begin_inset Formula $a\neq0$
 \end_inset
@@ -71509,6 +71524,260 @@ S_{n}=a+aq+\cdots+aq^{n-1}=\frac{a(1-q^{n})}{1-q}(q\neq1)
 
 的极限不存在,
  这时级数也发散.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\stackrel[n=1]{\infty}{\varSigma}\ln(1+\frac{1}{n})$
+\end_inset
+
+,发散还是收敛。
+
+\end_layout
+
+\begin_layout Solution
+通过比较级数判断，
+通过积分判别法。
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+S_{n}= & \ln(1+1)+\ln(1+\frac{1}{2})+\cdots+\ln(1+\frac{1}{n})\\
+= & \ln(\frac{2}{1})+\ln\frac{3}{2}+\cdots+\ln\frac{n+1}{n}\\
+= & \ln(\frac{2}{1}\times\frac{3}{2}\times\cdots\times\frac{n+1}{n})=\text{\ensuremath{\ln}(n+1)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\ensuremath{\ln}(n+1)\rightarrow\infty$
+\end_inset
+
+,
+ 发散。
+
+\end_layout
+
+\begin_layout Example
+调和级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n}$
+\end_inset
+
+，
+这个级数的部分和为：
+
+\begin_inset Formula $H_{n}=1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+调和级数是一个 发散级数 ，
+即：
+
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{1}{n}=\infty$
+\end_inset
+
+。
+ 虽然调和级数发散，
+但它的增长速度比幂级数（如
+\begin_inset Formula $\sum n^{p}$
+\end_inset
+
+）慢得多。
+部分和
+\begin_inset Formula $H_{n}$
+\end_inset
+
+ 近似于：
+
+\begin_inset Formula $H_{n}\approx\ln n+\gamma$
+\end_inset
+
+，
+ 其中
+\begin_inset Formula $\gamma\approx0.577$
+\end_inset
+
+（欧拉-马歇罗尼常数）。
+因此，
+虽然调和级数是 发散的 ，
+但它的增长速度是 非常缓慢的对数增长 。
+
+\end_layout
+
+\begin_layout Example
+考虑函数
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+，
+计算积分：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+I=\int_{1}^{\infty}\frac{1}{x}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+I=\lim_{t\to\infty}\int_{1}^{t}\frac{1}{x}dx=\lim_{t\to\infty}\ln t-\ln1=\lim_{t\to\infty}\ln t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因为
+\begin_inset Formula $\ensuremath{\ln t}$
+\end_inset
+
+随
+\begin_inset Formula $t$
+\end_inset
+
+ 增大趋向无穷大，
+所以积分 发散 ，
+根据积分判别法，
+级数
+\begin_inset Formula $\sum\frac{1}{n}$
+\end_inset
+
+ 也发散。
+
+\end_layout
+
+\begin_layout Example
+通过极限比较判别法 
+\end_layout
+
+\begin_layout Example
+我们与一个已知的发散级数（如 
+\begin_inset Formula $\sum\frac{1}{n^{p}}$
+\end_inset
+
+）进行比较：
+
+\end_layout
+
+\begin_layout Example
+当
+\begin_inset Formula $\ensuremath{p=1}$
+\end_inset
+
+时，
+
+\begin_inset Formula $\sum\frac{1}{n^{1}}=\sum\frac{1}{n}$
+\end_inset
+
+ 是调和级数，
+它已被证明发散。
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $\ensuremath{a_{n}=\frac{1}{n}}$
+\end_inset
+
+和
+\begin_inset Formula $b_{n}=\frac{1}{n^{0.99}}$
+\end_inset
+
+，
+则
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{a_{n}}{b_{n}}=\lim_{n\to\infty}n^{0.01}=\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $\ensuremath{\sum b_{n}}$
+\end_inset
+
+发散（因为
+\begin_inset Formula $\ensuremath{p=0.99<1}$
+\end_inset
+
+时级数仍发散），
+所以
+\begin_inset Formula $\ensuremath{\sum a_{n}}$
+\end_inset
+
+也必然发散。
+
+\end_layout
+
+\begin_layout Example
+中值定理证明
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\begin{align*}
+H_{n}= & 1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}\\
+> & \ln2-\ln1+\ln3-\ln2+\cdots+\ln(n+1)-\ln n\\
+= & \ln(n+1)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $H_{n}>\ln(n+1)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -71758,6 +72027,322 @@ S_{n}=a+aq+\cdots+aq^{n-1}=\frac{a(1-q^{n})}{1-q}(q\neq1)
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsection
+积分判别法
+\end_layout
+
+\begin_layout Standard
+积分判别法（Integral test for convergence），
+又称柯西积分判别法、麦克劳林-柯西判别法，
+是用于判断正项级数 
+\begin_inset Formula $\ensuremath{\sum a_{n}}$
+\end_inset
+
+收敛或发散的一种方法。
+它的基本原理是利用与该级数对应的积分
+\begin_inset Formula $\ensuremath{\int f(x)dx}$
+\end_inset
+
+的收敛性来判断级数的收敛性。
+
+\end_layout
+
+\begin_layout Theorem
+设
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是在区间 
+\begin_inset Formula $[N,\infty)$
+\end_inset
+
+ 上 单调递减 且 正值 的连续函数，
+并且满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(n)=a_{n},\quad\text{对于所有整数 }n\geq N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则,
+ 如果不定积分 
+\begin_inset Formula $\int_{N}^{\infty}f(x)dx$
+\end_inset
+
+ 收敛，
+则级数
+\begin_inset Formula $\ensuremath{\sum_{n=N}^{\infty}a_{n}}$
+\end_inset
+
+也 收敛；
+如果不定积分
+\begin_inset Formula $\int_{N}^{\infty}f(x)dx$
+\end_inset
+
+ 发散，
+则级数
+\begin_inset Formula $\sum_{n=N}^{\infty}a_{n}$
+\end_inset
+
+ 也 发散。
+
+\end_layout
+
+\begin_layout Standard
+积分判别法的核心思想是：
+级数
+\begin_inset Formula $\ensuremath{\sum a_{n}}$
+\end_inset
+
+可以看作是对数列 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 依次求和的结果,
+ 积分
+\begin_inset Formula $\int f(x)dx$
+\end_inset
+
+ 则是对连续函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 进行求积的结果,
+ 如果
+\begin_inset Formula $\int f(x)dx$
+\end_inset
+
+ 发散，
+意味着即使将离散求和转为更“平滑”的连续求积，
+仍然会趋向无穷大，
+因此级数也应当发散,
+ 如果
+\begin_inset Formula $\int f(x)dx$
+\end_inset
+
+ 收敛，
+意味着求积有限，
+从而离散求和（级数）也有可能收敛。
+
+\end_layout
+
+\begin_layout Standard
+直观类比：
+ 
+\end_layout
+
+\begin_layout Standard
+级数 
+\backslash
+(
+\backslash
+sum a_n
+\backslash
+) 可以看作是计算柱状面积之和（以矩形近似）。
+
+\end_layout
+
+\begin_layout Standard
+积分 
+\backslash
+(
+\backslash
+int f(x) dx
+\backslash
+) 则是计算该函数下的连续面积。
+
+\end_layout
+
+\begin_layout Standard
+如果连续面积发散（无限大），
+离散求和通常也会发散。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula ${\displaystyle \int_{n}^{n+1}f(x)\,dx}$
+\end_inset
+
+,
+ 注意 
+\begin_inset Formula ${\displaystyle f(x)}$
+\end_inset
+
+单调递减，
+因此有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula ${\displaystyle f(n+1)\leq\int_{n}^{n+1}f(x)\,dx\leq f(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+进一步地，
+考虑如下求和：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula ${\displaystyle \sum_{n=1}^{k}f(n+1)\leq\sum_{n=1}^{k}\int_{n}^{n+1}f(x)\,dx\leq\sum_{n=1}^{k}f(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+中间项的和为：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula ${\displaystyle \sum_{n=1}^{k}\int_{n}^{n+1}f(x)\,dx=\int_{1}^{k+1}f(x)\,dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对上述不等式取极限
+\begin_inset Formula ${\displaystyle k\to\infty}$
+\end_inset
+
+，
+有：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula ${\displaystyle \sum_{n=1}^{\infty}f(n+1)\leq\int_{1}^{\infty}f(x)\,dx\leq\sum_{n=1}^{\infty}f(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因此，
+若积分
+\begin_inset Formula ${\displaystyle \int_{1}^{\infty}f(x)\,dx}$
+\end_inset
+
+收敛，
+则无穷级数
+\begin_inset Formula ${\displaystyle \sum_{n=1}^{\infty}f(n)}$
+\end_inset
+
+收敛；
+若积分发散，
+则此级数发散。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $a_{n}=\ln\left(1+\frac{1}{n}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+定义
+\begin_inset Formula $f(x)=\ln\left(1+\frac{1}{x}\right)$
+\end_inset
+
+，
+这个函数在
+\begin_inset Formula $\ensuremath{x\geq1}$
+\end_inset
+
+上是 正值、单调递减 且 连续 的，
+满足积分判别法的条件。
+
+\end_layout
+
+\begin_layout Standard
+考虑积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I=\int_{1}^{\infty}\ln\left(1+\frac{1}{x}\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+很大时，
+ 利用近似公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln(1+\frac{1}{x})\approx\frac{1}{x},\quad\text{当 }x\gg1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以积分近似为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I\approx\int_{1}^{\infty}\frac{1}{x}dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是著名的 发散积分 （即调和级数对应的积分），
+所以 
+\begin_inset Formula $I$
+\end_inset
+
+ 发散。
+
+\end_layout
+
+\begin_layout Standard
+根据积分判别法，
+原级数 
+\begin_inset Formula $\ensuremath{\sum\ln(1+\frac{1}{n})}$
+\end_inset
+
+也发散。
 
 \end_layout
 
