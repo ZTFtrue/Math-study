@@ -73402,6 +73402,10 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \end_layout
 
 \begin_layout Subsection
+任意级数
+\end_layout
+
+\begin_layout Subsubsection
 交错级数
 \end_layout
 
@@ -73489,8 +73493,48 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 收敛
 \end_layout
 
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+比较
+\begin_inset Formula $u_{n}$
+\end_inset
+
+与
+\begin_inset Formula $u_{n+1}$
+\end_inset
+
+大小方法
+\begin_inset Formula $u_{n}-u_{n+1}$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{u_{n}}{u_{n+1}}$
+\end_inset
+
+，
+
+\begin_inset Formula $u_{n}=f(n)\rightarrow f'(x)$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-绝对收敛与条件收敛
+任意项级数
 \end_layout
 
 \begin_layout Standard
@@ -73514,12 +73558,16 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
 \end_inset
 
-收敛，
+(绝对值级数)收敛，
 则称级数
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
 
-是绝对收敛的；
+是
+\series bold
+绝对收敛的
+\series default
+；
 如果级数
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
@@ -73534,7 +73582,31 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
 
-是条件收敛的
+是条件收敛的。
+
+\end_layout
+
+\begin_layout Definition
+条件收敛 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+ 可能使用交错级数判断方法（莱布尼茨判别法）判断。
+
+\end_layout
+
+\begin_layout Definition
+若级数
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
+\end_inset
+
+发散，
+则称级数 
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}|u_{n}|$
+\end_inset
+
+也是发散的。
+
 \end_layout
 
 \begin_layout Standard
@@ -73582,6 +73654,19 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \end_inset
 
 是条件收敛的;
+\end_layout
+
+\begin_layout Standard
+发散判断：
+
+\begin_inset Formula $u_{n}$
+\end_inset
+
+不趋于
+\begin_inset Formula $0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
@@ -73841,8 +73926,1414 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 从而收敛.
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{x^{n}}{n!}$
+\end_inset
+
+绝对收敛
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\left|\frac{x^{n}}{n!}\right|=\stackrel[n=1]{\infty}{\sum}\frac{|x|^{n}}{n!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\left|\frac{|x|^{n+1}}{(n+1)!}\times\frac{n!}{|x|^{n}}\right|=\lim_{n\to\infty}\frac{|x|^{n+1}}{(n+1)|x|^{n}}=\lim_{n\to\infty}\frac{|x|}{n+1}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于极限小于 1，
+依据比值判别法，
+该级数对 任意 
+\begin_inset Formula $\ensuremath{x\in\mathbb{R}}$
+\end_inset
+
+绝对收敛。
+
+\end_layout
+
+\begin_layout Subsubsection
+解题
+\end_layout
+
+\begin_layout Standard
+解决级数收敛性问题的一般步骤如下：
+ 
+\end_layout
+
+\begin_layout Enumerate
+判断绝对收敛性
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+计算
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ 是否收敛。
+
+\end_layout
+
+\begin_layout Itemize
+适用比值判别法、根值判别法、
+\begin_inset Formula $p-$
+\end_inset
+
+级数判别法等。
+
+\end_layout
+
+\begin_layout Itemize
+如果级数绝对收敛，
+则一定收敛。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+判断条件收敛性（如果不是绝对收敛）
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+如果
+\begin_inset Formula $\sum|a_{n}|$
+\end_inset
+
+ 发散，
+考虑
+\begin_inset Formula $\ensuremath{\sum a_{n}}$
+\end_inset
+
+是否收敛。
+
+\end_layout
+
+\begin_layout Itemize
+常用方法：
+交错级数判别法（Alternating Series Test，
+莱布尼茨判别法）。
+
+\end_layout
+
+\begin_layout Itemize
+如果交错级数满足：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 单调递减：
+
+\begin_inset Formula $a_{n+1}\leq a_{n}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim\limits_{n\to\infty}a_{n}=0$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Standard
+则该级数条件收敛。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+判断发散性（如果既不绝对收敛，
+也不条件收敛）
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+用发散判别法：
+
+\begin_inset Formula $\ensuremath{\lim\limits_{n\to\infty}a_{n}\neq0}$
+\end_inset
+
+则级数必发散。
+
+\end_layout
+
+\begin_layout Itemize
+其他方法：
+比较判别法、积分判别法、Raabe 判别法等。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+如果一个级数绝对收敛，
+就必定收敛，
+不需要进一步判断条件收敛或发散。
+因此，
+在判断级数时，
+先考虑绝对收敛性，
+如果绝对收敛，
+则级数收敛，
+无需再判断其他情况。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sum\frac{(-1)^{n+1}}{n^{p}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+按照 “绝对收敛 → 条件收敛 → 发散” 的顺序进行判断。
+
+\end_layout
+
+\begin_layout Solution
+绝对收敛性,
+ 考虑级数的绝对值：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left|\frac{(-1)^{n+1}}{n^{p}}\right|=\sum_{n=1}^{\infty}\frac{1}{n^{p}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+这实际上是 p-级数：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n^{p}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+已知：
+
+\end_layout
+
+\begin_layout Solution
+- 当 
+\begin_inset Formula $p>1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $p-$
+\end_inset
+
+级数 收敛；
+
+\end_layout
+
+\begin_layout Solution
+- 当 
+\begin_inset Formula $p\leq1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $p-$
+\end_inset
+
+级数 发散。
+
+\end_layout
+
+\begin_layout Solution
+因此：
+
+\end_layout
+
+\begin_layout Solution
+- 若
+\begin_inset Formula $p>1$
+\end_inset
+
+，
+则该级数绝对收敛，
+因此收敛；
+
+\end_layout
+
+\begin_layout Solution
+- 若
+\begin_inset Formula $p\leq1$
+\end_inset
+
+，
+需要进一步判断条件收敛性。
+
+\end_layout
+
+\begin_layout Solution
+2.
+ 条件收敛性
+\end_layout
+
+\begin_layout Solution
+当 
+\begin_inset Formula $p\leq1$
+\end_inset
+
+ 时，
+级数 不绝对收敛，
+但可能条件收敛。
+
+\end_layout
+
+\begin_layout Solution
+观察原级数，
+它是一个 交错级数，
+考虑 交错级数判别法（Leibniz 判别法）：
+
+\end_layout
+
+\begin_layout Solution
+- 令 
+\begin_inset Formula $a_{n}=\frac{1}{n^{p}}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Solution
+- 若
+\begin_inset Formula $\ensuremath{a_{n}}$
+\end_inset
+
+单调递减，
+即
+\begin_inset Formula $a_{n+1}\leq a_{n}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Solution
+- 且 
+\begin_inset Formula $\lim\limits_{n\to\infty}a_{n}=0$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Solution
+- 则级数 条件收敛。
+
+\end_layout
+
+\begin_layout Solution
+验证：
+
+\end_layout
+
+\begin_layout Solution
+- 当 
+\begin_inset Formula $\ensuremath{p>0}$
+\end_inset
+
+时，
+
+\begin_inset Formula $a_{n}=\frac{1}{n^{p}}$
+\end_inset
+
+ 是单调递减的，
+并且 
+\begin_inset Formula $\lim\limits_{n\to\infty}a_{n}=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+- 因此，
+当
+\begin_inset Formula $\ensuremath{p>0}$
+\end_inset
+
+时，
+级数条件收敛。
+
+\end_layout
+
+\begin_layout Solution
+3.
+ 发散性
+\end_layout
+
+\begin_layout Solution
+如果级数既不绝对收敛，
+也不条件收敛，
+则发散。
+
+\end_layout
+
+\begin_layout Solution
+当
+\begin_inset Formula $\ensuremath{p\leq0}$
+\end_inset
+
+时，
+
+\begin_inset Formula $\ensuremath{a_{n}=\frac{1}{n^{p}}}$
+\end_inset
+
+不趋于 0，
+违反了交错级数判别法的必要条件，
+因此 级数发散。
+
+\end_layout
+
+\begin_layout Solution
+最终结论
+\end_layout
+
+\begin_layout Solution
+- 当
+\begin_inset Formula $p>1$
+\end_inset
+
+，
+级数 绝对收敛；
+
+\end_layout
+
+\begin_layout Solution
+- 当 
+\begin_inset Formula $0<p\leq1$
+\end_inset
+
+，
+级数 条件收敛；
+
+\end_layout
+
+\begin_layout Solution
+- 当 
+\begin_inset Formula $p\leq0$
+\end_inset
+
+，
+级数 发散。
+
+\end_layout
+
+\begin_layout Subsubsection
+性质
+\end_layout
+
+\begin_layout Standard
+1.
+ 绝对收敛级数的任意交换顺序，
+其和不变 
+\end_layout
+
+\begin_layout Standard
+> 若级数
+\begin_inset Formula $\ensuremath{\sum u_{n}}$
+\end_inset
+
+绝对收敛，
+则其 任意排列（即重新排序后的级数）仍然收敛，
+并且收敛到相同的和。
+
+\end_layout
+
+\begin_layout Standard
+证明思路：
+
+\end_layout
+
+\begin_layout Standard
+- 设级数 绝对收敛，
+即 
+\begin_inset Formula $\ensuremath{\sum|u_{n}|}$
+\end_inset
+
+收敛。
+
+\end_layout
+
+\begin_layout Standard
+- 绝对收敛意味着 部分和序列是柯西序列 ，
+即对于任意
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
+存在足够大的 
+\begin_inset Formula $N$
+\end_inset
+
+，
+使得对于任意
+\begin_inset Formula $m,n\geq N$
+\end_inset
+
+，
+有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\sum_{k=m}^{n}u_{k}\right|<\epsilon.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 交换项的顺序不会影响级数的极限，
+因为绝对收敛级数的 部分和的误差可以任意小。
+
+\end_layout
+
+\begin_layout Standard
+- 这个结果称为 黎曼重排定理的一部分，
+它进一步表明，
+如果级数仅仅是条件收敛的，
+而非绝对收敛的，
+则可以通过重新排列使其收敛到任意值，
+甚至发散。
+
+\end_layout
+
+\begin_layout Standard
+- 绝对收敛级数可以任意重排，
+而 条件收敛级数的和可能因重排而改变。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 两个绝对收敛级数的逐项乘积仍然收敛
+\end_layout
+
+\begin_layout Standard
+证明思路：
+
+\end_layout
+
+\begin_layout Standard
+- 绝对收敛意味着
+\begin_inset Formula $\ensuremath{\sum|u_{n}|}$
+\end_inset
+
+和
+\begin_inset Formula $\ensuremath{\sum|v_{n}|}$
+\end_inset
+
+均收敛。
+
+\end_layout
+
+\begin_layout Standard
+- 阿贝尔判别法（Abel's Test）或 柯西乘积判别法可用于证明：
+
+\end_layout
+
+\begin_layout Standard
+- 由于 
+\begin_inset Formula $\sum|u_{n}|$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{\sum|v_{n}|}$
+\end_inset
+
+收敛，
+说明项
+\begin_inset Formula $|u_{n}|$
+\end_inset
+
+ 和
+\begin_inset Formula $\ensuremath{|v_{n}|}$
+\end_inset
+
+逐渐趋于 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+- 级数的项 
+\begin_inset Formula $\ensuremath{u_{n}v_{n}}$
+\end_inset
+
+受到 
+\begin_inset Formula $\ensuremath{|u_{n}v_{n}|\leq|u_{n}||v_{n}|}$
+\end_inset
+
+的控制。
+
+\end_layout
+
+\begin_layout Standard
+- 由 魏尔斯特拉斯判别法（比较判别法），
+若
+\begin_inset Formula $\ensuremath{\sum|u_{n}v_{n}|}$
+\end_inset
+
+收敛，
+则
+\begin_inset Formula $\ensuremath{\sum u_{n}v_{n}}$
+\end_inset
+
+也收敛。
+
+\end_layout
+
+\begin_layout Standard
+- 由于 柯西乘积在两个级数都绝对收敛的情况下仍然收敛，
+所以
+\begin_inset Formula $\ensuremath{\sum u_{n}v_{n}}$
+\end_inset
+
+也是收敛的。
+
+\end_layout
+
+\begin_layout Standard
+- 绝对收敛级数相乘后仍然收敛，
+但不一定是绝对收敛的（可能是条件收敛的）。
+
+\end_layout
+
+\begin_layout Standard
+- 如果只要求 
+\begin_inset Formula $\ensuremath{\sum u_{n}v_{n}}$
+\end_inset
+
+收敛，
+则只需
+\begin_inset Formula $\ensuremath{\sum u_{n}}$
+\end_inset
+
+和
+\begin_inset Formula $\sum v_{n}$
+\end_inset
+
+ 绝对收敛即可。
+
+\end_layout
+
 \begin_layout Section
-幂级数
+函数级数
+\end_layout
+
+\begin_layout Definition
+设 
+\begin_inset Formula $f_{n}(x)$
+\end_inset
+
+ 是定义在区间
+\begin_inset Formula ${\displaystyle \mathcal{I}}$
+\end_inset
+
+ 上的函数列，
+则级数
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}f_{n}(x)
+\]
+
+\end_inset
+
+或
+\begin_inset Formula ${\displaystyle u_{1}(x)+u_{2}(x)+\cdots+u_{n}(x)+\cdots}$
+\end_inset
+
+，
+称为函数项级数，
+其中每一项 
+\begin_inset Formula $\ensuremath{f_{n}(x)}$
+\end_inset
+
+都是关于
+\begin_inset Formula $x$
+\end_inset
+
+ 的函数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+对区间
+\begin_inset Formula ${\displaystyle \mathcal{I}}$
+\end_inset
+
+上的每个
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+，
+级数
+\begin_inset Formula ${\displaystyle \sum u_{n}(x_{0})}$
+\end_inset
+
+是常数项级数。
+若 
+\begin_inset Formula ${\displaystyle \sum u_{n}(x_{0})}$
+\end_inset
+
+收敛，
+则称
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+是 
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+的一个
+\series bold
+收敛点
+\series default
+，
+
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+全体收敛点的集合称为它的
+\series bold
+收敛域
+\series default
+。
+若
+\begin_inset Formula ${\displaystyle \sum u_{n}(x_{0})}$
+\end_inset
+
+发散，
+则称 
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+是
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+的一个
+\series bold
+发散点
+\series default
+，
+
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+全体发散点的集合称为它的
+\series bold
+发散域
+\series default
+。
+ 
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+在其收敛域的每一点上都有定义，
+因此定义了一个函数，
+称为
+\begin_inset Formula ${\displaystyle \sum u_{n}(x)}$
+\end_inset
+
+的和函数，
+记为 
+\begin_inset Formula ${\displaystyle S(x)}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Definition
+按照定义，
+ 
+\begin_inset Formula ${\displaystyle S(x_{0})=\lim_{n\to\infty}S_{n}(x_{0})}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula ${\displaystyle S_{n}(x_{0})=u_{1}(x_{0})+u_{2}(x_{0})+\cdots+u_{n}(x_{0})}$
+\end_inset
+
+为函数项级数在
+\begin_inset Formula ${\displaystyle x_{0}}$
+\end_inset
+
+点上的部分和。
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+逐点收敛：
+如果对任意
+\begin_inset Formula $x\in D$
+\end_inset
+
+，
+部分和序列
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+S_{N}(x)=\sum_{n=1}^{N}f_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+在
+\begin_inset Formula $\ensuremath{N\to\infty}$
+\end_inset
+
+时收敛到某个函数
+\begin_inset Formula $S(x)$
+\end_inset
+
+，
+即：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lim_{N\to\infty}S_{N}(x)=S(x),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称该级数在 
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上逐点收敛。
+
+\end_layout
+
+\begin_layout Standard
+逐点收敛不能保证
+\begin_inset Formula $\ensuremath{S(x)}$
+\end_inset
+
+的连续性、可微性等性质。
+
+\end_layout
+
+\begin_layout Definition
+一致收敛：
+如果级数的部分和序列 
+\begin_inset Formula $\ensuremath{S_{N}(x)}$
+\end_inset
+
+在
+\begin_inset Formula $D$
+\end_inset
+
+ 上满足：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\sup_{x\in D}|S_{N}(x)-S(x)|\to0\quad(N\to\infty),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则称级数在
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上一致收敛。
+
+\end_layout
+
+\begin_layout Standard
+一致收敛的优点**：
+
+\end_layout
+
+\begin_layout Standard
+- Weierstrass 一致收敛定理**：
+如果
+\begin_inset Formula $\ensuremath{f_{n}(x)}$
+\end_inset
+
+都连续，
+且级数一致收敛，
+则其和函数 
+\backslash
+( S(x) 
+\backslash
+) 也是连续的。
+
+\end_layout
+
+\begin_layout Standard
+- **极限运算可交换**：
+
+\end_layout
+
+\begin_layout Standard
+- 可逐项积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{a}^{b}\sum_{n=1}^{\infty}f_{n}(x)dx=\sum_{n=1}^{\infty}\int_{a}^{b}f_{n}(x)dx.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 可逐项微分（如果
+\begin_inset Formula $f_{n}(x)$
+\end_inset
+
+ 可导且导数级数一致收敛）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{dx}\sum_{n=1}^{\infty}f_{n}(x)=\sum_{n=1}^{\infty}\frac{d}{dx}f_{n}(x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1+x+x^{2}+\cdots+x^{n}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+该级数可以写成幂级数的形式：
+
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+利用几何级数求和公式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+S_{N}=\sum_{n=0}^{N}x^{n}=\frac{1-x^{N+1}}{1-x},\quad(x\neq1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+当 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时，
+令 
+\begin_inset Formula $N\to\infty$
+\end_inset
+
+，
+则
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}x^{n}=\frac{1}{1-x},\quad\text{当 }|x|<1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+该级数在
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时收敛，
+并收敛到 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+，
+而在 
+\begin_inset Formula $|x|\geq1$
+\end_inset
+
+ 时发散。
+
+\end_layout
+
+\begin_layout Example
+逐点收敛的定义是对每个固定的
+\begin_inset Formula $x$
+\end_inset
+
+，
+部分和
+\begin_inset Formula $\ensuremath{S_{N}(x)}$
+\end_inset
+
+有极限
+\begin_inset Formula $S(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+- 当 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $\ensuremath{S_{N}(x)}$
+\end_inset
+
+收敛到 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+- 当 
+\begin_inset Formula $\ensuremath{|x|\geq1}$
+\end_inset
+
+时，
+
+\begin_inset Formula $\ensuremath{S_{N}(x)}$
+\end_inset
+
+不收敛，
+因此级数不逐点收敛。
+
+\end_layout
+
+\begin_layout Example
+级数 
+\backslash
+( 
+\backslash
+sum x^n 
+\backslash
+) 在区间 
+\backslash
+( (-1,1) 
+\backslash
+) 内收敛，
+但要判断是否一致收敛，
+我们可以使用**Weierstrass M 判别法**。
+
+\end_layout
+
+\begin_layout Example
+取 
+\backslash
+( M_n = |x|^n 
+\backslash
+)，
+如果级数 
+\backslash
+( 
+\backslash
+sum M_n 
+\backslash
+) 绝对收敛，
+则原级数一致收敛。
+
+\end_layout
+
+\begin_layout Example
+- 当 
+\backslash
+( |x| < 1 
+\backslash
+) 时，
+
+\backslash
+( M_n = |x|^n 
+\backslash
+) 形成的几何级数 **绝对收敛**。
+
+\end_layout
+
+\begin_layout Example
+- 但当 
+\backslash
+( |x| 
+\backslash
+to 1 
+\backslash
+) 时，
+
+\backslash
+( M_n = 1 
+\backslash
+) 使得级数 
+\backslash
+( 
+\backslash
+sum 1 
+\backslash
+) **发散**。
+
+\end_layout
+
+\begin_layout Example
+因此，
+**该级数在 
+\backslash
+( (-1,1) 
+\backslash
+) 内一致收敛，
+但在 
+\backslash
+( [-1,1] 
+\backslash
+) 上不一致收敛**。
+
+\end_layout
+
+\begin_layout Example
+1.
+ **收敛域**：
+
+\begin_inset Formula $|x|<1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+2.
+ **逐点收敛**：
+在
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 内逐点收敛到
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+3.
+ **一致收敛**：
+在 
+\backslash
+( (-r,
+ r) 
+\backslash
+) （
+\backslash
+( 0 < r < 1 
+\backslash
+)）内一致收敛，
+但在 
+\backslash
+( [-1,1] 
+\backslash
+) 上不一致收敛。
+
+\end_layout
+
+\begin_layout Example
+4.
+ **可微性**：
+
+\end_layout
+
+\begin_layout Example
+- 在 
+\backslash
+( |x| < 1 
+\backslash
+) 内可以**逐项微分**：
+
+\end_layout
+
+\begin_layout Example
+
+\backslash
+[
+\end_layout
+
+\begin_layout Example
+
+\backslash
+sum_{n=1}^{
+\backslash
+infty} n x^{n-1} = 
+\backslash
+frac{1}{(1-x)^2},
+ 
+\backslash
+quad |x| < 1.
+\end_layout
+
+\begin_layout Example
+
+\backslash
+]
+\end_layout
+
+\begin_layout Example
+- 也可以**逐项积分**：
+
+\end_layout
+
+\begin_layout Example
+
+\backslash
+[
+\end_layout
+
+\begin_layout Example
+
+\backslash
+sum_{n=0}^{
+\backslash
+infty} 
+\backslash
+frac{x^{n+1}}{n+1} = -
+\backslash
+ln(1-x),
+ 
+\backslash
+quad |x| < 1.
+\end_layout
+
+\begin_layout Example
+
+\backslash
+]
+\end_layout
+
+\begin_layout Subsection
+一致收敛判别法
+\end_layout
+
+\begin_layout Standard
+#### **(1) Weierstrass 判别法（M-test）**
+\end_layout
+
+\begin_layout Standard
+如果存在数列 
+\backslash
+( M_n 
+\backslash
+)，
+使得对所有 
+\backslash
+( x 
+\backslash
+in D 
+\backslash
+) 有：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+|f_n(x)| 
+\backslash
+leq M_n,
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+且数项级数 
+\backslash
+( 
+\backslash
+sum M_n 
+\backslash
+) 收敛，
+则 
+\backslash
+( 
+\backslash
+sum f_n(x) 
+\backslash
+) 在 
+\backslash
+( D 
+\backslash
+) 上一致收敛。
+
+\end_layout
+
+\begin_layout Standard
+#### **(2) Cauchy 一致收敛判别法**
+\end_layout
+
+\begin_layout Standard
+级数 
+\backslash
+( 
+\backslash
+sum f_n(x) 
+\backslash
+) 在 
+\backslash
+( D 
+\backslash
+) 上一致收敛，
+当且仅当对任意 
+\backslash
+( 
+\backslash
+epsilon > 0 
+\backslash
+)，
+存在 
+\backslash
+( N 
+\backslash
+) 使得对所有 
+\backslash
+( m > n 
+\backslash
+geq N 
+\backslash
+) 及 
+\backslash
+( x 
+\backslash
+in D 
+\backslash
+)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\sum_{k=n}^{m}f_{k}(x)\right|<\epsilon.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -73851,6 +75342,10 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+幂级数
 \end_layout
 
 \begin_layout Standard
@@ -74867,11 +76362,11 @@ f(x)=f(x_{0})+\frac{f'(x_{0})}{1!}(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^{2}+\
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 傅里叶级数
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 三角函数系的正交性
 \end_layout
 
@@ -74952,7 +76447,7 @@ f(x)=f(x_{0})+\frac{f'(x_{0})}{1!}(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^{2}+\
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 周期为 2π 的函数展开为傅里叶级数
 \end_layout
 
@@ -75692,7 +77187,7 @@ a_{n} & =\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nxdx=\frac{2}{\pi}\int_{0}^{\pi}
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 周期不为 2
 \begin_inset Formula $\pi$
 \end_inset
