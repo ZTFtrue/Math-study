@@ -71406,6 +71406,10 @@ S_{n} & =\frac{1}{1\cdot2}+\frac{1}{2\cdot3}\cdots+\frac{1}{n(n+1)}+\cdots\\
 
 \end_layout
 
+\begin_layout Paragraph
+几何级数
+\end_layout
+
 \begin_layout Example
 无穷级数
 \begin_inset Formula $\stackrel[k=1]{n}{\sum}aq^{n-1}=a+aq+\cdots+aq^{n-1}+\cdots$
@@ -71524,6 +71528,73 @@ S_{n}=a+aq+\cdots+aq^{n-1}=\frac{a(1-q^{n})}{1-q}(q\neq1)
 
 的极限不存在,
  这时级数也发散.
+\end_layout
+
+\begin_layout Subparagraph
+几何级数余项：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}x^{n}=\frac{1}{1-x},\quad|x|<1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其前 
+\begin_inset Formula $N$
+\end_inset
+
+ 项部分和为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{N}(x)=\frac{1-x^{N+1}}{1-x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+余项为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{N}(x)=S(x)-S_{N}(x)=\frac{x^{N+1}}{1-x},\quad|x|<1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $R_{N}(x)\to0$
+\end_inset
+
+ 说明级数收敛。
+
 \end_layout
 
 \begin_layout Example
@@ -73533,6 +73604,37 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 
 \end_layout
 
+\begin_layout Standard
+如果
+\begin_inset Formula $\sum(-1)^{n}a_{n}$
+\end_inset
+
+ 是一个交错级数，
+且满足莱布尼茨条件（
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 单调递减且趋于 0），
+则余项满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|R_{N}|\leq a_{N+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这表明交错级数的部分和误差不会超过下一项的大小。
+
+\end_layout
+
 \begin_layout Subsubsection
 任意项级数
 \end_layout
@@ -74726,6 +74828,66 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 \end_layout
 
 \begin_layout Definition
+已知函数项级数：
+
+\begin_inset Formula 
+\[
+S(x)=\sum_{n=0}^{\infty}f_{n}(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其前
+\begin_inset Formula $\ensuremath{N}$
+\end_inset
+
+项部分和定义为：
+
+\begin_inset Formula 
+\[
+S_{N}(x)=\sum_{n=0}^{N}f_{n}(x).
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+那么，
+余项（剩余误差）就是：
+
+\begin_inset Formula 
+\[
+R_{N}(x)=S(x)-S_{N}(x)=\sum_{n=N+1}^{\infty}f_{n}(x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+余项
+\begin_inset Formula $\ensuremath{R_{N}(x)}$
+\end_inset
+
+衡量了使用有限项逼近无穷级数时的误差。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
 逐点收敛：
 如果对任意
 \begin_inset Formula $x\in D$
@@ -74824,12 +74986,12 @@ S_{N}(x)=\sum_{n=1}^{N}f_{n}(x)
 \end_layout
 
 \begin_layout Standard
-一致收敛的优点**：
+一致收敛的优点：
 
 \end_layout
 
 \begin_layout Standard
-- Weierstrass 一致收敛定理**：
+- Weierstrass 一致收敛定理：
 如果
 \begin_inset Formula $\ensuremath{f_{n}(x)}$
 \end_inset
@@ -74837,15 +74999,15 @@ S_{N}(x)=\sum_{n=1}^{N}f_{n}(x)
 都连续，
 且级数一致收敛，
 则其和函数 
-\backslash
-( S(x) 
-\backslash
-) 也是连续的。
+\begin_inset Formula $S(x)$
+\end_inset
+
+ 也是连续的。
 
 \end_layout
 
 \begin_layout Standard
-- **极限运算可交换**：
+- 极限运算可交换：
 
 \end_layout
 
@@ -74982,7 +75144,7 @@ S_{N}=\sum_{n=0}^{N}x^{n}=\frac{1-x^{N+1}}{1-x},\quad(x\neq1).
 \end_layout
 
 \begin_layout Example
-- 当 
+当 
 \begin_inset Formula $|x|<1$
 \end_inset
 
@@ -75000,7 +75162,7 @@ S_{N}=\sum_{n=0}^{N}x^{n}=\frac{1-x^{N+1}}{1-x},\quad(x\neq1).
 \end_layout
 
 \begin_layout Example
-- 当 
+当 
 \begin_inset Formula $\ensuremath{|x|\geq1}$
 \end_inset
 
@@ -75016,92 +75178,86 @@ S_{N}=\sum_{n=0}^{N}x^{n}=\frac{1-x^{N+1}}{1-x},\quad(x\neq1).
 
 \begin_layout Example
 级数 
-\backslash
-( 
-\backslash
-sum x^n 
-\backslash
-) 在区间 
-\backslash
-( (-1,1) 
-\backslash
-) 内收敛，
+\begin_inset Formula $\sum x^{n}$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 内收敛，
 但要判断是否一致收敛，
-我们可以使用**Weierstrass M 判别法**。
+使用Weierstrass M 判别法。
 
 \end_layout
 
 \begin_layout Example
 取 
-\backslash
-( M_n = |x|^n 
-\backslash
-)，
+\begin_inset Formula $M_{n}=|x|^{n}$
+\end_inset
+
+，
 如果级数 
-\backslash
-( 
-\backslash
-sum M_n 
-\backslash
-) 绝对收敛，
+\begin_inset Formula $\sum M_{n}$
+\end_inset
+
+ 绝对收敛，
 则原级数一致收敛。
 
 \end_layout
 
 \begin_layout Example
-- 当 
-\backslash
-( |x| < 1 
-\backslash
-) 时，
+当 
+\begin_inset Formula $|x|<1$
+\end_inset
 
-\backslash
-( M_n = |x|^n 
-\backslash
-) 形成的几何级数 **绝对收敛**。
+ 时，
+
+\begin_inset Formula $M_{n}=|x|^{n}$
+\end_inset
+
+ 形成的几何级数 绝对收敛。
 
 \end_layout
 
 \begin_layout Example
-- 但当 
-\backslash
-( |x| 
-\backslash
-to 1 
-\backslash
-) 时，
+但当 
+\begin_inset Formula $|x|\to1$
+\end_inset
 
-\backslash
-( M_n = 1 
-\backslash
-) 使得级数 
+ 时，
+
+\begin_inset Formula $M_{n}=1$
+\end_inset
+
+ 使得级数 
 \backslash
 ( 
 \backslash
 sum 1 
 \backslash
-) **发散**。
+) 发散。
 
 \end_layout
 
 \begin_layout Example
 因此，
-**该级数在 
-\backslash
-( (-1,1) 
-\backslash
-) 内一致收敛，
-但在 
-\backslash
-( [-1,1] 
-\backslash
-) 上不一致收敛**。
+该级数在 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 内一致收敛，
+但在
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ 上不一致收敛。
 
 \end_layout
 
 \begin_layout Example
 1.
- **收敛域**：
+ 收敛域：
 
 \begin_inset Formula $|x|<1$
 \end_inset
@@ -75112,7 +75268,7 @@ sum 1
 
 \begin_layout Example
 2.
- **逐点收敛**：
+ 逐点收敛：
 在
 \begin_inset Formula $(-1,1)$
 \end_inset
@@ -75127,201 +75283,152 @@ sum 1
 
 \begin_layout Example
 3.
- **一致收敛**：
+ 一致收敛：
 在 
-\backslash
-( (-r,
- r) 
-\backslash
-) （
-\backslash
-( 0 < r < 1 
-\backslash
-)）内一致收敛，
-但在 
-\backslash
-( [-1,1] 
-\backslash
-) 上不一致收敛。
+\begin_inset Formula $(-r,r)$
+\end_inset
+
+ （
+\begin_inset Formula $0<r<1$
+\end_inset
+
+）内一致收敛，
+但在
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ 上不一致收敛。
 
 \end_layout
 
 \begin_layout Example
 4.
- **可微性**：
+ 可微性：
 
 \end_layout
 
 \begin_layout Example
-- 在 
-\backslash
-( |x| < 1 
-\backslash
-) 内可以**逐项微分**：
+- 在
+\begin_inset Formula $\ensuremath{|x|<1}$
+\end_inset
+
+内可以 逐项微分 ：
 
 \end_layout
 
 \begin_layout Example
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}nx^{n-1}=\frac{1}{(1-x)^{2}},\quad|x|<1.
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Example
-
-\backslash
-sum_{n=1}^{
-\backslash
-infty} n x^{n-1} = 
-\backslash
-frac{1}{(1-x)^2},
- 
-\backslash
-quad |x| < 1.
-\end_layout
-
-\begin_layout Example
-
-\backslash
-]
-\end_layout
-
-\begin_layout Example
-- 也可以**逐项积分**：
 
 \end_layout
 
 \begin_layout Example
+也可以逐项积分：
 
-\backslash
-[
 \end_layout
 
 \begin_layout Example
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}=-\ln(1-x),\quad|x|<1.
+\]
 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-frac{x^{n+1}}{n+1} = -
-\backslash
-ln(1-x),
- 
-\backslash
-quad |x| < 1.
-\end_layout
+\end_inset
 
-\begin_layout Example
 
-\backslash
-]
 \end_layout
 
 \begin_layout Subsection
 一致收敛判别法
 \end_layout
 
-\begin_layout Standard
-#### **(1) Weierstrass 判别法（M-test）**
+\begin_layout Itemize
+Weierstrass 判别法（M-test）
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 如果存在数列 
-\backslash
-( M_n 
-\backslash
-)，
+\begin_inset Formula $M_{n}$
+\end_inset
+
+，
 使得对所有 
-\backslash
-( x 
-\backslash
-in D 
-\backslash
-) 有：
+\begin_inset Formula $x\in D$
+\end_inset
+
+ 有：
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+|f_{n}(x)|\leq M_{n},
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-|f_n(x)| 
-\backslash
-leq M_n,
-\end_layout
+且数项级数
+\begin_inset Formula $\ensuremath{\sum M_{n}}$
+\end_inset
 
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
-且数项级数 
-\backslash
-( 
-\backslash
-sum M_n 
-\backslash
-) 收敛，
+收敛，
 则 
-\backslash
-( 
-\backslash
-sum f_n(x) 
-\backslash
-) 在 
-\backslash
-( D 
-\backslash
-) 上一致收敛。
+\begin_inset Formula $\ensuremath{\sum f_{n}(x)}$
+\end_inset
+
+在 
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上一致收敛。
 
 \end_layout
 
-\begin_layout Standard
-#### **(2) Cauchy 一致收敛判别法**
+\end_deeper
+\begin_layout Itemize
+Cauchy 一致收敛判别法
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 级数 
-\backslash
-( 
-\backslash
-sum f_n(x) 
-\backslash
-) 在 
-\backslash
-( D 
-\backslash
-) 上一致收敛，
+\begin_inset Formula $\sum f_{n}(x)$
+\end_inset
+
+ 在
+\begin_inset Formula $\ensuremath{D}$
+\end_inset
+
+上一致收敛，
 当且仅当对任意 
-\backslash
-( 
-\backslash
-epsilon > 0 
-\backslash
-)，
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+，
 存在 
-\backslash
-( N 
-\backslash
-) 使得对所有 
-\backslash
-( m > n 
-\backslash
-geq N 
-\backslash
-) 及 
-\backslash
-( x 
-\backslash
-in D 
-\backslash
-)：
+\begin_inset Formula $N$
+\end_inset
+
+ 使得对所有 
+\begin_inset Formula $\ensuremath{m>n\geq N}$
+\end_inset
+
+及 
+\begin_inset Formula $x\in D$
+\end_inset
+
+：
 
 \end_layout
 
@@ -75344,6 +75451,7 @@ in D
 
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 幂级数
 \end_layout
@@ -75715,7 +75823,8 @@ in D
 \begin_inset Formula $R=\frac{1}{\rho}$
 \end_inset
 
-;
+，
+端点单独讨论;
 \end_layout
 
 \begin_layout Enumerate
@@ -75851,6 +75960,147 @@ in D
 .
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\cdots$
+\end_inset
+
+,收敛性。
+
+\end_layout
+
+\begin_layout Example
+一般项：
+
+\begin_inset Formula $a_{n}=(-1)^{n}\frac{x^{2n+1}}{(2n+1)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算比值：
+
+\begin_inset Formula $\left|\frac{a_{n+1}}{a_{n}}\right|=\left|\frac{x^{2(n+1)+1}}{(2(n+1)+1)!}\times\frac{(2n+1)!}{x^{2n+1}}\right|$
+\end_inset
+
+判断绝对收敛。
+
+\end_layout
+
+\begin_layout Example
+化简：
+
+\begin_inset Formula $\left|\frac{a_{n+1}}{a_{n}}\right|=\left|\frac{x^{2n+3}}{(2n+3)!}\times\frac{(2n+1)!}{x^{2n+1}}\right|=\left|\frac{x^{2}}{(2n+3)(2n+2)}\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{n\to\infty}{\lim}\left|\frac{a_{n+1}}{a_{n}}\right|=\underset{n\to\infty}{\lim}\frac{|x|^{2}}{(2n+3)(2n+2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $\ensuremath{(2n+2)\to\infty}$
+\end_inset
+
+随着 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+，
+所以极限为：
+
+\begin_inset Formula $\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果 
+\begin_inset Formula $\lim\limits_{n\to\infty}\left|\frac{a_{n+1}}{a_{n}}\right|<1$
+\end_inset
+
+，
+则级数绝对收敛；
+
+\end_layout
+
+\begin_layout Example
+这里我们得到了极限为
+\begin_inset Formula $0$
+\end_inset
+
+，
+显然小于
+\begin_inset Formula $1$
+\end_inset
+
+，
+因此该级数对任意
+\begin_inset Formula $\ensuremath{x\in\mathbb{R}}$
+\end_inset
+
+绝对收敛。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+对于幂级数只比较系数，
+比值判别法比较通项。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{(2x+1)^{n}}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $t=2x+1$
+\end_inset
+
+,则
+\begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{t^{n}}{n}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Example
+当 
+\begin_inset Formula $-1\leqslant t<1$
+\end_inset
+
+ 时，
+级数收敛。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-1\leqslant x<0$
+\end_inset
+
+时，
+级数收敛。
+
+\end_layout
+
 \begin_layout Subsection
 幂级数的运算性质
 \end_layout
@@ -75890,10 +76140,7 @@ in D
 \end_inset
 
 ,
- 且 
-\end_layout
-
-\begin_layout Standard
+ 且
 \begin_inset Formula 
 \[
 \stackrel[n=0]{\infty}{\sum}(a_{n}\pm b_{n})x^{n}=\stackrel[n=0]{\infty}{\sum}a_{n}x^{n}+\stackrel[n=0]{\infty}{\sum}b_{n}x^{n}(-R<x<R)
@@ -75933,6 +76180,20 @@ S'(x)=(\stackrel[n=0]{\infty}{\sum}a_{n}x^{n})'=\stackrel[n=0]{\infty}{\sum}(a_{
 
 \end_inset
 
+（收敛半径相同）
+\end_layout
+
+\begin_layout Standard
+如果在端点
+\begin_inset Formula $-R$
+\end_inset
+
+或
+\begin_inset Formula $R$
+\end_inset
+
+上也收敛，
+则在这两个端点上也连续。
 
 \end_layout
 
@@ -75975,6 +76236,9 @@ S'(x)=(\stackrel[n=0]{\infty}{\sum}a_{n}x^{n})'=\stackrel[n=0]{\infty}{\sum}(a_{
 但
 \series bold
 端点的敛散性要另外考察
+\series default
+。
+
 \end_layout
 
 \begin_layout Standard
@@ -76080,6 +76344,239 @@ S(x)=\int_{0}^{x}\frac{1}{1-t}dt=-\ln(1-x)(-1\leqslant x<1)
 
 ,得 
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}\frac{(-1)^{n}}{n}=-\ln2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sum\frac{(-1)^{n-1}}{n}x^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $S(x)=x-\frac{1}{2}x^{2}+\frac{1}{3}x^{3}-\frac{1}{4}x^{4}\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $S'(x)=1-x+x^{2}-x^{3}\cdots=\frac{1}{1+x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\int_{0}^{x}S'(x)dx=\int_{0}^{x}\frac{1}{1+x}dx=\ln(1+x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+适用于
+\begin_inset Formula $∣x∣<1$
+\end_inset
+
+的范围。
+
+\end_layout
+
+\begin_layout Example
+对级数进行积分
+\end_layout
+
+\begin_layout Example
+对每一项进行积分，
+得到新的级数。
+首先，
+我们将级数表示为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f(x)=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}x^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对该级数关于
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+进行积分：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int f(x)\,dx=\int\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}x^{n}\,dx.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于级数在 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 收敛，
+我们可以将积分操作应用于级数的每一项，
+得到：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int f(x)\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}\int x^{n}\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}\cdot\frac{x^{n+1}}{n+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+积分后的级数是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\int f(x)\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n(n+1)}x^{n+1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+为了找到常数，
+我们可以通过设置 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 来确定常数项。
+因为 
+\begin_inset Formula $f(0)=0$
+\end_inset
+
+，
+积分后的常数项应该为 0。
+
+\end_layout
+
+\begin_layout Example
+对级数进行微分，
+首先将原级数表示为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f(x)=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}x^{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对该级数关于
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+进行微分：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f'(x)=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}\cdot\frac{d}{dx}\left(x^{n}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+每一项的导数是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{d}{dx}x^{n}=nx^{n-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+微分后的级数是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{n-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个级数实际上是一个等比级数，
+可以简化为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f'(x)=\frac{1}{1+x},\quad\text{for }|x|<1.
+\]
+
 \end_inset
 
 
