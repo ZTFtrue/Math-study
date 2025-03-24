@@ -79414,7 +79414,7 @@ b+d
 \begin_inset Text
 
 \begin_layout Plain Layout
-a+b+c+d 
+a+b+c+d
 \end_layout
 
 \end_inset
@@ -79534,7 +79534,7 @@ a+b+c+d
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.15 
+0.15
 \end_layout
 
 \end_inset
@@ -79800,105 +79800,124 @@ w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
 
 \end_layout
 
-\begin_layout Subsection
-正态分布(normal distribution)
+\begin_layout Section
+事件
 \end_layout
 
 \begin_layout Standard
-若随机变量
-\begin_inset Formula ${\displaystyle X}$
-\end_inset
-
-服从一个位置参数为
-\begin_inset Formula ${\displaystyle \mu}$
-\end_inset
-
-、尺度参数为
-\begin_inset Formula ${\displaystyle \sigma}$
-\end_inset
-
-的正态分布,
- 记为：
+随机试验（Random Experiment） 是概率论中的基本概念，
+它指的是在相同条件下可以重复进行的实验，
+但其结果是不确定的。
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula ${\displaystyle X\sim N(\mu,\sigma^{2})}$
-\end_inset
+随机试验的基本特征
+\end_layout
 
+\begin_layout Enumerate
+可以重复进行：
+试验可以在相同条件下多次执行。
 
 \end_layout
 
-\begin_layout Standard
-则其概率密度函数为 
-\begin_inset Formula ${\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}$
-\end_inset
-
+\begin_layout Enumerate
+结果不确定：
+每次试验的结果可能不同，
+无法提前确定。
 
 \end_layout
 
-\begin_layout Standard
-正态分布的数学期望值或期望值
-\begin_inset Formula ${\displaystyle \mu}$
-\end_inset
+\begin_layout Enumerate
+样本空间可知：
+所有可能的结果可以事先列出。
 
- 等于位置参数,
- 决定了分布的位置；
-其方差
-\begin_inset Formula ${\displaystyle \sigma^{2}}$
-\end_inset
-
-的开平方或标准差
-\begin_inset Formula ${\displaystyle \sigma}$
-\end_inset
-
- 等于尺度参数,
- 决定了分布的幅度.
- 
 \end_layout
 
-\begin_layout Standard
-我们通常所说的标准正态分布是位置参数
-\begin_inset Formula ${\displaystyle \mu=0}$
-\end_inset
-
-,
- 尺度参数
-\begin_inset Formula ${\displaystyle \sigma^{2}=1}$
-\end_inset
-
-的正态分布.
+\begin_layout Example
+抛硬币
 \end_layout
 
-\begin_layout Standard
-正态密度分布曲线(正态曲线):
+\begin_layout Example
+试验：
+投掷一枚均匀硬币。
+
 \end_layout
 
-\begin_layout Standard
-\begin_inset Graphics
-	filename image/Normal_Distribution_PDF.svg.png
-	lyxscale 30
+\begin_layout Example
+样本空间：
 
+\begin_inset Formula $S=\{\text{正面 (H)},\text{反面 (T)}\}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-一般地,
- 如果对于任意实数
-\begin_inset Formula $a,b(a<b)$
+\begin_layout Example
+事件：
+
+\end_layout
+
+\begin_layout Example
+事件
+\begin_inset Formula $A$
 \end_inset
 
-,
- 随机变量
+：
+出现正面，
+即 
+\begin_inset Formula $A=\{\text{H}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+事件
+\begin_inset Formula $B$
+\end_inset
+
+：
+出现反面，
+即 
+\begin_inset Formula $B=\{\text{T}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+假设随机试验的样本空间为
+\begin_inset Formula $S$
+\end_inset
+
+，
+试验的结果可以用一个随机变量
 \begin_inset Formula $X$
 \end_inset
 
-满足
+ 表示。
+比如：
+
+\end_layout
+
+\begin_layout Standard
+抛硬币时，
+可以定义 
+\begin_inset Formula $X$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
+X=\begin{cases}
+1, & \text{若出现正面 (H)}\\
+0, & \text{若出现反面 (T)}
+\end{cases}
 \]
 
 \end_inset
@@ -79907,105 +79926,91 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
 \end_layout
 
 \begin_layout Standard
-则称随机变量
-\begin_inset Formula $X$
+掷骰子时，
+可以定义 
+\begin_inset Formula $\ensuremath{X}$
 \end_inset
 
-服从正态分布.记为
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
-\end_inset
+为掷出的点数：
 
-.
 \end_layout
 
 \begin_layout Standard
-经验表明,
- 一个随机变量如果是众多的、互不相干的、不分主次的偶然因素作用结果之和,
- 它就服从或近似服从正态分布.
+\begin_inset Formula 
+\[
+X\in\{1,2,3,4,5,6\}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-可以发现,正态曲线有以下特点:
- 
-\end_layout
+这些随机变量的分布可以用概率分布来描述。
 
-\begin_layout Itemize
-曲线位于
-\begin_inset Formula $x$
-\end_inset
-
-轴上方,与x轴不相交;
- 
-\end_layout
-
-\begin_layout Itemize
-曲线是单峰的,它关于直线
-\begin_inset Formula $x=\mu$
-\end_inset
-
-对称;
-\end_layout
-
-\begin_layout Itemize
-曲线在
-\begin_inset Formula $x=\mu$
-\end_inset
-
-处达到峰值
-\begin_inset Formula $\frac{1}{\sigma\sqrt{2\pi}}$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-曲线与轴之间的面积为1.
-\end_layout
-
-\begin_layout Itemize
-标准差越大曲线越矮,数值越分散.
 \end_layout
 
 \begin_layout Standard
-在实际应用中,通常认为服从于正态分布
-\begin_inset Formula $N((\mu,\sigma^{2})$
-\end_inset
+统计规律性（Statistical Regularity） 是概率论的核心概念之一，
+它表明虽然单次随机试验的结果无法确定，
+但如果重复进行大量的随机试验，
+某些统计特征会呈现出稳定的规律。
 
-的随机变量
-\begin_inset Formula $X$
-\end_inset
-
-只取 
-\begin_inset Formula $((\mu,\sigma^{2},(\mu,\sigma^{2})$
-\end_inset
-
-之间的值,并简称之为
-\begin_inset Formula $3\sigma$
-\end_inset
-
-原则.
- 
 \end_layout
 
-\begin_layout Section
-事件
+\begin_layout Itemize
+随机性：
+单次试验的结果是不确定的，
+具有偶然性。
+
+\end_layout
+
+\begin_layout Itemize
+大数定律：
+当试验次数足够多时，
+某些统计量会趋于稳定，
+如频率趋近于概率。
+
+\end_layout
+
+\begin_layout Itemize
+概率稳定性：
+尽管个别试验结果不同，
+但从长期来看，
+某个事件发生的相对频率会稳定在某个数值附近。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 单位事件
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 在一次随机试验中可能发生的不能再细分的结果被称为基本事件,
  或者称为单位事件,
  用E表示.
-  
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+复合事件
 \end_layout
 
 \begin_layout Itemize
 事件空间(样本空间)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 在随机试验中可能发生的所有单位事件的集合称为事件空间,
  用
@@ -80016,10 +80021,12 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
   
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 随机事件
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 随机事件是事件空间
 \begin_inset Formula ${\displaystyle S}$
@@ -80055,11 +80062,13 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
  
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 必然事件 :
  在S条件下,一定会发生的事件,叫做相对于S条件的必然事件 (certain event),简称必然事件:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -80071,11 +80080,13 @@ S\subset S
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 不可能事件:
  在S条件下,一定不会发生的事件,叫做相对于S条件的不可能事件(impossble event),简称不可能事件
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -80087,6 +80098,7 @@ S\subset S
 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 确定事件:
  必然事件与不可能事件统称为相对于条件的确定事件,简称确定事件
@@ -80097,12 +80109,37 @@ S\subset S
  在S条件下可能发生也可能不发生的事件,叫做相对于S条件下的随机事件(randon event),简称随机事件,
 \end_layout
 
+\begin_layout Itemize
+逆事件：
+
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 确定事件和随机事件统称为
 \series bold
 事件
 \series default
-,一般用大写字母A,B,C……表示.
+,一般用大写字母
+\begin_inset Formula $A$
+\end_inset
+
+,
+\begin_inset Formula $B$
+\end_inset
+
+,
+\begin_inset Formula $C$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+表示.
 \end_layout
 
 \begin_layout Standard
@@ -80136,15 +80173,39 @@ S\subset S
 
 \begin_layout Standard
 极大似然原理的直观想法是,
- 一个随机试验如有若干个可能的结果A,
- B,
- C,
- ...
- ,
+ 一个随机试验如有若干个可能的结果
+\begin_inset Formula $A$
+\end_inset
+
+,
+\begin_inset Formula $B$
+\end_inset
+
+,
+\begin_inset Formula $C$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
+,
  若在一次试验中,
- 结果A出现了,
- 那么可以认为实验条件对A的出现有利,
- 也即出现的概率P(A)较大.
+ 结果
+\begin_inset Formula $A$
+\end_inset
+
+出现了,
+ 那么可以认为实验条件对
+\begin_inset Formula $A$
+\end_inset
+
+的出现有利,
+ 也即出现的概率
+\begin_inset Formula $P(A)$
+\end_inset
+
+较大.
  
 \end_layout
 
@@ -80162,7 +80223,11 @@ S\subset S
 \begin_inset Formula $H$
 \end_inset
 
-一定发生,这时我们说事件H包含事件
+一定发生,这时我们说事件
+\begin_inset Formula $H$
+\end_inset
+
+包含事件
 \begin_inset Formula $C$
 \end_inset
 
@@ -80251,7 +80316,7 @@ S\subset S
 \series bold
 并事件
 \series default
-(或和事件》,记作 
+(或和事件）,记作 
 \begin_inset Formula $A\cup B$
 \end_inset
 
@@ -80367,7 +80432,254 @@ S\subset S
 其含义是:事件A与事件B在任何一次试验中有且仅有一个发生.
 \end_layout
 
+\begin_layout Standard
+对立事件只有两种情况，
+是互斥事件的一种特殊情况，
+对立事件一定是互斥事件，
+
+\end_layout
+
+\begin_layout Standard
+互斥事件有多种情况，
+互斥不一定是独立事件
+\end_layout
+
 \end_deeper
+\begin_layout Enumerate
+事件的相减(
+\series bold
+差事件
+\series default
+),
+ 在概率论中，
+事件 A 与事件 B 的差事件（Difference of Events）表示事件 A 发生但事件 B 不发生，
+记作：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A-B$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+或
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+,
+ 它的定义为：
+
+\begin_inset Formula $A-B=A-AB=A\bar{B}=A\cap B^{c}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ensuremath{B^{c}}$
+\end_inset
+
+表示事件 B 的补集，
+即
+\begin_inset Formula $B$
+\end_inset
+
+不发生的情况。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\ensuremath{A\cap B^{c}}$
+\end_inset
+
+表示
+\begin_inset Formula $A$
+\end_inset
+
+发生且
+\begin_inset Formula $B$
+\end_inset
+
+ 不发生的所有可能情况。
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+完备事件组（Complete Set of Events），
+在概率论中，
+若一组事件
+\begin_inset Formula $\ensuremath{A_{1},A_{2},\dots,A_{n}}$
+\end_inset
+
+满足以下两个条件：
+
+\end_layout
+
+\begin_layout Definition
+互不相交（互斥）：
+对于任意 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+，
+有 
+\begin_inset Formula $A_{i}\cap A_{j}=\emptyset$
+\end_inset
+
+,
+ 即任意两个事件不会同时发生。
+
+\end_layout
+
+\begin_layout Definition
+穷尽样本空间（完备性）：
+这些事件的并等于整个样本空间
+\begin_inset Formula $\Omega$
+\end_inset
+
+，
+即 
+\begin_inset Formula $A_{1}\cup A_{2}\cup\dots\cup A_{n}=\Omega$
+\end_inset
+
+也就是说，
+每次试验中必然会发生其中的一个事件。
+
+\end_layout
+
+\begin_layout Definition
+则称事件组
+\begin_inset Formula $\{A_{1},A_{2},\dots,A_{n}\}$
+\end_inset
+
+ 为
+\series bold
+完备事件组
+\series default
+（Complete Set of Events）。
+
+\end_layout
+
+\begin_layout Paragraph
+完备事件组的性质
+\end_layout
+
+\begin_layout Itemize
+事件两两互斥：
+
+\begin_inset Formula $\ensuremath{A_{i}\cap A_{j}=\emptyset},(\ensuremath{i\neq j})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+事件总和覆盖全部可能性：
+
+\begin_inset Formula $P(A_{1})+P(A_{2})+\dots+P(A_{n})=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+贝叶斯公式的基础：
+完备事件组常用于
+\series bold
+条件概率
+\series default
+和
+\series bold
+贝叶斯定理
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+交换律：
+
+\begin_inset Formula $A\cup B=A\cup A$
+\end_inset
+
+,
+\begin_inset Formula $A\cap B=B\cap A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结合律：
+
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分配律：
+
+\end_layout
+
+\begin_layout Standard
+对偶律：
+
+\begin_inset Formula $\overline{A\cup B}=\bar{A}\cap\bar{B}$
+\end_inset
+
+，
+
+\begin_inset Formula $\overline{A\cap B}=\bar{A}\cup\bar{B}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 概率的定义
 \end_layout
@@ -80408,7 +80720,6 @@ S\subset S
 \end_inset
 
 的概率.
-  .
 \end_layout
 
 \begin_layout Subsection
@@ -80492,7 +80803,11 @@ S\subset S
 
 \begin_layout Standard
 传统概率的定义是由法国数学家拉普拉斯 ( Laplace ) 提出的.
- 如果一个随机试验所包含的单位事件是有限的,
+ 如果一个随机试验所包含的单位事件是
+\series bold
+有限
+\series default
+的,
  且
 \series bold
 每个单位事件发生的可能性均相等
@@ -80745,6 +81060,452 @@ P(AB)=P(A)P(B|A)=P(A)P(B)
 \end_inset
 
 也都相互独立.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A|B)=\frac{P(A\cap B)}{P(B)},\quad P(B)>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{P(A|B)}$
+\end_inset
+
+表示在B 发生的前提下 A 发生的概率。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ 表示A 和 B 同时发生的概率。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{P(B)}$
+\end_inset
+
+不能为 0，
+否则条件概率无意义。
+
+\end_layout
+
+\begin_layout Example
+试验：
+投掷一个六面骰子，
+设：
+
+\end_layout
+
+\begin_layout Example
+事件 
+\begin_inset Formula $A$
+\end_inset
+
+：
+投出的点数是偶数
+\begin_inset Formula $A=\{2,4,6\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+事件 
+\begin_inset Formula $B$
+\end_inset
+
+：
+投出的点数大于 
+\begin_inset Formula $3$
+\end_inset
+
+，
+
+\begin_inset Formula $B=\{4,5,6\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+计算：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P(A)=\frac{3}{6}=0.5$
+\end_inset
+
+（偶数的概率）。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P(B)=\frac{3}{6}=0.5$
+\end_inset
+
+（点数大于 3 的概率）。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P(A\cap B)=P(\{4,6\})=\frac{2}{6}=\frac{1}{3}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+根据条件概率公式：
+
+\begin_inset Formula 
+\[
+P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{\frac{1}{3}}{\frac{1}{2}}=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由条件概率公式变形：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A\cap B)=P(A|B)P(B)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(A\cap B)=P(B|A)P(A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个公式在贝叶斯定理中非常重要。
+
+\end_layout
+
+\begin_layout Subsubsection
+全概率公式
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $\ensuremath{\{B_{1},B_{2},\dots,B_{n}\}}$
+\end_inset
+
+是一个完备事件组，
+则对于任意事件 
+\begin_inset Formula $A$
+\end_inset
+
+，
+有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A)=\sum_{i=1}^{n}P(A|B_{i})P(B_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是全概率公式，
+用于计算一个复杂事件的概率。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A)=\sum_{i=1}^{n}\left(\frac{P(A\cap B_{i})}{P(B_{i})}\cdot P(B_{i})\right)=\sum_{i=1}^{n}P(A\cap B_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+某商店销售一批收音机共有10台，
+其中有3台次品。
+现已经出售了2台，
+问从剩下的收音机中任取一台是正品的概率为多少？
+
+\end_layout
+
+\begin_layout Example
+商店原有 10 台收音机，
+其中 3 台是次品，
+因此正品的数量为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+10-3=7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已经出售了 2 台，
+我们需要考虑这 2 台可能的情况：
+
+\end_layout
+
+\begin_layout Example
+情况分析
+\end_layout
+
+\begin_layout Example
+1.
+ 如果出售的 2 台都是正品
+\end_layout
+
+\begin_layout Example
+- 正品剩余：
+
+\begin_inset Formula $7-2=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 次品剩余：
+
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 此时抽到正品的概率：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(A_{1})=\frac{5}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ **如果出售的 1 台是正品，
+1 台是次品** 
+\end_layout
+
+\begin_layout Example
+- 正品剩余：
+
+\begin_inset Formula $7-1=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 次品剩余：
+
+\begin_inset Formula $3-1=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 此时抽到正品的概率：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(A_{2})=\frac{6}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 如果出售的 2 台都是次品
+\end_layout
+
+\begin_layout Example
+- 正品剩余：
+
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 次品剩余：
+
+\begin_inset Formula $3-2=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 此时抽到正品的概率：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(A_{3})=\frac{7}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+两台都是正品的概率：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(B_{1})=\frac{\binom{7}{2}}{\binom{10}{2}}=\frac{\frac{7\times6}{2}}{\frac{10\times9}{2}}=\frac{42}{90}=\frac{7}{15}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+一台正品一台次品的概率：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(B_{2})=\frac{\binom{7}{1}\times\binom{3}{1}}{\binom{10}{2}}=\frac{7\times3}{90}=\frac{21}{45}=\frac{7}{15}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+两台都是次品的概率：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(B_{3})=\frac{\binom{3}{2}}{\binom{10}{2}}=\frac{\frac{3\times2}{2}}{45}=\frac{3}{45}=\frac{1}{15}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(A)=P(A_{1})P(B_{1})+P(A_{2})P(B_{2})+P(A_{3})P(B_{3})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\frac{5}{8}\times\frac{7}{15}\right)+\left(\frac{6}{8}\times\frac{7}{15}\right)+\left(\frac{7}{8}\times\frac{1}{15}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{35}{120}+\frac{42}{120}+\frac{7}{120}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{84}{120}=\frac{7}{10}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以，
+从剩下的收音机中任取一台是正品的概率为 0.7 。
+
+\end_layout
+
+\begin_layout Subsubsection
+
 \end_layout
 
 \begin_layout Subsection
@@ -81335,21 +82096,6 @@ P(B|A)=\frac{P(AB)}{P(A)}
 
 \end_layout
 
-\begin_layout Itemize
-全概率公式
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P(A)=P(A|B_{1})P(B_{1})+...+P(A|B_{n}）P(B_{n})
-\]
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 贝叶斯定理
 \end_layout
@@ -81382,6 +82128,17 @@ P(A\vert B)=\frac{P(B\vert A)\cdot P(A)}{P(B)}
 \end_inset
 
  
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(A|B)=\frac{P(B|A)P(A)}{P(B)}=\frac{\frac{P(A\cap B)}{P(A)}\cdot P(A)}{P(B)}=\frac{P(A\cap B)}{P(B)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -81447,6 +82204,491 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+贝叶斯定理的核心思想是：
+ 
+\end_layout
+
+\begin_layout Standard
+我们可以通过新的证据
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+来更新对
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+发生的信念。
+
+\end_layout
+
+\begin_layout Standard
+换句话说，
+后验概率 
+\begin_inset Formula $\ensuremath{P(A|B)}$
+\end_inset
+
+由以下三部分决定：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 先验概率
+\begin_inset Formula $P(A)$
+\end_inset
+
+：
+
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+在没有任何额外信息时的可能性。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 似然
+\begin_inset Formula $P(B|A)$
+\end_inset
+
+：
+如果
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+发生了，
+
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+发生的可能性。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 标准化因子
+\begin_inset Formula $P(B)$
+\end_inset
+
+：
+所有可能导致
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+发生的情况。
+
+\end_layout
+
+\begin_layout Example
+假设某种疾病的患病率（先验概率）为 
+\begin_inset Formula $1\%$
+\end_inset
+
+ ，
+即：
+
+\begin_inset Formula $P(A)=0.01$
+\end_inset
+
+。
+ 现在有一个检测手段：
+
+\end_layout
+
+\begin_layout Example
+如果患者真的有病，
+检测呈阳性的概率是 
+\begin_inset Formula $90\%$
+\end_inset
+
+（灵敏度），
+即：
+
+\begin_inset Formula $P(B|A)=0.9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果患者没病，
+检测错误地呈阳性的概率是 
+\begin_inset Formula $5\%$
+\end_inset
+
+（假阳性率），
+即：
+
+\begin_inset Formula $P(B|\neg A)=0.05$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+问题：
+如果某人的检测结果是阳性，
+求他真正患病的概率，
+即
+\begin_inset Formula $P(A|B)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Formula $\neg A$
+\end_inset
+
+代表事件
+\begin_inset Formula $A$
+\end_inset
+
+的 补集（或非
+\begin_inset Formula $A$
+\end_inset
+
+事件），
+即
+\begin_inset Formula $A$
+\end_inset
+
+不发生的事件。
+它也可以记作 
+\begin_inset Formula $A^{c}$
+\end_inset
+
+或 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+先计算分母
+\begin_inset Formula $P(B)$
+\end_inset
+
+（检测呈阳性，
+全概率公式）
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $P(B)=P(B|A)P(A)+P(B|\neg A)P(\neg A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于 
+\begin_inset Formula $P(\neg A)=1-P(A)=0.99$
+\end_inset
+
+，
+代入数值：
+
+\begin_inset Formula $P(B)=(0.9\times0.01)+(0.05\times0.99)=0.009+0.0495=0.0585$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入贝叶斯公式计算 
+\begin_inset Formula $P(A|B)$
+\end_inset
+
+ ：
+
+\begin_inset Formula $P(A|B)=\frac{P(B|A)P(A)}{P(B)}=\frac{0.9\times0.01}{0.0585}=\frac{0.009}{0.0585}\approx0.154$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+结果：
+即使检测呈阳性，
+真正患病的概率 只有
+\begin_inset Formula $15.4\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+假设有两个箱子：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $B_{1}$
+\end_inset
+
+：
+内有 3 颗红球和 7 颗白球，
+概率
+\begin_inset Formula $P(B_{1})=0.4$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $B_{2}$
+\end_inset
+
+：
+内有 6 颗红球和 4 颗白球，
+概率 
+\begin_inset Formula $P(B_{2})=0.6$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+如果从某个箱子中随机抽取一颗球，
+结果是红球，
+求该球来自
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 的概率，
+即
+\begin_inset Formula $P(B_{1}|A)$
+\end_inset
+
+，
+其中
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+表示抽到红球。
+
+\end_layout
+
+\begin_layout Solution
+计算抽到红球的全概率 
+\begin_inset Formula $P(A)$
+\end_inset
+
+：
+
+\begin_inset Formula $P(A)=P(A|B_{1})P(B_{1})+P(A|B_{2})P(B_{2})=(3/10)\times0.4+(6/10)\times0.6=0.12+0.36=0.48$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入贝叶斯公式计算 
+\begin_inset Formula $P(B_{1}|A)$
+\end_inset
+
+：
+
+\begin_inset Formula $P(B_{1}|A)=\frac{P(A|B_{1})P(B_{1})}{P(A)}=\frac{(3/10)\times0.4}{0.48}=\frac{0.12}{0.48}=0.25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+正态分布(normal distribution)
+\end_layout
+
+\begin_layout Standard
+若随机变量
+\begin_inset Formula ${\displaystyle X}$
+\end_inset
+
+服从一个位置参数为
+\begin_inset Formula ${\displaystyle \mu}$
+\end_inset
+
+、尺度参数为
+\begin_inset Formula ${\displaystyle \sigma}$
+\end_inset
+
+的正态分布,
+ 记为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle X\sim N(\mu,\sigma^{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则其概率密度函数为 
+\begin_inset Formula ${\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正态分布的数学期望值或期望值
+\begin_inset Formula ${\displaystyle \mu}$
+\end_inset
+
+ 等于位置参数,
+ 决定了分布的位置；
+其方差
+\begin_inset Formula ${\displaystyle \sigma^{2}}$
+\end_inset
+
+的开平方或标准差
+\begin_inset Formula ${\displaystyle \sigma}$
+\end_inset
+
+ 等于尺度参数,
+ 决定了分布的幅度.
+ 
+\end_layout
+
+\begin_layout Standard
+我们通常所说的标准正态分布是位置参数
+\begin_inset Formula ${\displaystyle \mu=0}$
+\end_inset
+
+,
+ 尺度参数
+\begin_inset Formula ${\displaystyle \sigma^{2}=1}$
+\end_inset
+
+的正态分布.
+\end_layout
+
+\begin_layout Standard
+正态密度分布曲线(正态曲线):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/Normal_Distribution_PDF.svg.png
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一般地,
+ 如果对于任意实数
+\begin_inset Formula $a,b(a<b)$
+\end_inset
+
+,
+ 随机变量
+\begin_inset Formula $X$
+\end_inset
+
+满足
+\begin_inset Formula 
+\[
+P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则称随机变量
+\begin_inset Formula $X$
+\end_inset
+
+服从正态分布.记为
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+经验表明,
+ 一个随机变量如果是众多的、互不相干的、不分主次的偶然因素作用结果之和,
+ 它就服从或近似服从正态分布.
+\end_layout
+
+\begin_layout Standard
+可以发现,正态曲线有以下特点:
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线位于
+\begin_inset Formula $x$
+\end_inset
+
+轴上方,与x轴不相交;
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线是单峰的,它关于直线
+\begin_inset Formula $x=\mu$
+\end_inset
+
+对称;
+\end_layout
+
+\begin_layout Itemize
+曲线在
+\begin_inset Formula $x=\mu$
+\end_inset
+
+处达到峰值
+\begin_inset Formula $\frac{1}{\sigma\sqrt{2\pi}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+曲线与轴之间的面积为1.
+\end_layout
+
+\begin_layout Itemize
+标准差越大曲线越矮,数值越分散.
+\end_layout
+
+\begin_layout Standard
+在实际应用中,通常认为服从于正态分布
+\begin_inset Formula $N((\mu,\sigma^{2})$
+\end_inset
+
+的随机变量
+\begin_inset Formula $X$
+\end_inset
+
+只取 
+\begin_inset Formula $((\mu,\sigma^{2},(\mu,\sigma^{2})$
+\end_inset
+
+之间的值,并简称之为
+\begin_inset Formula $3\sigma$
+\end_inset
+
+原则.
+ 
 \end_layout
 
 \begin_layout Section
@@ -83604,6 +84846,10 @@ f_{X}*f_{Y}=\int_{-\infty}^{\infty}f_{X}(z-y)f_{Y}(y)dy=\int_{-\infty}^{\infty}f
 
 \end_layout
 
+\begin_layout Standard
+概率
+\end_layout
+
 \begin_layout Section
 随机变量的数字特征
 \end_layout
@@ -83728,27 +84974,20 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-设
+方差度量的是随机变量
 \begin_inset Formula $X$
 \end_inset
 
-是一个随机变量,
- 若
-\begin_inset Formula $E\{[X-E(X)]^{2}\}$
+偏离其均值
+\begin_inset Formula $E(X)$
 \end_inset
 
-存在,
- 则称
-\begin_inset Formula $E\{[X-E(X)]^{2}\}$
-\end_inset
+的程度，
+即：
 
-为方差,
- 记为
-\begin_inset Formula $D(X)$
-\end_inset
+\end_layout
 
-,
- 即
+\begin_layout Standard
 \begin_inset Formula 
 \[
 D(X)=E\{[X-E(X)]^{2}\}
@@ -83760,10 +84999,46 @@ D(X)=E\{[X-E(X)]^{2}\}
 \end_layout
 
 \begin_layout Standard
-标准差(均方差):
-\begin_inset Formula $\sigma(X)=\sqrt{D(X)}$
+展开后，
+可以得到另一种计算方式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D(X)=E(X^{2})-[E(X)]^{2}
+\]
+
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+标准差是方差的平方根，
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma(X)=\sqrt{D(X)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+标准差的单位与 
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+的单位相同，
+因此在衡量数据的离散程度时比方差更直观。
 
 \end_layout
 
