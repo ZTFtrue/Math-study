@@ -79241,565 +79241,6 @@ R^{2}=1-\frac{\stackrel[i=1]{n}{\sum}(y_{i}-\hat{y}_{i})^{2}}{\stackrel[i=1]{n}{
  越大反之.
 \end_layout
 
-\begin_layout Subsection
-独立性检验
-\end_layout
-
-\begin_layout Standard
-判断两个事件是否有关联,
- 是根据次数资料判断两类因子彼此相关或相互独立的假设检验.
- 
-\end_layout
-
-\begin_layout Standard
-假设有两个分类变量X和Y,
- 它们的值域分另为{x1,
- x2}和{y1,
- y2},
- 其样本频数列联表为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-y1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-y2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-总计
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-x1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-b
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a+b
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-x2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-c
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-d
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-c+d
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-总计
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a+c
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-b+d
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-a+b+c+d
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-若要推断的论述为H1：
-"X与Y有关系”,
- 可以利用独立性检验来考察两个变量是否有关系,
- 并且能较精确地给出这种判断的可靠程度.
- 具体的做法是,
- 由表中的数据算出随机变量
-\begin_inset Formula $K^{2}$
-\end_inset
-
-的值
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $K^{2}=\frac{n(ad-bc)2}{[(a+b)(c+d)(a+c)(b+d)]}$
-\end_inset
-
-,
- 　其中
-\begin_inset Formula $n=a+b+c+d$
-\end_inset
-
-为样本容量
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $K^{2}$
-\end_inset
-
-的值越大,
- 说明"X与Y有关系”成立的可能性越大.
- 
-\end_layout
-
-\begin_layout Standard
-如果X,Y 没有关系,
- 那么其比例
-\begin_inset Formula $\frac{a}{a+b}\thickapprox\frac{c}{c+d}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-可以查阅下表来确定结论"X与Y有关系”的可信程度：
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="11">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $P(K^{2}≥k)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.50
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.40
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.25
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.05
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.025
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.010
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.005
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.001
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k_{0}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.455
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.708
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.323
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.072
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2.706
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.481
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5.024
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-.6.635
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7.879
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10.828
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-例如,
- 当"X与Y有关系”的
-\begin_inset Formula $K^{2}$
-\end_inset
-
-变量的值为6.109,
- 根据表格,
- 因为
-\begin_inset Formula $5.024\leqslant6.109<6.635$, 所以"X与Y有关系”成立的概率为1-0.025=0.975, 即 
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-定义
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-W=|\frac{a}{a+b}-\frac{c}{c+d}|
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-由W的定义可以发现,它越大,越有利于结论"X和Y有关系”;它越小,越有利于结论"X和Y没有关系
-\begin_inset Quotes erd
-\end_inset
-
-,
- 因此可以建立如下的判断规则:
-\end_layout
-
-\begin_layout Standard
-当W的观测值
-\begin_inset Formula $W\geqslant w_{0}$
-\end_inset
-
-时就判断"X和Y有关系”;否则,判断"X和Y没有关系”,这里 
-\begin_inset Formula $w_{0}$
-\end_inset
-
- 为正实数,满足如下条件:在"X和Y没有关系”的前提下:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P(W\geqslant w_{0})=k,(k=P(K^{2}\ge k),\text{如0.010}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-即:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-K^{2}=W^{2}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-因此
-\begin_inset Formula $K^{2}\geqslant k_{0}\Leftrightarrow W\geqslant\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}$
-\end_inset
-
-,
- 即
-\begin_inset Formula 
-\[
-w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
-\]
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 事件
 \end_layout
@@ -84670,10 +84111,823 @@ f(x,y)=\left\{ \begin{split}\frac{1}{A},(x,y)\in G\\
 相互独立的随机变量
 \end_layout
 
+\begin_layout Subsection
+事件独立性
+\end_layout
+
 \begin_layout Standard
-参考 
+在概率论中，
+两个事件的独立性表示其中一个事件的发生不会影响另一个事件的发生。
+直观来说，
+如果事件 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 
 \series bold
-21.6 独立性检验
+互不影响
+\series default
+，
+则称它们是独立事件。
+
+\end_layout
+
+\begin_layout Definition
+事件
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和 
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+独立，
+当且仅当它们的联合概率满足以下公式：
+
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+或
+\begin_inset Formula $P(A|B)=P(A)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中：
+
+\end_layout
+
+\begin_layout Definition
+- 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ 表示事件
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+发生的概率，
+
+\end_layout
+
+\begin_layout Definition
+- 
+\begin_inset Formula $\ensuremath{P(B)}$
+\end_inset
+
+表示事件
+\begin_inset Formula $\ensuremath{B}$
+\end_inset
+
+发生的概率，
+
+\end_layout
+
+\begin_layout Definition
+- 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ 表示 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 同时发生的概率。
+
+\end_layout
+
+\begin_layout Definition
+如果不满足上述公式，
+则称
+\begin_inset Formula $\ensuremath{A}$
+\end_inset
+
+和 
+\begin_inset Formula $B$
+\end_inset
+
+ 不独立（即相关）。
+
+\end_layout
+
+\begin_layout Standard
+乘法法则：
+联合概率 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ 可以直接分解为各自的概率乘积。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 相关：
+
+\end_layout
+
+\begin_layout Standard
+其中一个事件发生会改变另一个事件发生的可能性。
+
+\end_layout
+
+\begin_layout Paragraph
+多个事件的独立性
+\end_layout
+
+\begin_layout Standard
+如果有多个事件 
+\begin_inset Formula $A_{1},A_{2},...,A_{n}$
+\end_inset
+
+，
+它们两两独立 并不一定 代表它们完全独立。
+完全独立需满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A_{1}\cap A_{2}\cap...\cap A_{n})=P(A_{1})P(A_{2})...P(A_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即所有事件的联合概率等于它们各自概率的乘积。
+
+\end_layout
+
+\begin_layout Paragraph
+条件独立
+\end_layout
+
+\begin_layout Standard
+有时事件在给定某个条件后变得独立，
+即
+\series bold
+条件独立
+\series default
+：
+
+\begin_inset Formula 
+\[
+P(A\cap B|C)=P(A|C)P(B|C)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这在贝叶斯网络、机器学习和数据分析中非常重要。
+
+\end_layout
+
+\begin_layout Paragraph
+事件独立性 vs 互斥
+\end_layout
+
+\begin_layout Standard
+常见误解：
+独立 ≠ 互斥
+\end_layout
+
+\begin_layout Standard
+- 互斥事件（互不相容事件）：
+
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 不能同时发生，
+即
+\begin_inset Formula $P(A\cap B)=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+- 独立事件：
+
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 可以同时发生，
+且满足 
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsection
+独立性检验
+\end_layout
+
+\begin_layout Standard
+判断两个事件是否有关联,
+ 是根据次数资料判断两类因子彼此相关或相互独立的假设检验.
+ 
+\end_layout
+
+\begin_layout Standard
+假设有两个分类变量X和Y,
+ 它们的值域分另为
+\begin_inset Formula ${x_{1},x_{2}}$
+\end_inset
+
+和
+\begin_inset Formula ${y_{1},y_{2}}$
+\end_inset
+
+,
+ 其样本频数列联表为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+总计
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+b
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+c+d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+总计
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+c
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+b+d
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a+b+c+d
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若要推断的论述为H1：
+"X与Y有关系”,
+ 可以利用独立性检验来考察两个变量是否有关系,
+ 并且能较精确地给出这种判断的可靠程度.
+ 具体的做法是,
+ 由表中的数据算出随机变量
+\begin_inset Formula $K^{2}$
+\end_inset
+
+的值
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K^{2}=\frac{n(ad-bc)^{2}}{[(a+b)(c+d)(a+c)(b+d)]}$
+\end_inset
+
+,
+ 　其中
+\begin_inset Formula $n=a+b+c+d$
+\end_inset
+
+为样本容量
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K^{2}$
+\end_inset
+
+的值越大,
+ 说明"X与Y有关系”成立的可能性越大.
+ 
+\end_layout
+
+\begin_layout Standard
+如果X,Y 没有关系,
+ 那么其比例
+\begin_inset Formula $\frac{a}{a+b}\thickapprox\frac{c}{c+d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以查阅下表来确定结论"X与Y有关系”的可信程度：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="11">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P(K^{2}≥k)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.025
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.005
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.455
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.708
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.323
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.072
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.706
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.481
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.024
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.6.635
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.879
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.828
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如,
+ 当"X与Y有关系”的
+\begin_inset Formula $K^{2}$
+\end_inset
+
+变量的值为6.109,
+ 根据表格,
+ 因为
+\begin_inset Formula $5.024\leqslant6.109<6.635$, 所以"X与Y有关系”成立的概率为1-0.025=0.975, 即 
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+定义
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+W=|\frac{a}{a+b}-\frac{c}{c+d}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由W的定义可以发现,它越大,越有利于结论"X和Y有关系”;它越小,越有利于结论"X和Y没有关系
+\begin_inset Quotes erd
+\end_inset
+
+,
+ 因此可以建立如下的判断规则:
+\end_layout
+
+\begin_layout Standard
+当W的观测值
+\begin_inset Formula $W\geqslant w_{0}$
+\end_inset
+
+时就判断"X和Y有关系”;否则,判断"X和Y没有关系”,这里 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ 为正实数,满足如下条件:在"X和Y没有关系”的前提下:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(W\geqslant w_{0})=k,(k=P(K^{2}\ge k),\text{如0.010}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K^{2}=W^{2}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此
+\begin_inset Formula $K^{2}\geqslant k_{0}\Leftrightarrow W\geqslant\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}$
+\end_inset
+
+,
+ 即
+\begin_inset Formula 
+\[
+w_{0=}\sqrt{k_{0}\times\frac{n(a+b)(c+d)}{(a+c)(b+d)}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
