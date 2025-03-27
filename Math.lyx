@@ -82176,6 +82176,72 @@ P(a<X\leqslant b)=\int_{a}^{b}\varphi_{\mu,\sigma}(x)dx
  某药治疗某病病人的有效数、无效数等.
 \end_layout
 
+\begin_layout Standard
+若试验的结果不带有明显的数量标识，
+也可以用数量表示事件。
+
+\end_layout
+
+\begin_layout Standard
+掷一枚硬币
+\begin_inset Formula $X=X(\Omega)={正,反}$
+\end_inset
+
+.
+ 引进变量
+\begin_inset Formula $X$
+\end_inset
+
+，
+并规定正面出现时，
+
+\begin_inset Formula $X=1$
+\end_inset
+
+；
+反面出现时，
+
+\begin_inset Formula $X=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+随机变量是随机试验的结果的数值表示。
+简单来说，
+它把随机试验的每种可能结果映射到一个数值。
+
+\end_layout
+
+\begin_layout Definition
+设某个随机试验的样本空间为
+\begin_inset Formula $\Omega$
+\end_inset
+
+，
+随机变量
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+是一个 从样本空间到实数的映射：
+
+\begin_inset Formula 
+\[
+X:\Omega\to\mathbb{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+也就是说，
+随机变量给每个试验结果赋予一个数值。
+
+\end_layout
+
 \begin_layout Subsubsection
 离散概率分布
 \end_layout
@@ -82422,7 +82488,7 @@ P(
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 两点分布(two-point distribution)(0-1 分布)
 \end_layout
 
@@ -82537,11 +82603,64 @@ P
 
 \end_layout
 
-\begin_layout Paragraph
-二项分布(Binomial distribution)
+\begin_layout Subsubsection
+二项分布(Binomial distribution)与
+\series bold
+伯努利(Bernoulli)试验
 \end_layout
 
 \begin_layout Standard
+试验的独立性指的是多个随机试验之间相互不影响，
+即一个试验的结果不会影响另一个试验的结果。
+
+\end_layout
+
+\begin_layout Definition
+设有两个随机试验，
+分别涉及事件 
+\backslash
+( A 
+\backslash
+) 和 
+\backslash
+( B 
+\backslash
+)。
+如果：
+
+\begin_inset Formula $P(A\cap B)=P(A)P(B)$
+\end_inset
+
+,则称这两个试验是独立的，
+即它们的结果相互不影响。
+
+\end_layout
+
+\begin_layout Definition
+更一般地，
+若有多个随机试验，
+涉及事件 
+\begin_inset Formula $A_{1},A_{2},\dots,A_{n}$
+\end_inset
+
+，
+如果它们满足：
+
+\begin_inset Formula $P(A_{1}\cap A_{2}\cap\dots\cap A_{n})=P(A_{1})P(A_{2})\dots P(A_{n})$
+\end_inset
+
+,则这些试验是相互独立的。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
 设试验
 \begin_inset Formula $E$
 \end_inset
@@ -82571,7 +82690,11 @@ P
 \end_inset
 
 ．将E独立重复地进n 次,
- 则称这串重复的独立试验为伯努利试验.
+ 则称这串重复的独立试验为
+\series bold
+伯努利试验
+\series default
+.
 \end_layout
 
 \begin_layout Standard
@@ -82605,7 +82728,21 @@ P
 \end_layout
 
 \begin_layout Standard
-重复伯努利试验又叫可列重伯努利试验.
+在 
+\begin_inset Formula $n$
+\end_inset
+
+重贝伯努利试验中,当试验次数
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ 时,
+ 称为
+\series bold
+可列
+\series default
+重伯努利试验.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -82949,7 +83086,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 几何分布 (Geometric distribution)
 \end_layout
 
@@ -83071,7 +83208,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
  再随机取出...
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 超几何分布(hypergeometric distribution)
 \end_layout
 
@@ -83208,7 +83345,11 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_layout
 
 \begin_layout Standard
-即在一定区间内变量取值有无限个,
+即在一定区间内变量
+\series bold
+取值有无限个
+\series default
+,
  或数值无法一一列举出来.
  例如某地区男性健康成人的身高值、体重值.
  所以我们转去研究随机变量所取的值落在一个区间
@@ -83243,7 +83384,7 @@ P\{x_{1}<X\leqslant x_{2}\}=P\{X\leqslant x_{2}\}-P\{X\leqslant x_{1}\}
 \end_inset
 
 是任意实数,
- 则函数 
+ 则函数
 \begin_inset Formula 
 \[
 F(x)=P{X\leqslant x},-\infty<x<\infty
@@ -83326,7 +83467,7 @@ P{x_{1}<X\leqslant x_{2}} & = & P{X\leqslant x_{2}}-P\{X\leqslant x_{1}\}\\
  上的概率.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 一般地,
  如果对于随机变量X的分布函数
 \begin_inset Formula $F(x)$
@@ -83343,11 +83484,7 @@ P{x_{1}<X\leqslant x_{2}} & = & P{X\leqslant x_{2}}-P\{X\leqslant x_{1}\}\\
 \end_inset
 
 有 
-\begin_inset Formula 
-\[
-F(x)=\int_{-\infty}^{x}f(t)dt
-\]
-
+\begin_inset Formula $F(x)=\int_{a}^{b}f(x)dt$
 \end_inset
 
 ,
@@ -83374,6 +83511,39 @@ F(x)=\int_{-\infty}^{x}f(t)dt
 \series default
  ,
  简称概率密度.
+\end_layout
+
+\begin_layout Definition
+归一性：
+
+\begin_inset Formula $F(x)=\int_{-\infty}^{+\infty}f(x)dt=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+非付性：
+
+\begin_inset Formula $f(x)>0,x\in(-\infty,+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+概率质量函数（PMF，
+离散型随机变量）
+\end_layout
+
+\begin_layout Definition
+概率密度函数（PDF，
+连续型随机变量）
+\end_layout
+
+\begin_layout Definition
+累积分布函数（CDF，
+所有随机变量通用）
 \end_layout
 
 \begin_layout Standard
@@ -83431,6 +83601,119 @@ f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
 的正态分布或高斯(Gauss)分布 ,
  记为 
 \begin_inset Formula $X\sim N(µ,\sigma^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+累积分布函数（CDF,
+ Cumulative Distribution Function）,
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 定义为
+\begin_inset Formula $F(x)=P(X\leq x)=\int_{-\infty}^{x}f(t)dt$
+\end_inset
+
+，
+即随机变量
+\begin_inset Formula $X$
+\end_inset
+
+取值小于等于
+\begin_inset Formula $x$
+\end_inset
+
+ 的概率。
+
+\end_layout
+
+\begin_layout Standard
+期望（数学期望）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E(X)=\int_{-\infty}^{\infty}xf(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方差：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D(X)=E(X^{2})-[E(X)]^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+均匀分布的期望和方差
+\end_layout
+
+\begin_layout Example
+若
+\begin_inset Formula $X\sim U(a,b)$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+E(X)=\frac{a+b}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+D(X)=\frac{(b-a)^{2}}{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+例如：
+
+\begin_inset Formula $X\sim U(0,1)$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+E(X)=\frac{0+1}{2}=0.5,\quad D(X)=\frac{(1-0)^{2}}{12}=\frac{1}{12}
+\]
+
 \end_inset
 
 
