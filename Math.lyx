@@ -83436,6 +83436,486 @@ f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
 
 \end_layout
 
+\begin_layout Subsection
+分布函数
+\end_layout
+
+\begin_layout Standard
+分布函数（Cumulative Distribution Function,
+ CDF）用于描述随机变量的概率分布情况。
+
+\end_layout
+
+\begin_layout Definition
+对于随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+，
+其分布函数
+\begin_inset Formula $\ensuremath{F(x)}$
+\end_inset
+
+定义为：
+
+\begin_inset Formula 
+\[
+F(x)=P(X\leq x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+即 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 表示随机变量
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+取值 小于或等于
+\begin_inset Formula $x$
+\end_inset
+
+ 的概率。
+
+\end_layout
+
+\begin_layout Standard
+分布函数的性质
+\end_layout
+
+\begin_layout Standard
+分布函数 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 具有以下基本性质：
+
+\end_layout
+
+\begin_layout Itemize
+单调递增：
+如果 
+\begin_inset Formula $a\leq b$
+\end_inset
+
+，
+则 
+\begin_inset Formula $F(a)\leq F(b)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+取值范围：
+
+\begin_inset Formula $0\leq F(x)\leq1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+左连续：
+
+\begin_inset Formula $\underset{x\to a^{+}}{\lim}F(x)=F(a)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+极限性质：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+当 
+\begin_inset Formula $x\to-\infty$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $F(x)\to0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $x\to+\infty$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $F(x)\to1$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+根据随机变量的类型，
+分布函数可以分为离散型和连续型。
+
+\end_layout
+
+\begin_layout Subsubsection
+离散型随机变量的分布函数
+\end_layout
+
+\begin_layout Standard
+如果随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 只能取离散值
+\begin_inset Formula $x_{1},x_{2},\dots$
+\end_inset
+
+，
+则其分布函数为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=P(X\leq x)=\sum_{x_{i}\leq x}P(X=x_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+为投掷一个骰子的点数，
+其
+\series bold
+概率质量函数
+\series default
+（PMF）为：
+
+\begin_inset Formula 
+\[
+P(X=k)=\frac{1}{6},\quad k=1,2,3,4,5,6
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则分布函数 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0, & x<1\\
+\frac{1}{6}, & 1\leq x<2\\
+\frac{2}{6}, & 2\leq x<3\\
+\frac{3}{6}, & 3\leq x<4\\
+\frac{4}{6}, & 4\leq x<5\\
+\frac{5}{6}, & 5\leq x<6\\
+1, & x\geq6
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分布函数的特点：
+
+\end_layout
+
+\begin_layout Standard
+由于骰子是离散的，
+
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 是阶梯状的。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 在每个可能取值处发生跳跃，
+跳跃大小等于
+\begin_inset Formula $P(X=x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+连续型随机变量的分布函数
+\end_layout
+
+\begin_layout Standard
+如果随机变量
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+是连续的，
+则其分布函数 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 由
+\series bold
+概率密度函数
+\series default
+（PDF）
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 通过积分计算：
+
+\begin_inset Formula 
+\[
+F(x)=\int_{-\infty}^{x}f(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(a\leq X\leq b)=\int_{a}^{b}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+均匀分布
+\begin_inset Formula $U(0,1)$
+\end_inset
+
+,
+ 设 
+\begin_inset Formula $X\sim U(0,1)$
+\end_inset
+
+，
+其概率密度函数（PDF）为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+1, & 0\leq x\leq1\\
+0, & \text{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对应的分布函数 
+\begin_inset Formula $F(x)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0, & x<0\\
+x, & 0\leq x\leq1\\
+1, & x>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分布函数的特点：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 连续，
+不会有跳跃。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 在 
+\begin_inset Formula $\ensuremath{x}$
+\end_inset
+
+ 轴上是一个平滑增长的曲线。
+
+\end_layout
+
+\begin_layout Standard
+利用分布函数 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 可以计算随机变量落在某个区间内的概率：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(a\leq X\leq b)=F(b)-F(a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+离散型随机变量：
+通过求和计算。
+
+\end_layout
+
+\begin_layout Standard
+连续型随机变量：
+通过积分计算。
+
+\end_layout
+
+\begin_layout Standard
+正态分布
+\begin_inset Formula $X\sim N(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+已知标准正态分布的分布函数
+\begin_inset Formula $F(x)$
+\end_inset
+
+，
+求：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(-1\leq X\leq1)=F(1)-F(-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+查表得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(1)\approx0.8413,\quad F(-1)\approx0.1587
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(-1\leq X\leq1)=0.8413-0.1587=0.6826
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即在标准正态分布中，
+随机变量
+\begin_inset Formula $X$
+\end_inset
+
+ 落在区间
+\begin_inset Formula $[-1,1]$
+\end_inset
+
+ 的概率约为 68.26%。
+
+\end_layout
+
 \begin_layout Section
 多维随机变量及其分布
 \end_layout
