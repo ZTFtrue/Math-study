@@ -82662,7 +82662,7 @@ P(
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 离散型随机变量的分布函数
 \end_layout
 
@@ -82806,7 +82806,7 @@ X
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0$
+\begin_inset Formula $1$
 \end_inset
 
 
@@ -82879,6 +82879,198 @@ P
 \series default
 
 \begin_inset Formula $E(X)=1\times p+0\times(1-p)=p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0, & x<1\\
+1-p, & 0\leq x<1\\
+1, & 1\leq x
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+均匀分布
+\end_layout
+
+\begin_layout Standard
+“均匀分布”是概率论和统计学中的一个基本概念。
+它指的是在某个范围内，
+每个可能的结果出现的概率都相等。
+根据变量的类型，
+均匀分布分为两种类型：
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 🌟 1.
+ 离散均匀分布（Discrete Uniform Distribution）
+\end_layout
+
+\begin_layout Standard
+适用于有限个可能值的情况。
+ 
+\end_layout
+
+\begin_layout Standard
+**例子**：
+掷一个公平的骰子，
+结果是 {1,
+ 2,
+ 3,
+ 4,
+ 5,
+ 6} 中的某一个，
+每个数字出现的概率都是 
+\backslash
+( 
+\backslash
+frac{1}{6} 
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Standard
+公式如下：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+P(X = x) = 
+\backslash
+frac{1}{n}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( n 
+\backslash
+)：
+可能结果的总数
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( x 
+\backslash
+)：
+每一个可能的值
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 🌟 2.
+ 连续均匀分布（Continuous Uniform Distribution）
+\end_layout
+
+\begin_layout Standard
+适用于一个区间 
+\backslash
+([a,
+ b]
+\backslash
+) 上的连续值，
+每个值出现的概率密度是一样的。
+
+\end_layout
+
+\begin_layout Standard
+概率密度函数（PDF）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+\frac{1}{b-a}, & a\leq x\leq b\\
+0, & \text{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+累积分布函数（CDF）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0, & x<a\\
+\frac{x-a}{b-a}, & a\leq x\leq b\\
+1, & x>b
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- **期望值（均值）**：
+ 
+\begin_inset Formula 
+\[
+E[X]=\frac{a+b}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- **方差**：
+ 
+\begin_inset Formula 
+\[
+Var(X)=\frac{(b-a)^{2}}{12}
+\]
+
 \end_inset
 
 
@@ -82978,8 +83170,24 @@ P
 .
 \end_layout
 
-\begin_layout Standard
-二项分布是n个独立的
+\begin_layout Subsubsection
+
+\series bold
+二项分布
+\series default
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+二项分布
+\series default
+是n个独立的
 \begin_inset Formula $是/非$
 \end_inset
 
@@ -82991,14 +83199,21 @@ P
 
 试验又称为伯努利试验.
  实际上,
- 当
+ 
+\series bold
+当
 \begin_inset Formula $n=1$
 \end_inset
 
-时,
- 二项分布就是伯努利分布.
- 二项分布是显著性差异的二项试验的基础.
+时
+\series default
+,
  
+\series bold
+二项分布就是伯努利分布
+\series default
+.
+ 二项分布是显著性差异的二项试验的基础.
 \end_layout
 
 \begin_layout Standard
@@ -83041,8 +83256,12 @@ P
 ( independent and repeated trials).
 \end_layout
 
-\begin_layout Standard
-一般地,在1次独立重复试验中,用
+\begin_layout Definition
+一般地,在
+\begin_inset Formula $1$
+\end_inset
+
+次独立重复试验中,用
 \begin_inset Formula $X$
 \end_inset
 
@@ -83058,7 +83277,7 @@ P
 ,则
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 \begin_inset Formula 
 \[
 {\displaystyle f(k,n,p)=\Pr(X=k)={n \choose k}p^{k}(1-p)^{n-k}},k=0,1,2,...,n
@@ -83077,7 +83296,7 @@ P(X=k)=C_{n}^{k}p^{k}(1-p)^{n-k},k=0,1,2,…,n
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 其中
 \begin_inset Formula ${\displaystyle {n \choose k}=\frac{n!}{k!(n-k)!}}$
 \end_inset
@@ -83086,8 +83305,16 @@ P(X=k)=C_{n}^{k}p^{k}(1-p)^{n-k},k=0,1,2,…,n
 \end_layout
 
 \begin_layout Standard
-n 是发生了多少次,
- k 是多少次成功.
+\begin_inset Formula $n$
+\end_inset
+
+是发生了多少次,
+ 
+\begin_inset Formula $k$
+\end_inset
+
+是多少次成功。
+
 \end_layout
 
 \begin_layout Standard
@@ -83108,17 +83335,473 @@ n 是发生了多少次,
 为成功概率.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 
 \series bold
-思考
-\series default
-:
- 这些离散概率分布有什么区别和相似之处?
+二项分布 几何分布区别
 \end_layout
 
-\begin_layout Minisec
-泊松分布
+\begin_layout Standard
+二项分布（Binomial Distribution）和几何分布（Geometric Distribution）都是离散型概率分布，
+常用于**伯努利试验**（即只有“成功/失败”两种结果的重复试验）。
+不过它们的**研究重点不同**，
+区别如下：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="1.2cm">
+<column alignment="center" valignment="top" varwidth="true">
+<column alignment="center" valignment="top" varwidth="true">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+分布 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+二项分布
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+几何分布
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+研究的问题
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在 
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+次试验中，
+成功了几次？
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第几次试验才第一次成功？
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+举例
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+抛硬币 
+\begin_inset Formula $10$
+\end_inset
+
+ 次，
+有几次正面？
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+第几次抛硬币才第一次出现正面？
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+固定次数
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+每次独立
+\end_layout
+
+\begin_layout Plain Layout
+每次成功的概率是
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+只关心总共成功了几次
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+- 每次独立
+\end_layout
+
+\begin_layout Plain Layout
+- 每次成功的概率是 
+\backslash
+( p 
+\backslash
+)
+\end_layout
+
+\begin_layout Plain Layout
+- 一直试直到第一次成功
+\end_layout
+
+\begin_layout Plain Layout
+- 只关心第一次成功出现在第几次
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+P(X=k)=\binom{n}{k}p^{k}(1-p)^{n-k}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+：
+成功的次数
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $n$
+\end_inset
+
+：
+试验总次数
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+：
+每次成功的概率
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{n}{k}$
+\end_inset
+
+：
+组合数
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+P(X=k)=(1-p)^{k-1}p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $X$
+\end_inset
+
+：
+第几次试验成功
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+：
+每次成功的概率
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+：
+要等到第几次才成功
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+期望
+\begin_inset Formula $E[X]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $np$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+方差
+\begin_inset Formula $Var(X)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\ensuremath{np(1-p)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\ensuremath{\frac{1-p}{p^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+泊松分布（Poisson）
+\end_layout
+
+\begin_layout Standard
+“泊松分布”（Poisson Distribution）是另一个经典的离散概率分布，
+主要用来描述单位时间/空间内某事件发生的次数，
+非常适合用在“事件计数”上。
+
+\end_layout
+
+\begin_layout Standard
+在一个固定的时间或空间区域内，
+某事件发生的次数
+\begin_inset Formula $X$
+\end_inset
+
+，
+如果满足某些条件，
+就可以用泊松分布建模。
+
+\end_layout
+
+\begin_layout Itemize
+每个单位时间/区域内事件发生的概率很小
+\end_layout
+
+\begin_layout Itemize
+时间/空间足够大
+\end_layout
+
+\begin_layout Itemize
+每次发生都是独立的
+\end_layout
+
+\begin_layout Itemize
+某个单位内期望发生次数为
+\begin_inset Formula $\lambda$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -83194,6 +83877,46 @@ n 是发生了多少次,
 \end_layout
 
 \begin_layout Standard
+-
+\begin_inset Formula $X$
+\end_inset
+
+：
+单位时间内事件发生的次数
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\lambda$
+\end_inset
+
+：
+单位时间内事件的平均发生次数
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $k$
+\end_inset
+
+：
+具体发生了几次
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $e$
+\end_inset
+
+：
+自然对数底数（约为
+\begin_inset Formula $2.71828$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Standard
 泊松分布的参数
 \begin_inset Formula $\lambda$
 \end_inset
@@ -83204,28 +83927,72 @@ n 是发生了多少次,
 \end_layout
 
 \begin_layout Standard
-当二项分布的n很大而p很小时,
- 泊松分布可作为二项分布的近似,
- 其中
-\begin_inset Formula $\lambda$
+泊松分布是二项分布的极限情形，
+当二项分布的n很大( 
+\begin_inset Formula $n\to\infty$
 \end_inset
 
-为
-\begin_inset Formula $np$
+)而p很小(
+\begin_inset Formula $p\to0$
 \end_inset
 
-.
- 通常当
+)时,
+ 使得
+\begin_inset Formula $\lambda=np$
+\end_inset
+
+ 保持不变时，
+
+\begin_inset Formula $\text{Bin}(n,p)\approx\text{Poisson}(\lambda)$
+\end_inset
+
+，
+泊松分布可作为二项分布的近似。
+ 
+\end_layout
+
+\begin_layout Standard
+通常当
 \begin_inset Formula $n\geqslant20$
 \end_inset
 
-,
+，
+
 \begin_inset Formula $p\leqslant0.05$
 \end_inset
 
-时,
- 就可以用泊松公式近似得计算.
- 
+时，
+就可以用泊松公式近似得计算。
+这个性质常常用来近似计算“低概率、大样本”的事件。
+
+\end_layout
+
+\begin_layout Standard
+期望和方差都是
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+应用场景
+\end_layout
+
+\begin_layout Standard
+| 电话客服 | 每分钟接到的电话数 |
+\end_layout
+
+\begin_layout Standard
+| 网站访问 | 每小时访问某网页的人数 |
+\end_layout
+
+\begin_layout Standard
+| 医院急诊 | 每天急诊室接收的车祸伤员数 |
+\end_layout
+
+\begin_layout Standard
+| 邮局 | 每天收到的快递包裹数量 |
 \end_layout
 
 \begin_layout Itemize
@@ -83404,9 +84171,21 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_inset
 
 发生;
- 如果每次试验的成功概率是p,
- 那么k次试验中,
- 第k次才得到成功的概率是:
+ 如果每次试验的成功概率是
+\begin_inset Formula $p$
+\end_inset
+
+,
+ 那么
+\begin_inset Formula $k$
+\end_inset
+
+次试验中,
+ 第
+\begin_inset Formula $k$
+\end_inset
+
+次才得到成功的概率是:
 \end_layout
 
 \begin_layout Standard
@@ -83505,6 +84284,21 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 不归还
 \series default
  (without replacement)).
+ 从一个有限总体中不放回抽取样本，
+求“成功项”出现的次数。
+
+\end_layout
+
+\begin_layout Standard
+超几何分布（Hypergeometric Distribution）是离散概率分布中的一种，
+跟二项分布非常像，
+但关键区别是：
+
+\end_layout
+
+\begin_layout Standard
+不放回抽样（超几何） 有放回抽样（二项） 。
+
 \end_layout
 
 \begin_layout Standard
@@ -83619,6 +84413,412 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+应用场景示例：
+
+\end_layout
+
+\begin_layout Standard
+- 一副扑克牌中有 4 张 A，
+从中随机抽 5 张，
+问其中有几张 A？
+
+\end_layout
+
+\begin_layout Standard
+- 仓库中有 10 个坏零件和 90 个好零件，
+从中抽出 20 个，
+问抽到几个坏的？
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 📐 定义公式：
+
+\end_layout
+
+\begin_layout Standard
+假设：
+
+\end_layout
+
+\begin_layout Standard
+- 总体大小：
+
+\backslash
+( N 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+- 总体中“成功项”的数量：
+
+\backslash
+( K 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+- 抽样次数（样本大小）：
+
+\backslash
+( n 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+- 你关心抽到的成功项数量为 
+\backslash
+( x 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+那么超几何分布的概率质量函数（PMF）为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x)=\frac{{\binom{K}{x}\binom{N-K}{n-x}}}{\binom{N}{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 📊 期望和方差：
+
+\end_layout
+
+\begin_layout Standard
+- 期望（均值）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E[X]=n\cdot\frac{K}{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 方差：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Var(X)=n\cdot\frac{K}{N}\cdot\left(1-\frac{K}{N}\right)\cdot\frac{N-n}{N-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+> 注意多了一个 “有限总体修正项”
+\begin_inset Formula $\frac{N-n}{N-1}$
+\end_inset
+
+，
+这是与二项分布的区别之一。
+
+\end_layout
+
+\begin_layout Paragraph
+超几何分布 → 二项分布的近似条件
+\end_layout
+
+\begin_layout Standard
+当总体规模
+\begin_inset Formula $N$
+\end_inset
+
+ 很大，
+相对于样本大小
+\begin_inset Formula $n$
+\end_inset
+
+，
+可以认为抽样对总体的影响微乎其微时，
+超几何分布可以近似为二项分布。
+ 
+\end_layout
+
+\begin_layout Standard
+对比如下：
+
+\end_layout
+
+\begin_layout Standard
+| 条目 | 超几何分布 | 二项分布 |
+\end_layout
+
+\begin_layout Standard
+|------|-------------|----------|
+\end_layout
+
+\begin_layout Standard
+| 总体是否有限 | 是，
+大小为
+\begin_inset Formula $N$
+\end_inset
+
+ | 可认为无限 |
+\end_layout
+
+\begin_layout Standard
+| 是否放回 | ❌ 不放回 | ✅ 放回（或每次独立） |
+\end_layout
+
+\begin_layout Standard
+| 成功个数 |
+\begin_inset Formula $\ensuremath{K}$
+\end_inset
+
+| 成功概率
+\begin_inset Formula $p=\frac{K}{N}$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 样本量 |
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+次抽样 | 
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+次独立试验 |
+\end_layout
+
+\begin_layout Standard
+| 成功次数随机变量 |
+\begin_inset Formula $X\sim\text{Hypergeometric}(N,K,n)$
+\end_inset
+
+ |
+\begin_inset Formula $X\sim\text{Binomial}(n,p)$
+\end_inset
+
+，
+其中
+\begin_inset Formula $p=\frac{K}{N}$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🧠 数学上的近似：
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $N$
+\end_inset
+
+ 很大，
+且
+\begin_inset Formula $n\ll N$
+\end_inset
+
+ 时：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Hypergeometric}(N,K,n)\approx\text{Binomial}(n,p)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\frac{K}{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Example
+假设一个仓库有 
+\backslash
+( N = 10,000 
+\backslash
+) 件产品，
+其中 
+\backslash
+( K = 500 
+\backslash
+) 件是次品。
+你随机抽查 
+\backslash
+( n = 10 
+\backslash
+) 件，
+问抽到 
+\backslash
+( x = 2 
+\backslash
+) 件次品的概率。
+
+\end_layout
+
+\begin_layout Example
+- 用超几何分布计算：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(X=2)=\frac{\binom{500}{2}\binom{9500}{8}}{\binom{10000}{10}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+- 因为 
+\begin_inset Formula $n\ll N$
+\end_inset
+
+，
+可以用二项分布近似：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+X\sim\text{Binomial}(10,\frac{500}{10000}=0.05)\Rightarrow P(X=2)=\binom{10}{2}\cdot0.05^{2}\cdot0.95^{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🔍 什么时候不能近似？
+
+\end_layout
+
+\begin_layout Standard
+当：
+
+\end_layout
+
+\begin_layout Standard
+- 总体较小
+\end_layout
+
+\begin_layout Standard
+- 抽样比例较大（比如 
+\backslash
+( n/N > 0.1 
+\backslash
+)）
+\end_layout
+
+\begin_layout Standard
+- 非独立性对结果影响大
+\end_layout
+
+\begin_layout Standard
+这时不能使用二项近似，
+仍然要用超几何分布。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## ✅ 和二项分布的对比总结：
+
+\end_layout
+
+\begin_layout Standard
+| 分布类型 | 超几何分布 | 二项分布 |
+\end_layout
+
+\begin_layout Standard
+|----------|------------|----------|
+\end_layout
+
+\begin_layout Standard
+| 抽样方式 | 不放回 | 放回（或每次独立） |
+\end_layout
+
+\begin_layout Standard
+| 总体是否有限 | 是 | 可视为无限 |
+\end_layout
+
+\begin_layout Standard
+| 是否独立 | 否 | 是 |
+\end_layout
+
+\begin_layout Standard
+| 常见例子 | 扑克牌、抽签 | 掷骰子、重复试验 |
 \end_layout
 
 \begin_layout Subsection
