@@ -82769,6 +82769,246 @@ F(x)=\begin{cases}
 
 \end_layout
 
+\begin_layout Example
+已知X的概率函数如表所示
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求：
+
+\begin_inset Formula $X^{2}$
+\end_inset
+
+的概率函数。
+
+\end_layout
+
+\begin_layout Standard
+解：
+令
+\begin_inset Formula $Y=X^{2}$
+\end_inset
+
+，
+则
+\begin_inset Formula $Y$
+\end_inset
+
+所有可能的取值为
+\begin_inset Formula $0,1,4$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+事件
+\begin_inset Formula $(Y=0)$
+\end_inset
+
+与事件
+\begin_inset Formula $(X=0)$
+\end_inset
+
+相等，
+事件
+\begin_inset Formula $(Y=4)$
+\end_inset
+
+与事件
+\begin_inset Formula $(X=2)$
+\end_inset
+
+相等
+\end_layout
+
+\begin_layout Standard
+所以
+\begin_inset Formula $P(Y=0)=P(X=0)=0.3$
+\end_inset
+
+，
+
+\begin_inset Formula $P(Y=4)=P(X=2)=0.2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+而
+\begin_inset Formula $(Y=1)=(X=-1)+(X=1)$
+\end_inset
+
+，
+
+\begin_inset Formula $(X=-1)$
+\end_inset
+
+与
+\begin_inset Formula $(X=1)$
+\end_inset
+
+互不相容，
+
+\end_layout
+
+\begin_layout Standard
+所以
+\begin_inset Formula $P(Y=1)=P(X=-1)+P(X=1)=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若X的所有可能取值
+\begin_inset Formula $x_{k}$
+\end_inset
+
+中至少有两个值
+\begin_inset Formula $x_{i}\neq x_{j}$
+\end_inset
+
+，
+其对应
+\begin_inset Formula $Y$
+\end_inset
+
+的取值
+\begin_inset Formula $y_{i}=g(x_{i})=y_{j}=g(x_{j})$
+\end_inset
+
+，
+此时应将这些相等的函数值作为
+\begin_inset Formula $Y$
+\end_inset
+
+的一个取值，
+
+\begin_inset Formula $Y$
+\end_inset
+
+取该值的概率是
+\begin_inset Formula $X$
+\end_inset
+
+取相应值的
+\series bold
+概率之和
+\series default
+。
+
+\end_layout
+
 \begin_layout Subsubsection
 两点分布(two-point distribution)(0-1 分布) 
 \end_layout
@@ -82900,7 +83140,7 @@ F(x)=\begin{cases}
 \end_layout
 
 \begin_layout Subsubsection
-均匀分布
+均匀分布 
 \end_layout
 
 \begin_layout Standard
@@ -85535,6 +85775,331 @@ P(1.5\leq X<2.5)=1-0.9375=0.0625
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知X服从
+\begin_inset Formula $[0,4]$
+\end_inset
+
+上的均匀分布，
+求
+\begin_inset Formula $Y=3X+1$
+\end_inset
+
+的密度函数。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X\sim U[0,4]$
+\end_inset
+
+，
+均匀分布，
+密度函数为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{X}(x)=\begin{cases}
+\frac{1}{4}, & x\in[0,4]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $Y=3X+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+方法一：
+ 变换法（函数变换）
+\end_layout
+
+\begin_layout Example
+这是标准的方式，
+适用于单调可逆函数变换。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 反函数：
+由
+\begin_inset Formula $Y=3X+1\Rightarrow X=\frac{Y-1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 导数绝对值：
+
+\begin_inset Formula $\left|\frac{d}{dy}\left(\frac{y-1}{3}\right)\right|=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 对应 
+\begin_inset Formula $X$
+\end_inset
+
+ 的密度函数代入：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=f_{X}\left(\frac{y-1}{3}\right)\cdot\left|\frac{1}{3}\right|=\frac{1}{4}\cdot\frac{1}{3}=\frac{1}{12},\quad y\in[1,13]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+🔹 结论：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+方法二：
+ 累积分布函数（CDF）法
+\end_layout
+
+\begin_layout Example
+1.
+ 先求 
+\begin_inset Formula $F_{Y}(y)=P(Y\leq y)=P(3X+1\leq y)=P\left(X\leq\frac{y-1}{3}\right)=\int_{-\infty}^{\frac{y-1}{3}}f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 因为
+\begin_inset Formula $X\sim U[0,4]$
+\end_inset
+
+，
+其 
+\begin_inset Formula $CDF$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{X}(x)=\begin{cases}
+0, & x<0\\
+\frac{x}{4}, & 0\le x\le4\\
+1, & x>4
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 所以：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{Y}(y)=\begin{cases}
+0, & y<1\\
+\int_{0}^{\frac{y-1}{3}}\frac{1}{4}dx, & 1\le y\le13\\
+1, & y>13
+\end{cases}=\begin{cases}
+0, & y<1\\
+\frac{(y-1)}{12}, & 1\le y\le13\\
+1, & y>13
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+4.
+ 再对 
+\begin_inset Formula $\ensuremath{F_{Y}(y)}$
+\end_inset
+
+求导（在 
+\begin_inset Formula $y\in(1,13)$
+\end_inset
+
+ 内）：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\frac{d}{dy}F_{Y}(y)=\left(\frac{(y-1)}{12}\right)^{'}=\frac{1}{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+结论：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+方法三：
+线性变换下的均匀分布性质法
+\end_layout
+
+\begin_layout Example
+已知若
+\begin_inset Formula $X\sim U[a,b]$
+\end_inset
+
+，
+则线性变换 
+\begin_inset Formula $Y=cX+d$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $c>0$
+\end_inset
+
+，
+会使
+\begin_inset Formula $Y$
+\end_inset
+
+的分布仍然是均匀分布，
+定义域变为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y\sim U[ca+d,cb+d]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于本题：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y=3X+1,\quad X\in[0,4]\Rightarrow Y\in[1,13]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+那么：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{13-1}=\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+🔹 这就是利用“**均匀分布的线性变换仍为均匀分布**”的事实。
 
 \end_layout
 
