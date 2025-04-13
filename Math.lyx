@@ -86103,9 +86103,30 @@ f_{Y}(y)=\begin{cases}
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 正态分布
-\begin_inset Formula $X\sim N(0,1)$
+\end_layout
+
+\begin_layout Itemize
+正态分布 若连续型随机变量X的概率密度为
+\begin_inset Formula 
+\[
+{\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}(-\infty<x<\infty)
+\]
+
+\end_inset
+
+则称
+\begin_inset Formula $X$
+\end_inset
+
+服从参数为
+\begin_inset Formula $\mu,\sigma$
+\end_inset
+
+的正态分布或高斯(Gauss)分布 ,
+ 记为 
+\begin_inset Formula $X\sim N(µ,\sigma^{2})$
 \end_inset
 
 
@@ -86173,13 +86194,270 @@ P(-1\leq X\leq1)=0.8413-0.1587=0.6826
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+ ,
+\begin_inset Formula $Y=(X-\mu)/\sigma$
+\end_inset
+
+,证明
+\begin_inset Formula $Y\sim\mathcal{N}(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+方法一：
+由分布函数推导
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $\ensuremath{F_{Y}(y)}$
+\end_inset
+
+为 
+\begin_inset Formula $Y$
+\end_inset
+
+ 的分布函数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{Y}(y)=P(Y\le y)=P\left(\frac{X-\mu}{\sigma}\le y\right)=P\left(X\le\sigma y+\mu\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+而
+\begin_inset Formula $X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+，
+所以有：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{Y}(y)=F_{X}(\sigma y+\mu)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对
+\begin_inset Formula $\ensuremath{F_{Y}(y)}$
+\end_inset
+
+求导，
+得到
+\begin_inset Formula $\ensuremath{Y}$
+\end_inset
+
+的密度函数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\frac{d}{dy}F_{Y}(y)=\frac{d}{dy}F_{X}(\sigma y+\mu)=f_{X}(\sigma y+\mu)\cdot\sigma
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入 
+\begin_inset Formula $f_{X}(x)$
+\end_inset
+
+ 的表达式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{X}(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(\sigma y+\mu-\mu)^{2}}{2\sigma^{2}}}\cdot\sigma=\frac{1}{\sqrt{2\pi}}e^{-\frac{y^{2}}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这正是标准正态分布 
+\begin_inset Formula $\mathcal{N}(0,1)$
+\end_inset
+
+ 的密度函数。
+
+\end_layout
+
+\begin_layout Example
+方法二：
+使用线性变换性质
+\end_layout
+
+\begin_layout Example
+若 
+\begin_inset Formula $X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+那么 
+\begin_inset Formula $aX+b\sim\mathcal{N}(a\mu+b,a^{2}\sigma^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在我们令：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y=\frac{1}{\sigma}X+\left(-\frac{\mu}{\sigma}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这等价于：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y=\frac{X-\mu}{\sigma}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y\sim\mathcal{N}\left(\frac{\mu-\mu}{\sigma},\left(\frac{1}{\sigma}\right)^{2}\sigma^{2}\right)=\mathcal{N}(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-连续型随机变量分布:
+如果：
+
+\begin_inset Formula $X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+，
+定义：
+
+\begin_inset Formula $Y=aX+b$
+\end_inset
+
+，
+则有：
+
+\begin_inset Formula $Y\sim\mathcal{N}(a\mu+b,a^{2}\sigma^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{X-\mu}{\sigma}$
+\end_inset
+
+是X的标准化随机变量。
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $Z=\frac{X-\mu}{\sigma}\Rightarrow Z\sim\mathcal{N}(0,1)$
+\end_inset
+
+,
+\begin_inset Formula $X^{2}\sim$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+均匀分布
+\end_layout
+
 \begin_layout Itemize
-均匀分布 连续型随机变量X的概率密度为 
+连续型随机变量X的概率密度为 
 \begin_inset Formula 
 \[
 f(x)=\left\{ \begin{split}\frac{1}{b-a} & a<x<b\\
@@ -86193,8 +86471,12 @@ f(x)=\left\{ \begin{split}\frac{1}{b-a} & a<x<b\\
 
 \end_layout
 
+\begin_layout Subsubsection
+指数分布
+\end_layout
+
 \begin_layout Itemize
-指数分布 连续型随机变量X的概率密度为 
+连续型随机变量X的概率密度为 
 \begin_inset Formula 
 \[
 f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
@@ -86203,31 +86485,6 @@ f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
 \right.
 \]
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-正态分布 若连续型随机变量X的概率密度为
-\begin_inset Formula 
-\[
-{\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}(-\infty<x<\infty)
-\]
-
-\end_inset
-
-则称
-\begin_inset Formula $X$
-\end_inset
-
-服从参数为
-\begin_inset Formula $\mu,\sigma$
-\end_inset
-
-的正态分布或高斯(Gauss)分布 ,
- 记为 
-\begin_inset Formula $X\sim N(µ,\sigma^{2})$
 \end_inset
 
 
