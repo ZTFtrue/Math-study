@@ -72351,10 +72351,10 @@ H_{n}= & 1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}\\
 \end_inset
 
 时(或
-\begin_inset Formula $\underset{n\rightarrow\partial}{\lim}\frac{u_{n+1}}{u_{n}}$
+\begin_inset Formula $\underset{n\rightarrow\partial}{\lim}\frac{u_{n+1}}{u_{n}}=\infty$
 \end_inset
 
-=∞)，
+)，
 级数
 \begin_inset Formula $\stackrel[n=1]{\infty}{\sum}u_{n}$
 \end_inset
@@ -72865,24 +72865,11 @@ sqrt[n]{n!}
 \end_layout
 
 \begin_layout Standard
-利用斯特林公式 
-\backslash
-( n!
- 
-\backslash
-approx 
-\backslash
-sqrt{2
-\backslash
-pi n} 
-\backslash
-left(
-\backslash
-frac{n}{e}
-\backslash
-right)^n 
-\backslash
-)，
+利用斯特林公式
+\begin_inset Formula $n!\approx\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}$
+\end_inset
+
+，
 得：
 
 \end_layout
@@ -75444,7 +75431,10 @@ Cauchy 一致收敛判别法
 \end_layout
 
 \begin_layout Standard
-π的无穷级数表示式
+\begin_inset Formula $\pi$
+\end_inset
+
+的无穷级数表示式
 \begin_inset Formula $\frac{\pi}{4}=\stackrel[n=0]{\infty}{\sum}\frac{(-1)^{n}}{2n+1}$
 \end_inset
 
@@ -82340,6 +82330,283 @@ a-e^{-\lambda x} & x>0\\
 \end_layout
 
 \begin_layout Subsection
+概率密度函数（PDF） 和 分布函数（CDF）
+\end_layout
+
+\begin_layout Standard
+一、概率密度函数（Probability Density Function,
+ PDF）
+\end_layout
+
+\begin_layout Standard
+### 定义：
+
+\end_layout
+
+\begin_layout Standard
+对于一个连续型随机变量 $X$，
+其概率密度函数 $f(x)$ 满足：
+
+\end_layout
+
+\begin_layout Standard
+- $f(x) 
+\backslash
+ge 0$
+\end_layout
+
+\begin_layout Standard
+- 总面积为 1，
+即
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+int_{-
+\backslash
+infty}^{+
+\backslash
+infty} f(x)
+\backslash
+,dx = 1
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+### 含义：
+
+\end_layout
+
+\begin_layout Standard
+$f(x)$ 本身不是“概率”，
+但它描述的是在某点附近概率的密度。
+
+\end_layout
+
+\begin_layout Standard
+如果我们想知道 $X$ 落在区间 $[a,
+ b]$ 的概率：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+P(a 
+\backslash
+le X 
+\backslash
+le b) = 
+\backslash
+int_a^b f(x)
+\backslash
+,dx
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+### 举个例子（均匀分布）：
+
+\end_layout
+
+\begin_layout Standard
+若 $X 
+\backslash
+sim 
+\backslash
+text{Uniform}(0,
+ 1)$，
+则：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+f(x) =
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Standard
+1,
+ & 0 
+\backslash
+le x 
+\backslash
+le 1 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+0,
+ & 
+\backslash
+text{otherwise}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+end{cases}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🌟 二、分布函数（Cumulative Distribution Function,
+ CDF）
+\end_layout
+
+\begin_layout Standard
+### 定义：
+
+\end_layout
+
+\begin_layout Standard
+CDF $F(x)$ 是指随机变量 $X$ 小于或等于 $x$ 的概率：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+F(x) = P(X 
+\backslash
+le x) = 
+\backslash
+int_{-
+\backslash
+infty}^{x} f(t)
+\backslash
+,dt
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+### 性质：
+
+\end_layout
+
+\begin_layout Standard
+- 单调非减：
+$F(x_1) 
+\backslash
+le F(x_2)$ 若 $x_1 < x_2$
+\end_layout
+
+\begin_layout Standard
+- 极限：
+$
+\backslash
+lim_{x 
+\backslash
+to -
+\backslash
+infty} F(x) = 0$，
+$
+\backslash
+lim_{x 
+\backslash
+to +
+\backslash
+infty} F(x) = 1$
+\end_layout
+
+\begin_layout Standard
+- 可以反过来通过求导得到密度函数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\frac{dF(x)}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+### 例子（还是上面的均匀分布）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=\begin{cases}
+0, & x<0\\
+x, & 0\le x\le1\\
+1, & x>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+| 名称 | 简写 | 意义 | 数学形式 |
+\end_layout
+
+\begin_layout Standard
+|------|------|------|-----------|
+\end_layout
+
+\begin_layout Standard
+| 概率密度函数 | PDF | 概率的密度（非概率） | 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 分布函数 | CDF | 小于等于 $x$ 的概率 | 
+\begin_inset Formula $F(x)=\int_{-\infty}^{x}f(t)dt$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Subsection
 离散型随机变量
 \end_layout
 
@@ -85263,7 +85530,7 @@ P{x_{1}<X\leqslant x_{2}} & = & P{X\leqslant x_{2}}-P\{X\leqslant x_{1}\}\\
 所有随机变量通用）
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 连续型随机变量的分布函数
 \end_layout
 
@@ -85786,301 +86053,158 @@ P(1.5\leq X<2.5)=1-0.9375=0.0625
 \end_layout
 
 \begin_layout Example
-已知X服从
-\begin_inset Formula $[0,4]$
-\end_inset
+已知：
 
-上的均匀分布，
-求
-\begin_inset Formula $Y=3X+1$
-\end_inset
-
-的密度函数。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $X\sim U[0,4]$
-\end_inset
-
-，
-均匀分布，
-密度函数为：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{X}(x)=\begin{cases}
-\frac{1}{4}, & x\in[0,4]\\
+\begin_inset Formula $f_{X}(x)=\begin{cases}
+\frac{1}{x+1}, & 0<x<e-1\\
 0, & \text{其他}
-\end{cases}
-\]
-
+\end{cases}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $Y=3X+1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-方法一：
- 变换法（函数变换）
-\end_layout
-
-\begin_layout Example
-这是标准的方式，
-适用于单调可逆函数变换。
-
-\end_layout
-
-\begin_layout Example
-1.
- 反函数：
-由
-\begin_inset Formula $Y=3X+1\Rightarrow X=\frac{Y-1}{3}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 导数绝对值：
-
-\begin_inset Formula $\left|\frac{d}{dy}\left(\frac{y-1}{3}\right)\right|=\frac{1}{3}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-3.
- 对应 
-\begin_inset Formula $X$
-\end_inset
-
- 的密度函数代入：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{Y}(y)=f_{X}\left(\frac{y-1}{3}\right)\cdot\left|\frac{1}{3}\right|=\frac{1}{4}\cdot\frac{1}{3}=\frac{1}{12},\quad y\in[1,13]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-🔹 结论：
+,
  
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{Y}(y)=\begin{cases}
-\frac{1}{12}, & y\in[1,13]\\
-0, & \text{其他}
-\end{cases}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-方法二：
- 累积分布函数（CDF）法
-\end_layout
-
-\begin_layout Example
-1.
- 先求 
-\begin_inset Formula $F_{Y}(y)=P(Y\leq y)=P(3X+1\leq y)=P\left(X\leq\frac{y-1}{3}\right)=\int_{-\infty}^{\frac{y-1}{3}}f(x)dx$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 因为
-\begin_inset Formula $X\sim U[0,4]$
+\begin_inset Formula $Y=\sqrt{X}$
 \end_inset
 
 ，
-其 
-\begin_inset Formula $CDF$
+求其密度函数
+\begin_inset Formula $f_{Y}(y)$
 \end_inset
 
- 为：
+。
 
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula 
-\[
-F_{X}(x)=\begin{cases}
-0, & x<0\\
-\frac{x}{4}, & 0\le x\le4\\
-1, & x>4
-\end{cases}
-\]
-
+求分布函数
+\begin_inset Formula $F_{Y}(y)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Example
-3.
- 所以：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F_{Y}(y)=\begin{cases}
-0, & y<1\\
-\int_{0}^{\frac{y-1}{3}}\frac{1}{4}dx, & 1\le y\le13\\
-1, & y>13
-\end{cases}=\begin{cases}
-0, & y<1\\
-\frac{(y-1)}{12}, & 1\le y\le13\\
-1, & y>13
-\end{cases}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-4.
- 再对 
-\begin_inset Formula $\ensuremath{F_{Y}(y)}$
-\end_inset
-
-求导（在 
-\begin_inset Formula $y\in(1,13)$
-\end_inset
-
- 内）：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{Y}(y)=\frac{d}{dy}F_{Y}(y)=\left(\frac{(y-1)}{12}\right)^{'}=\frac{1}{12}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-结论：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{Y}(y)=\begin{cases}
-\frac{1}{12}, & y\in[1,13]\\
-0, & \text{其他}
-\end{cases}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-方法三：
-线性变换下的均匀分布性质法
-\end_layout
-
-\begin_layout Example
-已知若
-\begin_inset Formula $X\sim U[a,b]$
+先处理定义域：
+由于
+\begin_inset Formula $Y=\sqrt{X}\ge0$
 \end_inset
 
 ，
-则线性变换 
-\begin_inset Formula $Y=cX+d$
+所以：
+
+\end_layout
+
+\begin_layout Example
+当
+\begin_inset Formula $y<0$
+\end_inset
+
+ 时，
+显然
+\begin_inset Formula $P(Y\le y)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+当 
+\begin_inset Formula $y\ge0$
+\end_inset
+
+时,
+ 由 
+\begin_inset Formula $Y=\sqrt{X}\Rightarrow X=Y^{2}$
 \end_inset
 
 ，
-其中 
-\begin_inset Formula $c>0$
+因此：
+
+\begin_inset Formula $F_{Y}(y)=P(Y\le y)=P(X\le y^{2})=\int_{0}^{y^{2}}\frac{1}{x+1}dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+需要注意
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+的定义域是
+\begin_inset Formula $0<x<e-1$
 \end_inset
 
 ，
-会使
-\begin_inset Formula $Y$
+所以积分范围也要被限制：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\ensuremath{0<y<\sqrt{e-1}}$
 \end_inset
 
-的分布仍然是均匀分布，
-定义域变为：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-Y\sim U[ca+d,cb+d]
-\]
-
+,
+ 此时 
+\begin_inset Formula $y^{2}<e-1$
 \end_inset
 
+，
+所以可以直接积分：
 
-\end_layout
-
-\begin_layout Example
-对于本题：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-Y=3X+1,\quad X\in[0,4]\Rightarrow Y\in[1,13]
-\]
-
+\begin_inset Formula $F_{Y}(y)=\int_{0}^{y^{2}}\frac{1}{x+1}dx=\ln(1+y^{2})$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Example
-那么：
+当 
+\begin_inset Formula $y\ge\sqrt{e-1}$
+\end_inset
+
+时,
+ 由于 
+\begin_inset Formula $X<e-1$
+\end_inset
+
+，
+所以：
+
+\begin_inset Formula $F_{Y}(y)=\int_{0}^{e-1}\frac{1}{x+1}dx=\ln(1+e-1)=\ln(e)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求密度函数
+\begin_inset Formula $f_{Y}(y)=\frac{d}{dy}F_{Y}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分段导数如下：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f_{Y}(y)=\frac{d}{dy}\ln(1+y^{2})=\frac{2y}{1+y^{2}}$
+\end_inset
+
+ (
+\begin_inset Formula $0<y<\sqrt{e-1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f_{Y}(y)=0$
+\end_inset
+
 
 \end_layout
 
@@ -86088,18 +86212,13 @@ Y=3X+1,\quad X\in[0,4]\Rightarrow Y\in[1,13]
 \begin_inset Formula 
 \[
 f_{Y}(y)=\begin{cases}
-\frac{1}{13-1}=\frac{1}{12}, & y\in[1,13]\\
+\frac{2y}{1+y^{2}}, & 0<y<\sqrt{e-1}\\
 0, & \text{其他}
 \end{cases}
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Example
-🔹 这就是利用“**均匀分布的线性变换仍为均匀分布**”的事实。
 
 \end_layout
 
@@ -86107,11 +86226,20 @@ f_{Y}(y)=\begin{cases}
 正态分布
 \end_layout
 
-\begin_layout Itemize
-正态分布 若连续型随机变量X的概率密度为
+\begin_layout Standard
+正态分布（Normal Distribution），
+又称高斯分布（Gaussian Distribution），
+是概率统计中最重要、最常见的分布之一，
+几乎所有自然、社会、工程现象中都能看到它的影子，
+比如人的身高、测量误差、考试成绩等。
+
+\end_layout
+
+\begin_layout Definition
+若连续型随机变量X的概率密度为
 \begin_inset Formula 
 \[
-{\displaystyle f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}(-\infty<x<\infty)
+{\displaystyle \varphi(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}}(-\infty<x<\infty)
 \]
 
 \end_inset
@@ -86132,7 +86260,380 @@ f_{Y}(y)=\begin{cases}
 
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\mu$
+\end_inset
+
+ 是均值（期望）,可以为负数；
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ 是方差，
+
+\begin_inset Formula $\sigma>0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+正态分布的分布函数（累积分布函数，
+CDF）表示随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 小于或等于某个值 
+\begin_inset Formula $x$
+\end_inset
+
+ 的概率：
+
+\end_layout
+
+\begin_layout Standard
+分布函数定义：
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+，
+则其累积分布函数为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=P(X\le x)=\int_{-\infty}^{x}\frac{1}{\sqrt{2\pi\sigma^{2}}}e^{-\frac{(t-\mu)^{2}}{2\sigma^{2}}}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个不能用初等函数表示的积分，
+所以我们一般通过数值计算、查表或者用标准正态分布进行转换。
+
+\end_layout
+
+\begin_layout Standard
+分布函数图像特性：
+
+\end_layout
+
+\begin_layout Itemize
+是一个 S型曲线（Sigmoid 形）
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underset{x\to-\infty}{\lim}F(x)=0$
+\end_inset
+
+，
+
+\begin_inset Formula $\underset{x\to\infty}{\lim}F(x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(\mu)=0.5$
+\end_inset
+
+，
+即均值处概率为一半
+\end_layout
+
+\begin_layout Itemize
+在
+\begin_inset Formula $x=\mu$
+\end_inset
+
+处，
+
+\begin_inset Formula $\Phi(x)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 取得最大值：
+
+\begin_inset Formula $\frac{1}{\sqrt{2\pi}\sigma}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+参数 
+\begin_inset Formula $\mu$
+\end_inset
+
+ 决定曲线
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+的位置，
+参数 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 决定曲线
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ 的形状。
+固定 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 而改变 
+\begin_inset Formula $\mu$
+\end_inset
+
+值，
+则曲线沿着
+\begin_inset Formula $x$
+\end_inset
+
+ 轴左右平移但形状不变；
+固定 
+\begin_inset Formula $\mu$
+\end_inset
+
+ 而改变 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 值，
+则曲线形状改变而位置不变。
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 值越大时曲线越扁平，
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 值越小曲线越尖窄。
+
+\end_layout
+
+\begin_layout Definition
+标准化公式：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+Z=\frac{X-\mu}{\sigma}\quad\Rightarrow\quad Z\sim\mathcal{N}(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+则：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+F(x)=P(X\le x)=P\left(Z\le\frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+其中，
+
+\begin_inset Formula $\Phi(z)$
+\end_inset
+
+ 表示标准正态分布的分布函数：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\Phi(z)=\int_{-\infty}^{z}\frac{1}{\sqrt{2\pi}}e^{-t^{2}/2}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+概率密度函数
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula ${\displaystyle \varphi_{0}(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}}(x\in R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\varphi_{0}(x)$
+\end_inset
+
+图像性质
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\varphi_{0}(x)$
+\end_inset
+
+是偶函数，
+即有
+\begin_inset Formula $\varphi_{0}(-x)=\varphi_{0}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\varphi_{0}(x)$
+\end_inset
+
+在 
+\begin_inset Formula $(-\infty,0)$
+\end_inset
+
+内单增，
+在
+\begin_inset Formula $(0,+\infty)$
+\end_inset
+
+内递减.
+\end_layout
+
+\begin_layout Itemize
+在
+\begin_inset Formula $x=0$
+\end_inset
+
+处 
+\begin_inset Formula $\varphi_{0}(x)$
+\end_inset
+
+取最大值 
+\begin_inset Formula $\frac{1}{\sqrt{2\pi}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\varphi_{0}(x)$
+\end_inset
+
+在 
+\begin_inset Formula $x=1,-1$
+\end_inset
+
+点取得拐点，
+且以
+\begin_inset Formula $x$
+\end_inset
+
+ 轴为水平渐近线.
+\end_layout
+
+\begin_layout Standard
+转换公式
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $\varphi(x)=\frac{1}{\sigma}\varphi_{0}(\frac{x-\mu}{\sigma})$
+\end_inset
+
+，
+
+\begin_inset Formula $\Phi(x)=\Phi_{0}(\frac{x-\mu}{\sigma})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 已知标准正态分布的分布函数
 \begin_inset Formula $F(x)$
 \end_inset
@@ -86142,7 +86643,7 @@ f_{Y}(y)=\begin{cases}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 \begin_inset Formula 
 \[
 P(-1\leq X\leq1)=F(1)-F(-1)
@@ -86153,12 +86654,12 @@ P(-1\leq X\leq1)=F(1)-F(-1)
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 查表得：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 \begin_inset Formula 
 \[
 F(1)\approx0.8413,\quad F(-1)\approx0.1587
@@ -86169,7 +86670,7 @@ F(1)\approx0.8413,\quad F(-1)\approx0.1587
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 \begin_inset Formula 
 \[
 P(-1\leq X\leq1)=0.8413-0.1587=0.6826
@@ -86180,7 +86681,7 @@ P(-1\leq X\leq1)=0.8413-0.1587=0.6826
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 即在标准正态分布中，
 随机变量
 \begin_inset Formula $X$
@@ -86191,6 +86692,13 @@ P(-1\leq X\leq1)=0.8413-0.1587=0.6826
 \end_inset
 
  的概率约为 68.26%。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
@@ -86441,19 +86949,232 @@ Y\sim\mathcal{N}\left(\frac{\mu-\mu}{\sigma},\left(\frac{1}{\sigma}\right)^{2}\s
  
 \end_layout
 
+\begin_layout Subsubsection
+卡方分布
+\end_layout
+
 \begin_layout Standard
-\begin_inset Formula $Z=\frac{X-\mu}{\sigma}\Rightarrow Z\sim\mathcal{N}(0,1)$
+卡方分布（Chi-Square Distribution）是统计学中非常重要的一种分布，
+常用于假设检验、方差分析、最大似然估计等场景。
+
+\end_layout
+
+\begin_layout Definition
+若
+\begin_inset Formula $Z_{1},Z_{2},\dots,Z_{k}$
 \end_inset
 
-,
-\begin_inset Formula $X^{2}\sim$
+ 是相互独立的标准正态分布随机变量，
+即：
+
+\begin_inset Formula 
+\[
+Z_{i}\sim\mathcal{N}(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+那么随机变量：
+
+\begin_inset Formula 
+\[
+X=\sum_{i=1}^{k}Z_{i}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+服从自由度为 
+\begin_inset Formula $k$
+\end_inset
+
+ 的卡方分布，
+记作：
+
+\begin_inset Formula 
+\[
+X\sim\chi^{2}(k)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+卡方分布的概率密度函数为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\frac{1}{2^{k/2}\Gamma(k/2)}x^{k/2-1}e^{-x/2},\quad x>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\Gamma(\cdot)$
+\end_inset
+
+ 是伽马函数，
+满足 
+\begin_inset Formula $\Gamma(n)=(n-1)!$
+\end_inset
+
+（当 
+\begin_inset Formula $n$
+\end_inset
+
+ 为正整数）
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $k$
+\end_inset
+
+ 是自由度（degrees of freedom）
+\end_layout
+
+\begin_layout Standard
+卡方分布的累积分布函数没有初等函数形式，
+一般使用数值方法或查表（或调用统计库）计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F(x)=P(X\le x)=\text{GammaCDF}\left(x;\frac{k}{2},2\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+非负性：
+ 
+\begin_inset Formula $X\ge0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+非对称 ：
+分布偏右（右偏） 
+\end_layout
+
+\begin_layout Itemize
+自由度增加时：
+趋近正态分布 
+\end_layout
+
+\begin_layout Itemize
+期望：
+ 
+\begin_inset Formula $\mathbb{E}[X]=k$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+方差：
+ 
+\begin_inset Formula $\mathrm{Var}(X)=2k$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+应用举例
+\end_layout
+
+\begin_layout Standard
+1.
+ 假设检验中的卡方检验（适用于列联表、拟合优度）
+\end_layout
+
+\begin_layout Standard
+2.
+ 最大似然估计中的似然比检验
+\end_layout
+
+\begin_layout Standard
+3.
+ 构造正态总体方差的置信区间
+\end_layout
+
+\begin_layout Standard
+图像（直观）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k=1$
+\end_inset
+
+ 时：
+形状类似于指数分布
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k$
+\end_inset
+
+ 越大：
+分布越趋近正态，
+变得更平滑
+\end_layout
+
+\begin_layout Example
+若 
+\begin_inset Formula $X\sim\chi^{2}(4)$
+\end_inset
+
+，
+求 
+\begin_inset Formula $P(X>6)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(X>6)=1-F(6)=1-\text{chi2.cdf}(6,4)
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsubsection
-均匀分布
+均匀分布(Continuous Uniform Distribution)
 \end_layout
 
 \begin_layout Itemize
@@ -86471,18 +87192,84 @@ f(x)=\left\{ \begin{split}\frac{1}{b-a} & a<x<b\\
 
 \end_layout
 
-\begin_layout Subsubsection
-指数分布
+\begin_layout Itemize
+期望（均值）：
+ 
+\begin_inset Formula $E[X]=\frac{a+b}{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-连续型随机变量X的概率密度为 
+方差：
+ 
+\end_layout
+
+\begin_layout Itemize
+分布函数
+\begin_inset Formula $f(x)=\left\{ \begin{split}0 & x<a\\
+\frac{x-a}{b-a} & a\leqslant x<b\\
+0 & \text{b}\leqslant x
+\end{split}
+\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+对任意满足
+\begin_inset Formula $a\leqslant c<d\leqslant b$
+\end_inset
+
+的
+\begin_inset Formula $c,d$
+\end_inset
+
+有：
+
+\begin_inset Formula $P(c<X<d)=\int_{c}^{d}\frac{1}{b-a}dx=\frac{d-c}{b-a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知
+\begin_inset Formula $X$
+\end_inset
+
+服从
+\begin_inset Formula $[0,4]$
+\end_inset
+
+上的均匀分布，
+求
+\begin_inset Formula $Y=3X+1$
+\end_inset
+
+的密度函数。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $X\sim U[0,4]$
+\end_inset
+
+，
+均匀分布，
+密度函数为：
+
+\end_layout
+
+\begin_layout Example
 \begin_inset Formula 
 \[
-f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
-0 & \text{其\text{它}}
-\end{split}
-\right.
+f_{X}(x)=\begin{cases}
+\frac{1}{4}, & x\in[0,4]\\
+0, & \text{其他}
+\end{cases}
 \]
 
 \end_inset
@@ -86490,14 +87277,348 @@ f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $Y=3X+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+方法一：
+ 变换法（函数变换）
+\end_layout
+
+\begin_layout Example
+这是标准的方式，
+适用于单调可逆函数变换。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 反函数：
+由
+\begin_inset Formula $Y=3X+1\Rightarrow X=\frac{Y-1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 导数绝对值：
+
+\begin_inset Formula $\left|\frac{d}{dy}\left(\frac{y-1}{3}\right)\right|=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 对应 
+\begin_inset Formula $X$
+\end_inset
+
+ 的密度函数代入：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=f_{X}\left(\frac{y-1}{3}\right)\cdot\left|\frac{1}{3}\right|=\frac{1}{4}\cdot\frac{1}{3}=\frac{1}{12},\quad y\in[1,13]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+🔹 结论：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+方法二：
+ 累积分布函数（CDF）法
+\end_layout
+
+\begin_layout Example
+1.
+ 先求 
+\begin_inset Formula $F_{Y}(y)=P(Y\leq y)=P(3X+1\leq y)=P\left(X\leq\frac{y-1}{3}\right)=\int_{-\infty}^{\frac{y-1}{3}}f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 因为
+\begin_inset Formula $X\sim U[0,4]$
+\end_inset
+
+，
+其 
+\begin_inset Formula $CDF$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{X}(x)=\begin{cases}
+0, & x<0\\
+\frac{x}{4}, & 0\le x\le4\\
+1, & x>4
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 所以：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{Y}(y)=\begin{cases}
+0, & y<1\\
+\int_{0}^{\frac{y-1}{3}}\frac{1}{4}dx, & 1\le y\le13\\
+1, & y>13
+\end{cases}=\begin{cases}
+0, & y<1\\
+\frac{(y-1)}{12}, & 1\le y\le13\\
+1, & y>13
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+4.
+ 再对 
+\begin_inset Formula $\ensuremath{F_{Y}(y)}$
+\end_inset
+
+求导（在 
+\begin_inset Formula $y\in(1,13)$
+\end_inset
+
+ 内）：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\frac{d}{dy}F_{Y}(y)=\left(\frac{(y-1)}{12}\right)^{'}=\frac{1}{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+结论：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+方法三：
+线性变换下的均匀分布性质法
+\end_layout
+
+\begin_layout Example
+已知若
+\begin_inset Formula $X\sim U[a,b]$
+\end_inset
+
+，
+则线性变换 
+\begin_inset Formula $Y=cX+d$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $c>0$
+\end_inset
+
+，
+会使
+\begin_inset Formula $Y$
+\end_inset
+
+的分布仍然是均匀分布，
+定义域变为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y\sim U[ca+d,cb+d]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对于本题：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+Y=3X+1,\quad X\in[0,4]\Rightarrow Y\in[1,13]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+那么：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{Y}(y)=\begin{cases}
+\frac{1}{13-1}=\frac{1}{12}, & y\in[1,13]\\
+0, & \text{其他}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+🔹 这就是利用“均匀分布的线性变换仍为均匀分布”的事实。
+
+\end_layout
+
+\begin_layout Subsubsection
+指数分布
+\end_layout
+
+\begin_layout Standard
+设随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 表示某事件发生所需的时间，
+如果它服从参数为
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ 的指数分布，
+记作：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X∼Exponential(λ)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 是事件发生的速率（rate），
+单位是“每单位时间发生的次数”。
+
+\end_layout
+
+\begin_layout Itemize
+连续型随机变量X的概率密度为 
+\begin_inset Formula 
+\[
+f(x)=\left\{ \begin{split}\lambda e^{-\lambda x} & ,x\geqslant0\\
+0 & ,其\text{它}
+\end{split}
+\right.
+\]
+
+\end_inset
+
+这表示随着时间推移，
+事件越迟还没发生，
+其马上发生的概率就越小。
+
+\end_layout
+
 \begin_layout Itemize
 累积分布函数（CDF,
  Cumulative Distribution Function）,
-\begin_inset Formula $F(x)$
-\end_inset
+ 
+\begin_inset Formula 
+\[
+F(x)=P(X\le x)=\begin{cases}
+1-e^{-\lambda x}, & x\ge0\\
+0, & x<0
+\end{cases}
+\]
 
- 定义为
-\begin_inset Formula $F(x)=P(X\leq x)=\int_{-\infty}^{x}f(t)dt$
 \end_inset
 
 ，
@@ -86513,56 +87634,77 @@ f(x)=\left\{ \begin{split}\frac{1}{\theta}e^{-\frac{x}{\theta}} & x>0\\
 
 \end_layout
 
-\begin_layout Standard
-期望（数学期望）：
+\begin_layout Itemize
+期望（均值）：
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-E(X)=\int_{-\infty}^{\infty}xf(x)dx
-\]
-
+\begin_inset Formula $E[X]=\frac{1}{\lambda}$
 \end_inset
 
-
+ 
 \end_layout
 
-\begin_layout Standard
-方差：
+\begin_layout Itemize
+方差 ：
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-D(X)=E(X^{2})-[E(X)]^{2}
-\]
-
+\begin_inset Formula $\text{Var}(X)=\frac{1}{\lambda^{2}}$
 \end_inset
 
+ 
+\end_layout
 
+\begin_layout Itemize
+无记忆性：
+
+\begin_inset Formula $P(X>s+t\mid X>s)=P(X>t)$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Example
-均匀分布的期望和方差
-\end_layout
+设
+\begin_inset Formula $X$
+\end_inset
 
-\begin_layout Example
-若
-\begin_inset Formula $X\sim U(a,b)$
+服从参数为
+\begin_inset Formula $\lambda$
+\end_inset
+
+的指数分布，
+证明：
+对任意的
+\begin_inset Formula $s>0$
+\end_inset
+
+,
+\begin_inset Formula $t>0$
 \end_inset
 
 ，
-则：
+有
+\begin_inset Formula $P(X>s+t|X>s)=P(X>t)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+这是指数分布最著名的性质之一，
+称为“无记忆性（Memoryless Property）”，
+也是唯一具有该性质的连续型概率分布。
+
+\end_layout
+
+\begin_layout Example
+我们从条件概率的定义出发：
 
 \end_layout
 
 \begin_layout Example
 \begin_inset Formula 
 \[
-E(X)=\frac{a+b}{2}
+P(X>s+t\mid X>s)=\frac{P(X>s+t\ \text{且}\ X>s)}{P(X>s)}
 \]
 
 \end_inset
@@ -86571,35 +87713,175 @@ E(X)=\frac{a+b}{2}
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula 
-\[
-D(X)=\frac{(b-a)^{2}}{12}
-\]
+注意：
 
+\begin_inset Formula $X>s+t$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Example
-例如：
-
-\begin_inset Formula $X\sim U(0,1)$
+ ⊂ 
+\begin_inset Formula $X>s$
 \end_inset
 
 ，
-则：
+所以：
 
 \end_layout
 
 \begin_layout Example
 \begin_inset Formula 
 \[
-E(X)=\frac{0+1}{2}=0.5,\quad D(X)=\frac{(1-0)^{2}}{12}=\frac{1}{12}
+P(X>s+t\mid X>s)=\frac{P(X>s+t)}{P(X>s)}
 \]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Example
+指数分布的右尾概率：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(X>x)=1-F(x)=e^{-\lambda x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{P(X>s+t)}{P(X>s)}=\frac{e^{-\lambda(s+t)}}{e^{-\lambda s}}=e^{-\lambda t}=P(X>t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(X>s+t\mid X>s)=P(X>t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 表示下一次事件发生的时间，
+你已经等了 
+\begin_inset Formula $s$
+\end_inset
+
+ 时间还没发生，
+那么之后再等 
+\begin_inset Formula $t$
+\end_inset
+
+ 时间发生的概率跟之前等多久无关。
+ 
+\end_layout
+
+\begin_layout Example
+换句话说，
+“过去的等待不会影响未来的概率”。
+
+\end_layout
+
+\begin_layout Standard
+一般在，
+系统故障到下一次故障的时间，
+电话呼入之间的时间间隔。
+
+\end_layout
+
+\begin_layout Example
+假设某系统每小时发生一次故障（
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+），
+那么：
+
+\end_layout
+
+\begin_layout Example
+- 平均等待一次故障的时间是 
+\begin_inset Formula $1$
+\end_inset
+
+ 小时。
+
+\end_layout
+
+\begin_layout Example
+-
+\begin_inset Formula $P(X<0.5)$
+\end_inset
+
+ 是 30 分钟内发生故障的概率：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(0.5)=1-e^{-1\cdot0.5}\approx0.3935
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+与泊松分布的关系
+\end_layout
+
+\begin_layout Standard
+指数分布和泊松分布是一对经典“时间与次数”的对应关系：
+
+\end_layout
+
+\begin_layout Itemize
+泊松分布：
+单位时间内发生的次数 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+指数分布：
+下一次事件的时间间隔 
+\begin_inset Formula $t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果某事件服从泊松过程，
+那么事件之间的间隔时间就服从指数分布。
 
 \end_layout
 
