@@ -90236,6 +90236,209 @@ f(x,y)=\left\{ \begin{split}\frac{1}{\pi R^{2}},x^{2}+y^{2}\leqslant R^{2}\\
 
 \end_layout
 
+\begin_layout Example
+设二维随机变量
+\begin_inset Formula $(X,Y)$
+\end_inset
+
+具有概率密度
+\begin_inset Formula $f(x,y)=\left\{ \begin{split}c,(x,y)\in G\\
+0,\text{其\text{它}}
+\end{split}
+\right.$
+\end_inset
+
+,求常数
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+由密度的性质：
+
+\begin_inset Formula $1=\intop_{-\infty}^{+\infty}\intop_{-\infty}^{+\infty}f(x,y)dxdy=\underset{G}{\int\int}cdxdy=cS_{g}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $c=\frac{1}{S_{G}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设二维随机变量
+\begin_inset Formula $(X,Y)$
+\end_inset
+
+具有概率密度
+\begin_inset Formula $f(x,y)=\left\{ \begin{split}ce^{-(x+y)},x>0,y>0\\
+0,\text{其\text{它}}
+\end{split}
+\right.$
+\end_inset
+
+,求常数
+\begin_inset Formula $c$
+\end_inset
+
+,求联合分布函数
+\begin_inset Formula $F(x,y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+求常数
+\begin_inset Formula $c$
+\end_inset
+
+,
+ 因为 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 是概率密度函数，
+所以它在定义域上的积分必须为
+\begin_inset Formula $1$
+\end_inset
+
+：
+
+\begin_inset Formula $\iint_{\mathbb{R}^{2}}f(x,y)\,dx\,dy=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入原式：
+
+\begin_inset Formula $\int_{0}^{\infty}\int_{0}^{\infty}ce^{-(x+y)}\,dx\,dy=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将
+\begin_inset Formula $\ensuremath{c}$
+\end_inset
+
+提出来：
+
+\begin_inset Formula $c\int_{0}^{\infty}\int_{0}^{\infty}e^{-x}e^{-y}\,dx\,dy=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $c\left(\int_{0}^{\infty}e^{-x}dx\right)\left(\int_{0}^{\infty}e^{-y}dy\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $c\cdot(1)\cdot(1)=1\Rightarrow c=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+求联合分布函数
+\begin_inset Formula $F(x,y)$
+\end_inset
+
+，
+定义：
+
+\begin_inset Formula $F(x,y)=P(X\leq x,Y\leq y)=\int_{-\infty}^{x}\int_{-\infty}^{y}f(u,v)\,dv\,du$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于
+\begin_inset Formula $\ensuremath{f(u,v)=e^{-(u+v)}}$
+\end_inset
+
+仅在
+\begin_inset Formula $u>0,v>0$
+\end_inset
+
+ 时非零，
+所以积分上下限变为：
+
+\begin_inset Formula $F(x,y)=\int_{0}^{x}\int_{0}^{y}e^{-(u+v)}\,dv\,du$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+先对
+\begin_inset Formula $\ensuremath{v}$
+\end_inset
+
+积分：
+
+\begin_inset Formula $\int_{0}^{y}e^{-(u+v)}dv=e^{-u}\int_{0}^{y}e^{-v}dv=e^{-u}(1-e^{-y})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对
+\begin_inset Formula $u$
+\end_inset
+
+ 积分：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\int_{0}^{x}e^{-u}(1-e^{-y})du=(1-e^{-y})\int_{0}^{x}e^{-u}du=(1-e^{-y})(1-e^{-x})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+F(x,y)=\begin{cases}
+(1-e^{-x})(1-e^{-y}), & x>0,y>0\\
+0, & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 相互独立的随机变量
 \end_layout
