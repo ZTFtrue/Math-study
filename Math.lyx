@@ -88832,7 +88832,7 @@ p_{\cdot j}=\stackrel[i=1]{\infty}{\sum}p_{ij}=P\{X=y_{j}\},j=1,2,\cdots
 连续型随机变量
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 对于连续型随机变量 
 \begin_inset Formula $(X,Y)$
 \end_inset
@@ -88851,10 +88851,10 @@ F_{x}(x)=F(x,\infty)=\int_{-\infty}^{x}[\int_{-\infty}^{\infty}f(x,y)\text{dy}]\
 
 \end_inset
 
-
+ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
 X概率密度为 
 \begin_inset Formula 
 \[
@@ -88896,7 +88896,8 @@ f_{y}(y)=\int_{-\infty}^{\infty}f(x,y)\text{dx}
 \begin_inset Formula $Y$
 \end_inset
 
-的边缘概率密度.
+的边缘概率密度函数。
+
 \end_layout
 
 \begin_layout Example
@@ -89349,6 +89350,210 @@ P
 \begin_layout Remark*
 联合分布唯一确定边缘分布，
 反之不然
+\end_layout
+
+\begin_layout Paragraph
+二维正态分布
+\end_layout
+
+\begin_layout Standard
+（Bivariate Normal Distribution） ，
+它是概率论中多维随机变量最经典的模型之一，
+适用于两个变量之间存在线性相关性时的建模。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+设二维随机向量 
+\begin_inset Formula $\mathbf{X}=(X,Y)^{T}$
+\end_inset
+
+ 服从二维正态分布，
+记作：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(X,Y)\sim N\left(\begin{bmatrix}\mu_{X}\\
+\mu_{Y}
+\end{bmatrix},\begin{bmatrix}\sigma_{X}^{2} & \rho\sigma_{X}\sigma_{Y}\\
+\rho\sigma_{X}\sigma_{Y} & \sigma_{Y}^{2}
+\end{bmatrix}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\mu_{X},\mu_{Y}$
+\end_inset
+
+：
+均值（期望）
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\sigma_{X}^{2},\sigma_{Y}^{2}$
+\end_inset
+
+：
+方差
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\rho\in[-1,1]$
+\end_inset
+
+：
+相关系数
+\end_layout
+
+\begin_layout Standard
+二维正态分布的概率密度函数为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x,y)=\frac{1}{2\pi\sigma_{X}\sigma_{Y}\sqrt{1-\rho^{2}}}e^{-\frac{1}{2(1-\rho^{2})}\left[\left(\frac{x-\mu_{X}}{\sigma_{X}}\right)^{2}-2\rho\left(\frac{x-\mu_{X}}{\sigma_{X}}\right)\left(\frac{y-\mu_{Y}}{\sigma_{Y}}\right)+\left(\frac{y-\mu_{Y}}{\sigma_{Y}}\right)^{2}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+> 🔸 当 
+\begin_inset Formula $\rho=0$
+\end_inset
+
+ 时，
+X 与 Y 相互独立。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🎯 三、性质总结
+\end_layout
+
+\begin_layout Standard
+1.
+ **边缘分布**：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ensuremath{X\sim N(\mu_{X},\sigma_{X}^{2})}，\ensuremath{Y\sim N(\mu_{Y},\sigma_{Y}^{2})}$
+\end_inset
+
+,其边缘分布是一维正态分布。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **条件分布**：
+ 
+\end_layout
+
+\begin_layout Standard
+-
+\begin_inset Formula $Y|X=x\sim N\left(\mu_{Y}+\rho\frac{\sigma_{Y}}{\sigma_{X}}(x-\mu_{X}),(1-\rho^{2})\sigma_{Y}^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **等密度曲线是椭圆形**：
+ 
+\end_layout
+
+\begin_layout Standard
+- 曲线中心在 
+\backslash
+( (
+\backslash
+mu_X,
+ 
+\backslash
+mu_Y) 
+\backslash
+)，
+方向与协方差矩阵有关
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 📊 四、图形示例（可视化）
+\end_layout
+
+\begin_layout Standard
+二维正态分布的等高线是椭圆，
+椭圆的形状和方向反映了 
+\backslash
+( 
+\backslash
+rho 
+\backslash
+) 的值：
+
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( 
+\backslash
+rho 
+\backslash
+) 值 | 椭圆形状方向 |
+\end_layout
+
+\begin_layout Standard
+|--------------|----------------------|
+\end_layout
+
+\begin_layout Standard
+| 0 | 圆形/对称椭圆 |
+\end_layout
+
+\begin_layout Standard
+| > 0 | 向右上方向延伸 |
+\end_layout
+
+\begin_layout Standard
+| < 0 | 向右下方向延伸 |
+\end_layout
+
+\begin_layout Standard
+---
 \end_layout
 
 \begin_layout Subsection
@@ -90440,7 +90645,255 @@ F(x,y)=\begin{cases}
 \end_layout
 
 \begin_layout Subsection
-相互独立的随机变量
+随机变量的独立性
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $X$
+\end_inset
+
+ 和
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个随机变量。
+如果对任意的 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+，
+都有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X\le x,Y\le y)=P(X\le x)\cdot P(Y\le y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或者用分布函数表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{X,Y}(x,y)=F_{X}(x)\cdot F_{Y}(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么称 X 和 Y 是相互独立的 。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 💡 二、离散型情形
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $\ensuremath{X,Y}$
+\end_inset
+
+是离散型随机变量，
+如果它们的联合概率质量函数满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x_{i},Y=y_{j})=P(X=x_{i})\cdot P(Y=y_{j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对所有 
+\begin_inset Formula $x_{i},y_{j}$
+\end_inset
+
+ 成立，
+那么它们相互独立。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 💡 三、连续型情形
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $X,Y$
+\end_inset
+
+ 是连续型随机变量，
+如果它们的联合概率密度函数满足：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对所有 
+\begin_inset Formula $x,y$
+\end_inset
+
+ 成立，
+则 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 相互独立。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🔁 四、边缘分布与独立性关系
+\end_layout
+
+\begin_layout Standard
+- 若知道联合分布，
+可以通过边缘分布去验证是否独立。
+
+\end_layout
+
+\begin_layout Standard
+- 但反过来 **仅知道边缘分布，
+不能判断是否独立**。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 🎲 例子（离散）
+\end_layout
+
+\begin_layout Standard
+设随机变量 
+\backslash
+( X,
+ Y 
+\backslash
+) 的联合分布如下：
+
+\end_layout
+
+\begin_layout Standard
+| | Y = 0 | Y = 1 |
+\end_layout
+
+\begin_layout Standard
+|------|-------|-------|
+\end_layout
+
+\begin_layout Standard
+| X=0 | 0.2 | 0.3 |
+\end_layout
+
+\begin_layout Standard
+| X=1 | 0.1 | 0.4 |
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $P(X=0)=0.2+0.3=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $P(Y=0)=0.2+0.1=0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 检查 
+\begin_inset Formula $\ensuremath{P(X=0,Y=0)=0.2}$
+\end_inset
+
+是否等于 
+\begin_inset Formula $0.5\cdot0.3=0.15$
+\end_inset
+
+ ，
+不等
+\end_layout
+
+\begin_layout Standard
+所以 **X 和 Y 不独立**。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 🔍 六、与“不相关”的区别
+\end_layout
+
+\begin_layout Standard
+- **独立 ⇒ 不相关**（协方差为 0）
+\end_layout
+
+\begin_layout Standard
+- 但 **不相关 ≠ 独立**，
+只有当两个变量是正态分布时，
+协方差为 0 才意味着独立。
+
 \end_layout
 
 \begin_layout Subsection
