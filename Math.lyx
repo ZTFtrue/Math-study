@@ -82330,7 +82330,7 @@ a-e^{-\lambda x} & x>0\\
 \end_layout
 
 \begin_layout Subsection
-概率密度函数（PDF） 和 分布函数（CDF）
+概率密度函数（PDF） 和 累积分布函数（CDF）
 \end_layout
 
 \begin_layout Standard
@@ -82344,15 +82344,25 @@ a-e^{-\lambda x} & x>0\\
 \end_layout
 
 \begin_layout Standard
-对于一个连续型随机变量 $X$，
-其概率密度函数 $f(x)$ 满足：
+对于一个连续型随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+，
+其概率密度函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 满足：
 
 \end_layout
 
 \begin_layout Standard
-- $f(x) 
-\backslash
-ge 0$
+- 
+\begin_inset Formula $f(x)\ge0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -82361,23 +82371,14 @@ ge 0$
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+\int_{-\infty}^{+\infty}f(x)\,dx=1
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-int_{-
-\backslash
-infty}^{+
-\backslash
-infty} f(x)
-\backslash
-,dx = 1
-\end_layout
 
-\begin_layout Standard
-$$
 \end_layout
 
 \begin_layout Standard
@@ -82386,164 +82387,130 @@ $$
 \end_layout
 
 \begin_layout Standard
-$f(x)$ 本身不是“概率”，
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 本身不是“概率”，
 但它描述的是在某点附近概率的密度。
 
 \end_layout
 
 \begin_layout Standard
-如果我们想知道 $X$ 落在区间 $[a,
- b]$ 的概率：
+如果我们想知道 
+\begin_inset Formula $X$
+\end_inset
+
+ 落在区间 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 的概率：
 
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+P(a\le X\le b)=\int_{a}^{b}f(x)\,dx
+\]
 
-\begin_layout Standard
-P(a 
-\backslash
-le X 
-\backslash
-le b) = 
-\backslash
-int_a^b f(x)
-\backslash
-,dx
-\end_layout
+\end_inset
 
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-### 举个例子（均匀分布）：
 
 \end_layout
 
 \begin_layout Standard
-若 $X 
-\backslash
-sim 
-\backslash
-text{Uniform}(0,
- 1)$，
+举个例子（均匀分布）：
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula $X\sim\text{Uniform}(0,1)$
+\end_inset
+
+，
 则：
 
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+1, & 0\le x\le1\\
+0, & \text{otherwise}
+\end{cases}
+\]
 
-\begin_layout Standard
-f(x) =
-\end_layout
+\end_inset
 
-\begin_layout Standard
-
-\backslash
-begin{cases}
-\end_layout
-
-\begin_layout Standard
-1,
- & 0 
-\backslash
-le x 
-\backslash
-le 1 
-\backslash
-
-\backslash
 
 \end_layout
 
 \begin_layout Standard
-0,
- & 
-\backslash
-text{otherwise}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{cases}
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-## 🌟 二、分布函数（Cumulative Distribution Function,
+累积分布函数（Cumulative Distribution Function,
  CDF）
 \end_layout
 
 \begin_layout Standard
-### 定义：
+CDF 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 是指随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 小于或等于 
+\begin_inset Formula $x$
+\end_inset
+
+ 的概率：
 
 \end_layout
 
 \begin_layout Standard
-CDF $F(x)$ 是指随机变量 $X$ 小于或等于 $x$ 的概率：
+\begin_inset Formula 
+\[
+F(x)=P(X\le x)=\int_{-\infty}^{x}f(t)\,dt
+\]
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-F(x) = P(X 
-\backslash
-le x) = 
-\backslash
-int_{-
-\backslash
-infty}^{x} f(t)
-\backslash
-,dt
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-### 性质：
+性质：
 
 \end_layout
 
 \begin_layout Standard
 - 单调非减：
-$F(x_1) 
-\backslash
-le F(x_2)$ 若 $x_1 < x_2$
+
+\begin_inset Formula $F(x_{1})\le F(x_{2})$
+\end_inset
+
+ 若 
+\begin_inset Formula $x_{1}<x_{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 - 极限：
-$
-\backslash
-lim_{x 
-\backslash
-to -
-\backslash
-infty} F(x) = 0$，
-$
-\backslash
-lim_{x 
-\backslash
-to +
-\backslash
-infty} F(x) = 1$
+
+\begin_inset Formula $\underset{x\to+\infty}{\lim}F(x)=0$
+\end_inset
+
+，
+
+\begin_inset Formula $\underset{x\to+\infty}{\lim}F(x)=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -82563,7 +82530,7 @@ f(x)=\frac{dF(x)}{dx}
 \end_layout
 
 \begin_layout Standard
-### 例子（还是上面的均匀分布）：
+例子（还是上面的均匀分布）：
 
 \end_layout
 
@@ -82599,7 +82566,11 @@ x, & 0\le x\le1\\
 \end_layout
 
 \begin_layout Standard
-| 分布函数 | CDF | 小于等于 $x$ 的概率 | 
+| 分布函数 | CDF | 小于等于 
+\begin_inset Formula $x$
+\end_inset
+
+ 的概率 | 
 \begin_inset Formula $F(x)=\int_{-\infty}^{x}f(t)dt$
 \end_inset
 
