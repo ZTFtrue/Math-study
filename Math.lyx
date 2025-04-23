@@ -83648,6 +83648,13 @@ Var(X)=\frac{(b-a)^{2}}{12}
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 
 \series bold
@@ -84349,6 +84356,13 @@ P(X=k)=(1-p)^{k-1}p
  ,
  记为 
 \begin_inset Formula $X\sim\pi(\lambda)$
+\end_inset
+
+或记为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle X\sim\text{Poisson}(\lambda)}$
 \end_inset
 
 .
@@ -91858,6 +91872,382 @@ f_{X}*f_{Y}=\int_{-\infty}^{\infty}f_{X}(z-y)f_{Y}(y)dy=\int_{-\infty}^{\infty}f
 
 \begin_layout Standard
 概率
+\end_layout
+
+\begin_layout Example
+联合分布与独立性 求推导出 
+\begin_inset Formula $\ensuremath{X+Y}$
+\end_inset
+
+的概率分布。
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $X\in\{0,1,3\}$
+\end_inset
+
+，
+其概率为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=0)=\frac{1}{2},\quad P(X=1)=\frac{3}{8},\quad P(X=3)=\frac{1}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $Y\in\{0,1\}$
+\end_inset
+
+，
+其概率为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(Y=0)=\frac{1}{3},\quad P(Y=1)=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-
+\begin_inset Formula $X$
+\end_inset
+
+ 与
+\begin_inset Formula $Y$
+\end_inset
+
+ 相互独立 
+\end_layout
+
+\begin_layout Standard
+利用独立性，
+求联合概率：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x,Y=y)=P(X=x)\cdot P(Y=y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+枚举所有 
+\begin_inset Formula $\ensuremath{(X,Y)}$
+\end_inset
+
+情况，
+列出对应的 
+\backslash
+( X + Y 
+\backslash
+)，
+然后将概率累加到相应的值上。
+
+\end_layout
+
+\begin_layout Standard
+|
+\begin_inset Formula $X$
+\end_inset
+
+ | 
+\begin_inset Formula $Y$
+\end_inset
+
+ | 
+\begin_inset Formula $X+Y$
+\end_inset
+
+ | 概率
+\begin_inset Formula $P(X)P(Y)$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+|--------|--------|-------------|---------------------|
+\end_layout
+
+\begin_layout Standard
+| 0 | 0 | 0 |
+\begin_inset Formula $\ensuremath{\frac{1}{2}\cdot\frac{1}{3}=\frac{1}{6}}$
+\end_inset
+
+|
+\end_layout
+
+\begin_layout Standard
+| 0 | 1 | 1 | 
+\begin_inset Formula $\frac{1}{2}\cdot\frac{2}{3}=\frac{1}{3}$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 1 | 0 | 1 | 
+\begin_inset Formula $\ensuremath{\frac{3}{8}\cdot\frac{1}{3}=\frac{1}{8}}$
+\end_inset
+
+|
+\end_layout
+
+\begin_layout Standard
+| 1 | 1 | 2 |
+\begin_inset Formula $\ensuremath{\frac{3}{8}\cdot\frac{2}{3}=\frac{1}{4}}$
+\end_inset
+
+|
+\end_layout
+
+\begin_layout Standard
+| 3 | 0 | 3 | 
+\begin_inset Formula $\frac{1}{8}\cdot\frac{1}{3}=\frac{1}{24}$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 3 | 1 | 4 | 
+\begin_inset Formula $\ensuremath{\frac{1}{8}\cdot\frac{2}{3}=\frac{1}{12}}$
+\end_inset
+
+|
+\end_layout
+
+\begin_layout Standard
+-- -
+\end_layout
+
+\begin_layout Standard
+汇总 
+\backslash
+( X + Y 
+\backslash
+) 的概率分布：
+
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( X + Y 
+\backslash
+) | 0 | 1 | 2 | 3 | 4 |
+\end_layout
+
+\begin_layout Standard
+|------------|------|-------|------|-------|-------|
+\end_layout
+
+\begin_layout Standard
+| P | 1/6 | 11/24 | 1/4 | 1/24 | 1/12 |
+\end_layout
+
+\begin_layout Standard
+这些概率加起来为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{6}+\frac{11}{24}+\frac{1}{4}+\frac{1}{24}+\frac{1}{12}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+概率分布与再生性（可加性）总结
+\end_layout
+
+\begin_layout Standard
+一、边际分布与联合分布
+\end_layout
+
+\begin_layout Standard
+- 边际分布（Marginal Distribution）：
+一个多维随机变量的每个分量的单独分布。
+
+\end_layout
+
+\begin_layout Standard
+- 联合分布（Joint Distribution）：
+多个随机变量的联合行为。
+若
+\begin_inset Formula $X$
+\end_inset
+
+ 与 
+\begin_inset Formula $\ensuremath{Y}$
+\end_inset
+
+相互独立，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x,Y=y)=P(X=x)\cdot P(Y=y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 求和分布：
+若 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 独立，
+则它们的和 
+\begin_inset Formula $Z=X+Y$
+\end_inset
+
+ 的概率为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+典型离散分布的加法性质（再生性）
+\end_layout
+
+\begin_layout Standard
+| 分布类型 | 再生性描述 |
+\end_layout
+
+\begin_layout Standard
+|----------------|------------------------------------------------------------------------------|
+\end_layout
+
+\begin_layout Standard
+| 伯努利分布 | 
+\begin_inset Formula $X_{i}\sim B(1,p)\Rightarrow\sum X_{i}\sim B(n,p)$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 二项分布 | 若 
+\begin_inset Formula $X_{1}\sim B(n_{1},p),X_{2}\sim B(n_{2},p)$
+\end_inset
+
+，
+独立 ⇒ 
+\begin_inset Formula $X_{1}+X_{2}\sim B(n_{1}+n_{2},p)$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+| 泊松分布 | 
+\begin_inset Formula $X_{1}\sim P(\lambda_{1}),X_{2}\sim P(\lambda_{2})\Rightarrow X_{1}+X_{2}\sim P(\lambda_{1}+\lambda_{2})$
+\end_inset
+
+ |
+\end_layout
+
+\begin_layout Standard
+这就是泊松分布的“再生性”，
+也叫“封闭性”。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **伯努利分布加法：
+**
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\ensuremath{X_{1},X_{2}\sim\text{Bernoulli}(p)}⇒\ensuremath{X_{1}+X_{2}\sim\text{Binomial}(2,p)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **多伯努利变量之和：
+**
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\ensuremath{X_{1},...,X_{n}\sim\text{Bernoulli}(p)}⇒\ensuremath{\sum X_{i}\sim\text{Binomial}(n,p)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **泊松分布的再生性：
+**
+\end_layout
+
+\begin_layout Standard
+- 
+\begin_inset Formula $\ensuremath{X_{1}\sim P(\lambda_{1}),X_{2}\sim P(\lambda_{2})}⇒\ensuremath{X_{1}+X_{2}\sim P(\lambda_{1}+\lambda_{2})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
 \end_layout
 
 \begin_layout Section
