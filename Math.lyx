@@ -92741,6 +92741,168 @@ E(X^{k}),k=1,2,...
 大数定律及中心极限定理
 \end_layout
 
+\begin_layout Standard
+频率的稳定性：
+ 在大量重复试验中，
+事件 A 发生的频率 
+\begin_inset Formula $\frac{m_{n}}{n}$
+\end_inset
+
+ (其中 
+\begin_inset Formula $m_{n}$
+\end_inset
+
+ 是事件 A 在 
+\begin_inset Formula $n$
+\end_inset
+
+ 次试验中发生的次数) 在 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ 内的某个数值 
+\begin_inset Formula $p$
+\end_inset
+
+ 附近波动，
+并且试验次数 
+\begin_inset Formula $n$
+\end_inset
+
+ 越大，
+波动的幅度越小。
+这个频率的稳定值 
+\begin_inset Formula $p$
+\end_inset
+
+ 就叫做概率。
+
+\end_layout
+
+\begin_layout Definition
+这里频率的稳定性并非指 
+\begin_inset Formula $\lim_{n\to\infty}\frac{m_{n}}{n}=P(A)=p$
+\end_inset
+
+，
+而是随着 
+\begin_inset Formula $n$
+\end_inset
+
+ 的不断增加，
+频率 
+\begin_inset Formula $\frac{m_{n}}{n}$
+\end_inset
+
+ 趋向于概率 
+\begin_inset Formula $p$
+\end_inset
+
+ 几乎是必然的，
+或者说频率远离概率 
+\begin_inset Formula $p$
+\end_inset
+
+ 几乎是不可能的。
+这可以用以下的极限概率表示：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}P(|\frac{m_{n}}{n}-p|<\varepsilon)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+这个公式表达的是，
+当试验次数 
+\begin_inset Formula $n$
+\end_inset
+
+ 趋于无穷大时，
+频率 
+\begin_inset Formula $\frac{m_{n}}{n}$
+\end_inset
+
+ 与概率 $p$ 的偏差小于任意小的正数 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ 的概率趋近于 1。
+这正是大数定律的一种形式，
+通常被称为伯努利大数定律。
+
+\end_layout
+
+\begin_layout Example
+一般平均结果也具有稳定性：
+
+\end_layout
+
+\begin_layout Example
+测量长度为 
+\begin_inset Formula $a$
+\end_inset
+
+ 的木棒，
+在测量中，
+由于各种因素的影响，
+测量结果是个随机变量。
+做 
+\begin_inset Formula $n$
+\end_inset
+
+ 次测量，
+其算术平均值 
+\begin_inset Formula $\bar{x}_{n}=\frac{1}{n}\sum_{i=1}^{n}x_{i}$
+\end_inset
+
+ 一般不等于 
+\begin_inset Formula $a$
+\end_inset
+
+，
+但当 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ 时，
+算术平均值几乎就是 
+\begin_inset Formula $a$
+\end_inset
+
+。
+这可以用以下的极限概率表示：
+
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}P(|\bar{x}_{n}-a|<\varepsilon)=1\iff\lim_{n\to\infty}P(|\frac{1}{n}\sum_{i=1}^{n}x_{i}-a|<\varepsilon)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个例子说明了样本均值的稳定性。
+当测量次数足够多时，
+样本均值会非常接近真实值
+\begin_inset Formula $a$
+\end_inset
+
+。
+这体现了辛钦大数定律的思想，
+即独立同分布且具有有限均值的随机变量序列的样本均值依概率收敛于其期望值。
+
+\end_layout
+
 \begin_layout Subsection
 大数定律
 \end_layout
