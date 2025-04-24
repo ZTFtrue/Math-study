@@ -81026,14 +81026,6 @@ P(A)=\lim_{n\to\infty}f_{n}(A)
 \end_layout
 
 \begin_layout Subsection
-大数定律
-\end_layout
-
-\begin_layout Standard
-参考:https://zh.m.wikipedia.org/wiki/%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B
-\end_layout
-
-\begin_layout Subsection
 现代概率论 
 \end_layout
 
@@ -92262,15 +92254,19 @@ P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
 数学期望
 \end_layout
 
-\begin_layout Remark
-设离散型随机变量
+\begin_layout Definition
+设
+\series bold
+离散型
+\series default
+随机变量
 \begin_inset Formula $X$
 \end_inset
 
-的分布律为 
+的分布律为
 \end_layout
 
-\begin_layout Remark
+\begin_layout Definition
 \begin_inset Formula 
 \[
 P{X=x_{k}}=p_{k},k=l,2,...
@@ -92281,7 +92277,7 @@ P{X=x_{k}}=p_{k},k=l,2,...
 
 \end_layout
 
-\begin_layout Remark
+\begin_layout Definition
 若级数 
 \begin_inset Formula 
 \[
@@ -92312,7 +92308,28 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 
 \end_inset
 
- 设连续型随机变量
+如果级数不收敛，
+则称随机变量
+\begin_inset Formula $X$
+\end_inset
+
+的数学期望不存在。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设
+\series bold
+连续型
+\series default
+随机变量
 \begin_inset Formula $X$
 \end_inset
 
@@ -92367,6 +92384,494 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_inset
 
 是这一分布的数学期望．
+\end_layout
+
+\begin_layout Standard
+以下是图中两道**例题的识别与整理**，
+包括题干、概率分布表与计算过程：
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### ✅ 例 1
+\end_layout
+
+\begin_layout Standard
+**题目**：
+ 
+\end_layout
+
+\begin_layout Standard
+掷一枚骰子，
+
+\backslash
+( X 
+\backslash
+) 表示出现的点数，
+求 
+\backslash
+( 
+\backslash
+mathbb{E}[X] 
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Standard
+**分布表**：
+
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( X 
+\backslash
+) | 1 | 2 | 3 | 4 | 5 | 6 |
+\end_layout
+
+\begin_layout Standard
+|--------|-----|-----|-----|-----|-----|-----|
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( P 
+\backslash
+) | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 |
+\end_layout
+
+\begin_layout Standard
+**计算过程**：
+ 
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+mathbb{E}[X] = 1 
+\backslash
+times 
+\backslash
+frac{1}{6} + 2 
+\backslash
+times 
+\backslash
+frac{1}{6} + 3 
+\backslash
+times 
+\backslash
+frac{1}{6} + 4 
+\backslash
+times 
+\backslash
+frac{1}{6} + 5 
+\backslash
+times 
+\backslash
+frac{1}{6} + 6 
+\backslash
+times 
+\backslash
+frac{1}{6} = 3.5
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### ✅ 例 2
+\end_layout
+
+\begin_layout Standard
+**题目**：
+ 
+\end_layout
+
+\begin_layout Standard
+一批产品中有一等、二等、三等、四等品、废品 5 种，
+ 
+\end_layout
+
+\begin_layout Standard
+对应的概率分别为：
+ 
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( P = 0.7,
+\backslash
+ 0.1,
+\backslash
+ 0.1,
+\backslash
+ 0.06,
+\backslash
+ 0.04 
+\backslash
+) 
+\end_layout
+
+\begin_layout Standard
+其产值分别为：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( X = 6,
+\backslash
+ 5.4,
+\backslash
+ 5,
+\backslash
+ 4,
+\backslash
+ 0 
+\backslash
+)（单位：
+元）
+\end_layout
+
+\begin_layout Standard
+**目标**：
+求产品的**平均产值**。
+
+\end_layout
+
+\begin_layout Standard
+**分布表**：
+
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( X 
+\backslash
+) | 6 | 5.4 | 5 | 4 | 0 |
+\end_layout
+
+\begin_layout Standard
+|----------|-----|-----|-----|-----|-----|
+\end_layout
+
+\begin_layout Standard
+| 
+\backslash
+( P 
+\backslash
+) | 0.7 | 0.1 | 0.1 | 0.06| 0.04|
+\end_layout
+
+\begin_layout Standard
+**计算过程**：
+ 
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+mathbb{E}[X] = 6 
+\backslash
+times 0.7 + 5.4 
+\backslash
+times 0.1 + 5 
+\backslash
+times 0.1 + 4 
+\backslash
+times 0.06 + 0 
+\backslash
+times 0.04 = 5.48
+\backslash
+ 
+\backslash
+text{(元)}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## ✅ 例题：
+均匀分布期望计算
+\end_layout
+
+\begin_layout Standard
+### 🧮 题目 
+\end_layout
+
+\begin_layout Standard
+计算在区间 
+\backslash
+([a,
+ b]
+\backslash
+) 上**服从均匀分布**的随机变量 
+\backslash
+( X 
+\backslash
+) 的**数学期望** 
+\backslash
+( 
+\backslash
+mathbb{E}[X] 
+\backslash
+)。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 📌 解题过程
+\end_layout
+
+\begin_layout Standard
+**概率密度函数（PDF）**为：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+f(x) = 
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+frac{1}{b - a},
+ & a 
+\backslash
+le x 
+\backslash
+le b 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+0,
+ & 
+\backslash
+text{otherwise}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+end{cases}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 📐 数学期望计算：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+mathbb{E}[X] = 
+\backslash
+int_{-
+\backslash
+infty}^{+
+\backslash
+infty} x f(x)
+\backslash
+,
+ dx = 
+\backslash
+int_a^b 
+\backslash
+frac{x}{b - a} 
+\backslash
+,
+ dx
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+提取常数项：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+= 
+\backslash
+frac{1}{b - a} 
+\backslash
+int_a^b x
+\backslash
+,
+ dx = 
+\backslash
+frac{1}{b - a} 
+\backslash
+cdot 
+\backslash
+left[ 
+\backslash
+frac{1}{2}x^2 
+\backslash
+right]_a^b
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+计算定积分部分：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+= 
+\backslash
+frac{1}{b - a} 
+\backslash
+cdot 
+\backslash
+frac{1}{2}(b^2 - a^2) = 
+\backslash
+frac{a + b}{2}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 📌 结论总结
+\end_layout
+
+\begin_layout Standard
+对于服从区间 
+\backslash
+([a,
+ b]
+\backslash
+) 上**均匀分布**的随机变量 
+\backslash
+( X 
+\backslash
+)，
+其数学期望为：
+
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+[
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+boxed{
+\backslash
+mathbb{E}[X] = 
+\backslash
+frac{a + b}{2}}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+]
 \end_layout
 
 \begin_layout Subsection
