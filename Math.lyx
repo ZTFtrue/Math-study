@@ -83355,6 +83355,15 @@ P
 \end_layout
 
 \begin_layout Standard
+方差：
+
+\begin_inset Formula $D(X)=p(1-p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 F(x)=\begin{cases}
@@ -83374,21 +83383,7 @@ F(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-“均匀分布”是概率论和统计学中的一个基本概念。
-它指的是在某个范围内，
-每个可能的结果出现的概率都相等。
-根据变量的类型，
-均匀分布分为两种类型：
-
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 🌟 1.
- 离散均匀分布（Discrete Uniform Distribution）
+离散均匀分布（Discrete Uniform Distribution）
 \end_layout
 
 \begin_layout Standard
@@ -83397,7 +83392,6 @@ F(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-**例子**：
 掷一个公平的骰子，
 结果是 {1,
  2,
@@ -83421,21 +83415,14 @@ frac{1}{6}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+P(X=x)=\frac{1}{n}
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-P(X = x) = 
-\backslash
-frac{1}{n}
-\end_layout
 
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -84454,6 +84441,10 @@ P(X=k)=(1-p)^{k-1}p
 \begin_layout Standard
 期望和方差都是
 \begin_inset Formula $\lambda$
+\end_inset
+
+,
+\begin_inset Formula $EX=DX=\lambda$
 \end_inset
 
 
@@ -92457,45 +92448,14 @@ mathbb{E}[X]
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[X]=1\times\frac{1}{6}+2\times\frac{1}{6}+3\times\frac{1}{6}+4\times\frac{1}{6}+5\times\frac{1}{6}+6\times\frac{1}{6}=3.5
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
 
-\backslash
-mathbb{E}[X] = 1 
-\backslash
-times 
-\backslash
-frac{1}{6} + 2 
-\backslash
-times 
-\backslash
-frac{1}{6} + 3 
-\backslash
-times 
-\backslash
-frac{1}{6} + 4 
-\backslash
-times 
-\backslash
-frac{1}{6} + 5 
-\backslash
-times 
-\backslash
-frac{1}{6} + 6 
-\backslash
-times 
-\backslash
-frac{1}{6} = 3.5
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -92631,202 +92591,347 @@ text{(元)}
 ---
 \end_layout
 
-\begin_layout Standard
-## ✅ 例题：
+\begin_layout Example
 均匀分布期望计算
 \end_layout
 
-\begin_layout Standard
-### 🧮 题目 
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 计算在区间 
-\backslash
-([a,
- b]
-\backslash
-) 上**服从均匀分布**的随机变量 
-\backslash
-( X 
-\backslash
-) 的**数学期望** 
-\backslash
-( 
-\backslash
-mathbb{E}[X] 
-\backslash
-)。
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上服从均匀分布 的随机变量
+\begin_inset Formula $X$
+\end_inset
+
+ 的数学期望
+\begin_inset Formula $\mathbb{E}[X]$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 📌 解题过程
-\end_layout
-
-\begin_layout Standard
-**概率密度函数（PDF）**为：
+\begin_layout Solution
+概率密度函数（PDF）为：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Solution
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+\frac{1}{b-a}, & a\le x\le b\\
+0, & \text{otherwise}
+\end{cases}
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
-f(x) = 
-\backslash
-begin{cases}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-frac{1}{b - a},
- & a 
-\backslash
-le x 
-\backslash
-le b 
-\backslash
-
-\backslash
 
 \end_layout
 
-\begin_layout Standard
-0,
- & 
-\backslash
-text{otherwise}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{cases}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 📐 数学期望计算：
+\begin_layout Solution
+数学期望计算：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\mathbb{E}[X]=\int_{-\infty}^{+\infty}xf(x)\,dx=\int_{a}^{b}\frac{x}{b-a}\,dx
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-mathbb{E}[X] = 
-\backslash
-int_{-
-\backslash
-infty}^{+
-\backslash
-infty} x f(x)
-\backslash
-,
- dx = 
-\backslash
-int_a^b 
-\backslash
-frac{x}{b - a} 
-\backslash
-,
- dx
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
+\begin_layout Solution
 提取常数项：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=\frac{1}{b-a}\int_{a}^{b}x\,dx=\frac{1}{b-a}\cdot\left[\frac{1}{2}x^{2}\right]_{a}^{b}
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-= 
-\backslash
-frac{1}{b - a} 
-\backslash
-int_a^b x
-\backslash
-,
- dx = 
-\backslash
-frac{1}{b - a} 
-\backslash
-cdot 
-\backslash
-left[ 
-\backslash
-frac{1}{2}x^2 
-\backslash
-right]_a^b
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
+\begin_layout Solution
 计算定积分部分：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=\frac{1}{b-a}\cdot\frac{1}{2}(b^{2}-a^{2})=\frac{a+b}{2}
+\]
 
-\backslash
-[
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+对于服从区间
+\begin_inset Formula $\ensuremath{[a,b]}$
+\end_inset
+
+上均匀分布的随机变量
+\begin_inset Formula $X$
+\end_inset
+
+，
+其数学期望为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\boxed{\mathbb{E}[X]=\frac{a+b}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+随机变量函数的数学期望
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $\ensuremath{X}$
+\end_inset
+
+是一个随机变量，
+
+\begin_inset Formula $\ensuremath{g(X)}$
+\end_inset
+
+是关于
+\begin_inset Formula $X$
+\end_inset
+
+ 的连续函数。
+
+\end_layout
+
+\begin_layout Definition
+则
+\begin_inset Formula $\ensuremath{g(X)}$
+\end_inset
+
+的数学期望记作：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X)]
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-= 
-\backslash
-frac{1}{b - a} 
-\backslash
-cdot 
-\backslash
-frac{1}{2}(b^2 - a^2) = 
-\backslash
-frac{a + b}{2}
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+设
+\begin_inset Formula $X$
+\end_inset
+
+ 是
+\series bold
+离散型随机变量
+\series default
+，
+可能取值为 
+\begin_inset Formula $x_{1},x_{2},\dots$
+\end_inset
+
+，
+概率为
+\begin_inset Formula $P(X=x_{i})=p_{i}$
+\end_inset
+
+，
+且
+\begin_inset Formula $\stackrel[i=1]{\infty}{\sum}g(x_{i})\cdot p_{i}$
+\end_inset
+
+绝对收敛，
+则：
+
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X)]=\stackrel[i=1]{\infty}{\sum}g(x_{i})\cdot p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+特别地：
+
+\begin_inset Formula $\mathbb{E}[X]=\stackrel[i=1]{\infty}{\varSigma}x_{i}p_{i}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
 
-\backslash
-]
+
+\end_layout
+
+\begin_layout Definition
+若 
+\begin_inset Formula $X$
+\end_inset
+
+ 是连续型随机变量，
+概率密度函数为 
+\begin_inset Formula $f(x)$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X)]=\int_{-\infty}^{\infty}g(x)\cdot f(x)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+特别地：
+
+\begin_inset Formula $\mathbb{E}[X]=\int_{-\infty}^{\infty}x\cdot f(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+性质
+\end_layout
+
+\begin_layout Itemize
+线性性 ：
+
+\begin_inset Formula $\mathbb{E}[aX+b]=a\mathbb{E}[X]+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+期望的可加性（无论是否独立） ：
+
+\begin_inset Formula $\mathbb{E}[X+Y]=\mathbb{E}[X]+\mathbb{E}[Y]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+独立时的乘法性 ：
+
+\begin_inset Formula 
+\[
+\text{若 }X\perp Y,\quad\mathbb{E}[XY]=\mathbb{E}[X]\cdot\mathbb{E}[Y]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常用技巧
+\end_layout
+
+\begin_layout Itemize
+求
+\begin_inset Formula $\ensuremath{g(X)}$
+\end_inset
+
+的期望时，
+先搞清楚 
+\begin_inset Formula $\ensuremath{g(x)}$
+\end_inset
+
+，
+比如平方、指数、对数、绝对值等。
+
+\end_layout
+
+\begin_layout Itemize
+如果题目给的是联合密度，
+可以通过二维积分求：
+
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X,Y)]=\iint g(x,y)\cdot f_{X,Y}(x,y)\,dx\,dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $X\sim U(0,1)$
+\end_inset
+
+，
+求
+\begin_inset Formula $\mathbb{E}[X^{2}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $\mathbb{E}[X^{2}]=\int_{0}^{1}x^{2}\cdot1\,dx=\left[\frac{x^{3}}{3}\right]_{0}^{1}=\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+以下是你上传图像中两个例题的详细识别与整理总结：
+
 \end_layout
 
 \begin_layout Standard
@@ -92834,44 +92939,881 @@ frac{a + b}{2}
 \end_layout
 
 \begin_layout Standard
-### 📌 结论总结
+## ✅ 例题 1：
+离散型随机变量的期望计算
 \end_layout
 
 \begin_layout Standard
-对于服从区间 
+### 🧾 题目 
+\end_layout
+
+\begin_layout Standard
+设随机变量 
 \backslash
-([a,
- b]
+(X
 \backslash
-) 上**均匀分布**的随机变量 
+) 的分布列为：
+
+\end_layout
+
+\begin_layout Standard
+| X | -1 | 0 | 2 | 3 |
+\end_layout
+
+\begin_layout Standard
+|-----|-----|-----|-----|-----|
+\end_layout
+
+\begin_layout Standard
+| P | 1/8 | 1/4 | 3/8 | 1/4 |
+\end_layout
+
+\begin_layout Standard
+求：
+
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( 
+\backslash
+mathbb{E}[X^2] 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+- 
+\backslash
+( 
+\backslash
+mathbb{E}[2X - 1] 
+\backslash
+)
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### ✅ 解：
+
+\end_layout
+
+\begin_layout Standard
+#### 1.
+ 计算 
+\backslash
+( 
+\backslash
+mathbb{E}[X^2] 
+\backslash
+)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[X^{2}]=(-1)^{2}\cdot\frac{1}{8}+0^{2}\cdot\frac{1}{4}+2^{2}\cdot\frac{3}{8}+3^{2}\cdot\frac{1}{4}=\frac{1}{8}+0+\frac{12}{8}+\frac{9}{4}=\frac{31}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+#### 2.
+ 计算 
+\backslash
+( 
+\backslash
+mathbb{E}[2X - 1] 
+\backslash
+)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[2X-1]=\sum(2x-1)\cdot P(x)=(-3)\cdot\frac{1}{8}+(-1)\cdot\frac{1}{4}+3\cdot\frac{3}{8}+5\cdot\frac{1}{4}=\frac{-3}{8}-\frac{1}{4}+\frac{9}{8}+\frac{5}{4}=\frac{7}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## ✅ 例题 2：
+连续型均匀分布的期望计算（含函数变换）
+\end_layout
+
+\begin_layout Standard
+### 🧾 题目 
+\end_layout
+
+\begin_layout Standard
+设 
 \backslash
 ( X 
 \backslash
+sim f(x) 
+\backslash
 )，
-其数学期望为：
+其概率密度函数为：
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+\frac{1}{2}, & 0\le x\le2\\
+0, & \text{else}
+\end{cases}
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+设 
+\begin_inset Formula $Y=4X+1$
+\end_inset
 
-\backslash
-boxed{
-\backslash
-mathbb{E}[X] = 
-\backslash
-frac{a + b}{2}}
+，
+求
+\begin_inset Formula $\mathbb{E}[Y]$
+\end_inset
+
+。
+
 \end_layout
 
 \begin_layout Standard
+---
+\end_layout
 
-\backslash
-]
+\begin_layout Standard
+### ✅ 解：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[Y]=\mathbb{E}[4X+1]=\int_{-\infty}^{\infty}(4x+1)f(x)dx=\int_{0}^{2}\frac{1}{2}(4x+1)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+积分计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{2}\int_{0}^{2}(4x+1)dx=\frac{1}{2}\left[2x^{2}+x\right]_{0}^{2}=\frac{1}{2}(8+2)=5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 离散型变量期望用加权和计算。
+
+\end_layout
+
+\begin_layout Standard
+- 连续型变量期望通过积分。
+
+\end_layout
+
+\begin_layout Standard
+- 线性变换 
+\begin_inset Formula $\ensuremath{Y=aX+b}$
+\end_inset
+
+的期望为 
+\begin_inset Formula $\mathbb{E}[Y]=a\mathbb{E}[X]+b$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+二维随机变量的数学期望
+\end_layout
+
+\begin_layout Standard
+设二维随机变量 
+\begin_inset Formula $(X,Y)$
+\end_inset
+
+，
+其联合分布为：
+
+\end_layout
+
+\begin_layout Standard
+离散型：
+联合概率质量函数 
+\begin_inset Formula $P(X=x_{i},Y=y_{j})=p_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+连续型：
+联合概率密度函数 
+\begin_inset Formula $f_{X,Y}(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+单变量的期望（边缘分布求）
+\end_layout
+
+\begin_layout Definition
+- 
+\begin_inset Formula $\mathbb{E}[X]=\sum_{i}x_{i}\cdot P(X=x_{i})\quad\text{或}\quad\int x\cdot f_{X}(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+- 
+\begin_inset Formula $\mathbb{E}[Y]=\sum_{j}y_{j}\cdot P(Y=y_{j})\quad\text{或}\quad\int y\cdot f_{Y}(y)\,dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+函数期望
+\begin_inset Formula $\ensuremath{\mathbb{E}[g(X,Y)]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+离散型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X,Y)]=\sum_{i}\sum_{j}g(x_{i},y_{j})\cdot p_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+连续型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[g(X,Y)]=\iint_{-\infty}^{\infty}g(x,y)\cdot f_{X,Y}(x,y)\,dx\,dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+## 🎯 三、特别常用的例子
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 协方差（Covariance）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathrm{Cov}(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=\mathbb{E}[XY]-\mathbb{E}[X]\cdot\mathbb{E}[Y]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 相关系数（Correlation Coefficient）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho_{X,Y}=\frac{\mathrm{Cov}(X,Y)}{\sqrt{D(X)}\cdot\sqrt{D(Y)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Example
+已知：
+ 随机变量 (X,
+ Y) 的联合概率分布如表格所示。
+
+\end_layout
+
+\begin_layout Standard
+| X | Y | 1 | 2 | 3 |
+\end_layout
+
+\begin_layout Standard
+|---|---|------|------|------|
+\end_layout
+
+\begin_layout Standard
+| 1 | | 0.1 | 0.2 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 2 | | 0.3 | 0.15 | 0.25 |
+\end_layout
+
+\begin_layout Standard
+* **求：
+** 
+\begin_inset Formula $E(X+Y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $E(XY)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解答中给出了 $E(X+Y)$ 的计算过程：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(X+Y)=(1+1)\times0.1+(1+2)\times0.2+(1+3)\times0+(2+1)\times0.3+(2+2)\times0.15+(2+3)\times0.25=3.55$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+已知：
+ 随机变量 (X,
+ Y) 的联合概率密度函数为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x,y)=\begin{cases}
+x+y & 0\le x\le1,0\le y\le1\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+求：
+ 
+\begin_inset Formula $E(XY)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E(XY)=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf(x,y)dxdy=\int_{0}^{1}dx\int_{0}^{1}(x+y)\cdot xydy=\frac{1}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+希望这些信息对您有帮助！
+如果您对这两个例题中的任何一个有更具体的问题，
+欢迎随时提出。
+
+\end_layout
+
+\begin_layout Example
+设 
+\begin_inset Formula $(X,Y)$
+\end_inset
+
+ 的联合密度函数为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f(x,y)=\begin{cases}
+4xy, & 0<x<1,\ 0<y<1\\
+0, & \text{其它}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $\mathbb{E}[X],\mathbb{E}[Y],\mathbb{E}[XY]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\mathbb{E}[X]=\iint x\cdot4xy\,dxdy=4\int_{0}^{1}\int_{0}^{1}x^{2}y\,dxdy=4\cdot\frac{1}{3}\cdot\frac{1}{2}=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\mathbb{E}[Y]=\iint y\cdot4xy\,dxdy=4\int_{0}^{1}\int_{0}^{1}xy^{2}\,dxdy=4\cdot\frac{1}{2}\cdot\frac{1}{3}=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\mathbb{E}[XY]=\iint xy\cdot4xy\,dxdy=4\int_{0}^{1}\int_{0}^{1}x^{2}y^{2}\,dxdy=4\cdot\frac{1}{3}\cdot\frac{1}{3}=\frac{4}{9}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+期望性质
+\end_layout
+
+\begin_layout Standard
+基本性质：
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ 常数的期望等于常数本身：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $c$
+\end_inset
+
+ 是一个常数，
+那么 
+\begin_inset Formula $E(c)=c$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+ 一个固定的数值的平均值当然还是它本身。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 常数倍随机变量的期望等于常数乘以随机变量的期望：
+ 
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $c$
+\end_inset
+
+ 是一个常数，
+
+\begin_inset Formula $X$
+\end_inset
+
+ 是一个随机变量，
+那么
+\begin_inset Formula $E(cX)=cE(X)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+ 将随机变量的所有可能取值都放大
+\begin_inset Formula $c$
+\end_inset
+
+ 倍后，
+其平均值也会相应地放大 
+\begin_inset Formula $c$
+\end_inset
+
+ 倍。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 和的期望等于期望的和（线性性质）：
+ 
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个随机变量，
+那么 
+\begin_inset Formula $E(X+Y)=E(X)+E(Y)$
+\end_inset
+
+。
+这个性质可以推广到多个随机变量的情况，
+
+\begin_inset Formula $E(\sum_{i=1}^{n}X_{i})=\sum_{i=1}^{n}E(X_{i})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+ 多个随机变量之和的平均值等于它们各自平均值的和。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 差的期望等于期望的差（线性性质）：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个随机变量，
+那么 
+\begin_inset Formula $E(X-Y)=E(X)-E(Y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+ 两个随机变量之差的平均值等于它们各自平均值的差。
+
+\end_layout
+
+\begin_layout Standard
+重要性质：
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 独立随机变量乘积的期望等于期望的乘积：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是相互独立的随机变量，
+那么 
+\begin_inset Formula $E(XY)=E(X)E(Y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+注意：
+ 这个性质只有在 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 相互独立时才成立。
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 不独立，
+这个等式通常不成立。
+
+\end_layout
+
+\begin_layout Standard
+6.
+ 非负随机变量的期望非负：
+
+\end_layout
+
+\begin_layout Standard
+如果随机变量 
+\begin_inset Formula $X\ge0$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $E(X)\ge0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+如果一个随机变量的所有可能取值都是非负的，
+那么它的平均值也必然是非负的。
+
+\end_layout
+
+\begin_layout Standard
+7.
+ 如果 
+\begin_inset Formula $X\le Y$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $E(X)\le E(Y)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+如果一个随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 的所有可能取值都小于等于另一个随机变量 
+\begin_inset Formula $Y$
+\end_inset
+
+ 的对应取值，
+那么 
+\begin_inset Formula $X$
+\end_inset
+
+ 的期望也小于等于 
+\begin_inset Formula $Y$
+\end_inset
+
+ 的期望。
+
+\end_layout
+
+\begin_layout Standard
+理解：
+ 平均值会受到数值大小的影响。
+
+\end_layout
+
+\begin_layout Standard
+其他常用性质（不等式）：
+ 
+\end_layout
+
+\begin_layout Standard
+詹森不等式 (Jensen's Inequality)：
+ 对于一个凸函数
+\begin_inset Formula $\phi$
+\end_inset
+
+，
+有
+\begin_inset Formula $\phi(E(X))\le E(\phi(X))$
+\end_inset
+
+。
+对于一个凹函数 
+\begin_inset Formula $\psi$
+\end_inset
+
+，
+有
+\begin_inset Formula $\psi(E(X))\ge E(\psi(X))$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+马尔可夫不等式 (Markov's Inequality)：
+ 对于一个非负随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+ 和任意
+\begin_inset Formula $a>0$
+\end_inset
+
+，
+有 
+\begin_inset Formula $P(X\ge a)\le\frac{E(X)}{a}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+切比雪夫不等式 (Chebyshev's Inequality)：
+ 对于任意随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+（具有有限均值 
+\begin_inset Formula $\mu$
+\end_inset
+
+ 和有限方差 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+）和任意 
+\begin_inset Formula $k>0$
+\end_inset
+
+，
+有 
+\begin_inset Formula $P(|X-\mu|\ge k\sigma)\le\frac{1}{k^{2}}$
+\end_inset
+
+，
+或者等价地，
+
+\begin_inset Formula $P(|X-\mu|\ge\epsilon)\le\frac{\sigma^{2}}{\epsilon^{2}}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $\epsilon=k\sigma$
+\end_inset
+
+。
+
 \end_layout
 
 \begin_layout Subsection
@@ -92895,7 +93837,7 @@ frac{a + b}{2}}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-D(X)=E\{[X-E(X)]^{2}\}
+D(X)=E([X-E(X)]^{2})
 \]
 
 \end_inset
@@ -92920,13 +93862,77 @@ D(X)=E(X^{2})-[E(X)]^{2}
 
 \end_layout
 
-\begin_layout Standard
-标准差是方差的平方根，
-即：
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $X-E(X)$
+\end_inset
+
+ 称为随机变量
+\begin_inset Formula $X$
+\end_inset
+
+
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+离差
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+,且
+\begin_inset Formula $E(X-E(X)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+方差D(X) 就是 X 的离差平方的期望，
+且
+\begin_inset Formula $DX=E(X-EX)^{2}\geqslant0$
+\end_inset
+
+的期望。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+标准差是方差的平方根，
+即：
+
 \begin_inset Formula 
 \[
 \sigma(X)=\sqrt{D(X)}
@@ -92934,11 +93940,7 @@ D(X)=E(X^{2})-[E(X)]^{2}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-标准差的单位与 
+标准差的单位与
 \begin_inset Formula $\ensuremath{X}$
 \end_inset
 
@@ -92947,11 +93949,300 @@ D(X)=E(X^{2})-[E(X)]^{2}
 
 \end_layout
 
+\begin_layout Itemize
+常数的方差为零：
+如果 
+\begin_inset Formula $c$
+\end_inset
+
+ 是一个常数，
+那么 
+\begin_inset Formula $Var(c)=E[(c-E(c))^{2}]=E[(c-c)^{2}]=E(0)=0$
+\end_inset
+
+。
+理解：
+ 常数的值不会发生变化，
+因此其离散程度为零。
+
+\end_layout
+
+\begin_layout Itemize
+常数倍随机变量的方差等于常数的平方乘以随机变量的方差：
+如果 
+\begin_inset Formula $c$
+\end_inset
+
+ 是一个常数，
+
+\begin_inset Formula $X$
+\end_inset
+
+ 是一个随机变量，
+那么
+\begin_inset Formula $Var(cX)=E[(cX-E(cX))^{2}]=E[(cX-cE(X))^{2}]=E[c^{2}(X-E(X))^{2}]=c^{2}E[(X-E(X))^{2}]=c^{2}Var(X)$
+\end_inset
+
+。
+理解：
+ 将随机变量的所有取值放大 
+\begin_inset Formula $c$
+\end_inset
+
+ 倍，
+其偏离均值的程度也会放大 
+\begin_inset Formula $c$
+\end_inset
+
+ 倍，
+而方差是这种偏离的平方的平均值，
+因此会放大 
+\begin_inset Formula $c^{2}$
+\end_inset
+
+ 倍。
+
+\end_layout
+
+\begin_layout Itemize
+随机变量加常数的方差不变：
+如果 
+\begin_inset Formula $c$
+\end_inset
+
+ 是一个常数，
+
+\begin_inset Formula $X$
+\end_inset
+
+ 是一个随机变量，
+那么 
+\begin_inset Formula $Var(X+c)=E[(X+c-E(X+c))^{2}]=E[(X+c-(E(X)+c))^{2}]=E[(X-E(X))^{2}]=Var(X)$
+\end_inset
+
+。
+理解：
+ 加上一个常数只是将随机变量的分布平移了一下，
+并没有改变其离散程度。
+
+\end_layout
+
+\begin_layout Itemize
+和的方差（一般情况）：
+ 如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个随机变量，
+那么
+\begin_inset Formula $Var(X+Y)=E[((X+Y)-E(X+Y))^{2}]=E[((X-E(X))+(Y-E(Y)))^{2}]$
+\end_inset
+
+
+\begin_inset Formula $=E[(X-E(X))^{2}+(Y-E(Y))^{2}+2(X-E(X))(Y-E(Y))]$
+\end_inset
+
+
+\begin_inset Formula $=E[(X-E(X))^{2}]+E[(Y-E(Y))^{2}]+2E[(X-E(X))(Y-E(Y))]$
+\end_inset
+
+
+\begin_inset Formula $=Var(X)+Var(Y)+2Cov(X,Y)$
+\end_inset
+
+其中，
+
+\begin_inset Formula $Cov(X,Y)=E[(X-E(X))(Y-E(Y))]$
+\end_inset
+
+ 是 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 的协方差。
+
+\end_layout
+
+\begin_layout Itemize
+独立随机变量和的方差等于方差的和：
+ 如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是相互独立的随机变量，
+那么它们的协方差 
+\begin_inset Formula $Cov(X,Y)=0$
+\end_inset
+
+。
+因此，
+
+\begin_inset Formula $Var(X+Y)=Var(X)+Var(Y)$
+\end_inset
+
+。
+这个性质可以推广到多个相互独立的随机变量的情况，
+
+\begin_inset Formula $Var(\sum_{i=1}^{n}X_{i})=\sum_{i=1}^{n}Var(X_{i})$
+\end_inset
+
+。
+理解：
+ 当随机变量独立时，
+它们的波动不会相互影响，
+总的波动（方差）就是各自波动之和。
+
+\end_layout
+
+\begin_layout Itemize
+差的方差（一般情况）：
+ 如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是两个随机变量，
+那么
+\begin_inset Formula $Var(X-Y)=Var(X+(-1)Y)=Var(X)+Var(-Y)+2Cov(X,-Y)$
+\end_inset
+
+
+\begin_inset Formula $=Var(X)+(-1)^{2}Var(Y)+2(-1)Cov(X,Y)$
+\end_inset
+
+
+\begin_inset Formula $=Var(X)+Var(Y)-2Cov(X,Y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+独立随机变量差的方差等于方差的和：
+如果 
+\begin_inset Formula $X$
+\end_inset
+
+ 和 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是相互独立的随机变量，
+那么 
+\begin_inset Formula $Cov(X,Y)=0$
+\end_inset
+
+。
+因此，
+
+\begin_inset Formula $Var(X-Y)=Var(X)+Var(Y)$
+\end_inset
+
+。
+注意：
+ 对于独立随机变量，
+和的方差和差的方差都等于方差的和。
+
+\end_layout
+
+\begin_layout Itemize
+方差越大，
+表示随机变量的取值越分散，
+偏离其期望值（均值）的程度越大。
+
+\end_layout
+
+\begin_layout Itemize
+为了更好地理解离散程度，
+我们通常会使用方差的平方根，
+即标准差（
+\begin_inset Formula $\sigma=\sqrt{Var(X)}$
+\end_inset
+
+）。
+
+\series bold
+标准差与随机变量本身具有相同的单位
+\series default
+，
+因此更容易进行直观比较。
+标准差越大，
+数据的离散程度越大；
+标准差越小，
+数据的离散程度越小。
+
+\end_layout
+
+\begin_layout Standard
+不同随机变量的相对离散程度比较（需要谨慎）：
+ 如果两个随机变量的均值大小差异很大，
+直接比较它们的方差或标准差可能不够直观。
+在这种情况下，
+可以使用**变异系数**（Coefficient of Variation,
+ CV），
+它是标准差与均值之比（$CV = 
+\backslash
+frac{
+\backslash
+sigma}{|
+\backslash
+mu|}$），
+用于衡量相对于均值的数据离散程度。
+变异系数是一个无量纲的量，
+可以更好地比较均值不同的数据集的相对离散程度。
+
+\end_layout
+
+\begin_layout Standard
+**影响方差大小的因素：
+**
+\end_layout
+
+\begin_layout Standard
+* **随机变量的分布类型：
+** 不同的概率分布本身就具有不同的离散程度。
+例如，
+均匀分布通常比正态分布在相同取值范围内具有更大的方差。
+
+\end_layout
+
+\begin_layout Standard
+* **参数的影响：
+** 概率分布的参数会影响其方差的大小。
+例如，
+二项分布 $B(n,
+ p)$ 的方差为 $np(1-p)$，
+方差的大小取决于试验次数 $n$ 和成功概率 $p$。
+
+\end_layout
+
+\begin_layout Standard
+* **数据本身的波动性：
+** 如果观测到的数据本身波动就很大，
+那么计算得到的样本方差也会相应地较大。
+
+\end_layout
+
 \begin_layout Case
 对于离散型随机变量:
 \begin_inset Formula 
 \[
-D(X)=\stackrel[\text{k=1}]{\infty}{\sum}[x_{k}E(X)]^{2}p_{k}
+D(X)=\stackrel[\text{k=1}]{\infty}{\sum}[x_{k}-E(X)]^{2}p_{k}
 \]
 
 \end_inset
