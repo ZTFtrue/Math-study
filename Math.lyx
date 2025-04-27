@@ -92407,13 +92407,11 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 ( X 
 \backslash
 ) 表示出现的点数，
-求 
-\backslash
-( 
-\backslash
-mathbb{E}[X] 
-\backslash
-)。
+求
+\begin_inset Formula $\mathbb{E}[X]$
+\end_inset
+
+。
 
 \end_layout
 
@@ -93913,7 +93911,7 @@ D(X)=E(X^{2})-[E(X)]^{2}
 \noun off
 \color none
 ,且
-\begin_inset Formula $E(X-E(X)=0$
+\begin_inset Formula $E(X-E(X))=0$
 \end_inset
 
 .
@@ -94294,6 +94292,85 @@ D(X)=E(X^{2})-[E(X)]^{2}
 
 \end_layout
 
+\begin_layout Example
+假设有一个离散随机变量 
+\begin_inset Formula $X$
+\end_inset
+
+，
+取值 1、2、3，
+各自概率都是
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+- 期望：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[X]=1\times\frac{1}{3}+2\times\frac{1}{3}+3\times\frac{1}{3}=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 计算 
+\begin_inset Formula $\mathbb{E}[X^{2}]$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[X^{2}]=1^{2}\times\frac{1}{3}+2^{2}\times\frac{1}{3}+3^{2}\times\frac{1}{3}=\frac{1+4+9}{3}=\frac{14}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+- 方差：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathrm{Var}(X)=\mathbb{E}[X^{2}]-(\mathbb{E}[X])^{2}=\frac{14}{3}-4=\frac{2}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或
+\begin_inset Formula 
+\[
+D(X)=E([X-E(X)]^{2})=\frac{1}{3}\times(1-2)^{2}+\frac{1}{3}\times(2-2)^{2}+\frac{1}{3}\times(3-2)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Theorem
 切比雪夫(Chebyshev)不等式:
  设随机变量X具有数学期望 
@@ -94314,6 +94391,739 @@ D(X)=E(X^{2})-[E(X)]^{2}
 \begin_inset Formula 
 \[
 P\{|X-\mu|\geqslant\varepsilon\}\leqslant\frac{\sigma^{2}}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+无论随机变量的分布是什么样的，
+只要它有有限的均值和方差，
+大部分取值都会集中在均值附近。
+
+\end_layout
+
+\begin_layout Theorem
+把两边取补集：
+
+\end_layout
+
+\begin_layout Theorem
+原来是
+\begin_inset Formula $P(|X-EX|\geq\varepsilon)\leq\frac{D(X)}{\varepsilon^{2}}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Theorem
+所以
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(|X-EX|<\varepsilon)=1-P(|X-EX|\geq\varepsilon)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+于是有
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(|X-EX|<\varepsilon)\geq1-\frac{D(X)}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+具体来说，
+切比雪夫不等式是这样表述的：
+
+\end_layout
+
+\begin_layout Theorem
+设随机变量
+\begin_inset Formula $X$
+\end_inset
+
+ 的数学期望是
+\begin_inset Formula $\mu$
+\end_inset
+
+，
+方差是
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+，
+那么对于任意
+\begin_inset Formula $k>0$
+\end_inset
+
+，
+有：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(|X-\mu|\geq k\sigma)\leq\frac{1}{k^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+或者换个更常见的表达：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(|X-\mu|<k\sigma)\geq1-\frac{1}{k^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+- 
+\begin_inset Formula $k$
+\end_inset
+
+：
+你想离均值多远（以标准差为单位）
+\end_layout
+
+\begin_layout Theorem
+- 结论：
+偏离均值
+\begin_inset Formula $\ensuremath{k}$
+\end_inset
+
+个标准差以上的概率不会超过 
+\begin_inset Formula $1/k^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+比如说：
+
+\end_layout
+
+\begin_layout Theorem
+- 取 
+\begin_inset Formula $k=2$
+\end_inset
+
+：
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\ensuremath{P(|X-\mu|\geq2\sigma)\leq\frac{1}{4}=0.25}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+→ 偏离均值超过 2 个标准差的概率至多 25%。
+
+\end_layout
+
+\begin_layout Theorem
+证明1
+\end_layout
+
+\begin_layout Theorem
+如果 
+\begin_inset Formula $Y\geq0$
+\end_inset
+
+，
+那么对于任意 
+\begin_inset Formula $a>0$
+\end_inset
+
+，
+有
+\begin_inset Formula $P(Y\geq a)\leq\frac{E[Y]}{a}$
+\end_inset
+
+，
+取
+\begin_inset Formula $Y=(X-\mu)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+注意到 
+\begin_inset Formula $\ensuremath{Y\geq0}$
+\end_inset
+
+（平方总是非负的），
+所以可以用马尔可夫不等式。
+
+\end_layout
+
+\begin_layout Theorem
+设 
+\begin_inset Formula $a=(k\sigma)^{2}=k^{2}\sigma^{2}$
+\end_inset
+
+，
+于是根据马尔可夫不等式：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left((X-\mu)^{2}\geq k^{2}\sigma^{2}\right)\leq\frac{E[(X-\mu)^{2}]}{k^{2}\sigma^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+而又有：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+E[(X-\mu)^{2}]=\sigma^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+所以代进去：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left((X-\mu)^{2}\geq k^{2}\sigma^{2}\right)\leq\frac{\sigma^{2}}{k^{2}\sigma^{2}}=\frac{1}{k^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+注意：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left((X-\mu)^{2}\geq k^{2}\sigma^{2}\right)=P\left(|X-\mu|\geq k\sigma\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+所以最终得到：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left(|X-\mu|\geq k\sigma\right)\leq\frac{1}{k^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+证明2
+\begin_inset Formula 
+\[
+P(|X-EX|\geq\varepsilon)=\int_{|x-EX|\geq\varepsilon}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是
+\begin_inset Formula $X$
+\end_inset
+
+ 的概率密度函数）
+\end_layout
+
+\begin_layout Theorem
+使用一个重要的不等式：
+
+\end_layout
+
+\begin_layout Theorem
+在
+\begin_inset Formula $\ensuremath{|x-EX|\geq\varepsilon}$
+\end_inset
+
+的区域上，
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+1\leq\frac{(x-EX)^{2}}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+因为当 
+\begin_inset Formula $|x-EX|\geq\varepsilon$
+\end_inset
+
+，
+ 
+\end_layout
+
+\begin_layout Theorem
+平方后
+\begin_inset Formula $(x-EX)^{2}\geq\varepsilon^{2}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Theorem
+所以
+\begin_inset Formula $\frac{(x-EX)^{2}}{\varepsilon^{2}}\geq1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+于是我们可以写：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+f(x)\leq\frac{(x-EX)^{2}}{\varepsilon^{2}}f(x)\quad\text{在}\quad|x-EX|\geq\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+所以积分两边也满足：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\int_{|x-EX|\geq\varepsilon}f(x)dx\leq\int_{|x-EX|\geq\varepsilon}\frac{(x-EX)^{2}}{\varepsilon^{2}}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+把积分区域扩展到整个实数轴：
+
+\end_layout
+
+\begin_layout Theorem
+因为在
+\begin_inset Formula $|x-EX|<\varepsilon$
+\end_inset
+
+ 的地方，
+
+\begin_inset Formula $\frac{(x-EX)^{2}}{\varepsilon^{2}}f(x)\geq0$
+\end_inset
+
+，
+ 
+\end_layout
+
+\begin_layout Theorem
+加上也不会减小，
+所以可以继续写：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\int_{|x-EX|\geq\varepsilon}\frac{(x-EX)^{2}}{\varepsilon^{2}}f(x)dx\leq\int_{-\infty}^{+\infty}\frac{(x-EX)^{2}}{\varepsilon^{2}}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+拿
+\begin_inset Formula $\ensuremath{\frac{1}{\varepsilon^{2}}}$
+\end_inset
+
+提出来：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+=\frac{1}{\varepsilon^{2}}\int_{-\infty}^{+\infty}(x-EX)^{2}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+而
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\int_{-\infty}^{+\infty}(x-EX)^{2}f(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+就是 方差 ：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+D(X)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+所以最后得到：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(|X-EX|\geq\varepsilon)\leq\frac{D(X)}{\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+马尔可夫不等式（Markov Inequality），
+假设 
+\begin_inset Formula $Y$
+\end_inset
+
+ 是一个 非负 随机变量
+\begin_inset Formula $（\ensuremath{Y\geq0}）$
+\end_inset
+
+，
+ 那么对于任何
+\begin_inset Formula $a>0$
+\end_inset
+
+，
+都有：
+
+\begin_inset Formula 
+\[
+P(Y\geq a)\leq\frac{E[Y]}{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+如果你知道一个非负随机变量的期望
+\begin_inset Formula $E[Y]$
+\end_inset
+
+，
+ 那么它 超过某个大数
+\begin_inset Formula $a$
+\end_inset
+
+ 的概率不会太大，
+ 上限是
+\begin_inset Formula $\frac{E[Y]}{a}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+比如：
+
+\end_layout
+
+\begin_layout Theorem
+- 你买彩票，
+中奖金额是随机变量
+\begin_inset Formula $Y$
+\end_inset
+
+，
+
+\begin_inset Formula $Y\geq0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+- 平均每张彩票期望值是 5 元（
+\begin_inset Formula $E[Y]=5$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Theorem
+- 那么：
+
+\end_layout
+
+\begin_layout Theorem
+你中彩票金额超过 50 元的概率 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\ensuremath{P(Y\geq50)\leq\frac{5}{50}=0.1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（也就是最多 
+\begin_inset Formula $10\%$
+\end_inset
+
+的可能性中奖金额超过 
+\begin_inset Formula $50$
+\end_inset
+
+ 元）
+\end_layout
+
+\begin_layout Theorem
+任何事件的概率
+\begin_inset Formula $P(\text{事件})$
+\end_inset
+
+ 其实可以通过 期望 来“包住”它。
+ 
+\end_layout
+
+\begin_layout Theorem
+我们构造一个指示函数（Indicator function）：
+
+\end_layout
+
+\begin_layout Theorem
+定义
+\begin_inset Formula 
+\[
+I_{[Y\geq a]}=\begin{cases}
+1, & \text{如果 }Y\geq a\\
+0, & \text{否则}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+显然有：
+
+\begin_inset Formula 
+\[
+P(Y\geq a)=E[I_{[Y\geq a]}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+然后注意到，
+因为
+\begin_inset Formula $Y\geq0$
+\end_inset
+
+，
+而且：
+
+\begin_inset Formula 
+\[
+Y\geq a\cdot I_{[Y\geq a]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+这个不等式的意思是：
+
+\end_layout
+
+\begin_layout Theorem
+- 如果
+\begin_inset Formula $Y\geq a$
+\end_inset
+
+，
+那么
+\begin_inset Formula $Y\geq a$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+- 如果
+\begin_inset Formula $Y<a$
+\end_inset
+
+，
+那 
+\begin_inset Formula $I_{[Y\geq a]}=0$
+\end_inset
+
+，
+
+\begin_inset Formula $Y\geq0\geq0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Theorem
+所以两边取期望，
+就有：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+E[Y]\geq a\cdot E[I_{[Y\geq a]}]=a\cdot P(Y\geq a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+移项得：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P(Y\geq a)\leq\frac{E[Y]}{a}
 \]
 
 \end_inset
@@ -94703,6 +95513,482 @@ E(X^{k}),k=1,2,...
 大数定律
 \end_layout
 
+\begin_layout Definition
+依概率收敛，
+如果有一列随机变量 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+，
+还有一个常数
+\begin_inset Formula $a$
+\end_inset
+
+，
+ 
+\end_layout
+
+\begin_layout Definition
+我们说
+\begin_inset Formula $\ensuremath{X_{n}}$
+\end_inset
+
+依概率收敛于
+\begin_inset Formula $a$
+\end_inset
+
+，
+如果：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\forall\varepsilon>0,\quad\lim_{n\to\infty}P(|X_{n}-a|\geq\varepsilon)=0
+\]
+
+\end_inset
+
+或
+\begin_inset Formula 
+\[
+\forall\varepsilon>0,\quad\lim_{n\to\infty}P(|X_{n}-a|<\varepsilon)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+,称随机变量
+\begin_inset Formula $\{X_{n}\}$
+\end_inset
+
+依概率收敛于
+\begin_inset Formula $a$
+\end_inset
+
+。
+记作：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+X_{n}\xrightarrow[n\rightarrow\infty]{P}a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+随着 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+，
+随机变量
+\begin_inset Formula $\ensuremath{X_{n}}$
+\end_inset
+
+越来越接近常数 
+\begin_inset Formula $a$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+大多数情况下（以概率趋近于1）
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ 会非常接近
+\begin_inset Formula $a$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+比如说，
+有一堆随机变量 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+，
+它们越来越集中在常数
+\begin_inset Formula $3$
+\end_inset
+
+ 附近，
+
+\end_layout
+
+\begin_layout Standard
+那么就可以说 
+\begin_inset Formula $\ensuremath{X_{n}}$
+\end_inset
+
+依概率收敛到 
+\begin_inset Formula $3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+依概率收敛是一种比较弱的收敛方式（比几乎处处收敛弱）。
+
+\end_layout
+
+\begin_layout Itemize
+依概率收敛是大数定律的基本概念（比如弱大数定律就是说样本均值依概率收敛到期望）。
+
+\end_layout
+
+\begin_layout Definition
+独立同分布随机变量。
+ 一组随机变量 
+\begin_inset Formula $\ensuremath{X_{1},X_{2},\ldots,X_{n},\ldots}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+如果它们满足两个条件：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+独立性 （Independent）：
+任意一组 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ 之间是相互独立的，
+ 也就是：
+
+\begin_inset Formula 
+\[
+P(X_{1}\in A_{1},X_{2}\in A_{2},\ldots,X_{n}\in A_{n})=\prod_{i=1}^{n}P(X_{i}\in A_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+同分布 （Identically distributed）：
+每个
+\begin_inset Formula $\ensuremath{X_{i}}$
+\end_inset
+
+的分布都是一样的，
+比如都是正态分布
+\begin_inset Formula $N(0,1)$
+\end_inset
+
+，
+或者都是均匀分布等等。
+
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+如果这两条都满足，
+就称 
+\begin_inset Formula $\ensuremath{X_{1},X_{2},\ldots}$
+\end_inset
+
+是 独立同分布的随机变量序列，
+ 通常简称 i.i.d.（Independent and Identically Distributed）。
+
+\end_layout
+
+\begin_layout Standard
+抛硬币 
+\begin_inset Formula $n$
+\end_inset
+
+ 次，
+每次抛硬币的结果（正反面）可以看作一组 i.i.d.
+ 随机变量。
+
+\end_layout
+
+\begin_layout Standard
+扔骰子 
+\begin_inset Formula $\ensuremath{n}$
+\end_inset
+
+次，
+每次点数也可以看成 i.i.d.
+\end_layout
+
+\begin_layout Standard
+数学记法
+\end_layout
+
+\begin_layout Standard
+如果每个
+\begin_inset Formula $\ensuremath{X_{i}}$
+\end_inset
+
+都服从同一个分布
+\begin_inset Formula $F(x)$
+\end_inset
+
+，
+记作：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{1},X_{2},\ldots\overset{i.i.d.}{\sim}F(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+弱大数定律（Weak Law of Large Numbers） ：
+样本均值依概率收敛于期望，
+ 
+\begin_inset Formula $\overline{X}_{n}\xrightarrow{P}μ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+强大数定律（Strong Law of Large Numbers） | 样本均值几乎处处收敛于期望 | 
+\begin_inset Formula $\overline{X}_{n}\xrightarrow{a.s.}μ$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+基于切比雪夫不等式的弱大数定律(切比雪夫大数定律)
+\end_layout
+
+\begin_layout Theorem
+设 
+\begin_inset Formula $X_{1},X_{2},\ldots$
+\end_inset
+
+ 是一列 独立同分布（i.i.d.） 的随机变量，
+ 每个变量都有：
+
+\end_layout
+
+\begin_layout Theorem
+- 数学期望
+\begin_inset Formula $E(X_{i})=\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+- 方差
+\begin_inset Formula $\ensuremath{\text{Var}(X_{i})=\sigma^{2}<M(\text{常数})}$
+\end_inset
+
+（有限）
+\end_layout
+
+\begin_layout Theorem
+记样本均值：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+那么对任意
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+，
+都有：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\lim_{n\to+\infty}P\left(\left|\overline{X}_{n}-\mu\right|\geq\varepsilon\right)=0
+\]
+
+\end_inset
+
+,或
+\begin_inset Formula 
+\[
+\lim_{n\to+\infty}P\left(\left|\frac{1}{n}\sum_{i=1}^{n}X_{i}-\frac{1}{n}\sum_{i=1}^{n}E(X_{i})\right|<\varepsilon\right)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+也就是说：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\overline{X}_{n}\xrightarrow{P}\mu
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+（样本均值依概率收敛到真实均值）
+\end_layout
+
+\begin_layout Theorem
+- 由于
+\begin_inset Formula $X_{1},X_{2},\ldots,X_{n}$
+\end_inset
+
+ 独立同分布，
+ 
+\end_layout
+
+\begin_layout Theorem
+- 样本均值 
+\begin_inset Formula $\ensuremath{\overline{X}_{n}}$
+\end_inset
+
+的期望：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+E(\overline{X}_{n})=\mu
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+- 样本均值
+\begin_inset Formula $\overline{X}_{n}$
+\end_inset
+
+ 的方差：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\text{Var}(\overline{X}_{n})=\text{Var}\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n^{2}}\sum_{i=1}^{n}\text{Var}(X_{i})=\frac{n\sigma^{2}}{n^{2}}=\frac{\sigma^{2}}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+然后用切比雪夫不等式：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left(\left|\overline{X}_{n}-\mu\right|\geq\varepsilon\right)\leq\frac{\text{Var}(\overline{X}_{n})}{\varepsilon^{2}}=\frac{\sigma^{2}}{n\varepsilon^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+注意到：
+
+\end_layout
+
+\begin_layout Theorem
+- 右边是
+\begin_inset Formula $\frac{1}{n}$
+\end_inset
+
+ 级别的，
+当 
+\begin_inset Formula $n\to\infty$
+\end_inset
+
+ 时
+\begin_inset Formula $\frac{\sigma^{2}}{n\varepsilon^{2}}\to0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+所以：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}P\left(\left|\overline{X}_{n}-\mu\right|\geq\varepsilon\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Theorem*
 弱大数定理 (辛钦大数定理) 设
 \begin_inset Formula $X_{1},X_{2}...$
@@ -94735,25 +96021,8 @@ E(X^{k}),k=1,2,...
 
 \end_inset
 
+，
 
-\end_layout
-
-\begin_layout Standard
-证明
-\end_layout
-
-\begin_layout Theorem*
-弱大数定理(辛钦大数定理)设
-\begin_inset Formula $X_{1},X_{2}...$
-\end_inset
-
-是相互独立,服从同一分布的随机变量序列,
- 且具有数学期望
-\begin_inset Formula $E(X_{k})=µ(k=l,2,...)$
-\end_inset
-
-.
- 则序列 
 \begin_inset Formula $\overset{-}{X}=\frac{1}{n}\stackrel[k=1]{n}{\sum}X_{k}$
 \end_inset
 
@@ -94762,6 +96031,7 @@ E(X^{k}),k=1,2,...
 \begin_inset Formula $\overset{-}{X}\overset{p}{\rightarrow}µ$
 \end_inset
 
+。
 
 \end_layout
 
@@ -94809,6 +96079,57 @@ E(X^{k}),k=1,2,...
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Corollary*
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\frac{f_{A}}{n}$
+\end_inset
+
+是频率。
+
+\end_layout
+
+\begin_layout Standard
+小概率事件实际不发生原理。
+
+\end_layout
+
+\begin_layout Standard
+小概率事件的实际不发生原理：
+一个小概率事件在个别试验中是不可能发生的。
+
+\end_layout
+
+\begin_layout Standard
+实际生活中，
+我们就忽略了小概率事件发生的可能性。
+如守株待兔、因噎废食等。
+
+\end_layout
+
+\begin_layout Enumerate
+何谓小概率？
+这一问题在概率论中不能给出统一标准。
+
+\end_layout
+
+\begin_layout Enumerate
+小概率事件的实际不发生与不可能事件的区别。
 
 \end_layout
 
