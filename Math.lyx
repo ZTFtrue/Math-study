@@ -118395,87 +118395,48 @@ https://zh.wikihow.com/%E6%89%8B%E7%AE%97%E5%B9%B3%E6%96%B9%E6%A0%B9
 \end_layout
 
 \begin_layout Section
-一些有趣的图形
+竞赛题
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement document
-alignment document
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/一些有趣的图形_1.png
-	lyxscale 30
-	width 10cm
-
+\begin_layout Example
+\begin_inset Formula $x^{2}+y^{2}=19451945$
 \end_inset
 
+,x,y 是正整数
+\end_layout
 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $y=sin(x)\div y$
+\begin_layout Solution
+\begin_inset Formula $(ac+bd)^{2}+(ad-bc)^{2}=(a^{2}+b^{2})(c^{2}+d^{2})$
 \end_inset
 
 
 \end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\begin{align*}
+x^{2}+y^{2} & =1945\times10001\\
+ & =(44^{2}+3^{2})(100^{2}+1^{2})
+\end{align*}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename image/一些有趣的图形_2.png
-	lyxscale 20
-
+\begin_layout Solution
+\begin_inset Formula $(44\times100+3\times1)^{2}+(44\times1-3\times100)^{2}=1945\times10001$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset Formula $y=sin(x)\times x$
+\begin_layout Solution
+\begin_inset Formula $x=4403$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Any K"
-literal "false"
-
-\end_inset
-
-
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.pnas.org/content/118/11/e2022377118
-\end_layout
-
+,
+\begin_inset Formula $y=256$
 \end_inset
 
 
