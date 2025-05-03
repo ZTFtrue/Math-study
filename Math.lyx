@@ -118395,7 +118395,7 @@ https://zh.wikihow.com/%E6%89%8B%E7%AE%97%E5%B9%B3%E6%96%B9%E6%A0%B9
 \end_layout
 
 \begin_layout Section
-竞赛题
+习题
 \end_layout
 
 \begin_layout Example
@@ -118440,6 +118440,451 @@ x^{2}+y^{2} & =1945\times10001\\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Example
+Fibonacci Sequence and Linear Algebra (Exercise 21)
+\end_layout
+
+\begin_layout Example
+We are given the Fibonacci sequence defined by:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $F_{0}=0,\quad F_{1}=1,\quad F_{n}=F_{n-1}+F_{n-2}\text{ for }n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We define a linear transformation 
+\begin_inset Formula $T\in\mathcal{L}(\mathbb{R}^{2})$
+\end_inset
+
+ by:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T(x,y)=(y,x+y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+This transformation has a matrix representation:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T=\begin{bmatrix}0 & 1\\
+1 & 1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\mathcal{L}(\mathbb{R}^{2})$
+\end_inset
+
+ denotes the set of all linear transformations from 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ to itself.
+\end_layout
+
+\begin_layout Example
+The transformation 
+\begin_inset Formula $T(x,y)=(y,x+y)$
+\end_inset
+
+ maps a 2D vector to a new vector,
+ where the first component becomes the second,
+ and the second becomes the sum of the two.
+\end_layout
+
+\begin_layout Example
+Its matrix representation in the standard basis is derived by examining how it acts on the standard basis vectors 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T(1,0)=(0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T(0,1)=(1,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+So the matrix has columns 
+\begin_inset Formula $T(1,0)$
+\end_inset
+
+ and 
+\begin_inset Formula $T(0,1)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T=\begin{bmatrix}0 & 1\\
+1 & 1
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(a) Show that 
+\begin_inset Formula $T^{n}(0,1)=(F_{n},F_{n+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We use induction:
+\end_layout
+
+\begin_layout Example
+Base case:
+ 
+\begin_inset Formula $n=0\Rightarrow T^{0}(0,1)=(0,1)=(F_{0},F_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Inductive step:
+ Suppose 
+\begin_inset Formula $T^{n}(0,1)=(F_{n},F_{n+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Then:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T^{n+1}(0,1)=T(T^{n}(0,1))=T(F_{n},F_{n+1})=(F_{n+1},F_{n}+F_{n+1})=(F_{n+1},F_{n+2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Thus,
+ the property holds for all 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+(b) Find the eigenvalues(特征值) of 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We compute the characteristic polynomial:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\det(T-\lambda I)=\begin{vmatrix}-\lambda & 1\\
+1 & 1-\lambda
+\end{vmatrix}=\lambda^{2}-\lambda-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Solving 
+\begin_inset Formula $\lambda^{2}-\lambda-1=0$
+\end_inset
+
+ gives:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lambda_{1,2}=\frac{1\pm\sqrt{5}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+These are the eigenvalues.
+\end_layout
+
+\begin_layout Example
+(c) Find a basis of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ consisting of eigenvectors
+\end_layout
+
+\begin_layout Example
+For 
+\begin_inset Formula $\lambda_{1}=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+,
+ solve 
+\begin_inset Formula $(T-\lambda_{1}I)v=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\begin{bmatrix}-\lambda_{1} & 1\\
+1 & 1-\lambda_{1}
+\end{bmatrix}\Rightarrow v_{1}=\begin{bmatrix}1\\
+\lambda_{1}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Similarly,
+ for 
+\begin_inset Formula $\lambda_{2}=\frac{1-\sqrt{5}}{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\Rightarrow v_{2}=\begin{bmatrix}1\\
+\lambda_{2}
+\end{bmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+So the basis is 
+\begin_inset Formula $\{v_{1},v_{2}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+(d) Use eigenvectors to compute 
+\begin_inset Formula $T^{n}(0,1)$
+\end_inset
+
+ and derive the formula for 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We express 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ as a linear combination of eigenvectors:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+(0,1)=av_{1}+bv_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Solving for 
+\begin_inset Formula $a,b$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\begin{cases}
+a+b=0\\
+a\lambda_{1}+b\lambda_{2}=1
+\end{cases}\Rightarrow a=\frac{1}{\sqrt{5}},\quad b=-\frac{1}{\sqrt{5}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Then:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+T^{n}(0,1)=a\lambda_{1}^{n}v_{1}+b\lambda_{2}^{n}v_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Taking the first component (which is $F_n$):
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+This is **Binet's Formula**.
+\end_layout
+
+\begin_layout Example
+(e) Show that 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ is the closest integer to:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Because the second term in Binet's formula:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\left(\frac{1-\sqrt{5}}{2}\right)^{n}\in(-1,1)\text{ and rapidly decays as }n\to\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Thus:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F_{n}\approx\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n}\pm\text{a very small number}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+So 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ is the nearest integer to that expression.
+\end_layout
+
+\begin_layout Example
+Remark
+\end_layout
+
+\begin_layout Example
+The number:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+is called the golden ratio .
+\end_layout
+
+\begin_layout Example
+This exercise elegantly ties together recurrence relations,
+ linear transformations,
+ eigenvalues,
+ and diagonalization to derive a deep property of Fibonacci numbers.
 \end_layout
 
 \begin_layout Bibliography
