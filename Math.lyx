@@ -31011,8 +31011,7 @@ R_{f}=f(X)=f(x)|x\in X
 
 称为
 \series bold
-定.
- 义域
+定义域
 \series default
 ,
  简记为
@@ -31420,6 +31419,43 @@ R
 
 \begin_layout Standard
 在定义域内不同的区间上用不同的解析表达式表示 
+\end_layout
+
+\begin_layout Standard
+常见分段函数：
+
+\end_layout
+
+\begin_layout Standard
+符号函数：
+
+\begin_inset Formula $y=\begin{cases}
+1 & x>0\\
+0 & x=0\\
+-1 & x>0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y是不超过x的最大整数部分,记为
+\begin_inset Formula $y=[x]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+狄利克雷函数
+\begin_inset Formula $y=\begin{cases}
+1 & \text{当}x\text{为有理数时}\\
+0 & \text{当}x\text{为无理数时}
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -31836,6 +31872,229 @@ status open
 上有上界;反之下界.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $f(x)=\frac{x^{2}+1}{x^{4}+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=\frac{1}{x^{2}},\quad a\le x\le\frac{1}{a},\quad0<a<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因为 
+\begin_inset Formula $a\le x\le\frac{1}{a}$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $x^{2}\le\frac{1}{a^{2}},x^{2}\ge a^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+所以 
+\begin_inset Formula $y=\frac{1}{x^{2}}\in[a^{2},\frac{1}{a^{2}}]$
+\end_inset
+
+ ⇒ 有界
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y=x\cos x,\quad x\in(-\infty,+\infty)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+构造法取：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{n}=(2[M]+1)\pi$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $M\to\infty,x_{n}\to\infty$
+\end_inset
+
+，
+整数部分
+\end_layout
+
+\begin_layout Example
+此时
+\begin_inset Formula $\cos x_{n}=-1$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $f(x_{n})=x_{n}\cdot(-1)=-x_{n}\to-\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+结论：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\boxed{y=x\cos x\text{ 无上界也无下界 ⇒ 无界}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 在 
+\begin_inset Formula $(0,+\infty)$
+\end_inset
+
+ 上有定义，
+且 
+\begin_inset Formula $\frac{f(x)}{x}$
+\end_inset
+
+ 在该区间单调减小。
+要证明：
+要证：
+
+\begin_inset Formula ${\displaystyle f(x_{1}+x_{2})\leq f(x_{1})+f(x_{2})}$
+\end_inset
+
+，
+即 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 满足 次可加性（subadditivity） 。
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $0<x_{1}\le x_{2}$
+\end_inset
+
+，
+因为 
+\begin_inset Formula ${\displaystyle \frac{f(x)}{x}}$
+\end_inset
+
+ 单调递减：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{f(x_{2})}{x_{2}}\le\frac{f(x_{1})}{x_{1}}\Rightarrow x_{1}f(x_{2})\le x_{2}f(x_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+又因为
+\begin_inset Formula $x_{2}<x_{1}+x_{2}$
+\end_inset
+
+，
+单调性仍然成立 ⇒ 得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{f(x_{1}+x_{2})}{x_{1}+x_{2}}\le\frac{f(x_{2})}{x_{2}}\Rightarrow f(x_{1}+x_{2})\le\frac{x_{1}+x_{2}}{x_{2}}f(x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{2}f(x_{1}+x_{2})\le x_{2}[f(x_{1})+f(x_{2})]\Rightarrow f(x_{1}+x_{2})\le f(x_{1})+f(x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+若 
+\begin_inset Formula ${\displaystyle \frac{f(x)}{x}}$
+\end_inset
+
+ 在 
+\begin_inset Formula $(0,+\infty)$
+\end_inset
+
+ 上单调递减，
+则
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)\text{ 满足 }f(x_{1}+x_{2})\le f(x_{1})+f(x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是 次可加函数 （subadditive function）。
+
+\end_layout
+
 \begin_layout Subsection
 函数的单调性
 \end_layout
@@ -32250,6 +32509,118 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 
 \end_layout
 
+\begin_layout Standard
+判定函数为周期函数的主要方法:
+\end_layout
+
+\begin_layout Standard
+1.
+ 从定义出发,找到 
+\begin_inset Formula $T\neq0$
+\end_inset
+
+,使得 
+\begin_inset Formula $f(x+T)=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ 利用周期函数的运算性质得.
+\end_layout
+
+\begin_layout Example
+设 
+\begin_inset Formula $y=f(x),x\in(-\infty,+\infty)$
+\end_inset
+
+ 的图形关于直线 
+\begin_inset Formula $x=a,x=b$
+\end_inset
+
+ 均对称 (
+\begin_inset Formula $a<b$
+\end_inset
+
+).
+ 求证:
+ 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 是周期函数并求其周期.
+\end_layout
+
+\begin_layout Example
+关键是构造 
+\begin_inset Formula $T$
+\end_inset
+
+,
+ 使 
+\begin_inset Formula $f(x+T)=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+对 
+\begin_inset Formula $\forall x\in(-\infty,+\infty)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(x+2b-2a)=f(b+(x+b-2a))=f(b-(x+b-2a))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $=f(a+(a-x))=f(a-(a-x))=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+所以 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是周期函数,
+ 
+\begin_inset Formula $2b-2a$
+\end_inset
+
+ 是它的一个周期.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+已知 
+\begin_inset Formula $y=|\sin x|+|\cos x|$
+\end_inset
+
+ 是周期函数,求其最小正周期.
+ (
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+)
+\end_layout
+
 \begin_layout Subsection
 函数的运算
 \end_layout
@@ -32318,6 +32689,98 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $f(x)=|-\sin x|\cdot e^{\cos x}$
+\end_inset
+
+ 该函数属于以下哪类？
+
+\end_layout
+
+\begin_layout Example
+(A) 有界函数 (B) 单调函数 (C) 周期函数 (D) 偶函数
+\end_layout
+
+\begin_layout Example
+解析：
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $|-\sin x|=|\sin x|$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $f(x)=|\sin x|\cdot e^{\cos x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\sin x$
+\end_inset
+
+、
+\begin_inset Formula $\cos x$
+\end_inset
+
+ 都是周期函数 ⇒ 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 也是周期函数 ⇒ ✅选 (C)
+\end_layout
+
+\begin_layout Example
+奇偶性判断：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(-x)=|\sin(-x)|\cdot e^{\cos(-x)}=|\sin x|\cdot e^{\cos x}=f(x)$
+\end_inset
+
+⇒ 是偶函数 ⇒ ✅选 (D)
+\end_layout
+
+\begin_layout Example
+单调性在整个区间不成立，
+故不是单调函数
+\end_layout
+
+\begin_layout Example
+但有界：
+
+\begin_inset Formula $|\sin x|\leq1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $e^{\cos x}\in[e^{-1},e^{1}]$
+\end_inset
+
+，
+乘积有限 ⇒ ✅选 (A)
+\end_layout
+
+\begin_layout Example
+所以答案是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\boxed{A、C、D}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 反函数
 \end_layout
@@ -32379,6 +32842,89 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 \end_inset
 
 值不能有重复。
+
+\end_layout
+
+\begin_layout Example
+求
+\begin_inset Formula $y=\frac{10^{x}+10^{-x}}{10^{x}-10^{-x}}+1$
+\end_inset
+
+ 的反函数。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+y=\frac{10^{x}+10^{-x}}{10^{x}-10^{-x}}+1\Rightarrow y-1=\frac{10^{x}+10^{-x}}{10^{x}-10^{-x}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(y-1)(10^{x}-10^{-x})=10^{x}+10^{-x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y10^{x}-y10^{-x}-10^{x}+10^{-x}=10^{x}+10^{-x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y10^{x}-y10^{-x}=2\times10^{x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y10^{2x}-y=2\times10^{2x}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(y-2)\times10^{2x}=y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+10^{2x}=\frac{y}{(y-2)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x=\frac{1}{2}lg\frac{y}{(y-2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\boxed{f^{-1}(y)=\frac{1}{2}\log_{10}\left(\frac{y}{y-2}\right)}$
+\end_inset
+
 
 \end_layout
 
