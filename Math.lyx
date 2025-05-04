@@ -28621,6 +28621,262 @@ Leonhard Paul Euler,
  
 \end_layout
 
+\begin_layout Example
+\begin_inset Formula $\underset{n\to+\infty}{\lim}(\sqrt{n+3\sqrt{n}}-\sqrt{n-\sqrt{n}})=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+先有理化，
+乘以
+\begin_inset Formula $\frac{\sqrt{n+3\sqrt{n}}+\sqrt{n-\sqrt{n}}}{\sqrt{n+3\sqrt{n}}+\sqrt{n-\sqrt{n}}}$
+\end_inset
+
+，
+然后求极限。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{n\to+\infty}{\lim}(\sqrt{n+3\sqrt{n}}-\sqrt{n-\sqrt{n}})=\underset{n\to+\infty}{\lim}\frac{n+3\sqrt{n}-(n-\sqrt{n})}{\sqrt{n+3\sqrt{n}}+\sqrt{n-\sqrt{n}}}=\underset{n\to+\infty}{\lim}\frac{4\sqrt{n}}{\sqrt{n+3\sqrt{n}}+\sqrt{n-\sqrt{n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+令分子分母同时除以 
+\begin_inset Formula $\sqrt{n}$
+\end_inset
+
+ 得：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+=\lim_{n\to\infty}\frac{4}{\sqrt{1+3\frac{1}{\sqrt{n}}}+\sqrt{1-\frac{1}{\sqrt{n}}}}=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\to+\infty}{\lim}\left(\frac{n+1}{n}\right)^{(-1)^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\to+\infty}{\lim}\left(\frac{n+1}{n}\right)^{(-1)^{n}}=\underset{n\to\infty}{\lim}e^{(-1)^{n}\ln\left(\frac{n+1}{n}\right)}=\underset{n\to+\infty}{\lim}e^{(-1)^{n}\ln\left(1+\frac{1}{n}\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为数列 
+\begin_inset Formula $\{(-1)^{n}\}$
+\end_inset
+
+ 有界，
+且 
+\begin_inset Formula $\underset{n\to+\infty}{\lim}\ln\left(1+\frac{1}{n}\right)=0$
+\end_inset
+
+，
+所以
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}(-1)^{n}\ln\left(\frac{n+1}{n}\right)=0\quad\Rightarrow\quad\lim_{n\to\infty}\left(\frac{n+1}{n}\right)^{(-1)^{n}}=e^{0}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+证明数列极限存在的步骤：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 给定任意 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+，
+要使 
+\begin_inset Formula $|x_{n}-a|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 解不等式 
+\begin_inset Formula $|x_{n}-a|<\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 在上述解集中取一正整数 
+\begin_inset Formula $N$
+\end_inset
+
+ 即可
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $x_{1}=10$
+\end_inset
+
+，
+
+\begin_inset Formula $x_{n+1}=\sqrt{6+x_{n}}$
+\end_inset
+
+（
+\begin_inset Formula $n=1,2,\ldots$
+\end_inset
+
+），
+试证数列 
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+ 的极限存在，
+并求极限值。
+
+\end_layout
+
+\begin_layout Standard
+由递推式得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{2}=\sqrt{6+x_{1}}=\sqrt{16}=4$
+\end_inset
+
+，
+知 
+\begin_inset Formula $x_{1}>x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+用数学归纳法证明单调递减有下界，
+极限存在：
+
+\end_layout
+
+\begin_layout Standard
+假设对某个 
+\begin_inset Formula $k$
+\end_inset
+
+ 有 
+\begin_inset Formula $x_{k}>x_{k+1}$
+\end_inset
+
+，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{k+1}=\sqrt{6+x_{k}}>\sqrt{6+x_{k+1}}=x_{k+2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以 
+\begin_inset Formula $x_{n}>x_{n+1}$
+\end_inset
+
+，
+为单调递减数列。
+
+\end_layout
+
+\begin_layout Standard
+又显然 
+\begin_inset Formula $x_{n}>0$
+\end_inset
+
+，
+所以有下界
+\end_layout
+
+\begin_layout Standard
+根据单调有下界数列收敛原理，
+极限存在，
+设极限为 
+\begin_inset Formula $a$
+\end_inset
+
+，
+则两边取极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a=\sqrt{6+a}\Rightarrow a^{2}=6+a\Rightarrow a^{2}-a-6=0\Rightarrow a=3\text{ 或 }a=-2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+但因 
+\begin_inset Formula $x_{n}>0$
+\end_inset
+
+，
+故排除负解，
+极限为 
+\begin_inset Formula $a=3$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 特殊数列
 \end_layout
@@ -50187,7 +50443,6 @@ x=x(t),\quad y=y(t)
 \begin_inset Text
 
 \begin_layout Plain Layout
-参数方程
 \begin_inset Formula $\ensuremath{x(t),y(t)}$
 \end_inset
 
@@ -68625,6 +68880,414 @@ S_{2}=\left[\frac{x^{3}}{6}-\tan^{-1}x\right]_{x_{0}}^{\sqrt{3}}
 平面曲线的弧长
 \end_layout
 
+\begin_layout Standard
+函数曲线 
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上的弧长 
+\begin_inset Formula $L$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+基于微元法 
+\end_layout
+
+\begin_layout Standard
+在区间 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上将曲线划分为很多小段，
+每段长度近似等于直线段的长度。
+
+\end_layout
+
+\begin_layout Standard
+对任意小段，
+设其起点和终点坐标分别为：
+
+\end_layout
+
+\begin_layout Standard
+起点：
+
+\begin_inset Formula $(x,f(x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+终点：
+
+\begin_inset Formula $(x+\Delta x,f(x+\Delta x))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么这段的弧长近似为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta L\approx\sqrt{(\Delta x)^{2}+(\Delta y)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $\Delta y=f(x+\Delta x)-f(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用导数近似变化量
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $\Delta x\to0$
+\end_inset
+
+ 时，
+有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta y\approx f'(x)\cdot\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入上式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta L\approx\sqrt{1+(f'(x))^{2}}\cdot\Delta x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+全部小段累加，
+即积分
+\end_layout
+
+\begin_layout Standard
+所以整个区间上的弧长为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=\int_{a}^{b}\sqrt{1+\left(\frac{dy}{dx}\right)^{2}}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+光滑曲线的弧长是微积分中的经典问题之一，
+下面是常见情况下的**弧长公式**和**使用方法**整理：
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 📐 光滑曲线的弧长公式
+\end_layout
+
+\begin_layout Standard
+### 一、直角坐标系中的曲线：
+$y = f(x)$
+\end_layout
+
+\begin_layout Standard
+如果函数 $y = f(x)$ 在区间 $[a,
+ b]$ 上具有连续的一阶导数（即光滑），
+则从点 $x = a$ 到 $x = b$ 的曲线弧长为：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+L = 
+\backslash
+int_a^b 
+\backslash
+sqrt{1 + 
+\backslash
+left( 
+\backslash
+frac{dy}{dx} 
+\backslash
+right)^2} 
+\backslash
+,
+ dx
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 二、参数方程表示的曲线：
+$x = x(t),
+ y = y(t)$，
+$t 
+\backslash
+in [
+\backslash
+alpha,
+ 
+\backslash
+beta]$
+\end_layout
+
+\begin_layout Standard
+则曲线的弧长为：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+L = 
+\backslash
+int_
+\backslash
+alpha^
+\backslash
+beta 
+\backslash
+sqrt{ 
+\backslash
+left( 
+\backslash
+frac{dx}{dt} 
+\backslash
+right)^2 + 
+\backslash
+left( 
+\backslash
+frac{dy}{dt} 
+\backslash
+right)^2 } 
+\backslash
+,
+ dt
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 三、极坐标形式：
+$r = r(
+\backslash
+theta)$，
+$
+\backslash
+theta 
+\backslash
+in [
+\backslash
+alpha,
+ 
+\backslash
+beta]$
+\end_layout
+
+\begin_layout Standard
+则曲线的弧长为：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+L = 
+\backslash
+int_
+\backslash
+alpha^
+\backslash
+beta 
+\backslash
+sqrt{ r^2 + 
+\backslash
+left( 
+\backslash
+frac{dr}{d
+\backslash
+theta} 
+\backslash
+right)^2 } 
+\backslash
+,
+ d
+\backslash
+theta
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+## 📘 示例：
+求曲线 $y = 
+\backslash
+frac{1}{3}x^{3/2}$ 在区间 $x 
+\backslash
+in [0,
+ 9]$ 上的弧长
+\end_layout
+
+\begin_layout Standard
+**步骤：
+**
+\end_layout
+
+\begin_layout Standard
+1.
+ 计算导数：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+frac{dy}{dx} = 
+\backslash
+frac{1}{2}x^{1/2}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+2.
+ 代入弧长公式：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+L = 
+\backslash
+int_0^9 
+\backslash
+sqrt{1 + 
+\backslash
+left( 
+\backslash
+frac{1}{2}x^{1/2} 
+\backslash
+right)^2} 
+\backslash
+,
+ dx
+\end_layout
+
+\begin_layout Standard
+= 
+\backslash
+int_0^9 
+\backslash
+sqrt{1 + 
+\backslash
+frac{1}{4}x} 
+\backslash
+,
+ dx
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+3.
+ 令 $u = 1 + 
+\backslash
+frac{1}{4}x$，
+再换元积分，
+即可求出弧长。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
 \begin_layout Section
 旋转体的体积 
 \end_layout
@@ -68954,6 +69617,10 @@ S_{2}=\left[\frac{x^{3}}{6}-\tan^{-1}x\right]_{x_{0}}^{\sqrt{3}}
 \end_layout
 
 \begin_layout Section
+物理学上的应用
+\end_layout
+
+\begin_layout Subsection
 计算抽水功率
 \end_layout
 
