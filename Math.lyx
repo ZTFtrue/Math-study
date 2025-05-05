@@ -69621,6 +69621,558 @@ frac{1}{4}x$，
 \end_layout
 
 \begin_layout Subsection
+变力沿直线所作的功
+\end_layout
+
+\begin_layout Standard
+从物理学知道，
+如果物体在做直线运动的过程中，
+有一个不变的力 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 作用在这物体上，
+且这力的方向与物体运动的方向一致，
+那么，
+在物体移动了距离 
+\begin_inset Formula $s$
+\end_inset
+
+ 时，
+力 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 对物体所作的功为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W=\mathbf{F}\cdot s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果物体在运动过程中所受到的力是变化的，
+这就常会遇到变力对物体作功的问题。
+下面通过具体例子说明如何计算变力所作的功。
+
+\end_layout
+
+\begin_layout Example
+把一个带电荷量 
+\begin_inset Formula $+q$
+\end_inset
+
+ 的点电荷放在 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴上坐标原点 
+\begin_inset Formula $O$
+\end_inset
+
+ 处，
+它产生一个电场。
+这个电场对周围的电荷有力的作用。
+由物理学知道，
+如果有一个单位正电荷放在这个电场中距离原点为 
+\begin_inset Formula $r$
+\end_inset
+
+ 的地方，
+那么电场对它的作用力的大小为
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $F=k\frac{q}{r^{2}}$
+\end_inset
+
+ (
+\begin_inset Formula $k$
+\end_inset
+
+ 是常量).
+\end_layout
+
+\begin_layout Example
+当这个单位正电荷在电场中从 
+\begin_inset Formula $r=a$
+\end_inset
+
+ 处沿 
+\begin_inset Formula $x$
+\end_inset
+
+$ 轴移动到 
+\begin_inset Formula $r=b$
+\end_inset
+
+ (
+\begin_inset Formula $a<b$
+\end_inset
+
+) 处时，
+计算电场力 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 对它所作的功。
+
+\end_layout
+
+\begin_layout Solution
+在上述移动过程中，
+电场对这单位正电荷的作用力是变的。
+取 
+\begin_inset Formula $r$
+\end_inset
+
+ 为积分变量，
+它的变化区间为 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+。
+设 
+\begin_inset Formula $[r,r+dr]$
+\end_inset
+
+ 为 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上的任一小区间。
+当单位正电荷从 
+\begin_inset Formula $r$
+\end_inset
+
+ 移动到 
+\begin_inset Formula $r+dr$
+\end_inset
+
+ 时，
+电场力对它所作的功近似等于 
+\begin_inset Formula $k\frac{q}{r^{2}}dr$
+\end_inset
+
+，
+即功元素为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dW=k\frac{q}{r^{2}}dr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+于是所求的功为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $W=\int_{a}^{b}k\frac{q}{r^{2}}dr=kq\int_{a}^{b}\frac{1}{r^{2}}dr=kq\left[-\frac{1}{r}\right]_{a}^{b}=kq\left(-\frac{1}{b}-(-\frac{1}{a})\right)=kq\left(\frac{1}{a}-\frac{1}{b}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+在计算静电场中某点的电位时，
+要考虑将单位正电荷从该点处 (
+\begin_inset Formula $r=a$
+\end_inset
+
+) 移到无穷远处时电场力所作的功 
+\begin_inset Formula $W$
+\end_inset
+
+。
+此时，
+电场力对单位正电荷所作的功就是反常积分
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $W=\int_{a}^{+\infty}k\frac{q}{r^{2}}dr=kq\int_{a}^{+\infty}\frac{1}{r^{2}}dr=kq\left[-\frac{1}{r}\right]_{a}^{+\infty}=-kq(0-\frac{1}{a})=\frac{kq}{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+在底面积为 
+\begin_inset Formula $S$
+\end_inset
+
+ 的圆柱形容器中盛有一定量的气体。
+在等温条件下，
+由于气体的膨胀，
+把容器中的一个活塞（面积为 
+\begin_inset Formula $S$
+\end_inset
+
+）从坐标 
+\begin_inset Formula $a$
+\end_inset
+
+ 处推移到坐标 
+\begin_inset Formula $b$
+\end_inset
+
+ 处。
+计算在移动过程中，
+气体压力所作的功。
+
+\end_layout
+
+\begin_layout Solution
+活塞的位置可以用坐标 
+\begin_inset Formula $x$
+\end_inset
+
+ 来表示。
+由物理学知道，
+一定量的气体在等温条件下，
+压强 
+\begin_inset Formula $p$
+\end_inset
+
+ 与体积 
+\begin_inset Formula $V$
+\end_inset
+
+ 的乘积是常数 
+\begin_inset Formula $k$
+\end_inset
+
+，
+即
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $pV=k$
+\end_inset
+
+ 或
+\begin_inset Formula $p=\frac{k}{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+因为 
+\begin_inset Formula $V=xS$
+\end_inset
+
+，
+所以
+\begin_inset Formula $p=\frac{k}{xS}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+于是，
+作用在活塞上的力
+\begin_inset Formula $F=p\cdot S=\frac{k}{xS}\cdot S=\frac{k}{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+在气体膨胀过程中，
+体积 
+\begin_inset Formula $V$
+\end_inset
+
+ 是变的，
+因而 
+\begin_inset Formula $x$
+\end_inset
+
+ 也是变的，
+所以作用在活塞上的力也是变的。
+
+\end_layout
+
+\begin_layout Solution
+取 
+\begin_inset Formula $x$
+\end_inset
+
+ 为积分变量，
+它的变化区间为 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+。
+设 
+\begin_inset Formula $[x,x+dx]$
+\end_inset
+
+ 为 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上任一小区间。
+当活塞从 
+\begin_inset Formula $x$
+\end_inset
+
+ 移动到 
+\begin_inset Formula $x+dx$
+\end_inset
+
+ 时，
+变力 
+\begin_inset Formula $F$
+\end_inset
+
+ 所作的功近似等于 
+\begin_inset Formula $\frac{k}{x}dx$
+\end_inset
+
+，
+即功元素为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dW=\frac{k}{x}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+于是所求的功为
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $W=\int_{a}^{b}\frac{k}{x}dx=k\int_{a}^{b}\frac{1}{x}dx=k[\ln x]_{a}^{b}=k\ln\frac{b}{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+从物理学知道，
+在水深为 
+\begin_inset Formula $h$
+\end_inset
+
+ 处的压强为 
+\begin_inset Formula $p=\rho gh$
+\end_inset
+
+，
+这里 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 是水的密度，
+
+\begin_inset Formula $g$
+\end_inset
+
+ 是重力加速度。
+如果有一面积为 
+\begin_inset Formula $A$
+\end_inset
+
+ 的平板水平地放置在水深为 
+\begin_inset Formula $h$
+\end_inset
+
+ 处，
+那么，
+平板一侧所受的水压力为
+\begin_inset Formula $P=pA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+如果平板铅直放置在水中，
+那么，
+由于水深不同的点处压强 
+\begin_inset Formula $p$
+\end_inset
+
+ 不相等，
+平板一侧所受的水压力就不能用上述方法计算。
+下面举例说明它的计算方法。
+
+\end_layout
+
+\begin_layout Example
+一个横放着的圆柱形水桶，
+桶内盛有半桶水。
+设桶的底半径为 
+\begin_inset Formula $R$
+\end_inset
+
+，
+水的密度为 
+\begin_inset Formula $\rho$
+\end_inset
+
+，
+计算桶的一个端面上所受的压力。
+
+\end_layout
+
+\begin_layout Solution
+桶的一个端面是圆片，
+所以现在要计算的是当水平面通过圆心时，
+铅直放置的一个半圆片的一侧所受到的水压力。
+
+\end_layout
+
+\begin_layout Solution
+在这个圆片上取过圆心且铅直向下的直线为 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴，
+过圆心的水平线为 
+\begin_inset Formula $y$
+\end_inset
+
+ 轴。
+对这个坐标系来讲，
+所讨论的半圆的方程为 
+\begin_inset Formula $x^{2}+y^{2}=R^{2}$
+\end_inset
+
+ (
+\begin_inset Formula $0\le x\le R$
+\end_inset
+
+)。
+取 
+\begin_inset Formula $x$
+\end_inset
+
+ 为积分变量，
+但考虑下半圆，
+所以它的变化区间为 
+\begin_inset Formula $[0,R]$
+\end_inset
+
+。
+设 
+\begin_inset Formula $[x,x+dx]$
+\end_inset
+
+ 为 
+\begin_inset Formula $[0,R]$
+\end_inset
+
+ 上的任一小区间，
+该条宽度为 
+\begin_inset Formula $dx$
+\end_inset
+
+，
+高度为 
+\begin_inset Formula $2\sqrt{R^{2}-x^{2}}$
+\end_inset
+
+，
+因此面积为
+\begin_inset Formula $dA=2\sqrt{R^{2}-x^{2}}\,dx$
+\end_inset
+
+，
+半圆片上相应于 
+\begin_inset Formula $[x,x+dx]$
+\end_inset
+
+ 的窄条上各点处的压强近似等于 
+\begin_inset Formula $\rho gx$
+\end_inset
+
+，
+这窄条的面积近似等于 
+\begin_inset Formula $2\sqrt{R^{2}-x^{2}}dx$
+\end_inset
+
+。
+因此，
+这窄条一侧所受水压力的近似值，
+即压力元素为
+\begin_inset Formula $dP=p\cdot dA=2\rho gx\sqrt{R^{2}-x^{2}}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Solution
+令
+\begin_inset Formula $u=R^{2}-x^{2}$
+\end_inset
+
+，
+则
+\begin_inset Formula $du=-2xdx\Rightarrow-\frac{1}{2}du=xdx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+变化上下限：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x=0\Rightarrow u=R^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x=R\Rightarrow u=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+代入得：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+P=2\rho g\int_{0}^{R}x\sqrt{R^{2}-x^{2}}\,dx=2\rho g\cdot\left(-\frac{1}{2}\int_{R^{2}}^{0}\sqrt{u}\,du\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+=\rho g\int_{0}^{R^{2}}u^{1/2}du=\rho g\cdot\left[\frac{2}{3}u^{3/2}\right]_{0}^{R^{2}}=\rho g\cdot\frac{2}{3}(R^{2})^{3/2}=\frac{2}{3}\rho gR^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 计算抽水功率
 \end_layout
 
@@ -69673,7 +70225,7 @@ frac{1}{4}x$，
 \begin_layout Standard
 这层水的体积为:
  
-\begin_inset Formula $dv=S(x)*dx$
+\begin_inset Formula $dv=S(x)\times dx$
 \end_inset
 
 .
@@ -69681,7 +70233,7 @@ frac{1}{4}x$，
 
 \begin_layout Standard
 这一层水抽取时受到的重力:
-\begin_inset Formula $F(x)=g\cdot\mu\cdot dv=g\cdot\mu\cdot S(x)*dx$
+\begin_inset Formula $F(x)=g\cdot\mu\cdot dv=g\cdot\mu\cdot S(x)\times dx$
 \end_inset
 
 
@@ -69698,7 +70250,7 @@ frac{1}{4}x$，
 \end_inset
 
  为重力加速度,
-\begin_inset Formula $\mu*dv$
+\begin_inset Formula $\mu\times dv$
 \end_inset
 
  为水的质量.
@@ -70038,9 +70590,6 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 
  设为原点.
  于是位置向量
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $\boldsymbol{r}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
 \end_inset
 
