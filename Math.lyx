@@ -70488,7 +70488,7 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 
  行星相对于太阳的距离,
  
-\begin_inset Formula $\boldsymbol{r}$
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}$
 \end_inset
 
  是行星相对于太阳的位移向量，
@@ -70497,12 +70497,12 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 \end_inset
 
 是 
-\begin_inset Formula $\boldsymbol{r}$
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}$
 \end_inset
 
  的单位向量,
  其中 
-\begin_inset Formula $\boldsymbol{r}=r\hat{\boldsymbol{r}}$
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}=r\hat{\boldsymbol{r}}$
 \end_inset
 
 .
@@ -70625,7 +70625,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 设
@@ -70853,6 +70853,992 @@ status open
 \end_layout
 
 \begin_layout Standard
+极坐标中的位置向量
+\end_layout
+
+\begin_layout Standard
+在平面极坐标中，
+一个点的位置由两部分描述：
+
+\begin_inset Formula $r$
+\end_inset
+
+：
+离原点的距离（标量）
+\begin_inset Formula $\theta$
+\end_inset
+
+：
+与极轴的夹角（标量）
+\end_layout
+
+\begin_layout Standard
+所以，
+ 位置向量 可表示为：
+
+\begin_inset Formula $\boldsymbol{r}=r\hat{\boldsymbol{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+：
+单位径向向量 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 是从原点指向该点的方向向量，
+长度为
+\begin_inset Formula $1$
+\end_inset
+
+，
+不包含长度信息（因为是单位向量）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+：
+单位切向向量，
+垂直于 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+，
+沿逆时针方向。
+
+\end_layout
+
+\begin_layout Standard
+这两个单位向量是时间相关的（因为点在运动，
+方向在变），
+所以求导时不能只对 
+\begin_inset Formula $r$
+\end_inset
+
+ 和 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 求导，
+也必须对 
+\begin_inset Formula $\hat{\boldsymbol{r}},\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 求导。
+
+\end_layout
+
+\begin_layout Standard
+单位向量的时间导数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\hat{\boldsymbol{\theta}},\quad\frac{d\hat{\boldsymbol{\theta}}}{dt}=-\dot{\theta}\hat{\boldsymbol{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这两个公式的本质，
+是由于极坐标系中的单位向量 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 都依赖于角度 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+，
+而 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 是时间的函数，
+所以它们的导数需要应用链式法则。
+
+\end_layout
+
+\begin_layout Standard
+表达极坐标单位向量
+\end_layout
+
+\begin_layout Standard
+我们先用直角坐标系中的单位向量 
+\begin_inset Formula $\hat{\boldsymbol{x}}$
+\end_inset
+
+、
+\begin_inset Formula $\hat{\boldsymbol{y}}$
+\end_inset
+
+ 表示极坐标单位向量：
+
+\end_layout
+
+\begin_layout Standard
+径向单位向量：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{r}}=\cos\theta\,\hat{\boldsymbol{x}}+\sin\theta\,\hat{\boldsymbol{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+切向单位向量（与 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 垂直，
+逆时针旋转90°）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{\theta}}=-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 求导
+\end_layout
+
+\begin_layout Standard
+我们要求的是 
+\begin_inset Formula $\frac{d\hat{\boldsymbol{r}}}{dt}$
+\end_inset
+
+，
+注意 
+\begin_inset Formula $\theta=\theta(t)$
+\end_inset
+
+ 是时间的函数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\frac{d}{dt}[\cos\theta(t)\,\hat{\boldsymbol{x}}+\sin\theta(t)\,\hat{\boldsymbol{y}}]=-\sin\theta\,\dot{\theta}\,\hat{\boldsymbol{x}}+\cos\theta\,\dot{\theta}\,\hat{\boldsymbol{y}}=\dot{\theta}(-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}})=\dot{\theta}\,\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以得到了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 求导
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{\theta}}}{dt}=\frac{d}{dt}[-\sin\theta(t)\,\hat{\boldsymbol{x}}+\cos\theta(t)\,\hat{\boldsymbol{y}}]=-\cos\theta\,\dot{\theta}\,\hat{\boldsymbol{x}}-\sin\theta\,\dot{\theta}\,\hat{\boldsymbol{y}}=-\dot{\theta}(\cos\theta\,\hat{\boldsymbol{x}}+\sin\theta\,\hat{\boldsymbol{y}})=-\dot{\theta}\,\hat{\boldsymbol{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{\theta}}}{dt}=-\dot{\theta}\hat{\boldsymbol{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当然，
+我们来**逐步详细解释**这个推导过程，
+说明每一步是如何从前一步推出的。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{r}}=\cos\theta(t)\,\hat{\boldsymbol{x}}+\sin\theta(t)\,\hat{\boldsymbol{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：
+这里的 
+\begin_inset Formula $\theta=\theta(t)$
+\end_inset
+
+，
+是随时间变化的角度（函数）。
+
+\end_layout
+
+\begin_layout Standard
+对时间求导
+\end_layout
+
+\begin_layout Standard
+我们要计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\frac{d}{dt}[\cos\theta(t)\,\hat{\boldsymbol{x}}+\sin\theta(t)\,\hat{\boldsymbol{y}}]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里 
+\begin_inset Formula $\hat{\boldsymbol{x}}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\hat{\boldsymbol{y}}$
+\end_inset
+
+ 是常量方向，
+不随时间变，
+所以只需对 
+\begin_inset Formula $\cos\theta(t)$
+\end_inset
+
+ 和 
+\begin_inset Formula $\sin\theta(t)$
+\end_inset
+
+ 求导。
+
+\end_layout
+
+\begin_layout Standard
+我们使用 链式法则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}[\cos(\theta(t))]=-\sin\theta(t)\,\dot{\theta}(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{d}{dt}[\sin\theta(t)]=\cos\theta(t)\,\dot{\theta}(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以代入后得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=-\sin\theta\,\dot{\theta}\,\hat{\boldsymbol{x}}+\cos\theta\,\dot{\theta}\,\hat{\boldsymbol{y}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+整理提取 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们把 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+ 提出来：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\dot{\theta}\left(-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+识别方向向量
+\end_layout
+
+\begin_layout Standard
+括号里的向量：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}}=\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是
+\series bold
+ 极坐标系中的切向单位向量
+\series default
+ 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以我们就得到了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\,\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 是始终垂直的单位向量。
+
+\end_layout
+
+\begin_layout Standard
+这是物理中常用的牛顿记号（Newton notation）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+符号 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+含义
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+角度，
+随时间变化的函数（
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+一阶导数，
+即角速度（angular velocity）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ddot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+二阶导数，
+即角加速度（angular acceleration）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是因为在物理学和工程中，
+牛顿记号（点号 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+）比数学中的莱布尼茨记号（
+\begin_inset Formula $\frac{d\theta}{dt}$
+\end_inset
+
+）更简洁，
+尤其在涉及时间导数的情况下，
+以下是原因：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+牛顿记号（
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+莱布尼茨记号（
+\begin_inset Formula $\frac{d\theta}{dt}$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+简洁、紧凑，
+适合写在公式中
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+更详细，
+能清楚表达变量和导数间的关系 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在物理公式中广泛使用 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在数学分析和计算中更常见
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要用于时间导数（尤其是运动学）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+可用于任意自变量
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{a}=\ddot{\vec{r}}=\frac{d^{2}\vec{r}}{dt^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 左边是牛顿记号：
+表示位置对时间的二阶导数（加速度）
+\end_layout
+
+\begin_layout Standard
+* 右边是莱布尼茨记号：
+完全相同含义，
+更详细但冗长
+\end_layout
+
+\begin_layout Standard
+由于角度变化，
+
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 会围绕原点旋转，
+方向变化的速度正是 
+\begin_inset Formula $\dot{\theta}\hat{\boldsymbol{\theta}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这意味着单位向量在随 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 转动时，
+它们在单位圆上匀速旋转：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 指向半径方向
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 指向切线方向
+\end_layout
+
+\begin_layout Standard
+它们彼此的导数就是沿对方方向旋转的速度（乘以 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Standard
+单位向量随时间变化的关键关系是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\hat{\boldsymbol{\theta}},\quad\frac{d\hat{\boldsymbol{\theta}}}{dt}=-\dot{\theta}\hat{\boldsymbol{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+速度向量的推导
+\end_layout
+
+\begin_layout Standard
+由 
+\begin_inset Formula $\boldsymbol{r}=r\hat{\boldsymbol{r}}$
+\end_inset
+
+ 可得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{\boldsymbol{r}}=\frac{d}{dt}(r\hat{\boldsymbol{r}})=\dot{r}\hat{\boldsymbol{r}}+r\frac{d\hat{\boldsymbol{r}}}{dt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用单位向量导数关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{\boldsymbol{r}}=\dot{r}\hat{\boldsymbol{r}}+r\dot{\theta}\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这说明：
+
+\end_layout
+
+\begin_layout Standard
+径向速度为 
+\begin_inset Formula $\dot{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+切向速度为 
+\begin_inset Formula $r\dot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+加速度向量的推导
+\end_layout
+
+\begin_layout Standard
+再对速度向量求导：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{\boldsymbol{r}}=\frac{d}{dt}(\dot{r}\hat{\boldsymbol{r}}+r\dot{\theta}\hat{\boldsymbol{\theta}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+拆开：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{\boldsymbol{r}}=\ddot{r}\hat{\boldsymbol{r}}+\dot{r}\frac{d\hat{\boldsymbol{r}}}{dt}+\dot{r}\dot{\theta}\hat{\boldsymbol{\theta}}+r\ddot{\theta}\hat{\boldsymbol{\theta}}+r\dot{\theta}\frac{d\hat{\boldsymbol{\theta}}}{dt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入：
+
+\end_layout
+
+\begin_layout Standard
+*
+\begin_inset Formula $\frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\hat{\boldsymbol{\theta}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\frac{d\hat{\boldsymbol{\theta}}}{dt}=-\dot{\theta}\hat{\boldsymbol{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{\boldsymbol{r}}=\ddot{r}\hat{\boldsymbol{r}}+\dot{r}\dot{\theta}\hat{\boldsymbol{\theta}}+\dot{r}\dot{\theta}\hat{\boldsymbol{\theta}}+r\ddot{\theta}\hat{\boldsymbol{\theta}}-r\dot{\theta}^{2}\hat{\boldsymbol{r}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+合并同类项：
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+hat{
+\backslash
+boldsymbol{r}}$ 分量：
+$
+\backslash
+ddot{r} - r
+\backslash
+dot{
+\backslash
+theta}^2$
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+hat{
+\backslash
+boldsymbol{
+\backslash
+theta}}$ 分量：
+$r
+\backslash
+ddot{
+\backslash
+theta} + 2
+\backslash
+dot{r}
+\backslash
+dot{
+\backslash
+theta}$
+\end_layout
+
+\begin_layout Standard
+最终加速度：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{\boldsymbol{r}}=(\ddot{r}-r\dot{\theta}^{2})\hat{\boldsymbol{r}}+(r\ddot{\theta}+2\dot{r}\dot{\theta})\hat{\boldsymbol{\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+加速度分两部分：
+
+\end_layout
+
+\begin_layout Standard
+径向分量：
+与万有引力等中心力相关
+\end_layout
+
+\begin_layout Standard
+切向分量：
+反映角动量变化
+\end_layout
+
+\begin_layout Standard
 对于位置向量
 \begin_inset Formula ${\displaystyle \boldsymbol{r}=r\hat{\boldsymbol{r}}}$
 \end_inset
@@ -70959,11 +71945,12 @@ status open
 \end_inset
 
  。
-由于行星的质量是常数，
-角动量对于时间的导数为
+
 \end_layout
 
 \begin_layout Standard
+由于行星的质量是常数，
+角动量对于时间的导数为
 \begin_inset Formula ${\displaystyle \dot{\ell}=mr(2\dot{r}\dot{\theta}+r\ddot{\theta})=0}$
 \end_inset
 
