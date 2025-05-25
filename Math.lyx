@@ -70387,8 +70387,526 @@ W & = & \underset{\Omega}{\iiint_{0}^{h}}F\cdot(H-z)=\underset{\Omega}{\iiint_{0
 
 \end_layout
 
-\begin_layout Section
-微积分与天体运行规律
+\begin_layout Subsection
+动量
+\end_layout
+
+\begin_layout Standard
+在经典力学里，
+动量（momentum，
+p）被量化为物体的质量和速度的乘积（
+\begin_inset Formula ${\displaystyle \mathbf{p}=m\mathbf{v}}$
+\end_inset
+
+），
+是一个向量。
+动量在国际单位制中的单位为
+\begin_inset Formula $kg·m/s$
+\end_inset
+
+。
+动量是一个参考系决定量。
+也就是说，
+同一个物体在一个参考系中具有确定的动量，
+但在另一个参考系中却有可能具有不同的动量。
+ 动量的定义 
+\begin_inset Formula $\boldsymbol{p}=mv$
+\end_inset
+
+ 并不是“推导”出来的，
+而是经典力学中的一个基本定义。
+
+\end_layout
+
+\begin_layout Standard
+动量对时间的一阶导数的定义如下(动量的变化率)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \frac{\mathrm{d}\mathbf{p}}{\mathrm{d}t}=\frac{\mathrm{d}(m\mathbf{v})}{\mathrm{d}t}=m\frac{\mathrm{d}\mathbf{v}}{\mathrm{d}t}+v\frac{\mathrm{d}m}{\mathrm{d}t}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\vec{p}$
+\end_inset
+
+为动量，
+
+\begin_inset Formula $t$
+\end_inset
+
+为时间，
+
+\begin_inset Formula $d$
+\end_inset
+
+为微分算符。
+ 
+\end_layout
+
+\begin_layout Standard
+当物体在运动中质量不变的情形下，
+
+\begin_inset Formula ${\displaystyle \frac{\mathrm{d}m}{\mathrm{d}t}=0}$
+\end_inset
+
+，
+此时，
+可以将动量对时间的一阶导数简写作
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \frac{\mathrm{d}\mathbf{p}}{\mathrm{d}t}=m\frac{\mathrm{d}\mathbf{v}}{\mathrm{d}t}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设一个质量为
+\begin_inset Formula $m$
+\end_inset
+
+的物体，
+初速度为
+\begin_inset Formula $v$
+\end_inset
+
+，
+那么初动量为
+\begin_inset Formula $\boldsymbol{p}=mv$
+\end_inset
+
+,在合力
+\begin_inset Formula $F$
+\end_inset
+
+的作用下，
+经过一段时间
+\begin_inset Formula $t$
+\end_inset
+
+速度变为 
+\begin_inset Formula ${\displaystyle v^{'}}$
+\end_inset
+
+，
+末动量则变为
+\begin_inset Formula ${\displaystyle p^{'}=mv^{'}}$
+\end_inset
+
+。
+物体的加速度为
+\begin_inset Formula ${\displaystyle a=\frac{v^{'}-v}{t}}$
+\end_inset
+
+。
+由牛顿第二定律 
+\begin_inset Formula ${\displaystyle F=ma=\frac{mv^{'}-mv}{t}}$
+\end_inset
+
+可得 
+\begin_inset Formula ${\displaystyle Ft=mv^{'}-mv}$
+\end_inset
+
+，
+即
+\begin_inset Formula ${\displaystyle Ft=p^{'}-p=\Delta p}$
+\end_inset
+
+,合外力的冲量等于动量的变化量。
+
+\end_layout
+
+\begin_layout Standard
+在动量定理的推导过程中，
+我们假定合力F是恒定的，
+但是在实际生活当中要比这个复杂的多。
+如用球拍击打球或是用脚踢踢球时作用力就不是恒定的。
+但可以证明，
+动量定理不但适用于恒力，
+也可以随时间而变化的变力，
+对于变力的情况，
+动量定理中的F应理解为在作用时间内的平均值。
+此时作用力 
+\begin_inset Formula ${\displaystyle \mathbf{F}=\frac{\mathrm{d}\mathbf{p}}{\mathrm{d}t}=\ensuremath{\frac{\Delta\mathbf{p}}{\Delta t}}}$
+\end_inset
+
+ 也称作动量的变化率。
+ 
+\end_layout
+
+\begin_layout Itemize
+如果质量不是常数（如火箭推进），
+就必须考虑
+\begin_inset Formula $\frac{dm}{dt}\neq0$
+\end_inset
+
+，
+此时动量变化包含质量变化项。
+
+\end_layout
+
+\begin_layout Itemize
+冲量与动量定理的联系非常紧密，
+冲量定义为：
+
+\begin_inset Formula 
+\[
+\mathbf{J}=\int_{t_{0}}^{t_{1}}\mathbf{F}(t)\,dt=\Delta\mathbf{p}
+\]
+
+\end_inset
+
+它是动量变化的另一个表达方式。
+
+\end_layout
+
+\begin_layout Subsection
+角动量
+\end_layout
+
+\begin_layout Standard
+在物理学中，
+角动量是与物体的位置矢量和动量相关的物理量。
+对于某惯性参考系的原点 
+\begin_inset Formula ${\displaystyle \mathbf{O}}$
+\end_inset
+
+，
+物体的角动量是物体的位置矢量和动量的叉积，
+通常写做
+\begin_inset Formula ${\displaystyle \mathbf{L}}$
+\end_inset
+
+。
+角动量是矢量，
+且是一赝矢量（在瑕旋转下，
+除了随之反射外，
+还会再上下翻转的矢量（因为右手定则的关系））。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{L}=\mathbf{r}\times\mathbf{p}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+
+\begin_inset Formula ${\displaystyle \mathbf{r}}$
+\end_inset
+
+表示物体的位置矢量，
+ 
+\begin_inset Formula ${\displaystyle \mathbf{L}}$
+\end_inset
+
+表示角动量。
+
+\begin_inset Formula ${\displaystyle \mathbf{p}}$
+\end_inset
+
+表示动量。
+角动量
+\begin_inset Formula ${\displaystyle \mathbf{L}}$
+\end_inset
+
+又可写为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{L}=\mathbf{r}\times\mathbf{p}=\mathbf{r}\times(m\mathbf{v})=\mathbf{r}\times(\boldsymbol{\omega}\times(m\mathbf{r}))=mr^{2}\boldsymbol{\omega}=I\boldsymbol{\omega}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中，
+ 
+\begin_inset Formula ${\displaystyle I}$
+\end_inset
+
+表示质点的转动惯量，
+
+\begin_inset Formula ${\displaystyle \boldsymbol{\omega}}$
+\end_inset
+
+是角速度矢量。
+
+\end_layout
+
+\begin_layout Standard
+若已知速度方向与位置矢量方向。
+
+\end_layout
+
+\begin_layout Standard
+角动量大小可以写为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\mathbf{L}|=mrv\sin\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r$
+\end_inset
+
+：
+质点到参考点的距离
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v$
+\end_inset
+
+：
+速度大小
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta$
+\end_inset
+
+：
+
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ 与 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ 之间的夹角
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \mathbf{r}}$
+\end_inset
+
+表示物体的位置矢量，
+也叫位矢，
+它是一个从参考点（通常是原点 O）指向物体所在位置的向量。
+
+\end_layout
+
+\begin_layout Standard
+这个定义中的
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ 是从参考点（通常是转轴或原点）到质点的矢量。
+它告诉我们：
+角动量不仅与质点动得快不快有关，
+还与它距离旋转中心的远近有关。
+
+\end_layout
+
+\begin_layout Standard
+假设我们使用笛卡尔坐标系（三维直角坐标系）：
+ 参考点 O 是坐标原点
+\begin_inset Formula $(0,0,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+某物体的位置是 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么该物体的位置矢量为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{r}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{i},\mathbf{j},\mathbf{k}$
+\end_inset
+
+ 是单位向量，
+分别指向 
+\begin_inset Formula $x$
+\end_inset
+
+、
+\begin_inset Formula $y$
+\end_inset
+
+、
+\begin_inset Formula $z$
+\end_inset
+
+ 方向
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ 是从原点到物体所在点的分量
+\end_layout
+
+\begin_layout Standard
+大小：
+
+\begin_inset Formula $|\mathbf{r}|=\sqrt{x^{2}+y^{2}+z^{2}}$
+\end_inset
+
+，
+即原点到该点的直线距离
+\end_layout
+
+\begin_layout Standard
+方向：
+指向物体当前所在位置。
+
+\end_layout
+
+\begin_layout Standard
+角速度矢量 
+\begin_inset Formula $\boldsymbol{\omega}$
+\end_inset
+
+ 的定义
+\end_layout
+
+\begin_layout Standard
+大小：
+表示物体单位时间内转过的角度，
+单位是 弧度/秒（rad/s）
+\end_layout
+
+\begin_layout Standard
+方向：
+表示旋转轴的方向，
+用右手定则确定：
+
+\end_layout
+
+\begin_layout Standard
+如果手指的弯曲方向表示物体的旋转方向，
+那么大拇指指的方向就是 
+\begin_inset Formula $\boldsymbol{\omega}$
+\end_inset
+
+ 的方向
+\end_layout
+
+\begin_layout Standard
+假设作用于物体的外力矩和为零，
+则物体的角动量是守恒的。
+需要注意的是，
+由于成立的条件不同，
+角动量是否守恒与动量是否守恒没有直接的联系。
+
+\end_layout
+
+\begin_layout Standard
+当物体的运动状态（动量）发生变化，
+则表示物体受力作用，
+而作用力大小就等于动量 P {
+\backslash
+displaystyle 
+\backslash
+mathbf {P} }的时变率：
+ F = d P d t {
+\backslash
+displaystyle 
+\backslash
+mathbf {F} ={
+\backslash
+frac {d
+\backslash
+mathbf {P} }{dt}}}
+\end_layout
+
+\begin_layout Standard
+当物体的转动状态发生改变时，
+表示物体受到力矩作用，
+而力矩就等于角动量的时变率：
+ τ = d L d t {
+\backslash
+displaystyle {
+\backslash
+boldsymbol {
+\backslash
+tau }}={
+\backslash
+frac {d
+\backslash
+mathbf {L} }{dt}}}
+\end_layout
+
+\begin_layout Standard
+若物体（或系统）所受外力矩和为零，
+则物体（系统）的角动量守恒。
+例如静电力或万有引力均是径向力，
+因此不会产生力矩。
+行星运动的相互作用力源自于万有引力，
+故行星运动满足角动量守恒，
+所对应的就是开普勒定律中的第二定律。
+
+\end_layout
+
+\begin_layout Standard
+需要特别说明的是，
+动量 P ≡ m v {
+\backslash
+displaystyle 
+\backslash
+mathbf {P} 
+\backslash
+equiv m
+\backslash
+mathbf {v} }，
+也就是说，
+动量的方向和速度的方向一致。
+ 
 \end_layout
 
 \begin_layout Subsection
