@@ -28318,7 +28318,8 @@ Leonhard Paul Euler,
 \begin_inset Formula $i$
 \end_inset
 
-乘以正弦).
+乘以正弦)。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -28340,10 +28341,6 @@ Leonhard Paul Euler,
 \end_inset
 
 ),即欧拉恒等式.
-\end_layout
-
-\begin_layout Standard
-证明:
 \end_layout
 
 \begin_layout Chapter
@@ -63370,85 +63367,6 @@ I^{2} & =\iint_{D}e^{-(x^{2}+y^{2})}dxdy\\
  
 \end_layout
 
-\begin_layout Section
-格林公式
-\end_layout
-
-\begin_layout Standard
-在物理学与数学中，
-格林定理给出了沿封闭曲线 C 的线积分与以 C 为边界的平面区域 D 上的双重积分的联系。
-格林定理是斯托克斯定理的二维特例，
-以英国数学家乔治·格林（George Green）命名。
-
-\end_layout
-
-\begin_layout Standard
-设闭区域
-\begin_inset Formula $D$
-\end_inset
-
- 由分段光滑的简单曲线
-\begin_inset Formula $ L $
-\end_inset
-
-围成，
-函数 
-\begin_inset Formula $P(x,y)$
-\end_inset
-
-及 
-\begin_inset Formula $Q(x,y)$
-\end_inset
-
-在
-\begin_inset Formula $ D $
-\end_inset
-
-上有一阶连续偏导数，
-则有:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle \iint\limits_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\mathrm{d}x\mathrm{d}y=\oint_{L^{+}}(P\mathrm{d}x+Q\mathrm{d}y)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-其中
-\begin_inset Formula $L^{+}$
-\end_inset
-
-是D的取正向的边界曲线。
-
-\end_layout
-
-\begin_layout Standard
-此公式叫做格林公式，
-它给出了沿着闭曲线L的曲线积分与L所包围的区域D上的二重积分之间的关系。
-另见格林恒等式。
-格林公式还可以用来计算平面图形的面积。
- 
-\end_layout
-
-\begin_layout Paragraph
-求积仪
-\end_layout
-
-\begin_layout Standard
-求积仪，
-也称为面积仪（英语：
-Planimeter），
-是量度面积的仪器，
-为量度不规则的平面面积而设。
- 
-\end_layout
-
 \begin_layout Chapter
 微分方程
 \end_layout
@@ -74456,8 +74374,3403 @@ Nabla算子
 是一个势场.
  但需注意，
 任意一个向量场并不一定都是势场，
-因为它不一定是某个数量函数的梯度.
+因为它不一定是某个数量函数的梯度。
+
+\end_layout
+
+\begin_layout Section
+格林公式
+\end_layout
+
+\begin_layout Standard
+格林公式（Green's Theorem），
+又称格林定理，
+是向量微积分中的一个重要定理，
+它将二维平面上一个封闭曲线的线积分与其所围区域的面积分联系起来。
+它是斯托克斯定理（Stokes' Theorem）在二维平面上的特殊情况。
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $C$
+\end_inset
+
+ 是平面上一个分段光滑、简单（不自交）的封闭曲线，
+且以逆时针方向（正向）为积分方向。
+设 
+\begin_inset Formula $D$
+\end_inset
+
+ 是 
+\begin_inset Formula $C$
+\end_inset
+
+ 所围成的区域。
+如果函数 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(x,y)$
+\end_inset
+
+ 在包含 
+\begin_inset Formula $D$
+\end_inset
+
+ 的某个开放区域内具有连续的一阶偏导数，
+那么格林公式可以表述为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\oint_{C}(P\,dx+Q\,dy)=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\,dA
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\oint_{C}$
+\end_inset
+
+ 表示沿着封闭曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 的线积分。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dx$
+\end_inset
+
+ 和 
+\begin_inset Formula $dy$
+\end_inset
+
+ 是微分元素。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\iint_{D}$
+\end_inset
+
+ 表示在区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 上的二重积分（面积分）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dA$
+\end_inset
+
+ 表示面积元素，
+通常是 
+\begin_inset Formula $dx\,dy$
+\end_inset
+
+ 或 
+\begin_inset Formula $dy\,dx$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial Q}{\partial x}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\frac{\partial P}{\partial y}$
+\end_inset
+
+ 分别表示 
+\begin_inset Formula $Q$
+\end_inset
+
+ 对 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $P$
+\end_inset
+
+ 对 
+\begin_inset Formula $y$
+\end_inset
+
+ 的偏导数。
+
+\end_layout
+
+\begin_layout Standard
+格林公式的条件
+\end_layout
+
+\begin_layout Enumerate
+曲线 
+\begin_inset Formula $C$
+\end_inset
+
+：
+必须是分段光滑的、简单的（不自交的）封闭曲线。
+
+\end_layout
+
+\begin_layout Enumerate
+方向：
+ 积分方向必须是逆时针方向（正向）。
+如果是顺时针方向，
+则结果会差一个负号。
+
+\end_layout
+
+\begin_layout Enumerate
+函数 
+\begin_inset Formula $P,Q$
+\end_inset
+
+：
  
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(x,y)$
+\end_inset
+
+ 在包含区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 的某个开放区域内必须具有连续的一阶偏导数。
+
+\end_layout
+
+\begin_layout Enumerate
+区域 
+\begin_inset Formula $D$
+\end_inset
+
+：
+由曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 围成的区域。
+
+\end_layout
+
+\begin_layout Standard
+格林公式的意义和应用
+\end_layout
+
+\begin_layout Standard
+格林公式的意义在于它提供了一种将沿封闭路径的积分转换为在路径所围区域上的积分的方法。
+这在很多情况下可以大大简化计算。
+
+\end_layout
+
+\begin_layout Enumerate
+计算面积：
+如果选择合适的 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+ 使得 
+\begin_inset Formula $\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$
+\end_inset
+
+，
+那么格林公式就可以用来计算区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 的面积：
+
+\begin_inset Formula 
+\[
+\text{Area}(D)=\iint_{D}1\,dA=\oint_{C}(P\,dx+Q\,dy)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+常用的组合有：
+
+\end_layout
+
+\begin_layout Itemize
+取 
+\begin_inset Formula $P=0,Q=x$
+\end_inset
+
+，
+则
+\begin_inset Formula $\text{Area}(D)=\oint_{C}x\,dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+取 
+\begin_inset Formula $P=-y,Q=0$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\text{Area}(D)=\oint_{C}-y\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+取
+\begin_inset Formula $P=-\frac{1}{2}y,Q=\frac{1}{2}x$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\text{Area}(D)=\frac{1}{2}\oint_{C}(x\,dy-y\,dx)$
+\end_inset
+
+ (这是最常用的面积公式)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算力场做功（环量）：
+在物理中，
+如果 
+\begin_inset Formula $\mathbf{F}(x,y)=P(x,y)\mathbf{i}+Q(x,y)\mathbf{j}$
+\end_inset
+
+ 是一个力场，
+那么沿着封闭曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 的线积分 
+\begin_inset Formula $\oint_{C}\mathbf{F}\cdot d\mathbf{r}=\oint_{C}(P\,dx+Q\,dy)$
+\end_inset
+
+ 代表力场对物体做功的环量。
+格林公式将其与力场在区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内部的“旋度”累积联系起来。
+
+\end_layout
+
+\begin_layout Enumerate
+计算通量（Flux Form）：
+格林公式还有一种形式与通量有关。
+如果 
+\begin_inset Formula $\mathbf{F}(x,y)=P(x,y)\mathbf{i}+Q(x,y)\mathbf{j}$
+\end_inset
+
+ 是一个向量场，
+通过封闭曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 向外的通量可以表示为：
+
+\begin_inset Formula 
+\[
+\oint_{C}(P\,dy-Q\,dx)=\iint_{D}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}\right)\,dA
+\]
+
+\end_inset
+
+这个形式实际上是散度定理（Divergence Theorem）在二维平面上的特殊情况。
+
+\end_layout
+
+\begin_layout Example
+计算椭圆的面积。
+通常我们知道椭圆的面积公式是 
+\begin_inset Formula $\pi ab$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 分别是半长轴和半短轴的长度。
+我们可以利用格林公式来推导或验证这个面积。
+
+\end_layout
+
+\begin_layout Example
+计算椭圆 
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+ 的面积，
+使用格林公式计算由椭圆
+\begin_inset Formula $C:\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+ 围成的区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 的面积。
+
+\end_layout
+
+\begin_layout Solution
+为了计算区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 的面积 
+\begin_inset Formula $A(D)=\iint_{D}1\,dA$
+\end_inset
+
+，
+我们可以选择函数 
+\begin_inset Formula $P(x,y)$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(x,y)$
+\end_inset
+
+，
+使得 
+\begin_inset Formula $\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+常用的选择有：
+
+\end_layout
+
+\begin_layout Solution
+1.
+ 
+\begin_inset Formula $P(x,y)=0,Q(x,y)=x\Rightarrow\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1-0=1$
+\end_inset
+
+，
+此时 
+\begin_inset Formula $A(D)=\oint_{C}x\,dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+2.
+ 
+\begin_inset Formula $P(x,y)=-y,Q(x,y)=0\Rightarrow\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=0-(-1)=1$
+\end_inset
+
+，
+此时 
+\begin_inset Formula $A(D)=\oint_{C}-y\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+3.
+ 
+\begin_inset Formula $P(x,y)=-\frac{1}{2}y,Q(x,y)=\frac{1}{2}x\Rightarrow\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=\frac{1}{2}-(-\frac{1}{2})=1$
+\end_inset
+
+，
+此时 
+\begin_inset Formula $A(D)=\frac{1}{2}\oint_{C}(x\,dy-y\,dx)$
+\end_inset
+
+ （这个形式在计算面积时特别常用和方便）
+\end_layout
+
+\begin_layout Solution
+我们选择第三种形式来计算。
+
+\end_layout
+
+\begin_layout Solution
+步骤：
+
+\end_layout
+
+\begin_layout Solution
+1.
+ 参数化椭圆边界 
+\begin_inset Formula $C$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Solution
+椭圆的参数方程为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x=a\cos t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $y=b\sin t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+其中 
+\begin_inset Formula $t$
+\end_inset
+
+ 的范围从 
+\begin_inset Formula $0$
+\end_inset
+
+ 到 
+\begin_inset Formula $2\pi$
+\end_inset
+
+，
+以确保逆时针方向绕行整个椭圆。
+
+\end_layout
+
+\begin_layout Solution
+2.
+ 计算 
+\begin_inset Formula $dx$
+\end_inset
+
+ 和 
+\begin_inset Formula $dy$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dx=\frac{d}{dt}(a\cos t)\,dt=-a\sin t\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $dy=\frac{d}{dt}(b\sin t)\,dt=b\cos t\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+3.
+ 代入格林公式的面积形式：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\frac{1}{2}\oint_{C}(x\,dy-y\,dx)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+将参数方程代入：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $x\,dy=(a\cos t)(b\cos t\,dt)=ab\cos^{2}t\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $y\,dx=(b\sin t)(-a\sin t\,dt)=-ab\sin^{2}t\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+所以，
+
+\begin_inset Formula $x\,dy-y\,dx=ab\cos^{2}t\,dt-(-ab\sin^{2}t\,dt)=ab\cos^{2}t\,dt+ab\sin^{2}t\,dt=ab(\cos^{2}t+\sin^{2}t)\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+由于 
+\begin_inset Formula $\cos^{2}t+\sin^{2}t=1$
+\end_inset
+
+，
+上式简化为：
+
+\begin_inset Formula $=ab\,dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+4.
+ 计算定积分：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\frac{1}{2}\int_{0}^{2\pi}(ab\,dt)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\frac{ab}{2}\int_{0}^{2\pi}dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\frac{ab}{2}[t]_{0}^{2\pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\frac{ab}{2}(2\pi-0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $A(D)=\pi ab$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+结果：
+
+\end_layout
+
+\begin_layout Solution
+通过格林公式，
+我们成功计算出椭圆的面积为 
+\begin_inset Formula $\pi ab$
+\end_inset
+
+，
+这与我们已知的椭圆面积公式完全吻合。
+
+\end_layout
+
+\begin_layout Subsection
+平面上曲线积分与路径无关
+\end_layout
+
+\begin_layout Standard
+平面上曲线积分与路径无关是一个非常重要的概念，
+它与保守力场（Conservative Vector Field）和全微分（Exact Differential）紧密相关。
+
+\end_layout
+
+\begin_layout Standard
+对于一个向量场 
+\begin_inset Formula $\mathbf{F}(x,y)=P(x,y)\mathbf{i}+Q(x,y)\mathbf{j}$
+\end_inset
+
+，
+其在平面上曲线 $C$ 上的线积分 $
+\backslash
+int_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy)$ 与路径无关，
+意味着积分值只取决于路径的起点和终点，
+而与路径的具体形状无关。
+
+\end_layout
+
+\begin_layout Standard
+这等价于以下几个条件：
+
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 存在标量势函数（Potential Function）
+\end_layout
+
+\begin_layout Standard
+如果 $
+\backslash
+int_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy)$ 与路径无关，
+那么一定存在一个在区域 $D$ 内定义的标量函数 $
+\backslash
+phi(x,y)$，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+mathbf{F}(x,y) = 
+\backslash
+nabla 
+\backslash
+phi(x,y) $$
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+$$ P(x,y) = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial x} 
+\backslash
+quad 
+\backslash
+text{和} 
+\backslash
+quad Q(x,y) = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial y} $$
+\end_layout
+
+\begin_layout Standard
+此时，
+该向量场 $
+\backslash
+mathbf{F}$ 称为**保守向量场**。
+
+\end_layout
+
+\begin_layout Standard
+根据线积分基本定理（或梯度定理），
+线积分的值可以简单地通过势函数在终点和起点的差值来计算：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+int_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy) = 
+\backslash
+phi(B) - 
+\backslash
+phi(A) $$
+\end_layout
+
+\begin_layout Standard
+其中 $A$ 是路径 $C$ 的起点，
+ $B$ 是路径 $C$ 的终点。
+
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 沿任何闭合路径的积分为零
+\end_layout
+
+\begin_layout Standard
+如果线积分与路径无关，
+那么沿该区域内任何一条**封闭曲线** $C$ 的线积分都必须为零：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy) = 0 $$
+\end_layout
+
+\begin_layout Standard
+反之，
+如果沿任何闭合路径的积分为零，
+那么线积分就与路径无关。
+这是判断路径无关性最直接的充要条件之一。
+
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 克莱罗定理条件（偏导数交叉相等）
+\end_layout
+
+\begin_layout Standard
+这是在实际操作中最常用的判断条件。
+
+\end_layout
+
+\begin_layout Standard
+如果函数 $P(x,y)$ 和 $Q(x,y)$ 在一个**单连通区域** $D$ 内具有连续的一阶偏导数，
+那么线积分与路径无关的充要条件是：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} $$
+\end_layout
+
+\begin_layout Standard
+**解释：
+**
+\end_layout
+
+\begin_layout Standard
+* **推导过程：
+** 如果存在 $
+\backslash
+phi(x,y)$ 使得 $P = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial x}$ 和 $Q = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial y}$，
+那么：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial y} 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial x} 
+\backslash
+right) = 
+\backslash
+frac{
+\backslash
+partial^2 
+\backslash
+phi}{
+\backslash
+partial y 
+\backslash
+partial x} $$
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} = 
+\backslash
+frac{
+\backslash
+partial}{
+\backslash
+partial x} 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial y} 
+\backslash
+right) = 
+\backslash
+frac{
+\backslash
+partial^2 
+\backslash
+phi}{
+\backslash
+partial x 
+\backslash
+partial y} $$
+\end_layout
+
+\begin_layout Standard
+根据二阶混合偏导数连续时相等的定理（克莱罗定理），
+$
+\backslash
+frac{
+\backslash
+partial^2 
+\backslash
+phi}{
+\backslash
+partial y 
+\backslash
+partial x} = 
+\backslash
+frac{
+\backslash
+partial^2 
+\backslash
+phi}{
+\backslash
+partial x 
+\backslash
+partial y}$，
+因此 $
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x}$ 成立。
+
+\end_layout
+
+\begin_layout Standard
+* **“单连通区域”的重要性：
+**
+\end_layout
+
+\begin_layout Standard
+这个条件是**充要条件**的关键。
+一个区域是**单连通区域**意味着该区域内没有“洞”（holes）。
+例如，
+整个平面、一个圆盘、一个矩形区域都是单连通的。
+而一个被挖去一个点的圆盘（例如 $R^2 
+\backslash
+setminus 
+\backslash
+{(0,0)
+\backslash
+}$）就不是单连通的。
+
+\end_layout
+
+\begin_layout Standard
+如果在非单连通区域内满足 $
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x}$，
+那么线积分可能仍然与路径有关。
+例如，
+考虑向量场 $
+\backslash
+mathbf{F}(x,y) = 
+\backslash
+left( 
+\backslash
+frac{-y}{x^2+y^2} 
+\backslash
+right)
+\backslash
+mathbf{i} + 
+\backslash
+left( 
+\backslash
+frac{x}{x^2+y^2} 
+\backslash
+right)
+\backslash
+mathbf{j}$。
+
+\end_layout
+
+\begin_layout Standard
+对于这个场，
+在 $(x,y) 
+\backslash
+neq (0,0)$ 的区域内，
+可以验证 $
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x}$。
+但如果路径围绕原点，
+例如单位圆，
+它的线积分 $
+\backslash
+oint_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 2
+\backslash
+pi 
+\backslash
+neq 0$，
+所以它不是路径无关的。
+这是因为区域 $R^2 
+\backslash
+setminus 
+\backslash
+{(0,0)
+\backslash
+}$ 不是单连通的。
+
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+判断平面上曲线积分与路径无关的条件：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **最根本的判断：
+** 是否存在一个标量函数 $
+\backslash
+phi(x,y)$（势函数），
+使得 $
+\backslash
+mathbf{F} = 
+\backslash
+nabla 
+\backslash
+phi$。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **几何判断：
+** 沿区域内任意闭合路径的线积分是否为零。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **计算判断（最常用）：
+** 在**单连通区域**内，
+检查 $
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x}$ 是否成立。
+如果成立，
+则线积分与路径无关，
+并且你可以找到对应的势函数 $
+\backslash
+phi(x,y)$。
+
+\end_layout
+
+\begin_layout Standard
+在实际问题中，
+通常会使用第三种条件来快速判断。
+如果该条件满足，
+且区域是单连通的，
+那么就可以确定线积分与路径无关，
+然后可以通过找到势函数或者直接积分（选择简单路径）来计算线积分的值。
+
+\end_layout
+
+\begin_layout Subsection
+与其他定理的关系
+\end_layout
+
+\begin_layout Standard
+斯托克斯定理：
+ 格林公式是斯托克斯定理在二维平面上的特例。
+当三维空间中的曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 恰好是 
+\begin_inset Formula $xy$
+\end_inset
+
+ 平面上的一个平面区域 
+\begin_inset Formula $D$
+\end_inset
+
+，
+且其边界 
+\begin_inset Formula $\partial S$
+\end_inset
+
+ 是曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 时，
+斯托克斯定理 
+\begin_inset Formula $\oint_{\partial S}\mathbf{F}\cdot d\mathbf{r}=\iint_{S}(\nabla\times\mathbf{F})\cdot d\mathbf{S}$
+\end_inset
+
+ 就简化为格林公式。
+
+\end_layout
+
+\begin_layout Standard
+散度定理：
+格林公式的通量形式是散度定理在二维平面上的特例。
+
+\end_layout
+
+\begin_layout Subsection
+求积仪
+\end_layout
+
+\begin_layout Standard
+求积仪，
+也称为面积仪（英语：
+Planimeter），
+是量度面积的仪器，
+为量度不规则的平面面积而设。
+ 
+\end_layout
+
+\begin_layout Standard
+面积仪（Planimeter）是一种用于测量不规则平面图形面积的仪器。
+它的主要功能是，
+当使用者沿着一个封闭图形的边界描绘一圈时，
+仪器能够自动计算出该图形所围成的面积。
+
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 工作原理
+\end_layout
+
+\begin_layout Standard
+面积仪的工作原理是基于**格林公式（Green's Theorem）**。
+格林公式将平面上一个封闭曲线的线积分与该曲线所围区域的面积分联系起来：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy) = 
+\backslash
+iint_D 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} - 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} 
+\backslash
+right) 
+\backslash
+,
+ dA $$
+\end_layout
+
+\begin_layout Standard
+为了计算面积 $A(D) = 
+\backslash
+iint_D 1 
+\backslash
+,
+ dA$，
+我们可以选择 $P$ 和 $Q$ 使得 $
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} - 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 1$。
+一个常用的选择是 $P = -
+\backslash
+frac{1}{2}y$ 和 $Q = 
+\backslash
+frac{1}{2}x$。
+在这种情况下，
+格林公式变为：
+
+\end_layout
+
+\begin_layout Standard
+$$ A(D) = 
+\backslash
+iint_D 1 
+\backslash
+,
+ dA = 
+\backslash
+frac{1}{2} 
+\backslash
+oint_C (x 
+\backslash
+,
+ dy - y 
+\backslash
+,
+ dx) $$
+\end_layout
+
+\begin_layout Standard
+面积仪的机械结构（特别是测量轮的运动）就是巧妙地设计来物理地执行这个线积分。
+当描绘点沿着封闭曲线 $C$ 移动时，
+测量轮的滚动量与 $x 
+\backslash
+,
+ dy - y 
+\backslash
+,
+ dx$ 的积分成正比，
+从而直接给出所围区域的面积。
+测量轮只记录垂直于其旋转轴的移动分量，
+巧妙地过滤掉了平行于轴的移动，
+这正是实现积分的关键。
+
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 主要类型
+\end_layout
+
+\begin_layout Standard
+面积仪主要有两种类型：
+
+\end_layout
+
+\begin_layout Standard
+* **极坐标面积仪（Polar Planimeter）**：
+这是最常见和最经典的类型。
+它有一个固定的**极点（Pole）**，
+通过一根**极杆（Pole Arm）**连接到一个**测量单元（Measuring Unit）**。
+测量单元上有一根**描绘杆（Tracer Arm）**，
+末端是**描绘点（Tracer Point）**。
+当描绘点沿着图形边界移动时，
+测量单元上的轮子会滚动并记录移动量。
+
+\end_layout
+
+\begin_layout Standard
+* **直线面积仪（Linear Planimeter）**：
+这种面积仪沿着一条直线轨道移动，
+通常用于测量长条形或带状图形的面积，
+如公路、河流的横截面积图。
+
+\end_layout
+
+\begin_layout Standard
+* **数字面积仪（Digital Planimeter）**：
+现代的面积仪，
+使用光学传感器代替机械轮，
+将描绘点的运动数据直接输入微处理器进行计算，
+并在数字显示屏上显示结果。
+它们通常更精确，
+操作更简便。
+
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 极坐标面积仪的组成部分
+\end_layout
+
+\begin_layout Standard
+以最常见的极坐标面积仪为例，
+它通常由以下部分组成：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **极点/锚点（Anchor Point/Pole）：
+** 一个固定在图纸上不动的小重物或针点。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **极杆（Pole Arm）：
+** 一根连接极点和测量单元的固定长度的杆。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **测量单元（Measuring Unit）：
+** 包含一个精密滚轮和读数装置（刻度盘、游标尺或数字显示屏）。
+这个滚轮只测量垂直于其轴线的运动。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **描绘杆（Tracer Arm）：
+** 一根连接测量单元和描绘点的杆，
+其长度可调节，
+以适应不同的比例尺或测量精度。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ **描绘点（Tracer Point）：
+** 一个带有放大镜的尖点，
+用于精确地沿着图形边界移动。
+
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 使用方法（以极坐标面积仪为例）
+\end_layout
+
+\begin_layout Standard
+1.
+ **准备：
+** 将要测量的图纸平铺在平坦的表面上。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **放置：
+** 将极点固定在图纸上，
+位置应确保描绘点能覆盖整个待测图形。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **校准/读数归零：
+** 将测量轮的读数归零。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **描绘：
+** 将描绘点精确地放置在图形边界的某一固定起点上。
+然后，
+沿着图形边界以**顺时针或逆时针方向**（通常建议逆时针，
+以获得正值结果）精确地描绘一圈，
+最终回到起点。
+描绘过程应尽可能平稳和精确。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ **读取：
+** 描绘完成后，
+从测量单元上读取最终的数值。
+
+\end_layout
+
+\begin_layout Standard
+6.
+ **计算：
+** 根据面积仪的比例尺或设置的杆长，
+将读数乘以相应的常数（称为“面积仪常数”或“标尺因子”），
+即可得到实际面积。
+
+\end_layout
+
+\begin_layout Standard
+### 5.
+ 优点与缺点
+\end_layout
+
+\begin_layout Standard
+**优点：
+**
+\end_layout
+
+\begin_layout Standard
+* **测量不规则图形：
+** 能够精确测量任意形状的平面图形面积，
+而不仅仅是规则的几何形状。
+
+\end_layout
+
+\begin_layout Standard
+* **操作相对简单：
+** 一旦掌握了技巧，
+操作并不复杂。
+
+\end_layout
+
+\begin_layout Standard
+* **无需复杂计算：
+** 仪器本身完成积分，
+用户只需读数和简单的乘法。
+
+\end_layout
+
+\begin_layout Standard
+* **广泛应用：
+** 在工程、测绘、生物学、医学等领域，
+用于测量地图面积、土地面积、叶片面积、病灶面积等。
+
+\end_layout
+
+\begin_layout Standard
+**缺点：
+**
+\end_layout
+
+\begin_layout Standard
+* **精度依赖于操作者：
+** 描绘点的精确度直接影响测量结果的准确性，
+需要一定的练习和技巧。
+
+\end_layout
+
+\begin_layout Standard
+* **机械磨损和校准：
+** 机械式面积仪容易磨损，
+需要定期校准以保持精度。
+
+\end_layout
+
+\begin_layout Standard
+* **局限性：
+** 测量面积的大小受限于面积仪臂长，
+对于过大或过小的图形可能不适用。
+
+\end_layout
+
+\begin_layout Standard
+* **被取代：
+** 随着计算机技术的发展，
+CAD软件、GIS（地理信息系统）和图像处理软件现在可以更方便、更精确地计算图形面积，
+因此物理面积仪的使用已经大大减少。
+
+\end_layout
+
+\begin_layout Standard
+尽管如此，
+面积仪作为一种经典的测量工具，
+其巧妙的数学原理和机械设计仍然是工程和数学教育中的一个绝佳案例。
+
+\end_layout
+
+\begin_layout Section
+高斯公式 通量与散度
+\end_layout
+
+\begin_layout Standard
+“高斯公式”通常指的是两个在数学和物理学中都非常重要的概念，
+它们密切相关但应用领域略有不同：
+
+\end_layout
+
+\begin_layout Subsubsection
+高斯定理 
+\end_layout
+
+\begin_layout Standard
+高斯定理（Divergence Theorem / Gauss's Theorem）是向量微积分中的一个基本定理，
+也称为散度定理。
+
+\end_layout
+
+\begin_layout Standard
+高斯定理是向量微积分中的一个核心定理，
+它建立了一个三维向量场在封闭曲面上的面积分（通量）与该向量场在曲面所围体积内的体积分（散度）之间的关系。
+
+\end_layout
+
+\begin_layout Standard
+数学表述：
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $\mathbf{F}(x,y,z)$
+\end_inset
+
+ 是一个在空间区域 
+\begin_inset Formula $V$
+\end_inset
+
+ 内具有连续一阶偏导数的向量场。
+设 
+\begin_inset Formula $S$
+\end_inset
+
+ 是区域 
+\begin_inset Formula $V$
+\end_inset
+
+ 的边界，
+是一个分段光滑的封闭曲面，
+且其法向量 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ 指向外部。
+那么高斯定理可以表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\oint_{S}\mathbf{F}\cdot d\mathbf{A}=\iiint_{V}(\nabla\cdot\mathbf{F})\,dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或写作：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\oint_{S}\mathbf{F}\cdot\mathbf{n}\,dS=\iiint_{V}\left(\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}+\frac{\partial F_{z}}{\partial z}\right)\,dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\mathbf{F}=F_{x}\mathbf{i}+F_{y}\mathbf{j}+F_{z}\mathbf{k}$
+\end_inset
+
+ 是一个三维向量场。
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\oint_{S}$
+\end_inset
+
+ 表示沿着封闭曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 的面积分（通量）。
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $d\mathbf{A}$
+\end_inset
+
+ (或 
+\begin_inset Formula $\mathbf{n}\,dS$
+\end_inset
+
+) 是面积元向量，
+其方向是曲面外法线方向，
+大小是面积元 
+\begin_inset Formula $dS$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\iiint_{V}$
+\end_inset
+
+ 表示在曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 所围成的体积 
+\begin_inset Formula $V$
+\end_inset
+
+ 上的三重积分（体积分）。
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\nabla\cdot\mathbf{F}$
+\end_inset
+
+ 是向量场 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 的散度（divergence），
+它是一个标量场，
+定义为 
+\begin_inset Formula $\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}+\frac{\partial F_{z}}{\partial z}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+物理意义：
+
+\end_layout
+
+\begin_layout Standard
+散度 
+\begin_inset Formula $\nabla\cdot\mathbf{F}$
+\end_inset
+
+ 在物理上代表了向量场在某一点的源（source）或汇（sink）的密度。
+如果 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 代表流体的速度场，
+那么散度为正表示该点有流体产生（源），
+为负表示有流体消失（汇）。
+
+\end_layout
+
+\begin_layout Standard
+高斯定理的物理意义是：
+通过封闭曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 向外流出的总通量（即流体离开曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 的净流量）等于曲面内部所有源和汇的总和。
+换句话说，
+流出封闭区域的净量，
+等于区域内部“生成”的净量。
+
+\end_layout
+
+\begin_layout Standard
+应用：
+
+\end_layout
+
+\begin_layout Standard
+计算通量：
+ 当直接计算曲面积分很困难时，
+可以转换为计算体积分，
+反之亦然。
+
+\end_layout
+
+\begin_layout Standard
+流体力学：
+计算流体通过某个闭合边界的净流量。
+
+\end_layout
+
+\begin_layout Standard
+电磁学：
+高斯定律就是散度定理在电磁场中的一个具体应用（见下文）。
+
+\end_layout
+
+\begin_layout Standard
+守恒定律：
+它是许多物理守恒定律（如质量守恒、电荷守恒）的微分形式和积分形式之间的桥梁。
+
+\end_layout
+
+\begin_layout Paragraph
+与格林公式的关系：
+
+\end_layout
+
+\begin_layout Standard
+格林公式是高斯定理在二维平面上的特殊情况。
+在二维平面上，
+高斯定理的通量形式退化为格林公式的通量形式：
+
+\begin_inset Formula $\oint_{C}(P\,dy-Q\,dx)=\iint_{D}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}\right)\,dA$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+高斯定律（Gauss's Law）是电磁学中描述电场与电荷分布关系的基本定律之一，
+是麦克斯韦方程组的四个基本方程之一。
+
+\end_layout
+
+\begin_layout Standard
+积分形式：
+
+\end_layout
+
+\begin_layout Standard
+通过任意封闭曲面 
+\begin_inset Formula $S$
+\end_inset
+
+ 的 电通量 
+\begin_inset Formula $\Phi_{E}$
+\end_inset
+
+ 等于该曲面所包围的净电荷量 
+\begin_inset Formula $Q_{enc}$
+\end_inset
+
+ 除以真空介电常数 
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Phi_{E}=\oint_{S}\mathbf{E}\cdot d\mathbf{A}=\frac{Q_{enc}}{\epsilon_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ 是电场强度向量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d\mathbf{A}$
+\end_inset
+
+ 是面积元向量，
+方向垂直于曲面并指向外侧。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q_{enc}$
+\end_inset
+
+ 是曲面 $S$ 所包围的净电荷量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+ 是真空介电常数（约 
+\begin_inset Formula $8.854\times10^{-12}\text{ F/m}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+微分形式：
+
+\end_layout
+
+\begin_layout Standard
+电场的散度与电荷密度 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 成正比。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\cdot\mathbf{E}=\frac{\rho}{\epsilon_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla\cdot\mathbf{E}$
+\end_inset
+
+ 是电场 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ 的散度。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho$
+\end_inset
+
+ 是电荷体密度（单位体积内的电荷量）。
+
+\end_layout
+
+\begin_layout Standard
+物理意义：
+
+\end_layout
+
+\begin_layout Standard
+积分形式：
+ 强调电荷是电场的“源”或“汇”。
+正电荷是电场的源（电场线从正电荷发出），
+负电荷是电场的汇（电场线终止于负电荷）。
+电通量是衡量有多少电场线穿过一个曲面。
+高斯定律表明，
+通过一个封闭曲面的电场线的总数量（通量）只取决于该曲面内部所包含的净电荷量，
+而与电荷在内部的具体位置或外部电荷无关。
+
+\end_layout
+
+\begin_layout Standard
+微分形式：
+描述了电场在每一点的局部行为。
+它表明电场在某一点的散度（即电场线“发散”的程度）与该点的电荷密度成正比。
+
+\end_layout
+
+\begin_layout Standard
+应用：
+
+\end_layout
+
+\begin_layout Standard
+计算电场：
+对于具有高度对称性的电荷分布（如点电荷、无限长带电直线、无限大带电平面、带电球体等），
+高斯定律是计算电场强度最简单有效的方法。
+
+\end_layout
+
+\begin_layout Standard
+推导库仑定律：
+高斯定律可以用来方便地推导出描述点电荷之间相互作用的库仑定律。
+
+\end_layout
+
+\begin_layout Standard
+麦克斯韦方程组：
+它是描述经典电磁学现象的四个基本方程之一，
+与法拉第电磁感应定律、安培-麦克斯韦定律和无磁单极子定律共同构成了电磁学的理论基础。
+
+\end_layout
+
+\begin_layout Paragraph
+高斯定理与高斯定律的关系
+\end_layout
+
+\begin_layout Standard
+高斯定律（电磁学中的）是高斯定理（散度定理，
+向量微积分中的）的一个具体应用。
+
+\end_layout
+
+\begin_layout Standard
+如果我们将高斯定理中的向量场 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 替换为电场 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+，
+那么：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\oint_{S}\mathbf{E}\cdot d\mathbf{A}=\iiint_{V}(\nabla\cdot\mathbf{E})\,dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据电磁学中的知识，
+总电荷 
+\begin_inset Formula $Q_{enc}$
+\end_inset
+
+ 等于电荷密度 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 在体积 
+\begin_inset Formula $V$
+\end_inset
+
+ 上的积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q_{enc}=\iiint_{V}\rho\,dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将高斯定律的积分形式 
+\begin_inset Formula $\oint_{S}\mathbf{E}\cdot d\mathbf{A}=\frac{Q_{enc}}{\epsilon_{0}}$
+\end_inset
+
+ 代入，
+我们得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\iiint_{V}(\nabla\cdot\mathbf{E})\,dV=\frac{1}{\epsilon_{0}}\iiint_{V}\rho\,dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于这个等式对任意体积 $V$ 都成立，
+那么被积函数必须相等，
+从而推导出高斯定律的微分形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\cdot\mathbf{E}=\frac{\rho}{\epsilon_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+可以说电磁学中的高斯定律是向量微积分中高斯定理（散度定理）的一个具体物理体现。
+
+\end_layout
+
+\begin_layout Subsection
+沿任意闭曲面的曲向积分为零的条件
+\end_layout
+
+\begin_layout Standard
+沿任意闭曲面的曲向积分（即通量）为零的条件是：
+
+\end_layout
+
+\begin_layout Standard
+**向量场的散度 (Divergence) 处处为零。
+**
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 详细解释：
+
+\end_layout
+
+\begin_layout Standard
+这个结论是根据 **散度定理 (Divergence Theorem)**，
+也称为 **高斯定理 (Gauss's Theorem)** 得出的。
+
+\end_layout
+
+\begin_layout Standard
+**散度定理的表达式：
+**
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+iint_S 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{S} = 
+\backslash
+iiint_V (
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F}) 
+\backslash
+,
+ dV $$
+\end_layout
+
+\begin_layout Standard
+**各项的含义：
+**
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+mathbf{F}$：
+一个向量场。
+
+\end_layout
+
+\begin_layout Standard
+* $S$：
+一个封闭曲面。
+
+\end_layout
+
+\begin_layout Standard
+* $d
+\backslash
+mathbf{S}$：
+曲面 $S$ 上的微分向量面积元，
+方向由外法向量确定。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+iint_S 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{S}$：
+向量场 $
+\backslash
+mathbf{F}$ 穿过封闭曲面 $S$ 的通量（曲向积分）。
+
+\end_layout
+
+\begin_layout Standard
+* $V$：
+被封闭曲面 $S$ 包围的体积。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F}$：
+向量场 $
+\backslash
+mathbf{F}$ 的散度。
+在笛卡尔坐标系中，
+如果 $
+\backslash
+mathbf{F} = P
+\backslash
+mathbf{i} + Q
+\backslash
+mathbf{j} + R
+\backslash
+mathbf{k}$，
+那么 $
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F} = 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial x} + 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial y} + 
+\backslash
+frac{
+\backslash
+partial R}{
+\backslash
+partial z}$。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+iiint_V (
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F}) 
+\backslash
+,
+ dV$：
+散度在体积 $V$ 上的体积分。
+
+\end_layout
+
+\begin_layout Standard
+**根据问题：
+**
+\end_layout
+
+\begin_layout Standard
+我们希望 $
+\backslash
+iint_S 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{S} = 0$ 对于**任意**封闭曲面 $S$ 都成立。
+
+\end_layout
+
+\begin_layout Standard
+根据散度定理，
+这意味着：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+iiint_V (
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F}) 
+\backslash
+,
+ dV = 0 $$
+\end_layout
+
+\begin_layout Standard
+如果一个连续函数在**任意**体积 $V$ 上的体积分都为零，
+那么这个函数本身必须在整个区域内处处为零。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+**$
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F} = 0$**。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 物理意义与术语：
+
+\end_layout
+
+\begin_layout Standard
+* **无散场 (Solenoidal Field) / 源场 (Source-free Field)：
+** 当一个向量场的散度处处为零时，
+这个场被称为无散场或源场。
+
+\end_layout
+
+\begin_layout Standard
+* **物理直观：
+**
+\end_layout
+
+\begin_layout Standard
+* 散度衡量了向量场在某一点的“发散”或“汇聚”的程度，
+可以理解为单位体积内场的“源”或“汇”。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F} = 0$，
+则表示在该点既没有场的源，
+也没有场的汇。
+
+\end_layout
+
+\begin_layout Standard
+* 对于一个封闭曲面，
+如果内部没有源或汇，
+那么所有进入封闭曲面的“东西”（例如流体、磁力线）最终都会流出，
+或者说，
+流进的总量和流出的总量是平衡的，
+因此净通量为零。
+这就像一个不可压缩流体，
+流进一个封闭区域的量必须等于流出的量，
+因为流体不会在内部被创造或消失。
+
+\end_layout
+
+\begin_layout Standard
+### 常见例子：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **不可压缩流体：
+** 如果 $
+\backslash
+mathbf{v}$ 是流体的速度场，
+那么 $
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{v} = 0$ 表示流体是不可压缩的，
+即流体密度不变，
+没有内部源或汇。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **磁场：
+** 磁感应强度 $
+\backslash
+mathbf{B}$ 场总是满足 $
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{B} = 0$。
+这是麦克斯韦方程组之一，
+它表示磁场线总是闭合的，
+不存在独立的磁单极子（磁源或磁汇）。
+因此，
+穿过任何封闭曲面的净磁通量总是零。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **任何向量场的旋度：
+** 任何向量场 $
+\backslash
+mathbf{A}$ 的旋度 $
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{A}$，
+其自身的散度总是为零，
+即 $
+\backslash
+nabla 
+\backslash
+cdot (
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{A}) = 0$。
+这是一个重要的向量恒等式。
+这意味着任何由旋度产生的场都是无散场。
+
+\end_layout
+
+\begin_layout Section
+斯托克斯公式 环流量与旋度
+\end_layout
+
+\begin_layout Standard
+**斯托克斯公式 (Stokes' Theorem)**，
+也称为**旋度定理 (Curl Theorem)**，
+是多变量微积分中的一个基本定理，
+它将三维空间中一个向量场的旋度（curl）在一个曲面上的积分，
+与其在这个曲面边界上的线积分联系起来。
+
+\end_layout
+
+\begin_layout Standard
+可以看作是**格林公式 (Green's Theorem)** 在三维空间中的推广。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 公式表达
+\end_layout
+
+\begin_layout Standard
+斯托克斯公式的数学表达如下：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 
+\backslash
+iint_S (
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}) 
+\backslash
+cdot d
+\backslash
+mathbf{S} $$
+\end_layout
+
+\begin_layout Standard
+或者等价地：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 
+\backslash
+iint_S (
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}) 
+\backslash
+cdot 
+\backslash
+mathbf{n} 
+\backslash
+,
+ dS $$
+\end_layout
+
+\begin_layout Standard
+**各项的含义：
+**
+\end_layout
+
+\begin_layout Standard
+* **$
+\backslash
+mathbf{F}$**：
+一个三维向量场，
+通常表示为 $
+\backslash
+mathbf{F}(x,
+ y,
+ z) = P(x,
+ y,
+ z)
+\backslash
+mathbf{i} + Q(x,
+ y,
+ z)
+\backslash
+mathbf{j} + R(x,
+ y,
+ z)
+\backslash
+mathbf{k}$。
+
+\end_layout
+
+\begin_layout Standard
+* **$C$**：
+一个简单、闭合、分段光滑的曲线，
+它是曲面 $S$ 的边界。
+
+\end_layout
+
+\begin_layout Standard
+* **$d
+\backslash
+mathbf{r}$**：
+沿着曲线 $C$ 的微分位移向量。
+
+\end_layout
+
+\begin_layout Standard
+* **$
+\backslash
+oint_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r}$**：
+表示向量场 $
+\backslash
+mathbf{F}$ 沿着闭合曲线 $C$ 的线积分，
+也称为 **环量 (Circulation)** 或做功。
+
+\end_layout
+
+\begin_layout Standard
+* **$S$**：
+一个开放（不闭合）、定向、分段光滑的曲面，
+它的边界是曲线 $C$。
+
+\end_layout
+
+\begin_layout Standard
+* **$
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}$**：
+向量场 $
+\backslash
+mathbf{F}$ 的 **旋度 (Curl)**。
+在笛卡尔坐标系中，
+旋度为：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F} = 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial R}{
+\backslash
+partial y} - 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial z} 
+\backslash
+right)
+\backslash
+mathbf{i} + 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial z} - 
+\backslash
+frac{
+\backslash
+partial R}{
+\backslash
+partial x} 
+\backslash
+right)
+\backslash
+mathbf{j} + 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} - 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} 
+\backslash
+right)
+\backslash
+mathbf{k} $$
+\end_layout
+
+\begin_layout Standard
+* **$d
+\backslash
+mathbf{S}$**：
+曲面 $S$ 上的微分向量面积元，
+其方向由曲面的单位法向量 $
+\backslash
+mathbf{n}$ 给出，
+即 $d
+\backslash
+mathbf{S} = 
+\backslash
+mathbf{n} 
+\backslash
+,
+ dS$。
+
+\end_layout
+
+\begin_layout Standard
+* **$
+\backslash
+mathbf{n}$**：
+曲面 $S$ 的单位法向量。
+
+\end_layout
+
+\begin_layout Standard
+* **$
+\backslash
+iint_S (
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}) 
+\backslash
+cdot d
+\backslash
+mathbf{S}$**：
+表示向量场 $
+\backslash
+mathbf{F}$ 的旋度穿过曲面 $S$ 的 **通量 (Flux)**。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 核心思想与直观理解
+\end_layout
+
+\begin_layout Standard
+斯托克斯公式的核心思想是：
+**一个向量场 $
+\backslash
+mathbf{F}$ 沿着一个闭合曲线 $C$ 的环量，
+等于该向量场旋度穿过以 $C$ 为边界的任意曲面 $S$ 的通量。
+**
+\end_layout
+
+\begin_layout Standard
+这意味着：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **连接性：
+** 它将一个只与曲面边界有关的积分（线积分）与一个涉及曲面内部性质的积分（曲面积分）联系起来。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **路径无关性（在某种意义上）：
+** 只要两个曲面有相同的边界曲线 $C$ 并且方向一致，
+那么 $
+\backslash
+mathbf{F}$ 的旋度穿过它们的通量将是相同的。
+这意味着你可以选择一个最方便计算的曲面 $S$ 来计算旋度的通量。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **局部效应的累积：
+** 旋度 $
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}$ 描述了向量场在某一点的“旋转”趋势或“涡旋”程度。
+斯托克斯公式告诉我们，
+将所有这些局部的小旋转效应累加起来，
+就得到了向量场沿边界曲线的整体“循环”量。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 定向匹配 (Orientation Matching)
+\end_layout
+
+\begin_layout Standard
+应用斯托克斯公式时，
+**曲面 $S$ 的法向量 $
+\backslash
+mathbf{n}$ 的方向必须与曲线 $C$ 的行进方向遵循右手定则。
+**
+\end_layout
+
+\begin_layout Standard
+* **右手定则：
+** 如果你用右手握住曲面 $S$，
+并让你的拇指指向法向量 $
+\backslash
+mathbf{n}$ 的方向（通常指向曲面的外侧），
+那么你的手指卷曲的方向就是曲线 $C$ 的正方向（逆时针或顺时针）。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 与其他基本定理的关系
+\end_layout
+
+\begin_layout Standard
+斯托克斯公式是微积分基本定理的推广：
+
+\end_layout
+
+\begin_layout Standard
+* **微积分基本定理 (Fundamental Theorem of Calculus)：
+** $
+\backslash
+int_a^b f'(x) 
+\backslash
+,
+ dx = f(b) - f(a)$
+\end_layout
+
+\begin_layout Standard
+* 将函数导数在区间上的积分与函数在边界点（区间端点）的值联系起来。
+
+\end_layout
+
+\begin_layout Standard
+* **格林公式 (Green's Theorem)：
+** $
+\backslash
+oint_C (P 
+\backslash
+,
+ dx + Q 
+\backslash
+,
+ dy) = 
+\backslash
+iint_R 
+\backslash
+left( 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} - 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} 
+\backslash
+right) 
+\backslash
+,
+ dA$
+\end_layout
+
+\begin_layout Standard
+* 是斯托克斯公式在二维平面上的特殊情况。
+此时，
+曲面 $S$ 是 $xy$ 平面上的区域 $R$，
+法向量 $
+\backslash
+mathbf{n}$ 指向 $z$ 轴正方向，
+并且 $
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}$ 只有 $z$ 分量。
+
+\end_layout
+
+\begin_layout Standard
+* **散度定理 (Divergence Theorem / Gauss's Theorem)：
+** $
+\backslash
+iint_S 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{S} = 
+\backslash
+iiint_V (
+\backslash
+nabla 
+\backslash
+cdot 
+\backslash
+mathbf{F}) 
+\backslash
+,
+ dV$
+\end_layout
+
+\begin_layout Standard
+* 是另一个重要的定理，
+它将向量场穿过一个闭合曲面的通量与向量场在所围体积内的散度联系起来。
+斯托克斯公式连接的是线积分与曲面积分，
+而散度定理连接的是曲面积分与体积分。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 应用领域
+\end_layout
+
+\begin_layout Standard
+斯托克斯公式在物理学和工程学中有着广泛的应用，
+尤其是在：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **流体力学：
+** 用于理解流体的环量和涡旋。
+旋度 $
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F}$ 代表流体的涡度（vorticity），
+公式说明了涡度通量与流体沿边界的环量之间的关系。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **电磁学：
+** 它是麦克斯韦方程组的积分形式的基础。
+
+\end_layout
+
+\begin_layout Standard
+* **法拉第电磁感应定律 (Faraday's Law of Induction)：
+** 将感应电动势（电场环量）与磁通量随时间的变化联系起来。
+
+\end_layout
+
+\begin_layout Standard
+* **安培定律 (Ampere's Law)：
+** 将磁场环量与电流联系起来。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **简化计算：
+** 在某些情况下，
+计算线积分可能非常复杂，
+而计算旋度的曲面积分则相对简单（反之亦然），
+斯托克斯公式提供了一种转换计算方式的强大工具。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+斯托克斯公式是向量微积分中的一个基石，
+它深刻地揭示了向量场在空间中的行为。
+通过将局部旋转效应（旋度）与整体循环效应（环量）联系起来，
+它为理解和解决物理问题提供了强大的数学工具，
+是许多物理定律（如麦克斯韦方程组）的数学基础。
+
+\end_layout
+
+\begin_layout Subsection
+空间曲线积分与路径无关的条件
+\end_layout
+
+\begin_layout Standard
+空间曲线积分与路径无关（Path Independence）是指一个向量场 $
+\backslash
+mathbf{F}$ 沿着从某一点 $A$ 到另一点 $B$ 的任意路径 $C$ 的线积分，
+其结果都相同，
+与具体的路径选择无关，
+只取决于起点和终点。
+
+\end_layout
+
+\begin_layout Standard
+对于一个向量场 $
+\backslash
+mathbf{F}(x,
+ y,
+ z) = P(x,
+ y,
+ z)
+\backslash
+mathbf{i} + Q(x,
+ y,
+ z)
+\backslash
+mathbf{j} + R(x,
+ y,
+ z)
+\backslash
+mathbf{k}$，
+其线积分 $
+\backslash
+int_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r}$ 与路径无关的条件主要有以下几种等价表达：
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 主要条件 (等价条件)
+\end_layout
+
+\begin_layout Standard
+1.
+ **存在标量势函数 (Conservative Field):**
+\end_layout
+
+\begin_layout Standard
+存在一个标量函数 $
+\backslash
+phi(x,
+ y,
+ z)$（称为 **标量势函数** 或 **势能函数**），
+使得向量场 $
+\backslash
+mathbf{F}$ 是它的梯度。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+mathbf{F} = 
+\backslash
+nabla 
+\backslash
+phi $$
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+$$ P = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial x},
+ 
+\backslash
+quad Q = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial y},
+ 
+\backslash
+quad R = 
+\backslash
+frac{
+\backslash
+partial 
+\backslash
+phi}{
+\backslash
+partial z} $$
+\end_layout
+
+\begin_layout Standard
+如果这个条件成立，
+根据 **线积分基本定理 (Fundamental Theorem for Line Integrals)**，
+线积分的值只取决于起点和终点：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+int_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 
+\backslash
+int_C 
+\backslash
+nabla 
+\backslash
+phi 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 
+\backslash
+phi(B) - 
+\backslash
+phi(A) $$
+\end_layout
+
+\begin_layout Standard
+其中 $A$ 是积分的起点，
+ $B$ 是积分的终点。
+这样的向量场被称为 **保守场 (Conservative Field)**。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **向量场的旋度为零 (Irrotational Field):**
+\end_layout
+
+\begin_layout Standard
+在**单连通 (Simply Connected)** 区域内，
+向量场 $
+\backslash
+mathbf{F}$ 的旋度处处为零。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F} = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Standard
+在笛卡尔坐标系中，
+这意味着：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial R}{
+\backslash
+partial y} - 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial z} = 0 $$
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial z} - 
+\backslash
+frac{
+\backslash
+partial R}{
+\backslash
+partial x} = 0 $$
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+partial Q}{
+\backslash
+partial x} - 
+\backslash
+frac{
+\backslash
+partial P}{
+\backslash
+partial y} = 0 $$
+\end_layout
+
+\begin_layout Standard
+这样的场被称为 **无旋场 (Irrotational Field)**。
+
+\end_layout
+
+\begin_layout Standard
+* **单连通区域的重要性：
+** 这个条件只有在场的定义域是单连通时才充分。
+单连通区域是指区域内任意一个闭合曲线都可以连续地收缩为一点，
+而不会遇到区域的“洞”。
+例如，
+整个三维空间 $
+\backslash
+mathbb{R}^3$、一个球体或一个立方体都是单连通的。
+如果区域有“洞”（例如，
+移除了原点的 $
+\backslash
+mathbb{R}^3$），
+那么即使旋度为零，
+也可能存在线积分与路径有关的非保守场（例如，
+电磁学中的安培环路定理在有电流穿过的情况下）。
+然而，
+在大多数入门级问题中，
+默认的定义域是单连通的。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **沿任意闭合路径的线积分为零:**
+\end_layout
+
+\begin_layout Standard
+对于向量场 $
+\backslash
+mathbf{F}$ 定义域内的任意闭合曲线 $C$，
+其线积分为零。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C 
+\backslash
+mathbf{F} 
+\backslash
+cdot d
+\backslash
+mathbf{r} = 0 $$
+\end_layout
+
+\begin_layout Standard
+这可以直接从线积分基本定理看出：
+如果起点和终点相同 ($A=B$)，
+那么 $
+\backslash
+phi(B) - 
+\backslash
+phi(A) = 0$。
+反之，
+如果所有闭合路径的线积分都为零，
+则积分与路径无关。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+对于一个定义在开区域 $D$ 上的向量场 $
+\backslash
+mathbf{F}$，
+以下条件是等价的：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ $
+\backslash
+mathbf{F}$ 是一个保守场（即存在标量势函数 $
+\backslash
+phi$ 使得 $
+\backslash
+mathbf{F} = 
+\backslash
+nabla 
+\backslash
+phi$）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ $
+\backslash
+mathbf{F}$ 沿着 $D$ 内任意一条路径的线积分只取决于起点和终点。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ $
+\backslash
+mathbf{F}$ 沿着 $D$ 内任意一条闭合路径的线积分为零。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 如果 $D$ 是单连通的，
+则 $
+\backslash
+mathbf{F}$ 的旋度 $
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F} = 
+\backslash
+mathbf{0}$。
+
+\end_layout
+
+\begin_layout Standard
+在实际应用中，
+检查 **$
+\backslash
+nabla 
+\backslash
+times 
+\backslash
+mathbf{F} = 
+\backslash
+mathbf{0}$** 是最常用的方法来判断一个向量场是否为保守场（并因此其线积分是否与路径无关），
+前提是我们需要确认其定义域是单连通的。
+
 \end_layout
 
 \begin_layout Chapter
@@ -107854,6 +111167,26 @@ A_{13} & A_{23} & A_{33}
 任何一个矩阵都可以通过初等变换变化为标准形
 \end_layout
 
+\begin_layout Theorem
+根据所进行的变换类型和矩阵的用途，
+标准形矩阵可以指代不同的形式。
+最常见的两种是：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+行阶梯形矩阵 (Row Echelon Form,
+ REF) 和 最简行阶梯形矩阵 (Reduced Row Echelon Form,
+ RREF)
+\end_layout
+
+\begin_layout Itemize
+Jordan 标准形 (Jordan Canonical Form,
+ JCF)
+\end_layout
+
+\end_deeper
 \begin_layout Example
 \begin_inset Formula $\left[\begin{array}{cccc}
 1 & 2 & 3 & 4\\
@@ -115031,9 +118364,9 @@ p(\lambda)=(-1)^{n}\lambda^{n}+c_{n-1}\lambda^{n-1}+\dots+c_{1}\lambda+c_{0}
 
 \begin_layout Solution
 \begin_inset Formula $|A-\lambda E|=0=\left|\begin{array}{ccc}
--\lambda\\
- & -\lambda\\
- &  & -\lambda
+-\lambda & 0 & 0\\
+0 & -\lambda & 0\\
+0 & 0 & -\lambda
 \end{array}\right|=-\lambda^{3}=0$
 \end_inset
 
@@ -118550,6 +121883,1098 @@ n 阶方阵有 n 个互异的特征值，
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+线性变换与矩阵
+\end_layout
+
+\begin_layout Standard
+线性变换 (Linear Transformation) 和 矩阵 (Matrix) 是线性代数中两个核心且密不可分的概念。
+它们的关系可以概括为：
+矩阵是线性变换的数值表示，
+而线性变换是矩阵乘法所描述的几何或代数操作。
+
+\end_layout
+
+\begin_layout Standard
+在二维和三维空间中，
+矩阵是表示几何变换的强大工具，
+其中最常见的两种是旋转 (Rotation) 和 反射 (Reflection)。
+这些变换都属于线性变换，
+因此可以用矩阵乘法来表示。
+
+\end_layout
+
+\begin_layout Standard
+核心概念：
+线性变换与矩阵
+\end_layout
+
+\begin_layout Standard
+一个点 
+\begin_inset Formula $`(x,y)`$
+\end_inset
+
+ 或 
+\begin_inset Formula $`(x,y,z)`$
+\end_inset
+
+ 可以用一个列向量表示。
+例如，
+二维点 
+\begin_inset Formula $`P=[x,y]ᵀ`$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+一个线性变换可以将这个点映射到新的点 
+\begin_inset Formula $`P'=[x',y']ᵀ`$
+\end_inset
+
+，
+其关系可以表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $`P'=M*P`$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $`M`$
+\end_inset
+
+ 是一个变换矩阵。
+
+\end_layout
+
+\begin_layout Subsection
+线性变换
+\end_layout
+
+\begin_layout Standard
+在数学中，
+线性变换（也称为线性映射或线性函数）是一个从一个向量空间到另一个向量空间（或同一个向量空间）的函数，
+它保持了向量加法和标量乘法这两种基本的向量运算。
+
+\end_layout
+
+\begin_layout Standard
+形式上，
+如果 
+\begin_inset Formula $T:V\to W$
+\end_inset
+
+ 是一个从向量空间 
+\begin_inset Formula $V$
+\end_inset
+
+ 到向量空间 
+\begin_inset Formula $W$
+\end_inset
+
+ 的函数，
+那么 
+\begin_inset Formula $T$
+\end_inset
+
+ 是一个线性变换，
+如果它满足以下两个条件：
+
+\end_layout
+
+\begin_layout Enumerate
+加性 (Additivity)：
+ 对于 
+\begin_inset Formula $V$
+\end_inset
+
+ 中任意两个向量 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+，
+有
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+（变换和在前，
+和的变换在后）
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+齐次性 (Homogeneity / Scalar Multiplicativity)：
+对于 
+\begin_inset Formula $V$
+\end_inset
+
+ 中任意向量 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ 和任意标量 
+\begin_inset Formula $c$
+\end_inset
+
+（来自向量空间的域，
+通常是实数或复数），
+有
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T(c\mathbf{u})=cT(\mathbf{u})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+（变换和数乘在前，
+数乘的变换在后）
+\end_layout
+
+\end_deeper
+\begin_layout Example
+缩放 
+\begin_inset Formula $T(x,y)=(2x,2y)$
+\end_inset
+
+ 是一个线性变换。
+
+\end_layout
+
+\begin_layout Example
+旋转：
+绕原点旋转一个角度是一个线性变换。
+
+\end_layout
+
+\begin_layout Example
+反射：
+关于过原点的直线或平面反射是一个线性变换。
+
+\end_layout
+
+\begin_layout Example
+投影：
+将向量投影到一条直线或一个平面上是一个线性变换。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+非线性变换的例子：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T(x,y)=(x+1,y)$
+\end_inset
+
+ 不是线性变换，
+因为它不满足 
+\begin_inset Formula $T(\mathbf{u}+\mathbf{v})=T(\mathbf{u})+T(\mathbf{v})$
+\end_inset
+
+，
+也不满足 
+\begin_inset Formula $T(c\mathbf{u})=cT(\mathbf{u})$
+\end_inset
+
+ （例如 
+\begin_inset Formula $T(0,0)=(1,0)$
+\end_inset
+
+，
+但 
+\begin_inset Formula $T(0,0)$
+\end_inset
+
+ 应该为 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 如果是线性变换）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T(x,y)=(x^{2},y)$
+\end_inset
+
+ 不是线性变换，
+因为它不满足齐次性。
+
+\end_layout
+
+\begin_layout Subsection
+矩阵表示线性变换 (Matrices Representing Linear Transformations)
+\end_layout
+
+\begin_layout Standard
+任何从 
+\begin_inset Formula $n$
+\end_inset
+
+ 维向量空间到 
+\begin_inset Formula $m$
+\end_inset
+
+ 维向量空间的线性变换都可以用一个 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ 的矩阵来表示。
+这个矩阵是独一无二的（给定特定的基）。
+
+\end_layout
+
+\begin_layout Standard
+一个线性变换完全由它作用于基向量（Basis Vectors）的结果所决定。
+
+\end_layout
+
+\begin_layout Standard
+考虑从 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ 到 
+\begin_inset Formula $R^{m}$
+\end_inset
+
+ 的一个线性变换 
+\begin_inset Formula $T$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ 的标准基是 
+\begin_inset Formula $\mathbf{e}_{1},\mathbf{e}_{2},\ldots,\mathbf{e}_{n}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $\mathbf{e}_{j}$
+\end_inset
+
+ 是第 
+\begin_inset Formula $j$
+\end_inset
+
+ 个分量为 1，
+其余分量为 0 的向量。
+
+\end_layout
+
+\begin_layout Standard
+对每个基向量 
+\begin_inset Formula $\mathbf{e}_{j}$
+\end_inset
+
+，
+计算它在 
+\begin_inset Formula $T$
+\end_inset
+
+ 作用下的像 
+\begin_inset Formula $T(\mathbf{e}_{j})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T(\mathbf{e}_{j})$
+\end_inset
+
+ 是 
+\begin_inset Formula $R^{m}$
+\end_inset
+
+ 中的一个向量。
+
+\end_layout
+
+\begin_layout Standard
+现在，
+构造一个矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+，
+它的第 
+\begin_inset Formula $j$
+\end_inset
+
+ 列就是向量 
+\begin_inset Formula $T(\mathbf{e}_{j})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\begin{pmatrix}| & | &  & |\\
+T(\mathbf{e}_{1}) & T(\mathbf{e}_{2}) & \cdots & T(\mathbf{e}_{n})\\
+| & | &  & |
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么，
+对于 
+\begin_inset Formula $R^{n}$
+\end_inset
+
+ 中的任意向量 
+\begin_inset Formula $\mathbf{x}=\begin{pmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{pmatrix}$
+\end_inset
+
+，
+我们可以将其表示为基向量的线性组合：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{x}=x_{1}\mathbf{e}_{1}+x_{2}\mathbf{e}_{2}+\ldots+x_{n}\mathbf{e}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于 
+\begin_inset Formula $T$
+\end_inset
+
+ 是线性变换，
+我们有：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T(\mathbf{x})=T(x_{1}\mathbf{e}_{1}+x_{2}\mathbf{e}_{2}+\ldots+x_{n}\mathbf{e}_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T(\mathbf{x})=x_{1}T(\mathbf{e}_{1})+x_{2}T(\mathbf{e}_{2})+\ldots+x_{n}T(\mathbf{e}_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个表达式正是矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 乘以向量 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ 的结果：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\mathbf{x}=\begin{pmatrix}| & | &  & |\\
+T(\mathbf{e}_{1}) & T(\mathbf{e}_{2}) & \cdots & T(\mathbf{e}_{n})\\
+| & | &  & |
+\end{pmatrix}\begin{pmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{pmatrix}=x_{1}T(\mathbf{e}_{1})+x_{2}T(\mathbf{e}_{2})+\ldots+x_{n}T(\mathbf{e}_{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们得出结论：
+
+\begin_inset Formula $T(\mathbf{x})=A\mathbf{x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+考虑一个将二维平面上的点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 逆时针旋转
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+ 的线性变换 
+\begin_inset Formula $T$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 作用于基向量 
+\begin_inset Formula $\mathbf{e}_{1}=\begin{pmatrix}1\\
+0
+\end{pmatrix}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T(\mathbf{e}_{1})=\begin{pmatrix}0\\
+1
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 作用于基向量 
+\begin_inset Formula $\mathbf{e}_{2}=\begin{pmatrix}0\\
+1
+\end{pmatrix}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $T(\mathbf{e}_{2})=\begin{pmatrix}-1\\
+0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因此，
+表示这个旋转变换的矩阵 
+\begin_inset Formula $A$
+\end_inset
+
+ 是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $A=\begin{pmatrix}0 & -1\\
+1 & 0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们可以用这个矩阵来旋转任意点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\begin{pmatrix}x'\\
+y'
+\end{pmatrix}=\begin{pmatrix}0 & -1\\
+1 & 0
+\end{pmatrix}\begin{pmatrix}x\\
+y
+\end{pmatrix}=\begin{pmatrix}-y\\
+x
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这正是将 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 逆时针旋转 
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+ 后的坐标。
+
+\end_layout
+
+\begin_layout Subsubsection
+矩阵旋转 (Rotation Matrix)
+\end_layout
+
+\begin_layout Standard
+旋转变换将一个点或物体绕着一个固定的点（在二维中通常是原点）或固定轴（在三维中）旋转一个角度。
+
+\end_layout
+
+\begin_layout Paragraph
+二维旋转 (2D Rotation)
+\end_layout
+
+\begin_layout Standard
+绕原点逆时针旋转角度 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于二维平面上的一个点 `(x,
+ y)`，
+绕原点逆时针旋转 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 角度后得到的新坐标 `(x',
+ y')` 可以通过以下矩阵乘法计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{pmatrix}x'\\
+y'
+\end{pmatrix}=\begin{pmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}\begin{pmatrix}x\\
+y
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+二维旋转矩阵为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R(\theta)=\begin{pmatrix}\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+特性：
+
+\end_layout
+
+\begin_layout Standard
+旋转矩阵是正交矩阵 (Orthogonal Matrix)，
+即 
+\begin_inset Formula $R^{T}R=I$
+\end_inset
+
+ (单位矩阵)，
+且 
+\begin_inset Formula $R^{-1}=R^{T}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+其行列式为 
+\begin_inset Formula $\det(R)=\cos^{2}\theta-(-\sin^{2}\theta)=\cos^{2}\theta+\sin^{2}\theta=1$
+\end_inset
+
+。
+行列式为1表示它是一个保向的刚体变换（不改变形状、大小和方向）。
+
+\end_layout
+
+\begin_layout Paragraph
+三维旋转 (3D Rotation)
+\end_layout
+
+\begin_layout Standard
+在三维空间中，
+旋转是绕着某个轴进行的。
+最常见的是绕 X、Y、Z 轴的旋转。
+
+\end_layout
+
+\begin_layout Standard
+* **绕 Z 轴旋转 $
+\backslash
+theta$ (俯仰角/yaw)**
+\end_layout
+
+\begin_layout Standard
+$ R_z(
+\backslash
+theta) = 
+\backslash
+begin{pmatrix} 
+\backslash
+cos
+\backslash
+theta & -
+\backslash
+sin
+\backslash
+theta & 0 
+\backslash
+
+\backslash
+ 
+\backslash
+sin
+\backslash
+theta & 
+\backslash
+cos
+\backslash
+theta & 0 
+\backslash
+
+\backslash
+ 0 & 0 & 1 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+（注意：
+这与2D旋转矩阵类似，
+因为Z轴旋转不改变Z坐标）
+\end_layout
+
+\begin_layout Standard
+* **绕 X 轴旋转 $
+\backslash
+theta$ (滚转角/roll)**
+\end_layout
+
+\begin_layout Standard
+$ R_x(
+\backslash
+theta) = 
+\backslash
+begin{pmatrix} 1 & 0 & 0 
+\backslash
+
+\backslash
+ 0 & 
+\backslash
+cos
+\backslash
+theta & -
+\backslash
+sin
+\backslash
+theta 
+\backslash
+
+\backslash
+ 0 & 
+\backslash
+sin
+\backslash
+theta & 
+\backslash
+cos
+\backslash
+theta 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **绕 Y 轴旋转 $
+\backslash
+theta$ (偏航角/pitch)**
+\end_layout
+
+\begin_layout Standard
+$ R_y(
+\backslash
+theta) = 
+\backslash
+begin{pmatrix} 
+\backslash
+cos
+\backslash
+theta & 0 & 
+\backslash
+sin
+\backslash
+theta 
+\backslash
+
+\backslash
+ 0 & 1 & 0 
+\backslash
+
+\backslash
+ -
+\backslash
+sin
+\backslash
+theta & 0 & 
+\backslash
+cos
+\backslash
+theta 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+（注意 Y 轴的符号 convention 稍有不同，
+为了保持右手系，
+通常是这样定义）
+\end_layout
+
+\begin_layout Standard
+* **组合旋转：
+** 如果需要进行多个轴向的旋转，
+可以将相应的旋转矩阵相乘。
+但要注意，
+矩阵乘法不满足交换律，
+因此旋转的顺序很重要。
+例如，
+$R_x R_y 
+\backslash
+neq R_y R_x$。
+
+\end_layout
+
+\begin_layout Subsubsection
+矩阵反射 (Reflection Matrix)
+\end_layout
+
+\begin_layout Standard
+反射变换将一个点或物体镜像到一条直线（二维）或一个平面（三维）的另一侧。
+
+\end_layout
+
+\begin_layout Paragraph
+二维反射 (2D Reflection)
+\end_layout
+
+\begin_layout Standard
+关于 X 轴反射
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y)` 变为 `(x,
+ -y)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_x = 
+\backslash
+begin{pmatrix} 1 & 0 
+\backslash
+
+\backslash
+ 0 & -1 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于 Y 轴反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y)` 变为 `(-x,
+ y)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_y = 
+\backslash
+begin{pmatrix} -1 & 0 
+\backslash
+
+\backslash
+ 0 & 1 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于直线 y = x 反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y)` 变为 `(y,
+ x)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_{y=x} = 
+\backslash
+begin{pmatrix} 0 & 1 
+\backslash
+
+\backslash
+ 1 & 0 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于直线 y = -x 反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y)` 变为 `(-y,
+ -x)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_{y=-x} = 
+\backslash
+begin{pmatrix} 0 & -1 
+\backslash
+
+\backslash
+ -1 & 0 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于过原点的任意直线反射**
+\end_layout
+
+\begin_layout Standard
+如果反射线与 X 轴正方向的夹角为 $
+\backslash
+alpha$，
+反射矩阵为：
+
+\end_layout
+
+\begin_layout Standard
+$ M_
+\backslash
+alpha = 
+\backslash
+begin{pmatrix} 
+\backslash
+cos(2
+\backslash
+alpha) & 
+\backslash
+sin(2
+\backslash
+alpha) 
+\backslash
+
+\backslash
+ 
+\backslash
+sin(2
+\backslash
+alpha) & -
+\backslash
+cos(2
+\backslash
+alpha) 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **特性：
+**
+\end_layout
+
+\begin_layout Standard
+* 反射矩阵也是**正交矩阵**，
+即 $M^T M = I$。
+
+\end_layout
+
+\begin_layout Standard
+* 其**行列式**为 $
+\backslash
+det(M) = -1$。
+行列式为-1表示它是一个反向的刚体变换（不改变形状、大小，
+但会改变方向/手性）。
+
+\end_layout
+
+\begin_layout Subparagraph
+三维反射 (3D Reflection)
+\end_layout
+
+\begin_layout Standard
+在三维空间中，
+反射是关于一个平面进行的。
+
+\end_layout
+
+\begin_layout Standard
+* **关于 XY 平面反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y,
+ z)` 变为 `(x,
+ y,
+ -z)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_{xy} = 
+\backslash
+begin{pmatrix} 1 & 0 & 0 
+\backslash
+
+\backslash
+ 0 & 1 & 0 
+\backslash
+
+\backslash
+ 0 & 0 & -1 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于 XZ 平面反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y,
+ z)` 变为 `(x,
+ -y,
+ z)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_{xz} = 
+\backslash
+begin{pmatrix} 1 & 0 & 0 
+\backslash
+
+\backslash
+ 0 & -1 & 0 
+\backslash
+
+\backslash
+ 0 & 0 & 1 
+\backslash
+end{pmatrix} $
+\end_layout
+
+\begin_layout Standard
+* **关于 YZ 平面反射**
+\end_layout
+
+\begin_layout Standard
+点 `(x,
+ y,
+ z)` 变为 `(-x,
+ y,
+ z)`。
+
+\end_layout
+
+\begin_layout Standard
+$ M_{yz} = 
+\backslash
+begin{pmatrix} -1 & 0 & 0 
+\backslash
+
+\backslash
+ 0 & 1 & 0 
+\backslash
+
+\backslash
+ 0 & 0 & 1 
+\backslash
+end{pmatrix} $
 \end_layout
 
 \begin_layout Section
