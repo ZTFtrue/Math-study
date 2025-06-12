@@ -16302,21 +16302,18 @@ S={\beta|\beta=\alpha+k•360°,k\in Z}
 三角学
 \end_layout
 
-\begin_layout Subsection
-直角三角形
-\end_layout
-
 \begin_layout Standard
 正弦(sine):
-\begin_inset Formula $\sin\theta=\frac{\text{对\text{边}}}{\text{斜边}}$
+\begin_inset Formula $\sin(\theta)=\frac{\text{对\text{边}}}{\text{斜边}}=\frac{y}{r}$
 \end_inset
 
-
+(以原点为中心,
+ 半径为 1 的圆)
 \end_layout
 
 \begin_layout Standard
 余弦(cosine)
-\begin_inset Formula $\cos\theta=\frac{\text{邻\text{边}}}{\text{斜边}}$
+\begin_inset Formula $\cos(\theta)=\frac{\text{邻\text{边}}}{\text{斜边}}=\frac{x}{r}$
 \end_inset
 
 
@@ -16324,7 +16321,16 @@ S={\beta|\beta=\alpha+k•360°,k\in Z}
 
 \begin_layout Standard
 正切(tangent)
-\begin_inset Formula $\tan\theta=\frac{\text{对\text{边}}}{\text{邻边}}$
+\begin_inset Formula $\tan(\theta)=\frac{\text{对\text{边}}}{\text{邻边}}=\frac{y}{x}=\frac{\sin(x)}{\cos(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+余割 函数：
+
+\begin_inset Formula $\csc(θ)=\frac{1}{\sin(\theta)}=\frac{\text{斜}边}{\text{对边}}$
 \end_inset
 
 
@@ -16332,17 +16338,403 @@ S={\beta|\beta=\alpha+k•360°,k\in Z}
 
 \begin_layout Standard
 正割 函数：
- sec(θ) = 斜边 / 邻边 (=1/cos) 
-\end_layout
+ 
+\begin_inset Formula $\sec(θ)=\frac{1}{\cos(\theta)}=\frac{\text{斜边}}{\text{邻边}}$
+\end_inset
 
-\begin_layout Standard
-余割 函数：
- csc(θ) = 斜边 / 对边 (=1/sin) 
+
 \end_layout
 
 \begin_layout Standard
 余切 函数：
- cot(θ) = 邻边 / 对边 (=1/tan) 
+ 
+\begin_inset Formula $\cot(θ)=\frac{1}{\tan(\theta)}=\frac{\text{邻边}}{\text{对边}}=\frac{\cos(x)}{\sin(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+弧度
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+角度
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sin$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{3}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{2}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tan$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\sqrt{3}}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+正切函数在 
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+ 处有一条垂直渐近线
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -32707,7 +33099,7 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 奇函数
 \series default
 (even fuction)，
-关于原点对称.
+.奇函数的图像关于原点有 180° 的点对称性.
 \end_layout
 
 \begin_layout Subsection
@@ -33047,11 +33439,13 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 \begin_inset Formula $D(f)$
 \end_inset
 
-,值域为
+，
+值域为
 \begin_inset Formula $Z(f)$
 \end_inset
 
-,若对于任意
+，
+若对于任意
 \begin_inset Formula $y∈Z(f)$
 \end_inset
 
@@ -33072,7 +33466,7 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 
 的反函数,
  记为
-\begin_inset Formula $x=f-1(y)$
+\begin_inset Formula $x=f^{-1}(y)$
 \end_inset
 
 ;
@@ -34445,6 +34839,30 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+变量 
+\begin_inset Formula $x$
+\end_inset
+
+只是一个
+\series bold
+虚拟变量
+\series default
+.
+ 它是一个暂时的标记,
+ 用来表示某个 (在上述情况下) 非常接近于 
+\begin_inset Formula $L$
+\end_inset
+
+的量.
+ 它可以被替换成其他任意字母,
+ 只要替换是彻底的;
+ 同样,
+ 当你求出极限的值时,
+ 结果不可能包含这个虚拟变量.
+ 所以对虚拟变量你要灵活处理.
 \end_layout
 
 \begin_layout Standard
