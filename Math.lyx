@@ -21459,6 +21459,18 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Standard
+您可以将椭球面想象成一个三维的椭圆，
+就像一个被拉伸或压扁的球体。
+把椭圆绕轴旋转.
+\end_layout
+
+\begin_layout Standard
+在笛卡尔坐标系中，
+中心在原点的椭球面标准方程为：
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1
@@ -21470,7 +21482,166 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Standard
-把椭圆绕轴旋转.
+* `a`,
+ `b`,
+ `c` 是三个正实数，
+分别代表椭球面在 x,
+ y,
+ z 轴上的**半轴长**。
+
+\end_layout
+
+\begin_layout Standard
+* 它们决定了椭球面在各个方向上的“半径”或“大小”。
+
+\end_layout
+
+\begin_layout Standard
+一个封闭的、有限的二次曲面。
+它在空间中占据一个有限的区域。
+
+\end_layout
+
+\begin_layout Standard
+生活中的例子：
+橄榄球、鸡蛋（近似）、地球（由于自转略扁，
+更接近一个椭球体而非完美球体）。
+
+\end_layout
+
+\begin_layout Standard
+有界性：
+椭球面是**有界**的。
+它完全包含在一个长方体内。
+
+\end_layout
+
+\begin_layout Standard
+截面：
+用任何一个与坐标平面平行的平面去截椭球面，
+得到的截面（如果存在）都是一个**椭圆**或一个**点**。
+
+\end_layout
+
+\begin_layout Standard
+*特殊情况：
+当 `
+\begin_inset Formula $a=b=c$
+\end_inset
+
+` 时，
+椭球面就变成了我们熟悉的球面**，
+方程为 `
+\begin_inset Formula $x^{2}+y^{2}+z^{2}=a^{2}$
+\end_inset
+
+`。
+
+\end_layout
+
+\begin_layout Subsubsection
+椭圆柱面 (Elliptic Cylinder)
+\end_layout
+
+\begin_layout Standard
+您可以将椭圆柱面想象成将一个平面上的椭圆，
+沿着垂直于该平面的方向无限延伸形成的“管道”。
+
+\end_layout
+
+\begin_layout Standard
+#### 定义与特征
+\end_layout
+
+\begin_layout Standard
+* **核心概念**：
+一个开放的、无限延伸的曲面。
+它的“底面”是一个椭圆，
+然后这个椭圆沿着一条直线（称为母线）平行移动形成。
+
+\end_layout
+
+\begin_layout Standard
+* **生活中的例子**：
+一个椭圆形的管道、隧道、某些建筑的柱子。
+
+\end_layout
+
+\begin_layout Standard
+* **标准方程**：
+
+\end_layout
+
+\begin_layout Standard
+如果底面椭圆在 xy 平面上，
+并沿着 z 轴无限延伸，
+其标准方程为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 注意！
+这个方程中**不包含变量 `z`**。
+这就是它成为“柱面”的关键。
+
+\end_layout
+
+\begin_layout Standard
+* 这意味着对于**任意高度 `z`**，
+曲面在 `z` 高度处的横截面都是同一个椭圆 `
+\begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
+\end_inset
+
+`。
+
+\end_layout
+
+\begin_layout Standard
+#### 性质
+\end_layout
+
+\begin_layout Standard
+* **有界性**：
+椭圆柱面是**无界**的。
+它沿着一个轴的方向（在这个例子中是 z 轴）无限延伸。
+
+\end_layout
+
+\begin_layout Standard
+* **截面**：
+
+\end_layout
+
+\begin_layout Standard
+* 用一个平行于 xy 平面（`z = k`）的平面去截，
+得到的截面永远是**同一个椭圆**。
+
+\end_layout
+
+\begin_layout Standard
+* 用一个平行于 xz 平面（`y = k`）或 yz 平面（`x = k`）的平面去截，
+得到的截面是**两条平行的直线**（如果平面与柱面相交）。
+
+\end_layout
+
+\begin_layout Standard
+* **特殊情况**：
+当 `a = b` 时，
+底面椭圆变成了圆，
+这时椭圆柱面就变成了我们最常见的**圆柱面**，
+方程为 `x² + y² = a²`。
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -21559,6 +21730,32 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=z
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+双曲柱面
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+抛物柱面
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{2}=ay$
 \end_inset
 
 
