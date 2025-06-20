@@ -34748,6 +34748,554 @@ status open
 \end_layout
 
 \begin_layout Section
+有理函数
+\end_layout
+
+\begin_layout Standard
+有理函数（Rational Function）是一个可以表示为两个多项式函数之商的函数。
+
+\end_layout
+
+\begin_layout Standard
+其标准形式为：
+
+\begin_inset Formula 
+\[
+f(x)=\frac{P(x)}{Q(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 都是多项式函数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 不能是零多项式，
+即 
+\begin_inset Formula $Q(x)\neq0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这个名字来源于“有理数”（Rational Number）。
+一个有理数可以表示为两个整数的比（例如 
+\begin_inset Formula $\frac{3}{4}$
+\end_inset
+
+），
+而一个有理函数则可以表示为两个多项式的比。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(x)=\frac{1}{x}$
+\end_inset
+
+ (最简单的有理函数之一)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g(x)=\frac{x+2}{x-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h(x)=\frac{3x^{2}-1}{x^{2}+x+2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k(x)=\frac{5}{x^{2}+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+有理函数的关键特性 (Key Characteristics)
+\end_layout
+
+\begin_layout Standard
+有理函数的行为比多项式函数要复杂得多，
+主要由其分母决定。
+以下是分析有理函数时最重要的几个特性：
+
+\end_layout
+
+\begin_layout Subsubsection
+定义域 (Domain)
+\end_layout
+
+\begin_layout Standard
+由于分母不能为零，
+有理函数的定义域是所有使分母 
+\begin_inset Formula $Q(x)\neq0$
+\end_inset
+
+ 的实数 
+\begin_inset Formula $x$
+\end_inset
+
+ 的集合。
+
+\end_layout
+
+\begin_layout Standard
+如何求解：
+ 
+\end_layout
+
+\begin_layout Standard
+1.
+ 令分母 
+\begin_inset Formula $Q(x)=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 解出方程的根。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 定义域就是所有实数除去这些根。
+
+\end_layout
+
+\begin_layout Example
+对于 
+\begin_inset Formula $f(x)=\frac{x+2}{x-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 令 
+\begin_inset Formula $x-3=0$
+\end_inset
+
+，
+解得 
+\begin_inset Formula $x=3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 因此，
+定义域是所有实数，
+但 
+\begin_inset Formula $x\neq3$
+\end_inset
+
+。
+可以表示为 
+\begin_inset Formula $(-\infty,3)\cup(3,\infty)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+零点 (Zeros / Roots)
+\end_layout
+
+\begin_layout Standard
+函数的零点是使 
+\begin_inset Formula $f(x)=0$
+\end_inset
+
+ 的 
+\begin_inset Formula $x$
+\end_inset
+
+ 值。
+对于有理函数，
+这发生在分子 
+\begin_inset Formula $P(x)=0$
+\end_inset
+
+ 且分母 
+\begin_inset Formula $Q(x)\neq0$
+\end_inset
+
+ 的时候。
+
+\end_layout
+
+\begin_layout Standard
+如何求解：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 令分子 
+\begin_inset Formula $P(x)=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 解出方程的根。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 检查这些根是否在函数的定义域内。
+
+\end_layout
+
+\begin_layout Example
+对于 
+\begin_inset Formula $f(x)=\frac{x+2}{x-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 令 
+\begin_inset Formula $x+2=0$
+\end_inset
+
+，
+解得 
+\begin_inset Formula $x=-2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 由于 
+\begin_inset Formula $x=-2$
+\end_inset
+
+ 时分母不为零，
+所以 
+\begin_inset Formula $x=-2$
+\end_inset
+
+ 是函数的零点。
+这意味着函数图像在 
+\begin_inset Formula $x=-2$
+\end_inset
+
+ 处穿过 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴。
+
+\end_layout
+
+\begin_layout Subsubsection
+渐近线 (Asymptotes)
+\end_layout
+
+\begin_layout Standard
+渐近线是函数图像在延伸至无穷远时无限接近但永不相交的直线。
+这是有理函数最独特的特征。
+渐近线分为三种：
+
+\end_layout
+
+\begin_layout Standard
+**1.
+ 垂直渐近线 (Vertical Asymptotes)**
+\end_layout
+
+\begin_layout Standard
+垂直渐近线出现在**使简化后函数的分母为零**的 $x$ 值处。
+
+\end_layout
+
+\begin_layout Standard
+* **如何求解：
+**
+\end_layout
+
+\begin_layout Standard
+1.
+ 首先，
+尽可能化简有理函数（约去分子分母的公因式）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 令化简后函数的分母为零，
+解出的 $x$ 值就是垂直渐近线的方程。
+
+\end_layout
+
+\begin_layout Standard
+* **注意：
+** 如果一个 $x$ 值使原始分母为零，
+但在约分后不再使分母为零，
+那么该点是一个**孔 (Hole)**，
+而不是垂直渐近线。
+
+\end_layout
+
+\begin_layout Standard
+* **示例：
+** 对于 $f(x) = 
+\backslash
+frac{x+2}{x-3}$，
+分母在 $x=3$ 处为零，
+且无法化简。
+所以垂直渐近线是直线 $x=3$。
+
+\end_layout
+
+\begin_layout Standard
+**2.
+ 水平渐近线 (Horizontal Asymptotes)**
+\end_layout
+
+\begin_layout Standard
+水平渐近线描述了当 $x 
+\backslash
+to 
+\backslash
+infty$ 或 $x 
+\backslash
+to -
+\backslash
+infty$ 时，
+函数值的行为。
+通过比较分子 $P(x)$ 的最高次项次数（记为 $n$）和分母 $Q(x)$ 的最高次项次数（记为 $m$）来确定。
+
+\end_layout
+
+\begin_layout Standard
+* **规则：
+**
+\end_layout
+
+\begin_layout Standard
+* **如果 $n < m$：
+** 水平渐近线是 $y=0$ (即 x 轴)。
+
+\end_layout
+
+\begin_layout Standard
+* 例：
+$f(x) = 
+\backslash
+frac{x+1}{x^2+3}$ (次数 1 < 2)，
+水平渐近线是 $y=0$。
+
+\end_layout
+
+\begin_layout Standard
+* **如果 $n = m$：
+** 水平渐近线是 $y = 
+\backslash
+frac{P(x) 
+\backslash
+text{ 的首项系数}}{Q(x) 
+\backslash
+text{ 的首项系数}}$。
+
+\end_layout
+
+\begin_layout Standard
+* 例：
+$f(x) = 
+\backslash
+frac{2x^2+1}{3x^2-x}$ (次数 2 = 2)，
+水平渐近线是 $y=
+\backslash
+frac{2}{3}$。
+
+\end_layout
+
+\begin_layout Standard
+* **如果 $n > m$：
+** **没有**水平渐近线。
+但可能有斜渐近线。
+
+\end_layout
+
+\begin_layout Standard
+**3.
+ 斜渐近线 (Slant / Oblique Asymptotes)**
+\end_layout
+
+\begin_layout Standard
+当**分子的次数恰好比分母的次数大 1** (即 $n = m+1$) 时，
+存在斜渐近线。
+
+\end_layout
+
+\begin_layout Standard
+* **如何求解：
+**
+\end_layout
+
+\begin_layout Standard
+1.
+ 使用多项式长除法，
+用 $P(x)$ 除以 $Q(x)$。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 得到的商（忽略余数）就是一个形如 $y=ax+b$ 的线性方程，
+这就是斜渐近线的方程。
+
+\end_layout
+
+\begin_layout Standard
+* **示例：
+** 对于 $f(x) = 
+\backslash
+frac{x^2+1}{x-1}$ (次数 2 比 1 大 1)。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 进行长除法：
+$(x^2+1) 
+\backslash
+div (x-1)$ 的商是 $x+1$，
+余数是 $2$。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 所以，
+斜渐近线是直线 $y = x+1$。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Subsubsection
+如何绘制有理函数的图像 (How to Graph)
+\end_layout
+
+\begin_layout Standard
+绘制一个有理函数的图像通常遵循以下步骤：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **化简函数：
+** 约去所有公因式，
+并记下孔的位置。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **找零点：
+** 令分子为零，
+找到 x 轴截距。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **找 y 轴截距：
+** 计算 $f(0)$ 的值。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **找垂直渐近线：
+** 令化简后的分母为零。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ **找水平或斜渐近线：
+** 比较分子和分母的次数。
+
+\end_layout
+
+\begin_layout Standard
+6.
+ **分析符号：
+** 在 x 轴上标记出所有的零点和垂直渐近线，
+将数轴分成几个区间。
+在每个区间内取一个测试点，
+判断函数值的正负。
+
+\end_layout
+
+\begin_layout Standard
+7.
+ **绘制图像：
+** 先画出所有的渐近线和截距点，
+然后根据符号分析，
+在各个区间内画出平滑的曲线，
+使其趋近于相应的渐近线。
+
+\end_layout
+
+\begin_layout Section
 初等函数
 \end_layout
 
@@ -38064,7 +38612,34 @@ g(x)\leq f(x)\leq h(x)
 
 \end_inset
 
+。
 
+\end_layout
+
+\begin_layout Standard
+这也适用于左极限或右极限;
+ 在那种情况下,
+ 不等式只需要在 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 的相应一侧对于 
+\begin_inset Formula $x$
+\end_inset
+
+ 成立即可.
+ 当
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ 是 ∞ 或 -∞ 时它也适用;
+ 在那种情况下,
+ 要求对于所有的非常大的 (分别是正的或负的)
+\begin_inset Formula $x$
+\end_inset
+
+,
+ 不等式成立
 \end_layout
 
 \begin_layout Example
@@ -38294,6 +38869,2071 @@ g(x)\leq f(x)\leq h(x)
 
 \end_layout
 
+\begin_layout Subsection
+有理函数的极限
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+ 时的有理函数的极限
+\end_layout
+
+\begin_layout Paragraph
+直接代入
+\end_layout
+
+\begin_layout Standard
+第一步永远是尝试直接将 `a` 代入函数，
+即计算 
+\begin_inset Formula $f(a)=\frac{P(a)}{Q(a)}$
+\end_inset
+
+。
+根据结果，
+我们进入不同的情况。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 情况 1：
+最简单的情况（分母不为零）
+\end_layout
+
+\begin_layout Standard
+条件：
+ 
+\begin_inset Formula $Q(a)\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这种情况下，
+函数在 
+\begin_inset Formula $x=a$
+\end_inset
+
+ 处是**连续的**。
+求极限就像求函数值一样简单。
+
+\end_layout
+
+\begin_layout Standard
+**规则：
+**
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to a}f(x)=\frac{P(a)}{Q(a)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+示例：
+
+\end_layout
+
+\begin_layout Standard
+求 
+\begin_inset Formula $\lim_{x\to2}\frac{x^{2}+3}{x-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 直接代入** 
+\begin_inset Formula $x=2$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+* 分子：
+
+\begin_inset Formula $P(2)=2^{2}+3=7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 分母：
+
+\begin_inset Formula $Q(2)=2-1=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 由于分母 
+\begin_inset Formula $Q(2)=1\neq0$
+\end_inset
+
+，
+极限就是这两个值的商。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to2}\frac{x^{2}+3}{x-1}=\frac{7}{1}=7
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+不定式 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+（通常意味着有“洞”）
+\end_layout
+
+\begin_layout Standard
+条件：
+ 
+\begin_inset Formula $P(a)=0$
+\end_inset
+
+ 并且 
+\begin_inset Formula $Q(a)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这被称为不定式（Indeterminate Form）。
+通常，
+这意味着分子和分母有一个共同的因式 
+\begin_inset Formula $(x-a)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+代数化简（因式分解和约分） 
+\end_layout
+
+\begin_layout Standard
+1.
+ 因为 
+\begin_inset Formula $P(a)=0$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(a)=0$
+\end_inset
+
+，
+根据因式定理，
+
+\begin_inset Formula $(x-a)$
+\end_inset
+
+ 必定是 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q(x)$
+\end_inset
+
+ 的一个因式。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 对分子和分母进行因式分解。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 约去公共因式 
+\begin_inset Formula $(x-a)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 对化简后的新函数重新尝试直接代入。
+
+\end_layout
+
+\begin_layout Standard
+示例：
+
+\end_layout
+
+\begin_layout Standard
+求 
+\begin_inset Formula $\lim_{x\to3}\frac{x^{2}-9}{x-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 直接代入
+\begin_inset Formula $x=3$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+分子：
+
+\begin_inset Formula $P(3)=3^{2}-9=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分母：
+
+\begin_inset Formula $Q(3)=3-3=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们得到了不定式 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 因式分解和约分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to3}\frac{x^{2}-9}{x-3}=\lim_{x\to3}\frac{(x-3)(x+3)}{x-3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+约去 
+\begin_inset Formula $(x-3)$
+\end_inset
+
+（因为 
+\begin_inset Formula $x\to3$
+\end_inset
+
+ 意味着 
+\begin_inset Formula $x$
+\end_inset
+
+ 无限接近 3 但不等于 3，
+所以 
+\begin_inset Formula $x-3\neq0$
+\end_inset
+
+）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\lim_{x\to3}(x+3)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 对简化后的函数求极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=3+3=6
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+高级方法（洛必达法则 L'Hôpital's Rule）：
+
+\end_layout
+
+\begin_layout Standard
+如果熟悉求导，
+对于 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+ 型的不定式，
+可以直接对分子分母分别求导，
+然后再求极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to a}\frac{P(x)}{Q(x)}=\lim_{x\to a}\frac{P'(x)}{Q'(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对于上例：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to3}\frac{x^{2}-9}{x-3}=\lim_{x\to3}\frac{2x}{1}=\frac{2(3)}{1}=6
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结果完全相同。
+
+\end_layout
+
+\begin_layout Problem
+有两个函数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+和 
+\begin_inset Formula $g(x)$
+\end_inset
+
+,
+ 定义分别是
+\begin_inset Formula $f(x)=\frac{x^{2}-3x+2}{x-2}$
+\end_inset
+
+和
+\begin_inset Formula $g(x)=x-1$
+\end_inset
+
+.
+ 那它们是同一个函数吗？
+
+\end_layout
+
+\begin_layout Problem
+你几乎可以这么说!
+ 唯一的问题出在当 x = 2 时,
+ 因为那时分母 
+\begin_inset Formula $(x-2)$
+\end_inset
+
+就等于 0,
+ 而这就说不通了.
+ 因此,
+ f(x) 和 g(x) 不是同一个函数：
+数 2 不在 f 的定义域中,
+ 但它却在 g 的定义域中.
+\end_layout
+
+\begin_layout Problem
+另一方面,
+ 如果你把极限符号放在以上等式链中每一项的最前面,
+ 那么一切就都没问题,
+ 因为这时,
+ 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ 在
+\begin_inset Formula $x=2$
+\end_inset
+
+ 处的值是无关紧要的,
+ 只有那些在 
+\begin_inset Formula $x=2$
+\end_inset
+
+ 
+\series bold
+附近
+\series default
+的
+\begin_inset Formula $f(x)$
+\end_inset
+
+和
+\begin_inset Formula $g(x)$
+\end_inset
+
+的值才有关紧要.
+ 因此,
+ 上述极限问题的解的确是有效的.
+\end_layout
+
+\begin_layout Paragraph
+无限极限（垂直渐近线）
+\end_layout
+
+\begin_layout Standard
+条件：
+ 
+\begin_inset Formula $P(a)\neq0$
+\end_inset
+
+ 并且
+\begin_inset Formula $Q(a)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这会得到一个形如 
+\begin_inset Formula $\frac{\text{非零常数}}{0}$
+\end_inset
+
+ 的形式。
+这意味着当 x 接近 a 时，
+分母变得无限小，
+导致整个分式的值变得无限大（正无穷或负无穷）。
+
+\end_layout
+
+\begin_layout Standard
+规则：
+ 
+\end_layout
+
+\begin_layout Standard
+极限不存在（DNE,
+ Does Not Exist），
+但我们可以描述其趋向于 
+\begin_inset Formula $\infty$
+\end_inset
+
+ 或 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ 的行为。
+这表明在 
+\begin_inset Formula $x=a$
+\end_inset
+
+ 处有一条垂直渐近线。
+
+\end_layout
+
+\begin_layout Standard
+解决方法：
+分析左极限和右极限
+\end_layout
+
+\begin_layout Standard
+我们需要分别考察从 a 的左侧 ($x 
+\backslash
+to a^-$) 和右侧 ($x 
+\backslash
+to a^+$) 接近时的符号。
+
+\end_layout
+
+\begin_layout Standard
+* $x 
+\backslash
+to a^+$：
+意味着 x 比 a 稍大一点。
+
+\end_layout
+
+\begin_layout Standard
+* $x 
+\backslash
+to a^-$：
+意味着 x 比 a 稍小一点。
+
+\end_layout
+
+\begin_layout Standard
+**示例：
+**
+\end_layout
+
+\begin_layout Standard
+求 $
+\backslash
+lim_{x 
+\backslash
+to 2} 
+\backslash
+frac{x+1}{x-2}$
+\end_layout
+
+\begin_layout Standard
+1.
+ **直接代入** $x=2$：
+
+\end_layout
+
+\begin_layout Standard
+* 分子：
+$P(2) = 2+1 = 3$
+\end_layout
+
+\begin_layout Standard
+* 分母：
+$Q(2) = 2-2 = 0$
+\end_layout
+
+\begin_layout Standard
+* 我们得到了形如 $
+\backslash
+frac{3}{0}$ 的形式。
+这表明 $x=2$ 是一条垂直渐近线。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **分析右极限 ($x 
+\backslash
+to 2^+$)**：
+
+\end_layout
+
+\begin_layout Standard
+* 当 x 比 2 稍大时（比如 2.001），
+分子 $x+1$ 约等于 3（正数）。
+
+\end_layout
+
+\begin_layout Standard
+* 分母 $x-2$ 是一个很小的正数（例如 $2.001-2=0.001$）。
+
+\end_layout
+
+\begin_layout Standard
+* 因此，
+$
+\backslash
+frac{
+\backslash
+text{正数}}{
+\backslash
+text{小正数}} 
+\backslash
+to +
+\backslash
+infty$。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+lim_{x 
+\backslash
+to 2^+} 
+\backslash
+frac{x+1}{x-2} = +
+\backslash
+infty$
+\end_layout
+
+\begin_layout Standard
+3.
+ **分析左极限 ($x 
+\backslash
+to 2^-$)**：
+
+\end_layout
+
+\begin_layout Standard
+* 当 x 比 2 稍小时（比如 1.999），
+分子 $x+1$ 约等于 3（正数）。
+
+\end_layout
+
+\begin_layout Standard
+* 分母 $x-2$ 是一个很小的负数（例如 $1.999-2=-0.001$）。
+
+\end_layout
+
+\begin_layout Standard
+* 因此，
+$
+\backslash
+frac{
+\backslash
+text{正数}}{
+\backslash
+text{小负数}} 
+\backslash
+to -
+\backslash
+infty$。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+lim_{x 
+\backslash
+to 2^-} 
+\backslash
+frac{x+1}{x-2} = -
+\backslash
+infty$
+\end_layout
+
+\begin_layout Standard
+**结论：
+**
+\end_layout
+
+\begin_layout Standard
+由于左极限和右极限不相等（一个是 $+
+\backslash
+infty$，
+一个是 $-
+\backslash
+infty$），
+双边极限 $
+\backslash
+lim_{x 
+\backslash
+to 2} 
+\backslash
+frac{x+1}{x-2}$ **不存在**。
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $x\rightarrow a$
+\end_inset
+
+时的平方根的极限
+\end_layout
+
+\begin_layout Paragraph
+共轭表达式 (Conjugate Expression )
+\end_layout
+
+\begin_layout Standard
+简单来说，
+对于一个含有两项的表达式，
+它的共轭表达式就是改变连接这两项的加减号。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达式 (Expression)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+它的共轭表达式 (Its Conjugate) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A+B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A-B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{x}-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{x}+2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{x}+\sqrt{y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sqrt{x}-\sqrt{y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+它的“魔力”来自于一个非常基础的数学公式：
+ 平方差公式。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A+B)(A-B)=A^{2}-B^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当你将一个表达式与它的共轭表达式相乘时，
+你会得到每一项的平方的差。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+将含有平方根的表达式与它的共轭相乘，
+可以
+\series bold
+消除根号
+\series default
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $(\sqrt{x^{2}-9}-4)\times(\sqrt{x^{2}-9}+4)=x^{2}-9-16=x^{2}-25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+在求极限中的核心应用：
+处理 "0/0" 型不定式
+\end_layout
+
+\begin_layout Standard
+在求极限时，
+经常会遇到 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+ 型的情况。
+直接代入无法得到结果，
+这时共轭表达式就派上了用场。
+这个方法通常被称为
+\series bold
+ “分子/分母有理化”
+\series default
+ (Rationalizing the Numerator/Denominator)。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow5}{\lim}\frac{\sqrt{x^{2}-9}-4}{x-5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+首先，
+我们尝试将 `x = 5` 直接代入表达式中，
+得到了 `0/0` 的结果。
+这是一个
+\series bold
+不定式
+\series default
+ (Indeterminate Form)。
+这告诉我们极限可能存在，
+但我们不能通过直接代入来求解。
+我们需要对表达式进行代数变形。
+
+\end_layout
+
+\begin_layout Example
+使用共轭表达式，
+表达式的分子是 
+\begin_inset Formula $\sqrt{x^{2}-9}-4$
+\end_inset
+
+。
+为了消除平方根，
+我们要乘以它的共轭表达式：
+
+\begin_inset Formula $\sqrt{x^{2}-9}+4$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+为了不改变原式的值，
+我们需要在分子和分母上同时乘以这个共轭表达式。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{\sqrt{x^{2}-9}-4}{x-5}\times\frac{\sqrt{x^{2}-9}+4}{\sqrt{x^{2}-9}+4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{x^{2}-25}{(x-5)(\sqrt{x^{2}-9}+4)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{(x-5)(x+5)}{(x-5)(\sqrt{x^{2}-9}+4)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+因为 `x` 趋近于 5，
+但 `x` 不等于 5，
+所以 `(x - 5)` 不为零，
+我们可以安全地将它约分掉。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{x+5}{\sqrt{x^{2}-9}+4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们得到了一个良性的表达式。
+再次将 `x = 5` 代入 ，
+极限值为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\frac{10}{8}=\frac{5}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{\sqrt{x^{2}-9}-4}{x-5}=\frac{5}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+时的有理函数的极限
+\end_layout
+
+\begin_layout Standard
+有理函数 (Rational Function) 是指可以表示为两个多项式之比的函数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b_{m-1}x^{m-1}+\dots+b_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 `
+\begin_inset Formula $P(x)$
+\end_inset
+
+` 和 `
+\begin_inset Formula $Q(x)$
+\end_inset
+
+` 是多项式，
+`
+\begin_inset Formula $a_{n}$
+\end_inset
+
+` 和 `
+\begin_inset Formula $b_{m}$
+\end_inset
+
+` 分别是它们的最高次项系数 (leading coefficients)，
+`n` 和 `m` 分别是它们的次数 (degree)**。
+
+\end_layout
+
+\begin_layout Standard
+当 `x` 变得非常非常大（趋向于无穷）时，
+多项式的值主要由其最高次项决定。
+低次项（如 `x²`,
+ `x`,
+ 常数项）的增长速度远不及最高次项（如 `x³`,
+ `x⁴`），
+它们的影响可以忽略不计。
+这里的要点是,
+ 当 x 变大时,
+ 最高次数项比其他项增长得更快.
+ 
+\end_layout
+
+\begin_layout Standard
+因此，
+求有理函数在无穷远的极限，
+本质上是比较分子和分母的增长速度，
+也就是比较它们的最高次项。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\frac{p(x)}{p_{L}(x)}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+标准解法（严谨步骤）
+\end_layout
+
+\begin_layout Standard
+最规范的方法是：
+将分子和分母同时除以分母中的最高次幂
+\begin_inset Formula $x^{m}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+求解 
+\begin_inset Formula $\underset{x→∞}{\lim}\frac{3x²-2x+5}{2x²+4x-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 找到分母的最高次幂：
+ 分母 的最高次幂是 
+\begin_inset Formula $x²$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 分子分母同除以
+\begin_inset Formula $x²$
+\end_inset
+
+：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{\frac{3x^{2}}{x^{2}}-\frac{2x}{x^{2}}+\frac{5}{x^{2}}}{\frac{2x^{2}}{x^{2}}+\frac{4x}{x^{2}}-\frac{1}{x^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 化简表达式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{3-\frac{2}{x}+\frac{5}{x^{2}}}{2+\frac{4}{x}-\frac{1}{x^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 应用核心法则：
+当
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+时，
+任何形如 
+\begin_inset Formula $\frac{c}{x^{k}}$
+\end_inset
+
+ (其中 `
+\begin_inset Formula $k>0$
+\end_inset
+
+`) 的项的极限都为 0。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 计算结果：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{3-0+0}{2+0-0}=\frac{3}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+快速法则（三条黄金法则）
+\end_layout
+
+\begin_layout Standard
+通过上面的标准解法，
+我们可以总结出非常快速的判断法则，
+只需要比较分子多项式的次数 
+\begin_inset Formula $n$
+\end_inset
+
+和分母多项式的次数 
+\begin_inset Formula $m$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+情况一：
+分子次数 < 分母次数 (
+\begin_inset Formula $n<m$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+含义：
+ 分母的增长速度远快于分子。
+
+\end_layout
+
+\begin_layout Itemize
+结论：
+ 极限为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+情况二：
+分子次数 = 分母次数 (
+\begin_inset Formula $n=m$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+含义：
+分子和分母的增长速度“势均力敌”。
+
+\end_layout
+
+\begin_layout Itemize
+结论：
+极限为
+\series bold
+最高次项系数之比
+\series default
+ (`
+\begin_inset Formula $a_{n}/b_{m}$
+\end_inset
+
+`)。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+情况三：
+分子次数 > 分母次数 (
+\begin_inset Formula $n>m$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+含义：
+分子的增长速度远快于分母。
+
+\end_layout
+
+\begin_layout Itemize
+结论：
+极限为 
+\begin_inset Formula $\infty$
+\end_inset
+
+ 或 
+\begin_inset Formula $-\infty$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+如何判断正负？
+
+\end_layout
+
+\begin_layout Enumerate
+看最高次项 `
+\begin_inset Formula $(a_{n}x^{n})/(b_{m}x^{m})$
+\end_inset
+
+` 的符号。
+
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $x\rightarrow+\infty$
+\end_inset
+
+ 时，
+符号由 `
+\begin_inset Formula $a_{n}/b_{m}$
+\end_inset
+
+` 的正负决定。
+
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $x\rightarrow-\infty$
+\end_inset
+
+时，
+需要考虑 `
+\begin_inset Formula $n-m$
+\end_inset
+
+` 的奇偶性，
+但通常直接代入一个很大的负数来判断符号更简单。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\frac{x³+1}{x-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+分子次数 `
+\begin_inset Formula $n=3$
+\end_inset
+
+`，
+分母次数 `
+\begin_inset Formula $m=1$
+\end_inset
+
+`。
+
+\end_layout
+
+\begin_layout Solution
+最高次项之比为 `
+\begin_inset Formula $x³/x=x²$
+\end_inset
+
+`。
+当 
+\begin_inset Formula $x\rightarrow+\infty$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 趋于
+\begin_inset Formula $+\infty$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+所以极限为 
+\begin_inset Formula $+\infty$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\frac{x³+1}{x-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+同样，
+最高次项之比为 `x²`。
+当 `x` 是一个很大的负数时（例如 `-1000`），
+`x²` 仍然是正数。
+
+\end_layout
+
+\begin_layout Standard
+所以极限仍然是 `+∞`。
+
+\end_layout
+
+\begin_layout Example
+`lim (x→-∞) (2x³ + 1) / (-x² + 5)`
+\end_layout
+
+\begin_layout Example
+分子次数 `n=3`，
+分母次数 `m=2`。
+`3 > 2`。
+
+\end_layout
+
+\begin_layout Example
+最高次项之比为 `2x³ / (-x²) = -2x`。
+当 `x` 是一个很大的负数时，
+`-2x` 是一个很大的正数（例如 `x=-1000`,
+ `-2x=2000`）。
+
+\end_layout
+
+\begin_layout Example
+所以极限是 `+∞`。
+
+\end_layout
+
+\begin_layout Example
+如果 x < 0，
+并且想写 
+\begin_inset Formula $\sqrt[n]{x^{某\text{次幂}}}=x^{m}$
+\end_inset
+
+，
+那么需要在
+\begin_inset Formula $x^{m}$
+\end_inset
+
+之前加一个负号的唯一情形是，
+n 是偶的而 m 是奇的。
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+多项式型函数的极限
+\end_layout
+
+\begin_layout Standard
+方法依然是找到**增长最快的项 (Dominant Term)**，
+整个函数的极限由这一项决定。
+
+\end_layout
+
+\begin_layout Standard
+**示例 1：
+包含根式**
+\end_layout
+
+\begin_layout Standard
+求解 `lim (x→+∞) √(9x⁴ + 5x - 2)`
+\end_layout
+
+\begin_layout Standard
+1.
+ **分析根号内部：
+** 在 `9x⁴ + 5x - 2` 中，
+当 `x→+∞` 时，
+`9x⁴` 是主导项。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **近似替换：
+** 整个表达式的行为类似于 `√(9x⁴)`。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **化简主导项：
+** `√(9x⁴) = √9 * √x⁴ = 3x²`。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **求主导项的极限：
+** `lim (x→+∞) 3x² = +∞`。
+
+\end_layout
+
+\begin_layout Standard
+**示例 2：
+`∞ - ∞` 型不定式（重要陷阱！
+）**
+\end_layout
+
+\begin_layout Standard
+当主导项相减时，
+不能简单地认为它们会抵消。
+这通常是 `∞ - ∞` 型不定式，
+需要使用**共轭表达式**来解决。
+
+\end_layout
+
+\begin_layout Standard
+求解 `lim (x→∞) (√(x² + 4x) - x)`
+\end_layout
+
+\begin_layout Standard
+1.
+ **直接分析：
+** `√(x² + 4x)` 的行为像 `√x² = x`。
+所以这是 `x - x` 的形式，
+即 `∞ - ∞` 不定式。
+**不能直接说结果是 0！
+**
+\end_layout
+
+\begin_layout Standard
+2.
+ **使用共轭表达式：
+**
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{(
+\backslash
+sqrt{x^2+4x}-x)(
+\backslash
+sqrt{x^2+4x}+x)}{(
+\backslash
+sqrt{x^2+4x}+x)} $$
+\end_layout
+
+\begin_layout Standard
+3.
+ **简化分子：
+**
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{(x^2+4x) - x^2}{
+\backslash
+sqrt{x^2+4x}+x} = 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{4x}{
+\backslash
+sqrt{x^2+4x}+x} $$
+\end_layout
+
+\begin_layout Standard
+4.
+ **处理 `∞/∞`：
+** 现在变成了有理函数的极限问题。
+分子分母同除以最高次幂 `x`。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{
+\backslash
+frac{4x}{x}}{
+\backslash
+frac{
+\backslash
+sqrt{x^2+4x}}{x}+
+\backslash
+frac{x}{x}} $$
+\end_layout
+
+\begin_layout Standard
+注意，
+当 `x > 0` 时,
+ `x = √x²`，
+所以
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{4}{
+\backslash
+sqrt{
+\backslash
+frac{x^2+4x}{x^2}}+1} = 
+\backslash
+lim_{x
+\backslash
+rightarrow
+\backslash
+infty} 
+\backslash
+frac{4}{
+\backslash
+sqrt{1+
+\backslash
+frac{4}{x}}+1} $$
+\end_layout
+
+\begin_layout Standard
+5.
+ **代入求值：
+** 当 `x→∞` 时,
+ `4/x → 0`。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{4}{
+\backslash
+sqrt{1+0}+1} = 
+\backslash
+frac{4}{1+1} = 2 $$
+\end_layout
+
+\begin_layout Subsection
+包含绝对值的函数的极限
+\end_layout
+
+\begin_layout Standard
+一切都源于绝对值的定义：
+
+\end_layout
+
+\begin_layout Standard
+$$ |u| = 
+\backslash
+begin{cases} u,
+ & 
+\backslash
+text{if } u 
+\backslash
+ge 0 
+\backslash
+
+\backslash
+ -u,
+ & 
+\backslash
+text{if } u < 0 
+\backslash
+end{cases} $$
+\end_layout
+
+\begin_layout Standard
+这意味着，
+函数 `f(x) = |u(x)|` 的具体形式取决于 `u(x)` 的正负。
+因此，
+在求极限时，
+我们必须考虑当 `x` 从左侧和右侧趋近于某一点 `a` 时，
+`u(x)` 的符号。
+
+\end_layout
+
+\begin_layout Standard
+这自然引出了**左极限**和**右极限**的概念。
+
+\end_layout
+
+\begin_layout Standard
+### 通用解题步骤
+\end_layout
+
+\begin_layout Standard
+当求解 `lim (x→a) f(|u(x)|)` 时，
+遵循以下步骤：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **找到临界点 (Critical Point)：
+**
+\end_layout
+
+\begin_layout Standard
+首先，
+找到使绝对值内部 `u(x)` 等于 0 的点。
+这些点是函数行为可能发生改变的地方。
+令 `u(x) = 0`，
+解出 `x`。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **分别计算左极限和右极限：
+**
+\end_layout
+
+\begin_layout Standard
+* **求右极限 (x → a⁺):** 假设 `x` 从比 `a` 稍大的值趋近 `a`。
+判断此时 `u(x)` 的符号。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 `u(x) > 0`，
+则去掉绝对值符号，
+用 `u(x)` 替换 `|u(x)|`。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 `u(x) < 0`，
+则去掉绝对值符号，
+用 `-u(x)` 替换 `|u(x)|`。
+
+\end_layout
+
+\begin_layout Standard
+然后计算替换后的函数的极限。
+
+\end_layout
+
+\begin_layout Standard
+* **求左极限 (x → a⁻):** 假设 `x` 从比 `a` 稍小的值趋近 `a`。
+用同样的方法判断 `u(x)` 的符号，
+并替换 `|u(x)|`。
+然后计算极限。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **比较左右极限：
+**
+\end_layout
+
+\begin_layout Standard
+* 如果**左极限 = 右极限 = L**，
+那么原极限存在，
+且等于 `L`。
+
+\end_layout
+
+\begin_layout Standard
+* 如果**左极限 ≠ 右极限**，
+那么原极限**不存在 (Does Not Exist,
+ DNE)**。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 示例分析
+\end_layout
+
+\begin_layout Standard
+#### 示例 1：
+经典例子 (极限不存在)
+\end_layout
+
+\begin_layout Standard
+求解 `lim (x→0) |x| / x`
+\end_layout
+
+\begin_layout Standard
+1.
+ **临界点：
+** `|x|` 的临界点是 `x = 0`。
+我们正在这个点上求极限。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **计算左右极限：
+**
+\end_layout
+
+\begin_layout Standard
+* **右极限 (x → 0⁺):**
+\end_layout
+
+\begin_layout Standard
+当 `x` 从右侧趋近 0 时，
+`x` 是一个很小的正数 (`x > 0`)。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+`|x| = x`。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{x
+\backslash
+rightarrow 0^+} 
+\backslash
+frac{|x|}{x} = 
+\backslash
+lim_{x
+\backslash
+rightarrow 0^+} 
+\backslash
+frac{x}{x} = 
+\backslash
+lim_{x
+\backslash
+rightarrow 0^+} 1 = 1 $$
+\end_layout
+
+\begin_layout Standard
+* **左极限 (x → 0⁻):**
+\end_layout
+
+\begin_layout Standard
+当 `x` 从左侧趋近 0 时，
+`x` 是一个很小的负数 (`x < 0`)。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+`|x| = -x`。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0^{-}}\frac{|x|}{x}=\lim_{x\rightarrow0^{-}}\frac{-x}{x}=\lim_{x\rightarrow0^{-}}-1=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **比较结果：
+**
+\end_layout
+
+\begin_layout Standard
+右极限 (1) ≠ 左极限 (-1)。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+极限 `lim (x→0) |x| / x` **不存在**。
+
+\end_layout
+
+\begin_layout Standard
+如果求极限的点 `a` **不是** `u(x)=0` 的解，
+那么问题会简单得多。
+你只需要判断在 `a` 点附近 `u(x)` 的符号即可，
+无需分别计算左右极限。
+
+\end_layout
+
+\begin_layout Standard
+**示例 3：
+非临界点**
+\end_layout
+
+\begin_layout Standard
+求解 `lim (x→5) |x - 2| / (x + 1)`
+\end_layout
+
+\begin_layout Standard
+1.
+ **临界点：
+** `|x - 2|` 的临界点是 `x = 2`。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **分析极限点：
+** 我们要求极限的点是 `x = 5`，
+它**不是**临界点 `2`。
+
+\end_layout
+
+\begin_layout Standard
+当 `x` 在 `5` 的附近时（例如 4.9 或 5.1），
+`x - 2` 总是正数。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+在 `x=5` 的邻域内，
+`|x - 2|` 就等于 `x - 2`。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **直接计算：
+**
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow5}\frac{|x-2|}{x+1}=\lim_{x\rightarrow5}\frac{x-2}{x+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在这是一个没有绝对值的简单有理函数，
+可以直接代入：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{5-2}{5+1} = 
+\backslash
+frac{3}{6} = 
+\backslash
+frac{1}{2} $$
+\end_layout
+
 \begin_layout Section
 函数的连续性
 \end_layout
@@ -38393,7 +41033,8 @@ g(x)\leq f(x)\leq h(x)
 \begin_inset Formula $c$
 \end_inset
 
- 时的极限存在；
+ 时的双侧极限存在，
+并且是有限的；
  
 \end_layout
 
@@ -39325,6 +41966,54 @@ x, & x\neq0\\
 \end_inset
 
 上的最小值与最大值.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/最大值与最小值定理.jpeg
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+图一和图二解释了为什么是闭区间且连续的。
+图三即使区间不是闭的,
+ 该定理的结论也可能会成立。
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Theorem
