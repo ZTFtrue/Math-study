@@ -51732,17 +51732,17 @@ f(\frac{x_{1}+x_{2}}{2})>\frac{f(x_{1})+f(x_{2})}{2}
 上的图形是凸的.
 \end_layout
 
-\begin_layout Standard
-设 
-\backslash
-( f''(x) > 0 
-\backslash
-)，
+\begin_layout Problem
+设
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+，
 证明 
-\backslash
-( f(x) 
-\backslash
-) 是凹的**
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是凹的
 \end_layout
 
 \begin_layout Proof
@@ -72531,6 +72531,634 @@ frac{1}{4}x$，
 \begin_inset Formula $v=\sum A(x_{i})\Delta x_{i}=\int_{a}^{b}A(x)\Delta x$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+导数在经济中的应用
+\end_layout
+
+\begin_layout Subsection
+边际分析 (Marginal Analysis)
+\end_layout
+
+\begin_layout Standard
+这是导数在经济学中最直接、最基础的应用。
+经济学中的“边际”（Marginal）指的是每新增一个单位的自变量所引起的因变量的变化量。
+这与导数的定义 
+\series bold
+瞬时变化率
+\series default
+ 在概念上是完全一致的。
+
+\end_layout
+
+\begin_layout Standard
+如果一个经济总量（如成本、收益）可以表示为某个变量（如产量）的函数，
+那么该总量的“边际量”就是其对该变量的导数。
+
+\end_layout
+
+\begin_layout Standard
+核心思想：
+理性决策者会持续进行一项活动，
+直到这项活动的边际收益（Marginal Benefit）等于其边际成本（Marginal Cost）。
+
+\end_layout
+
+\begin_layout Subsubsection
+边际成本 (Marginal Cost,
+ MC)
+\end_layout
+
+\begin_layout Standard
+定义：
+ 每多生产一个单位产品所引起的总成本（Total Cost,
+ TC）的增加量。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+如果总成本函数为
+\begin_inset Formula $TC(Q)$
+\end_inset
+
+，
+其中
+\begin_inset Formula $Q$
+\end_inset
+
+是产量，
+那么边际成本就是总成本函数对产量的导数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $MC(Q)=\frac{d(TC)}{dQ}=TC'(Q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经济意义：
+ 边际成本是企业决定是否要增加产量的关键指标。
+如果产品的售价高于其边际成本，
+那么增加一单位产量就是有利可图的。
+
+\end_layout
+
+\begin_layout Paragraph
+平均成本
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{C}(Q)=\frac{TC(Q)}{Q}$
+\end_inset
+
+，
+
+\begin_inset Formula $TC(Q)=C_{0}+k(Q)$
+\end_inset
+
+，
+
+\begin_inset Formula $C_{0}$
+\end_inset
+
+表示固定成本。
+
+\end_layout
+
+\begin_layout Subsubsection
+边际收益 (Marginal Revenue,
+ MR)
+\end_layout
+
+\begin_layout Standard
+定义：
+每多销售一个单位产品所引起的总收益（Total Revenue,
+ TR）的增加量。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+如果总收益函数为 
+\begin_inset Formula $TR(Q)$
+\end_inset
+
+，
+那么边际收益就是总收益函数对产量的导数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $MR(Q)=\frac{d(TR)}{dQ}=TR'(Q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(其中 
+\begin_inset Formula $TR(Q)=P(Q)\cdot Q$
+\end_inset
+
+，
+
+\begin_inset Formula $P$
+\end_inset
+
+是价格，
+
+\begin_inset Formula $Q$
+\end_inset
+
+是产量)
+\end_layout
+
+\begin_layout Standard
+经济意义：
+边际收益衡量了增加销售能带来多少额外收入，
+是企业定价和生产决策的核心。
+
+\end_layout
+
+\begin_layout Subsubsection
+边际效用 (Marginal Utility,
+ MU)
+\end_layout
+
+\begin_layout Standard
+定义：
+每多消费一个单位商品所带来的总效用（Total Utility,
+ TU）的增加量。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+ 如果总效用函数为 
+\begin_inset Formula $TU(x)$
+\end_inset
+
+，
+其中
+\begin_inset Formula $x$
+\end_inset
+
+是商品消费量，
+那么边际效用就是总效用函数对消费量的导数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $MU(x)=\frac{d(TU)}{dx}=TU'(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经济意义：
+ 边际效用是解释消费者行为的基础，
+著名的“边际效用递减规律”就是指 
+\begin_inset Formula $MU'(x)<0$
+\end_inset
+
+（即 
+\begin_inset Formula $TU''(x)<0$
+\end_inset
+
+），
+即随着消费增加，
+每单位新增消费带来的满足感会下降。
+
+\end_layout
+
+\begin_layout Subsection
+弹性分析 (Elasticity Analysis)
+\end_layout
+
+\begin_layout Standard
+弹性衡量的是一个变量的百分比变化会引起另一个变量发生百分比变化的程度。
+它比边际分析更进一步，
+因为它是一个无单位的相对指标，
+可以用来比较不同商品或市场的反应敏感度。
+
+\end_layout
+
+\begin_layout Standard
+核心公式：
+变量
+\begin_inset Formula $Y$
+\end_inset
+
+相对于变量
+\begin_inset Formula $X$
+\end_inset
+
+的点弹性 (Point Elasticity) 
+\begin_inset Formula $E_{yx}$
+\end_inset
+
+ 为：
+
+\begin_inset Formula $E=\frac{\%\text{change in Y}}{\%\text{change in X}}=\frac{dY}{dX}\cdot\frac{X}{Y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的
+\begin_inset Formula $\frac{dY}{dX}$
+\end_inset
+
+就是导数，
+它衡量了
+\begin_inset Formula $Y$
+\end_inset
+
+对
+\begin_inset Formula $X$
+\end_inset
+
+变化的瞬时速率。
+
+\end_layout
+
+\begin_layout Subsubsection
+需求价格弹性 (Price Elasticity of Demand,
+ 
+\begin_inset Formula $E_{d}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+定义：
+价格（
+\begin_inset Formula $P$
+\end_inset
+
+）变动
+\begin_inset Formula $1\%$
+\end_inset
+
+所引起的需求量（
+\begin_inset Formula $Q$
+\end_inset
+
+）变动的百分比。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{d}=\frac{dQ}{dP}\cdot\frac{P}{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经济意义：
+这是最重要的弹性概念，
+对企业定价策略至关重要。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|E_{d}|>1$
+\end_inset
+
+ (富有弹性):
+ 需求对价格敏感。
+降价会使总收益增加。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|E_{d}|<1$
+\end_inset
+
+ (缺乏弹性):
+ 需求对价格不敏感。
+涨价会使总收益增加。
+（例如：
+生活必需品）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|E_{d}|=1$
+\end_inset
+
+ (单位弹性):
+ 价格变动不影响总收益。
+
+\end_layout
+
+\begin_layout Subsubsection
+供给价格弹性 (Price Elasticity of Supply,
+ 
+\begin_inset Formula $E_{s}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+定义：
+ 价格（P）变动1%所引起的供给量（
+\begin_inset Formula $Q_{s}$
+\end_inset
+
+）变动的百分比。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+
+\begin_inset Formula $E_{s}=\frac{dQ_{s}}{dP}\cdot\frac{P}{Q_{s}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+经济意义：
+衡量生产者对价格变化的反应程度。
+
+\end_layout
+
+\begin_layout Subsubsection
+需求交叉价格弹性 (Cross-Price Elasticity of Demand)
+\end_layout
+
+\begin_layout Standard
+定义：
+ 商品
+\begin_inset Formula $B$
+\end_inset
+
+的价格（
+\begin_inset Formula $P_{B}$
+\end_inset
+
+）变动1%所引起的商品
+\begin_inset Formula $A$
+\end_inset
+
+的需求量（
+\begin_inset Formula $Q_{A}$
+\end_inset
+
+）变动的百分比。
+
+\end_layout
+
+\begin_layout Standard
+数学表示：
+ (这里需要用到偏导数)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{AB}=\frac{\partial Q_{A}}{\partial P_{B}}\cdot\frac{P_{B}}{Q_{A}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+经济意义：
+用来判断商品间的关系。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{AB}>0$
+\end_inset
+
+:替代品 (如可口可乐和百事可乐)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{AB}<0$
+\end_inset
+
+:互补品 (如汽车和汽油)
+\end_layout
+
+\begin_layout Subsection
+极值问题 (Optimization)
+\end_layout
+
+\begin_layout Standard
+经济学的核心是研究如何做出最优决策，
+即在给定约束下实现目标的最大化（如利润最大化、效用最大化）或最小化（如成本最小化）。
+这在数学上就是求解函数的极值问题。
+
+\end_layout
+
+\begin_layout Enumerate
+一阶条件 (First-Order Condition):
+ 令目标函数的一阶导数为零，
+求解可能的极值点。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+二阶条件 (Second-Order Condition):
+ 通过二阶导数的符号来判断是极大值还是极小值。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $f''(x)<0$
+\end_inset
+
+:极大值 (Maximum)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+:
+ 极小值 (Minimum)
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+利润最大化 (Profit Maximization)
+\end_layout
+
+\begin_layout Standard
+目标：
+企业选择最优的产量 `Q` 来最大化利润 
+\begin_inset Formula $\Pi(Q)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+利润函数:
+ 
+\begin_inset Formula $\ensuremath{\Pi(Q)=TR(Q)-TC(Q)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+一阶条件:对 
+\begin_inset Formula $\ensuremath{\Pi(Q)}$
+\end_inset
+
+ 求导并令其为零。
+
+\begin_inset Formula 
+\[
+\frac{d\Pi}{dQ}=\frac{d(TR)}{dQ}-\frac{d(TC)}{dQ}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这就得到了微观经济学中最著名的结论：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $MR(Q)=MC(Q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(边际收益 = 边际成本)
+\end_layout
+
+\begin_layout Standard
+这是利润最大化的必要条件。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+二阶条件:
+\begin_inset Formula 
+\[
+\frac{d^{2}\Pi}{dQ^{2}}=MR'(Q)-MC'(Q)<0\quad\implies\quad MR'(Q)<MC'(Q)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+即 
+\begin_inset Formula $MR'(Q)<MC'(Q)$
+\end_inset
+
+。
+这意味着在最优产量点，
+边际收益曲线的斜率必须小于边际成本曲线的斜率。
+这保证了找到的是利润的最高点，
+而不是最低点。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+成本最小化 (Cost Minimization)
+\end_layout
+
+\begin_layout Standard
+目标：
+ 找到使平均成本（Average Cost,
+ AC）最小的产量水平。
+
+\end_layout
+
+\begin_layout Standard
+平均成本函数:
+ 
+\begin_inset Formula $AC(Q)=\frac{TC(Q)}{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+一阶条件:
+ 
+\begin_inset Formula $\frac{d(AC)}{dQ}=0$
+\end_inset
+
+。
+通过商的求导法则可以证明，
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+当 
+\begin_inset Formula $AC'(Q)=0$
+\end_inset
+
+ 时，
+必然有 
+\begin_inset Formula $MC(Q)=AC(Q)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+边际成本等于平均成本时，
+平均成本达到最小。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+二阶条件:
+ 
+\begin_inset Formula $\frac{d^{2}(AC)}{dQ^{2}}>0$
+\end_inset
+
+，
+保证了是最小值点。
 
 \end_layout
 
