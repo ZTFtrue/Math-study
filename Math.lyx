@@ -35720,7 +35720,7 @@ status open
 
 ，
 都能够找到一个正数
-\begin_inset Formula $δ$
+\begin_inset Formula $\delta$
 \end_inset
 
 ，
@@ -35748,56 +35748,21 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $f(x)$
-\end_inset
-
-无论距离
-\begin_inset Formula $b$
-\end_inset
-
-有多近，
-它始终不是
-\begin_inset Formula $b$
-\end_inset
-
-，
-在
-\begin_inset Formula $f(x)$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-之间总是能找到一个数字（而不是无穷小），
-使这个数字与
-\begin_inset Formula $f(x)$
-\end_inset
-
-与
-\begin_inset Formula $b$
-\end_inset
-
-的差为
-\begin_inset Formula $ε$
-\end_inset
-
-。
-对于每个
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-都存在一个大于零的
-\begin_inset Formula $\delta$
-\end_inset
-
-，
-使得满足上式的
+当 
 \begin_inset Formula $x$
 \end_inset
 
-属于
-\begin_inset Formula $a\pm\delta$
+ 无限接近 
+\begin_inset Formula $a$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 就无限接近 
+\begin_inset Formula $b$
 \end_inset
 
 。
@@ -35840,7 +35805,7 @@ status open
 
 总是存在无数个，
 我们只要找到其中一个就能说明他存在。
-比如
+
 \end_layout
 
 \begin_layout Example
@@ -43799,6 +43764,648 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 隐函数
 \end_layout
 
+\begin_layout Section
+魏尔斯特拉斯函数
+\end_layout
+
+\begin_layout Standard
+魏尔斯特拉斯函数 (Weierstrass Function)是数学史上一个里程碑式的发现，
+它是一个非常著名且反直觉的“病态函数” (Pathological Function) 或“数学怪兽” (Mathematical Monster)。
+
+\end_layout
+
+\begin_layout Standard
+简单来说，
+它的核心特点是：
+处处连续，
+但又处处不可导。
+ (Continuous everywhere,
+ but differentiable nowhere.)
+\end_layout
+
+\begin_layout Standard
+在它被发现之前，
+数学家们普遍凭直觉认为，
+一个连续的函数“大部分”应该是可导的，
+顶多在一些孤立的点上（比如 `y=|x|` 在 `x=0` 处的尖点）不可导。
+魏尔斯特拉斯函数的出现，
+彻底粉碎了这种直觉，
+并推动了数学分析走向更严格的逻辑基础。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 函数的定义
+\end_layout
+
+\begin_layout Standard
+魏尔斯特拉斯函数最经典的形式是一个无穷级数（傅里叶级数）：
+
+\end_layout
+
+\begin_layout Standard
+$$ f(x) = 
+\backslash
+sum_{n=0}^{
+\backslash
+infty} a^n 
+\backslash
+cos(b^n 
+\backslash
+pi x) $$
+\end_layout
+
+\begin_layout Standard
+其中，
+参数 `a` 和 `b` 必须满足一定的条件：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ `0 < a < 1`
+\end_layout
+
+\begin_layout Standard
+2.
+ `b` 是一个大于1的**奇数**
+\end_layout
+
+\begin_layout Standard
+3.
+ `ab > 1 + 
+\backslash
+frac{3}{2}
+\backslash
+pi`
+\end_layout
+
+\begin_layout Standard
+一个常用的参数选择是 `a = 1/2` 和 `b = 13`。
+
+\end_layout
+
+\begin_layout Standard
+### 为什么它有如此奇特的性质？
+
+\end_layout
+
+\begin_layout Standard
+让我们通过直观的方式来理解它的构造：
+
+\end_layout
+
+\begin_layout Standard
+#### 1.
+ 它是如何构造的？
+
+\end_layout
+
+\begin_layout Standard
+这个函数是**无限个余弦波叠加**的结果：
+
+\end_layout
+
+\begin_layout Standard
+* **第1项 (n=0):** `cos(πx)`，
+一个平滑、简单的余弦波。
+
+\end_layout
+
+\begin_layout Standard
+* **第2项 (n=1):** `a * cos(bπx)`，
+这是一个**振幅更小** (因为 `a<1`) 但**频率更高** (因为 `b>1`) 的波。
+
+\end_layout
+
+\begin_layout Standard
+* **第3项 (n=2):** `a² * cos(b²πx)`，
+这是一个**振幅更小更小**，
+但**频率更高更高**的波。
+
+\end_layout
+
+\begin_layout Standard
+* ...以此类推。
+
+\end_layout
+
+\begin_layout Standard
+你可以想象这个过程：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 先画一个平滑的波。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 然后在这个平滑的波上，
+再叠加上一个更小、更“抖动”的波。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 接着，
+在已经抖动的波上，
+再叠加上一个微乎其微但抖动得极其剧烈的波。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 重复这个过程**无限次**。
+
+\end_layout
+
+\begin_layout Standard
+*(上图展示了叠加前几项的过程)*
+\end_layout
+
+\begin_layout Standard
+2.
+ 为什么它处处连续？
+
+\end_layout
+
+\begin_layout Standard
+每一项 `
+\begin_inset Formula $a^{n}\cos(b^{n}\pi x)$
+\end_inset
+
+` 本身都是一个连续函数。
+
+\end_layout
+
+\begin_layout Standard
+由于 `
+\begin_inset Formula $0<a<1$
+\end_inset
+
+`，
+所以级数 
+\begin_inset Formula $\sum a^{n}$
+\end_inset
+
+ 是一个收敛的几何级数。
+
+\end_layout
+
+\begin_layout Standard
+根据魏尔斯特拉斯
+\begin_inset Formula $M$
+\end_inset
+
+判别法，
+因为每一项的绝对值 
+\begin_inset Formula $|a^{n}\cos(b^{n}\pi x)|\leqslant a^{n}$
+\end_inset
+
+，
+并且 
+\begin_inset Formula $\sum a^{n}$
+\end_inset
+
+ 收敛，
+所以原函数级数 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是一致收敛的。
+
+\end_layout
+
+\begin_layout Standard
+一致收敛的连续函数级数，
+其和函数也必然是**连续的**。
+
+\end_layout
+
+\begin_layout Standard
+直观上讲，
+虽然我们不断地增加“抖动”，
+但每次增加的抖动的幅度 (`aⁿ`) 越来越小，
+小到足以保证函数曲线不会在任何地方“断开”。
+
+\end_layout
+
+\begin_layout Standard
+#### 3.
+ 为什么它处处不可导？
+
+\end_layout
+
+\begin_layout Standard
+这是最反直觉的部分。
+导数的几何意义是**切线的斜率**。
+一个函数在某点可导，
+意味着你把函数图像在那一点无限放大，
+它会越来越像一条直线（也就是切线）。
+
+\end_layout
+
+\begin_layout Standard
+而对于魏尔斯特拉斯函数：
+
+\end_layout
+
+\begin_layout Standard
+* **你永远也找不到切线。
+**
+\end_layout
+
+\begin_layout Standard
+* 无论你把它的图像放大多少倍，
+它都不会变得平滑。
+相反，
+你会看到更多、更剧烈的“锯齿”和“抖动”显现出来。
+
+\end_layout
+
+\begin_layout Standard
+* 这个特性被称为**自相似性 (Self-similarity)**，
+是**分形 (Fractal)** 的一个典型特征。
+魏尔斯特拉斯函数是历史上最早被严格研究的分形曲线之一。
+
+\end_layout
+
+\begin_layout Standard
+**直观解释：
+**
+\end_layout
+
+\begin_layout Standard
+想象一下你要计算在任意一点 `x₀` 的斜率。
+
+\end_layout
+
+\begin_layout Standard
+当你试图用 `(f(x₀+h) - f(x₀))/h` 这个极限来计算时，
+无论 `h` 多么小，
+`x₀` 和 `x₀+h` 之间总会包含那些频率极高、抖动极剧烈的波。
+这些高频波的贡献使得这个比值永远无法稳定下来，
+它会随着 `h` 的无限减小而无限振荡，
+永远不会收敛到一个确定的值。
+因此，
+极限（导数）不存在。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+太棒了！
+这是一个非常有深度的问题，
+它直接触及了ε-δ定义的核心威力。
+
+\end_layout
+
+\begin_layout Standard
+答案是：
+**是的，
+绝对可以。
+**
+\end_layout
+
+\begin_layout Standard
+事实上，
+ε-δ（以及由它引申出的分析工具）是**唯一**能够严格证明魏尔斯特拉斯函数这些奇特性质的工具。
+正是为了处理像这样反直觉的函数，
+魏尔斯特拉斯才发展并完善了这套语言。
+
+\end_layout
+
+\begin_layout Standard
+下面我们来分别看一下，
+如何用ε-δ的思想来证明这两点。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 证明魏尔斯特拉斯函数处处连续
+\end_layout
+
+\begin_layout Standard
+**目标：
+** 证明对于任何实数 `c`，
+极限 `lim (x→c) f(x) = f(c)` 都成立。
+
+\end_layout
+
+\begin_layout Standard
+根据连续性的ε-δ定义，
+我们需要证明：
+
+\end_layout
+
+\begin_layout Standard
+> 对于**任意** `ε > 0`，
+我们**总能找到**一个 `δ > 0`，
+使得只要 `|x - c| < δ`，
+就有 `|f(x) - f(c)| < ε`。
+
+\end_layout
+
+\begin_layout Standard
+**证明策略（简化版）：
+**
+\end_layout
+
+\begin_layout Standard
+这是一个非常经典的分析学证明，
+其核心技巧是“**分头击破**”—
+—
+将无穷级数拆成两部分：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ **“尾巴” (The Tail):** `Σ` 从某个大数 `N` 到无穷。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **“头部” (The Head):** `Σ` 从 `0` 到 `N-1`。
+
+\end_layout
+
+\begin_layout Standard
+**步骤：
+**
+\end_layout
+
+\begin_layout Standard
+1.
+ **挑战者给出 `ε`：
+** 比如 `ε = 0.001`。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **我们先处理“尾巴”：
+**
+\end_layout
+
+\begin_layout Standard
+* 函数 `f(x) = Σ aⁿ cos(bⁿπx)`。
+
+\end_layout
+
+\begin_layout Standard
+* 我们要让 `|f(x) - f(c)| < ε`。
+利用三角不等式，
+我们知道 `|f(x) - f(c)| ≤ |头部差| + |尾巴差|`。
+
+\end_layout
+
+\begin_layout Standard
+* “尾巴”的和是 `Σ (n=N to ∞) ...`。
+因为 `0 < a < 1`，
+这是一个收敛的几何级数。
+我们可以选择一个足够大的 `N`，
+使得这条“尾巴”本身就非常小。
+例如，
+我们可以找到一个 `N`，
+使得**尾巴的和**（对于任何x和c）都小于 `ε/2`。
+
+\end_layout
+
+\begin_layout Standard
+* **这一步是纯粹的代数，
+不需要δ，
+只需要选择足够大的N。
+**
+\end_layout
+
+\begin_layout Standard
+3.
+ **我们再处理“头部”：
+**
+\end_layout
+
+\begin_layout Standard
+* 现在我们有了一个**有限项**的和：
+`Σ (n=0 to N-1) aⁿ cos(bⁿπx)`。
+
+\end_layout
+
+\begin_layout Standard
+* **关键：
+一个有限项的连续函数之和，
+其本身也是一个连续函数！
+**
+\end_layout
+
+\begin_layout Standard
+* 因为这个“头部”函数是连续的，
+所以根据连续性的ε-δ定义，
+对于我们剩下的 `ε/2`，
+**必然存在**一个 `δ > 0`，
+使得只要 `|x - c| < δ`，
+这个“头部”的差 `|头部(x) - 头部(c)|` 就会小于 `ε/2`。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **组合起来：
+**
+\end_layout
+
+\begin_layout Standard
+* 我们找到了一个 `δ`。
+现在，
+只要 `|x - c| < δ`：
+
+\end_layout
+
+\begin_layout Standard
+* `|f(x) - f(c)| ≤ |头部差| + |尾巴差| < ε/2 + ε/2 = ε`。
+
+\end_layout
+
+\begin_layout Standard
+* **证明完成！
+** 我们成功地为任意的 `ε` 找到了一个对应的 `δ`。
+
+\end_layout
+
+\begin_layout Standard
+**结论：
+** ε-δ语言通过这种“分而治之”的策略，
+完美地证明了魏尔斯特拉斯函数处处连续。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 证明魏尔斯特拉斯函数处处不可导
+\end_layout
+
+\begin_layout Standard
+**目标：
+** 证明对于任何实数 `c`，
+导数的极限定义 `lim (h→0) [f(c+h) - f(c)] / h` 不存在。
+
+\end_layout
+
+\begin_layout Standard
+**证明策略（概念版）：
+**
+\end_layout
+
+\begin_layout Standard
+这个证明要复杂得多，
+是魏尔斯特拉斯的创举。
+其核心思想是，
+我们要证明这个**差商 (Difference Quotient)** 的值不会收敛，
+它会无限地振荡或者趋于无穷。
+
+\end_layout
+
+\begin_layout Standard
+根据极限不存在的ε-δ定义，
+我们需要证明：
+
+\end_layout
+
+\begin_layout Standard
+> **存在**一个 `ε > 0`（比如 `ε=1`），
+使得**对于所有**的 `δ > 0`，
+我们总能找到一个 `h` 满足 `0 < |h| < δ`，
+但差商的值 `|[f(c+h) - f(c)] / h|` 却非常大（或与任何假定的极限L都相差甚远）。
+
+\end_layout
+
+\begin_layout Standard
+**步骤（概念）：
+**
+\end_layout
+
+\begin_layout Standard
+1.
+ **构造特殊的 `h`：
+** 魏尔斯特拉斯的绝妙之处在于，
+他没有让 `h` 随意地趋近于0，
+而是构造了一个**特殊的序列 `h_m`**，
+它会趋近于0。
+
+\end_layout
+
+\begin_layout Standard
+* 这个 `h_m` 的构造非常精巧，
+它能与函数中的高频项 `cos(b^m πx)` 产生“共振”。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **利用“共振”放大差商：
+**
+\end_layout
+
+\begin_layout Standard
+* 当用这个特殊的 `h_m` 去计算差商 `[f(c+h_m) - f(c)] / h_m` 时，
+那些频率较低的“头部”项的贡献是有限的。
+
+\end_layout
+
+\begin_layout Standard
+* 但是，
+那些频率极高的“尾部”项，
+由于“共振”效应，
+它们的贡献不仅没有被 `h_m` 的减小而抵消，
+反而被**极大地放大了**。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **证明差商发散：
+**
+\end_layout
+
+\begin_layout Standard
+* 可以证明，
+当 `m` 越来越大（即 `h_m` 越来越接近0）时，
+这个差商的绝对值 `|[f(c+h_m) - f(c)] / h_m|` 会**趋向于无穷大**。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **得出结论：
+**
+\end_layout
+
+\begin_layout Standard
+* 既然我们找到了一个趋向于0的序列 `h_m`，
+但沿着这个路径，
+差商却趋于无穷，
+那么根据极限的定义，
+这个极限**不可能存在**。
+
+\end_layout
+
+\begin_layout Standard
+* 因为对于任何一个点 `c` 都能进行这样的构造，
+所以函数在任何一点都不可导。
+
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+| 性质 | ε-δ 证明工具/策略 |
+\end_layout
+
+\begin_layout Standard
+| :------------- | :----------------------------------------------------------- |
+\end_layout
+
+\begin_layout Standard
+| **连续性** | **三角不等式** 和 **“分而治之”**（拆分无穷级数为“头”和“尾”）。
+ |
+\end_layout
+
+\begin_layout Standard
+| **不可导性** | **构造特殊序列 `h_m → 0`** 来与高频项“共振”，
+证明差商**发散**。
+ |
+\end_layout
+
+\begin_layout Standard
+因此，
+ε-δ语言不仅能定义极限和连续，
+它更是分析学家手中最强大的“显微镜”和“手术刀”，
+能够精确地剖析和证明那些最违反我们日常直觉的数学对象的内在属性。
+
+\end_layout
+
 \begin_layout Chapter
 导数
 \end_layout
@@ -44676,6 +45283,387 @@ c处
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Section
+\begin_inset Formula $y=|x|$
+\end_inset
+
+在点
+\begin_inset Formula $0$
+\end_inset
+
+处连续但不可导
+\end_layout
+
+\begin_layout Standard
+分别讨论 `y = |x|` 在点 `x = 0` 处的极限和导数。
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $y=|x|$
+\end_inset
+
+ 在点 
+\begin_inset Formula $0$
+\end_inset
+
+ 的极限
+\end_layout
+
+\begin_layout Standard
+为了求解在
+\begin_inset Formula $x=0$
+\end_inset
+
+ 这个临界点的极限，
+我们需要考察其左极限和右极限。
+
+\end_layout
+
+\begin_layout Standard
+右极限 (
+\begin_inset Formula $x\rightarrow0^{+}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $x$
+\end_inset
+
+ 从右侧趋近于 
+\begin_inset Formula $0$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $x$
+\end_inset
+
+ 是一个很小的正数 (
+\begin_inset Formula $x>0$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+根据绝对值的定义，
+此时 `
+\begin_inset Formula $|x|=x$
+\end_inset
+
+`。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0^{+}}|x|=\lim_{x\rightarrow0^{+}}x=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+左极限 (
+\begin_inset Formula $x\rightarrow0^{-}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $x$
+\end_inset
+
+ 从左侧趋近于 0 时，
+
+\begin_inset Formula $x$
+\end_inset
+
+ 是一个很小的负数 (
+\begin_inset Formula $x<0$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+根据绝对值的定义，
+此时 
+\begin_inset Formula $|x|=-x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0^{-}}|x|=\lim_{x\rightarrow0^{-}}(-x)=-0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为
+\begin_inset Formula $左极限=右极限=0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $y=|x|$
+\end_inset
+
+ 在点 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处的极限存在，
+并且等于 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=|x|$
+\end_inset
+
+ 在点 
+\begin_inset Formula $0$
+\end_inset
+
+ 的导数
+\end_layout
+
+\begin_layout Standard
+问题：
+求解 
+\begin_inset Formula $f'(0)$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f'(a)=\lim_{\Delta x\rightarrow0}\frac{f(a+\Delta x)-f(a)}{\Delta x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将 
+\begin_inset Formula $f(x)=|x|$
+\end_inset
+
+ 和 
+\begin_inset Formula $a=0$
+\end_inset
+
+代入：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f'(0)=\lim_{\Delta x\rightarrow0}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim_{h\rightarrow0}\frac{|\Delta x|}{\Delta x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们又遇到了这个熟悉的极限！
+为了求解它，
+我们必须再次考察左右极限（在这里称为
+\series bold
+左导数
+\series default
+和
+\series bold
+右导数
+\series default
+）。
+
+\end_layout
+
+\begin_layout Standard
+右导数 (
+\begin_inset Formula $\Delta x\rightarrow0^{+}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+从右侧趋近于 0 时，
+
+\begin_inset Formula $\Delta x>0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $|\Delta x|=\Delta x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\Delta x\rightarrow0^{+}}\frac{|h|}{h}=\lim_{\Delta x\rightarrow0^{+}}\frac{\Delta x}{\Delta x}=\lim_{\Delta x\rightarrow0^{+}}1=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这代表了函数在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 右侧的斜率是 1。
+
+\end_layout
+
+\begin_layout Standard
+左导数 (
+\begin_inset Formula $\Delta x\rightarrow0^{-}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+当 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Delta x$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 从左侧趋近于 0 时，
+
+\begin_inset Formula $\Delta x<0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $|\Delta x|=-\Delta x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{\Delta x\rightarrow0^{-}}\frac{|\Delta x|}{\Delta x}=\lim_{h\rightarrow0^{-}}\frac{-\Delta x}{\Delta x}=\lim_{\Delta x\rightarrow0^{-}}-1=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这代表了函数在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 左侧的斜率是 
+\begin_inset Formula $-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因为 左导数 (-1) ≠ 右导数 (1)，
+所以导数的极限不存在。
+因此，
+
+\begin_inset Formula $y=|x|$
+\end_inset
+
+ 在点 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处不可导 (Not Differentiable)。
+
+\end_layout
+
+\begin_layout Standard
+这个例子是理解“一个函数可以在某点连续，
+但却在该点不可导”的最佳范例。
+
 \end_layout
 
 \begin_layout Section
@@ -88991,6 +89979,495 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 \begin_inset Formula $\mathcal{L}[f(at)]=\frac{1}{a}F(\frac{p}{a})$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+格兰迪级数
+\end_layout
+
+\begin_layout Standard
+格兰迪级数是下面这个无穷级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-1+1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也可以写成求和形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}(-1)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个级数以18世纪的意大利数学家、哲学家和神父路易吉·格兰迪 (Luigi Grandi) 的名字命名。
+
+\end_layout
+
+\begin_layout Standard
+观点一：
+和为 0
+\end_layout
+
+\begin_layout Standard
+如果我们像这样给级数加括号：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(1-1)+(1-1)+(1-1)+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么结果就是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0+0+0+\cdots=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+观点二：
+和为 1
+\end_layout
+
+\begin_layout Standard
+如果我们换一种方式加括号：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1+(-1+1)+(-1+1)+(-1+1)+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么结果就变成了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1+0+0+0+\cdots=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+观点三：
+和为 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这种方法在当时最具争议性，
+但后来被证明在特定数学框架下是合理的。
+
+\end_layout
+
+\begin_layout Standard
+假设这个级数有一个和，
+我们称之为 S：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么，
+我们可以做一个简单的代数变换：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-S=1-(1-1+1-1+\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-S=1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们发现 
+\begin_inset Formula $1-S$
+\end_inset
+
+ 等于原始的级数 `S`。
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-S=S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解这个方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现代数学的解释
+\end_layout
+
+\begin_layout Standard
+在现代数学中，
+我们对“和”有了更严格的定义。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 收敛与发散 (Convergence and Divergence)
+\end_layout
+
+\begin_layout Standard
+一个无穷级数的“和”被定义为其
+\series bold
+ 部分和序列
+\series default
+ (sequence of partial sums) 的极限。
+如果这个极限存在且唯一，
+我们就说这个级数是收敛 (convergent)的；
+否则，
+它就是发散 (divergent) 的。
+
+\end_layout
+
+\begin_layout Standard
+我们来看看格兰迪级数的部分和：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{2}=1-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{3}=1-1+1=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{4}=1-1+1-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个部分和序列是 
+\begin_inset Formula $1,0,1,0,1,0,\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+很明显，
+这个序列并不会趋近于任何一个单一的、确定的极限。
+它在 1 和 0 之间来回震荡。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+根据标准的柯西收敛判别法，
+格兰迪级数是发散的，
+它没有和。
+
+\end_layout
+
+\begin_layout Standard
+从这个角度看，
+前面提到的观点一和观点二之所以错误，
+是因为它们违反了无穷级数加法的结合律—
+—
+
+\series bold
+只有当级数绝对收敛时，
+才能任意添加括号
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 可和性方法 (Summability Methods)
+\end_layout
+
+\begin_layout Standard
+尽管格兰迪级数在传统意义上是发散的，
+但数学家们发展了一些更广义的“求和”方法，
+可以为某些发散级数赋予一个合理的值。
+这些方法被称为可和性方法。
+
+\end_layout
+
+\begin_layout Standard
+其中最著名的一种是切萨罗求和 (Cesàro summation)。
+
+\end_layout
+
+\begin_layout Standard
+切萨罗和的核心思想是：
+不直接看部分和序列 
+\begin_inset Formula $(S_{n})$
+\end_inset
+
+ 的极限，
+而是去看部分和的算术平均值序列 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ 的极限。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们来计算格兰迪级数的这个平均值序列：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{1}=\frac{1}{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{2}=\frac{1+0}{2}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{3}=\frac{1+0+1}{3}=\frac{2}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{4}=\frac{1+0+1+0}{4}=\frac{2}{4}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{5}=\frac{1+0+1+0+1}{5}=\frac{3}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{6}=\frac{1+0+1+0+1+0}{6}=\frac{3}{6}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以观察到，
+当 n 为偶数时，
+
+\begin_inset Formula $a_{n}=1/2$
+\end_inset
+
+；
+当 n 为奇数时，
+
+\begin_inset Formula $a_{n}=(n+1)/(2n)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+随着 n 趋向于无穷大，
+奇数项的极限也是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{n+1}{2n}=\lim_{n\to\infty}(\frac{1}{2}+\frac{1}{2n})=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+部分和的算术平均值序列确实收敛于 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们可以说，
+格兰迪级数的切萨罗和是 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+像阿贝尔求和 (Abel summation) 等其他更强大的可和性方法，
+同样会得到 1/2 这个结果。
+这表明 1/2 是一个非常“自然”的赋值。
+
+\end_layout
+
+\begin_layout Standard
+在标准微积分中：
+格兰迪级数 
+\begin_inset Formula $1-1+1-1+\cdots$
+\end_inset
+
+ 是 发散的，
+没有和。
+
+\end_layout
+
+\begin_layout Standard
+在更广义的数学框架下：
+使用像切萨罗求和这样的可和性方法，
+可以给这个级数赋予一个确定的值 1/2。
 
 \end_layout
 
