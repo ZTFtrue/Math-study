@@ -13284,45 +13284,212 @@ x+2y=5\\
 
 \end_layout
 
-\begin_layout Standard
----
+\begin_layout Subsection
+一元二次方程
 \end_layout
 
 \begin_layout Standard
-总结
+标准形式:
+ 
+\begin_inset Formula $ax^{2}+bx+c=0$
+\end_inset
+
+（ 
+\begin_inset Formula $a\ne0$
+\end_inset
+
+）
 \end_layout
 
 \begin_layout Standard
-| 类型 | 形式 | 例子 | 解法 |
+求根公式:
+ 
+\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-|------|------|------|------|
+## 一、公式来源（推导简略）
 \end_layout
 
 \begin_layout Standard
-| 线性方程| 变量最高次幂为 
-\begin_inset Formula $1$
+方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ax^{2}+bx+c=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+两边同时除以 
+\begin_inset Formula $a$
+\end_inset
+
+（因为 
+\begin_inset Formula $a\ne0$
+\end_inset
+
+）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}+\frac{b}{a}x+\frac{c}{a}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+接下来配方：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}+\frac{b}{a}x=-\frac{c}{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}+\frac{b}{a}x+\left(\frac{b}{2a}\right)^{2}=-\frac{c}{a}+\left(\frac{b}{2a}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+左边变成完全平方：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(x+\frac{b}{2a}\right)^{2}=\frac{b^{2}-4ac}{4a^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+两边开方：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x+\frac{b}{2a}=\pm\frac{\sqrt{b^{2}-4ac}}{2a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最后移项：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 
+\begin_inset Formula $\sqrt{b^{2}-4ac}$
+\end_inset
+
+：
+**判别式**，
+记作 
+\begin_inset Formula $\Delta$
 \end_inset
 
 ，
-无乘积 | 
-\begin_inset Formula $x+2y=5$
-\end_inset
+决定方程的根的类型。
 
- | 代数方法（消元、矩阵） |
 \end_layout
 
 \begin_layout Standard
-| 非线性方程 | 变量有高次幂、乘积、指数、三角等 | 
-\begin_inset Formula $x^{2}+3x=2$
+* 
+\begin_inset Formula $2a$
 \end_inset
 
-,
-\begin_inset Formula $e^{x}=x+2$
+：
+分母，
+共同的缩放因子。
+
+\end_layout
+
+\begin_layout Standard
+判别式 
+\begin_inset Formula $\Delta=b^{2}-4ac$
 \end_inset
 
- | 解析解或数值方法 |
+ 决定解的类型：
+
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+：
+两个不相等的实数根
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+：
+两个相等的实数根（即一个重根）
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $\Delta<0$
+\end_inset
+
+：
+两个共轭复数根
 \end_layout
 
 \begin_layout Chapter
@@ -35404,28 +35571,6 @@ status open
  
 \end_layout
 
-\begin_layout Subsection
-一元二次方程
-\end_layout
-
-\begin_layout Standard
-标准形式:
- 
-\begin_inset Formula $ax^{2}+bx+c=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-求根公式:
- 
-\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 函数的应用
 \end_layout
@@ -43787,19 +43932,23 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 在它被发现之前，
 数学家们普遍凭直觉认为，
 一个连续的函数“大部分”应该是可导的，
-顶多在一些孤立的点上（比如 `y=|x|` 在 `x=0` 处的尖点）不可导。
+顶多在一些孤立的点上（比如 `
+\begin_inset Formula $y=|x|$
+\end_inset
+
+` 在 `
+\begin_inset Formula $x=0$
+\end_inset
+
+` 处的尖点）不可导。
 魏尔斯特拉斯函数的出现，
 彻底粉碎了这种直觉，
 并推动了数学分析走向更严格的逻辑基础。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 函数的定义
+\begin_layout Subsection
+函数的定义
 \end_layout
 
 \begin_layout Standard
@@ -43808,89 +43957,116 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 \end_layout
 
 \begin_layout Standard
-$$ f(x) = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} a^n 
-\backslash
-cos(b^n 
-\backslash
-pi x) $$
+\begin_inset Formula 
+\[
+f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 其中，
-参数 `a` 和 `b` 必须满足一定的条件：
+参数 a 和 b 必须满足一定的条件：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0<a<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b$
+\end_inset
+
+ 是一个大于
+\begin_inset Formula $1$
+\end_inset
+
+的奇数
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ab>1+\frac{3}{2}\pi$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-1.
- `0 < a < 1`
-\end_layout
+一个常用的参数选择是
+\begin_inset Formula $a=\frac{1}{2}$
+\end_inset
 
-\begin_layout Standard
-2.
- `b` 是一个大于1的**奇数**
-\end_layout
+ 和
+\begin_inset Formula $b=13$
+\end_inset
 
-\begin_layout Standard
-3.
- `ab > 1 + 
-\backslash
-frac{3}{2}
-\backslash
-pi`
-\end_layout
-
-\begin_layout Standard
-一个常用的参数选择是 `a = 1/2` 和 `b = 13`。
+。
 
 \end_layout
 
 \begin_layout Standard
-### 为什么它有如此奇特的性质？
+这个函数是
+\series bold
+无限个余弦波叠加
+\series default
+的结果：
 
 \end_layout
 
-\begin_layout Standard
-让我们通过直观的方式来理解它的构造：
+\begin_layout Enumerate
+第1项 (
+\begin_inset Formula $n=0$
+\end_inset
 
-\end_layout
+):
+ 
+\begin_inset Formula $\cos(\pi x)$
+\end_inset
 
-\begin_layout Standard
-#### 1.
- 它是如何构造的？
-
-\end_layout
-
-\begin_layout Standard
-这个函数是**无限个余弦波叠加**的结果：
-
-\end_layout
-
-\begin_layout Standard
-* **第1项 (n=0):** `cos(πx)`，
+，
 一个平滑、简单的余弦波。
 
 \end_layout
 
-\begin_layout Standard
-* **第2项 (n=1):** `a * cos(bπx)`，
-这是一个**振幅更小** (因为 `a<1`) 但**频率更高** (因为 `b>1`) 的波。
+\begin_layout Enumerate
+第2项 (
+\begin_inset Formula $n=1$
+\end_inset
+
+):
+ 
+\begin_inset Formula $a\times\cos(b\pi x)$
+\end_inset
+
+，
+这是一个振幅更小 (因为 `a<1`) 但频率更高 (因为 `b>1`) 的波。
 
 \end_layout
 
-\begin_layout Standard
-* **第3项 (n=2):** `a² * cos(b²πx)`，
-这是一个**振幅更小更小**，
-但**频率更高更高**的波。
+\begin_layout Enumerate
+第3项 (
+\begin_inset Formula $n=2$
+\end_inset
+
+):
+\begin_inset Formula $a^{2}\times\cos(b^{2}\times x)$
+\end_inset
+
+，
+这是一个振幅更小更小，
+但频率更高更高的波。
 
 \end_layout
 
-\begin_layout Standard
-* ...以此类推。
+\begin_layout Enumerate
+* 以此类推。
 
 \end_layout
 
@@ -43899,20 +44075,20 @@ pi`
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 1.
  先画一个平滑的波。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 2.
  然后在这个平滑的波上，
 再叠加上一个更小、更“抖动”的波。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 3.
  接着，
 在已经抖动的波上，
@@ -43920,19 +44096,14 @@ pi`
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 4.
  重复这个过程**无限次**。
 
 \end_layout
 
-\begin_layout Standard
-*(上图展示了叠加前几项的过程)*
-\end_layout
-
-\begin_layout Standard
-2.
- 为什么它处处连续？
+\begin_layout Subsection
+为什么它处处连续？
 
 \end_layout
 
@@ -43946,11 +44117,11 @@ pi`
 \end_layout
 
 \begin_layout Standard
-由于 `
+由于 
 \begin_inset Formula $0<a<1$
 \end_inset
 
-`，
+，
 所以级数 
 \begin_inset Formula $\sum a^{n}$
 \end_inset
@@ -43985,27 +44156,18 @@ pi`
 
 \begin_layout Standard
 一致收敛的连续函数级数，
-其和函数也必然是**连续的**。
+其和函数也必然是连续的。
 
 \end_layout
 
-\begin_layout Standard
-直观上讲，
-虽然我们不断地增加“抖动”，
-但每次增加的抖动的幅度 (`aⁿ`) 越来越小，
-小到足以保证函数曲线不会在任何地方“断开”。
-
-\end_layout
-
-\begin_layout Standard
-#### 3.
- 为什么它处处不可导？
+\begin_layout Subsection
+为什么它处处不可导？
 
 \end_layout
 
 \begin_layout Standard
 这是最反直觉的部分。
-导数的几何意义是**切线的斜率**。
+导数的几何意义是切线的斜率。
 一个函数在某点可导，
 意味着你把函数图像在那一点无限放大，
 它会越来越像一条直线（也就是切线）。
@@ -44014,16 +44176,12 @@ pi`
 
 \begin_layout Standard
 而对于魏尔斯特拉斯函数：
+你永远也找不到切线。
 
 \end_layout
 
 \begin_layout Standard
-* **你永远也找不到切线。
-**
-\end_layout
-
-\begin_layout Standard
-* 无论你把它的图像放大多少倍，
+无论你把它的图像放大多少倍，
 它都不会变得平滑。
 相反，
 你会看到更多、更剧烈的“锯齿”和“抖动”显现出来。
@@ -44031,31 +44189,35 @@ pi`
 \end_layout
 
 \begin_layout Standard
-* 这个特性被称为**自相似性 (Self-similarity)**，
-是**分形 (Fractal)** 的一个典型特征。
+这个特性被称为
+\series bold
+自相似性 (Self-similarity)
+\series default
+，
+是
+\series bold
+分形
+\series default
+ (Fractal) 的一个典型特征。
 魏尔斯特拉斯函数是历史上最早被严格研究的分形曲线之一。
 
 \end_layout
 
-\begin_layout Standard
-**直观解释：
-**
+\begin_layout Subsection
+如何用
+\begin_inset Formula $\epsilon-\delta$
+\end_inset
+
+的思想来证明这两点
 \end_layout
 
 \begin_layout Standard
-想象一下你要计算在任意一点 `x₀` 的斜率。
-
-\end_layout
-
-\begin_layout Standard
-当你试图用 `(f(x₀+h) - f(x₀))/h` 这个极限来计算时，
-无论 `h` 多么小，
-`x₀` 和 `x₀+h` 之间总会包含那些频率极高、抖动极剧烈的波。
-这些高频波的贡献使得这个比值永远无法稳定下来，
-它会随着 `h` 的无限减小而无限振荡，
-永远不会收敛到一个确定的值。
-因此，
-极限（导数）不存在。
+要用 $
+\backslash
+varepsilon$–$
+\backslash
+delta$ 的思想来**严格证明魏尔斯特拉斯函数处处连续但处处不可导**，
+需要分成两个部分来讨论：
 
 \end_layout
 
@@ -44064,31 +44226,59 @@ pi`
 \end_layout
 
 \begin_layout Standard
-太棒了！
-这是一个非常有深度的问题，
-它直接触及了ε-δ定义的核心威力。
+## ✦ 魏尔斯特拉斯函数定义：
 
 \end_layout
 
 \begin_layout Standard
-答案是：
-**是的，
-绝对可以。
-**
-\end_layout
-
-\begin_layout Standard
-事实上，
-ε-δ（以及由它引申出的分析工具）是**唯一**能够严格证明魏尔斯特拉斯函数这些奇特性质的工具。
-正是为了处理像这样反直觉的函数，
-魏尔斯特拉斯才发展并完善了这套语言。
+魏尔斯特拉斯函数的典型定义如下：
 
 \end_layout
 
 \begin_layout Standard
-下面我们来分别看一下，
-如何用ε-δ的思想来证明这两点。
+$$
+\end_layout
 
+\begin_layout Standard
+f(x) = 
+\backslash
+sum_{n=0}^{
+\backslash
+infty} a^n 
+\backslash
+cos(b^n 
+\backslash
+pi x)
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+* $0 < a < 1$
+\end_layout
+
+\begin_layout Standard
+* $b 
+\backslash
+in 
+\backslash
+mathbb{N}$ 是一个奇数
+\end_layout
+
+\begin_layout Standard
+* $ab > 1 + 
+\backslash
+frac{3}{2}
+\backslash
+pi$（或更强条件，
+确保不可导）
 \end_layout
 
 \begin_layout Standard
@@ -44096,162 +44286,405 @@ pi`
 \end_layout
 
 \begin_layout Standard
-### 1.
- 证明魏尔斯特拉斯函数处处连续
+## 一、证明它 **处处连续**（用 $
+\backslash
+varepsilon$–$
+\backslash
+delta$ ）
 \end_layout
 
 \begin_layout Standard
-**目标：
-** 证明对于任何实数 `c`，
-极限 `lim (x→c) f(x) = f(c)` 都成立。
-
-\end_layout
-
-\begin_layout Standard
-根据连续性的ε-δ定义，
-我们需要证明：
+### 思想：
 
 \end_layout
 
 \begin_layout Standard
-> 对于**任意** `ε > 0`，
-我们**总能找到**一个 `δ > 0`，
-使得只要 `|x - c| < δ`，
-就有 `|f(x) - f(c)| < ε`。
+函数是无限和，
+但我们可以证明它是**一致收敛**的，
+进而在逐项连续的前提下得到极限函数的连续性。
 
 \end_layout
 
 \begin_layout Standard
-**证明策略（简化版）：
-**
+### 详细步骤：
+
 \end_layout
 
 \begin_layout Standard
-这是一个非常经典的分析学证明，
-其核心技巧是“**分头击破**”—
-—
-将无穷级数拆成两部分：
+令：
 
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+f(x) = 
+\backslash
+sum_{n=0}^
+\backslash
+infty f_n(x),
+ 
+\backslash
+quad 
+\backslash
+text{其中 } f_n(x) = a^n 
+\backslash
+cos(b^n 
+\backslash
+pi x)
+\end_layout
+
+\begin_layout Standard
+$$
 \end_layout
 
 \begin_layout Standard
 1.
- **“尾巴” (The Tail):** `Σ` 从某个大数 `N` 到无穷。
+ 每一项 $f_n(x)$ 都是连续函数。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **“头部” (The Head):** `Σ` 从 `0` 到 `N-1`。
+ 对任意 $x$，
+我们有：
 
 \end_layout
 
 \begin_layout Standard
-**步骤：
-**
+$$
 \end_layout
 
 \begin_layout Standard
-1.
- **挑战者给出 `ε`：
-** 比如 `ε = 0.001`。
-
+|f_n(x)| 
+\backslash
+leq a^n 
+\backslash
+cdot |
+\backslash
+cos(b^n 
+\backslash
+pi x)| 
+\backslash
+leq a^n
 \end_layout
 
 \begin_layout Standard
-2.
- **我们先处理“尾巴”：
-**
-\end_layout
-
-\begin_layout Standard
-* 函数 `f(x) = Σ aⁿ cos(bⁿπx)`。
-
-\end_layout
-
-\begin_layout Standard
-* 我们要让 `|f(x) - f(c)| < ε`。
-利用三角不等式，
-我们知道 `|f(x) - f(c)| ≤ |头部差| + |尾巴差|`。
-
-\end_layout
-
-\begin_layout Standard
-* “尾巴”的和是 `Σ (n=N to ∞) ...`。
-因为 `0 < a < 1`，
-这是一个收敛的几何级数。
-我们可以选择一个足够大的 `N`，
-使得这条“尾巴”本身就非常小。
-例如，
-我们可以找到一个 `N`，
-使得**尾巴的和**（对于任何x和c）都小于 `ε/2`。
-
-\end_layout
-
-\begin_layout Standard
-* **这一步是纯粹的代数，
-不需要δ，
-只需要选择足够大的N。
-**
+$$
 \end_layout
 
 \begin_layout Standard
 3.
- **我们再处理“头部”：
-**
-\end_layout
-
-\begin_layout Standard
-* 现在我们有了一个**有限项**的和：
-`Σ (n=0 to N-1) aⁿ cos(bⁿπx)`。
+ 由于 $0 < a < 1$，
+级数：
 
 \end_layout
 
 \begin_layout Standard
-* **关键：
-一个有限项的连续函数之和，
-其本身也是一个连续函数！
-**
+$$
 \end_layout
 
 \begin_layout Standard
-* 因为这个“头部”函数是连续的，
-所以根据连续性的ε-δ定义，
-对于我们剩下的 `ε/2`，
-**必然存在**一个 `δ > 0`，
-使得只要 `|x - c| < δ`，
-这个“头部”的差 `|头部(x) - 头部(c)|` 就会小于 `ε/2`。
 
+\backslash
+sum_{n=0}^
+\backslash
+infty a^n
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+是收敛的。
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+sum_{n=0}^
+\backslash
+infty f_n(x) 
+\backslash
+text{ 一致收敛于 } f(x)
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+（因为右侧与 $x$ 无关，
+所以满足一致收敛的Weierstrass判别法）
 \end_layout
 
 \begin_layout Standard
 4.
- **组合起来：
-**
-\end_layout
-
-\begin_layout Standard
-* 我们找到了一个 `δ`。
-现在，
-只要 `|x - c| < δ`：
+ 根据一致收敛定理：
+一致收敛的连续函数列之和仍然是连续函数。
+因此：
 
 \end_layout
 
 \begin_layout Standard
-* `|f(x) - f(c)| ≤ |头部差| + |尾巴差| < ε/2 + ε/2 = ε`。
+$$
+\end_layout
+
+\begin_layout Standard
+f(x) 
+\backslash
+text{ 在任意点连续}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 如果要求用 $
+\backslash
+varepsilon$-$
+\backslash
+delta$ 写法说明：
 
 \end_layout
 
 \begin_layout Standard
-* **证明完成！
-** 我们成功地为任意的 `ε` 找到了一个对应的 `δ`。
+取任意 $x_0 
+\backslash
+in 
+\backslash
+mathbb{R}$，
+要证：
 
 \end_layout
 
 \begin_layout Standard
-**结论：
-** ε-δ语言通过这种“分而治之”的策略，
-完美地证明了魏尔斯特拉斯函数处处连续。
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+forall 
+\backslash
+varepsilon > 0,
+ 
+\backslash
+exists 
+\backslash
+delta > 0,
+ 
+\backslash
+text{使得当 } |x - x_0| < 
+\backslash
+delta 
+\backslash
+Rightarrow |f(x) - f(x_0)| < 
+\backslash
+varepsilon
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+因为：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+f(x) - f(x_0) = 
+\backslash
+sum_{n=0}^
+\backslash
+infty a^n 
+\backslash
+left[
+\backslash
+cos(b^n 
+\backslash
+pi x) - 
+\backslash
+cos(b^n 
+\backslash
+pi x_0)
+\backslash
+right]
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+使用余弦差值估计：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+|
+\backslash
+cos(b^n 
+\backslash
+pi x) - 
+\backslash
+cos(b^n 
+\backslash
+pi x_0)| 
+\backslash
+leq b^n 
+\backslash
+pi |x - x_0|
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+于是：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+|f(x) - f(x_0)| 
+\backslash
+leq 
+\backslash
+sum_{n=0}^
+\backslash
+infty a^n b^n 
+\backslash
+pi |x - x_0| = 
+\backslash
+pi |x - x_0| 
+\backslash
+sum_{n=0}^
+\backslash
+infty (ab)^n
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+只要 $ab < 1$，
+这就收敛；
+但因为我们希望不可导，
+所以条件是 $ab > 1$，
+这个和发散。
+
+\end_layout
+
+\begin_layout Standard
+但是我们可以改为：
+
+\end_layout
+
+\begin_layout Standard
+对任意 $
+\backslash
+varepsilon > 0$，
+我们将和分成两段：
+
+\end_layout
+
+\begin_layout Standard
+* 首先固定 $N$，
+将前 $N$ 项作为主和，
+后面为余项；
+
+\end_layout
+
+\begin_layout Standard
+* 对于余项：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+sum_{n=N+1}^
+\backslash
+infty a^n 
+\backslash
+leq 
+\backslash
+frac{a^{N+1}}{1 - a}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+可以令这个小于 $
+\backslash
+varepsilon/2$；
+
+\end_layout
+
+\begin_layout Standard
+* 然后对主和（有限项），
+因为每一项都是连续函数（可微更强），
+所以每一项都有自己的 $
+\backslash
+delta_n$，
+取最小的 $
+\backslash
+delta$ 满足所有项变化 $< 
+\backslash
+varepsilon/(2N)$，
+总和变化 $< 
+\backslash
+varepsilon/2 $
+\end_layout
+
+\begin_layout Standard
+这样就得出 $|f(x) - f(x_0)| < 
+\backslash
+varepsilon$
+\end_layout
+
+\begin_layout Standard
+因此，
+**$f(x)$ 在 $x_0$ 处连续**。
 
 \end_layout
 
@@ -44260,149 +44693,152 @@ pi`
 \end_layout
 
 \begin_layout Standard
-### 2.
- 证明魏尔斯特拉斯函数处处不可导
+## 二、证明它 **处处不可导**
 \end_layout
 
 \begin_layout Standard
-**目标：
-** 证明对于任何实数 `c`，
-导数的极限定义 `lim (h→0) [f(c+h) - f(c)] / h` 不存在。
+这是魏尔斯特拉斯函数最著名的性质，
+但 **不可用 $
+\backslash
+varepsilon$-$
+\backslash
+delta$** 方法直接证明。
+它属于**反常振荡+无界导数增幅**的思想。
 
 \end_layout
 
 \begin_layout Standard
-**证明策略（概念版）：
+### 思路简述：
+
+\end_layout
+
+\begin_layout Standard
+* 设 $f(x)$ 可导，
+即导数存在：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+lim_{h 
+\backslash
+to 0} 
+\backslash
+frac{f(x+h) - f(x)}{h}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+但对于魏尔斯特拉斯函数：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+frac{f(x+h) - f(x)}{h} = 
+\backslash
+sum_{n=0}^
+\backslash
+infty a^n 
+\backslash
+frac{
+\backslash
+cos(b^n 
+\backslash
+pi(x+h)) - 
+\backslash
+cos(b^n 
+\backslash
+pi x)}{h}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+用三角恒等变形，
+会出现含 $
+\backslash
+sin(
+\backslash
+cdot) 
+\backslash
+cdot b^n$ 的项。
+因为 $b^n$ 指数增长，
+导致导数的级数不收敛（或震荡剧烈），
+故导数极限不存在。
+
+\end_layout
+
+\begin_layout Standard
+也就是说：
+**振荡频率 $b^n$ 增长太快，
+振幅 $a^n$ 又不够快衰减，
+结果导致导数发散或震荡不收敛。
 **
 \end_layout
 
 \begin_layout Standard
-这个证明要复杂得多，
-是魏尔斯特拉斯的创举。
-其核心思想是，
-我们要证明这个**差商 (Difference Quotient)** 的值不会收敛，
-它会无限地振荡或者趋于无穷。
+---
+\end_layout
+
+\begin_layout Standard
+## 总结：
 
 \end_layout
 
 \begin_layout Standard
-根据极限不存在的ε-δ定义，
-我们需要证明：
-
+| 性质 | 方法 | 要点 |
 \end_layout
 
 \begin_layout Standard
-> **存在**一个 `ε > 0`（比如 `ε=1`），
-使得**对于所有**的 `δ > 0`，
-我们总能找到一个 `h` 满足 `0 < |h| < δ`，
-但差商的值 `|[f(c+h) - f(c)] / h|` 却非常大（或与任何假定的极限L都相差甚远）。
-
+| -------- | ---------------------------- | ----------------------- |
 \end_layout
 
 \begin_layout Standard
-**步骤（概念）：
-**
+| **连续性** | $
+\backslash
+varepsilon$-$
+\backslash
+delta$ 直接可证 | 利用一致收敛和逐项连续性，
+或直接拆分主和与余项 |
 \end_layout
 
 \begin_layout Standard
-1.
- **构造特殊的 `h`：
-** 魏尔斯特拉斯的绝妙之处在于，
-他没有让 `h` 随意地趋近于0，
-而是构造了一个**特殊的序列 `h_m`**，
-它会趋近于0。
-
+| **不可导性** | 不可直接用 $
+\backslash
+varepsilon$-$
+\backslash
+delta$ | 利用导数极限表达式发散或震荡，
+数学分析较深入 |
 \end_layout
 
 \begin_layout Standard
-* 这个 `h_m` 的构造非常精巧，
-它能与函数中的高频项 `cos(b^m πx)` 产生“共振”。
-
+---
 \end_layout
 
 \begin_layout Standard
-2.
- **利用“共振”放大差商：
-**
-\end_layout
-
-\begin_layout Standard
-* 当用这个特殊的 `h_m` 去计算差商 `[f(c+h_m) - f(c)] / h_m` 时，
-那些频率较低的“头部”项的贡献是有限的。
-
-\end_layout
-
-\begin_layout Standard
-* 但是，
-那些频率极高的“尾部”项，
-由于“共振”效应，
-它们的贡献不仅没有被 `h_m` 的减小而抵消，
-反而被**极大地放大了**。
-
-\end_layout
-
-\begin_layout Standard
-3.
- **证明差商发散：
-**
-\end_layout
-
-\begin_layout Standard
-* 可以证明，
-当 `m` 越来越大（即 `h_m` 越来越接近0）时，
-这个差商的绝对值 `|[f(c+h_m) - f(c)] / h_m|` 会**趋向于无穷大**。
-
-\end_layout
-
-\begin_layout Standard
-4.
- **得出结论：
-**
-\end_layout
-
-\begin_layout Standard
-* 既然我们找到了一个趋向于0的序列 `h_m`，
-但沿着这个路径，
-差商却趋于无穷，
-那么根据极限的定义，
-这个极限**不可能存在**。
-
-\end_layout
-
-\begin_layout Standard
-* 因为对于任何一个点 `c` 都能进行这样的构造，
-所以函数在任何一点都不可导。
-
-\end_layout
-
-\begin_layout Standard
-### 总结
-\end_layout
-
-\begin_layout Standard
-| 性质 | ε-δ 证明工具/策略 |
-\end_layout
-
-\begin_layout Standard
-| :------------- | :----------------------------------------------------------- |
-\end_layout
-
-\begin_layout Standard
-| **连续性** | **三角不等式** 和 **“分而治之”**（拆分无穷级数为“头”和“尾”）。
- |
-\end_layout
-
-\begin_layout Standard
-| **不可导性** | **构造特殊序列 `h_m → 0`** 来与高频项“共振”，
-证明差商**发散**。
- |
-\end_layout
-
-\begin_layout Standard
-因此，
-ε-δ语言不仅能定义极限和连续，
-它更是分析学家手中最强大的“显微镜”和“手术刀”，
-能够精确地剖析和证明那些最违反我们日常直觉的数学对象的内在属性。
+如需我**写出更完整的 $
+\backslash
+varepsilon$–$
+\backslash
+delta$** 证明结构（包含具体不等式控制），
+或给出不可导性的详细分析（包含震荡图像或级数下界），
+我可以继续帮你补充。
 
 \end_layout
 
@@ -90428,7 +90864,7 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 \begin_layout Standard
 因此，
 部分和的算术平均值序列确实收敛于 
-\begin_inset Formula $1/2$
+\begin_inset Formula $\frac{1}{2}$
 \end_inset
 
 。
@@ -90439,7 +90875,7 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 所以，
 我们可以说，
 格兰迪级数的切萨罗和是 
-\begin_inset Formula $1/2$
+\begin_inset Formula $\frac{1}{2}$
 \end_inset
 
 。
@@ -90448,8 +90884,16 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 
 \begin_layout Standard
 像阿贝尔求和 (Abel summation) 等其他更强大的可和性方法，
-同样会得到 1/2 这个结果。
-这表明 1/2 是一个非常“自然”的赋值。
+同样会得到 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ 这个结果。
+这表明 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ 是一个非常“自然”的赋值。
 
 \end_layout
 
@@ -90467,7 +90911,2587 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 \begin_layout Standard
 在更广义的数学框架下：
 使用像切萨罗求和这样的可和性方法，
-可以给这个级数赋予一个确定的值 1/2。
+可以给这个级数赋予一个确定的值 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsection
+生成函数法
+\end_layout
+
+\begin_layout Standard
+生成函数的思想是：
+将一个
+\series bold
+无穷序列
+\series default
+“打包”或“编码”成一个单一的、紧凑的对象 —
+ 一个函数。
+
+\end_layout
+
+\begin_layout Standard
+这个函数包含了序列的所有信息，
+我们可以对这个函数进行各种代数或微积分操作（如加法、乘法、求导、积分），
+这些操作会以一种可预测的方式改变原始的序列。
+
+\end_layout
+
+\begin_layout Standard
+一句话概括：
+生成函数法是搭建了一座桥梁，
+连接了“离散的序列世界”和“连续的函数与代数世界”。
+
+\end_layout
+
+\begin_layout Paragraph
+如何构建生成函数？
+
+\end_layout
+
+\begin_layout Standard
+给定一个序列
+\begin_inset Formula $a=(a_{0},a_{1},a_{2},a_{3},\ldots)$
+\end_inset
+
+，
+它的（普通）生成函数 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 定义为一个形式幂级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots=\sum_{n=0}^{\infty}a_{n}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $x$
+\end_inset
+
+ 最初只是一个形式上的占位符，
+它的指数 
+\begin_inset Formula $n$
+\end_inset
+
+ 负责标记序列中第 
+\begin_inset Formula $n$
+\end_inset
+
+ 个元素 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 的位置。
+
+\end_layout
+
+\begin_layout Example
+序列：
+
+\begin_inset Formula $(1,1,1,1,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=1$
+\end_inset
+
+ 对所有 
+\begin_inset Formula $n\ge0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+生成函数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+G(x)=1+x+x^{2}+x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+闭合形式 (Closed Form)：
+这是一个公比为 
+\begin_inset Formula $x$
+\end_inset
+
+ 的几何级数。
+当 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时，
+它收敛于：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+G(x)=\frac{1}{1-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个简单的函数 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+ 就是序列 
+\begin_inset Formula $(1,1,1,\ldots)$
+\end_inset
+
+ 的生成函数。
+
+\end_layout
+
+\begin_layout Enumerate
+找到特定项 ：
+如果你想知道序列的第 
+\begin_inset Formula $k$
+\end_inset
+
+ 项 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ 是多少，
+它就是生成函数 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 中 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+ 项的系数。
+对于复杂的生成函数，
+可以通过泰勒展开来找到它。
+
+\begin_inset Formula 
+\[
+a_{k}=\frac{G^{(k)}(0)}{k!}
+\]
+
+\end_inset
+
+（即函数在0点的k阶导数除以k的阶乘）
+\end_layout
+
+\begin_layout Enumerate
+修改序列（函数运算）：
+对函数进行简单的运算，
+会对原始序列产生有趣的效果。
+假设有两个序列
+\begin_inset Formula $a=(a_{n})$
+\end_inset
+
+ 和 
+\begin_inset Formula $b=(b_{n})$
+\end_inset
+
+，
+它们的生成函数分别是 
+\begin_inset Formula $A(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $B(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+序列相加：
+序列 
+\begin_inset Formula $(a_{n}+b_{n})$
+\end_inset
+
+ 的生成函数是 
+\begin_inset Formula $A(x)+B(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+乘法（卷积）：
+一个非常重要的操作。
+
+\begin_inset Formula $A(x)B(x)$
+\end_inset
+
+ 的结果是一个新的生成函数，
+它的系数序列 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ 是 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的卷积 (convolution)：
+
+\begin_inset Formula 
+\[
+c_{n}=\sum_{k=0}^{n}a_{k}b_{n-k}
+\]
+
+\end_inset
+
+这个操作在组合计数问题中极其有用。
+例如，
+“用A方式做第一步，
+用B方式做第二步”的总方案数，
+往往可以通过生成函数的乘法来计算。
+
+\end_layout
+
+\begin_layout Standard
+求导：
+对 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 求导会得到：
+
+\begin_inset Formula 
+\[
+G'(x)=a_{1}+2a_{2}x+3a_{3}x^{2}+\cdots=\sum_{n=1}^{\infty}na_{n}x^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这对应于一个新的序列 
+\begin_inset Formula $(a_{1},2a_{2},3a_{3},\ldots)$
+\end_inset
+
+。
+它提供了一种处理带有 
+\begin_inset Formula $n$
+\end_inset
+
+ 因子的问题的方法。
+
+\end_layout
+
+\begin_layout Example
+求序列 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+ 的生成函数
+\end_layout
+
+\begin_layout Enumerate
+我们知道序列 
+\begin_inset Formula $(1,1,1,\ldots)$
+\end_inset
+
+ 的生成函数是 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+我们想要的序列是 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+观察到 
+\begin_inset Formula $na_{n}$
+\end_inset
+
+ 这样的形式，
+我们想到求导。
+
+\end_layout
+
+\begin_layout Enumerate
+对 
+\begin_inset Formula $G(x)=\frac{1}{1-x}$
+\end_inset
+
+ 求导：
+
+\begin_inset Formula 
+\[
+G'(x)=\frac{d}{dx}\left(\frac{1}{1-x}\right)=\frac{1}{(1-x)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+同时，
+对级数形式求导：
+
+\begin_inset Formula 
+\[
+G'(x)=\frac{d}{dx}(1+x+x^{2}+x^{3}+\cdots)=1+2x+3x^{2}+\cdots=\sum_{n=1}^{\infty}nx^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+这个级数的系数是 
+\begin_inset Formula $(1,2,3,\ldots)$
+\end_inset
+
+。
+我们想得到 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+。
+只需要给整个级数乘以 
+\begin_inset Formula $x$
+\end_inset
+
+ 即可：
+
+\begin_inset Formula 
+\[
+xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $0+x+2x^{2}+3x^{3}+\cdots=x(\sum_{n=1}^{\infty}nx^{n-1})=\frac{x}{(1-x)^{2}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+它的系数序列正是 `
+\begin_inset Formula $(0,1,2,3,\cdots)$
+\end_inset
+
+`
+\end_layout
+
+\begin_layout Enumerate
+从第六步我们知道，
+目标序列的生成函数是 
+\begin_inset Formula $xG'(x)$
+\end_inset
+
+,
+ 从第四步我们知道，
+
+\begin_inset Formula $G'(x)=\frac{1}{(1-x)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+因此，
+序列 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+ 的生成函数是：
+
+\begin_inset Formula 
+\[
+\frac{x}{(1-x)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+### 主要应用领域
+\end_layout
+
+\begin_layout Standard
+1.
+ **解决组合计数问题**：
+这是生成函数的“主场”。
+例如，
+计算用1分、5分、10分的硬币凑成1元的方案数，
+可以用生成函数优雅地解决。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **求解递推关系 (Recurrence Relations)**：
+像斐波那契数列 $F_n = F_{n-1} + F_{n-2}$ 这样的问题，
+可以用生成函数找到其通项公式，
+而无需猜测。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **证明组合恒等式**：
+要证明两个复杂的和式相等，
+只需证明它们的生成函数是同一个函数。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **在概率论中**：
+矩生成函数 (Moment-generating function) 是一个类似的概念，
+用于描述概率分布。
+
+\end_layout
+
+\begin_layout Paragraph
+格兰迪级数的序列
+\end_layout
+
+\begin_layout Standard
+序列：
+
+\begin_inset Formula $(1,-1,1,-1,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=(-1)^{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+生成函数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+闭合形式：
+这是一个首项 (first term)
+\begin_inset Formula $a=1$
+\end_inset
+
+，
+公比(common ratio)为 
+\begin_inset Formula $-x$
+\end_inset
+
+ 的几何级数。
+对于一个无穷几何级数，
+当其公比的绝对值小于 1 (即 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+) 时，
+它的和有一个简单的闭合形式：
+
+\begin_inset Formula $Sum=\frac{a}{1-r}$
+\end_inset
+
+,将我们的首项和公比代入：
+
+\begin_inset Formula 
+\[
+G(x)=\frac{1}{1-(-x)}=\frac{1}{1+x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{matrix}+1\\
+-1\\
++1\\
+-1\\
+\cdots
+\end{matrix}\right]\cdot\left[\begin{matrix}x^{0} & x^{1} & x^{2} & x^{3} & \cdots\end{matrix}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\:S=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $xS=\,\,\;\;\;\;\;1\cdot x^{1}-1\cdot x^{2}+1\cdot x^{3}-1\cdot x^{4}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S+xS=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(1+x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=\frac{1}{1+x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们想求的是原始级数的和，
+即所有系数的和：
+
+\begin_inset Formula $a_{0}+a_{1}+a_{2}+\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+观察生成函数的定义：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们令 
+\begin_inset Formula $x=1$
+\end_inset
+
+，
+那么右边就变成了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(1)=a_{0}+a_{1}(1)+a_{2}(1)^{2}+\cdots=a_{0}+a_{1}+a_{2}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们只需要计算闭合形式在 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 处的值即可：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Sum}=G(1)=\frac{1}{1+1}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+重要提醒：
+关于收敛性
+\end_layout
+
+\begin_layout Standard
+和切萨罗求和一样，
+这个方法也有一个需要注意的关键点。
+
+\end_layout
+
+\begin_layout Standard
+几何级数求和公式 
+\begin_inset Formula $\sum r^{n}=\frac{1}{1-r}$
+\end_inset
+
+ 成立的条件是 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在我们的例子中，
+
+\begin_inset Formula $r=-x$
+\end_inset
+
+，
+所以我们的生成函数等式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-x+x^{2}-x^{3}+\cdots=\frac{1}{1+x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+只在 
+\begin_inset Formula $|-x|<1$
+\end_inset
+
+ (即 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+) 的收敛半径内严格成立。
+
+\end_layout
+
+\begin_layout Standard
+我们最后代入的 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 这个点，
+（解析延拓）正好处在收敛半径的边界上，
+原始级数在这一点是发散的。
+
+\end_layout
+
+\begin_layout Subsection
+更广义的交错级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}=1^{n}-2^{n}+3^{n}-4^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 是一个非负整数。
+这个级数被称为交错幂和 (Alternating Power Sum)。
+
+\end_layout
+
+\begin_layout Standard
+首先，
+需要明确一点：
+对于任何 
+\begin_inset Formula $n\ge0$
+\end_inset
+
+，
+这个级数在传统意义上都是发散的。
+部分和会无限增大或在两个值之间震荡。
+因此，
+我们讨论它的“和”时，
+指的都是在某种广义求和方法（如解析延拓）下的值。
+
+\end_layout
+
+\begin_layout Standard
+这个级数与黎曼Zeta函数和狄利克雷Eta函数有密切的联系。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1^{n}-2^{n}+3^{n}-4^{n}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=0$
+\end_inset
+
+时：
+
+\begin_inset Formula $1-1+1-1+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=1$
+\end_inset
+
+时：
+
+\begin_inset Formula $1-2+3-4+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+与狄利克雷Eta函数的关系
+\end_layout
+
+\begin_layout Standard
+狄利克雷Eta函数 (
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+)定义为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\eta(s)=\sum_{k=1}^{\infty}\frac{(-1)^{k-1}}{k^{s}}=\frac{1}{1^{s}}-\frac{1}{2^{s}}+\frac{1}{3^{s}}-\frac{1}{4^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个级数在复数 
+\begin_inset Formula $s$
+\end_inset
+
+ 的实部 
+\begin_inset Formula $\text{Re}(s)>0$
+\end_inset
+
+ 时收敛。
+
+\end_layout
+
+\begin_layout Standard
+我们想求的级数是 
+\begin_inset Formula $S_{n}=1^{n}-2^{n}+3^{n}-\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+形式上看，
+这似乎是 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 在 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 处的值：
+
+\begin_inset Formula 
+\[
+S_{n}=\eta(-n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于我们感兴趣的 
+\begin_inset Formula $n$
+\end_inset
+
+ 是非负整数，
+所以 
+\begin_inset Formula $-n\le0$
+\end_inset
+
+，
+这超出了 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 级数定义的收敛范围。
+但是，
+我们可以对 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 函数进行解析延拓，
+使其在整个复平面上都有定义。
+因此，
+
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的值就是这个延拓后的 
+\begin_inset Formula $\eta$
+\end_inset
+
+ 函数在 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 处的值。
+
+\end_layout
+
+\begin_layout Standard
+与黎曼Zeta函数的关系
+\end_layout
+
+\begin_layout Standard
+Eta函数和Zeta函数之间有一个非常简单的关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\eta(s)=(1-2^{1-s})\zeta(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个关系式最初在 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+ 的区域推导得出，
+但通过解析延拓，
+它在整个复平面上都成立。
+
+\end_layout
+
+\begin_layout Standard
+将 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 代入，
+我们得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\eta(-n)=(1-2^{1-(-n)})\zeta(-n)=(1-2^{n+1})\zeta(-n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $\zeta(-n)$
+\end_inset
+
+ 是解析延拓后的黎曼Zeta函数在负整数点的值。
+
+\end_layout
+
+\begin_layout Standard
+幸运的是，
+
+\begin_inset Formula $\zeta(-n)$
+\end_inset
+
+ 的值是已知的，
+并且与伯努利数 (Bernoulli numbers)相关：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\zeta(-n)=-\frac{B_{n+1}}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $B_{k}$
+\end_inset
+
+ 是第 
+\begin_inset Formula $k$
+\end_inset
+
+ 个伯努利数。
+
+\end_layout
+
+\begin_layout Standard
+将这个结果代入 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的表达式，
+我们得到了一个计算 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的通用公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=(1-2^{n+1})\left(-\frac{B_{n+1}}{n+1}\right)=\frac{(2^{n+1}-1)B_{n+1}}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+计算具体的值
+\end_layout
+
+\begin_layout Standard
+现在我们可以用这个公式来计算前几个 
+\begin_inset Formula $n$
+\end_inset
+
+ 对应的级数值。
+
+\end_layout
+
+\begin_layout Standard
+需要用到的伯努利数 (
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 有两种约定，
+这里使用 
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+ 的现代约定)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{2}=1/6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{4}=-1/30$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{5}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{6}=1/42$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Case 
+\begin_inset Formula $n=0$
+\end_inset
+
+:
+ 格兰迪级数
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{0}=1^{0}-2^{0}+3^{0}-4^{0}+\cdots=1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{0}=\frac{(2^{0+1}-1)B_{0+1}}{0+1}=\frac{(2-1)B_{1}}{1}=B_{1}=-\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+问题在于伯努利数的约定。
+如果我们使用 
+\begin_inset Formula $B_{1}=1/2$
+\end_inset
+
+ 的旧约定，
+结果就是
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+但更根本的原因是，
+我们使用的级数求和是从 $k=1$ 开始的，
+而格兰迪级数的标准形式 
+\begin_inset Formula $\sum_{k=0}^{\infty}(-1)^{k}$
+\end_inset
+
+ 是从 $k=0$ 开始的。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}(-1)^{k}=1+(-1+1-1+\cdots)=1-S_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $S_{0}=1/2$
+\end_inset
+
+ (使用 
+\begin_inset Formula $B_{1}=1/2$
+\end_inset
+
+ 约定)，
+那么 $1-1/2 = 1/2$。
+
+\end_layout
+
+\begin_layout Standard
+如果 $S_0 = -1/2$ (使用 $B_1=-1/2$ 约定)，
+我们需要检查公式的推导。
+
+\end_layout
+
+\begin_layout Standard
+让我们用最直接的阿贝尔求和法来验证 $n=0$ 的情况：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=\sum_{k=1}^{\infty}(-1)^{k-1}k^{0}x^{k}=x-x^{2}+x^{3}-\cdots=\frac{x}{1+x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $x\to1^{-}$
+\end_inset
+
+,
+ 值为 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以 
+\begin_inset Formula $1-1+1-1+\cdots=1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $S_{0}=1-1+1-\cdots$
+\end_inset
+
+ 确实是 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+公式中的伯努利数部分需要小心处理，
+特别是 
+\begin_inset Formula $n=0$
+\end_inset
+
+ 的情况。
+公式在 $n 
+\backslash
+ge 1$ 时更可靠。
+
+\end_layout
+
+\begin_layout Standard
+#### Case n = 1:
+\end_layout
+
+\begin_layout Standard
+$$ S_1 = 1 - 2 + 3 - 4 + 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Standard
+使用公式 ($n=1$):
+\end_layout
+
+\begin_layout Standard
+$$ S_1 = 
+\backslash
+frac{(2^{1+1} - 1)B_{1+1}}{1+1} = 
+\backslash
+frac{(4-1)B_2}{2} = 
+\backslash
+frac{3 
+\backslash
+cdot (1/6)}{2} = 
+\backslash
+frac{1/2}{2} = 
+\backslash
+frac{1}{4} $$
+\end_layout
+
+\begin_layout Standard
+这是一个非常经典的结果。
+
+\end_layout
+
+\begin_layout Standard
+#### Case n = 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=1^{2}-2^{2}+3^{2}-4^{2}+\cdots=1-4+9-16+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式 (
+\begin_inset Formula $n=2$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=\frac{(2^{2+1}-1)B_{2+1}}{2+1}=\frac{(8-1)B_{3}}{3}=\frac{7\cdot0}{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个结果也很著名，
+该级数的正则化和为 0。
+
+\end_layout
+
+\begin_layout Standard
+#### Case n = 3:
+\end_layout
+
+\begin_layout Standard
+$$ S_3 = 1^3 - 2^3 + 3^3 - 4^3 + 
+\backslash
+cdots = 1 - 8 + 27 - 64 + 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Standard
+使用公式 ($n=3$):
+\end_layout
+
+\begin_layout Standard
+$$ S_3 = 
+\backslash
+frac{(2^{3+1} - 1)B_{3+1}}{3+1} = 
+\backslash
+frac{(16-1)B_4}{4} = 
+\backslash
+frac{15 
+\backslash
+cdot (-1/30)}{4} = 
+\backslash
+frac{-1/2}{4} = -
+\backslash
+frac{1}{8} $$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+可以看到，
+当
+\begin_inset Formula $n$
+\end_inset
+
+ 是大于等于2的偶数时，
+由于 $B_{n+1}$ (奇数下标的伯努利数) 为0，
+所以级数的和也为0。
+
+\end_layout
+
+\begin_layout Chapter
+复分析
+\end_layout
+
+\begin_layout Section
+解析函数（复变函数）
+\end_layout
+
+\begin_layout Standard
+在复分析中：
+
+\end_layout
+
+\begin_layout Standard
+解析函数 （analytic function）是指在某个开集上处处可导（复可微）的函数。
+
+\end_layout
+
+\begin_layout Standard
+更精确地说：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 在复平面某个开集 
+\begin_inset Formula $U$
+\end_inset
+
+ 上处处可导，
+那么：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ 不仅可导，
+而且 无限次可导。
+
+\end_layout
+
+\begin_layout Standard
+并且它可以展开为幂级数（即泰勒级数）
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在某个邻域内收敛。
+
+\end_layout
+
+\begin_layout Standard
+这样的函数就叫做解析函数，
+或全纯函数（holomorphic function）。
+
+\end_layout
+
+\begin_layout Standard
+常见解析函数：
+
+\end_layout
+
+\begin_layout Standard
+多项式：
+ 
+\begin_inset Formula $f(z)=z^{2}+3z+5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+指数函数：
+ 
+\begin_inset Formula $f(z)=e^{z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+正弦余弦：
+ 
+\begin_inset Formula $f(z)=\sin z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对数函数（在去掉负实轴的区域）
+\end_layout
+
+\begin_layout Standard
+任意在开集上展开为幂级数的函数。
+
+\end_layout
+
+\begin_layout Paragraph
+解析函数和可导函数的差异
+\end_layout
+
+\begin_layout Standard
+在实数函数里，
+“可导”只意味着有一次导数。
+
+\end_layout
+
+\begin_layout Standard
+在复数函数里，
+“可导一次”就自动意味“无穷可导”并且“可展开成幂级数”。
+这就是解析函数强大的原因。
+
+\end_layout
+
+\begin_layout Standard
+换句话说：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{复可导 }\implies\text{复解析 }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+而实函数没有这个性质。
+
+\end_layout
+
+\begin_layout Subsection
+柯西-黎曼条件
+\end_layout
+
+\begin_layout Standard
+解析函数的充分必要条件（在某点 
+\begin_inset Formula $z=x+iy$
+\end_inset
+
+）：
+
+\end_layout
+
+\begin_layout Standard
+令
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=u(x,y)+iv(x,y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y},\quad\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是柯西-黎曼方程。
+
+\end_layout
+
+\begin_layout Standard
+只要这两个条件满足并且偏导连续，
+函数就在该点解析。
+
+\end_layout
+
+\begin_layout Subsection
+在实变函数里，
+什么叫解析？
+
+\end_layout
+
+\begin_layout Standard
+如果是在实数区间上，
+解析函数一般指：
+
+\end_layout
+
+\begin_layout Standard
+可以在每一点展开成一个幂级数，
+并且这个展开在某邻域收敛到函数本身。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\sin x,\quad e^{x},\quad\cos x,\quad\frac{1}{1-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+都是解析的。
+
+\end_layout
+
+\begin_layout Standard
+相反：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\begin{cases}
+e^{-1/x^{2}}, & x\neq0\\
+0, & x=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个函数在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 无限可导，
+但它不是解析的（因为它所有的泰勒系数都为0，
+却不恒为0）。
+
+\end_layout
+
+\begin_layout Section
+解析延拓
+\end_layout
+
+\begin_layout Standard
+它的核心思想是：
+对于一类非常“良好”的函数—
+—
+解析函数 (analytic functions)—
+—
+我们只需要知道它在一个很小区域内的表现，
+就可以唯一地确定它在更广阔定义域上的完整形态。
+
+\end_layout
+
+\begin_layout Standard
+在复分析中，
+一个函数如果在一个区域内复可微 (complex differentiable)，
+那么它就是解析的。
+这听起来很技术性，
+但它带来了一个惊人的性质：
+
+\end_layout
+
+\begin_layout Standard
+一个解析函数在任何一点的附近都可以被一个收敛的幂级数（泰勒级数）完美地表示。
+
+\end_layout
+
+\begin_layout Standard
+例如，
+
+\begin_inset Formula $f(z)=e^{z}$
+\end_inset
+
+ 是一个解析函数。
+它在 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 附近的泰勒级数是 
+\begin_inset Formula $1+z+\frac{z^{2}}{2!}+\frac{z^{3}}{3!}+\cdots$
+\end_inset
+
+，
+这个级数在整个复平面上都收敛。
+
+\end_layout
+
+\begin_layout Standard
+解析函数的这种“刚性”结构，
+就是我们能进行“骨架重构”的根本原因。
+
+\end_layout
+
+\begin_layout Standard
+我们从格兰迪级数出发，
+构建一个函数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=\sum_{n=0}^{\infty}(-1)^{n}z^{n}=1-z+z^{2}-z^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个几何级数，
+我们知道它只在一个特定的区域内收敛—
+—
+当公比的绝对值小于1时，
+即 
+\begin_inset Formula $|-z|<1$
+\end_inset
+
+，
+也就是 
+\begin_inset Formula $|z|<1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在这个区域内，
+
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 的行为是确定的。
+在这个区域之外，
+这个级数是发散的，
+毫无意义。
+
+\end_layout
+
+\begin_layout Standard
+找到全局的“解剖学规则”
+\end_layout
+
+\begin_layout Standard
+在区域 
+\begin_inset Formula $|z|<1$
+\end_inset
+
+ 内，
+我们知道这个几何级数有一个非常简单的闭合形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=\frac{1}{1+z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在我们有了两个函数：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $f(z)=\sum_{n=0}^{\infty}(-1)^{n}z^{n}$
+\end_inset
+
+，
+定义域为 
+\begin_inset Formula $|z|<1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $g(z)=\frac{1}{1+z}$
+\end_inset
+
+，
+定义域为所有复数，
+除了 
+\begin_inset Formula $z=-1$
+\end_inset
+
+ 这个点（奇点，
+singularity）。
+
+\end_layout
+
+\begin_layout Standard
+关键在于：
+在 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 的定义域（单位圆盘）内，
+
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(z)$
+\end_inset
+
+ 是完全相同的函数。
+
+\end_layout
+
+\begin_layout Standard
+进行延拓
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(z)$
+\end_inset
+
+ 的定义域比 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 大得多。
+我们可以把 
+\begin_inset Formula $g(z)$
+\end_inset
+
+ 看作是 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 的更大的一个区域。
+它在小范围（单位圆盘）内与我们的
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 完全吻合，
+并且以一种“自然”且“符合规则”的方式延伸到了几乎整个复平面。
+
+\end_layout
+
+\begin_layout Standard
+这个过程就叫做解析延拓。
+我们说：
+
+\end_layout
+
+\begin_layout Standard
+**
+\begin_inset Formula $g(z)=\frac{1}{1+z}$
+\end_inset
+
+ 是 
+\begin_inset Formula $f(z)=\sum(-z)^{n}$
+\end_inset
+
+ 的解析延拓。
+**
+\end_layout
+
+\begin_layout Standard
+在新定义域中求值
+\end_layout
+
+\begin_layout Standard
+现在，
+我们可以问一个在原始级数中没有意义的问题：
+“当 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 时，
+这个函数的值是多少？
+”
+\end_layout
+
+\begin_layout Standard
+对于原始的级数 
+\begin_inset Formula $f(1)=1-1+1-1+\cdots$
+\end_inset
+
+，
+这是发散的。
+
+\end_layout
+
+\begin_layout Standard
+但是对于延拓后的函数 
+\begin_inset Formula $g(z)$
+\end_inset
+
+，
+我们可以直接代入：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(1)=\frac{1}{1+1}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+**这就是我们通过生成函数法得到 1/2 的严格数学解释。
+我们实际上是在计算其解析延拓后的函数在那个点的值。
+**
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Paragraph
+唯一性定理
+\end_layout
+
+\begin_layout Standard
+解析延拓的唯一性定理 (Uniqueness Theorem)** 指出：
+如果一个解析延拓存在，
+那么它就是唯一的。
+只要两个解析函数在一个小区域（甚至只是一小段弧线）上完全相同，
+那么它们在它们共同的定义域内必然是同一个函数。
+
+\end_layout
+
+\begin_layout Standard
+假设有两个解析函数 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(z)$
+\end_inset
+
+，
+它们在一个小区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内是完全相同的，
+即对所有 
+\begin_inset Formula $z\in D$
+\end_inset
+
+，
+有 
+\begin_inset Formula $f(z)=g(z)$
+\end_inset
+
+。
+我们想证明，
+在它们共同的、更大的定义域 
+\begin_inset Formula $U$
+\end_inset
+
+ 内，
+它们也必须完全相同。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 构造差函数：
+定义一个新函数 
+\begin_inset Formula $h(z)=f(z)-g(z)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因为 
+\begin_inset Formula $f$
+\end_inset
+
+ 和 
+\begin_inset Formula $g$
+\end_inset
+
+ 都是解析的，
+所以 
+\begin_inset Formula $h$
+\end_inset
+
+ 也是解析的。
+
+\end_layout
+
+\begin_layout Standard
+在小区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内，
+
+\begin_inset Formula $h(z)=f(z)-g(z)=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 零点的性质：
+现在的问题是：
+一个解析函数 
+\begin_inset Formula $h(z)$
+\end_inset
+
+，
+如果它在一个区域（而不仅仅是孤立的点）上为零，
+会发生什么？
+
+\end_layout
+
+\begin_layout Standard
+在区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内随便取一个点 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+。
+因为 
+\begin_inset Formula $h(z)$
+\end_inset
+
+ 在 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ 附近恒为零，
+所以 
+\begin_inset Formula $h(z_{0})$
+\end_inset
+
+ 以及它在 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ 的所有阶导数 
+\begin_inset Formula $h^{(n)}(z_{0})$
+\end_inset
+
+ 都必须是零。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h(z)$
+\end_inset
+
+ 在 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ 点的泰勒级数是：
+
+\begin_inset Formula $h(z)=\sum_{n=0}^{\infty}\frac{h^{(n)}(z_{0})}{n!}(z-z_{0})^{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因为所有系数 
+\begin_inset Formula $h^{(n)}(z_{0})$
+\end_inset
+
+ 都是零，
+所以这个泰勒级数就是
+\begin_inset Formula $0+0+0+\cdots=0$
+\end_inset
+
+。
+这个级数在它的收敛圆盘内都收敛到 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这意味着 
+\begin_inset Formula $h(z)$
+\end_inset
+
+ 不仅在最初的小区域 
+\begin_inset Formula $D$
+\end_inset
+
+ 内为零，
+还在一个以 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ 为中心的、更大的圆盘内为零。
+
+\end_layout
+
+\begin_layout Standard
+我们刚刚把 
+\begin_inset Formula $h(z)=0$
+\end_inset
+
+ 的区域从 
+\begin_inset Formula $D$
+\end_inset
+
+ 扩大了一点。
+
+\end_layout
+
+\begin_layout Standard
+现在我们可以在这个新扩大的区域的边缘再取一个点，
+重复上面的过程，
+把为零的区域再扩大一点。
+
+\end_layout
+
+\begin_layout Standard
+像这样一步步地“铺路”，
+只要路径在定义域 
+\begin_inset Formula $U$
+\end_inset
+
+ 内，
+我们就可以把 
+\begin_inset Formula $h(z)=0$
+\end_inset
+
+ 这个性质延伸到 
+\begin_inset Formula $U$
+\end_inset
+
+ 的任何一个角落。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+在整个定义域 
+\begin_inset Formula $U$
+\end_inset
+
+ 内，
+
+\begin_inset Formula $h(z)=0$
+\end_inset
+
+，
+即 
+\begin_inset Formula $f(z)=g(z)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Paragraph
+有没有不可以延拓的情况？
+
+\end_layout
+
+\begin_layout Standard
+有的。
+当函数的定义域边界成为自然边界 (Natural Boundary)** 时，
+就无法进行解析延拓。
+
+\end_layout
+
+\begin_layout Standard
+什么是自然边界？
+
+\end_layout
+
+\begin_layout Standard
+在数学上，
+一个函数的自然边界是一条曲线，
+函数无法被解析地延拓到这条曲线的另一侧。
+这是因为这条边界上密集地分布着奇点 (singularities)。
+
+\end_layout
+
+\begin_layout Standard
+奇点：
+是函数“出问题”的点，
+比如函数值趋于无穷大（像 
+\begin_inset Formula $\frac{1}{z}$
+\end_inset
+
+ 在 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 处）或者函数变得不唯一（像 
+\begin_inset Formula $\sqrt{z}$
+\end_inset
+
+ 在 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 处）。
+
+\end_layout
+
+\begin_layout Standard
+普通情况：
+像 
+\begin_inset Formula $\frac{1}{1+z}$
+\end_inset
+
+，
+它只有一个孤立的奇点 
+\begin_inset Formula $z=-1$
+\end_inset
+
+。
+我们可以从任何其他方向绕过这个奇点进行延拓。
+
+\end_layout
+
+\begin_layout Standard
+自然边界情况：
+奇点不是孤立的，
+而是密集地“堆积”在一条边界上，
+形成了一道无法逾越的“奇点之墙”。
+
+\end_layout
+
+\begin_layout Example
+一个典型的例子：
+Lacunary Series (间隙级数)
+\end_layout
+
+\begin_layout Example
+考虑下面这个函数，
+它由一个幂级数定义：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+L(z)=\sum_{n=1}^{\infty}z^{n!}=z^{1}+z^{2}+z^{6}+z^{24}+z^{120}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个级数的指数是阶乘 
+\begin_inset Formula $n!$
+\end_inset
+
+，
+它们之间的“间隙”增长得非常快。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+收敛区域：
+通过比值判别法等方法，
+可以确定这个级数的收敛半径是
+\begin_inset Formula $1$
+\end_inset
+
+。
+所以 
+\begin_inset Formula $L(z)$
+\end_inset
+
+ 在单位圆盘 
+\begin_inset Formula $|z|<1$
+\end_inset
+
+ 内部是一个定义良好的解析函数。
+
+\end_layout
+
+\begin_layout Enumerate
+边界行为：
+让我们看看它在单位圆周 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+ 上的行为。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+当
+\begin_inset Formula $z\to1$
+\end_inset
+
+ 时，
+级数变成 
+\begin_inset Formula $1+1+1+\cdots$
+\end_inset
+
+，
+显然发散。
+所以 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 是一个奇点。
+
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $z\to-1$
+\end_inset
+
+ 时，
+因为当 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $n!$
+\end_inset
+
+ 都是偶数，
+级数的大部分项都变成 
+\begin_inset Formula $+1$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $z=-1$
+\end_inset
+
+ 也是奇点。
+
+\end_layout
+
+\begin_layout Itemize
+更神奇的是，
+可以证明，
+对于单位圆周上任何形如 
+\begin_inset Formula $z=e^{2\pi iq}$
+\end_inset
+
+（其中 
+\begin_inset Formula $q$
+\end_inset
+
+ 是有理数）的点，
+这个函数都会发散。
+
+\end_layout
+
+\begin_layout Itemize
+这些有理辐角的点在单位圆周上是稠密 (dense) 的。
+这意味着你在圆周上随便走一小步，
+都会踩到一个奇点。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+无法延拓：
+因为单位圆周上密密麻麻地布满了奇点，
+形成了一堵无法穿透的墙，
+所以我们无法将 
+\begin_inset Formula $L(z)$
+\end_inset
+
+ 解析延拓到单位圆盘的外部。
+单位圆周 
+\begin_inset Formula $|z|=1$
+\end_inset
+
+ 就是这个函数的自然边界。
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+黎曼Zeta函数
+\end_layout
+
+\begin_layout Standard
+解析延拓最惊人的应用之一是处理黎曼Zeta函数 (
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 原始定义：
+
+\end_layout
+
+\begin_layout Standard
+对于实部 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+ 的复数 
+\begin_inset Formula $s$
+\end_inset
+
+，
+Zeta函数定义为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}=1+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个级数在 
+\begin_inset Formula $\text{Re}(s)\le1$
+\end_inset
+
+ 时发散。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **著名的发散级数**：
+
+\end_layout
+
+\begin_layout Standard
+如果我们天真地代入 $s = -1$，
+我们会得到：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+zeta(-1) 
+\backslash
+stackrel{?}{=} 1 + 2 + 3 + 4 + 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Standard
+这个级数显然是发散的。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **解析延拓 (“重构骨架”)**：
+
+\end_layout
+
+\begin_layout Standard
+数学家们找到了Zeta函数的解析延拓，
+这个延拓后的函数在除了 $s=1$ 之外的整个复平面上都有定义。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **惊人的结果**：
+
+\end_layout
+
+\begin_layout Standard
+计算这个延拓后的Zeta函数在 $s=-1$ 点的值，
+会得到：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+zeta(-1) = -
+\backslash
+frac{1}{12} $$
+\end_layout
+
+\begin_layout Standard
+这就是著名（且经常被误解）的 $1+2+3+
+\backslash
+cdots = -1/12$ 的真正来源。
+它并不是说这个级数的和是-1/12，
+而是说
+\series bold
+Zeta函数的解析延拓在
+\begin_inset Formula $-1$
+\end_inset
+
+点的值是
+\series default
+
+\begin_inset Formula $-1/12$
+\end_inset
+
+。
 
 \end_layout
 
