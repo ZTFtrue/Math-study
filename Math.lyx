@@ -91719,7 +91719,7 @@ S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}=1^{n}-2^{n}+3^{n}-4^{n}+\cdots
 
 时：
 
-\begin_inset Formula $1-1+1-1+\cdots$
+\begin_inset Formula $A=1-1+1-1+\cdots$
 \end_inset
 
 
@@ -91731,7 +91731,53 @@ S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}=1^{n}-2^{n}+3^{n}-4^{n}+\cdots
 
 时：
 
-\begin_inset Formula $1-2+3-4+\cdots$
+\begin_inset Formula $B=1-2+3-4+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A-B=B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2B=A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\frac{1}{2}$
+\end_inset
+
+,
+\begin_inset Formula $B=\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \text{所有自然数之和}S\\
+ & =B+4(1+2+3+4+5+6+\cdots)\\
+ & =1-2+(1\times4)+3-4+(2\times4)+5-6+(3\times4)\cdots\\
+ & =S
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B+4S=S\Rightarrow-3S=B\Rightarrow S=-\frac{1}{12}$
 \end_inset
 
 
@@ -92194,33 +92240,41 @@ ge 1$ 时更可靠。
 \end_layout
 
 \begin_layout Standard
-#### Case n = 1:
+Case 
+\begin_inset Formula $n=1$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
-$$ S_1 = 1 - 2 + 3 - 4 + 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+S_{1}=1-2+3-4+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-使用公式 ($n=1$):
+使用公式 (
+\begin_inset Formula $n=1$
+\end_inset
+
+):
 \end_layout
 
 \begin_layout Standard
-$$ S_1 = 
-\backslash
-frac{(2^{1+1} - 1)B_{1+1}}{1+1} = 
-\backslash
-frac{(4-1)B_2}{2} = 
-\backslash
-frac{3 
-\backslash
-cdot (1/6)}{2} = 
-\backslash
-frac{1/2}{2} = 
-\backslash
-frac{1}{4} $$
+\begin_inset Formula 
+\[
+S_{1}=\frac{(2^{1+1}-1)B_{1+1}}{1+1}=\frac{(4-1)B_{2}}{2}=\frac{3\cdot(1/6)}{2}=\frac{1/2}{2}=\frac{1}{4}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -92813,7 +92867,6 @@ singularity）。
 \end_layout
 
 \begin_layout Standard
-**
 \begin_inset Formula $g(z)=\frac{1}{1+z}$
 \end_inset
 
@@ -92822,7 +92875,7 @@ singularity）。
 \end_inset
 
  的解析延拓。
-**
+
 \end_layout
 
 \begin_layout Standard
@@ -92878,16 +92931,12 @@ g(1)=\frac{1}{1+1}=\frac{1}{2}
 **
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
 \begin_layout Paragraph
 唯一性定理
 \end_layout
 
 \begin_layout Standard
-解析延拓的唯一性定理 (Uniqueness Theorem)** 指出：
+解析延拓的唯一性定理 (Uniqueness Theorem)指出：
 如果一个解析延拓存在，
 那么它就是唯一的。
 只要两个解析函数在一个小区域（甚至只是一小段弧线）上完全相同，
@@ -93367,131 +93416,488 @@ L(z)=\sum_{n=1}^{\infty}z^{n!}=z^{1}+z^{2}+z^{6}+z^{24}+z^{120}+\cdots
 \end_layout
 
 \begin_layout Standard
-解析延拓最惊人的应用之一是处理黎曼Zeta函数 (
-\begin_inset Formula $\zeta(s)$
-\end_inset
-
-)。
-
-\end_layout
-
-\begin_layout Standard
-1.
- 原始定义：
+好的，
+我们来深入探讨一下在数学中占据着核心地位的**黎曼Zeta函数 (Riemann Zeta Function)**，
+通常用希腊字母 $
+\backslash
+zeta$ (zeta) 表示。
 
 \end_layout
 
 \begin_layout Standard
-对于实部 
-\begin_inset Formula $\text{Re}(s)>1$
-\end_inset
-
- 的复数 
-\begin_inset Formula $s$
-\end_inset
-
-，
-Zeta函数定义为：
+这是一个充满神秘、连接了数论中许多深刻问题的函数，
+其中最著名的就是悬赏百万美元的“黎曼猜想”。
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}=1+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\cdots
-\]
-
-\end_inset
-
-
+### 1.
+ Zeta函数的定义（“化石”阶段）
 \end_layout
 
 \begin_layout Standard
-这个级数在 
-\begin_inset Formula $\text{Re}(s)\le1$
-\end_inset
-
- 时发散。
-
-\end_layout
-
-\begin_layout Standard
-2.
- **著名的发散级数**：
-
-\end_layout
-
-\begin_layout Standard
-如果我们天真地代入 $s = -1$，
-我们会得到：
+黎曼Zeta函数最初是为复数 $s$ 定义的，
+其定义域要求 $s$ 的实部 $
+\backslash
+text{Re}(s) > 1$。
+在这个区域内，
+它的定义是一个无穷级数，
+即**狄利克雷级数 (Dirichlet series)**：
 
 \end_layout
 
 \begin_layout Standard
 $$ 
 \backslash
-zeta(-1) 
+zeta(s) = 
 \backslash
-stackrel{?}{=} 1 + 2 + 3 + 4 + 
+sum_{n=1}^{
+\backslash
+infty} 
+\backslash
+frac{1}{n^s} = 
+\backslash
+frac{1}{1^s} + 
+\backslash
+frac{1}{2^s} + 
+\backslash
+frac{1}{3^s} + 
+\backslash
+frac{1}{4^s} + 
 \backslash
 cdots $$
 \end_layout
 
 \begin_layout Standard
-这个级数显然是发散的。
+**为什么要求 $
+\backslash
+text{Re}(s) > 1$？
+**
+\end_layout
+
+\begin_layout Standard
+这是为了保证级数收敛。
 
 \end_layout
 
 \begin_layout Standard
-3.
- **解析延拓 (“重构骨架”)**：
+* 如果 $s$ 是一个大于1的实数，
+比如 $s=2$，
+级数是 $
+\backslash
+sum 
+\backslash
+frac{1}{n^2} = 1 + 
+\backslash
+frac{1}{4} + 
+\backslash
+frac{1}{9} + 
+\backslash
+cdots$，
+这是一个收敛的p-级数（著名的巴塞尔问题，
+其和为 $
+\backslash
+pi^2/6$）。
 
 \end_layout
 
 \begin_layout Standard
-数学家们找到了Zeta函数的解析延拓，
-这个延拓后的函数在除了 $s=1$ 之外的整个复平面上都有定义。
+* 如果 $s=1$，
+级数是 $
+\backslash
+sum 
+\backslash
+frac{1}{n} = 1 + 
+\backslash
+frac{1}{2} + 
+\backslash
+frac{1}{3} + 
+\backslash
+cdots$，
+这是著名的**调和级数**，
+它是发散的。
 
 \end_layout
 
 \begin_layout Standard
-4.
- **惊人的结果**：
+* 如果 $
+\backslash
+text{Re}(s) 
+\backslash
+le 1$，
+级数的各项的绝对值 $
+\backslash
+left|
+\backslash
+frac{1}{n^s}
+\backslash
+right| = 
+\backslash
+frac{1}{n^{
+\backslash
+text{Re}(s)}}$ 不会足够快地减小到0，
+导致级数发散。
 
 \end_layout
 
 \begin_layout Standard
-计算这个延拓后的Zeta函数在 $s=-1$ 点的值，
-会得到：
+所以，
+这个级数定义只在复平面的一个“半平面”内有效。
+
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 与素数的深刻联系：
+欧拉乘积公式
+\end_layout
+
+\begin_layout Standard
+Zeta函数的第一个惊人特性由欧拉发现，
+它在数论中的核心地位也由此奠定。
+欧拉证明，
+Zeta函数可以写成一个涉及所有素数的无穷乘积：
 
 \end_layout
 
 \begin_layout Standard
 $$ 
 \backslash
-zeta(-1) = -
+zeta(s) = 
 \backslash
-frac{1}{12} $$
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+frac{1}{1 - p^{-s}} $$
 \end_layout
 
 \begin_layout Standard
-这就是著名（且经常被误解）的 $1+2+3+
+$$ 
 \backslash
-cdots = -1/12$ 的真正来源。
-它并不是说这个级数的和是-1/12，
-而是说
-\series bold
-Zeta函数的解析延拓在
-\begin_inset Formula $-1$
-\end_inset
+zeta(s) = 
+\backslash
+left(
+\backslash
+frac{1}{1 - 2^{-s}}
+\backslash
+right) 
+\backslash
+left(
+\backslash
+frac{1}{1 - 3^{-s}}
+\backslash
+right) 
+\backslash
+left(
+\backslash
+frac{1}{1 - 5^{-s}}
+\backslash
+right) 
+\backslash
+left(
+\backslash
+frac{1}{1 - 7^{-s}}
+\backslash
+right) 
+\backslash
+cdots $$
+\end_layout
 
-点的值是
-\series default
+\begin_layout Standard
+这个公式被称为**欧拉乘积公式 (Euler product formula)**。
+它建立了一座神奇的桥梁，
+连接了：
 
-\begin_inset Formula $-1/12$
-\end_inset
+\end_layout
 
-。
+\begin_layout Standard
+* **左边**：
+一个关于所有自然数的**和**（分析学）。
+
+\end_layout
+
+\begin_layout Standard
+* **右边**：
+一个关于所有**素数**的**积**（数论）。
+
+\end_layout
+
+\begin_layout Standard
+这表明Zeta函数深刻地编码了素数的分布信息。
+例如，
+利用这个公式可以给出一个全新的、优美的证明：
+素数有无穷多个。
+
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 解析延拓（“重构恐龙骨架”）
+\end_layout
+
+\begin_layout Standard
+Zeta函数的现代重要性来自于黎曼的贡献。
+黎曼发现，
+尽管级数定义只在 $
+\backslash
+text{Re}(s) > 1$ 时有效，
+但Zeta函数可以通过**解析延拓**的方法，
+将其定义域扩展到几乎整个复平面。
+
+\end_layout
+
+\begin_layout Standard
+延拓后的Zeta函数，
+我们仍然记为 $
+\backslash
+zeta(s)$，
+它在除了 $s=1$ 之外的所有复数点上都有定义。
+
+\end_layout
+
+\begin_layout Standard
+* **简单极点 (Simple Pole)**：
+在 $s=1$ 这个点，
+延拓后的函数会趋于无穷大。
+我们称 $s=1$ 是Zeta函数的一个**简单极点**。
+这对应于原始定义中的调和级数发散。
+
+\end_layout
+
+\begin_layout Standard
+### 4.
+ Zeta函数在负整数点的值
+\end_layout
+
+\begin_layout Standard
+通过解析延拓，
+我们可以计算Zeta函数在那些原始级数发散的点的值，
+结果非常惊人且重要。
+这些值与**伯努利数 ($B_n$)** 密切相关。
+
+\end_layout
+
+\begin_layout Standard
+* **平凡零点 (Trivial Zeros)**：
+对于所有负偶数 $s = -2,
+ -4,
+ -6,
+ 
+\backslash
+ldots$，
+我们有：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+zeta(-2) = 0,
+ 
+\backslash
+quad 
+\backslash
+zeta(-4) = 0,
+ 
+\backslash
+quad 
+\backslash
+zeta(-6) = 0,
+ 
+\backslash
+quad 
+\backslash
+ldots $$
+\end_layout
+
+\begin_layout Standard
+这些被称为Zeta函数的“平凡零点”。
+
+\end_layout
+
+\begin_layout Standard
+* **负奇数值**：
+对于负奇数，
+其值是非零的：
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+zeta(0) = -1/2$
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+zeta(-1) = -1/12$ (这正是 $1+2+3+
+\backslash
+cdots = -1/12$ 的来源)
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+zeta(-3) = 1/120$
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+zeta(-5) = -1/252$
+\end_layout
+
+\begin_layout Standard
+通用公式为：
+ $
+\backslash
+zeta(-n) = -
+\backslash
+frac{B_{n+1}}{n+1}$ (对于 $n 
+\backslash
+ge 1$)。
+
+\end_layout
+
+\begin_layout Standard
+### 5.
+ 黎曼猜想：
+百万美元的难题
+\end_layout
+
+\begin_layout Standard
+黎曼在研究Zeta函数时，
+最关心的是它的**零点 (zeros)**，
+即那些使 $
+\backslash
+zeta(s)=0$ 的复数 $s$。
+
+\end_layout
+
+\begin_layout Standard
+我们已经知道了平凡零点（所有的负偶数）。
+但还有其他零点吗？
+
+\end_layout
+
+\begin_layout Standard
+是的，
+还有无穷多个！
+这些零点被称为**非平凡零点 (non-trivial zeros)**。
+黎曼证明了所有非平凡零点都位于所谓的**临界带 (critical strip)** 中，
+即满足 $0 < 
+\backslash
+text{Re}(s) < 1$ 的区域。
+
+\end_layout
+
+\begin_layout Standard
+然后，
+他提出了一个深刻的猜想：
+
+\end_layout
+
+\begin_layout Standard
+> **黎曼猜想 (Riemann Hypothesis)**：
+
+\end_layout
+
+\begin_layout Standard
+> 黎曼Zeta函数的所有非平凡零点，
+其实部 (real part) 都精确地等于 1/2。
+
+\end_layout
+
+\begin_layout Standard
+这意味着，
+所有这些非平凡零点都位于复平面上一条非常特殊的直线上，
+这条线被称为**临界线 (critical line)**。
+
+\end_layout
+
+\begin_layout Standard
+**为什么这个猜想如此重要？
+**
+\end_layout
+
+\begin_layout Standard
+因为非平凡零点的位置与**素数的分布**有着极其深刻和精确的联系。
+
+\end_layout
+
+\begin_layout Standard
+* 如果黎曼猜想成立，
+我们就能对素数的分布规律有前所未有的精确理解。
+例如，
+我们可以得到关于**素数计数函数 $
+\backslash
+pi(x)$** (小于x的素数个数) 的最佳误差估计。
+
+\end_layout
+
+\begin_layout Standard
+* 许多数论中的重要定理都是在“假设黎曼猜想成立”的前提下被证明的。
+如果猜想被证实，
+这些定理也将被自动证实。
+
+\end_layout
+
+\begin_layout Standard
+至今，
+数学家们已经用计算机验证了数万亿个非平凡零点，
+它们无一例外地全部在临界线上。
+但是，
+这并不是一个数学证明。
+证明或证伪黎曼猜想，
+仍然是数学界最重要的未解之谜之一，
+也是克雷数学研究所提出的七个“千禧年大奖难题”之一。
+
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+* **是什么**：
+一个最初由无穷级数定义的复变函数 $
+\backslash
+zeta(s) = 
+\backslash
+sum 1/n^s$。
+
+\end_layout
+
+\begin_layout Standard
+* **连接什么**：
+通过欧拉乘积公式，
+它连接了所有自然数与所有素数。
+
+\end_layout
+
+\begin_layout Standard
+* **如何扩展**：
+通过解析延拓，
+它的定义域从半个复平面扩展到几乎整个复平面。
+
+\end_layout
+
+\begin_layout Standard
+* **有什么用**：
+它的值和零点包含了关于素数分布的深刻信息。
+
+\end_layout
+
+\begin_layout Standard
+* **最大谜团**：
+黎曼猜想—
+—
+它的非平凡零点是否都位于临界线 $
+\backslash
+text{Re}(s) = 1/2$ 上？
+这个问题的答案将对整个数论产生深远影响。
 
 \end_layout
 
