@@ -90954,6 +90954,12 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 \end_layout
 
 \begin_layout Standard
+把一个无穷数列看成是一个幂级数的系数时，
+所得到的幂级数就叫做生成函数。
+
+\end_layout
+
+\begin_layout Standard
 给定一个序列
 \begin_inset Formula $a=(a_{0},a_{1},a_{2},a_{3},\ldots)$
 \end_inset
@@ -91459,93 +91465,73 @@ x^{3}\\
 \begin_layout Example
 生成函数，
 求斐波那契数列
+\begin_inset Formula $\ensuremath{f_{n}}$
+\end_inset
+
+通项公式
 \end_layout
 
 \begin_layout Example
-好的，
-我们来使用生成函数这个强大的工具，
-一步步推导出著名的**斐波那契数列 (Fibonacci sequence)** 的通项公式。
+斐波那契数列 
+\begin_inset Formula $F=(f_{0},f_{1},f_{2},\ldots)$
+\end_inset
+
+ 定义如下：
 
 \end_layout
 
 \begin_layout Example
-这是一个展示生成函数法威力的经典范例。
+初始值：
 
-\end_layout
+\begin_inset Formula $f_{0}=0$
+\end_inset
 
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-### 第一步：
-定义斐波那契数列和其递推关系
-\end_layout
-
-\begin_layout Example
-斐波那契数列 $F = (f_0,
- f_1,
- f_2,
+,
  
-\backslash
-ldots)$ 定义如下：
+\begin_inset Formula $f_{1}=1$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
-* **初始值**：
-$f_0 = 0$,
- $f_1 = 1$
-\end_layout
+递推关系：
+对于所有 
+\begin_inset Formula $n\ge2$
+\end_inset
 
-\begin_layout Example
-* **递推关系**：
-对于所有 $n 
-\backslash
-ge 2$，
-有 $f_n = f_{n-1} + f_{n-2}$
+，
+有 
+\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 数列的前几项是：
-`0,
- 1,
- 1,
- 2,
- 3,
- 5,
- 8,
- 13,
- ...`
-\end_layout
 
-\begin_layout Example
-我们的目标是找到一个不依赖于递推的、直接计算 $f_n$ 的**闭合公式 (通项公式)**。
+\begin_inset Formula $0,1,1,2,3,5,8,13,\cdots$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
----
-\end_layout
+我们为斐波那契数列定义其生成函数
+\begin_inset Formula $F(x)$
+\end_inset
 
-\begin_layout Example
-### 第二步：
-定义生成函数
-\end_layout
+：
 
-\begin_layout Example
-我们为斐波那契数列定义其生成函数 $F(x)$：
+\begin_inset Formula 
+\[
+F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots
+\]
 
-\end_layout
+\end_inset
 
-\begin_layout Example
-$$ F(x) = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} f_n x^n = f_0 + f_1x + f_2x^2 + f_3x^3 + 
-\backslash
-cdots $$
+
 \end_layout
 
 \begin_layout Example
@@ -91554,72 +91540,105 @@ cdots $$
 \end_layout
 
 \begin_layout Example
-$$ F(x) = 0 + 1x + 1x^2 + 2x^3 + 3x^4 + 
-\backslash
-cdots = x + x^2 + 2x^3 + 3x^4 + 
-\backslash
-cdots $$
-\end_layout
+\begin_inset Formula 
+\[
+F(x)=0+1x+1x^{2}+2x^{3}+3x^{4}+\cdots=x+x^{2}+2x^{3}+3x^{4}+\cdots
+\]
 
-\begin_layout Example
----
-\end_layout
+\end_inset
 
-\begin_layout Example
-### 第三步：
-利用递推关系来构建关于 $F(x)$ 的方程
-\end_layout
-
-\begin_layout Example
-这是最关键的一步。
-我们的目标是利用递推关系 $f_n = f_{n-1} + f_{n-2}$ 来把 $F(x)$ 表示成一个简单的代数式。
 
 \end_layout
 
 \begin_layout Example
-我们把 $F(x)$ 的展开式写出来：
+我们的目标是利用递推关系 
+\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
+\end_inset
+
+ 来把 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 表示成一个简单的代数式。
 
 \end_layout
 
 \begin_layout Example
-$$ F(x) = f_0 + f_1x + f_2x^2 + f_3x^3 + 
-\backslash
-cdots + f_nx^n + 
-\backslash
-cdots $$
+我们把 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 的展开式写出来：
+
+\begin_inset Formula 
+\[
+F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots+f_{n}x^{n}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 现在，
-我们尝试构造出含有 $f_{n-1}$ 和 $f_{n-2}$ 的项。
-这可以通过给 $F(x)$ 乘以 $x$ 和 $x^2$ 来实现：
+我们尝试构造出含有 
+\begin_inset Formula $f_{n-1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $f_{n-2}$
+\end_inset
+
+ 的项。
+这可以通过给
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 乘以 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 来实现：
 
 \end_layout
 
 \begin_layout Example
-* **构造 $f_{n-1}$ 项：
-**
+构造 
+\begin_inset Formula $f_{n-1}$
+\end_inset
+
+ 项：
+
+\begin_inset Formula 
+\[
+xF(x)=f_{0}x+f_{1}x^{2}+f_{2}x^{3}+\cdots+f_{n-1}x^{n}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-$$ xF(x) = f_0x + f_1x^2 + f_2x^3 + 
-\backslash
-cdots + f_{n-1}x^n + 
-\backslash
-cdots $$
-\end_layout
+构造 
+\begin_inset Formula $f_{n-2}$
+\end_inset
 
-\begin_layout Example
-* **构造 $f_{n-2}$ 项：
-**
-\end_layout
+ 项：
 
-\begin_layout Example
-$$ x^2F(x) = f_0x^2 + f_1x^3 + f_2x^4 + 
-\backslash
-cdots + f_{n-2}x^n + 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+x^{2}F(x)=f_{0}x^{2}+f_{1}x^{3}+f_{2}x^{4}+\cdots+f_{n-2}x^{n}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -91630,61 +91649,87 @@ cdots $$
 \end_layout
 
 \begin_layout Example
-```
+\begin_inset Formula $F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+...$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-F(x) = f_0 + f_1x + f_2x^2 + f_3x^3 + ...
+\begin_inset Formula $-xF(x)=-f_{0}x-f_{1}x^{2}-f_{2}x^{3}-...$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-- xF(x) = - f_0x - f_1x^2 - f_2x^3 - ...
-\end_layout
+\begin_inset Formula $-x^{2}F(x)=\quad\quad-f_{0}x^{2}-f_{1}x^{3}-...$
+\end_inset
 
-\begin_layout Example
-- x^2F(x) = - f_0x^2 - f_1x^3 - ...
-\end_layout
 
-\begin_layout Example
----------------------------------------------------------
-\end_layout
-
-\begin_layout Example
-```
 \end_layout
 
 \begin_layout Example
 把这三行加起来，
-我们看 $x^n$ (当 $n 
-\backslash
-ge 2$ 时) 的系数是什么：
+我们看 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ (当 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 时) 的系数是什么：
 
 \end_layout
 
 \begin_layout Example
-$$ 
-\backslash
-text{系数} = f_n - f_{n-1} - f_{n-2} $$
+\begin_inset Formula 
+\[
+\text{系数}=f_{n}-f_{n-1}-f_{n-2}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 根据斐波那契数列的定义，
-对于 $n 
-\backslash
-ge 2$，
-这个系数恰好是 **0**！
+对于 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+，
+这个系数恰好是 
+\begin_inset Formula $0$
+\end_inset
+
+！
 
 \end_layout
 
 \begin_layout Example
 这意味着，
-在 $F(x) - xF(x) - x^2F(x)$ 这个表达式中，
-所有次数大于等于2的项 ($x^2,
- x^3,
- 
-\backslash
-ldots$) 都消失了！
-我们只需要单独处理前几项（$x^0$ 和 $x^1$）即可。
+在 
+\begin_inset Formula $F(x)-xF(x)-x^{2}F(x)$
+\end_inset
+
+ 这个表达式中，
+所有次数大于等于2的项 (
+\begin_inset Formula $x^{2},x^{3},\ldots$
+\end_inset
+
+) 都消失了！
+我们只需要单独处理前几项（
+\begin_inset Formula $x^{0}$
+\end_inset
+
+ 和 
+\begin_inset Formula $x^{1}$
+\end_inset
+
+）即可。
 
 \end_layout
 
@@ -91694,13 +91739,14 @@ ldots$) 都消失了！
 \end_layout
 
 \begin_layout Example
-$$ F(x) - xF(x) - x^2F(x) = (f_0 + f_1x + f_2x^2 + 
-\backslash
-cdots) - (f_0x + f_1x^2 + 
-\backslash
-cdots) - (f_0x^2 + f_1x^3 + 
-\backslash
-cdots) $$
+\begin_inset Formula 
+\[
+F(x)-xF(x)-x^{2}F(x)=(f_{0}+f_{1}x+f_{2}x^{2}+\cdots)-(f_{0}x+f_{1}x^{2}+\cdots)-(f_{0}x^{2}+f_{1}x^{3}+\cdots)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -91709,90 +91755,139 @@ cdots) $$
 \end_layout
 
 \begin_layout Example
-$$ = f_0 + (f_1 - f_0)x + (f_2 - f_1 - f_0)x^2 + (f_3 - f_2 - f_1)x^3 + 
-\backslash
-cdots $$
-\end_layout
+\begin_inset Formula 
+\[
+=f_{0}+(f_{1}-f_{0})x+(f_{2}-f_{1}-f_{0})x^{2}+(f_{3}-f_{2}-f_{1})x^{3}+\cdots
+\]
 
-\begin_layout Example
-代入初始值 $f_0 = 0,
- f_1 = 1$ 和递推关系 $f_n - f_{n-1} - f_{n-2} = 0$：
+\end_inset
 
-\end_layout
-
-\begin_layout Example
-$$ = 0 + (1 - 0)x + (0)x^2 + (0)x^3 + 
-\backslash
-cdots $$
-\end_layout
-
-\begin_layout Example
-$$ = x $$
-\end_layout
-
-\begin_layout Example
-我们得到了一个关于 $F(x)$ 的简单代数方程：
 
 \end_layout
 
 \begin_layout Example
-$$ F(x) - xF(x) - x^2F(x) = x $$
-\end_layout
+代入初始值 
+\begin_inset Formula $f_{0}=0,f_{1}=1$
+\end_inset
 
-\begin_layout Example
-$$ F(x)(1 - x - x^2) = x $$
-\end_layout
+ 和递推关系 
+\begin_inset Formula $f_{n}-f_{n-1}-f_{n-2}=0$
+\end_inset
 
-\begin_layout Example
-解出 $F(x)$，
-我们就得到了斐波那契数列生成函数的**闭合形式**：
-
-\end_layout
-
-\begin_layout Example
-$$ F(x) = 
-\backslash
-frac{x}{1 - x - x^2} $$
-\end_layout
-
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-### 第四步：
-将闭合形式展开成幂级数（部分分式分解）
-\end_layout
-
-\begin_layout Example
-现在我们有了“压缩文件” $F(x) = 
-\backslash
-frac{x}{1 - x - x^2}$，
-需要把它“解压”，
-即重新展开成幂级数，
-以找到第 $n$ 项的系数 $f_n$。
+：
 
 \end_layout
 
 \begin_layout Example
-这通常通过**部分分式分解 (Partial Fraction Decomposition)** 来实现。
+\begin_inset Formula 
+\[
+=0+(1-0)x+(0)x^{2}+(0)x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们得到了一个关于 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 的简单代数方程：
+
+\begin_inset Formula 
+\[
+F(x)-xF(x)-x^{2}F(x)=x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(x)(1-x-x^{2})=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+解出 
+\begin_inset Formula $F(x)$
+\end_inset
+
+，
+我们就得到了斐波那契数列生成函数的闭合形式（解析函数）：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)=\frac{x}{1-x-x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在我们有了
+\begin_inset Formula $F(x)=\frac{x}{1-x-x^{2}}$
+\end_inset
+
+，
+重新展开成幂级数，
+以找到第 
+\begin_inset Formula $n$
+\end_inset
+
+ 项的系数 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+这通常通过部分分式分解 (Partial Fraction Decomposition)来实现。
 
 \end_layout
 
 \begin_layout Example
 1.
- **分解分母**：
-我们先找到 $1 - x - x^2 = 0$ 的根。
-根据求根公式 $x = 
-\backslash
-frac{-b 
-\backslash
-pm 
-\backslash
-sqrt{b^2-4ac}}{2a}$，
-这里 $a=-1,
- b=-1,
- c=1$：
+ 分解分母：
+我们先找到 
+\begin_inset Formula $1-x-x^{2}=0$
+\end_inset
+
+ 的根。
+根据求根公式 
+\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
+\end_inset
+
+，
+这里 
+\begin_inset Formula $a=-1,b=-1,c=1$
+\end_inset
+
+：
 
 \end_layout
 
@@ -91818,15 +91913,6 @@ x=\frac{1\pm\sqrt{1-4(-1)(1)}}{-2}=\frac{1\pm\sqrt{5}}{-2}
 \end_inset
 
 。
-可以验证 $x_1 = -
-\backslash
-frac{1}{
-\backslash
-phi}$ 和 $x_2 = -
-\backslash
-frac{1}{
-\backslash
-psi}$ 是方程的两个根。
 
 \end_layout
 
@@ -91834,38 +91920,28 @@ psi}$ 是方程的两个根。
 因此，
 分母可以分解为：
 
-\end_layout
+\begin_inset Formula 
+\[
+1-x-x^{2}=(\phi-x)(\psi-x)
+\]
 
-\begin_layout Example
-$$ 1 - x - x^2 = (1 - 
-\backslash
-phi x)(1 - 
-\backslash
-psi x) $$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 2.
- **进行部分分式分解**：
+ 进行部分分式分解：
 
-\end_layout
+\begin_inset Formula 
+\[
+F(x)=\frac{x}{(\phi-x)(\psi-x)}=\frac{A}{\phi-x}+\frac{B}{\psi-x}
+\]
 
-\begin_layout Example
-$$ F(x) = 
-\backslash
-frac{x}{(1 - 
-\backslash
-phi x)(1 - 
-\backslash
-psi x)} = 
-\backslash
-frac{A}{1 - 
-\backslash
-phi x} + 
-\backslash
-frac{B}{1 - 
-\backslash
-psi x} $$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -91874,53 +91950,122 @@ psi x} $$
 \end_layout
 
 \begin_layout Example
-$$ A = 
-\backslash
-frac{1}{
-\backslash
-sqrt{5}},
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x=(\psi-x)A+(\phi-x)B$
+\end_inset
+
+，
+由于已知x=
+\begin_inset Formula $\phi$
+\end_inset
+
+和
+\begin_inset Formula $x=\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\phi$
+\end_inset
+
+，
+
+\begin_inset Formula $A=\frac{\phi}{\sqrt{5}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi$
+\end_inset
+
+，
+
+\begin_inset Formula $B=-\frac{\psi}{\sqrt{5}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  
-\backslash
-quad B = -
-\backslash
-frac{1}{
-\backslash
-sqrt{5}} $$
 \end_layout
 
 \begin_layout Example
 3.
- **代回 F(x)**：
+ 代回 
+\begin_inset Formula $F(x)$
+\end_inset
+
+：
 
 \end_layout
 
 \begin_layout Example
-$$ F(x) = 
-\backslash
-frac{1}{
-\backslash
-sqrt{5}} 
-\backslash
-left( 
-\backslash
-frac{1}{1 - 
-\backslash
-phi x} - 
-\backslash
-frac{1}{1 - 
-\backslash
-psi x} 
-\backslash
-right) $$
-\end_layout
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\left(\frac{1}{1-\phi x}-\frac{1}{1-\psi x}\right)
+\]
 
-\begin_layout Example
----
-\end_layout
+\end_inset
 
-\begin_layout Example
-### 第五步：
-利用几何级数公式找到通项公式
+
 \end_layout
 
 \begin_layout Example
@@ -91929,15 +92074,14 @@ right) $$
 \end_layout
 
 \begin_layout Example
-$$ 
-\backslash
-frac{1}{1 - ax} = 1 + ax + (ax)^2 + (ax)^3 + 
-\backslash
-cdots = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} a^n x^n $$
+\begin_inset Formula 
+\[
+\frac{1}{1-ax}=1+ax+(ax)^{2}+(ax)^{3}+\cdots=\sum_{n=0}^{\infty}a^{n}x^{n}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -91946,206 +92090,121 @@ infty} a^n x^n $$
 \end_layout
 
 \begin_layout Example
-* $
-\backslash
-frac{1}{1 - 
-\backslash
-phi x} = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-phi^n x^n$
-\end_layout
+* 
+\begin_inset Formula $\frac{1}{1-\phi x}=\sum_{n=0}^{\infty}\phi^{n}x^{n}$
+\end_inset
 
-\begin_layout Example
-* $
-\backslash
-frac{1}{1 - 
-\backslash
-psi x} = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-psi^n x^n$
-\end_layout
-
-\begin_layout Example
-代回到 $F(x)$ 的表达式中：
 
 \end_layout
 
 \begin_layout Example
-$$ F(x) = 
-\backslash
-frac{1}{
-\backslash
-sqrt{5}} 
-\backslash
-left( 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-phi^n x^n - 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-psi^n x^n 
-\backslash
-right) $$
-\end_layout
+* 
+\begin_inset Formula $\frac{1}{1-\psi x}=\sum_{n=0}^{\infty}\psi^{n}x^{n}$
+\end_inset
 
-\begin_layout Example
-$$ F(x) = 
-\backslash
-frac{1}{
-\backslash
-sqrt{5}} 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} (
-\backslash
-phi^n - 
-\backslash
-psi^n) x^n $$
-\end_layout
-
-\begin_layout Example
-我们最初定义 $F(x) = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} f_n x^n$。
-比较 $x^n$ 的系数，
-我们立即得到了 $f_n$ 的通项公式：
 
 \end_layout
 
 \begin_layout Example
-$$ f_n = 
-\backslash
-frac{
-\backslash
-phi^n - 
-\backslash
-psi^n}{
-\backslash
-sqrt{5}} $$
-\end_layout
+代回到 
+\begin_inset Formula $F(x)$
+\end_inset
 
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-### 最终公式
-\end_layout
-
-\begin_layout Example
-将 $
-\backslash
-phi = 
-\backslash
-frac{1+
-\backslash
-sqrt{5}}{2}$ 和 $
-\backslash
-psi = 
-\backslash
-frac{1-
-\backslash
-sqrt{5}}{2}$ 代入，
-我们就得到了著名的**比内公式 (Binet's Formula)**：
+ 的表达式中：
 
 \end_layout
 
 \begin_layout Example
-$$ f_n = 
-\backslash
-frac{1}{
-\backslash
-sqrt{5}} 
-\backslash
-left[ 
-\backslash
-left(
-\backslash
-frac{1+
-\backslash
-sqrt{5}}{2}
-\backslash
-right)^n - 
-\backslash
-left(
-\backslash
-frac{1-
-\backslash
-sqrt{5}}{2}
-\backslash
-right)^n 
-\backslash
-right] $$
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\left(\sum_{n=0}^{\infty}\phi^{n}x^{n}-\sum_{n=0}^{\infty}\psi^{n}x^{n}\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-这个公式看起来充满了无理数 $
-\backslash
-sqrt{5}$，
-但它对于任何非负整数 $n$ 都会给出一个整数—
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\sum_{n=0}^{\infty}(\phi^{n}-\psi^{n})x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们最初定义 
+\begin_inset Formula $F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}$
+\end_inset
+
+。
+比较 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数，
+我们立即得到了 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ 的通项公式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{n}=\frac{\phi^{n}-\psi^{n}}{\sqrt{5}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将 
+\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\psi=\frac{1-\sqrt{5}}{2}$
+\end_inset
+
+ 代入，
+我们就得到了著名的比内公式 (Binet's Formula)：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个公式看起来充满了无理数 
+\begin_inset Formula $\sqrt{5}$
+\end_inset
+
+，
+但它对于任何非负整数 
+\begin_inset Formula $n$
+\end_inset
+
+ 都会给出一个整数—
 —
 斐波那契数。
-这正是数学的奇妙之处。
-
-\end_layout
-
-\begin_layout Example
-**总结一下整个流程：
-**
-\end_layout
-
-\begin_layout Example
-1.
- **定义**：
-写出数列的递推关系和生成函数 $F(x)$。
-
-\end_layout
-
-\begin_layout Example
-2.
- **建立方程**：
-利用递推关系，
-构造一个关于 $F(x)$ 的代数方程。
-
-\end_layout
-
-\begin_layout Example
-3.
- **求解**：
-解出 $F(x)$ 的闭合形式。
-
-\end_layout
-
-\begin_layout Example
-4.
- **分解**：
-用部分分式法分解 $F(x)$。
-
-\end_layout
-
-\begin_layout Example
-5.
- **展开**：
-利用几何级数公式将每一项展开成幂级数，
-从而读出 $f_n$ 的系数。
-
+ 
 \end_layout
 
 \begin_layout Paragraph
