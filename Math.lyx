@@ -92060,9 +92060,72 @@ F(x)=\frac{x}{(\phi-x)(\psi-x)}=\frac{A}{\phi-x}+\frac{B}{\psi-x}
 \begin_layout Example
 \begin_inset Formula 
 \[
-F(x)=\frac{1}{\sqrt{5}}\left(\frac{1}{1-\phi x}-\frac{1}{1-\psi x}\right)
+F(x)=\frac{1}{\sqrt{5}}\left(\frac{\phi}{\phi-x}-\frac{\psi}{\psi-x}\right)
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+分析
+\begin_inset Formula $\frac{\phi}{\phi-x}$
+\end_inset
+
+，
+分子分母同时除以
+\begin_inset Formula $\phi$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $0<x<1$
+\end_inset
+
+,
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+，
+
+\begin_inset Formula $1+x+x^{2}+\cdots+x^{n}=\frac{1}{1-x}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}=\frac{1}{\phi^{0}}+\frac{x^{1}}{\phi^{1}}+\frac{x^{2}}{\phi^{2}}+\cdots+\frac{x^{n}}{\phi^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{1}{1-\frac{x}{\psi}}=\frac{1}{\psi^{0}}+\frac{x^{1}}{\psi^{1}}+\frac{x^{2}}{\psi^{2}}+\cdots+\frac{x^{n}}{\psi^{n}}$
 \end_inset
 
 
