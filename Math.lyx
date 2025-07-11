@@ -76188,11 +76188,236 @@ mathbf {v} }，
 \end_layout
 
 \begin_layout Standard
-注:
- 内容来自wikipedia,
- 在这里上边加一个点表示一阶导,
- 两个点表示两阶导,
- 以此类推.
+这是物理中常用的牛顿记号（Newton notation）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+符号
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+含义
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+角度，
+随时间变化的函数（
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+一阶导数，
+即角速度（angular velocity）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ddot{\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+二阶导数，
+即角加速度（angular acceleration）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是因为在物理学和工程中，
+牛顿记号（点号 
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+）比数学中的莱布尼茨记号（
+\begin_inset Formula $\frac{d\theta}{dt}$
+\end_inset
+
+）更简洁，
+尤其在涉及时间导数的情况下，
+以下是原因：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+牛顿记号（
+\begin_inset Formula $\dot{\theta}$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+莱布尼茨记号（
+\begin_inset Formula $\frac{d\theta}{dt}$
+\end_inset
+
+）
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+简洁、紧凑，
+适合写在公式中
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+更详细，
+能清楚表达变量和导数间的关系
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在物理公式中广泛使用
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+在数学分析和计算中更常见
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+主要用于时间导数（尤其是运动学）
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+可用于任意自变量
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -76247,10 +76472,63 @@ mathbf {v} }，
 )的立方成正比
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 
 \series bold
-开普勒的第二定律推导:
+开普勒的第二定律推导
+\end_layout
+
+\begin_layout Standard
+这个定律的本质是
+\series bold
+中心力场中角动量守恒
+\series default
+的体现。
+
+\end_layout
+
+\begin_layout Paragraph
+推导所需的基础和假设
+\end_layout
+
+\begin_layout Enumerate
+一个质量为 
+\begin_inset Formula $m$
+\end_inset
+
+ 的行星，
+围绕一个质量为 
+\begin_inset Formula $M$
+\end_inset
+
+ 的太阳运动。
+
+\end_layout
+
+\begin_layout Enumerate
+太阳的质量 
+\begin_inset Formula $M$
+\end_inset
+
+ 远大于行星的质量 
+\begin_inset Formula $m$
+\end_inset
+
+ (
+\begin_inset Formula $M>>m$
+\end_inset
+
+)，
+因此我们可以近似地认为太阳是静止的，
+并将其作为坐标系的原点。
+
+\end_layout
+
+\begin_layout Enumerate
+行星所受的唯一作用力是太阳的引力。
+这个力是中心力（Central Force），
+即力的方向始终指向坐标原点（太阳）。
+
 \end_layout
 
 \begin_layout Standard
@@ -76375,29 +76653,8 @@ mathbf {v} }，
 
 \end_layout
 
-\begin_layout Standard
-建立一个极坐标系:
-\begin_inset Formula $M$
-\end_inset
-
- 设为原点.
- 于是位置向量
-\begin_inset Formula $\boldsymbol{r}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
-\end_inset
-
-,
- 其中
-\begin_inset Formula $\theta$
-\end_inset
-
-是运动的角度.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula ${\displaystyle \ddot{\boldsymbol{r}}=-G\frac{M}{r^{2}}(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})}$
-\end_inset
-
-
+\begin_layout Paragraph
+极坐标中的位置向量
 \end_layout
 
 \begin_layout Standard
@@ -76645,10 +76902,11 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-极坐标中的位置向量
-\end_layout
+建立一个极坐标系:
+\begin_inset Formula $M$
+\end_inset
 
-\begin_layout Standard
+ 设为原点。
 在平面极坐标中，
 一个点的位置由两部分描述：
 
@@ -76656,45 +76914,278 @@ status collapsed
 \end_inset
 
 ：
-离原点的距离（标量）
+离原点的距离（标量），
+
 \begin_inset Formula $\theta$
 \end_inset
 
 ：
-与极轴的夹角（标量）
+与极轴的夹角（标量）。
+
 \end_layout
 
 \begin_layout Standard
-所以，
- 位置向量 可表示为：
+当一个物体的速度
+\begin_inset Formula $\overrightarrow{\boldsymbol{v}}$
+\end_inset
 
-\begin_inset Formula $\boldsymbol{r}=r\hat{\boldsymbol{r}}$
+ 被分解时：
+
+\begin_inset Formula 
+\[
+\overrightarrow{\boldsymbol{v}}=\dot{r}\hat{\boldsymbol{r}}+r\dot{\theta}\hat{\boldsymbol{\theta}}
+\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-其中：
+第一部分 
+\begin_inset Formula $\dot{r}\hat{\boldsymbol{r}}$
+\end_inset
+
+ 描述的是物体靠近或远离中心点的速度（径向速度）。
+
+\end_layout
+
+\begin_layout Standard
+第二部分 
+\begin_inset Formula $r\dot{\theta}\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 描述的是物体绕着中心点转圈的速度（切向速度）。
+
+\end_layout
+
+\begin_layout Subparagraph
+求 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+是单位径向向量 (Unit Radial Vector)。
+ 它永远从原点 (origin) 出发，
+径直指向我们所关注的那个点的位置。
+它的名字里带有“单位”，
+所以它的长度永远是 1。
+这也是其符号上“帽子 ^”的含义。
+它只包含方向信息，
+不包含任何关于“距离”的信息。
+当一个点在平面上移动时，
+指向它的方向也在不断改变，
+所以
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+的方向也在不断改变（除非这个点沿着一条穿过原点的直线运动）。
+
+\end_layout
+
+\begin_layout Standard
+我们想要求出变化的向量 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+的导数，
+直接求一个方向在变的向量的导数很困难。
+所以，
+我们采用了搭桥：
+
+\end_layout
+
+\begin_layout Standard
+搭桥：
+用固定的、我们熟悉其导数（为零）的 
+\begin_inset Formula $i$
+\end_inset
+
+ 和 
+\begin_inset Formula $j$
+\end_inset
+
+ 来表示
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+。
+我们先用直角坐标系中的单位向量 
+\begin_inset Formula $i$
+\end_inset
+
+、
+\begin_inset Formula $j$
+\end_inset
+
+ 表示极坐标单位向量：
+
+\end_layout
+
+\begin_layout Standard
+单位向量
+\begin_inset Formula $\hat{\boldsymbol{r}}=\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j}$
+\end_inset
+
+，
+其中
+\begin_inset Formula $\theta$
+\end_inset
+
+是运动的角度，
+于是位置向量
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{i}$
+\end_inset
+
+ 和
+\begin_inset Formula $\boldsymbol{j}$
+\end_inset
+
+ 是笛卡尔坐标系（直角坐标系 x-y）中的标准单位向量。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{i}$
+\end_inset
+
+或
+\begin_inset Formula $\hat{\boldsymbol{i}}$
 \end_inset
 
 ：
-单位径向向量 
-\begin_inset Formula $\hat{\boldsymbol{r}}$
+是一个指向
+\begin_inset Formula $x$
 \end_inset
 
- 是从原点指向该点的方向向量，
-长度为
+轴正方向的单位向量，
+它的坐标是
+\begin_inset Formula $(1,0)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\boldsymbol{j}$
+\end_inset
+
+或
+\begin_inset Formula $\hat{\boldsymbol{j}}$
+\end_inset
+
+：
+是一个指向
+\begin_inset Formula $y$
+\end_inset
+
+轴正方向的单位向量，
+它的坐标是 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+它们的长度（模）都等于
 \begin_inset Formula $1$
 \end_inset
 
 ，
-不包含长度信息（因为是单位向量）。
+且正交(
+\begin_inset Formula $\boldsymbol{i}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\boldsymbol{j}$
+\end_inset
+
+ 互相垂直，
+夹角为90°)，
+
+\begin_inset Formula $\boldsymbol{i}$
+\end_inset
+
+和
+\begin_inset Formula $\boldsymbol{j}$
+\end_inset
+
+的方向永远不会改变。
+
+\begin_inset Formula $\boldsymbol{i}$
+\end_inset
+
+永远指向右边，
+
+\begin_inset Formula $\boldsymbol{j}$
+\end_inset
+
+永远指向上方。
+因此，
+它们对时间的导数是零。
+
+\begin_inset Formula $\frac{d\boldsymbol{i}}{dt}=0$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{d\boldsymbol{j}}{dt}=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+ 位置向量可表示为：
+
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}=r\hat{\boldsymbol{r}}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+求
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
 
 \end_layout
 
@@ -76702,14 +77193,180 @@ status collapsed
 \begin_inset Formula $\hat{\boldsymbol{\theta}}$
 \end_inset
 
-：
-单位切向向量，
+为单位切向向量 (Unit Tangential Vector) 或 单位方位角向量 (Unit Azimuthal Vector)。
+它描述了一个点运动的方向，
+这个方向与从原点指向该点的径向方向垂直。
+它永远与单位径向
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+向量垂直 (正交)。
+作用是用来描述不沿着径向发生的运动。
+
+\end_layout
+
+\begin_layout Standard
+单位切向向量
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+，
 垂直于 
 \begin_inset Formula $\hat{\boldsymbol{r}}$
 \end_inset
 
 ，
 沿逆时针方向。
+
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{\theta}}=-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 是将 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 逆时针旋转 
+\begin_inset Formula $90^{\textdegree}$
+\end_inset
+
+ (
+\begin_inset Formula $+\pi/2$
+\end_inset
+
+ 弧度) 得到的单位向量，
+
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{\theta}}=\cos(\theta+90°)\boldsymbol{i}+\sin(\theta+90°)\boldsymbol{j}
+\]
+
+\end_inset
+
+，
+用三角恒等式进行化简得
+\begin_inset Formula $\hat{\boldsymbol{\theta}}=-\sin\theta\boldsymbol{i}+\cos\theta\boldsymbol{j}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+或者可以用点积为零的特点求解。
+ 设 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}=a\boldsymbol{i}+b\boldsymbol{j}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 是我们要求解的系数。
+
+\begin_inset Formula 
+\[
+\hat{\boldsymbol{r}}\cdot\hat{\boldsymbol{\theta}}=(\cos\theta\boldsymbol{i}+\sin\theta\boldsymbol{j})\cdot(a\boldsymbol{i}+b\boldsymbol{j})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据点积的计算规则 
+\begin_inset Formula $(\boldsymbol{i}\cdot\boldsymbol{i}=1,\boldsymbol{j}\cdot\boldsymbol{j}=1,\boldsymbol{i}\cdot\boldsymbol{j}=0)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a\cos\theta+b\sin\theta=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了满足这个等式，
+一个最简单的解是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a=-\sin\theta\quad\text{且}\quad b=\cos\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(可以设 
+\begin_inset Formula $a=k(-\sin\theta),b=k(\cos\theta)$
+\end_inset
+
+，
+然后用求出
+\begin_inset Formula $k$
+\end_inset
+
+)，
+然后代入验证条件。
+确定逆时针方向后，
+唯一的正确解是
+\begin_inset Formula $a=-\sin\theta,b=\cos\theta$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subparagraph
+求导
+\end_layout
+
+\begin_layout Standard
+笛卡尔基底 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 是惯性基底。
+它们永远指向同一个方向，
+因此求导时是常数。
+极坐标基底 
+\begin_inset Formula $(\hat{\boldsymbol{r}},\hat{\boldsymbol{\theta}})$
+\end_inset
+
+ 是非惯性/随动基底。
+它们的方向会随着物体的运动而旋转，
+因此它们本身就是时间的函数，
+求导时必须被当作变量处理。
 
 \end_layout
 
@@ -76735,9 +77392,6 @@ status collapsed
 
 \begin_layout Standard
 单位向量的时间导数
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 \frac{d\hat{\boldsymbol{r}}}{dt}=\dot{\theta}\hat{\boldsymbol{\theta}},\quad\frac{d\hat{\boldsymbol{\theta}}}{dt}=-\dot{\theta}\hat{\boldsymbol{r}}
@@ -76773,60 +77427,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-表达极坐标单位向量
-\end_layout
-
-\begin_layout Standard
-我们先用直角坐标系中的单位向量 
-\begin_inset Formula $\hat{\boldsymbol{x}}$
-\end_inset
-
-、
-\begin_inset Formula $\hat{\boldsymbol{y}}$
-\end_inset
-
- 表示极坐标单位向量：
-
-\end_layout
-
-\begin_layout Standard
-径向单位向量：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\hat{\boldsymbol{r}}=\cos\theta\,\hat{\boldsymbol{x}}+\sin\theta\,\hat{\boldsymbol{y}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-切向单位向量（与 
-\begin_inset Formula $\hat{\boldsymbol{r}}$
-\end_inset
-
- 垂直，
-逆时针旋转90°）：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\hat{\boldsymbol{\theta}}=-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 对 
 \begin_inset Formula $\hat{\boldsymbol{r}}$
 \end_inset
@@ -76851,7 +77451,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{d\hat{\boldsymbol{r}}}{dt}=\frac{d}{dt}[\cos\theta(t)\,\hat{\boldsymbol{x}}+\sin\theta(t)\,\hat{\boldsymbol{y}}]=-\sin\theta\,\dot{\theta}\,\hat{\boldsymbol{x}}+\cos\theta\,\dot{\theta}\,\hat{\boldsymbol{y}}=\dot{\theta}(-\sin\theta\,\hat{\boldsymbol{x}}+\cos\theta\,\hat{\boldsymbol{y}})=\dot{\theta}\,\hat{\boldsymbol{\theta}}
+\frac{d\hat{\boldsymbol{r}}}{dt}=\frac{d}{dt}[\cos\theta(t)\boldsymbol{i}+\sin\theta(t)\boldsymbol{j}]=-\sin\theta\,\dot{\theta}\,\boldsymbol{i}+\cos\theta\,\dot{\theta}\,\boldsymbol{j}=\dot{\theta}(-\sin\theta\,\boldsymbol{i}+\cos\theta\,\boldsymbol{j})=\dot{\theta}\,\hat{\boldsymbol{\theta}}
 \]
 
 \end_inset
@@ -76886,7 +77486,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{d\hat{\boldsymbol{\theta}}}{dt}=\frac{d}{dt}[-\sin\theta(t)\,\hat{\boldsymbol{x}}+\cos\theta(t)\,\hat{\boldsymbol{y}}]=-\cos\theta\,\dot{\theta}\,\hat{\boldsymbol{x}}-\sin\theta\,\dot{\theta}\,\hat{\boldsymbol{y}}=-\dot{\theta}(\cos\theta\,\hat{\boldsymbol{x}}+\sin\theta\,\hat{\boldsymbol{y}})=-\dot{\theta}\,\hat{\boldsymbol{r}}
+\frac{d\hat{\boldsymbol{\theta}}}{dt}=\frac{d}{dt}[-\sin\theta(t)\,\boldsymbol{i}+\cos\theta(t)\,\boldsymbol{j}]=-\cos\theta\,\dot{\theta}\,\boldsymbol{i}-\sin\theta\,\dot{\theta}\,\boldsymbol{j}=-\dot{\theta}(\cos\theta\,\boldsymbol{i}+\sin\theta\,\boldsymbol{j})=-\dot{\theta}\,\hat{\boldsymbol{r}}
 \]
 
 \end_inset
@@ -76912,7 +77512,7 @@ status collapsed
 
 \begin_layout Standard
 当然，
-我们来**逐步详细解释**这个推导过程，
+我们来逐步详细解释这个推导过程，
 说明每一步是如何从前一步推出的。
 
 \end_layout
@@ -77103,239 +77703,6 @@ status collapsed
 \end_inset
 
  是始终垂直的单位向量。
-
-\end_layout
-
-\begin_layout Standard
-这是物理中常用的牛顿记号（Newton notation）：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-符号 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-含义
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\theta$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-角度，
-随时间变化的函数（
-\begin_inset Formula $\theta(t)$
-\end_inset
-
-）
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\dot{\theta}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-一阶导数，
-即角速度（angular velocity）
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\ddot{\theta}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-二阶导数，
-即角加速度（angular acceleration）
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这是因为在物理学和工程中，
-牛顿记号（点号 
-\begin_inset Formula $\dot{\theta}$
-\end_inset
-
-）比数学中的莱布尼茨记号（
-\begin_inset Formula $\frac{d\theta}{dt}$
-\end_inset
-
-）更简洁，
-尤其在涉及时间导数的情况下，
-以下是原因：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-牛顿记号（
-\begin_inset Formula $\dot{\theta}$
-\end_inset
-
-）
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-莱布尼茨记号（
-\begin_inset Formula $\frac{d\theta}{dt}$
-\end_inset
-
-）
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-简洁、紧凑，
-适合写在公式中
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-更详细，
-能清楚表达变量和导数间的关系 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-在物理公式中广泛使用 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-在数学分析和计算中更常见
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-主要用于时间导数（尤其是运动学）
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-可用于任意自变量
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
 
 \end_layout
 
@@ -77564,39 +77931,29 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-hat{
-\backslash
-boldsymbol{r}}$ 分量：
-$
-\backslash
-ddot{r} - r
-\backslash
-dot{
-\backslash
-theta}^2$
+* 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+ 分量：
+
+\begin_inset Formula $\ddot{r}-r\dot{\theta}^{2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-hat{
-\backslash
-boldsymbol{
-\backslash
-theta}}$ 分量：
-$r
-\backslash
-ddot{
-\backslash
-theta} + 2
-\backslash
-dot{r}
-\backslash
-dot{
-\backslash
-theta}$
+* 
+\begin_inset Formula $\hat{\boldsymbol{\theta}}$
+\end_inset
+
+ 分量：
+
+\begin_inset Formula $r\ddot{\theta}+2\dot{r}\dot{\theta}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -78158,7 +78515,8 @@ theta}$
 \begin_layout Standard
 假设作用于物体的外力矩和为零，
 则物体的角动量是守恒的,
- 即可以看作一个运动常数.
+ 即可以看作一个运动常数。
+
 \end_layout
 
 \begin_layout Section
@@ -90419,6 +90777,1324 @@ F(p)=\int_{0}^{+\infty}f(t)e^{-pt}dt
 \end_layout
 
 \begin_layout Section
+生成函数法
+\end_layout
+
+\begin_layout Standard
+生成函数的思想是：
+将一个
+\series bold
+无穷序列
+\series default
+“打包”或“编码”成一个单一的、紧凑的对象 —
+ 一个函数。
+
+\end_layout
+
+\begin_layout Standard
+这个函数包含了序列的所有信息，
+我们可以对这个函数进行各种代数或微积分操作（如加法、乘法、求导、积分），
+这些操作会以一种可预测的方式改变原始的序列。
+
+\end_layout
+
+\begin_layout Standard
+一句话概括：
+生成函数法是搭建了一座桥梁，
+连接了“离散的序列世界”和“连续的函数与代数世界”。
+
+\end_layout
+
+\begin_layout Paragraph
+如何构建生成函数？
+
+\end_layout
+
+\begin_layout Standard
+把一个无穷数列看成是一个幂级数的系数时，
+所得到的幂级数就叫做生成函数。
+
+\end_layout
+
+\begin_layout Standard
+给定一个序列
+\begin_inset Formula $a=(a_{0},a_{1},a_{2},a_{3},\ldots)$
+\end_inset
+
+，
+它的（普通）生成函数 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 定义为一个形式幂级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots=\sum_{n=0}^{\infty}a_{n}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $x$
+\end_inset
+
+ 最初只是一个形式上的占位符，
+它的指数 
+\begin_inset Formula $n$
+\end_inset
+
+ 负责标记序列中第 
+\begin_inset Formula $n$
+\end_inset
+
+ 个元素 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 的位置。
+
+\end_layout
+
+\begin_layout Example
+序列：
+
+\begin_inset Formula $(1,1,1,1,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=1$
+\end_inset
+
+ 对所有 
+\begin_inset Formula $n\ge0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+生成函数：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+G(x)=1+x+x^{2}+x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+闭合形式 (Closed Form)：
+这是一个公比为 
+\begin_inset Formula $x$
+\end_inset
+
+ 的几何级数。
+当 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+ 时，
+它收敛于：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+G(x)=\frac{1}{1-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个简单的函数 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+ 就是序列 
+\begin_inset Formula $(1,1,1,\ldots)$
+\end_inset
+
+ 的生成函数。
+
+\end_layout
+
+\begin_layout Enumerate
+找到特定项 ：
+如果你想知道序列的第 
+\begin_inset Formula $k$
+\end_inset
+
+ 项 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ 是多少，
+它就是生成函数 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 中 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+ 项的系数。
+对于复杂的生成函数，
+可以通过泰勒展开来找到它。
+
+\begin_inset Formula 
+\[
+a_{k}=\frac{G^{(k)}(0)}{k!}
+\]
+
+\end_inset
+
+（即函数在0点的k阶导数除以k的阶乘）
+\end_layout
+
+\begin_layout Enumerate
+修改序列（函数运算）：
+对函数进行简单的运算，
+会对原始序列产生有趣的效果。
+假设有两个序列
+\begin_inset Formula $a=(a_{n})$
+\end_inset
+
+ 和 
+\begin_inset Formula $b=(b_{n})$
+\end_inset
+
+，
+它们的生成函数分别是 
+\begin_inset Formula $A(x)$
+\end_inset
+
+ 和 
+\begin_inset Formula $B(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+序列相加：
+序列 
+\begin_inset Formula $(a_{n}+b_{n})$
+\end_inset
+
+ 的生成函数是 
+\begin_inset Formula $A(x)+B(x)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+乘法（卷积）：
+一个非常重要的操作。
+
+\begin_inset Formula $A(x)B(x)$
+\end_inset
+
+ 的结果是一个新的生成函数，
+它的系数序列 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ 是 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的卷积 (convolution)：
+
+\begin_inset Formula 
+\[
+c_{n}=\sum_{k=0}^{n}a_{k}b_{n-k}
+\]
+
+\end_inset
+
+这个操作在组合计数问题中极其有用。
+例如，
+“用A方式做第一步，
+用B方式做第二步”的总方案数，
+往往可以通过生成函数的乘法来计算。
+
+\end_layout
+
+\begin_layout Standard
+求导：
+对 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ 求导会得到：
+
+\begin_inset Formula 
+\[
+G'(x)=a_{1}+2a_{2}x+3a_{3}x^{2}+\cdots=\sum_{n=1}^{\infty}na_{n}x^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这对应于一个新的序列 
+\begin_inset Formula $(a_{1},2a_{2},3a_{3},\ldots)$
+\end_inset
+
+。
+它提供了一种处理带有 
+\begin_inset Formula $n$
+\end_inset
+
+ 因子的问题的方法。
+
+\end_layout
+
+\begin_layout Example
+求序列 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+ 的生成函数
+\end_layout
+
+\begin_layout Enumerate
+我们知道序列 
+\begin_inset Formula $(1,1,1,\ldots)$
+\end_inset
+
+ 的生成函数是 
+\begin_inset Formula $\frac{1}{1-x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+我们想要的序列是 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+观察到 
+\begin_inset Formula $na_{n}$
+\end_inset
+
+ 这样的形式，
+我们想到求导。
+
+\end_layout
+
+\begin_layout Enumerate
+对 
+\begin_inset Formula $G(x)=\frac{1}{1-x}$
+\end_inset
+
+ 求导：
+
+\begin_inset Formula 
+\[
+G'(x)=\frac{d}{dx}\left(\frac{1}{1-x}\right)=\frac{1}{(1-x)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+同时，
+对级数形式求导：
+
+\begin_inset Formula 
+\[
+G'(x)=\frac{d}{dx}(1+x+x^{2}+x^{3}+\cdots)=1+2x+3x^{2}+\cdots=\sum_{n=1}^{\infty}nx^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+这个级数的系数是 
+\begin_inset Formula $(1,2,3,\ldots)$
+\end_inset
+
+。
+我们想得到 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+。
+只需要给整个级数乘以 
+\begin_inset Formula $x$
+\end_inset
+
+ 即可：
+
+\begin_inset Formula 
+\[
+xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $0+x+2x^{2}+3x^{3}+\cdots=x(\sum_{n=1}^{\infty}nx^{n-1})=\frac{x}{(1-x)^{2}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+它的系数序列正是 `
+\begin_inset Formula $(0,1,2,3,\cdots)$
+\end_inset
+
+`
+\end_layout
+
+\begin_layout Enumerate
+从第六步我们知道，
+目标序列的生成函数是 
+\begin_inset Formula $xG'(x)$
+\end_inset
+
+,
+ 从第四步我们知道，
+
+\begin_inset Formula $G'(x)=\frac{1}{(1-x)^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+因此，
+序列 
+\begin_inset Formula $(0,1,2,3,\ldots)$
+\end_inset
+
+ 的生成函数是：
+
+\begin_inset Formula 
+\[
+\frac{x}{(1-x)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+### 主要应用领域
+\end_layout
+
+\begin_layout Standard
+1.
+ **解决组合计数问题**：
+这是生成函数的“主场”。
+例如，
+计算用1分、5分、10分的硬币凑成1元的方案数，
+可以用生成函数优雅地解决。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ **求解递推关系 (Recurrence Relations)**：
+像斐波那契数列 $F_n = F_{n-1} + F_{n-2}$ 这样的问题，
+可以用生成函数找到其通项公式，
+而无需猜测。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **证明组合恒等式**：
+要证明两个复杂的和式相等，
+只需证明它们的生成函数是同一个函数。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ **在概率论中**：
+矩生成函数 (Moment-generating function) 是一个类似的概念，
+用于描述概率分布。
+
+\end_layout
+
+\begin_layout Example
+几何级数
+\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})\cdot(1-x)=1-x^{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})=\frac{1-x^{n+1}}{1-x}$
+\end_inset
+
+这个和就是等比数列的求和公式。
+
+\end_layout
+
+\begin_layout Example
+设
+\begin_inset Formula $0<x<1$
+\end_inset
+
+,
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+，
+
+\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})=\frac{1}{1-x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left[\begin{array}{ccccc}
+1 & 1 & 1 & 1 & \cdots\end{array}\right]\times\left[\begin{array}{c}
+x^{0}\\
+x^{1}\\
+x^{2}\\
+x^{3}\\
+\vdots
+\end{array}\right]=\frac{1}{1-x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+生成函数，
+求斐波那契数列
+\begin_inset Formula $\ensuremath{f_{n}}$
+\end_inset
+
+通项公式
+\end_layout
+
+\begin_layout Example
+斐波那契数列 
+\begin_inset Formula $F=(f_{0},f_{1},f_{2},\ldots)$
+\end_inset
+
+ 定义如下：
+
+\end_layout
+
+\begin_layout Example
+初始值：
+
+\begin_inset Formula $f_{0}=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $f_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+递推关系：
+对于所有 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+，
+有 
+\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+数列的前几项是：
+
+\begin_inset Formula $0,1,1,2,3,5,8,13,\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们为斐波那契数列定义其生成函数
+\begin_inset Formula $F(x)$
+\end_inset
+
+：
+
+\begin_inset Formula 
+\[
+F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入前几项的值：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)=0+1x+1x^{2}+2x^{3}+3x^{4}+\cdots=x+x^{2}+2x^{3}+3x^{4}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们的目标是利用递推关系 
+\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
+\end_inset
+
+ 来把 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 表示成一个简单的代数式。
+
+\end_layout
+
+\begin_layout Example
+我们把 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 的展开式写出来：
+
+\begin_inset Formula 
+\[
+F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots+f_{n}x^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们尝试构造出含有 
+\begin_inset Formula $f_{n-1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $f_{n-2}$
+\end_inset
+
+ 的项。
+这可以通过给
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 乘以 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 来实现：
+
+\end_layout
+
+\begin_layout Example
+构造 
+\begin_inset Formula $f_{n-1}$
+\end_inset
+
+ 项：
+
+\begin_inset Formula 
+\[
+xF(x)=f_{0}x+f_{1}x^{2}+f_{2}x^{3}+\cdots+f_{n-1}x^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+构造 
+\begin_inset Formula $f_{n-2}$
+\end_inset
+
+ 项：
+
+\begin_inset Formula 
+\[
+x^{2}F(x)=f_{0}x^{2}+f_{1}x^{3}+f_{2}x^{4}+\cdots+f_{n-2}x^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们把这三个式子对齐，
+观察系数之间的关系：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-xF(x)=-f_{0}x-f_{1}x^{2}-f_{2}x^{3}-...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $-x^{2}F(x)=\quad\quad-f_{0}x^{2}-f_{1}x^{3}-...$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+把这三行加起来，
+我们看 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ (当 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 时) 的系数是什么：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{系数}=f_{n}-f_{n-1}-f_{n-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+根据斐波那契数列的定义，
+对于 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+，
+这个系数恰好是 
+\begin_inset Formula $0$
+\end_inset
+
+！
+
+\end_layout
+
+\begin_layout Example
+这意味着，
+在 
+\begin_inset Formula $F(x)-xF(x)-x^{2}F(x)$
+\end_inset
+
+ 这个表达式中，
+所有次数大于等于2的项 (
+\begin_inset Formula $x^{2},x^{3},\ldots$
+\end_inset
+
+) 都消失了！
+我们只需要单独处理前几项（
+\begin_inset Formula $x^{0}$
+\end_inset
+
+ 和 
+\begin_inset Formula $x^{1}$
+\end_inset
+
+）即可。
+
+\end_layout
+
+\begin_layout Example
+让我们来精确地计算一下：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)-xF(x)-x^{2}F(x)=(f_{0}+f_{1}x+f_{2}x^{2}+\cdots)-(f_{0}x+f_{1}x^{2}+\cdots)-(f_{0}x^{2}+f_{1}x^{3}+\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+合并同类项：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+=f_{0}+(f_{1}-f_{0})x+(f_{2}-f_{1}-f_{0})x^{2}+(f_{3}-f_{2}-f_{1})x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入初始值 
+\begin_inset Formula $f_{0}=0,f_{1}=1$
+\end_inset
+
+ 和递推关系 
+\begin_inset Formula $f_{n}-f_{n-1}-f_{n-2}=0$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+=0+(1-0)x+(0)x^{2}+(0)x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们得到了一个关于 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 的简单代数方程：
+
+\begin_inset Formula 
+\[
+F(x)-xF(x)-x^{2}F(x)=x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F(x)(1-x-x^{2})=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+解出 
+\begin_inset Formula $F(x)$
+\end_inset
+
+，
+我们就得到了斐波那契数列生成函数的闭合形式（解析函数）：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)=\frac{x}{1-x-x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在我们有了
+\begin_inset Formula $F(x)=\frac{x}{1-x-x^{2}}$
+\end_inset
+
+，
+重新展开成幂级数，
+以找到第 
+\begin_inset Formula $n$
+\end_inset
+
+ 项的系数 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+这通常通过部分分式分解 (Partial Fraction Decomposition)来实现。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 分解分母：
+我们先找到 
+\begin_inset Formula $1-x-x^{2}=0$
+\end_inset
+
+ 的根。
+根据求根公式 
+\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
+\end_inset
+
+，
+这里 
+\begin_inset Formula $a=-1,b=-1,c=1$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+x=\frac{1\pm\sqrt{1-4(-1)(1)}}{-2}=\frac{1\pm\sqrt{5}}{-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+令 
+\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+ (黄金分割比)，
+
+\begin_inset Formula $\psi=\frac{1-\sqrt{5}}{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+因此，
+分母可以分解为：
+
+\begin_inset Formula 
+\[
+1-x-x^{2}=(\phi-x)(\psi-x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 进行部分分式分解：
+
+\begin_inset Formula 
+\[
+F(x)=\frac{x}{(\phi-x)(\psi-x)}=\frac{A}{\phi-x}+\frac{B}{\psi-x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+通过解方程（通分后比较分子系数）可以得到：
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x=(\psi-x)A+(\phi-x)B$
+\end_inset
+
+，
+由于已知x=
+\begin_inset Formula $\phi$
+\end_inset
+
+和
+\begin_inset Formula $x=\psi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\phi$
+\end_inset
+
+，
+
+\begin_inset Formula $A=\frac{\phi}{\sqrt{5}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代入
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi$
+\end_inset
+
+，
+
+\begin_inset Formula $B=-\frac{\psi}{\sqrt{5}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\end_layout
+
+\begin_layout Example
+3.
+ 代回 
+\begin_inset Formula $F(x)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\left(\frac{\phi}{\phi-x}-\frac{\psi}{\psi-x}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+分析
+\begin_inset Formula $\frac{\phi}{\phi-x}$
+\end_inset
+
+，
+分子分母同时除以
+\begin_inset Formula $\phi$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Example
+我们知道几何级数的生成函数：
+
+\begin_inset Formula 
+\[
+\frac{1}{1-ax}=1+ax+(ax)^{2}+(ax)^{3}+\cdots=\sum_{n=0}^{\infty}a^{n}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将这个公式应用到我们分解后的两项上：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}=\frac{1}{\phi^{0}}+\frac{x^{1}}{\phi^{1}}+\frac{x^{2}}{\phi^{2}}+\cdots+\frac{x^{n}}{\phi^{n}}=\sum_{n=0}^{\infty}\frac{x^{n}}{\phi^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{1}{1-\frac{x}{\psi}}=\frac{1}{\psi^{0}}+\frac{x^{1}}{\psi^{1}}+\frac{x^{2}}{\psi^{2}}+\cdots+\frac{x^{n}}{\psi^{n}}=\sum_{n=0}^{\infty}\frac{x^{n}}{\psi^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+代回到 
+\begin_inset Formula $F(x)$
+\end_inset
+
+ 的表达式中：
+
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\left(\sum_{n=0}^{\infty}\frac{x^{n}}{\phi^{n}}-\sum_{n=0}^{\infty}\frac{x^{n}}{\psi^{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+F(x)=\frac{1}{\sqrt{5}}\sum_{n=0}^{\infty}(\frac{1}{\phi^{n}}-\frac{1}{\psi^{n}})x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们最初定义 
+\begin_inset Formula $F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}$
+\end_inset
+
+。
+比较 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数，
+我们立即得到了 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ 的通项公式：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{n}=\frac{1}{\sqrt{5}}\times(\frac{1}{\phi^{n}}-\frac{1}{\psi^{n}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+由于
+\begin_inset Formula $黄金分割比的倒数=\frac{\sqrt{5}-1}{2}=\text{黄金分割比}-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+将 
+\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\psi=\frac{1-\sqrt{5}}{2}$
+\end_inset
+
+ 代入，
+我们就得到了著名的比内公式 (Binet's Formula)：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个公式看起来充满了无理数 
+\begin_inset Formula $\sqrt{5}$
+\end_inset
+
+，
+但它对于任何非负整数 
+\begin_inset Formula $n$
+\end_inset
+
+ 都会给出一个整数—
+—
+斐波那契数。
+ 
+\end_layout
+
+\begin_layout Section
 格兰迪级数
 \end_layout
 
@@ -90917,1357 +92593,6 @@ a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
 
 。
 
-\end_layout
-
-\begin_layout Subsection
-生成函数法
-\end_layout
-
-\begin_layout Standard
-生成函数的思想是：
-将一个
-\series bold
-无穷序列
-\series default
-“打包”或“编码”成一个单一的、紧凑的对象 —
- 一个函数。
-
-\end_layout
-
-\begin_layout Standard
-这个函数包含了序列的所有信息，
-我们可以对这个函数进行各种代数或微积分操作（如加法、乘法、求导、积分），
-这些操作会以一种可预测的方式改变原始的序列。
-
-\end_layout
-
-\begin_layout Standard
-一句话概括：
-生成函数法是搭建了一座桥梁，
-连接了“离散的序列世界”和“连续的函数与代数世界”。
-
-\end_layout
-
-\begin_layout Paragraph
-如何构建生成函数？
-
-\end_layout
-
-\begin_layout Standard
-把一个无穷数列看成是一个幂级数的系数时，
-所得到的幂级数就叫做生成函数。
-
-\end_layout
-
-\begin_layout Standard
-给定一个序列
-\begin_inset Formula $a=(a_{0},a_{1},a_{2},a_{3},\ldots)$
-\end_inset
-
-，
-它的（普通）生成函数 
-\begin_inset Formula $G(x)$
-\end_inset
-
- 定义为一个形式幂级数：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots=\sum_{n=0}^{\infty}a_{n}x^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这里的 
-\begin_inset Formula $x$
-\end_inset
-
- 最初只是一个形式上的占位符，
-它的指数 
-\begin_inset Formula $n$
-\end_inset
-
- 负责标记序列中第 
-\begin_inset Formula $n$
-\end_inset
-
- 个元素 
-\begin_inset Formula $a_{n}$
-\end_inset
-
- 的位置。
-
-\end_layout
-
-\begin_layout Example
-序列：
-
-\begin_inset Formula $(1,1,1,1,\ldots)$
-\end_inset
-
-，
-即 
-\begin_inset Formula $a_{n}=1$
-\end_inset
-
- 对所有 
-\begin_inset Formula $n\ge0$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-生成函数：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-G(x)=1+x+x^{2}+x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-闭合形式 (Closed Form)：
-这是一个公比为 
-\begin_inset Formula $x$
-\end_inset
-
- 的几何级数。
-当 
-\begin_inset Formula $|x|<1$
-\end_inset
-
- 时，
-它收敛于：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-G(x)=\frac{1}{1-x}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-这个简单的函数 
-\begin_inset Formula $\frac{1}{1-x}$
-\end_inset
-
- 就是序列 
-\begin_inset Formula $(1,1,1,\ldots)$
-\end_inset
-
- 的生成函数。
-
-\end_layout
-
-\begin_layout Enumerate
-找到特定项 ：
-如果你想知道序列的第 
-\begin_inset Formula $k$
-\end_inset
-
- 项 
-\begin_inset Formula $a_{k}$
-\end_inset
-
- 是多少，
-它就是生成函数 
-\begin_inset Formula $G(x)$
-\end_inset
-
- 中 
-\begin_inset Formula $x^{k}$
-\end_inset
-
- 项的系数。
-对于复杂的生成函数，
-可以通过泰勒展开来找到它。
-
-\begin_inset Formula 
-\[
-a_{k}=\frac{G^{(k)}(0)}{k!}
-\]
-
-\end_inset
-
-（即函数在0点的k阶导数除以k的阶乘）
-\end_layout
-
-\begin_layout Enumerate
-修改序列（函数运算）：
-对函数进行简单的运算，
-会对原始序列产生有趣的效果。
-假设有两个序列
-\begin_inset Formula $a=(a_{n})$
-\end_inset
-
- 和 
-\begin_inset Formula $b=(b_{n})$
-\end_inset
-
-，
-它们的生成函数分别是 
-\begin_inset Formula $A(x)$
-\end_inset
-
- 和 
-\begin_inset Formula $B(x)$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-序列相加：
-序列 
-\begin_inset Formula $(a_{n}+b_{n})$
-\end_inset
-
- 的生成函数是 
-\begin_inset Formula $A(x)+B(x)$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-乘法（卷积）：
-一个非常重要的操作。
-
-\begin_inset Formula $A(x)B(x)$
-\end_inset
-
- 的结果是一个新的生成函数，
-它的系数序列 
-\begin_inset Formula $c_{n}$
-\end_inset
-
- 是 
-\begin_inset Formula $a$
-\end_inset
-
- 和 
-\begin_inset Formula $b$
-\end_inset
-
- 的卷积 (convolution)：
-
-\begin_inset Formula 
-\[
-c_{n}=\sum_{k=0}^{n}a_{k}b_{n-k}
-\]
-
-\end_inset
-
-这个操作在组合计数问题中极其有用。
-例如，
-“用A方式做第一步，
-用B方式做第二步”的总方案数，
-往往可以通过生成函数的乘法来计算。
-
-\end_layout
-
-\begin_layout Standard
-求导：
-对 
-\begin_inset Formula $G(x)$
-\end_inset
-
- 求导会得到：
-
-\begin_inset Formula 
-\[
-G'(x)=a_{1}+2a_{2}x+3a_{3}x^{2}+\cdots=\sum_{n=1}^{\infty}na_{n}x^{n-1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这对应于一个新的序列 
-\begin_inset Formula $(a_{1},2a_{2},3a_{3},\ldots)$
-\end_inset
-
-。
-它提供了一种处理带有 
-\begin_inset Formula $n$
-\end_inset
-
- 因子的问题的方法。
-
-\end_layout
-
-\begin_layout Example
-求序列 
-\begin_inset Formula $(0,1,2,3,\ldots)$
-\end_inset
-
- 的生成函数
-\end_layout
-
-\begin_layout Enumerate
-我们知道序列 
-\begin_inset Formula $(1,1,1,\ldots)$
-\end_inset
-
- 的生成函数是 
-\begin_inset Formula $\frac{1}{1-x}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-我们想要的序列是 
-\begin_inset Formula $(0,1,2,3,\ldots)$
-\end_inset
-
-，
-即 
-\begin_inset Formula $a_{n}=n$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-观察到 
-\begin_inset Formula $na_{n}$
-\end_inset
-
- 这样的形式，
-我们想到求导。
-
-\end_layout
-
-\begin_layout Enumerate
-对 
-\begin_inset Formula $G(x)=\frac{1}{1-x}$
-\end_inset
-
- 求导：
-
-\begin_inset Formula 
-\[
-G'(x)=\frac{d}{dx}\left(\frac{1}{1-x}\right)=\frac{1}{(1-x)^{2}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-同时，
-对级数形式求导：
-
-\begin_inset Formula 
-\[
-G'(x)=\frac{d}{dx}(1+x+x^{2}+x^{3}+\cdots)=1+2x+3x^{2}+\cdots=\sum_{n=1}^{\infty}nx^{n-1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-这个级数的系数是 
-\begin_inset Formula $(1,2,3,\ldots)$
-\end_inset
-
-。
-我们想得到 
-\begin_inset Formula $(0,1,2,3,\ldots)$
-\end_inset
-
-。
-只需要给整个级数乘以 
-\begin_inset Formula $x$
-\end_inset
-
- 即可：
-
-\begin_inset Formula 
-\[
-xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
-\]
-
-\end_inset
-
-
-\begin_inset Formula $0+x+2x^{2}+3x^{3}+\cdots=x(\sum_{n=1}^{\infty}nx^{n-1})=\frac{x}{(1-x)^{2}}$
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-它的系数序列正是 `
-\begin_inset Formula $(0,1,2,3,\cdots)$
-\end_inset
-
-`
-\end_layout
-
-\begin_layout Enumerate
-从第六步我们知道，
-目标序列的生成函数是 
-\begin_inset Formula $xG'(x)$
-\end_inset
-
-,
- 从第四步我们知道，
-
-\begin_inset Formula $G'(x)=\frac{1}{(1-x)^{2}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-因此，
-序列 
-\begin_inset Formula $(0,1,2,3,\ldots)$
-\end_inset
-
- 的生成函数是：
-
-\begin_inset Formula 
-\[
-\frac{x}{(1-x)^{2}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-### 主要应用领域
-\end_layout
-
-\begin_layout Standard
-1.
- **解决组合计数问题**：
-这是生成函数的“主场”。
-例如，
-计算用1分、5分、10分的硬币凑成1元的方案数，
-可以用生成函数优雅地解决。
-
-\end_layout
-
-\begin_layout Standard
-2.
- **求解递推关系 (Recurrence Relations)**：
-像斐波那契数列 $F_n = F_{n-1} + F_{n-2}$ 这样的问题，
-可以用生成函数找到其通项公式，
-而无需猜测。
-
-\end_layout
-
-\begin_layout Standard
-3.
- **证明组合恒等式**：
-要证明两个复杂的和式相等，
-只需证明它们的生成函数是同一个函数。
-
-\end_layout
-
-\begin_layout Standard
-4.
- **在概率论中**：
-矩生成函数 (Moment-generating function) 是一个类似的概念，
-用于描述概率分布。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})\cdot(1-x)=1-x^{n+1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})=\frac{1-x^{n+1}}{1-x}$
-\end_inset
-
-这个和就是等比数列的求和公式。
-
-\end_layout
-
-\begin_layout Example
-设
-\begin_inset Formula $0<x<1$
-\end_inset
-
-,
-\begin_inset Formula $n\rightarrow\infty$
-\end_inset
-
-，
-
-\begin_inset Formula $(1+x+x^{2}+\cdots+x^{n})=\frac{1}{1-x}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $\left[\begin{array}{ccccc}
-1 & 1 & 1 & 1 & \cdots\end{array}\right]\times\left[\begin{array}{c}
-x^{0}\\
-x^{1}\\
-x^{2}\\
-x^{3}\\
-\vdots
-\end{array}\right]=\frac{1}{1-x}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-生成函数，
-求斐波那契数列
-\begin_inset Formula $\ensuremath{f_{n}}$
-\end_inset
-
-通项公式
-\end_layout
-
-\begin_layout Example
-斐波那契数列 
-\begin_inset Formula $F=(f_{0},f_{1},f_{2},\ldots)$
-\end_inset
-
- 定义如下：
-
-\end_layout
-
-\begin_layout Example
-初始值：
-
-\begin_inset Formula $f_{0}=0$
-\end_inset
-
-,
- 
-\begin_inset Formula $f_{1}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-递推关系：
-对于所有 
-\begin_inset Formula $n\ge2$
-\end_inset
-
-，
-有 
-\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-数列的前几项是：
-
-\begin_inset Formula $0,1,1,2,3,5,8,13,\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们为斐波那契数列定义其生成函数
-\begin_inset Formula $F(x)$
-\end_inset
-
-：
-
-\begin_inset Formula 
-\[
-F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-代入前几项的值：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)=0+1x+1x^{2}+2x^{3}+3x^{4}+\cdots=x+x^{2}+2x^{3}+3x^{4}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们的目标是利用递推关系 
-\begin_inset Formula $f_{n}=f_{n-1}+f_{n-2}$
-\end_inset
-
- 来把 
-\begin_inset Formula $F(x)$
-\end_inset
-
- 表示成一个简单的代数式。
-
-\end_layout
-
-\begin_layout Example
-我们把 
-\begin_inset Formula $F(x)$
-\end_inset
-
- 的展开式写出来：
-
-\begin_inset Formula 
-\[
-F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+\cdots+f_{n}x^{n}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在，
-我们尝试构造出含有 
-\begin_inset Formula $f_{n-1}$
-\end_inset
-
- 和 
-\begin_inset Formula $f_{n-2}$
-\end_inset
-
- 的项。
-这可以通过给
-\begin_inset Formula $F(x)$
-\end_inset
-
- 乘以 
-\begin_inset Formula $x$
-\end_inset
-
- 和 
-\begin_inset Formula $x^{2}$
-\end_inset
-
- 来实现：
-
-\end_layout
-
-\begin_layout Example
-构造 
-\begin_inset Formula $f_{n-1}$
-\end_inset
-
- 项：
-
-\begin_inset Formula 
-\[
-xF(x)=f_{0}x+f_{1}x^{2}+f_{2}x^{3}+\cdots+f_{n-1}x^{n}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-构造 
-\begin_inset Formula $f_{n-2}$
-\end_inset
-
- 项：
-
-\begin_inset Formula 
-\[
-x^{2}F(x)=f_{0}x^{2}+f_{1}x^{3}+f_{2}x^{4}+\cdots+f_{n-2}x^{n}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在，
-我们把这三个式子对齐，
-观察系数之间的关系：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $F(x)=f_{0}+f_{1}x+f_{2}x^{2}+f_{3}x^{3}+...$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $-xF(x)=-f_{0}x-f_{1}x^{2}-f_{2}x^{3}-...$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $-x^{2}F(x)=\quad\quad-f_{0}x^{2}-f_{1}x^{3}-...$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-把这三行加起来，
-我们看 
-\begin_inset Formula $x^{n}$
-\end_inset
-
- (当 
-\begin_inset Formula $n\ge2$
-\end_inset
-
- 时) 的系数是什么：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-\text{系数}=f_{n}-f_{n-1}-f_{n-2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-根据斐波那契数列的定义，
-对于 
-\begin_inset Formula $n\ge2$
-\end_inset
-
-，
-这个系数恰好是 
-\begin_inset Formula $0$
-\end_inset
-
-！
-
-\end_layout
-
-\begin_layout Example
-这意味着，
-在 
-\begin_inset Formula $F(x)-xF(x)-x^{2}F(x)$
-\end_inset
-
- 这个表达式中，
-所有次数大于等于2的项 (
-\begin_inset Formula $x^{2},x^{3},\ldots$
-\end_inset
-
-) 都消失了！
-我们只需要单独处理前几项（
-\begin_inset Formula $x^{0}$
-\end_inset
-
- 和 
-\begin_inset Formula $x^{1}$
-\end_inset
-
-）即可。
-
-\end_layout
-
-\begin_layout Example
-让我们来精确地计算一下：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)-xF(x)-x^{2}F(x)=(f_{0}+f_{1}x+f_{2}x^{2}+\cdots)-(f_{0}x+f_{1}x^{2}+\cdots)-(f_{0}x^{2}+f_{1}x^{3}+\cdots)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-合并同类项：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-=f_{0}+(f_{1}-f_{0})x+(f_{2}-f_{1}-f_{0})x^{2}+(f_{3}-f_{2}-f_{1})x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-代入初始值 
-\begin_inset Formula $f_{0}=0,f_{1}=1$
-\end_inset
-
- 和递推关系 
-\begin_inset Formula $f_{n}-f_{n-1}-f_{n-2}=0$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-=0+(1-0)x+(0)x^{2}+(0)x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-=x
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们得到了一个关于 
-\begin_inset Formula $F(x)$
-\end_inset
-
- 的简单代数方程：
-
-\begin_inset Formula 
-\[
-F(x)-xF(x)-x^{2}F(x)=x
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-F(x)(1-x-x^{2})=x
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-解出 
-\begin_inset Formula $F(x)$
-\end_inset
-
-，
-我们就得到了斐波那契数列生成函数的闭合形式（解析函数）：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)=\frac{x}{1-x-x^{2}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在我们有了
-\begin_inset Formula $F(x)=\frac{x}{1-x-x^{2}}$
-\end_inset
-
-，
-重新展开成幂级数，
-以找到第 
-\begin_inset Formula $n$
-\end_inset
-
- 项的系数 
-\begin_inset Formula $f_{n}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-这通常通过部分分式分解 (Partial Fraction Decomposition)来实现。
-
-\end_layout
-
-\begin_layout Example
-1.
- 分解分母：
-我们先找到 
-\begin_inset Formula $1-x-x^{2}=0$
-\end_inset
-
- 的根。
-根据求根公式 
-\begin_inset Formula $x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$
-\end_inset
-
-，
-这里 
-\begin_inset Formula $a=-1,b=-1,c=1$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-x=\frac{1\pm\sqrt{1-4(-1)(1)}}{-2}=\frac{1\pm\sqrt{5}}{-2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-令 
-\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
-\end_inset
-
- (黄金分割比)，
-
-\begin_inset Formula $\psi=\frac{1-\sqrt{5}}{2}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-因此，
-分母可以分解为：
-
-\begin_inset Formula 
-\[
-1-x-x^{2}=(\phi-x)(\psi-x)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 进行部分分式分解：
-
-\begin_inset Formula 
-\[
-F(x)=\frac{x}{(\phi-x)(\psi-x)}=\frac{A}{\phi-x}+\frac{B}{\psi-x}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-通过解方程（通分后比较分子系数）可以得到：
-
-\end_layout
-
-\begin_layout Example
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $x=(\psi-x)A+(\phi-x)B$
-\end_inset
-
-，
-由于已知x=
-\begin_inset Formula $\phi$
-\end_inset
-
-和
-\begin_inset Formula $x=\psi$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-代入
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\phi$
-\end_inset
-
-，
-
-\begin_inset Formula $A=\frac{\phi}{\sqrt{5}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-代入
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $\psi$
-\end_inset
-
-，
-
-\begin_inset Formula $B=-\frac{\psi}{\sqrt{5}}$
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\nospellcheck default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- 
-\end_layout
-
-\begin_layout Example
-3.
- 代回 
-\begin_inset Formula $F(x)$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)=\frac{1}{\sqrt{5}}\left(\frac{\phi}{\phi-x}-\frac{\psi}{\psi-x}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-分析
-\begin_inset Formula $\frac{\phi}{\phi-x}$
-\end_inset
-
-，
-分子分母同时除以
-\begin_inset Formula $\phi$
-\end_inset
-
-，
-
-\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Example
-设
-\begin_inset Formula $0<x<1$
-\end_inset
-
-,
-\begin_inset Formula $n\rightarrow\infty$
-\end_inset
-
-，
-
-\begin_inset Formula $1+x+x^{2}+\cdots+x^{n}=\frac{1}{1-x}$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $\frac{1}{1-\frac{x}{\phi}}=\frac{1}{\phi^{0}}+\frac{x^{1}}{\phi^{1}}+\frac{x^{2}}{\phi^{2}}+\cdots+\frac{x^{n}}{\phi^{n}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $\frac{1}{1-\frac{x}{\psi}}=\frac{1}{\psi^{0}}+\frac{x^{1}}{\psi^{1}}+\frac{x^{2}}{\psi^{2}}+\cdots+\frac{x^{n}}{\psi^{n}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们知道几何级数的生成函数：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-\frac{1}{1-ax}=1+ax+(ax)^{2}+(ax)^{3}+\cdots=\sum_{n=0}^{\infty}a^{n}x^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-将这个公式应用到我们分解后的两项上：
-
-\end_layout
-
-\begin_layout Example
-* 
-\begin_inset Formula $\frac{1}{1-\phi x}=\sum_{n=0}^{\infty}\phi^{n}x^{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-* 
-\begin_inset Formula $\frac{1}{1-\psi x}=\sum_{n=0}^{\infty}\psi^{n}x^{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-代回到 
-\begin_inset Formula $F(x)$
-\end_inset
-
- 的表达式中：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)=\frac{1}{\sqrt{5}}\left(\sum_{n=0}^{\infty}\phi^{n}x^{n}-\sum_{n=0}^{\infty}\psi^{n}x^{n}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-F(x)=\frac{1}{\sqrt{5}}\sum_{n=0}^{\infty}(\phi^{n}-\psi^{n})x^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们最初定义 
-\begin_inset Formula $F(x)=\sum_{n=0}^{\infty}f_{n}x^{n}$
-\end_inset
-
-。
-比较 
-\begin_inset Formula $x^{n}$
-\end_inset
-
- 的系数，
-我们立即得到了 
-\begin_inset Formula $f_{n}$
-\end_inset
-
- 的通项公式：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{n}=\frac{\phi^{n}-\psi^{n}}{\sqrt{5}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-将 
-\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
-\end_inset
-
- 和 
-\begin_inset Formula $\psi=\frac{1-\sqrt{5}}{2}$
-\end_inset
-
- 代入，
-我们就得到了著名的比内公式 (Binet's Formula)：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula 
-\[
-f_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-这个公式看起来充满了无理数 
-\begin_inset Formula $\sqrt{5}$
-\end_inset
-
-，
-但它对于任何非负整数 
-\begin_inset Formula $n$
-\end_inset
-
- 都会给出一个整数—
-—
-斐波那契数。
- 
 \end_layout
 
 \begin_layout Paragraph
