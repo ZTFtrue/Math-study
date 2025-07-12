@@ -9,9 +9,11 @@
 %\usepackage{epstopdf}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{ctex}
 \usepackage{textgreek}
 \usepackage{CJKutf8}
+\usepackage[svgnames]{xcolor}
 %\usepackage{fontspec}
  
 \end_preamble
@@ -34,7 +36,7 @@ pdfform
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_roman_osf false
 \font_sans_osf false
@@ -279,21 +281,6 @@ Math
 \end_layout
 
 \begin_layout Standard
-A
-\end_layout
-
-\begin_layout Standard
-Α
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\alpha$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 placement document
 alignment document
@@ -314,7 +301,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Α 
+A 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -336,7 +323,11 @@ Alpha
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ν ν
+N 
+\begin_inset Formula $\nu$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -356,7 +347,7 @@ Nu
 \begin_inset Text
 
 \begin_layout Plain Layout
-Β 
+B 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -430,7 +421,11 @@ Gamma
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ο ο
+O 
+\begin_inset Formula $o$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -502,7 +497,7 @@ Pi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ε 
+E 
 \begin_inset Formula $\epsilon$
 \end_inset
 
@@ -524,7 +519,7 @@ Epsilon
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ρ
+P
 \begin_inset Formula $\rho$
 \end_inset
 
@@ -548,7 +543,7 @@ Rho
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ζ 
+Z 
 \begin_inset Formula $\zeta$
 \end_inset
 
@@ -597,7 +592,7 @@ Sigma
 \begin_inset Text
 
 \begin_layout Plain Layout
-Η 
+H 
 \begin_inset Formula $\eta$
 \end_inset
 
@@ -633,7 +628,7 @@ Eta
 \uwave off
 \noun off
 \color none
-Τ 
+T 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -751,7 +746,7 @@ Upsilon
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ι 
+I 
 \begin_inset Formula $\iota$
 \end_inset
 
@@ -828,7 +823,7 @@ Phi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Κ 
+K 
 \begin_inset Formula $\kappa$
 \end_inset
 
@@ -864,7 +859,7 @@ Kappa
 \uwave off
 \noun off
 \color none
-Χ 
+X 
 \begin_inset Formula $\chi$
 \end_inset
 
@@ -982,7 +977,7 @@ Psi
 \begin_inset Text
 
 \begin_layout Plain Layout
-Μ 
+M 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -1863,7 +1858,7 @@ Omega
 总体
 \series default
 ,
- (在最原始的集合论─朴素集合论─中的定义,
+ (在最原始的集合论-朴素集合论-中的定义,
  集合就是"一堆东西”.
  )
 \end_layout
@@ -5167,6 +5162,9 @@ Additive Inverse,
 
 \begin_layout Section
 贝塞尔曲线
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
 \mathbf{B}(t) & =\sum_{i=0}^{n}{n \choose i}\mathbf{P}_{i}(1-t)^{n-i}t^{i}\\
@@ -5495,7 +5493,7 @@ n=p_{1}p_{2}\cdots p_{m}
 
 \end_inset
 
- 如果不计这些素数的次序,则分解式①是唯一的.
+ 如果不计这些素数的次序,则分解式是唯一的.
  
 \end_layout
 
@@ -5649,7 +5647,7 @@ n=p_{1}p_{2}\cdots p_{m}
 \end_layout
 
 \begin_layout Standard
-把①式中相同素数写成幕的形式,即得 
+把式中相同素数写成幕的形式,即得 
 \end_layout
 
 \begin_layout Standard
@@ -5908,7 +5906,11 @@ a\mod b=a-b\times\lfloor a/y\rfloor,y\neq0
  同余(英语：
 congruence modulo,
  符号：
-≡)是数论中的一种等价关系.
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+)是数论中的一种等价关系.
  当两个整数除以同一个正整数,
  若得相同余数,
  则二整数
@@ -14105,7 +14107,7 @@ conic section),
 \begin_inset Text
 
 \begin_layout Plain Layout
-半正焦弦(ℓ)(semi-latus rectum)
+半正焦弦(semi-latus rectum)
 \end_layout
 
 \end_inset
@@ -24877,7 +24879,7 @@ v=(x,y,z)
 \end_inset
 
 ,
- 这吋它的方向可以是任意的。
+ 这时它的方向可以是任意的。
 
 \end_layout
 
@@ -24887,7 +24889,7 @@ v=(x,y,z)
 \begin_inset Formula $λ=\pm1$
 \end_inset
 
-吋，
+时，
 有
 \begin_inset Formula $1\vec{a}=\vec{a}$
 \end_inset
@@ -26659,7 +26661,11 @@ b_{1} & b_{2}
 \begin_inset Formula $\boldsymbol{e_{i}}\cdot\boldsymbol{e_{j}}=0$
 \end_inset
 
-（当 i≠j 时）
+（当 i
+\begin_inset Formula $\neq$
+\end_inset
+
+j 时）
 \end_layout
 
 \end_deeper
@@ -29212,14 +29218,9 @@ Leonhard Paul Euler,
 单调性 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 若对所有 
-\begin_inset Formula $n\in Z^{+}$
-\end_inset
-
-,
- 
-\begin_inset Formula $a_{n+1}\geqslant a_{n}$
+\begin_inset Formula $n\in Z^{+},a_{n+1}\geqslant a_{n}$
 \end_inset
 
 ,
@@ -29227,8 +29228,8 @@ Leonhard Paul Euler,
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- 为"递增数列”.
- 把 
+ 为"递增数列”。
+把 
 \begin_inset Formula $\geqslant$
 \end_inset
 
@@ -29241,7 +29242,7 @@ Leonhard Paul Euler,
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 若对所有
 \begin_inset Formula $n\in Z^{+}$
 \end_inset
@@ -29256,28 +29257,27 @@ Leonhard Paul Euler,
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- 为"递减数列”.
- 把 
-\begin_inset Formula \leqslant
-
+ 为"递减数列”。
+把 
+\begin_inset Formula $\leqslant$
 \end_inset
 
-换成 
+ 换成 
 \begin_inset Formula $<$
 \end_inset
 
  ，
 则称为"严格递减数列”。
- 
+
 \end_layout
 
-\begin_layout Standard
-若对所有
+\begin_layout Itemize
+若对所有 
 \begin_inset Formula $n\in Z^{+}$
 \end_inset
 
- ,
- 
+，
+
 \begin_inset Formula $a_{n+1}=a_{n}$
 \end_inset
 
@@ -29286,8 +29286,8 @@ Leonhard Paul Euler,
 \begin_inset Formula $\{a_{n}\}$
 \end_inset
 
- 为"常数数列”.
- 
+ 为"常数数列”。
+
 \end_layout
 
 \begin_layout Paragraph
@@ -31469,7 +31469,11 @@ x_{1}=1,\,x_{2}=-1,\,x_{3}=1,\,x_{4}=-1,\cdots
 \end_layout
 
 \begin_layout Standard
-商（B ≠ 0） 
+商（B 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 0） 
 \end_layout
 
 \begin_layout Standard
@@ -32112,10 +32116,10 @@ R_{f}=f(X)=f(x)|x\in X
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $y=|x|=\left\{ \begin{split}-x, & x<0\\
+\begin_inset Formula $y=|x|=\begin{cases}
+-x, & x<0\\
 x, & x\geqslant0
-\end{split}
-\right.$
+\end{cases}$
 \end_inset
 
 
@@ -32138,11 +32142,11 @@ x, & x\geqslant0
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $y=\text{sgn}x=\left\{ \begin{split}-1, & x<0\\
+\begin_inset Formula $y=\text{sgn}x=\begin{cases}
+-1, & x<0\\
 0 & x=0\\
 1, & x>0
-\end{split}
-\right.$
+\end{cases}$
 \end_inset
 
 
@@ -32913,7 +32917,7 @@ status open
 \begin_inset Formula $y=\frac{1}{x^{2}}\in[a^{2},\frac{1}{a^{2}}]$
 \end_inset
 
- ⇒ 有界
+  有界
 \end_layout
 
 \begin_layout Standard
@@ -33045,7 +33049,8 @@ status open
 \end_inset
 
 ，
-单调性仍然成立 ⇒ 得到：
+单调性仍然成立，
+得到：
 
 \end_layout
 
@@ -33735,11 +33740,12 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 \begin_inset Formula $\cos x$
 \end_inset
 
- 都是周期函数 ⇒ 
+ 都是周期函数 
 \begin_inset Formula $f(x)$
 \end_inset
 
- 也是周期函数 ⇒ ✅选 (C)
+ 也是周期函数 ，
+选 (C)
 \end_layout
 
 \begin_layout Example
@@ -33751,7 +33757,11 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 \begin_inset Formula $f(-x)=|\sin(-x)|\cdot e^{\cos(-x)}=|\sin x|\cdot e^{\cos x}=f(x)$
 \end_inset
 
-⇒ 是偶函数 ⇒ ✅选 (D)
+是偶函数 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 选 (D)
 \end_layout
 
 \begin_layout Example
@@ -33771,7 +33781,7 @@ x_{1}>x_{2}\quad\Longrightarrow\quad\log_{a}x_{1}<\log_{a}x_{2}
 \end_inset
 
 ，
-乘积有限 ⇒ ✅选 (A)
+乘积有限  选 (A)
 \end_layout
 
 \begin_layout Example
@@ -40113,10 +40123,22 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \begin_layout Standard
 当 `x` 变得非常非常大（趋向于无穷）时，
 多项式的值主要由其最高次项决定。
-低次项（如 `x²`,
+低次项（如 `
+\begin_inset Formula $x^{2}$
+\end_inset
+
+`,
  `x`,
- 常数项）的增长速度远不及最高次项（如 `x³`,
- `x⁴`），
+ 常数项）的增长速度远不及最高次项（如 `
+\begin_inset Formula $x^{3}$
+\end_inset
+
+`,
+ `
+\begin_inset Formula $x^{4}$
+\end_inset
+
+`），
 它们的影响可以忽略不计。
 这里的要点是,
  当 x 变大时,
@@ -40525,206 +40547,265 @@ n 是偶的而 m 是奇的。
 
 \end_layout
 
-\begin_layout Standard
-**示例 1：
-包含根式**
+\begin_layout Paragraph
+包含根式
 \end_layout
 
 \begin_layout Standard
-求解 `lim (x→+∞) √(9x⁴ + 5x - 2)`
+求解 
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}\sqrt{9x^{4}+5x-2}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 1.
- **分析根号内部：
-** 在 `9x⁴ + 5x - 2` 中，
-当 `x→+∞` 时，
-`9x⁴` 是主导项。
+ 分析根号内部：
+ 在 
+\begin_inset Formula $9x^{4}+5x-2$
+\end_inset
+
+ 中，
+当 
+\begin_inset Formula $x\rightarrow+\infty$
+\end_inset
+
+时，
+
+\begin_inset Formula $9x^{4}$
+\end_inset
+
+ 是主导项。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **近似替换：
-** 整个表达式的行为类似于 `√(9x⁴)`。
+ 近似替换：
+整个表达式的行为类似于 
+\begin_inset Formula $\sqrt{9x^{4}}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **化简主导项：
-** `√(9x⁴) = √9 * √x⁴ = 3x²`。
+ 化简主导项：
+
+\begin_inset Formula $\sqrt{9x^{4}}=\sqrt{9}\times\sqrt{x^{4}}=3x^{2}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 4.
- **求主导项的极限：
-** `lim (x→+∞) 3x² = +∞`。
+ 求主导项的极限：
+
+\begin_inset Formula $\underset{x\rightarrow+\infty}{\lim}3x^{2}=+\infty$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-**示例 2：
-`∞ - ∞` 型不定式（重要陷阱！
-）**
+\begin_layout Paragraph
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+型不定式
 \end_layout
 
 \begin_layout Standard
 当主导项相减时，
 不能简单地认为它们会抵消。
-这通常是 `∞ - ∞` 型不定式，
-需要使用**共轭表达式**来解决。
+这通常是 
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+型不定式，
+需要使用共轭表达式来解决。
 
 \end_layout
 
 \begin_layout Standard
-求解 `lim (x→∞) (√(x² + 4x) - x)`
+求解
+\begin_inset Formula $\underset{x\rightarrow\infty}{\lim}\sqrt{x^{2}+4x}-x$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
 1.
- **直接分析：
-** `√(x² + 4x)` 的行为像 `√x² = x`。
-所以这是 `x - x` 的形式，
-即 `∞ - ∞` 不定式。
-**不能直接说结果是 0！
-**
+ 直接分析：
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sqrt{x^{2}+4x}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 的行为像
+\begin_inset Formula $\sqrt{x^{2}}=x$
+\end_inset
+
+。
+所以这是 
+\begin_inset Formula $x-x$
+\end_inset
+
+的形式，
+即 
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+ 不定式。
+不能直接说结果是 0。
+
 \end_layout
 
 \begin_layout Standard
 2.
- **使用共轭表达式：
-**
+ 使用共轭表达式：
+
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{(
-\backslash
-sqrt{x^2+4x}-x)(
-\backslash
-sqrt{x^2+4x}+x)}{(
-\backslash
-sqrt{x^2+4x}+x)} $$
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{(\sqrt{x^{2}+4x}-x)(\sqrt{x^{2}+4x}+x)}{(\sqrt{x^{2}+4x}+x)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 3.
- **简化分子：
-**
+ 简化分子：
+
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{(x^2+4x) - x^2}{
-\backslash
-sqrt{x^2+4x}+x} = 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{4x}{
-\backslash
-sqrt{x^2+4x}+x} $$
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{(x^{2}+4x)-x^{2}}{\sqrt{x^{2}+4x}+x}=\lim_{x\rightarrow\infty}\frac{4x}{\sqrt{x^{2}+4x}+x}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 4.
- **处理 `∞/∞`：
-** 现在变成了有理函数的极限问题。
-分子分母同除以最高次幂 `x`。
+ 处理 
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+：
+ 现在变成了有理函数的极限问题。
+分子分母同除以最高次幂
+\begin_inset Formula $x$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{
-\backslash
-frac{4x}{x}}{
-\backslash
-frac{
-\backslash
-sqrt{x^2+4x}}{x}+
-\backslash
-frac{x}{x}} $$
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{\frac{4x}{x}}{\frac{\sqrt{x^{2}+4x}}{x}+\frac{x}{x}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 注意，
-当 `x > 0` 时,
- `x = √x²`，
+当 
+\begin_inset Formula $x>0$
+\end_inset
+
+时,
+ 
+\begin_inset Formula $x=\sqrt{x^{2}}$
+\end_inset
+
+，
 所以
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{4}{
-\backslash
-sqrt{
-\backslash
-frac{x^2+4x}{x^2}}+1} = 
-\backslash
-lim_{x
-\backslash
-rightarrow
-\backslash
-infty} 
-\backslash
-frac{4}{
-\backslash
-sqrt{1+
-\backslash
-frac{4}{x}}+1} $$
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow\infty}\frac{4}{\sqrt{\frac{x^{2}+4x}{x^{2}}}+1}=\lim_{x\rightarrow\infty}\frac{4}{\sqrt{1+\frac{4}{x}}+1}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 5.
- **代入求值：
-** 当 `x→∞` 时,
- `4/x → 0`。
+ 代入求值：
+当
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset
+
+ 时,
+ 
+\begin_inset Formula $\frac{4}{x}\rightarrow0$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-frac{4}{
-\backslash
-sqrt{1+0}+1} = 
-\backslash
-frac{4}{1+1} = 2 $$
+\begin_inset Formula 
+\[
+\frac{4}{\sqrt{1+0}+1}=\frac{4}{1+1}=2
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -40737,32 +40818,42 @@ frac{4}{1+1} = 2 $$
 \end_layout
 
 \begin_layout Standard
-$$ |u| = 
-\backslash
-begin{cases} u,
- & 
-\backslash
-text{if } u 
-\backslash
-ge 0 
-\backslash
+\begin_inset Formula 
+\[
+|u|=\begin{cases}
+u, & \text{if }u\ge0\\
+-u, & \text{if }u<0
+\end{cases}
+\]
 
-\backslash
- -u,
- & 
-\backslash
-text{if } u < 0 
-\backslash
-end{cases} $$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 这意味着，
-函数 `f(x) = |u(x)|` 的具体形式取决于 `u(x)` 的正负。
+函数 
+\begin_inset Formula $f(x)=|u(x)|$
+\end_inset
+
+ 的具体形式取决于
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 的正负。
 因此，
 在求极限时，
-我们必须考虑当 `x` 从左侧和右侧趋近于某一点 `a` 时，
-`u(x)` 的符号。
+我们必须考虑当 `x` 从左侧和右侧趋近于某一点
+\begin_inset Formula $a$
+\end_inset
+
+时，
+
+\begin_inset Formula $u(x)$
+\end_inset
+
+的符号。
 
 \end_layout
 
@@ -40776,34 +40867,59 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-当求解 `lim (x→a) f(|u(x)|)` 时，
+当求解
+\begin_inset Formula $\underset{x\rightarrow a}{\lim}f(|u(x)|)$
+\end_inset
+
+ 时，
 遵循以下步骤：
 
 \end_layout
 
 \begin_layout Standard
 1.
- **找到临界点 (Critical Point)：
-**
+ 找到临界点 (Critical Point)：
+
 \end_layout
 
 \begin_layout Standard
 首先，
-找到使绝对值内部 `u(x)` 等于 0 的点。
+找到使绝对值内部
+\begin_inset Formula $u(x)$
+\end_inset
+
+等于
+\begin_inset Formula $0$
+\end_inset
+
+ 的点。
 这些点是函数行为可能发生改变的地方。
-令 `u(x) = 0`，
-解出 `x`。
+令 
+\begin_inset Formula $u(x)=0$
+\end_inset
+
+，
+解出 
+\begin_inset Formula $x$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **分别计算左极限和右极限：
-**
+ 分别计算左极限和右极限：
+
 \end_layout
 
 \begin_layout Standard
-* **求右极限 (x → a⁺):** 假设 `x` 从比 `a` 稍大的值趋近 `a`。
+求右极限 (
+\begin_inset Formula $x\rightarrow a^{+}$
+\end_inset
+
+):
+ 假设 `x` 从比 `a` 稍大的值趋近 `a`。
 判断此时 `u(x)` 的符号。
 
 \end_layout
@@ -40828,7 +40944,11 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-* **求左极限 (x → a⁻):** 假设 `x` 从比 `a` 稍小的值趋近 `a`。
+* **求左极限 (
+\begin_inset Formula $x\rightarrow a^{-}$
+\end_inset
+
+):** 假设 `x` 从比 `a` 稍小的值趋近 `a`。
 用同样的方法判断 `u(x)` 的符号，
 并替换 `|u(x)|`。
 然后计算极限。
@@ -40838,7 +40958,7 @@ end{cases} $$
 \begin_layout Standard
 3.
  **比较左右极限：
-**
+
 \end_layout
 
 \begin_layout Standard
@@ -40849,7 +40969,11 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-* 如果**左极限 ≠ 右极限**，
+* 如果**左极限 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 右极限**，
 那么原极限**不存在 (Does Not Exist,
  DNE)**。
 
@@ -40869,13 +40993,21 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-求解 `lim (x→0) |x| / x`
+求解
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{|x|}{x}$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
 1.
  **临界点：
-** `|x|` 的临界点是 `x = 0`。
+** `
+\begin_inset Formula $|x|$
+\end_inset
+
+` 的临界点是 `x = 0`。
 我们正在这个点上求极限。
 
 \end_layout
@@ -40887,7 +41019,11 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-* **右极限 (x → 0⁺):**
+* **右极限 (
+\begin_inset Formula $x\rightarrow0^{+}$
+\end_inset
+
+):**
 \end_layout
 
 \begin_layout Standard
@@ -40903,27 +41039,22 @@ end{cases} $$
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-rightarrow 0^+} 
-\backslash
-frac{|x|}{x} = 
-\backslash
-lim_{x
-\backslash
-rightarrow 0^+} 
-\backslash
-frac{x}{x} = 
-\backslash
-lim_{x
-\backslash
-rightarrow 0^+} 1 = 1 $$
+\begin_inset Formula 
+\[
+\lim_{x\rightarrow0^{+}}\frac{|x|}{x}=\lim_{x\rightarrow0^{+}}\frac{x}{x}=\lim_{x\rightarrow0^{+}}1=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **左极限 (x → 0⁻):**
+* **左极限 (
+\begin_inset Formula $x\rightarrow0^{-}$
+\end_inset
+
+):**
 \end_layout
 
 \begin_layout Standard
@@ -40956,13 +41087,21 @@ rightarrow 0^+} 1 = 1 $$
 \end_layout
 
 \begin_layout Standard
-右极限 (1) ≠ 左极限 (-1)。
+右极限 (1) 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 左极限 (-1)。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-极限 `lim (x→0) |x| / x` **不存在**。
+极限 
+\begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{|x|}{x}$
+\end_inset
+
+ **不存在**。
 
 \end_layout
 
@@ -40980,13 +41119,25 @@ rightarrow 0^+} 1 = 1 $$
 \end_layout
 
 \begin_layout Standard
-求解 `lim (x→5) |x - 2| / (x + 1)`
+求解 
+\begin_inset Formula $\underset{x\rightarrow5}{\lim}\frac{|x-2|}{x+1}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 1.
  **临界点：
-** `|x - 2|` 的临界点是 `x = 2`。
+** `
+\begin_inset Formula $|x-2|$
+\end_inset
+
+` 的临界点是 `
+\begin_inset Formula $x=2$
+\end_inset
+
+`。
 
 \end_layout
 
@@ -41035,13 +41186,14 @@ rightarrow 0^+} 1 = 1 $$
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-frac{5-2}{5+1} = 
-\backslash
-frac{3}{6} = 
-\backslash
-frac{1}{2} $$
+\begin_inset Formula 
+\[
+\frac{5-2}{5+1}=\frac{3}{6}=\frac{1}{2}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -41645,7 +41797,10 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-✅
+\begin_inset Formula $\surd$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -41654,7 +41809,10 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-✅
+\begin_inset Formula $\surd$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -41689,7 +41847,10 @@ x, & x\neq0\\
 \begin_inset Text
 
 \begin_layout Plain Layout
-✅
+\begin_inset Formula $\surd$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -41698,7 +41859,10 @@ x, & x\neq0\\
 \begin_inset Text
 
 \begin_layout Plain Layout
-❌
+\begin_inset Formula $\times$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -41733,7 +41897,10 @@ x, & x\neq0\\
 \begin_inset Text
 
 \begin_layout Plain Layout
-❌（趋于无穷）
+\begin_inset Formula $\times$
+\end_inset
+
+（趋于无穷）
 \end_layout
 
 \end_inset
@@ -41792,7 +41959,10 @@ x, & x\neq0\\
 \begin_inset Text
 
 \begin_layout Plain Layout
-❌（震荡）
+\begin_inset Formula $\times$
+\end_inset
+
+（震荡）
 \end_layout
 
 \end_inset
@@ -42629,7 +42799,7 @@ x^{2}+1 & x<1\\
 值所组成的点集为这个多元函数的自然定义域.
  因而,
  对这类函数,
- 它的定义域不再特別标出.
+ 它的定义域不再特别标出.
 \end_layout
 
 \begin_layout Standard
@@ -44226,7 +44396,7 @@ delta$ 的思想来**严格证明魏尔斯特拉斯函数处处连续但处处�
 \end_layout
 
 \begin_layout Standard
-## ✦ 魏尔斯特拉斯函数定义：
+## 魏尔斯特拉斯函数定义：
 
 \end_layout
 
@@ -46081,7 +46251,11 @@ f'(0)=\lim_{\Delta x\rightarrow0}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim_{h\right
 \end_layout
 
 \begin_layout Standard
-因为 左导数 (-1) ≠ 右导数 (1)，
+因为 左导数 (-1) 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 右导数 (1)，
 所以导数的极限不存在。
 因此，
 
@@ -47704,7 +47878,7 @@ f(x,0)=\ln x^{2}=2\ln x
 \end_layout
 
 \begin_layout Standard
-有一类函数比较有趣,当函数的两个自变量相互替換后函数形式不变,此时我们称函数关于这两个自变量具有自对称性,如函数
+有一类函数比较有趣,当函数的两个自变量相互替换后函数形式不变,此时我们称函数关于这两个自变量具有自对称性,如函数
 \begin_inset Formula $z=\sin(xy)$
 \end_inset
 
@@ -51962,7 +52136,7 @@ y''',y^{(4)},\cdots,y^{(n)}
 \begin_inset Formula $x_{0}$
 \end_inset
 
-不是函数的驻点,那么它ー定不是函数的可导的极值点.另外,我们还发现不可导的点也可能成为极值点.
+不是函数的驻点,那么它一定不是函数的可导的极值点.另外,我们还发现不可导的点也可能成为极值点.
  例如,
 \begin_inset Formula $|x|$
 \end_inset
@@ -52449,13 +52623,21 @@ f_{x}^{'}(x_{0},y_{0})=0,f_{y}^{'}(x_{0},y_{0})=0
 
 \begin_layout Standard
 与一元函数类似,我们把满足方程组
-\begin_inset Formula $\left\{ \begin{split}f_{x}^{'}(x_{0},y_{0})=0\\
-f_{y}^{'}(x_{0},y_{0})=0
-\end{split}
-\right\} $
+\begin_inset Formula $\begin{cases}
+f_{x}^{'}(x_{0},y_{0})= & 0\\
+f_{y}^{'}(x_{0},y_{0})= & 0
+\end{cases}$
 \end_inset
 
-的点(x,y)称为二元函数f(x,y)的
+的点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+称为二元函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+的
 \series bold
 驻点
 \series default
@@ -52569,10 +52751,10 @@ f_{x}^{'}(x_{0},y_{0})=0,f_{y}^{'}(x_{0},y_{0})=0
 
 \begin_layout Enumerate
 解方程组
-\begin_inset Formula $\left\{ \begin{split}f_{x}^{'}(x_{0},y_{0})=0\\
-f_{y}^{'}(x_{0},y_{0})=0
-\end{split}
-\right\} $
+\begin_inset Formula $\begin{cases}
+f_{x}^{'}(x_{0},y_{0})= & 0\\
+f_{y}^{'}(x_{0},y_{0})= & 0
+\end{cases}$
 \end_inset
 
 ,
@@ -61418,7 +61600,7 @@ status open
 \end_inset
 
 等,
- 往往用下面的分部积分法解決.
+ 往往用下面的分部积分法解决。
  
 \end_layout
 
@@ -64805,7 +64987,14 @@ x^{2}, & 0\leq x\leq1,\\
 \end_layout
 
 \begin_layout Example
-\begin_inset Formula $\int_{0}^{+\infty}e^{-x}dx=\sideset{\underset{b\rightarrow\infty}{\lim}}{e^{-x}dx}\int_{0}^{b}=\sideset{\underset{b\rightarrow\infty}{\lim}}{e^{-x}|_{0}^{b}}-=\underset{b\rightarrow\infty}{\lim}(-\frac{1}{e^{b}}+1)=1$
+\begin_inset Formula $\int_{0}^{+\infty}e^{-x}dx=\sideset{\underset{b\rightarrow\infty}{\lim}}{e^{-x}dx}\int_{0}^{b}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\underset{b\rightarrow\infty}{\lim}-e^{x}|_{0}^{b}=\underset{b\rightarrow\infty}{\lim}(-\frac{1}{e^{b}}+1)=1$
 \end_inset
 
 
@@ -71844,7 +72033,11 @@ u(n)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-表示一个时刻的激励（类似于 Dirac δ 函数的离散版本）。
+表示一个时刻的激励（类似于 Dirac 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 函数的离散版本）。
 
 \end_layout
 
@@ -73678,12 +73871,16 @@ L=\int_{a}^{b}\sqrt{1+\left(\frac{dy}{dx}\right)^{2}}\,dx
 \end_layout
 
 \begin_layout Standard
-## 📐 光滑曲线的弧长公式
+光滑曲线的弧长公式
 \end_layout
 
 \begin_layout Standard
 ### 一、直角坐标系中的曲线：
-$y = f(x)$
+
+\begin_inset Formula $y=f(x)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -73840,7 +74037,7 @@ $$
 \end_layout
 
 \begin_layout Standard
-## 📘 示例：
+## 示例：
 求曲线 $y = 
 \backslash
 frac{1}{3}x^{3/2}$ 在区间 $x 
@@ -86424,7 +86621,11 @@ I\approx\int_{1}^{\infty}\frac{1}{x}dx
 
 \begin_layout Standard
 综上讨论,
- 对于任意项级数 ∑，
+ 对于任意项级数 
+\begin_inset Formula $\sum$
+\end_inset
+
+，
 通常可按照以下步骤判别其敛散性:
 \end_layout
 
@@ -89569,7 +89770,11 @@ f(x)=f(x_{0})+\frac{f'(x_{0})}{1!}(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^{2}+\
 \end_layout
 
 \begin_layout Subsubsection
-周期为 2π 的函数展开为傅里叶级数
+周期为 
+\begin_inset Formula $2\pi$
+\end_inset
+
+ 的函数展开为傅里叶级数
 \end_layout
 
 \begin_layout Standard
@@ -100404,7 +100609,7 @@ P(X=x)=\frac{1}{n}
 \end_layout
 
 \begin_layout Standard
-### 🌟 2.
+ 2.
  连续均匀分布（Continuous Uniform Distribution）
 \end_layout
 
@@ -101865,7 +102070,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_layout
 
 \begin_layout Standard
-## 📐 定义公式：
+## 定义公式：
 
 \end_layout
 
@@ -101930,7 +102135,7 @@ P(X=x)=\frac{{\binom{K}{x}\binom{N-K}{n-x}}}{\binom{N}{n}}
 \end_layout
 
 \begin_layout Standard
-## 📊 期望和方差：
+## 期望和方差：
 
 \end_layout
 
@@ -102019,7 +102224,7 @@ Var(X)=n\cdot\frac{K}{N}\cdot\left(1-\frac{K}{N}\right)\cdot\frac{N-n}{N-1}
 \end_layout
 
 \begin_layout Standard
-| 是否放回 | ❌ 不放回 | ✅ 放回（或每次独立） |
+| 是否放回 | 不放回 | 放回（或每次独立） |
 \end_layout
 
 \begin_layout Standard
@@ -102068,7 +102273,7 @@ Var(X)=n\cdot\frac{K}{N}\cdot\left(1-\frac{K}{N}\right)\cdot\frac{N-n}{N-1}
 \end_layout
 
 \begin_layout Standard
-## 🧠 数学上的近似：
+##  数学上的近似：
 
 \end_layout
 
@@ -102183,7 +102388,7 @@ X\sim\text{Binomial}(10,\frac{500}{10000}=0.05)\Rightarrow P(X=2)=\binom{10}{2}\
 \end_layout
 
 \begin_layout Standard
-## 🔍 什么时候不能近似？
+## 什么时候不能近似？
 
 \end_layout
 
@@ -102219,7 +102424,7 @@ X\sim\text{Binomial}(10,\frac{500}{10000}=0.05)\Rightarrow P(X=2)=\binom{10}{2}\
 \end_layout
 
 \begin_layout Standard
-## ✅ 和二项分布的对比总结：
+##  和二项分布的对比总结：
 
 \end_layout
 
@@ -104127,11 +104332,11 @@ f(x)=\left\{ \begin{split}\frac{1}{b-a} & a<x<b\\
 
 \begin_layout Itemize
 分布函数
-\begin_inset Formula $f(x)=\left\{ \begin{split}0 & x<a\\
+\begin_inset Formula $f(x)=\begin{cases}
+0 & x<a\\
 \frac{x-a}{b-a} & a\leqslant x<b\\
 0 & \text{b}\leqslant x
-\end{split}
-\right.$
+\end{cases}$
 \end_inset
 
 
@@ -104256,7 +104461,7 @@ f_{Y}(y)=f_{X}\left(\frac{y-1}{3}\right)\cdot\left|\frac{1}{3}\right|=\frac{1}{4
 \end_layout
 
 \begin_layout Example
-🔹 结论：
+结论：
  
 \end_layout
 
@@ -104468,7 +104673,7 @@ f_{Y}(y)=\begin{cases}
 \end_layout
 
 \begin_layout Example
-🔹 这就是利用“均匀分布的线性变换仍为均匀分布”的事实。
+ 这就是利用“均匀分布的线性变换仍为均匀分布”的事实。
 
 \end_layout
 
@@ -104634,11 +104839,7 @@ P(X>s+t\mid X>s)=\frac{P(X>s+t\ \text{且}\ X>s)}{P(X>s)}
 \begin_layout Example
 注意：
 
-\begin_inset Formula $X>s+t$
-\end_inset
-
- ⊂ 
-\begin_inset Formula $X>s$
+\begin_inset Formula $X>s+t\subset X>s$
 \end_inset
 
 ，
@@ -106360,7 +106561,7 @@ f(x,y)=\frac{1}{2\pi\sigma_{X}\sigma_{Y}\sqrt{1-\rho^{2}}}e^{-\frac{1}{2(1-\rho^
 \end_layout
 
 \begin_layout Standard
-> 🔸 当 
+当 
 \begin_inset Formula $\rho=0$
 \end_inset
 
@@ -106374,12 +106575,12 @@ X 与 Y 相互独立。
 \end_layout
 
 \begin_layout Standard
-## 🎯 三、性质总结
+三、性质总结
 \end_layout
 
 \begin_layout Standard
 1.
- **边缘分布**：
+ **边缘分布：
  
 \end_layout
 
@@ -106430,7 +106631,7 @@ mu_Y)
 \end_layout
 
 \begin_layout Standard
-## 📊 四、图形示例（可视化）
+四、图形示例（可视化）
 \end_layout
 
 \begin_layout Standard
@@ -107366,13 +107567,14 @@ f(x,y)=\left\{ \begin{split}\frac{1}{\pi R^{2}},x^{2}+y^{2}\leqslant R^{2}\\
 \end_inset
 
 具有概率密度
-\begin_inset Formula $f(x,y)=\left\{ \begin{split}c,(x,y)\in G\\
-0,\text{其\text{它}}
-\end{split}
-\right.$
+\begin_inset Formula $f(x,y)=\begin{cases}
+c & ,(x,y)\in G\\
+0 & ,\text{其\text{它}}
+\end{cases}$
 \end_inset
 
-,求常数
+，
+求常数
 \begin_inset Formula $c$
 \end_inset
 
@@ -107408,13 +107610,14 @@ f(x,y)=\left\{ \begin{split}\frac{1}{\pi R^{2}},x^{2}+y^{2}\leqslant R^{2}\\
 \end_inset
 
 具有概率密度
-\begin_inset Formula $f(x,y)=\left\{ \begin{split}ce^{-(x+y)},x>0,y>0\\
-0,\text{其\text{它}}
-\end{split}
-\right.$
+\begin_inset Formula $f(x,y)=\begin{cases}
+ce^{-(x+y)} & ,x>0,y>0\\
+0 & ,\text{其它}
+\end{cases}$
 \end_inset
 
-,求常数
+，
+求常数
 \begin_inset Formula $c$
 \end_inset
 
@@ -107627,7 +107830,7 @@ F_{X,Y}(x,y)=F_{X}(x)\cdot F_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 💡 二、离散型情形
+## 二、离散型情形
 \end_layout
 
 \begin_layout Standard
@@ -107666,7 +107869,7 @@ P(X=x_{i},Y=y_{j})=P(X=x_{i})\cdot P(Y=y_{j})
 \end_layout
 
 \begin_layout Standard
-## 💡 三、连续型情形
+## 三、连续型情形
 \end_layout
 
 \begin_layout Standard
@@ -107713,7 +107916,7 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 🔁 四、边缘分布与独立性关系
+## 四、边缘分布与独立性关系
 \end_layout
 
 \begin_layout Standard
@@ -107733,7 +107936,7 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-### 🎲 例子（离散）
+### 例子（离散）
 \end_layout
 
 \begin_layout Standard
@@ -107801,15 +108004,23 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 🔍 六、与“不相关”的区别
+## 六、与“不相关”的区别
 \end_layout
 
 \begin_layout Standard
-- **独立 ⇒ 不相关**（协方差为 0）
+- **独立
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 不相关**（协方差为 0）
 \end_layout
 
 \begin_layout Standard
-- 但 **不相关 ≠ 独立**，
+- 但 **不相关 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 独立**，
 只有当两个变量是正态分布时，
 协方差为 0 才意味着独立。
 
@@ -108016,7 +108227,11 @@ P(A\cap B|C)=P(A|C)P(B|C)
 
 \begin_layout Standard
 常见误解：
-独立 ≠ 互斥
+独立 
+\begin_inset Formula $\neq$
+\end_inset
+
+ 互斥
 \end_layout
 
 \begin_layout Standard
@@ -109117,7 +109332,11 @@ P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
 \end_inset
 
 ，
-独立 ⇒ 
+独立 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
 \begin_inset Formula $X_{1}+X_{2}\sim B(n_{1}+n_{2},p)$
 \end_inset
 
@@ -109335,18 +109554,6 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### ✅ 例 1
-\end_layout
-
-\begin_layout Standard
 **题目**：
  
 \end_layout
@@ -109405,14 +109612,6 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### ✅ 例 2
 \end_layout
 
 \begin_layout Standard
@@ -109888,12 +110087,12 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-## ✅ 例题 1：
+例题 1：
 离散型随机变量的期望计算
 \end_layout
 
 \begin_layout Standard
-### 🧾 题目 
+题目 
 \end_layout
 
 \begin_layout Standard
@@ -109943,11 +110142,7 @@ mathbb{E}[2X - 1]
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### ✅ 解：
+解：
 
 \end_layout
 
@@ -110002,16 +110197,8 @@ mathbb{E}[2X - 1]
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-## ✅ 例题 2：
+例题 2：
 连续型均匀分布的期望计算（含函数变换）
-\end_layout
-
-\begin_layout Standard
-### 🧾 题目 
 \end_layout
 
 \begin_layout Standard
@@ -110055,11 +110242,7 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### ✅ 解：
+解：
 
 \end_layout
 
@@ -110213,7 +110396,7 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-## 🎯 三、特别常用的例子
+## 三、特别常用的例子
 \end_layout
 
 \begin_layout Standard
@@ -118711,7 +118894,7 @@ LU分解法
 \end_layout
 
 \begin_layout Example
-范徳蒙德行列式(写法可以转置)
+范德蒙德行列式(写法可以转置)
 \end_layout
 
 \begin_layout Standard
@@ -120288,9 +120471,17 @@ U 的行向量是在 Cn 上的一组标准正交基
 
 \begin_layout Standard
 给定任意的 n ，
-所有 n 阶幺正矩阵的集合 G 与矩阵乘法“⋅”，
+所有 n 阶幺正矩阵的集合 G 与矩阵乘法“
+\begin_inset Formula $\cdot$
+\end_inset
+
+”，
 都能构成一个群 (G,
- ⋅ )。
+ 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ )。
 
 \end_layout
 
@@ -124725,7 +124916,7 @@ k_{1}-2k_{3} & =-4
 
 ，
 则这个向量组可以写为 
-\begin_inset Formula $\overrightarrow{0}=0⋅\overrightarrow{v_{1}}+0⋅\overrightarrow{v_{2}}+…+k\overrightarrow{0}$
+\begin_inset Formula $\overrightarrow{0}=0\cdot\overrightarrow{v_{1}}+0\cdot\overrightarrow{v_{2}}+…+k\overrightarrow{0}$
 \end_inset
 
 ，
@@ -126548,11 +126739,11 @@ z & z' & z''
 \end_inset
 
 、 
-\begin_inset Formula $X′$
+\begin_inset Formula $X'$
 \end_inset
 
  和 
-\begin_inset Formula $X″$
+\begin_inset Formula $X''$
 \end_inset
 
  三个向量形成的平行六面体的有向体积，
@@ -129356,7 +129547,11 @@ c_{1}(\lambda_{1}-\lambda_{m})\alpha_{1}+c_{2}(\lambda_{2}-\lambda_{m})\alpha_{2
 \begin_inset Formula $A^{-1}$
 \end_inset
 
-的特征值是 𝐴 的特征值的倒数，
+的特征值是 
+\begin_inset Formula $A$
+\end_inset
+
+ 的特征值的倒数，
 
 \family roman
 \series medium
@@ -132284,17 +132479,17 @@ n 阶方阵有 n 个互异的特征值，
 
 \begin_layout Standard
 一个点 
-\begin_inset Formula $`(x,y)`$
+\begin_inset Formula $(x,y)$
 \end_inset
 
  或 
-\begin_inset Formula $`(x,y,z)`$
+\begin_inset Formula $(x,y,z)$
 \end_inset
 
  可以用一个列向量表示。
 例如，
 二维点 
-\begin_inset Formula $`P=[x,y]ᵀ`$
+\begin_inset Formula $P=[x,y]^{T}$
 \end_inset
 
 。
@@ -132303,7 +132498,7 @@ n 阶方阵有 n 个互异的特征值，
 
 \begin_layout Standard
 一个线性变换可以将这个点映射到新的点 
-\begin_inset Formula $`P'=[x',y']ᵀ`$
+\begin_inset Formula $P'=[x',y']^{T}$
 \end_inset
 
 ，
@@ -132312,7 +132507,7 @@ n 阶方阵有 n 个互异的特征值，
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $`P'=M*P`$
+\begin_inset Formula $P'=M*P$
 \end_inset
 
 
