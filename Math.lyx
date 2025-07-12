@@ -76123,37 +76123,23 @@ p）被量化为物体的质量和速度的乘积（
 \begin_layout Standard
 当物体的运动状态（动量）发生变化，
 则表示物体受力作用，
-而作用力大小就等于动量 P {
-\backslash
-displaystyle 
-\backslash
-mathbf {P} }的时变率：
- F = d P d t {
-\backslash
-displaystyle 
-\backslash
-mathbf {F} ={
-\backslash
-frac {d
-\backslash
-mathbf {P} }{dt}}}
+而作用力大小就等于动量 P 的时变率：
+ 
+\begin_inset Formula ${\displaystyle \mathbf{F}=\frac{d\mathbf{P}}{dt}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 当物体的转动状态发生改变时，
 表示物体受到力矩作用，
 而力矩就等于角动量的时变率：
- τ = d L d t {
-\backslash
-displaystyle {
-\backslash
-boldsymbol {
-\backslash
-tau }}={
-\backslash
-frac {d
-\backslash
-mathbf {L} }{dt}}}
+ 
+\begin_inset Formula ${\displaystyle \boldsymbol{\tau}=\frac{d\mathbf{L}}{dt}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -78389,9 +78375,98 @@ dA=\frac{1}{2}\cdot r\cdot(rd\theta)=\frac{1}{2}r^{2}d\theta
 \end_inset
 
 
+\begin_inset Formula 
+\[
+=\frac{1}{2}r^{2}(\dot{\theta}\,dt)=\frac{1}{2}r(r\dot{\theta})\,dt
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+有了无限小面积 `dA` 与无限小时间 `dt` 的关系，
+就可以通过积分求出有限时间内的总面积 
+\begin_inset Formula $\Delta A$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta A=\int_{t_{1}}^{t_{2}}dA=\int_{t_{1}}^{t_{2}}\frac{1}{2}r(r\dot{\theta})\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+引入角动量，
+
+\begin_inset Formula $L=mr^{2}\dot{\theta}$
+\end_inset
+
+,得
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta A=\int_{t_{1}}^{t_{2}}\frac{L}{2m}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为我们已经证明了在中心力场中角动量 
+\begin_inset Formula $L$
+\end_inset
+
+ 是一个常数（质量 
+\begin_inset Formula $m$
+\end_inset
+
+ 也是常数），
+
+\begin_inset Formula 
+\[
+\Delta A=\frac{L}{2m}\int_{t_{1}}^{t_{2}}1\,dt=\frac{L}{2m}(t_{2}-t_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+行星太阳连线扫过的区域面积相依于间隔时间 
+\begin_inset Formula ${\displaystyle t_{2}-t_{1}}$
+\end_inset
+
+ 。
+所以，
+开普勒第二定律是正确的。
+
+\end_layout
+
+\begin_layout Standard
+或
+\begin_inset Formula 
+\[
+dA=\frac{1}{2}\cdot r\cdot(rd\theta)=\frac{1}{2}r^{2}d\theta
+\]
+
+\end_inset
+
 两边同时除以 
 \begin_inset Formula $dt$
 \end_inset
