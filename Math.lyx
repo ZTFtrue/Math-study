@@ -77337,11 +77337,71 @@ status collapsed
 
 \begin_layout Standard
 所以，
- 位置向量可表示为：
+ 
+\series bold
+位置向量可表示为
+\series default
+：
 
 \begin_inset Formula $\overrightarrow{\boldsymbol{r}}=r\hat{\boldsymbol{r}}=r\cos\theta\boldsymbol{i}+r\sin\theta\boldsymbol{j}$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r\hat{\boldsymbol{r}}$
+\end_inset
+
+ 的意思是：
+一个方向为 
+\begin_inset Formula $\hat{\boldsymbol{r}}$
+\end_inset
+
+，
+长度为 
+\begin_inset Formula $r$
+\end_inset
+
+ 的矢量。
+
+\end_layout
+
+\begin_layout Standard
+这个表达式的本质是矢量分解。
+它将位置矢量 
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}$
+\end_inset
+
+ 分解为两个相互垂直的分量：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r\cos\theta$
+\end_inset
+
+:
+ 这是位置矢量
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}$
+\end_inset
+
+ 在 x 轴上的投影长度。
+我们通常称之为 x 坐标。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r\sin\theta$
+\end_inset
+
+:
+ 这是位置矢量 
+\begin_inset Formula $\overrightarrow{\boldsymbol{r}}$
+\end_inset
+
+ 在 y 轴上的投影长度。
+我们通常称之为 y 坐标。
 
 \end_layout
 
