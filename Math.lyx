@@ -92592,7 +92592,41 @@ f_{n}=\frac{1}{\sqrt{5}}\times(\frac{1}{\phi^{n}}-\frac{1}{\psi^{n}})
 
 \begin_layout Example
 由于
-\begin_inset Formula $黄金分割比的倒数=\frac{\sqrt{5}-1}{2}=\text{黄金分割比}-1$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+黄金分割比的倒数
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+，
+
+\begin_inset Formula $\frac{1}{\phi}=-\psi$
+\end_inset
+
+，
+
+\begin_inset Formula $\frac{1}{\psi}=-\phi$
 \end_inset
 
 
