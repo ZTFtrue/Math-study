@@ -95182,131 +95182,118 @@ L(z)=\sum_{n=1}^{\infty}z^{n!}=z^{1}+z^{2}+z^{6}+z^{24}+z^{120}+\cdots
 \end_layout
 
 \end_deeper
-\begin_layout Paragraph
+\begin_layout Section
 黎曼Zeta函数
 \end_layout
 
 \begin_layout Standard
-好的，
-我们来深入探讨一下在数学中占据着核心地位的**黎曼Zeta函数 (Riemann Zeta Function)**，
-通常用希腊字母 $
-\backslash
-zeta$ (zeta) 表示。
+黎曼Zeta函数 (Riemann Zeta Function)，
+通常用希腊字母
+\begin_inset Formula $\zeta$
+\end_inset
+
+ (zeta) 表示。
 
 \end_layout
 
 \begin_layout Standard
-这是一个充满神秘、连接了数论中许多深刻问题的函数，
-其中最著名的就是悬赏百万美元的“黎曼猜想”。
+黎曼Zeta函数最初是为复数 
+\begin_inset Formula $s$
+\end_inset
 
-\end_layout
+ 定义的，
+其定义域要求 
+\begin_inset Formula $s$
+\end_inset
 
-\begin_layout Standard
-### 1.
- Zeta函数的定义（“化石”阶段）
-\end_layout
+ 的实部 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
 
-\begin_layout Standard
-黎曼Zeta函数最初是为复数 $s$ 定义的，
-其定义域要求 $s$ 的实部 $
-\backslash
-text{Re}(s) > 1$。
+。
 在这个区域内，
 它的定义是一个无穷级数，
-即**狄利克雷级数 (Dirichlet series)**：
+即狄利克雷级数 (Dirichlet series)：
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-zeta(s) = 
-\backslash
-sum_{n=1}^{
-\backslash
-infty} 
-\backslash
-frac{1}{n^s} = 
-\backslash
-frac{1}{1^s} + 
-\backslash
-frac{1}{2^s} + 
-\backslash
-frac{1}{3^s} + 
-\backslash
-frac{1}{4^s} + 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}=\frac{1}{1^{s}}+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\frac{1}{4^{s}}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-**为什么要求 $
-\backslash
-text{Re}(s) > 1$？
-**
-\end_layout
+为什么要求
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
 
-\begin_layout Standard
+？
 这是为了保证级数收敛。
 
 \end_layout
 
 \begin_layout Standard
-* 如果 $s$ 是一个大于1的实数，
-比如 $s=2$，
-级数是 $
-\backslash
-sum 
-\backslash
-frac{1}{n^2} = 1 + 
-\backslash
-frac{1}{4} + 
-\backslash
-frac{1}{9} + 
-\backslash
-cdots$，
-这是一个收敛的p-级数（著名的巴塞尔问题，
-其和为 $
-\backslash
-pi^2/6$）。
+如果 
+\begin_inset Formula $s$
+\end_inset
+
+ 是一个大于1的实数，
+比如 
+\begin_inset Formula $s=2$
+\end_inset
+
+，
+级数是 
+\begin_inset Formula $\sum\frac{1}{n^{2}}=1+\frac{1}{4}+\frac{1}{9}+\cdots$
+\end_inset
+
+，
+这是一个收敛的
+\begin_inset Formula $p-$
+\end_inset
+
+级数（著名的巴塞尔问题，
+其和为 
+\begin_inset Formula $\frac{\pi^{2}}{6}$
+\end_inset
+
+）。
 
 \end_layout
 
 \begin_layout Standard
-* 如果 $s=1$，
-级数是 $
-\backslash
-sum 
-\backslash
-frac{1}{n} = 1 + 
-\backslash
-frac{1}{2} + 
-\backslash
-frac{1}{3} + 
-\backslash
-cdots$，
-这是著名的**调和级数**，
+如果 
+\begin_inset Formula $s=1$
+\end_inset
+
+，
+级数是 
+\begin_inset Formula $\sum\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\cdots$
+\end_inset
+
+，
+这是著名的调和级数，
 它是发散的。
 
 \end_layout
 
 \begin_layout Standard
-* 如果 $
-\backslash
-text{Re}(s) 
-\backslash
-le 1$，
-级数的各项的绝对值 $
-\backslash
-left|
-\backslash
-frac{1}{n^s}
-\backslash
-right| = 
-\backslash
-frac{1}{n^{
-\backslash
-text{Re}(s)}}$ 不会足够快地减小到0，
+如果 
+\begin_inset Formula $\text{Re}(s)\le1$
+\end_inset
+
+，
+级数的各项的绝对值 
+\begin_inset Formula $\left|\frac{1}{n^{s}}\right|=\frac{1}{n^{\text{Re}(s)}}$
+\end_inset
+
+ 不会足够快地减小到0，
 导致级数发散。
 
 \end_layout
@@ -95317,9 +95304,783 @@ text{Re}(s)}}$ 不会足够快地减小到0，
 
 \end_layout
 
+\begin_layout Paragraph
+巴塞尔问题
+\end_layout
+
 \begin_layout Standard
-### 2.
- 与素数的深刻联系：
+巴塞尔问题旨在求出以下无穷级数的精确和：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{1}{1^{2}}+\frac{1}{2^{2}}+\frac{1}{3^{2}}+\frac{1}{4^{2}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+欧拉的解法 (Euler's Solution)
+\end_layout
+
+\begin_layout Standard
+欧拉的核心思想是：
+将有限多项式的根与系数之间的关系，
+大胆地推广到无穷幂级数（即解析函数）上。
+
+\end_layout
+
+\begin_layout Standard
+选取函数并进行泰勒展开
+\end_layout
+
+\begin_layout Standard
+欧拉选择了正弦函数 
+\begin_inset Formula $\sin(x)$
+\end_inset
+
+。
+我们知道其在 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处的麦克劳林级数（即泰勒级数）为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin(x)=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\cdots=\sum_{k=0}^{\infty}(-1)^{k}\frac{x^{2k+1}}{(2k+1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了后续方便比较系数，
+我们构造一个常数项为
+\begin_inset Formula $1$
+\end_inset
+
+的函数，
+即考虑 
+\begin_inset Formula $\frac{\sin(x)}{x}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sin(x)}{x}=1-\frac{x^{2}}{3!}+\frac{x^{4}}{5!}-\frac{x^{6}}{7!}+\cdots=\sum_{k=0}^{\infty}(-1)^{k}\frac{x^{2k}}{(2k+1)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+接下来，
+寻找函数 
+\begin_inset Formula $\frac{\sin(x)}{x}$
+\end_inset
+
+ 的所有根（即函数值为0的点）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sin(x)=0$
+\end_inset
+
+ 的根为 
+\begin_inset Formula $x=n\pi$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 为任意非零整数 (
+\begin_inset Formula $n\in\{\pm1,\pm2,\pm3,\ldots\}$
+\end_inset
+
+)。
+(注意：
+
+\begin_inset Formula $x=0$
+\end_inset
+
+ 是 
+\begin_inset Formula $\sin(x)$
+\end_inset
+
+ 的根，
+但不是 
+\begin_inset Formula $\frac{\sin(x)}{x}$
+\end_inset
+
+ 的根，
+因为 
+\begin_inset Formula $\underset{x\to0}{\lim}\frac{\sin(x)}{x}=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+假设一个 
+\begin_inset Formula $n$
+\end_inset
+
+ 次多项式 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 的根是 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+。
+根据因式定理 (Factor Theorem)，
+如果 
+\begin_inset Formula $r$
+\end_inset
+
+ 是多项式 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 的一个根，
+那么 
+\begin_inset Formula $(x-r)$
+\end_inset
+
+ 就是 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 的一个因式。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+我们可以把 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 写成这样的形式：
+
+\begin_inset Formula 
+\[
+P(x)=C\cdot(x-r_{1})(x-r_{2})(x-r_{3})\cdots(x-r_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $C$
+\end_inset
+
+ 是一个常数，
+它被称为首项系数 (leading coefficient)，
+即最高次项 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数。
+
+\end_layout
+
+\begin_layout Standard
+例如，
+一个二次多项式，
+根为 
+\begin_inset Formula $r_{1}=2$
+\end_inset
+
+ 和 
+\begin_inset Formula $r_{2}=3$
+\end_inset
+
+，
+它可以写成 
+\begin_inset Formula $P(x)=C(x-2)(x-3)$
+\end_inset
+
+。
+如果首项系数 
+\begin_inset Formula $C=1$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $P(x)=x^{2}-5x+6$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+欧拉使用的形式 
+\begin_inset Formula $P(x)=(1-\frac{x}{r_{1}})(1-\frac{x}{r_{2}})\cdots$
+\end_inset
+
+ 是上面这个基本形式的一个巧妙变种。
+这个变种特别适用于常数项为
+\begin_inset Formula $1$
+\end_inset
+
+的多项式。
+
+\end_layout
+
+\begin_layout Enumerate
+我们从每个因式 
+\begin_inset Formula $(x-r_{k})$
+\end_inset
+
+ 中提出一个 
+\begin_inset Formula $-r_{k}$
+\end_inset
+
+。
+前提是所有根 
+\begin_inset Formula $r_{k}$
+\end_inset
+
+ 都不能为零。
+
+\begin_inset Formula 
+\[
+x-r_{k}=(-r_{k})\left(\frac{x}{-r_{k}}-\frac{r_{k}}{-r_{k}}\right)=(-r_{k})\left(1-\frac{x}{r_{k}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+将这个变换代入 
+\begin_inset Formula $P(x)=C(x-r_{1})(x-r_{2})\cdots(x-r_{n})$
+\end_inset
+
+：
+
+\begin_inset Formula 
+\[
+P(x)=C\cdot\left[(-r_{1})\left(1-\frac{x}{r_{1}}\right)\right]\cdot\left[(-r_{2})\left(1-\frac{x}{r_{2}}\right)\right]\cdots\left[(-r_{n})\left(1-\frac{x}{r_{n}}\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+把所有提出的 
+\begin_inset Formula $(-r_{k})$
+\end_inset
+
+ 和原始的常数 
+\begin_inset Formula $C$
+\end_inset
+
+ 组合在一起：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\[
+P(x)=\underbrace{C\cdot(-r_{1})(-r_{2})\cdots(-r_{n})}_{\text{这是一个新的常数}}\cdot\left(1-\frac{x}{r_{1}}\right)\left(1-\frac{x}{r_{2}}\right)\cdots\left(1-\frac{x}{r_{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+令 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 即可得到：
+
+\begin_inset Formula 
+\[
+P(0)=C\cdot(-r_{1})(-r_{2})\cdots(-r_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+所以，
+这个“新的常数”就是 
+\begin_inset Formula $P(0)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+我们得到了一个一般形式：
+
+\begin_inset Formula 
+\[
+P(x)=P(0)\cdot\left(1-\frac{x}{r_{1}}\right)\left(1-\frac{x}{r_{2}}\right)\cdots\left(1-\frac{x}{r_{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在，
+如果多项式 
+\begin_inset Formula $P(x)$
+\end_inset
+
+ 的常数项本身就是
+\begin_inset Formula $1$
+\end_inset
+
+，
+即
+\begin_inset Formula $P(0)=1$
+\end_inset
+
+，
+那么上面的公式就简化为：
+
+\begin_inset Formula 
+\[
+P(x)=\left(1-\frac{x}{r_{1}}\right)\left(1-\frac{x}{r_{2}}\right)\cdots\left(1-\frac{x}{r_{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+欧拉将这个思想推广到 
+\begin_inset Formula $\frac{\sin(x)}{x}$
+\end_inset
+
+，
+将其表示为关于其根 
+\begin_inset Formula $(\pm\pi,\pm2\pi,\pm3\pi,\ldots)$
+\end_inset
+
+ 的无穷乘积：
+
+\begin_inset Formula 
+\[
+\frac{\sin(x)}{x}=\left(1-\frac{x}{\pi}\right)\left(1+\frac{x}{\pi}\right)\left(1-\frac{x}{2\pi}\right)\left(1+\frac{x}{2\pi}\right)\left(1-\frac{x}{3\pi}\right)\left(1+\frac{x}{3\pi}\right)\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用平方差公式 
+\begin_inset Formula $(a-b)(a+b)=a^{2}-b^{2}$
+\end_inset
+
+ 来合并成对的项：
+
+\begin_inset Formula 
+\[
+\frac{\sin(x)}{x}=\left(1-\frac{x^{2}}{\pi^{2}}\right)\left(1-\frac{x^{2}}{4\pi^{2}}\right)\left(1-\frac{x^{2}}{9\pi^{2}}\right)\cdots=\prod_{n=1}^{\infty}\left(1-\frac{x^{2}}{n^{2}\pi^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这一步是欧拉天才的直觉体现，
+后来被魏尔斯特拉斯分解定理严格证明。
+
+\end_layout
+
+\begin_layout Standard
+比较两种表示法中的 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 系数
+\end_layout
+
+\begin_layout Standard
+现在，
+我们有了 
+\begin_inset Formula $\frac{\sin(x)}{x}$
+\end_inset
+
+ 的两个等价表示：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 泰勒级数:
+ 
+\begin_inset Formula $1-\frac{x^{2}}{6}+\frac{x^{4}}{120}-\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 无穷乘积:
+ 
+\begin_inset Formula $\left(1-\frac{x^{2}}{\pi^{2}}\right)\left(1-\frac{x^{2}}{4\pi^{2}}\right)\left(1-\frac{x^{2}}{9\pi^{2}}\right)\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+既然这两个表示是等价的，
+那么它们的各项系数也必须相等。
+
+\end_layout
+
+\begin_layout Standard
+比较 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 项的系数，
+从泰勒级数中，
+直接读出 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 的系数是：
+
+\begin_inset Formula 
+\[
+-\frac{1}{3!}=-\frac{1}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从无穷乘积中，
+要得到 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 项，
+我们需要从其中一个括号里选取
+\begin_inset Formula $-\frac{x^{2}}{n^{2}\pi^{2}}$
+\end_inset
+
+，
+并从所有其他括号里选取 1。
+将所有这些可能性相加，
+得到 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 的总系数：
+
+\begin_inset Formula 
+\[
+\left(-\frac{1}{\pi^{2}}\right)+\left(-\frac{1}{4\pi^{2}}\right)+\left(-\frac{1}{9\pi^{2}}\right)+\cdots=-\sum_{n=1}^{\infty}\frac{1}{n^{2}\pi^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-\frac{1}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令两个系数相等：
+
+\begin_inset Formula 
+\[
+-\frac{1}{6}=-\frac{1}{\pi^{2}}\sum_{n=1}^{\infty}\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+两边同时乘以 
+\begin_inset Formula $-\pi^{2}$
+\end_inset
+
+，
+即可得到最终结果：
+
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+该问题是求黎曼Zeta函数 
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+ 在 
+\begin_inset Formula $s=2$
+\end_inset
+
+ 处的值：
+
+\begin_inset Formula 
+\[
+\zeta(s):=\sum_{n=1}^{\infty}\frac{1}{n^{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+巴塞尔问题的解可以写作：
+
+\begin_inset Formula 
+\[
+\zeta(2)=\frac{\pi^{2}}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+傅里叶级数证明法
+\end_layout
+
+\begin_layout Standard
+考虑函数 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $[-\pi,\pi]$
+\end_inset
+
+ 上。
+
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 是一个偶函数，
+所以其傅里叶级数中只含有余弦项 (
+\begin_inset Formula $b_{n}=0$
+\end_inset
+
+)。
+
+\begin_inset Formula 
+\[
+f(x)=\frac{a_{0}}{2}+\sum_{n=1}^{\infty}a_{n}\cos(nx)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算系数 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{0}=\frac{1}{\pi}\int_{-\pi}^{\pi}x^{2}\,dx=\frac{1}{\pi}\left[\frac{x^{3}}{3}\right]_{-\pi}^{\pi}=\frac{1}{\pi}\left(\frac{\pi^{3}}{3}-\frac{-\pi^{3}}{3}\right)=\frac{2\pi^{2}}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算系数 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ (需要两次分部积分):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=\frac{1}{\pi}\int_{-\pi}^{\pi}x^{2}\cos(nx)\,dx=\frac{4(-1)^{n}}{n^{2}}\quad(\text{for }n\ge1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}=\frac{\pi^{2}}{3}+\sum_{n=1}^{\infty}\frac{4(-1)^{n}}{n^{2}}\cos(nx)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了消去
+\begin_inset Formula $\cos(nx)$
+\end_inset
+
+ 的振荡，
+我们选取一个能使其简化的点。
+令 
+\begin_inset Formula $x=\pi$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi^{2}=\frac{\pi^{2}}{3}+\sum_{n=1}^{\infty}\frac{4(-1)^{n}}{n^{2}}\cos(n\pi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因为 
+\begin_inset Formula $\cos(n\pi)=(-1)^{n}$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $(-1)^{n}\cos(n\pi)=(-1)^{2n}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi^{2}=\frac{\pi^{2}}{3}+\sum_{n=1}^{\infty}\frac{4}{n^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi^{2}-\frac{\pi^{2}}{3}=4\sum_{n=1}^{\infty}\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{2\pi^{2}}{3}=4\sum_{n=1}^{\infty}\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{2\pi^{2}}{12}=\frac{\pi^{2}}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方法完全符合现代分析的严格性要求，
+并得出了与欧拉相同的优美结果。
+
+\end_layout
+
+\begin_layout Paragraph
+与素数的深刻联系：
 欧拉乘积公式
 \end_layout
 
@@ -95332,65 +96093,33 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-zeta(s) = 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-frac{1}{1 - p^{-s}} $$
-\end_layout
+\begin_inset Formula 
+\[
+\zeta(s)=\prod_{p\text{ is prime}}\frac{1}{1-p^{-s}}
+\]
 
-\begin_layout Standard
-$$ 
-\backslash
-zeta(s) = 
-\backslash
-left(
-\backslash
-frac{1}{1 - 2^{-s}}
-\backslash
-right) 
-\backslash
-left(
-\backslash
-frac{1}{1 - 3^{-s}}
-\backslash
-right) 
-\backslash
-left(
-\backslash
-frac{1}{1 - 5^{-s}}
-\backslash
-right) 
-\backslash
-left(
-\backslash
-frac{1}{1 - 7^{-s}}
-\backslash
-right) 
-\backslash
-cdots $$
-\end_layout
+\end_inset
 
-\begin_layout Standard
-这个公式被称为**欧拉乘积公式 (Euler product formula)**。
-它建立了一座神奇的桥梁，
-连接了：
 
 \end_layout
 
 \begin_layout Standard
-* **左边**：
-一个关于所有自然数的**和**（分析学）。
+\begin_inset Formula 
+\[
+\zeta(s)=\left(\frac{1}{1-2^{-s}}\right)\left(\frac{1}{1-3^{-s}}\right)\left(\frac{1}{1-5^{-s}}\right)\left(\frac{1}{1-7^{-s}}\right)\cdots
+\]
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-* **右边**：
-一个关于所有**素数**的**积**（数论）。
+这个公式被称为欧拉乘积公式 (Euler product formula)。
+它的左边：
+一个关于所有自然数的和（分析学）。
+它的右边：
+一个关于所有素数的积（数论）。
 
 \end_layout
 
@@ -95402,84 +96131,91 @@ cdots $$
 
 \end_layout
 
-\begin_layout Standard
-### 3.
- 解析延拓（“重构恐龙骨架”）
+\begin_layout Paragraph
+解析延拓
 \end_layout
 
 \begin_layout Standard
 Zeta函数的现代重要性来自于黎曼的贡献。
 黎曼发现，
-尽管级数定义只在 $
-\backslash
-text{Re}(s) > 1$ 时有效，
-但Zeta函数可以通过**解析延拓**的方法，
+尽管级数定义只在 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+ 时有效，
+但Zeta函数可以通过解析延拓的方法，
 将其定义域扩展到几乎整个复平面。
 
 \end_layout
 
 \begin_layout Standard
 延拓后的Zeta函数，
-我们仍然记为 $
-\backslash
-zeta(s)$，
-它在除了 $s=1$ 之外的所有复数点上都有定义。
+我们仍然记为 
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+，
+它在除了 
+\begin_inset Formula $s=1$
+\end_inset
+
+ 之外的所有复数点上都有定义。
 
 \end_layout
 
 \begin_layout Standard
-* **简单极点 (Simple Pole)**：
-在 $s=1$ 这个点，
+简单极点 (Simple Pole)：
+在 
+\begin_inset Formula $s=1$
+\end_inset
+
+ 这个点，
 延拓后的函数会趋于无穷大。
-我们称 $s=1$ 是Zeta函数的一个**简单极点**。
+我们称 
+\begin_inset Formula $s=1$
+\end_inset
+
+ 是Zeta函数的一个简单极点。
 这对应于原始定义中的调和级数发散。
 
 \end_layout
 
-\begin_layout Standard
-### 4.
- Zeta函数在负整数点的值
+\begin_layout Paragraph
+Zeta函数在负整数点的值
 \end_layout
 
 \begin_layout Standard
 通过解析延拓，
 我们可以计算Zeta函数在那些原始级数发散的点的值，
 结果非常惊人且重要。
-这些值与**伯努利数 ($B_n$)** 密切相关。
+这些值与**伯努利数 (
+\begin_inset Formula $B_{n}$
+\end_inset
+
+)** 密切相关。
 
 \end_layout
 
 \begin_layout Standard
 * **平凡零点 (Trivial Zeros)**：
-对于所有负偶数 $s = -2,
- -4,
- -6,
- 
-\backslash
-ldots$，
+对于所有负偶数 
+\begin_inset Formula $s=-2,-4,-6,\ldots$
+\end_inset
+
+，
 我们有：
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-zeta(-2) = 0,
- 
-\backslash
-quad 
-\backslash
-zeta(-4) = 0,
- 
-\backslash
-quad 
-\backslash
-zeta(-6) = 0,
- 
-\backslash
-quad 
-\backslash
-ldots $$
+\begin_inset Formula 
+\[
+\zeta(-2)=0,\quad\zeta(-4)=0,\quad\zeta(-6)=0,\quad\ldots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -95495,55 +96231,70 @@ ldots $$
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-zeta(0) = -1/2$
+* 
+\begin_inset Formula $\zeta(0)=-1/2$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-zeta(-1) = -1/12$ (这正是 $1+2+3+
+* 
+\begin_inset Formula $\zeta(-1)=-1/12$
+\end_inset
+
+ (这正是 $1+2+3+
 \backslash
 cdots = -1/12$ 的来源)
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-zeta(-3) = 1/120$
+* 
+\begin_inset Formula $\zeta(-3)=1/120$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* $
-\backslash
-zeta(-5) = -1/252$
+* 
+\begin_inset Formula $\zeta(-5)=-1/252$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 通用公式为：
- $
-\backslash
-zeta(-n) = -
-\backslash
-frac{B_{n+1}}{n+1}$ (对于 $n 
-\backslash
-ge 1$)。
+ 
+\begin_inset Formula $\zeta(-n)=-\frac{B_{n+1}}{n+1}$
+\end_inset
+
+ (对于 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+)。
 
 \end_layout
 
 \begin_layout Standard
-### 5.
- 黎曼猜想：
+黎曼猜想：
 百万美元的难题
 \end_layout
 
 \begin_layout Standard
 黎曼在研究Zeta函数时，
 最关心的是它的**零点 (zeros)**，
-即那些使 $
-\backslash
-zeta(s)=0$ 的复数 $s$。
+即那些使 
+\begin_inset Formula $\zeta(s)=0$
+\end_inset
+
+ 的复数
+\begin_inset Formula $s$
+\end_inset
+
+。
 
 \end_layout
 
@@ -95558,9 +96309,11 @@ zeta(s)=0$ 的复数 $s$。
 还有无穷多个！
 这些零点被称为**非平凡零点 (non-trivial zeros)**。
 黎曼证明了所有非平凡零点都位于所谓的**临界带 (critical strip)** 中，
-即满足 $0 < 
-\backslash
-text{Re}(s) < 1$ 的区域。
+即满足 
+\begin_inset Formula $0<\text{Re}(s)<1$
+\end_inset
+
+ 的区域。
 
 \end_layout
 
@@ -95602,9 +96355,11 @@ text{Re}(s) < 1$ 的区域。
 * 如果黎曼猜想成立，
 我们就能对素数的分布规律有前所未有的精确理解。
 例如，
-我们可以得到关于**素数计数函数 $
-\backslash
-pi(x)$** (小于x的素数个数) 的最佳误差估计。
+我们可以得到关于**素数计数函数 
+\begin_inset Formula $\pi(x)$
+\end_inset
+
+** (小于x的素数个数) 的最佳误差估计。
 
 \end_layout
 
@@ -95624,51 +96379,6 @@ pi(x)$** (小于x的素数个数) 的最佳误差估计。
 证明或证伪黎曼猜想，
 仍然是数学界最重要的未解之谜之一，
 也是克雷数学研究所提出的七个“千禧年大奖难题”之一。
-
-\end_layout
-
-\begin_layout Standard
-### 总结
-\end_layout
-
-\begin_layout Standard
-* **是什么**：
-一个最初由无穷级数定义的复变函数 $
-\backslash
-zeta(s) = 
-\backslash
-sum 1/n^s$。
-
-\end_layout
-
-\begin_layout Standard
-* **连接什么**：
-通过欧拉乘积公式，
-它连接了所有自然数与所有素数。
-
-\end_layout
-
-\begin_layout Standard
-* **如何扩展**：
-通过解析延拓，
-它的定义域从半个复平面扩展到几乎整个复平面。
-
-\end_layout
-
-\begin_layout Standard
-* **有什么用**：
-它的值和零点包含了关于素数分布的深刻信息。
-
-\end_layout
-
-\begin_layout Standard
-* **最大谜团**：
-黎曼猜想—
-—
-它的非平凡零点是否都位于临界线 $
-\backslash
-text{Re}(s) = 1/2$ 上？
-这个问题的答案将对整个数论产生深远影响。
 
 \end_layout
 
