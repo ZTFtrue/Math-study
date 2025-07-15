@@ -92673,1764 +92673,6 @@ f_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{
  
 \end_layout
 
-\begin_layout Section
-交错幂和 
-\begin_inset Formula $S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}$
-\end_inset
-
- 的正则化求和：
-
-\end_layout
-
-\begin_layout Standard
-交错幂和（Alternating Power Sum）定义为：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}=1^{n}-2^{n}+3^{n}-4^{n}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-其中 
-\begin_inset Formula $n$
-\end_inset
-
- 是一个非负整数。
-当
-\begin_inset Formula $n=0$
-\end_inset
-
-时它就是格兰迪级数。
-
-\end_layout
-
-\begin_layout Standard
-对于任何 
-\begin_inset Formula $n\ge0$
-\end_inset
-
-，
-这个级数在传统意义上都是发散的，
-部分和会无限增大或在两个值之间震荡。
-我们所讨论的“和”是在
-\series bold
-解析延拓
-\series default
-意义下的正则化和 (Regularized Sum)。
-这个和可以通过狄利克雷Eta函数 
-\begin_inset Formula $\eta(s)$
-\end_inset
-
- 在负整数点 
-\begin_inset Formula $s=-n$
-\end_inset
-
- 的值来定义。
-
-\end_layout
-
-\begin_layout Subsection
-格兰迪级数
-\end_layout
-
-\begin_layout Standard
-格兰迪级数是下面这个无穷级数：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-1-1+1-1+1-1+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-也可以写成求和形式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\sum_{n=0}^{\infty}(-1)^{n}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个级数以18世纪的意大利数学家、哲学家和神父路易吉·格兰迪 (Luigi Grandi) 的名字命名。
-
-\end_layout
-
-\begin_layout Enumerate
-观点一：
-和为 0
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-如果我们像这样给级数加括号：
-
-\begin_inset Formula 
-\[
-(1-1)+(1-1)+(1-1)+\cdots
-\]
-
-\end_inset
-
-那么结果就是：
-
-\begin_inset Formula 
-\[
-0+0+0+\cdots=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-观点二：
-和为 1
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-如果我们换一种方式加括号：
-
-\begin_inset Formula 
-\[
-1+(-1+1)+(-1+1)+(-1+1)+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-那么结果就变成了：
-
-\begin_inset Formula 
-\[
-1+0+0+0+\cdots=1
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-观点三：
-和为 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这种方法在当时最具争议性，
-但后来被证明在特定数学框架下是合理的。
-假设这个级数有一个和，
-我们称之为 S：
-
-\begin_inset Formula 
-\[
-S=1-1+1-1+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-那么，
-我们可以做一个简单的代数变换：
-
-\begin_inset Formula 
-\[
-1-S=1-(1-1+1-1+\cdots)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-1-S=1-1+1-1+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-我们发现 
-\begin_inset Formula $1-S$
-\end_inset
-
- 等于原始的级数 `S`。
-所以：
-
-\begin_inset Formula 
-\[
-1-S=S
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-解这个方程：
-
-\begin_inset Formula 
-\[
-S=\frac{1}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-在现代数学中，
-我们对“和”有了更严格的定义。
-
-\end_layout
-
-\begin_layout Enumerate
-收敛与发散 (Convergence and Divergence)
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-一个无穷级数的“和”被定义为其
-\series bold
- 部分和序列
-\series default
- (sequence of partial sums) 的极限。
-如果这个极限存在且唯一，
-我们就说这个级数是收敛 (convergent)的；
-否则，
-它就是发散 (divergent) 的。
-
-\end_layout
-
-\begin_layout Standard
-我们来看看格兰迪级数的部分和：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S_{1}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S_{2}=1-1=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S_{3}=1-1+1=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S_{4}=1-1+1-1=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个部分和序列是 
-\begin_inset Formula $1,0,1,0,1,0,\cdots$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-很明显，
-这个序列并不会趋近于任何一个单一的、确定的极限。
-它在 1 和 0 之间来回震荡。
-
-\end_layout
-
-\begin_layout Standard
-因此，
-根据标准的柯西收敛判别法，
-格兰迪级数是发散的，
-它没有和。
-
-\end_layout
-
-\begin_layout Standard
-从这个角度看，
-前面提到的观点一和观点二之所以错误，
-是因为它们违反了无穷级数加法的结合律—
-—
-
-\series bold
-只有当级数绝对收敛时，
-才能任意添加括号
-\series default
-。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-可和性方法 (Summability Methods)
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-尽管格兰迪级数在传统意义上是发散的，
-但数学家们发展了一些更广义的“求和”方法，
-可以为某些发散级数赋予一个合理的值。
-这些方法被称为可和性方法。
-
-\end_layout
-
-\begin_layout Standard
-其中最著名的一种是切萨罗求和 (Cesàro summation)。
-
-\end_layout
-
-\begin_layout Standard
-切萨罗和的核心思想是：
-不直接看部分和序列 
-\begin_inset Formula $(S_{n})$
-\end_inset
-
- 的极限，
-而是去看部分和的算术平均值序列 
-\begin_inset Formula $(a_{n})$
-\end_inset
-
- 的极限。
-
-\begin_inset Formula 
-\[
-a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
-\]
-
-\end_inset
-
-我们来计算格兰迪级数的这个平均值序列：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{1}=\frac{1}{1}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{2}=\frac{1+0}{2}=\frac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{3}=\frac{1+0+1}{3}=\frac{2}{3}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{4}=\frac{1+0+1+0}{4}=\frac{2}{4}=\frac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{5}=\frac{1+0+1+0+1}{5}=\frac{3}{5}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $a_{6}=\frac{1+0+1+0+1+0}{6}=\frac{3}{6}=\frac{1}{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-我们可以观察到，
-当 n 为偶数时，
-
-\begin_inset Formula $a_{n}=1/2$
-\end_inset
-
-；
-当 n 为奇数时，
-
-\begin_inset Formula $a_{n}=(n+1)/(2n)$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-随着 n 趋向于无穷大，
-奇数项的极限也是：
-
-\begin_inset Formula 
-\[
-\lim_{n\to\infty}\frac{n+1}{2n}=\lim_{n\to\infty}(\frac{1}{2}+\frac{1}{2n})=\frac{1}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-因此，
-部分和的算术平均值序列确实收敛于 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-所以，
-我们可以说，
-格兰迪级数的切萨罗和是 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-像阿贝尔求和 (Abel summation) 等其他更强大的可和性方法，
-同样会得到 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
- 这个结果。
-这表明 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
- 是一个非常“自然”的赋值。
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-在标准微积分中：
-格兰迪级数 
-\begin_inset Formula $1-1+1-1+\cdots$
-\end_inset
-
- 是 发散的，
-没有和。
-
-\end_layout
-
-\begin_layout Standard
-在更广义的数学框架下：
-使用像切萨罗求和这样的可和性方法，
-可以给这个级数赋予一个确定的值 
-\begin_inset Formula $\frac{1}{2}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Subsubsection
-格兰迪级数序列
-\end_layout
-
-\begin_layout Standard
-序列：
-
-\begin_inset Formula $(1,-1,1,-1,\ldots)$
-\end_inset
-
-，
-即 
-\begin_inset Formula $a_{n}=(-1)^{n}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-生成函数：
-
-\begin_inset Formula 
-\[
-G(x)=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-闭合形式：
-这是一个首项 (first term)
-\begin_inset Formula $a=1$
-\end_inset
-
-，
-公比(common ratio)为 
-\begin_inset Formula $-x$
-\end_inset
-
- 的几何级数。
-对于一个无穷几何级数，
-当其公比的绝对值小于 1 (即 
-\begin_inset Formula $|r|<1$
-\end_inset
-
-) 时，
-它的和有一个简单的闭合形式：
-
-\begin_inset Formula $Sum=\frac{a}{1-r}$
-\end_inset
-
-,将我们的首项和公比代入：
-
-\begin_inset Formula 
-\[
-G(x)=\frac{1}{1-(-x)}=\frac{1}{1+x}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left[\begin{matrix}+1\\
--1\\
-+1\\
--1\\
-\cdots
-\end{matrix}\right]\cdot\left[\begin{matrix}x^{0} & x^{1} & x^{2} & x^{3} & \cdots\end{matrix}\right]$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\:S=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $xS=\,\,\;\;\;\;\;1\cdot x^{1}-1\cdot x^{2}+1\cdot x^{3}-1\cdot x^{4}+\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S+xS=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S(1+x)=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $S=\frac{1}{1+x}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-我们想求的是原始级数的和，
-即所有系数的和：
-
-\begin_inset Formula $a_{0}+a_{1}+a_{2}+\cdots$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-观察生成函数的定义：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-如果我们令 
-\begin_inset Formula $x=1$
-\end_inset
-
-，
-那么右边就变成了：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-G(1)=a_{0}+a_{1}(1)+a_{2}(1)^{2}+\cdots=a_{0}+a_{1}+a_{2}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-所以，
-我们只需要计算闭合形式在 
-\begin_inset Formula $x=1$
-\end_inset
-
- 处的值即可：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Sum}=G(1)=\frac{1}{1+1}=\frac{1}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-重要提醒：
-关于收敛性
-\end_layout
-
-\begin_layout Standard
-和切萨罗求和一样，
-这个方法也有一个需要注意的关键点。
-
-\end_layout
-
-\begin_layout Standard
-几何级数求和公式 
-\begin_inset Formula $\sum r^{n}=\frac{1}{1-r}$
-\end_inset
-
- 成立的条件是 
-\begin_inset Formula $|r|<1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-在我们的例子中，
-
-\begin_inset Formula $r=-x$
-\end_inset
-
-，
-所以我们的生成函数等式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-1-x+x^{2}-x^{3}+\cdots=\frac{1}{1+x}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-只在 
-\begin_inset Formula $|-x|<1$
-\end_inset
-
- (即 
-\begin_inset Formula $|x|<1$
-\end_inset
-
-) 的收敛半径内严格成立。
-
-\end_layout
-
-\begin_layout Standard
-我们最后代入的 
-\begin_inset Formula $x=1$
-\end_inset
-
- 这个点，
-（解析延拓）正好处在收敛半径的边界上，
-原始级数在这一点是发散的。
-
-\end_layout
-
-\begin_layout Subsection
-狄利克雷Eta函数
-\end_layout
-
-\begin_layout Standard
-狄利克雷Eta函数 (
-\begin_inset Formula $\eta(s)$
-\end_inset
-
-)定义为：
-
-\begin_inset Formula 
-\[
-\eta(s)=\sum_{k=1}^{\infty}\frac{(-1)^{k-1}}{k^{s}}=\frac{1}{1^{s}}-\frac{1}{2^{s}}+\frac{1}{3^{s}}-\frac{1}{4^{s}}+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个级数在复数 
-\begin_inset Formula $s$
-\end_inset
-
- 的实部 
-\begin_inset Formula $\text{Re}(s)>0$
-\end_inset
-
- 时收敛。
-
-\end_layout
-
-\begin_layout Standard
-我们想求的级数是 
-\begin_inset Formula $S_{n}=1^{n}-2^{n}+3^{n}-\cdots$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-形式上看，
-这似乎是 
-\begin_inset Formula $\eta(s)$
-\end_inset
-
- 在 
-\begin_inset Formula $s=-n$
-\end_inset
-
- 处的值：
-
-\begin_inset Formula 
-\[
-S_{n}=\eta(-n)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-由于我们感兴趣的 
-\begin_inset Formula $n$
-\end_inset
-
- 是非负整数，
-所以 
-\begin_inset Formula $-n\le0$
-\end_inset
-
-，
-这超出了 
-\begin_inset Formula $\eta(s)$
-\end_inset
-
- 级数定义的收敛范围。
-但是，
-我们可以对 
-\begin_inset Formula $\eta(s)$
-\end_inset
-
- 函数进行解析延拓，
-使其在整个复平面上都有定义。
-因此，
-
-\begin_inset Formula $S_{n}$
-\end_inset
-
- 的值就是这个延拓后的 
-\begin_inset Formula $\eta$
-\end_inset
-
- 函数在 
-\begin_inset Formula $s=-n$
-\end_inset
-
- 处的值。
-
-\end_layout
-
-\begin_layout Standard
-解析延拓后的Eta函数与黎曼Zeta函数 
-\begin_inset Formula $\zeta(s)$
-\end_inset
-
- 在整个复平面上满足以下关系：
-
-\begin_inset Formula 
-\[
-\eta(s)=(1-2^{1-s})\zeta(s)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-将 
-\begin_inset Formula $s=-n$
-\end_inset
-
- 代入上式，
-我们得到 
-\begin_inset Formula $S_{n}$
-\end_inset
-
- 与 
-\begin_inset Formula $\zeta(-n)$
-\end_inset
-
- 的关系：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{n}=\eta(-n)=(1-2^{1-(-n)})\zeta(-n)=(1-2^{n+1})\zeta(-n)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-此外，
-Zeta函数在非正整数点的值与伯努利数 (Bernoulli Numbers,
- 
-\begin_inset Formula $B_{k}$
-\end_inset
-
-) 有着深刻的联系：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\zeta(-n)=-\frac{B_{n+1}}{n+1}\quad(\text{对于 }n\ge0)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-将此关系代入，
-我们得到最终的通用求和公式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{n}=(1-2^{n+1})\left(-\frac{B_{n+1}}{n+1}\right)=\frac{(2^{n+1}-1)B_{n+1}}{n+1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Claim
-（注：
-这里我们使用现代约定，
-即
-\begin_inset Formula $B_{1}=-1/2$
-\end_inset
-
-。
-常用的伯努利数有 
-\begin_inset Formula $B_{1}=-1/2,B_{2}=1/6,B_{3}=0,B_{4}=-1/30,\dots$
-\end_inset
-
-）
-\end_layout
-
-\begin_layout Case
-：
-n = 0 (格兰迪级数)
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $S_{0}=1^{0}-2^{0}+3^{0}-4^{0}+\cdots=1-1+1-1+\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-使用公式计算：
-
-\end_layout
-
-\begin_layout Standard
-根据关系 
-\begin_inset Formula $S_{n}=\eta(-n)$
-\end_inset
-
- 和 
-\begin_inset Formula $\eta(s)=(1-2^{1-s})\zeta(s)$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{0}=\eta(0)=(1-2^{1-0})\zeta(0)=(-1)\zeta(0)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-而已知 
-\begin_inset Formula $\zeta(0)=-1/2$
-\end_inset
-
-，
-所以：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{0}=(-1)\times(-1/2)=\frac{1}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Case
-：
-n = 1
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $S_{1}=1^{1}-2^{1}+3^{1}-4^{1}+\cdots=1-2+3-4+\cdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-使用公式计算：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{1}=\eta(-1)=\frac{(2^{1+1}-1)B_{1+1}}{1+1}=\frac{(2^{2}-1)B_{2}}{2}=\frac{3B_{2}}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-已知 
-\begin_inset Formula $B_{2}=1/6$
-\end_inset
-
-，
-所以：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{1}=\frac{3\times(1/6)}{2}=\frac{1/2}{2}=\frac{1}{4}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Subsubsection
-与所有自然数之和的联系
-\end_layout
-
-\begin_layout Standard
-所有自然数之和
-\begin_inset Formula $S=1+2+3+4+\cdots$
-\end_inset
-
- 对应于黎曼Zeta函数在 
-\begin_inset Formula $s=-1$
-\end_inset
-
- 处的值，
-即 
-\begin_inset Formula $S=\zeta(-1)$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-使用公式计算：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S=\zeta(-1)=-\frac{B_{1+1}}{1+1}=-\frac{B_{2}}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-代入 
-\begin_inset Formula $B_{2}=1/6$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S=-\frac{1/6}{2}=-\frac{1}{12}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-一种巧妙的启发式推导（非严格证明）：
-
-\end_layout
-
-\begin_layout Standard
-它通过级数间的线性组合来获得结果。
-
-\end_layout
-
-\begin_layout Standard
-1.
- 定义 
-\begin_inset Formula $A=1-1+1-1+\cdots=1/2$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-2.
- 定义 
-\begin_inset Formula $B=1-2+3-4+\cdots=1/4$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-3.
- 建立 
-\begin_inset Formula $B$
-\end_inset
-
- 与自然数之和
-\begin_inset Formula $S=1+2+3+\cdots$
-\end_inset
-
- 的关系：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S-B=(1+2+3+\cdots)-(1-2+3-4+\cdots)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S-B=(1-1)+(2-(-2))+(3-3)+(4-(-4))+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S-B=0+4+0+8+0+12+\cdots=4(1+2+3+\cdots)=4S
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-4.
- 整理得：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S-B=4S\implies-3S=B
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-5.
- 代入已求得的 
-\begin_inset Formula $B=1/4$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
--3S=\frac{1}{4}\implies S=-\frac{1}{12}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个推导虽然在数学上不严谨（因为它对发散级数进行了四则运算），
-但它以一种非常巧妙的方式得到了与解析延拓一致的惊人结果。
-
-\end_layout
-
-\begin_layout Subsection
-黎曼Zeta函数
-\end_layout
-
-\begin_layout Standard
-Eta函数和Zeta函数之间有一个非常简单的关系：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\eta(s)=(1-2^{1-s})\zeta(s)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个关系式最初在 
-\begin_inset Formula $\text{Re}(s)>1$
-\end_inset
-
- 的区域推导得出，
-但通过解析延拓，
-它在整个复平面上都成立。
-
-\end_layout
-
-\begin_layout Standard
-将 
-\begin_inset Formula $s=-n$
-\end_inset
-
- 代入，
-我们得到：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{n}=\eta(-n)=(1-2^{1-(-n)})\zeta(-n)=(1-2^{n+1})\zeta(-n)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这里的 
-\begin_inset Formula $\zeta(-n)$
-\end_inset
-
- 是解析延拓后的黎曼Zeta函数在负整数点的值。
-
-\end_layout
-
-\begin_layout Standard
-幸运的是，
-
-\begin_inset Formula $\zeta(-n)$
-\end_inset
-
- 的值是已知的，
-并且与伯努利数 (Bernoulli numbers)相关：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\zeta(-n)=-\frac{B_{n+1}}{n+1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-其中 
-\begin_inset Formula $B_{k}$
-\end_inset
-
- 是第 
-\begin_inset Formula $k$
-\end_inset
-
- 个伯努利数。
-
-\end_layout
-
-\begin_layout Standard
-将这个结果代入 
-\begin_inset Formula $S_{n}$
-\end_inset
-
- 的表达式，
-我们得到了一个计算 
-\begin_inset Formula $S_{n}$
-\end_inset
-
- 的通用公式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{n}=(1-2^{n+1})\left(-\frac{B_{n+1}}{n+1}\right)=\frac{(2^{n+1}-1)B_{n+1}}{n+1}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-计算具体的值
-\end_layout
-
-\begin_layout Standard
-现在我们可以用这个公式来计算前几个 
-\begin_inset Formula $n$
-\end_inset
-
- 对应的级数值。
-
-\end_layout
-
-\begin_layout Standard
-需要用到的伯努利数 (
-\begin_inset Formula $B_{1}$
-\end_inset
-
- 有两种约定，
-这里使用 
-\begin_inset Formula $B_{1}=-1/2$
-\end_inset
-
- 的现代约定)：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{0}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{1}=-1/2$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{2}=1/6$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{3}=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{4}=-1/30$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{5}=0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $B_{6}=1/42$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Case 
-\begin_inset Formula $n=0$
-\end_inset
-
-:
- 格兰迪级数
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{0}=1^{0}-2^{0}+3^{0}-4^{0}+\cdots=1-1+1-1+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-使用公式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{0}=\frac{(2^{0+1}-1)B_{0+1}}{0+1}=\frac{(2-1)B_{1}}{1}=B_{1}=-\frac{1}{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-问题在于伯努利数的约定。
-如果我们使用 
-\begin_inset Formula $B_{1}=1/2$
-\end_inset
-
- 的旧约定，
-结果就是
-\begin_inset Formula $1/2$
-\end_inset
-
-。
-但更根本的原因是，
-我们使用的级数求和是从 $k=1$ 开始的，
-而格兰迪级数的标准形式 
-\begin_inset Formula $\sum_{k=0}^{\infty}(-1)^{k}$
-\end_inset
-
- 是从 $k=0$ 开始的。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\sum_{k=0}^{\infty}(-1)^{k}=1+(-1+1-1+\cdots)=1-S_{0}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-如果 
-\begin_inset Formula $S_{0}=1/2$
-\end_inset
-
- (使用 
-\begin_inset Formula $B_{1}=1/2$
-\end_inset
-
- 约定)，
-那么 $1-1/2 = 1/2$。
-
-\end_layout
-
-\begin_layout Standard
-如果 $S_0 = -1/2$ (使用 $B_1=-1/2$ 约定)，
-我们需要检查公式的推导。
-
-\end_layout
-
-\begin_layout Standard
-让我们用最直接的阿贝尔求和法来验证 $n=0$ 的情况：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $f(x)=\sum_{k=1}^{\infty}(-1)^{k-1}k^{0}x^{k}=x-x^{2}+x^{3}-\cdots=\frac{x}{1+x}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-令 
-\begin_inset Formula $x\to1^{-}$
-\end_inset
-
-,
- 值为 
-\begin_inset Formula $1/2$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-所以 
-\begin_inset Formula $1-1+1-1+\cdots=1/2$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-这里的 
-\begin_inset Formula $S_{0}=1-1+1-\cdots$
-\end_inset
-
- 确实是 
-\begin_inset Formula $1/2$
-\end_inset
-
-。
-公式中的伯努利数部分需要小心处理，
-特别是 
-\begin_inset Formula $n=0$
-\end_inset
-
- 的情况。
-公式在 $n 
-\backslash
-ge 1$ 时更可靠。
-
-\end_layout
-
-\begin_layout Standard
-Case 
-\begin_inset Formula $n=1$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{1}=1-2+3-4+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-使用公式 (
-\begin_inset Formula $n=1$
-\end_inset
-
-):
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{1}=\frac{(2^{1+1}-1)B_{1+1}}{1+1}=\frac{(4-1)B_{2}}{2}=\frac{3\cdot(1/6)}{2}=\frac{1/2}{2}=\frac{1}{4}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这是一个非常经典的结果。
-
-\end_layout
-
-\begin_layout Standard
-#### Case n = 2:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{2}=1^{2}-2^{2}+3^{2}-4^{2}+\cdots=1-4+9-16+\cdots
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-使用公式 (
-\begin_inset Formula $n=2$
-\end_inset
-
-):
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-S_{2}=\frac{(2^{2+1}-1)B_{2+1}}{2+1}=\frac{(8-1)B_{3}}{3}=\frac{7\cdot0}{3}=0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个结果也很著名，
-该级数的正则化和为 0。
-
-\end_layout
-
-\begin_layout Standard
-#### Case n = 3:
-\end_layout
-
-\begin_layout Standard
-$$ S_3 = 1^3 - 2^3 + 3^3 - 4^3 + 
-\backslash
-cdots = 1 - 8 + 27 - 64 + 
-\backslash
-cdots $$
-\end_layout
-
-\begin_layout Standard
-使用公式 ($n=3$):
-\end_layout
-
-\begin_layout Standard
-$$ S_3 = 
-\backslash
-frac{(2^{3+1} - 1)B_{3+1}}{3+1} = 
-\backslash
-frac{(16-1)B_4}{4} = 
-\backslash
-frac{15 
-\backslash
-cdot (-1/30)}{4} = 
-\backslash
-frac{-1/2}{4} = -
-\backslash
-frac{1}{8} $$
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-可以看到，
-当
-\begin_inset Formula $n$
-\end_inset
-
- 是大于等于2的偶数时，
-由于 $B_{n+1}$ (奇数下标的伯努利数) 为0，
-所以级数的和也为0。
-
-\end_layout
-
 \begin_layout Chapter
 复分析
 \end_layout
@@ -95473,6 +93715,1467 @@ L(z)=\sum_{n=1}^{\infty}z^{n!}=z^{1}+z^{2}+z^{6}+z^{24}+z^{120}+\cdots
 
 \end_deeper
 \begin_layout Section
+发散级数的正则化理论
+\end_layout
+
+\begin_layout Subsection
+交错幂和
+\end_layout
+
+\begin_layout Standard
+交错幂和（Alternating Power Sum）定义为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\sum_{k=1}^{\infty}(-1)^{k-1}k^{n}=1^{n}-2^{n}+3^{n}-4^{n}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 是一个非负整数。
+当
+\begin_inset Formula $n=0$
+\end_inset
+
+时它就是格兰迪级数。
+
+\end_layout
+
+\begin_layout Standard
+对于任何 
+\begin_inset Formula $n\ge0$
+\end_inset
+
+，
+这个级数在传统意义上都是发散的，
+部分和会无限增大或在两个值之间震荡。
+我们所讨论的“和”是在
+\series bold
+解析延拓
+\series default
+意义下的正则化和 (Regularized Sum)。
+这个和可以通过狄利克雷Eta函数 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 在负整数点 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 的值来定义。
+
+\end_layout
+
+\begin_layout Subsection
+格兰迪级数
+\end_layout
+
+\begin_layout Standard
+格兰迪级数是下面这个无穷级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-1+1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也可以写成求和形式：
+
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}(-1)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个级数以18世纪的意大利数学家、哲学家和神父路易吉·格兰迪 (Luigi Grandi) 的名字命名。
+
+\end_layout
+
+\begin_layout Enumerate
+观点一：
+和为 0
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果我们像这样给级数加括号：
+
+\begin_inset Formula 
+\[
+(1-1)+(1-1)+(1-1)+\cdots
+\]
+
+\end_inset
+
+那么结果就是：
+
+\begin_inset Formula 
+\[
+0+0+0+\cdots=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+观点二：
+和为 1
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果我们换一种方式加括号：
+
+\begin_inset Formula 
+\[
+1+(-1+1)+(-1+1)+(-1+1)+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么结果就变成了：
+
+\begin_inset Formula 
+\[
+1+0+0+0+\cdots=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+观点三：
+和为 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这种方法在当时最具争议性，
+但后来被证明在特定数学框架下是合理的。
+假设这个级数有一个和，
+我们称之为 S：
+
+\begin_inset Formula 
+\[
+S=1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+那么，
+我们可以做一个简单的代数变换：
+
+\begin_inset Formula 
+\[
+1-S=1-(1-1+1-1+\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-S=1-1+1-1+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们发现 
+\begin_inset Formula $1-S$
+\end_inset
+
+ 等于原始的级数 `S`。
+所以：
+
+\begin_inset Formula 
+\[
+1-S=S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+解这个方程：
+
+\begin_inset Formula 
+\[
+S=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+在现代数学中，
+我们对“和”有了更严格的定义。
+
+\end_layout
+
+\begin_layout Enumerate
+收敛与发散 (Convergence and Divergence)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+一个无穷级数的“和”被定义为其
+\series bold
+ 部分和序列
+\series default
+ (sequence of partial sums) 的极限。
+如果这个极限存在且唯一，
+我们就说这个级数是收敛 (convergent)的；
+否则，
+它就是发散 (divergent) 的。
+
+\end_layout
+
+\begin_layout Standard
+我们来看看格兰迪级数的部分和：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{2}=1-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{3}=1-1+1=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{4}=1-1+1-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个部分和序列是 
+\begin_inset Formula $1,0,1,0,1,0,\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+很明显，
+这个序列并不会趋近于任何一个单一的、确定的极限。
+它在 1 和 0 之间来回震荡。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+根据标准的柯西收敛判别法，
+格兰迪级数是发散的，
+它没有和。
+
+\end_layout
+
+\begin_layout Standard
+从这个角度看，
+前面提到的观点一和观点二之所以错误，
+是因为它们违反了无穷级数加法的结合律—
+—
+
+\series bold
+只有当级数绝对收敛时，
+才能任意添加括号
+\series default
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+可和性方法 (Summability Methods)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+尽管格兰迪级数在传统意义上是发散的，
+但数学家们发展了一些更广义的“求和”方法，
+可以为某些发散级数赋予一个合理的值。
+这些方法被称为可和性方法。
+
+\end_layout
+
+\begin_layout Standard
+其中最著名的一种是切萨罗求和 (Cesàro summation)。
+
+\end_layout
+
+\begin_layout Standard
+切萨罗和的核心思想是：
+不直接看部分和序列 
+\begin_inset Formula $(S_{n})$
+\end_inset
+
+ 的极限，
+而是去看部分和的算术平均值序列 
+\begin_inset Formula $(a_{n})$
+\end_inset
+
+ 的极限。
+
+\begin_inset Formula 
+\[
+a_{n}=\frac{S_{1}+S_{2}+\cdots+S_{n}}{n}
+\]
+
+\end_inset
+
+我们来计算格兰迪级数的这个平均值序列：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{1}=\frac{1}{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{2}=\frac{1+0}{2}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{3}=\frac{1+0+1}{3}=\frac{2}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{4}=\frac{1+0+1+0}{4}=\frac{2}{4}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{5}=\frac{1+0+1+0+1}{5}=\frac{3}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{6}=\frac{1+0+1+0+1+0}{6}=\frac{3}{6}=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以观察到，
+当 n 为偶数时，
+
+\begin_inset Formula $a_{n}=1/2$
+\end_inset
+
+；
+当 n 为奇数时，
+
+\begin_inset Formula $a_{n}=(n+1)/(2n)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+随着 n 趋向于无穷大，
+奇数项的极限也是：
+
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{n+1}{2n}=\lim_{n\to\infty}(\frac{1}{2}+\frac{1}{2n})=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+部分和的算术平均值序列确实收敛于 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们可以说，
+格兰迪级数的切萨罗和是 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+像阿贝尔求和 (Abel summation) 等其他更强大的可和性方法，
+同样会得到 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ 这个结果。
+这表明 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ 是一个非常“自然”的赋值。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+在标准微积分中：
+格兰迪级数 
+\begin_inset Formula $1-1+1-1+\cdots$
+\end_inset
+
+ 是 发散的，
+没有和。
+
+\end_layout
+
+\begin_layout Standard
+在更广义的数学框架下：
+使用像切萨罗求和这样的可和性方法，
+可以给这个级数赋予一个确定的值 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Subsubsection
+格兰迪级数序列
+\end_layout
+
+\begin_layout Standard
+序列：
+
+\begin_inset Formula $(1,-1,1,-1,\ldots)$
+\end_inset
+
+，
+即 
+\begin_inset Formula $a_{n}=(-1)^{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+生成函数：
+
+\begin_inset Formula 
+\[
+G(x)=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+闭合形式：
+这是一个首项 (first term)
+\begin_inset Formula $a=1$
+\end_inset
+
+，
+公比(common ratio)为 
+\begin_inset Formula $-x$
+\end_inset
+
+ 的几何级数。
+对于一个无穷几何级数，
+当其公比的绝对值小于 1 (即 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+) 时，
+它的和有一个简单的闭合形式：
+
+\begin_inset Formula $Sum=\frac{a}{1-r}$
+\end_inset
+
+,将我们的首项和公比代入：
+
+\begin_inset Formula 
+\[
+G(x)=\frac{1}{1-(-x)}=\frac{1}{1+x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{matrix}+1\\
+-1\\
++1\\
+-1\\
+\cdots
+\end{matrix}\right]\cdot\left[\begin{matrix}x^{0} & x^{1} & x^{2} & x^{3} & \cdots\end{matrix}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\:S=1\cdot x^{0}-1\cdot x^{1}+1\cdot x^{2}-1\cdot x^{3}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $xS=\,\,\;\;\;\;\;1\cdot x^{1}-1\cdot x^{2}+1\cdot x^{3}-1\cdot x^{4}+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S+xS=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S(1+x)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=\frac{1}{1+x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们想求的是原始级数的和，
+即所有系数的和：
+
+\begin_inset Formula $a_{0}+a_{1}+a_{2}+\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+观察生成函数的定义：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们令 
+\begin_inset Formula $x=1$
+\end_inset
+
+，
+那么右边就变成了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G(1)=a_{0}+a_{1}(1)+a_{2}(1)^{2}+\cdots=a_{0}+a_{1}+a_{2}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们只需要计算闭合形式在 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 处的值即可：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Sum}=G(1)=\frac{1}{1+1}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+重要提醒：
+关于收敛性
+\end_layout
+
+\begin_layout Standard
+和切萨罗求和一样，
+这个方法也有一个需要注意的关键点。
+
+\end_layout
+
+\begin_layout Standard
+几何级数求和公式 
+\begin_inset Formula $\sum r^{n}=\frac{1}{1-r}$
+\end_inset
+
+ 成立的条件是 
+\begin_inset Formula $|r|<1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在我们的例子中，
+
+\begin_inset Formula $r=-x$
+\end_inset
+
+，
+所以我们的生成函数等式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-x+x^{2}-x^{3}+\cdots=\frac{1}{1+x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+只在 
+\begin_inset Formula $|-x|<1$
+\end_inset
+
+ (即 
+\begin_inset Formula $|x|<1$
+\end_inset
+
+) 的收敛半径内严格成立。
+
+\end_layout
+
+\begin_layout Standard
+我们最后代入的 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 这个点，
+（解析延拓）正好处在收敛半径的边界上，
+原始级数在这一点是发散的。
+
+\end_layout
+
+\begin_layout Subsection
+伯努利数（Bernoulli Numbers）
+\end_layout
+
+\begin_layout Standard
+伯努利数是一个与数论、组合数学和分析学等多个数学分支紧密相关的有理数序列，
+通常记为 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+。
+它最初由雅各布·伯努利（Jacob Bernoulli）在研究等幂求和问题时发现。
+
+\end_layout
+
+\begin_layout Definition
+伯努利数最常见和最优雅的定义是通过指数生成函数 (Exponential Generating Function)：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\frac{x}{e^{x}-1}=\sum_{n=0}^{\infty}B_{n}\frac{x^{n}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+这个公式的左边是一个函数，
+右边是这个函数的泰勒级数（Maclaurin级数）展开。
+级数中 
+\begin_inset Formula $x^{n}/n!$
+\end_inset
+
+ 的系数 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ 就是第 
+\begin_inset Formula $n$
+\end_inset
+
+ 个伯努利数。
+
+\end_layout
+
+\begin_layout Standard
+直接从生成函数求伯努利数比较抽象，
+实际计算中通常使用递推公式 (Recursive Formula)。
+
+\end_layout
+
+\begin_layout Standard
+我们可以将生成函数的定义式变形：
+
+\begin_inset Formula 
+\[
+x=(e^{x}-1)\left(\sum_{k=0}^{\infty}B_{k}\frac{x^{k}}{k!}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将 
+\begin_inset Formula $e^{x}-1$
+\end_inset
+
+ 也展开为泰勒级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{x}-1=\sum_{j=1}^{\infty}\frac{x^{j}}{j!}=x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将两个级数相乘，
+然后比较等式两边 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数，
+可以得到：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 常数项 (
+\begin_inset Formula $n=0$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 对于
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 的 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 项:
+\end_layout
+
+\begin_layout Standard
+等式左边 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数为 0。
+右边通过柯西乘积得到 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数为 
+\begin_inset Formula $\sum_{k=0}^{n-1}\frac{B_{k}}{k!}\frac{1}{(n-k)!}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+两边乘以 
+\begin_inset Formula $n!$
+\end_inset
+
+ 得到一个更简洁的递推关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{n}\binom{n+1}{k}B_{k}=0\quad(\text{对于 }n\ge1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $\binom{n+1}{k}$
+\end_inset
+
+ 是二项式系数。
+
+\end_layout
+
+\begin_layout Standard
+这个递推公式可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{n}=-\frac{1}{n+1}\sum_{k=0}^{n-1}\binom{n+1}{k}B_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+**计算示例**：
+
+\end_layout
+
+\begin_layout Standard
+* **n=1**:
+\end_layout
+
+\begin_layout Standard
+$
+\backslash
+binom{2}{0}B_0 + 
+\backslash
+binom{2}{1}B_1 = 0 
+\backslash
+implies 1 
+\backslash
+cdot 1 + 2 
+\backslash
+cdot B_1 = 0 
+\backslash
+implies B_1 = -
+\backslash
+frac{1}{2}$
+\end_layout
+
+\begin_layout Standard
+* **n=2**:
+\end_layout
+
+\begin_layout Standard
+$
+\backslash
+binom{3}{0}B_0 + 
+\backslash
+binom{3}{1}B_1 + 
+\backslash
+binom{3}{2}B_2 = 0 
+\backslash
+implies 1 
+\backslash
+cdot 1 + 3 
+\backslash
+cdot (-
+\backslash
+frac{1}{2}) + 3 
+\backslash
+cdot B_2 = 0 
+\backslash
+implies 1 - 
+\backslash
+frac{3}{2} + 3B_2 = 0 
+\backslash
+implies B_2 = 
+\backslash
+frac{1}{6}$
+\end_layout
+
+\begin_layout Standard
+* **n=3**:
+\end_layout
+
+\begin_layout Standard
+$
+\backslash
+binom{4}{0}B_0 + 
+\backslash
+binom{4}{1}B_1 + 
+\backslash
+binom{4}{2}B_2 + 
+\backslash
+binom{4}{3}B_3 = 0 
+\backslash
+implies 1 
+\backslash
+cdot 1 + 4 
+\backslash
+cdot (-
+\backslash
+frac{1}{2}) + 6 
+\backslash
+cdot (
+\backslash
+frac{1}{6}) + 4 
+\backslash
+cdot B_3 = 0 
+\backslash
+implies 1 - 2 + 1 + 4B_3 = 0 
+\backslash
+implies B_3 = 0$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 前几个伯努利数
+\end_layout
+
+\begin_layout Standard
+| n | $B_n$ |
+\end_layout
+
+\begin_layout Standard
+| --- | ------------- |
+\end_layout
+
+\begin_layout Standard
+| 0 | 1 |
+\end_layout
+
+\begin_layout Standard
+| 1 | -1/2 |
+\end_layout
+
+\begin_layout Standard
+| 2 | 1/6 |
+\end_layout
+
+\begin_layout Standard
+| 3 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 4 | -1/30 |
+\end_layout
+
+\begin_layout Standard
+| 5 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 6 | 1/42 |
+\end_layout
+
+\begin_layout Standard
+| 7 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 8 | -1/30 |
+\end_layout
+
+\begin_layout Standard
+| 9 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 10 | 5/66 |
+\end_layout
+
+\begin_layout Standard
+| 11 | 0 |
+\end_layout
+
+\begin_layout Standard
+| 12 | -691/2730 |
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+重要性质
+\end_layout
+
+\begin_layout Standard
+1.
+ 奇数项为零：
+除了 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 以外，
+所有奇数项的伯努利数都为零。
+即 
+\begin_inset Formula $B_{2k+1}=0$
+\end_inset
+
+ 对于 
+\begin_inset Formula $k\ge1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+原因：
+函数 
+\begin_inset Formula $f(x)=\frac{x}{e^{x}-1}+\frac{x}{2}$
+\end_inset
+
+ 是一个偶函数（即 $f(x) = f(-x)$）。
+它的泰勒级数只包含 
+\begin_inset Formula $x$
+\end_inset
+
+ 的偶次项。
+而这个函数的级数展开正好消去了 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 项，
+并证明了其他所有奇数项的系数必须为零。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 符号交替：
+偶数项的伯努利数 
+\begin_inset Formula $B_{2k}$
+\end_inset
+
+ ($k 
+\backslash
+ge 1$) 的符号是正负交替的 (
+\begin_inset Formula $+,-,+,-,\dots$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ **$B_1$ 的两种约定**：
+
+\end_layout
+
+\begin_layout Standard
+* **现代约定** (本文采用)：
+$B_1 = -1/2$。
+这是目前数学界和计算机代数系统（如 Mathematica,
+ Maple）的标准。
+
+\end_layout
+
+\begin_layout Standard
+* **历史约定**：
+有时会定义 
+\begin_inset Formula $B_{1}=+1/2$
+\end_inset
+
+。
+这对应于另一个生成函数 $
+\backslash
+frac{x}{1 - e^{-x}}$。
+在使用不同文献时需要注意这个区别。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+伯努利数的应用
+\end_layout
+
+\begin_layout Standard
+伯努利数之所以重要，
+是因为它们出人意料地出现在许多重要的数学公式中。
+
+\end_layout
+
+\begin_layout Standard
+#### a.
+ 等幂求和公式（Faulhaber's formula）
+\end_layout
+
+\begin_layout Standard
+这是伯努利数最初被发现的场景。
+它给出了连续整数的 $p$ 次方和的通用公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{N-1}k^{p}=\frac{1}{p+1}\sum_{k=0}^{p}\binom{p+1}{k}B_{k}N^{p+1-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+**示例 ($p=2$)**：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=0}^{N-1}k^{2}=1^{2}+2^{2}+\dots+(N-1)^{2}=\frac{1}{3}\left(\binom{3}{0}B_{0}N^{3}+\binom{3}{1}B_{1}N^{2}+\binom{3}{2}B_{2}N^{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入 
+\begin_inset Formula $B_{0}=1,B_{1}=-1/2,B_{2}=1/6$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{3}\left(1\cdot1\cdot N^{3}+3\cdot(-\frac{1}{2})\cdot N^{2}+3\cdot\frac{1}{6}\cdot N\right)=\frac{N^{3}}{3}-\frac{N^{2}}{2}+\frac{N}{6}=\frac{N(N-1)(2N-1)}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这正是我们熟知的平方和公式。
+
+\end_layout
+
+\begin_layout Standard
+#### b.
+ 黎曼Zeta函数（Riemann Zeta Function）
+\end_layout
+
+\begin_layout Standard
+伯努利数与黎曼Zeta函数在偶数正整数点上的值有精确的关系，
+这是由欧拉发现的：
+
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+zeta(2k) = 
+\backslash
+sum_{n=1}^{
+\backslash
+infty} 
+\backslash
+frac{1}{n^{2k}} = (-1)^{k+1} 
+\backslash
+frac{(2
+\backslash
+pi)^{2k} B_{2k}}{2(2k)!}
+\end_layout
+
+\begin_layout Standard
+$$
+\end_layout
+
+\begin_layout Standard
+**示例**：
+
+\end_layout
+
+\begin_layout Standard
+* **k=1**:
+ $
+\backslash
+zeta(2) = 1 + 
+\backslash
+frac{1}{4} + 
+\backslash
+frac{1}{9} + 
+\backslash
+dots = (-1)^2 
+\backslash
+frac{(2
+\backslash
+pi)^2 B_2}{2(2)!} = 
+\backslash
+frac{4
+\backslash
+pi^2 (1/6)}{4} = 
+\backslash
+frac{
+\backslash
+pi^2}{6}$ （巴塞尔问题）。
+
+\end_layout
+
+\begin_layout Standard
+* **k=2**:
+ $
+\backslash
+zeta(4) = 1 + 
+\backslash
+frac{1}{16} + 
+\backslash
+frac{1}{81} + 
+\backslash
+dots = (-1)^3 
+\backslash
+frac{(2
+\backslash
+pi)^4 B_4}{2(4)!} = -
+\backslash
+frac{16
+\backslash
+pi^4 (-1/30)}{48} = 
+\backslash
+frac{
+\backslash
+pi^4}{90}$。
+
+\end_layout
+
+\begin_layout Standard
+这个关系揭示了数论（Zeta函数）、分析（$
+\backslash
+pi$）和组合学（伯努利数）之间的深刻联系。
+
+\end_layout
+
+\begin_layout Standard
+#### c.
+ 三角函数的泰勒级数展开
+\end_layout
+
+\begin_layout Standard
+伯努利数也出现在正切、余切等函数的展开式中：
+
+\end_layout
+
+\begin_layout Standard
+* **余切**:
+ $x 
+\backslash
+cot(x) = 
+\backslash
+sum_{k=0}^{
+\backslash
+infty} (-1)^k B_{2k} 
+\backslash
+frac{(2x)^{2k}}{(2k)!}$
+\end_layout
+
+\begin_layout Standard
+* **正切**:
+ $
+\backslash
+tan(x) = 
+\backslash
+sum_{k=1}^{
+\backslash
+infty} (-1)^{k-1} B_{2k} 
+\backslash
+frac{2^{2k}(2^{2k}-1)}{(2k)!} x^{2k-1}$
+\end_layout
+
+\begin_layout Standard
+#### d.
+ 欧拉-麦克劳林公式（Euler-Maclaurin Formula）
+\end_layout
+
+\begin_layout Standard
+这是一个强大的公式，
+用于连接离散求和与连续积分，
+其修正项中包含伯努利数。
+它在数值分析和近似计算中非常重要。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=a}^{b}f(k)\approx\int_{a}^{b}f(x)dx+\frac{f(a)+f(b)}{2}+\sum_{k=1}^{\infty}\frac{B_{2k}}{(2k)!}(f^{(2k-1)}(b)-f^{(2k-1)}(a))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 黎曼Zeta函数
 \end_layout
 
@@ -95594,7 +95297,485 @@ L(z)=\sum_{n=1}^{\infty}z^{n!}=z^{1}+z^{2}+z^{6}+z^{24}+z^{120}+\cdots
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Standard
+Eta函数和Zeta函数之间有一个非常简单的关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\eta(s)=(1-2^{1-s})\zeta(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个关系式最初在 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+ 的区域推导得出，
+但通过解析延拓，
+它在整个复平面上都成立。
+
+\end_layout
+
+\begin_layout Standard
+将 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 代入，
+我们得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\eta(-n)=(1-2^{1-(-n)})\zeta(-n)=(1-2^{n+1})\zeta(-n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $\zeta(-n)$
+\end_inset
+
+ 是解析延拓后的黎曼Zeta函数在负整数点的值。
+
+\end_layout
+
+\begin_layout Standard
+幸运的是，
+
+\begin_inset Formula $\zeta(-n)$
+\end_inset
+
+ 的值是已知的，
+并且与伯努利数 (Bernoulli numbers)相关：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\zeta(-n)=-\frac{B_{n+1}}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $B_{k}$
+\end_inset
+
+ 是第 
+\begin_inset Formula $k$
+\end_inset
+
+ 个伯努利数。
+
+\end_layout
+
+\begin_layout Standard
+将这个结果代入 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的表达式，
+我们得到了一个计算 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的通用公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=(1-2^{n+1})\left(-\frac{B_{n+1}}{n+1}\right)=\frac{(2^{n+1}-1)B_{n+1}}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算具体的值
+\end_layout
+
+\begin_layout Standard
+现在我们可以用这个公式来计算前几个 
+\begin_inset Formula $n$
+\end_inset
+
+ 对应的级数值。
+
+\end_layout
+
+\begin_layout Standard
+需要用到的伯努利数 (
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 有两种约定，
+这里使用 
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+ 的现代约定)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{2}=1/6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{4}=-1/30$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{5}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{6}=1/42$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $n=0$
+\end_inset
+
+:
+ 格兰迪级数
+\begin_inset Formula $S_{0}=1^{0}-2^{0}+3^{0}-4^{0}+\cdots=1-1+1-1+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+使用公式：
+
+\begin_inset Formula 
+\[
+S_{0}=\frac{(2^{0+1}-1)B_{0+1}}{0+1}=\frac{(2-1)B_{1}}{1}=B_{1}=-\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+问题在于伯努利数的约定。
+如果我们使用 
+\begin_inset Formula $B_{1}=1/2$
+\end_inset
+
+ 的旧约定，
+结果就是
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+但更根本的原因是，
+我们使用的级数求和是从 
+\begin_inset Formula $k=1$
+\end_inset
+
+ 开始的，
+而格兰迪级数的标准形式 
+\begin_inset Formula $\sum_{k=0}^{\infty}(-1)^{k}$
+\end_inset
+
+ 是从 
+\begin_inset Formula $k=0$
+\end_inset
+
+ 开始的。
+
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}(-1)^{k}=1+(-1+1-1+\cdots)=1-S_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $S_{0}=1/2$
+\end_inset
+
+ (使用 
+\begin_inset Formula $B_{1}=1/2$
+\end_inset
+
+ 约定)，
+那么 
+\begin_inset Formula $1-1/2=1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $S_{0}=-1/2$
+\end_inset
+
+ (使用 
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+ 约定)，
+我们需要检查公式的推导。
+
+\end_layout
+
+\begin_layout Standard
+让我们用最直接的阿贝尔求和法来验证 
+\begin_inset Formula $n=0$
+\end_inset
+
+ 的情况：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=\sum_{k=1}^{\infty}(-1)^{k-1}k^{0}x^{k}=x-x^{2}+x^{3}-\cdots=\frac{x}{1+x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $x\to1^{-}$
+\end_inset
+
+,
+ 值为 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以 
+\begin_inset Formula $1-1+1-1+\cdots=1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $S_{0}=1-1+1-\cdots$
+\end_inset
+
+ 确实是 
+\begin_inset Formula $1/2$
+\end_inset
+
+。
+公式中的伯努利数部分需要小心处理，
+特别是 
+\begin_inset Formula $n=0$
+\end_inset
+
+ 的情况。
+公式在
+\begin_inset Formula $n\ge1$
+\end_inset
+
+ 时更可靠。
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $S_{1}=1-2+3-4+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式 (
+\begin_inset Formula $n=1$
+\end_inset
+
+):
+\begin_inset Formula $S_{1}=\frac{(2^{1+1}-1)B_{1+1}}{1+1}=\frac{(4-1)B_{2}}{2}=\frac{3\cdot(1/6)}{2}=\frac{1/2}{2}=\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是一个非常经典的结果。
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+n = 2
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=1^{2}-2^{2}+3^{2}-4^{2}+\cdots=1-4+9-16+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式 (
+\begin_inset Formula $n=2$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{2}=\frac{(2^{2+1}-1)B_{2+1}}{2+1}=\frac{(8-1)B_{3}}{3}=\frac{7\cdot0}{3}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个结果也很著名，
+该级数的正则化和为 0。
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+n = 3:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{3}=1^{3}-2^{3}+3^{3}-4^{3}+\cdots=1-8+27-64+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式 (
+\begin_inset Formula $n=3$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+S_{3}=\frac{(2^{3+1}-1)B_{3+1}}{3+1}=\frac{(16-1)B_{4}}{4}=\frac{15\cdot(-1/30)}{4}=\frac{-1/2}{4}=-\frac{1}{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看到，
+当
+\begin_inset Formula $n$
+\end_inset
+
+ 是大于等于2的偶数时，
+由于 
+\begin_inset Formula $B_{n+1}$
+\end_inset
+
+ (奇数下标的伯努利数) 为0，
+所以级数的和也为0。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
 巴塞尔问题
 \end_layout
 
@@ -96369,7 +96550,186 @@ x^{2}=\frac{\pi^{2}}{3}+\sum_{n=1}^{\infty}\frac{4(-1)^{n}}{n^{2}}\cos(nx)
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
+与所有自然数之和的联系
+\end_layout
+
+\begin_layout Standard
+所有自然数之和
+\begin_inset Formula $S=1+2+3+4+\cdots$
+\end_inset
+
+ 对应于黎曼Zeta函数在 
+\begin_inset Formula $s=-1$
+\end_inset
+
+ 处的值，
+即 
+\begin_inset Formula $S=\zeta(-1)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+使用公式计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=\zeta(-1)=-\frac{B_{1+1}}{1+1}=-\frac{B_{2}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代入 
+\begin_inset Formula $B_{2}=1/6$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=-\frac{1/6}{2}=-\frac{1}{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+一种巧妙的启发式推导（非严格证明）：
+
+\end_layout
+
+\begin_layout Standard
+它通过级数间的线性组合来获得结果。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 定义 
+\begin_inset Formula $A=1-1+1-1+\cdots=1/2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 定义 
+\begin_inset Formula $B=1-2+3-4+\cdots=1/4$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 建立 
+\begin_inset Formula $B$
+\end_inset
+
+ 与自然数之和
+\begin_inset Formula $S=1+2+3+\cdots$
+\end_inset
+
+ 的关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S-B=(1+2+3+\cdots)-(1-2+3-4+\cdots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S-B=(1-1)+(2-(-2))+(3-3)+(4-(-4))+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S-B=0+4+0+8+0+12+\cdots=4(1+2+3+\cdots)=4S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 整理得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S-B=4S\implies-3S=B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 代入已求得的 
+\begin_inset Formula $B=1/4$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-3S=\frac{1}{4}\implies S=-\frac{1}{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个推导虽然在数学上不严谨（因为它对发散级数进行了四则运算），
+但它以一种非常巧妙的方式得到了与解析延拓一致的惊人结果。
+
+\end_layout
+
+\begin_layout Subsubsection
 与素数的深刻联系：
 欧拉乘积公式
 \end_layout
@@ -96421,7 +96781,7 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 解析延拓
 \end_layout
 
@@ -96470,7 +96830,7 @@ Zeta函数的现代重要性来自于黎曼的贡献。
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Zeta函数在负整数点的值
 \end_layout
 
@@ -96478,16 +96838,16 @@ Zeta函数在负整数点的值
 通过解析延拓，
 我们可以计算Zeta函数在那些原始级数发散的点的值，
 结果非常惊人且重要。
-这些值与**伯努利数 (
+这些值与伯努利数 (
 \begin_inset Formula $B_{n}$
 \end_inset
 
-)** 密切相关。
+) 密切相关。
 
 \end_layout
 
 \begin_layout Standard
-* **平凡零点 (Trivial Zeros)**：
+平凡零点 (Trivial Zeros)：
 对于所有负偶数 
 \begin_inset Formula $s=-2,-4,-6,\ldots$
 \end_inset
@@ -96514,14 +96874,13 @@ Zeta函数在负整数点的值
 \end_layout
 
 \begin_layout Standard
-* **负奇数值**：
+负奇数值：
 对于负奇数，
 其值是非零的：
 
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $\zeta(0)=-1/2$
 \end_inset
 
@@ -96529,17 +96888,17 @@ Zeta函数在负整数点的值
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $\zeta(-1)=-1/12$
 \end_inset
 
- (这正是 $1+2+3+
-\backslash
-cdots = -1/12$ 的来源)
+ (这正是 
+\begin_inset Formula $1+2+3+\cdots=-1/12$
+\end_inset
+
+ 的来源)
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $\zeta(-3)=1/120$
 \end_inset
 
@@ -96547,7 +96906,6 @@ cdots = -1/12$ 的来源)
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $\zeta(-5)=-1/252$
 \end_inset
 
@@ -96575,7 +96933,7 @@ cdots = -1/12$ 的来源)
 
 \begin_layout Standard
 黎曼在研究Zeta函数时，
-最关心的是它的**零点 (zeros)**，
+最关心的是它的零点 (zeros)，
 即那些使 
 \begin_inset Formula $\zeta(s)=0$
 \end_inset
@@ -96597,8 +96955,8 @@ cdots = -1/12$ 的来源)
 \begin_layout Standard
 是的，
 还有无穷多个！
-这些零点被称为**非平凡零点 (non-trivial zeros)**。
-黎曼证明了所有非平凡零点都位于所谓的**临界带 (critical strip)** 中，
+这些零点被称为非平凡零点 (non-trivial zeros)。
+黎曼证明了所有非平凡零点都位于所谓的**临界带 (critical strip) 中，
 即满足 
 \begin_inset Formula $0<\text{Re}(s)<1$
 \end_inset
@@ -96609,12 +96967,12 @@ cdots = -1/12$ 的来源)
 
 \begin_layout Standard
 然后，
-他提出了一个深刻的猜想：
+他提出了一个深刻的猜想。
 
 \end_layout
 
-\begin_layout Standard
-> **黎曼猜想 (Riemann Hypothesis)**：
+\begin_layout Subsubsection
+黎曼猜想 (Riemann Hypothesis)：
 
 \end_layout
 
@@ -96632,8 +96990,8 @@ cdots = -1/12$ 的来源)
 \end_layout
 
 \begin_layout Standard
-**为什么这个猜想如此重要？
-**
+为什么这个猜想如此重要？
+
 \end_layout
 
 \begin_layout Standard
@@ -96642,7 +97000,7 @@ cdots = -1/12$ 的来源)
 \end_layout
 
 \begin_layout Standard
-* 如果黎曼猜想成立，
+如果黎曼猜想成立，
 我们就能对素数的分布规律有前所未有的精确理解。
 例如，
 我们可以得到关于**素数计数函数 
@@ -96654,7 +97012,7 @@ cdots = -1/12$ 的来源)
 \end_layout
 
 \begin_layout Standard
-* 许多数论中的重要定理都是在“假设黎曼猜想成立”的前提下被证明的。
+许多数论中的重要定理都是在“假设黎曼猜想成立”的前提下被证明的。
 如果猜想被证实，
 这些定理也将被自动证实。
 
@@ -96672,6 +97030,326 @@ cdots = -1/12$ 的来源)
 
 \end_layout
 
+\begin_layout Subsection
+狄利克雷Eta函数
+\end_layout
+
+\begin_layout Standard
+狄利克雷Eta函数 (
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+)定义为：
+
+\begin_inset Formula 
+\[
+\eta(s)=\sum_{k=1}^{\infty}\frac{(-1)^{k-1}}{k^{s}}=\frac{1}{1^{s}}-\frac{1}{2^{s}}+\frac{1}{3^{s}}-\frac{1}{4^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个级数在复数 
+\begin_inset Formula $s$
+\end_inset
+
+ 的实部 
+\begin_inset Formula $\text{Re}(s)>0$
+\end_inset
+
+ 时收敛。
+
+\end_layout
+
+\begin_layout Standard
+我们想求的级数是 
+\begin_inset Formula $S_{n}=1^{n}-2^{n}+3^{n}-\cdots$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+形式上看，
+这似乎是 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 在 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 处的值：
+
+\begin_inset Formula 
+\[
+S_{n}=\eta(-n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由于我们感兴趣的 
+\begin_inset Formula $n$
+\end_inset
+
+ 是非负整数，
+所以 
+\begin_inset Formula $-n\le0$
+\end_inset
+
+，
+这超出了 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 级数定义的收敛范围。
+但是，
+我们可以对 
+\begin_inset Formula $\eta(s)$
+\end_inset
+
+ 函数进行解析延拓，
+使其在整个复平面上都有定义。
+因此，
+
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 的值就是这个延拓后的 
+\begin_inset Formula $\eta$
+\end_inset
+
+ 函数在 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 处的值。
+
+\end_layout
+
+\begin_layout Standard
+解析延拓后的Eta函数与黎曼Zeta函数 
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+ 在整个复平面上满足以下关系：
+
+\begin_inset Formula 
+\[
+\eta(s)=(1-2^{1-s})\zeta(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将 
+\begin_inset Formula $s=-n$
+\end_inset
+
+ 代入上式，
+我们得到 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ 与 
+\begin_inset Formula $\zeta(-n)$
+\end_inset
+
+ 的关系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=\eta(-n)=(1-2^{1-(-n)})\zeta(-n)=(1-2^{n+1})\zeta(-n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+此外，
+Zeta函数在非正整数点的值与伯努利数 (Bernoulli Numbers,
+ 
+\begin_inset Formula $B_{k}$
+\end_inset
+
+) 有着深刻的联系：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\zeta(-n)=-\frac{B_{n+1}}{n+1}\quad(\text{对于 }n\ge0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将此关系代入，
+我们得到最终的通用求和公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{n}=(1-2^{n+1})\left(-\frac{B_{n+1}}{n+1}\right)=\frac{(2^{n+1}-1)B_{n+1}}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+（注：
+这里我们使用现代约定，
+即
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+。
+常用的伯努利数有 
+\begin_inset Formula $B_{1}=-1/2,B_{2}=1/6,B_{3}=0,B_{4}=-1/30,\dots$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Case
+：
+n = 0 (格兰迪级数)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $S_{0}=1^{0}-2^{0}+3^{0}-4^{0}+\cdots=1-1+1-1+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式计算：
+
+\end_layout
+
+\begin_layout Standard
+根据关系 
+\begin_inset Formula $S_{n}=\eta(-n)$
+\end_inset
+
+ 和 
+\begin_inset Formula $\eta(s)=(1-2^{1-s})\zeta(s)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{0}=\eta(0)=(1-2^{1-0})\zeta(0)=(-1)\zeta(0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+而已知 
+\begin_inset Formula $\zeta(0)=-1/2$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{0}=(-1)\times(-1/2)=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+：
+n = 1
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $S_{1}=1^{1}-2^{1}+3^{1}-4^{1}+\cdots=1-2+3-4+\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+使用公式计算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{1}=\eta(-1)=\frac{(2^{1+1}-1)B_{1+1}}{1+1}=\frac{(2^{2}-1)B_{2}}{2}=\frac{3B_{2}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+已知 
+\begin_inset Formula $B_{2}=1/6$
+\end_inset
+
+，
+所以：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{1}=\frac{3\times(1/6)}{2}=\frac{1/2}{2}=\frac{1}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Chapter
 概率论
 \end_layout
