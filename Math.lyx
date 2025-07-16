@@ -94687,174 +94687,578 @@ B_{n}=-\frac{1}{n+1}\sum_{k=0}^{n-1}\binom{n+1}{k}B_{k}
 
 \end_layout
 
+\begin_layout Case
+n=1:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-* **n=1**:
+\begin_inset Formula $\binom{2}{0}B_{0}+\binom{2}{1}B_{1}=0\implies1\cdot1+2\cdot B_{1}=0\implies B_{1}=-\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+n=2:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\binom{3}{0}B_{0}+\binom{3}{1}B_{1}+\binom{3}{2}B_{2}=0\implies1\cdot1+3\cdot(-\frac{1}{2})+3\cdot B_{2}=0\implies1-\frac{3}{2}+3B_{2}=0\implies B_{2}=\frac{1}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+n=3:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\binom{4}{0}B_{0}+\binom{4}{1}B_{1}+\binom{4}{2}B_{2}+\binom{4}{3}B_{3}=0\implies1\cdot1+4\cdot(-\frac{1}{2})+6\cdot(\frac{1}{6})+4\cdot B_{3}=0\implies1-2+1+4B_{3}=0\implies B_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+前几个伯努利数
 \end_layout
 
 \begin_layout Standard
-$
-\backslash
-binom{2}{0}B_0 + 
-\backslash
-binom{2}{1}B_1 = 0 
-\backslash
-implies 1 
-\backslash
-cdot 1 + 2 
-\backslash
-cdot B_1 = 0 
-\backslash
-implies B_1 = -
-\backslash
-frac{1}{2}$
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-* **n=2**:
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n 
 \end_layout
 
-\begin_layout Standard
-$
-\backslash
-binom{3}{0}B_0 + 
-\backslash
-binom{3}{1}B_1 + 
-\backslash
-binom{3}{2}B_2 = 0 
-\backslash
-implies 1 
-\backslash
-cdot 1 + 3 
-\backslash
-cdot (-
-\backslash
-frac{1}{2}) + 3 
-\backslash
-cdot B_2 = 0 
-\backslash
-implies 1 - 
-\backslash
-frac{3}{2} + 3B_2 = 0 
-\backslash
-implies B_2 = 
-\backslash
-frac{1}{6}$
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ 
 \end_layout
 
-\begin_layout Standard
-* **n=3**:
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n 
 \end_layout
 
-\begin_layout Standard
-$
-\backslash
-binom{4}{0}B_0 + 
-\backslash
-binom{4}{1}B_1 + 
-\backslash
-binom{4}{2}B_2 + 
-\backslash
-binom{4}{3}B_3 = 0 
-\backslash
-implies 1 
-\backslash
-cdot 1 + 4 
-\backslash
-cdot (-
-\backslash
-frac{1}{2}) + 6 
-\backslash
-cdot (
-\backslash
-frac{1}{6}) + 4 
-\backslash
-cdot B_3 = 0 
-\backslash
-implies 1 - 2 + 1 + 4B_3 = 0 
-\backslash
-implies B_3 = 0$
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ 
 \end_layout
 
-\begin_layout Standard
----
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+n 
 \end_layout
 
-\begin_layout Standard
-### 3.
- 前几个伯努利数
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B_{n}$
+\end_inset
+
+ 
 \end_layout
 
-\begin_layout Standard
-| n | $B_n$ |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-| --- | ------------- |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-| 0 | 1 |
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
 \end_layout
 
-\begin_layout Standard
-| 1 | -1/2 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
 \end_layout
 
-\begin_layout Standard
-| 2 | 1/6 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
 \end_layout
 
-\begin_layout Standard
-| 3 | 0 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
 \end_layout
 
-\begin_layout Standard
-| 4 | -1/30 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
 \end_layout
 
-\begin_layout Standard
-| 5 | 0 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{5}{66}$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-| 6 | 1/42 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-| 7 | 0 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
-\begin_layout Standard
-| 8 | -1/30 |
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
 \end_layout
 
-\begin_layout Standard
-| 9 | 0 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{2}$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-| 10 | 5/66 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
 \end_layout
 
-\begin_layout Standard
-| 11 | 0 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{42}$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-| 12 | -691/2730 |
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
 \end_layout
 
-\begin_layout Standard
----
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{691}{2730}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-\frac{1}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 重要性质
 \end_layout
 
-\begin_layout Standard
-1.
- 奇数项为零：
+\begin_layout Enumerate
+奇数项为零：
 除了 
 \begin_inset Formula $B_{1}$
 \end_inset
@@ -94873,6 +95277,7 @@ implies B_3 = 0$
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 原因：
 函数 
@@ -94894,9 +95299,9 @@ implies B_3 = 0$
 
 \end_layout
 
-\begin_layout Standard
-2.
- 符号交替：
+\end_deeper
+\begin_layout Enumerate
+符号交替：
 偶数项的伯努利数 
 \begin_inset Formula $B_{2k}$
 \end_inset
@@ -94911,39 +95316,45 @@ ge 1$) 的符号是正负交替的 (
 
 \end_layout
 
-\begin_layout Standard
-3.
- **$B_1$ 的两种约定**：
+\begin_layout Enumerate
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ 的两种约定：
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* **现代约定** (本文采用)：
-$B_1 = -1/2$。
+现代约定 (本文采用)：
+
+\begin_inset Formula $B_{1}=-1/2$
+\end_inset
+
+。
 这是目前数学界和计算机代数系统（如 Mathematica,
  Maple）的标准。
 
 \end_layout
 
 \begin_layout Standard
-* **历史约定**：
+历史约定：
 有时会定义 
 \begin_inset Formula $B_{1}=+1/2$
 \end_inset
 
 。
-这对应于另一个生成函数 $
-\backslash
-frac{x}{1 - e^{-x}}$。
+这对应于另一个生成函数 
+\begin_inset Formula $\frac{x}{1-e^{-x}}$
+\end_inset
+
+。
 在使用不同文献时需要注意这个区别。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
+\end_deeper
+\begin_layout Subsubsection
 伯努利数的应用
 \end_layout
 
@@ -94953,14 +95364,17 @@ frac{x}{1 - e^{-x}}$。
 
 \end_layout
 
-\begin_layout Standard
-#### a.
- 等幂求和公式（Faulhaber's formula）
+\begin_layout Paragraph
+等幂求和公式（Faulhaber's formula）
 \end_layout
 
 \begin_layout Standard
 这是伯努利数最初被发现的场景。
-它给出了连续整数的 $p$ 次方和的通用公式：
+它给出了连续整数的 
+\begin_inset Formula $p$
+\end_inset
+
+ 次方和的通用公式：
 
 \end_layout
 
@@ -94976,7 +95390,11 @@ frac{x}{1 - e^{-x}}$。
 \end_layout
 
 \begin_layout Standard
-**示例 ($p=2$)**：
+**示例 (
+\begin_inset Formula $p=2$
+\end_inset
+
+)**：
 
 \end_layout
 
@@ -95016,9 +95434,8 @@ frac{x}{1 - e^{-x}}$。
 
 \end_layout
 
-\begin_layout Standard
-#### b.
- 黎曼Zeta函数（Riemann Zeta Function）
+\begin_layout Paragraph
+黎曼Zeta函数（Riemann Zeta Function）
 \end_layout
 
 \begin_layout Standard
@@ -95028,27 +95445,14 @@ frac{x}{1 - e^{-x}}$。
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+\zeta(2k)=\sum_{n=1}^{\infty}\frac{1}{n^{2k}}=(-1)^{k+1}\frac{(2\pi)^{2k}B_{2k}}{2(2k)!}
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-zeta(2k) = 
-\backslash
-sum_{n=1}^{
-\backslash
-infty} 
-\backslash
-frac{1}{n^{2k}} = (-1)^{k+1} 
-\backslash
-frac{(2
-\backslash
-pi)^{2k} B_{2k}}{2(2k)!}
-\end_layout
 
-\begin_layout Standard
-$$
 \end_layout
 
 \begin_layout Standard
@@ -95058,53 +95462,21 @@ $$
 
 \begin_layout Standard
 * **k=1**:
- $
-\backslash
-zeta(2) = 1 + 
-\backslash
-frac{1}{4} + 
-\backslash
-frac{1}{9} + 
-\backslash
-dots = (-1)^2 
-\backslash
-frac{(2
-\backslash
-pi)^2 B_2}{2(2)!} = 
-\backslash
-frac{4
-\backslash
-pi^2 (1/6)}{4} = 
-\backslash
-frac{
-\backslash
-pi^2}{6}$ （巴塞尔问题）。
+ 
+\begin_inset Formula $\zeta(2)=1+\frac{1}{4}+\frac{1}{9}+\dots=(-1)^{2}\frac{(2\pi)^{2}B_{2}}{2(2)!}=\frac{4\pi^{2}(1/6)}{4}=\frac{\pi^{2}}{6}$
+\end_inset
+
+ （巴塞尔问题）。
 
 \end_layout
 
 \begin_layout Standard
 * **k=2**:
- $
-\backslash
-zeta(4) = 1 + 
-\backslash
-frac{1}{16} + 
-\backslash
-frac{1}{81} + 
-\backslash
-dots = (-1)^3 
-\backslash
-frac{(2
-\backslash
-pi)^4 B_4}{2(4)!} = -
-\backslash
-frac{16
-\backslash
-pi^4 (-1/30)}{48} = 
-\backslash
-frac{
-\backslash
-pi^4}{90}$。
+ 
+\begin_inset Formula $\zeta(4)=1+\frac{1}{16}+\frac{1}{81}+\dots=(-1)^{3}\frac{(2\pi)^{4}B_{4}}{2(4)!}=-\frac{16\pi^{4}(-1/30)}{48}=\frac{\pi^{4}}{90}$
+\end_inset
+
+。
 
 \end_layout
 
@@ -95115,9 +95487,8 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 
 \end_layout
 
-\begin_layout Standard
-#### c.
- 三角函数的泰勒级数展开
+\begin_layout Paragraph
+三角函数的泰勒级数展开
 \end_layout
 
 \begin_layout Standard
@@ -95127,33 +95498,23 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 
 \begin_layout Standard
 * **余切**:
- $x 
-\backslash
-cot(x) = 
-\backslash
-sum_{k=0}^{
-\backslash
-infty} (-1)^k B_{2k} 
-\backslash
-frac{(2x)^{2k}}{(2k)!}$
+\begin_inset Formula $x\cot(x)=\sum_{k=0}^{\infty}(-1)^{k}B_{2k}\frac{(2x)^{2k}}{(2k)!}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 * **正切**:
- $
-\backslash
-tan(x) = 
-\backslash
-sum_{k=1}^{
-\backslash
-infty} (-1)^{k-1} B_{2k} 
-\backslash
-frac{2^{2k}(2^{2k}-1)}{(2k)!} x^{2k-1}$
+ 
+\begin_inset Formula $\tan(x)=\sum_{k=1}^{\infty}(-1)^{k-1}B_{2k}\frac{2^{2k}(2^{2k}-1)}{(2k)!}x^{2k-1}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-#### d.
- 欧拉-麦克劳林公式（Euler-Maclaurin Formula）
+欧拉-麦克劳林公式（Euler-Maclaurin Formula）
 \end_layout
 
 \begin_layout Standard
