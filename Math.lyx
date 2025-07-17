@@ -94682,11 +94682,6 @@ B_{n}=-\frac{1}{n+1}\sum_{k=0}^{n-1}\binom{n+1}{k}B_{k}
 
 \end_layout
 
-\begin_layout Standard
-**计算示例**：
-
-\end_layout
-
 \begin_layout Case
 n=1:
 \end_layout
@@ -95390,11 +95385,10 @@ ge 1$) 的符号是正负交替的 (
 \end_layout
 
 \begin_layout Standard
-**示例 (
 \begin_inset Formula $p=2$
 \end_inset
 
-)**：
+：
 
 \end_layout
 
@@ -95456,12 +95450,15 @@ ge 1$) 的符号是正负交替的 (
 \end_layout
 
 \begin_layout Standard
-**示例**：
+示例：
 
 \end_layout
 
 \begin_layout Standard
-* **k=1**:
+\begin_inset Formula $k=1$
+\end_inset
+
+:
  
 \begin_inset Formula $\zeta(2)=1+\frac{1}{4}+\frac{1}{9}+\dots=(-1)^{2}\frac{(2\pi)^{2}B_{2}}{2(2)!}=\frac{4\pi^{2}(1/6)}{4}=\frac{\pi^{2}}{6}$
 \end_inset
@@ -95471,7 +95468,10 @@ ge 1$) 的符号是正负交替的 (
 \end_layout
 
 \begin_layout Standard
-* **k=2**:
+\begin_inset Formula $k=2$
+\end_inset
+
+:
  
 \begin_inset Formula $\zeta(4)=1+\frac{1}{16}+\frac{1}{81}+\dots=(-1)^{3}\frac{(2\pi)^{4}B_{4}}{2(4)!}=-\frac{16\pi^{4}(-1/30)}{48}=\frac{\pi^{4}}{90}$
 \end_inset
@@ -95481,9 +95481,11 @@ ge 1$) 的符号是正负交替的 (
 \end_layout
 
 \begin_layout Standard
-这个关系揭示了数论（Zeta函数）、分析（$
-\backslash
-pi$）和组合学（伯努利数）之间的深刻联系。
+这个关系揭示了数论（Zeta函数）、分析（
+\begin_inset Formula $\pi$
+\end_inset
+
+）和组合学（伯努利数）之间的深刻联系。
 
 \end_layout
 
@@ -95497,7 +95499,7 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 \end_layout
 
 \begin_layout Standard
-* **余切**:
+余切:
 \begin_inset Formula $x\cot(x)=\sum_{k=0}^{\infty}(-1)^{k}B_{2k}\frac{(2x)^{2k}}{(2k)!}$
 \end_inset
 
@@ -95505,7 +95507,7 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 \end_layout
 
 \begin_layout Standard
-* **正切**:
+正切:
  
 \begin_inset Formula $\tan(x)=\sum_{k=1}^{\infty}(-1)^{k-1}B_{2k}\frac{2^{2k}(2^{2k}-1)}{(2k)!}x^{2k-1}$
 \end_inset
@@ -95551,7 +95553,11 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 \end_layout
 
 \begin_layout Standard
-黎曼Zeta函数最初是为复数 
+黎曼Zeta函数最初是为
+\series bold
+复数
+\series default
+ 
 \begin_inset Formula $s$
 \end_inset
 
@@ -95583,12 +95589,28 @@ pi$）和组合学（伯努利数）之间的深刻联系。
 \end_layout
 
 \begin_layout Standard
-为什么要求
-\begin_inset Formula $\text{Re}(s)>1$
+积分定义形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \zeta(s)=\frac{1}{\Gamma(s)}\int_{0}^{\infty}\frac{x^{s-1}}{e^{x}-1}\mathrm{d}x}
+\]
+
 \end_inset
 
-？
-这是为了保证级数收敛。
+
+\end_layout
+
+\begin_layout Standard
+在区域
+\begin_inset Formula ${s:Re(s)>1}$
+\end_inset
+
+上，
+此无穷级数收敛并为一全纯函数。
 
 \end_layout
 
@@ -96148,7 +96170,7 @@ S_{3}=\frac{(2^{3+1}-1)B_{3+1}}{3+1}=\frac{(16-1)B_{4}}{4}=\frac{15\cdot(-1/30)}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-S=\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{1}{1^{2}}+\frac{1}{2^{2}}+\frac{1}{3^{2}}+\frac{1}{4^{2}}+\cdots
+S=\zeta(2)=\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{1}{1^{2}}+\frac{1}{2^{2}}+\frac{1}{3^{2}}+\frac{1}{4^{2}}+\cdots
 \]
 
 \end_inset
@@ -97142,6 +97164,693 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 
 \end_layout
 
+\begin_layout Proof
+这个证明过程非常巧妙，
+完美地利用了素数的唯一分解性质。
+
+\end_layout
+
+\begin_layout Proof
+欧拉乘积公式指出，
+对于任何实部
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+ 的复数 
+\begin_inset Formula $s$
+\end_inset
+
+，
+以下等式成立：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}=\prod_{p\text{ is prime}}\frac{1}{1-p^{-s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+其中，
+左边是黎曼Zeta函数的级数定义，
+右边的无穷乘积遍历所有素数 
+\begin_inset Formula $p$
+\end_inset
+
+（即 
+\begin_inset Formula $p=2,3,5,7,11,\ldots$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Proof
+证明的核心思想是筛选法 (Sieve Method)，
+类似于古希腊的“埃拉托斯特尼筛法” (Sieve of Eratosthenes)求素数的思想。
+我们将从Zeta函数的级数和中，
+一步步地“筛掉”所有合数的项，
+最终只剩下与素数相关的部分。
+
+\end_layout
+
+\begin_layout Proof
+这个证明主要依赖于两个关键工具：
+
+\end_layout
+
+\begin_layout Proof
+1.
+ 几何级数求和公式
+\end_layout
+
+\begin_layout Proof
+2.
+ 算术基本定理 (Fundamental Theorem of Arithmetic)
+\end_layout
+
+\begin_layout Proof
+我们从Zeta函数的定义出发：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\zeta(s)=1+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\frac{1}{4^{s}}+\frac{1}{5^{s}}+\frac{1}{6^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+筛选掉所有2的倍数
+\end_layout
+
+\begin_layout Proof
+我们用第一个素数 
+\begin_inset Formula $p_{1}=2$
+\end_inset
+
+ 来进行筛选。
+将上面的整个级数乘以 
+\begin_inset Formula $\frac{1}{2^{s}}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{1}{2^{s}}\zeta(s)=\frac{1}{2^{s}}\left(1+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\cdots\right)=\frac{1}{2^{s}}+\frac{1}{4^{s}}+\frac{1}{6^{s}}+\frac{1}{8^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们发现，
+这个新的级数恰好是原Zeta级数中所有分母为
+\begin_inset Formula $2$
+\end_inset
+
+的倍数的项。
+
+\end_layout
+
+\begin_layout Proof
+现在，
+用原级数减去这个新级数：
+
+\begin_inset Formula 
+\[
+\zeta(s)-\frac{1}{2^{s}}\zeta(s)=\left(1+\frac{1}{2^{s}}+\frac{1}{3^{s}}+\cdots\right)-\left(\frac{1}{2^{s}}+\frac{1}{4^{s}}+\frac{1}{6^{s}}+\cdots\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+所有分母是2的倍数的项都被抵消了，
+只剩下分母是**奇数**的项：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(1-\frac{1}{2^{s}}\right)\zeta(s)=1+\frac{1}{3^{s}}+\frac{1}{5^{s}}+\frac{1}{7^{s}}+\frac{1}{9^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+筛选掉所有3的倍数
+\end_layout
+
+\begin_layout Proof
+现在，
+我们对上一步得到的结果，
+用第二个素数 
+\begin_inset Formula $p_{2}=3$
+\end_inset
+
+ 进行筛选。
+将等式两边都乘以 
+\begin_inset Formula $\frac{1}{3^{s}}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{1}{3^{s}}\left(1-\frac{1}{2^{s}}\right)\zeta(s)=\frac{1}{3^{s}}\left(1+\frac{1}{3^{s}}+\frac{1}{5^{s}}+\cdots\right)=\frac{1}{3^{s}}+\frac{1}{9^{s}}+\frac{1}{15^{s}}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+这个新级数包含了右边级数中所有分母是**3的倍数**的项。
+
+\end_layout
+
+\begin_layout Proof
+再用原结果减去这个新结果：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+left(1 - 
+\backslash
+frac{1}{3^s}
+\backslash
+right) 
+\backslash
+left(1 - 
+\backslash
+frac{1}{2^s}
+\backslash
+right) 
+\backslash
+zeta(s) = 
+\backslash
+left(1 + 
+\backslash
+frac{1}{3^s} + 
+\backslash
+frac{1}{5^s} + 
+\backslash
+cdots
+\backslash
+right) - 
+\backslash
+left(
+\backslash
+frac{1}{3^s} + 
+\backslash
+frac{1}{9^s} + 
+\backslash
+frac{1}{15^s} + 
+\backslash
+cdots
+\backslash
+right) $$
+\end_layout
+
+\begin_layout Proof
+现在，
+所有分母是3的倍数的项也被抵消了。
+剩下的项，
+其分母既不是2的倍数，
+也不是3的倍数：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+left(1 - 
+\backslash
+frac{1}{3^s}
+\backslash
+right) 
+\backslash
+left(1 - 
+\backslash
+frac{1}{2^s}
+\backslash
+right) 
+\backslash
+zeta(s) = 1 + 
+\backslash
+frac{1}{5^s} + 
+\backslash
+frac{1}{7^s} + 
+\backslash
+frac{1}{11^s} + 
+\backslash
+frac{1}{13^s} + 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Proof
+#### **第四步：
+无限地筛选下去**
+\end_layout
+
+\begin_layout Proof
+我们可以一直重复这个过程，
+依次用下一个素数 $p_3=5,
+ p_4=7,
+ 
+\backslash
+ldots$ 进行筛选。
+
+\end_layout
+
+\begin_layout Proof
+如果我们对所有的素数 $p$ 都执行这个操作，
+那么左边会变成：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+left( 
+\backslash
+cdots 
+\backslash
+left(1 - 
+\backslash
+frac{1}{5^s}
+\backslash
+right)
+\backslash
+left(1 - 
+\backslash
+frac{1}{3^s}
+\backslash
+right)
+\backslash
+left(1 - 
+\backslash
+frac{1}{2^s}
+\backslash
+right) 
+\backslash
+right) 
+\backslash
+zeta(s) = 
+\backslash
+left( 
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+left(1 - 
+\backslash
+frac{1}{p^s}
+\backslash
+right) 
+\backslash
+right) 
+\backslash
+zeta(s) $$
+\end_layout
+
+\begin_layout Proof
+右边会发生什么呢？
+根据**算术基本定理**，
+任何大于1的整数 $n$ 都可以被唯一地分解成素数的乘积。
+我们每用一个素数 $p$ 进行筛选，
+就排除了所有以 $p$ 为因子的数。
+当我们对所有素数都进行筛选后，
+任何合数（因为它们至少有一个素数因子）都会被筛掉。
+
+\end_layout
+
+\begin_layout Proof
+最终，
+右边只剩下第一项：
+**1**。
+因为1没有任何素数因子。
+
+\end_layout
+
+\begin_layout Proof
+所以，
+我们得到：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+left( 
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+left(1 - p^{-s}
+\backslash
+right) 
+\backslash
+right) 
+\backslash
+zeta(s) = 1 $$
+\end_layout
+
+\begin_layout Proof
+(注：
+这里用 $p^{-s}$ 代替了 $
+\backslash
+frac{1}{p^s}$，
+是更标准的写法)
+\end_layout
+
+\begin_layout Proof
+#### **第五步：
+整理得到最终公式**
+\end_layout
+
+\begin_layout Proof
+将上式两边同时除以无穷乘积项 $
+\backslash
+prod_{p} (1 - p^{-s})$，
+我们就得到了欧拉乘积公式：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+zeta(s) = 
+\backslash
+frac{1}{
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} (1 - p^{-s})} = 
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+frac{1}{1 - p^{-s}} $$
+\end_layout
+
+\begin_layout Proof
+**证明完毕。
+**
+\end_layout
+
+\begin_layout Proof
+---
+\end_layout
+
+\begin_layout Proof
+### **另一种更直接的证明思路（从乘积展开到级数）**
+\end_layout
+
+\begin_layout Proof
+我们也可以从公式的右边出发，
+证明它等于左边。
+这需要用到几何级数求和公式。
+
+\end_layout
+
+\begin_layout Proof
+1.
+ **无穷乘积的每一项**：
+
+\end_layout
+
+\begin_layout Proof
+考虑乘积中的任意一项 $
+\backslash
+frac{1}{1 - p^{-s}}$。
+因为我们假设 $
+\backslash
+text{Re}(s)>1$，
+那么 $|p^{-s}| = p^{-
+\backslash
+text{Re}(s)} < 1$。
+
+\end_layout
+
+\begin_layout Proof
+因此，
+这一项可以被展开成一个收敛的几何级数：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+frac{1}{1 - p^{-s}} = 1 + p^{-s} + (p^{-s})^2 + (p^{-s})^3 + 
+\backslash
+cdots = 1 + 
+\backslash
+frac{1}{p^s} + 
+\backslash
+frac{1}{p^{2s}} + 
+\backslash
+frac{1}{p^{3s}} + 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Proof
+2.
+ **展开整个无穷乘积**：
+
+\end_layout
+
+\begin_layout Proof
+现在我们将所有素数对应的几何级数相乘：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+frac{1}{1 - p^{-s}} = 
+\backslash
+left(1 + 
+\backslash
+frac{1}{2^s} + 
+\backslash
+frac{1}{2^{2s}} + 
+\backslash
+cdots
+\backslash
+right) 
+\backslash
+left(1 + 
+\backslash
+frac{1}{3^s} + 
+\backslash
+frac{1}{3^{2s}} + 
+\backslash
+cdots
+\backslash
+right) 
+\backslash
+left(1 + 
+\backslash
+frac{1}{5^s} + 
+\backslash
+frac{1}{5^{2s}} + 
+\backslash
+cdots
+\backslash
+right) 
+\backslash
+cdots $$
+\end_layout
+
+\begin_layout Proof
+当我们把右边的所有括号展开相乘时，
+根据乘法分配律，
+我们会得到一系列形如这样的项：
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+frac{1}{(p_1^{a_1})^s} 
+\backslash
+cdot 
+\backslash
+frac{1}{(p_2^{a_2})^s} 
+\backslash
+cdot 
+\backslash
+frac{1}{(p_3^{a_3})^s} 
+\backslash
+cdots = 
+\backslash
+frac{1}{(p_1^{a_1} p_2^{a_2} p_3^{a_3} 
+\backslash
+cdots)^s} $$
+\end_layout
+
+\begin_layout Proof
+其中 $p_1,
+ p_2,
+ 
+\backslash
+ldots$ 是不同的素数，
+$a_1,
+ a_2,
+ 
+\backslash
+ldots$ 是非负整数。
+
+\end_layout
+
+\begin_layout Proof
+3.
+ **应用算术基本定理**：
+
+\end_layout
+
+\begin_layout Proof
+根据**算术基本定理**，
+任何一个正整数 $n$ 都可以被**唯一**地表示为素数的幂的乘积 $n = p_1^{a_1} p_2^{a_2} 
+\backslash
+cdots$。
+
+\end_layout
+
+\begin_layout Proof
+这意味着，
+当我们把上面的无穷乘积完全展开后，
+对于每一个正整数 $n$，
+都**有且仅有**一项 $
+\backslash
+frac{1}{n^s}$ 与之对应。
+
+\end_layout
+
+\begin_layout Proof
+例如：
+
+\end_layout
+
+\begin_layout Proof
+* $n=1$：
+从每个括号里都取第一项 `1`。
+
+\end_layout
+
+\begin_layout Proof
+* $n=6=2 
+\backslash
+cdot 3$：
+从第一个括号里取 $
+\backslash
+frac{1}{2^s}$，
+第二个括号里取 $
+\backslash
+frac{1}{3^s}$，
+其他所有括号里都取 `1`。
+
+\end_layout
+
+\begin_layout Proof
+* $n=12=2^2 
+\backslash
+cdot 3$：
+从第一个括号里取 $
+\backslash
+frac{1}{(2^2)^s}$，
+第二个括号里取 $
+\backslash
+frac{1}{3^s}$，
+其他所有括号里都取 `1`。
+
+\end_layout
+
+\begin_layout Proof
+4.
+ **得出结论**：
+
+\end_layout
+
+\begin_layout Proof
+因此，
+这个无穷乘积展开后的结果，
+就是所有 $
+\backslash
+frac{1}{n^s}$ (其中 $n$ 从1到无穷大) 的和。
+
+\end_layout
+
+\begin_layout Proof
+$$ 
+\backslash
+prod_{p 
+\backslash
+text{ is prime}} 
+\backslash
+frac{1}{1 - p^{-s}} = 
+\backslash
+sum_{n=1}^{
+\backslash
+infty} 
+\backslash
+frac{1}{n^s} = 
+\backslash
+zeta(s) $$
+\end_layout
+
+\begin_layout Proof
+**证明完毕。
+**
+\end_layout
+
+\begin_layout Proof
+这两种证明方法从不同的角度出发，
+都清晰地揭示了Zeta函数与素数之间的深刻联系，
+其核心都在于算术基本定理的唯一性。
+
+\end_layout
+
 \begin_layout Subsubsection
 解析延拓
 \end_layout
@@ -97389,6 +98098,196 @@ Zeta函数在负整数点的值
 仍然是数学界最重要的未解之谜之一，
 也是克雷数学研究所提出的七个“千禧年大奖难题”之一。
 
+\end_layout
+
+\begin_layout Subsubsection
+黎曼
+\begin_inset Formula $\xi$
+\end_inset
+
+函数
+\end_layout
+
+\begin_layout Standard
+数学中，
+黎曼
+\begin_inset Formula $\xi$
+\end_inset
+
+函数（英语：
+Riemann Xi function）是黎曼
+\begin_inset Formula $\zeta$
+\end_inset
+
+函数的变型，
+其定义是为了得到一个简单的泛函方程式。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \xi(s)=\tfrac{1}{2}s(s-1)\pi^{-\frac{s}{2}}\Gamma\left(\tfrac{1}{2}s\right)\zeta(s)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle s\in\mathbb{C}}$
+\end_inset
+
+；
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+为黎曼
+\begin_inset Formula $\zeta$
+\end_inset
+
+函数；
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Gamma(s)$
+\end_inset
+
+为伽玛函数。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $s$
+\end_inset
+
+为偶数，
+亦即
+\begin_inset Formula $s=2n$
+\end_inset
+
+，
+
+\begin_inset Formula $\zeta(s)$
+\end_inset
+
+一般式为
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \xi(2n)=(-1)^{n+1}\frac{1}{(2n)!}B_{2n}2^{2n-1}\pi^{n}(2n^{2}-n)(n-1)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $B_{n}$
+\end_inset
+
+为第
+\begin_inset Formula $n$
+\end_inset
+
+个伯努利数。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \xi(2)=\frac{\pi^{2}}{6}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+级数表示式
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \frac{d}{dz}\ln\xi\left(\frac{-z}{1-z}\right)=\sum_{n=0}^{\infty}\lambda_{n+1}z^{n}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \lambda_{n}=\frac{1}{(n-1)!}\left.\frac{d^{n}}{ds^{n}}\left[s^{n-1}\log\xi(s)\right]\right|_{s=1}=\sum_{\rho}\left[1-\left(1-\frac{1}{\rho}\right)^{n}\right]}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\Gamma$
+\end_inset
+
+函数
+\end_layout
+
+\begin_layout Standard
+在数学中，
+
+\begin_inset Formula ${\displaystyle \Gamma}$
+\end_inset
+
+函数（伽玛函数；
+Gamma函数），
+是阶乘函数在实数与复数域上的扩展。
+如果
+\begin_inset Formula ${\displaystyle n}$
+\end_inset
+
+为正整数，
+则：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\displaystyle \Gamma(n)=(n-1)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据解析延拓原理，
+伽玛函数可以定义在除去非正整数的整个复数域上：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\displaystyle \Gamma(z)=\int_{0}^{\infty}t^{z-1}\mathrm{e}^{-t}{\rm dt,}}ℜ(z)>0.{\displaystyle \Re(z)>0.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+数学家勒让德首次使用了希腊字母Γ作为该函数的记号。
+在概率论和组合数学中此函数很常用。
+ 
 \end_layout
 
 \begin_layout Subsection
