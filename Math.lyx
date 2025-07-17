@@ -97305,8 +97305,12 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 \end_layout
 
 \begin_layout Proof
-所有分母是2的倍数的项都被抵消了，
-只剩下分母是**奇数**的项：
+所有分母是
+\begin_inset Formula $2$
+\end_inset
+
+的倍数的项都被抵消了，
+只剩下分母是奇数的项：
 
 \end_layout
 
@@ -97353,7 +97357,7 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 \end_layout
 
 \begin_layout Proof
-这个新级数包含了右边级数中所有分母是**3的倍数**的项。
+这个新级数包含了右边级数中所有分母是3的倍数的项。
 
 \end_layout
 
@@ -97363,43 +97367,14 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-left(1 - 
-\backslash
-frac{1}{3^s}
-\backslash
-right) 
-\backslash
-left(1 - 
-\backslash
-frac{1}{2^s}
-\backslash
-right) 
-\backslash
-zeta(s) = 
-\backslash
-left(1 + 
-\backslash
-frac{1}{3^s} + 
-\backslash
-frac{1}{5^s} + 
-\backslash
-cdots
-\backslash
-right) - 
-\backslash
-left(
-\backslash
-frac{1}{3^s} + 
-\backslash
-frac{1}{9^s} + 
-\backslash
-frac{1}{15^s} + 
-\backslash
-cdots
-\backslash
-right) $$
+\begin_inset Formula 
+\[
+\left(1-\frac{1}{3^{s}}\right)\left(1-\frac{1}{2^{s}}\right)\zeta(s)=\left(1+\frac{1}{3^{s}}+\frac{1}{5^{s}}+\cdots\right)-\left(\frac{1}{3^{s}}+\frac{1}{9^{s}}+\frac{1}{15^{s}}+\cdots\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -97412,106 +97387,69 @@ right) $$
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-left(1 - 
-\backslash
-frac{1}{3^s}
-\backslash
-right) 
-\backslash
-left(1 - 
-\backslash
-frac{1}{2^s}
-\backslash
-right) 
-\backslash
-zeta(s) = 1 + 
-\backslash
-frac{1}{5^s} + 
-\backslash
-frac{1}{7^s} + 
-\backslash
-frac{1}{11^s} + 
-\backslash
-frac{1}{13^s} + 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+\left(1-\frac{1}{3^{s}}\right)\left(1-\frac{1}{2^{s}}\right)\zeta(s)=1+\frac{1}{5^{s}}+\frac{1}{7^{s}}+\frac{1}{11^{s}}+\frac{1}{13^{s}}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
-#### **第四步：
-无限地筛选下去**
+无限地筛选下去
 \end_layout
 
 \begin_layout Proof
 我们可以一直重复这个过程，
-依次用下一个素数 $p_3=5,
- p_4=7,
- 
-\backslash
-ldots$ 进行筛选。
+依次用下一个素数 
+\begin_inset Formula $p_{3}=5,p_{4}=7,\ldots$
+\end_inset
+
+ 进行筛选。
 
 \end_layout
 
 \begin_layout Proof
-如果我们对所有的素数 $p$ 都执行这个操作，
+如果我们对所有的素数 
+\begin_inset Formula $p$
+\end_inset
+
+ 都执行这个操作，
 那么左边会变成：
 
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-left( 
-\backslash
-cdots 
-\backslash
-left(1 - 
-\backslash
-frac{1}{5^s}
-\backslash
-right)
-\backslash
-left(1 - 
-\backslash
-frac{1}{3^s}
-\backslash
-right)
-\backslash
-left(1 - 
-\backslash
-frac{1}{2^s}
-\backslash
-right) 
-\backslash
-right) 
-\backslash
-zeta(s) = 
-\backslash
-left( 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-left(1 - 
-\backslash
-frac{1}{p^s}
-\backslash
-right) 
-\backslash
-right) 
-\backslash
-zeta(s) $$
+\begin_inset Formula 
+\[
+\left(\cdots\left(1-\frac{1}{5^{s}}\right)\left(1-\frac{1}{3^{s}}\right)\left(1-\frac{1}{2^{s}}\right)\right)\zeta(s)=\left(\prod_{p\text{ is prime}}\left(1-\frac{1}{p^{s}}\right)\right)\zeta(s)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
 右边会发生什么呢？
-根据**算术基本定理**，
-任何大于1的整数 $n$ 都可以被唯一地分解成素数的乘积。
-我们每用一个素数 $p$ 进行筛选，
-就排除了所有以 $p$ 为因子的数。
+根据 算术基本定理，
+任何大于1的整数 
+\begin_inset Formula $n$
+\end_inset
+
+ 都可以被唯一地分解成素数的乘积。
+我们每用一个素数 
+\begin_inset Formula $p$
+\end_inset
+
+ 进行筛选，
+就排除了所有以 
+\begin_inset Formula $p$
+\end_inset
+
+ 为因子的数。
 当我们对所有素数都进行筛选后，
 任何合数（因为它们至少有一个素数因子）都会被筛掉。
 
@@ -97520,7 +97458,7 @@ zeta(s) $$
 \begin_layout Proof
 最终，
 右边只剩下第一项：
-**1**。
+1。
 因为1没有任何素数因子。
 
 \end_layout
@@ -97532,73 +97470,54 @@ zeta(s) $$
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-left( 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-left(1 - p^{-s}
-\backslash
-right) 
-\backslash
-right) 
-\backslash
-zeta(s) = 1 $$
+\begin_inset Formula 
+\[
+\left(\prod_{p\text{ is prime}}\left(1-p^{-s}\right)\right)\zeta(s)=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
 (注：
-这里用 $p^{-s}$ 代替了 $
-\backslash
-frac{1}{p^s}$，
+这里用 
+\begin_inset Formula $p^{-s}$
+\end_inset
+
+ 代替了 
+\begin_inset Formula $\frac{1}{p^{s}}$
+\end_inset
+
+，
 是更标准的写法)
 \end_layout
 
 \begin_layout Proof
-#### **第五步：
-整理得到最终公式**
-\end_layout
+将上式两边同时除以无穷乘积项 
+\begin_inset Formula $\prod_{p}(1-p^{-s})$
+\end_inset
 
-\begin_layout Proof
-将上式两边同时除以无穷乘积项 $
-\backslash
-prod_{p} (1 - p^{-s})$，
+，
 我们就得到了欧拉乘积公式：
 
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-zeta(s) = 
-\backslash
-frac{1}{
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} (1 - p^{-s})} = 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-frac{1}{1 - p^{-s}} $$
+\begin_inset Formula 
+\[
+\zeta(s)=\frac{1}{\prod_{p\text{ is prime}}(1-p^{-s})}=\prod_{p\text{ is prime}}\frac{1}{1-p^{-s}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
-**证明完毕。
-**
-\end_layout
+另一种更直接的证明思路（从乘积展开到级数）。
 
-\begin_layout Proof
----
-\end_layout
-
-\begin_layout Proof
-### **另一种更直接的证明思路（从乘积展开到级数）**
 \end_layout
 
 \begin_layout Proof
@@ -97610,20 +97529,26 @@ frac{1}{1 - p^{-s}} $$
 
 \begin_layout Proof
 1.
- **无穷乘积的每一项**：
+ 无穷乘积的每一项：
 
 \end_layout
 
 \begin_layout Proof
-考虑乘积中的任意一项 $
-\backslash
-frac{1}{1 - p^{-s}}$。
-因为我们假设 $
-\backslash
-text{Re}(s)>1$，
-那么 $|p^{-s}| = p^{-
-\backslash
-text{Re}(s)} < 1$。
+考虑乘积中的任意一项 
+\begin_inset Formula $\frac{1}{1-p^{-s}}$
+\end_inset
+
+。
+因为我们假设 
+\begin_inset Formula $\text{Re}(s)>1$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $|p^{-s}|=p^{-\text{Re}(s)}<1$
+\end_inset
+
+。
 
 \end_layout
 
@@ -97634,24 +97559,19 @@ text{Re}(s)} < 1$。
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-frac{1}{1 - p^{-s}} = 1 + p^{-s} + (p^{-s})^2 + (p^{-s})^3 + 
-\backslash
-cdots = 1 + 
-\backslash
-frac{1}{p^s} + 
-\backslash
-frac{1}{p^{2s}} + 
-\backslash
-frac{1}{p^{3s}} + 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+\frac{1}{1-p^{-s}}=1+p^{-s}+(p^{-s})^{2}+(p^{-s})^{3}+\cdots=1+\frac{1}{p^{s}}+\frac{1}{p^{2s}}+\frac{1}{p^{3s}}+\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
 2.
- **展开整个无穷乘积**：
+ 展开整个无穷乘积：
 
 \end_layout
 
@@ -97661,45 +97581,14 @@ cdots $$
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-frac{1}{1 - p^{-s}} = 
-\backslash
-left(1 + 
-\backslash
-frac{1}{2^s} + 
-\backslash
-frac{1}{2^{2s}} + 
-\backslash
-cdots
-\backslash
-right) 
-\backslash
-left(1 + 
-\backslash
-frac{1}{3^s} + 
-\backslash
-frac{1}{3^{2s}} + 
-\backslash
-cdots
-\backslash
-right) 
-\backslash
-left(1 + 
-\backslash
-frac{1}{5^s} + 
-\backslash
-frac{1}{5^{2s}} + 
-\backslash
-cdots
-\backslash
-right) 
-\backslash
-cdots $$
+\begin_inset Formula 
+\[
+\prod_{p\text{ is prime}}\frac{1}{1-p^{-s}}=\left(1+\frac{1}{2^{s}}+\frac{1}{2^{2s}}+\cdots\right)\left(1+\frac{1}{3^{s}}+\frac{1}{3^{2s}}+\cdots\right)\left(1+\frac{1}{5^{s}}+\frac{1}{5^{2s}}+\cdots\right)\cdots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -97710,60 +97599,57 @@ cdots $$
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-frac{1}{(p_1^{a_1})^s} 
-\backslash
-cdot 
-\backslash
-frac{1}{(p_2^{a_2})^s} 
-\backslash
-cdot 
-\backslash
-frac{1}{(p_3^{a_3})^s} 
-\backslash
-cdots = 
-\backslash
-frac{1}{(p_1^{a_1} p_2^{a_2} p_3^{a_3} 
-\backslash
-cdots)^s} $$
-\end_layout
+\begin_inset Formula 
+\[
+\frac{1}{(p_{1}^{a_{1}})^{s}}\cdot\frac{1}{(p_{2}^{a_{2}})^{s}}\cdot\frac{1}{(p_{3}^{a_{3}})^{s}}\cdots=\frac{1}{(p_{1}^{a_{1}}p_{2}^{a_{2}}p_{3}^{a_{3}}\cdots)^{s}}
+\]
 
-\begin_layout Proof
-其中 $p_1,
- p_2,
- 
-\backslash
-ldots$ 是不同的素数，
-$a_1,
- a_2,
- 
-\backslash
-ldots$ 是非负整数。
+\end_inset
+
 
 \end_layout
 
 \begin_layout Proof
-3.
- **应用算术基本定理**：
+其中 
+\begin_inset Formula $p_{1},p_{2},\ldots$
+\end_inset
+
+ 是不同的素数，
+
+\begin_inset Formula $a_{1},a_{2},\ldots$
+\end_inset
+
+ 是非负整数。
 
 \end_layout
 
 \begin_layout Proof
-根据**算术基本定理**，
-任何一个正整数 $n$ 都可以被**唯一**地表示为素数的幂的乘积 $n = p_1^{a_1} p_2^{a_2} 
-\backslash
-cdots$。
+根据算术基本定理，
+任何一个正整数 
+\begin_inset Formula $n$
+\end_inset
+
+ 都可以被唯一地表示为素数的幂的乘积 
+\begin_inset Formula $n=p_{1}^{a_{1}}p_{2}^{a_{2}}\cdots$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Proof
 这意味着，
 当我们把上面的无穷乘积完全展开后，
-对于每一个正整数 $n$，
-都**有且仅有**一项 $
-\backslash
-frac{1}{n^s}$ 与之对应。
+对于每一个正整数 
+\begin_inset Formula $n$
+\end_inset
+
+，
+都有且仅有一项 
+\begin_inset Formula $\frac{1}{n^{s}}$
+\end_inset
+
+ 与之对应。
 
 \end_layout
 
@@ -97773,81 +97659,83 @@ frac{1}{n^s}$ 与之对应。
 \end_layout
 
 \begin_layout Proof
-* $n=1$：
-从每个括号里都取第一项 `1`。
+\begin_inset Formula $n=1$
+\end_inset
+
+：
+从每个括号里都取第一项 
+\begin_inset Formula $1$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Proof
-* $n=6=2 
-\backslash
-cdot 3$：
-从第一个括号里取 $
-\backslash
-frac{1}{2^s}$，
-第二个括号里取 $
-\backslash
-frac{1}{3^s}$，
+\begin_inset Formula $n=6=2\cdot3$
+\end_inset
+
+：
+从第一个括号里取
+\begin_inset Formula $\frac{1}{2^{s}}$
+\end_inset
+
+，
+第二个括号里取 
+\begin_inset Formula $\frac{1}{3^{s}}$
+\end_inset
+
+，
+其他所有括号里都取 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $n=12=2^{2}\cdot3$
+\end_inset
+
+：
+从第一个括号里取 
+\begin_inset Formula $\frac{1}{(2^{2})^{s}}$
+\end_inset
+
+，
+第二个括号里取 
+\begin_inset Formula $\frac{1}{3^{s}}$
+\end_inset
+
+，
 其他所有括号里都取 `1`。
-
-\end_layout
-
-\begin_layout Proof
-* $n=12=2^2 
-\backslash
-cdot 3$：
-从第一个括号里取 $
-\backslash
-frac{1}{(2^2)^s}$，
-第二个括号里取 $
-\backslash
-frac{1}{3^s}$，
-其他所有括号里都取 `1`。
-
-\end_layout
-
-\begin_layout Proof
-4.
- **得出结论**：
 
 \end_layout
 
 \begin_layout Proof
 因此，
 这个无穷乘积展开后的结果，
-就是所有 $
-\backslash
-frac{1}{n^s}$ (其中 $n$ 从1到无穷大) 的和。
+就是所有 
+\begin_inset Formula $\frac{1}{n^{s}}$
+\end_inset
+
+ (其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 从1到无穷大) 的和。
 
 \end_layout
 
 \begin_layout Proof
-$$ 
-\backslash
-prod_{p 
-\backslash
-text{ is prime}} 
-\backslash
-frac{1}{1 - p^{-s}} = 
-\backslash
-sum_{n=1}^{
-\backslash
-infty} 
-\backslash
-frac{1}{n^s} = 
-\backslash
-zeta(s) $$
-\end_layout
+\begin_inset Formula 
+\[
+\prod_{p\text{ is prime}}\frac{1}{1-p^{-s}}=\sum_{n=1}^{\infty}\frac{1}{n^{s}}=\zeta(s)
+\]
 
-\begin_layout Proof
-**证明完毕。
-**
-\end_layout
+\end_inset
 
-\begin_layout Proof
-这两种证明方法从不同的角度出发，
-都清晰地揭示了Zeta函数与素数之间的深刻联系，
-其核心都在于算术基本定理的唯一性。
 
 \end_layout
 
@@ -138515,7 +138403,7 @@ x_{4} & =y_{4}
 其它
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 一些概念
 \end_layout
 
@@ -138537,6 +138425,679 @@ x_{4} & =y_{4}
  赵爽弦图
 \end_layout
 
+\begin_layout Chapter
+齐次化 （Homogenization）
+\end_layout
+
+\begin_layout Standard
+“齐次化”是一个在数学（尤其是在代数几何、线性代下数和计算机图形学中）非常重要的技术，
+它的核心思想是将一个非齐次（non-homogeneous）的表达式或方程，
+通过引入一个新的变量，
+转换成一个齐次（homogeneous）的表达式或方程。
+
+\end_layout
+
+\begin_layout Section
+什么是“齐次”
+\end_layout
+
+\begin_layout Standard
+在理解“齐次化”之前，
+首先要明白什么是“齐次”。
+
+\end_layout
+
+\begin_layout Standard
+一个多项式（或多项式方程中的一边）如果
+\series bold
+所有项的次数都相同
+\series default
+，
+那么它就是齐次的。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{2}+3xy+4y^{2}$
+\end_inset
+
+ 是齐次的，
+因为每一项（
+\begin_inset Formula $x^{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $xy$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y^{2}$
+\end_inset
+
+）的次数都是 
+\begin_inset Formula $2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{3}+5xyz-2y^{2}z$
+\end_inset
+
+ 是齐次的，
+因为每一项（
+\begin_inset Formula $x^{3}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $xyz$
+\end_inset
+
+,
+ 
+\begin_inset Formula $y^{2}z$
+\end_inset
+
+）的次数都是 
+\begin_inset Formula $3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{2}+y-1$
+\end_inset
+
+是非齐次的，
+因为三项的次数分别是 2,
+ 1,
+ 0，
+各不相同。
+
+\end_layout
+
+\begin_layout Section
+什么是“齐次化”
+\end_layout
+
+\begin_layout Standard
+齐次化就是将一个非齐次的多项式或方程，
+变成齐次的过程。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 确定最高次数：
+找到多项式中所有项的最高次数，
+记为 
+\begin_inset Formula $d$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 引入新变量：
+引入一个新的变量，
+通常记为 
+\begin_inset Formula $z$
+\end_inset
+
+ 或 
+\begin_inset Formula $w$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 补齐次数：
+对于多项式中的每一个项，
+用新变量
+\begin_inset Formula $z$
+\end_inset
+
+ 补足，
+使得每一项的总次数都等于
+\begin_inset Formula $d$
+\end_inset
+
+。
+具体方法是：
+将该项乘以 
+\begin_inset Formula $z^{(d-k)}$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $k$
+\end_inset
+
+ 是该项原来的次数。
+
+\end_layout
+
+\begin_layout Example
+让我们对非齐次方程 
+\begin_inset Formula $x^{2}+y=1$
+\end_inset
+
+ 进行齐次化。
+
+\end_layout
+
+\begin_layout Enumerate
+整理方程：
+首先写成
+\begin_inset Formula $f(x,y)=x^{2}+y-1=0$
+\end_inset
+
+的形式。
+
+\end_layout
+
+\begin_layout Enumerate
+确定最高次数：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $x^{2}$
+\end_inset
+
+的次数是 
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+ 的次数是 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-1$
+\end_inset
+
+ (可以看作 
+\begin_inset Formula $-1\times x^{0}y^{0}$
+\end_inset
+
+) 的次数是 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最高次数 
+\begin_inset Formula $d=2$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+引入新变量：
+引入新变量
+\begin_inset Formula $z$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+补齐次数：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $x^{2}$
+\end_inset
+
+(次数为2):
+ 乘以
+\begin_inset Formula $z^{(2-2)}=z^{0}=1\Rightarrow x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+ (次数为1):
+ 乘以
+\begin_inset Formula $z^{(2-1)}=z^{1}=z\Rightarrow yz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-1 (次数为0):
+ 乘以
+\begin_inset Formula $z^{(2-0)}=z^{2}\Rightarrow-z^{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+得到齐次方程：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $F(x,y,z)=x^{2}+yz-z^{2}=0$
+\end_inset
+
+，
+它的每一项 (
+\begin_inset Formula $x^{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $yz$
+\end_inset
+
+,
+ 
+\begin_inset Formula $z^{2}$
+\end_inset
+
+) 的次数都是 
+\begin_inset Formula $2$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+反向操作：
+去齐次化 (Dehomogenization)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+齐次化的逆过程是“去齐次化”，
+非常简单：
+只需将新引入的变量 
+\begin_inset Formula $z$
+\end_inset
+
+设为 
+\begin_inset Formula $1$
+\end_inset
+
+ 即可。
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $F(x,y,z)=x^{2}+yz-z^{2}=x^{2}+y-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看到，
+我们又回到了最初的方程。
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+为什么要进行齐次化
+\end_layout
+
+\begin_layout Standard
+齐次化看起来只是一个代数技巧，
+但它有非常深刻的几何意义和应用价值，
+主要体现在射影几何（Projective Geometry）中。
+
+\end_layout
+
+\begin_layout Standard
+核心思想：
+从欧式空间到射影空间
+\end_layout
+
+\begin_layout Standard
+欧式空间/仿射空间：
+我们通常生活的空间，
+有“平行线永不相交”这样的规则。
+代数上，
+对应的是非齐次方程。
+
+\end_layout
+
+\begin_layout Standard
+射影空间：
+一个扩展了的几何空间，
+它引入了“无穷远点”或“无穷远线”的概念。
+在射影空间里，
+任何两条直线（即使是平行线）总会相交于一点。
+这大大简化了几何理论，
+消除了“平行”这个特殊情况。
+
+\end_layout
+
+\begin_layout Standard
+齐次化就是将欧式空间中的几何对象（如曲线、曲面）用代数方式映射到射影空间中的数学工具。
+
+\end_layout
+
+\begin_layout Standard
+原来的坐标 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 对应射影空间中的一族坐标 (
+\begin_inset Formula $kx$
+\end_inset
+
+,
+ 
+\begin_inset Formula $ky$
+\end_inset
+
+,
+ 
+\begin_inset Formula $k$
+\end_inset
+
+)，
+其中 
+\begin_inset Formula $k$
+\end_inset
+
+ 不为
+\begin_inset Formula $0$
+\end_inset
+
+。
+我们通常用 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 时的
+\begin_inset Formula $(x,y,1)$
+\end_inset
+
+ 来表示。
+
+\end_layout
+
+\begin_layout Standard
+新引入的变量 z 可以理解为“深度”或“尺度”因子。
+
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $z=1$
+\end_inset
+
+ 时，
+我们得到的是原始的欧式空间中的点。
+
+\end_layout
+
+\begin_layout Enumerate
+当 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 时，
+我们得到的就是“无穷远点”。
+
+\end_layout
+
+\begin_layout Example
+平行线相交
+\end_layout
+
+\begin_layout Example
+考虑两条平行线：
+
+\end_layout
+
+\begin_layout Example
+1.
+ 
+\begin_inset Formula $y=2x+1\Rightarrow2x-y+1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 
+\begin_inset Formula $y=2x+3\Rightarrow2x-y+3=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+对它们进行齐次化（最高次数 
+\begin_inset Formula $d=1$
+\end_inset
+
+，
+引入变量 
+\begin_inset Formula $z$
+\end_inset
+
+）：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2x-y+z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $2x-y+3z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在我们来解这个方程组。
+两式相减得到 
+\begin_inset Formula $2z=0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $z=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+将 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 代入任意一个方程，
+得到 
+\begin_inset Formula $2x-y=0$
+\end_inset
+
+，
+即 
+\begin_inset Formula $y=2x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+解是一个形如 
+\begin_inset Formula $(x,2x,0)$
+\end_inset
+
+的点。
+例如，
+取 
+\begin_inset Formula $x=1$
+\end_inset
+
+，
+我们得到交点
+\begin_inset Formula $(1,2,0)$
+\end_inset
+
+。
+这个点就是两条平行线在射影空间中的无穷远交点。
+
+\end_layout
+
+\begin_layout Section
+主要应用领域
+\end_layout
+
+\begin_layout Enumerate
+计算机图形学 (Computer Graphics)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+齐次坐标 (Homogeneous Coordinates)是齐次化最直接的应用。
+通过将 2D 坐标 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 扩展为 3D 齐次坐标 
+\begin_inset Formula $(x,y,1)$
+\end_inset
+
+，
+或者 3D 坐标 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+ 扩展为 4D 齐次坐标 
+\begin_inset Formula $(x,y,z,1)$
+\end_inset
+
+，
+我们可以用一个单一的矩阵（变换矩阵）来表示所有的线性变换（旋转、缩放、错切）和平移。
+如果没有齐次坐标，
+平移操作需要用向量加法，
+而其他变换用矩阵乘法，
+这在计算上很不方便。
+齐次化统一了所有操作。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+代数几何 (Algebraic Geometry)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+研究代数簇（多项式方程组的解集）在射影空间中的性质。
+很多定理在射影空间中表述得更简洁、更普适，
+例如贝祖定理（Bézout's Theorem）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+其他数学分支
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+微分方程：
+有“齐次微分方程”的概念，
+虽然定义不同，
+但思想上也有共通之处（比如函数变量可以按比例缩放）。
+
+\end_layout
+
+\begin_layout Standard
+线性代数：
+齐次线性方程组 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+，
+它的解构成一个向量空间，
+而非齐次方程 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ 的解则不是。
+
+\end_layout
+
+\end_deeper
 \begin_layout Chapter
 双峰函数 
 \end_layout
