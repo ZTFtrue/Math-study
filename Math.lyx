@@ -1316,7 +1316,7 @@ Omega
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -139676,18 +139676,18 @@ x^{2}+y^{2} & =1945\times10001\\
 Fibonacci Sequence and Linear Algebra (Exercise 21)
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 We are given the Fibonacci sequence defined by:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $F_{0}=0,\quad F_{1}=1,\quad F_{n}=F_{n-1}+F_{n-2}\text{ for }n\geq2$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 We define a linear transformation 
 \begin_inset Formula $T\in\mathcal{L}(\mathbb{R}^{2})$
 \end_inset
@@ -139695,18 +139695,18 @@ We define a linear transformation
  by:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T(x,y)=(y,x+y)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 This transformation has a matrix representation:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T=\begin{bmatrix}0 & 1\\
 1 & 1
 \end{bmatrix}$
@@ -139715,7 +139715,7 @@ This transformation has a matrix representation:
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $\mathcal{L}(\mathbb{R}^{2})$
 \end_inset
 
@@ -139726,7 +139726,7 @@ This transformation has a matrix representation:
  to itself.
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 The transformation 
 \begin_inset Formula $T(x,y)=(y,x+y)$
 \end_inset
@@ -139736,7 +139736,7 @@ The transformation
  and the second becomes the sum of the two.
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Its matrix representation in the standard basis is derived by examining how it acts on the standard basis vectors 
 \begin_inset Formula $(1,0)$
 \end_inset
@@ -139748,21 +139748,21 @@ Its matrix representation in the standard basis is derived by examining how it a
 :
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T(1,0)=(0,1)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T(0,1)=(1,1)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 So the matrix has columns 
 \begin_inset Formula $T(1,0)$
 \end_inset
@@ -139774,7 +139774,7 @@ So the matrix has columns
 :
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T=\begin{bmatrix}0 & 1\\
 1 & 1
 \end{bmatrix}$
@@ -139783,7 +139783,7 @@ So the matrix has columns
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 (a) Show that 
 \begin_inset Formula $T^{n}(0,1)=(F_{n},F_{n+1})$
 \end_inset
@@ -139791,11 +139791,11 @@ So the matrix has columns
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 We use induction:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Base case:
  
 \begin_inset Formula $n=0\Rightarrow T^{0}(0,1)=(0,1)=(F_{0},F_{1})$
@@ -139804,7 +139804,7 @@ Base case:
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Inductive step:
  Suppose 
 \begin_inset Formula $T^{n}(0,1)=(F_{n},F_{n+1})$
@@ -139813,18 +139813,18 @@ Inductive step:
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Then:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $T^{n+1}(0,1)=T(T^{n}(0,1))=T(F_{n},F_{n+1})=(F_{n+1},F_{n}+F_{n+1})=(F_{n+1},F_{n+2})$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Thus,
  the property holds for all 
 \begin_inset Formula $n\geq0$
@@ -139833,7 +139833,7 @@ Thus,
 .
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 (b) Find the eigenvalues(特征值) of 
 \begin_inset Formula $T$
 \end_inset
@@ -139841,11 +139841,11 @@ Thus,
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 We compute the characteristic polynomial:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \det(T-\lambda I)=\begin{vmatrix}-\lambda & 1\\
@@ -139858,7 +139858,7 @@ We compute the characteristic polynomial:
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Solving 
 \begin_inset Formula $\lambda^{2}-\lambda-1=0$
 \end_inset
@@ -139866,7 +139866,7 @@ Solving
  gives:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \lambda_{1,2}=\frac{1\pm\sqrt{5}}{2}
@@ -139877,11 +139877,11 @@ Solving
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 These are the eigenvalues.
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 (c) Find a basis of 
 \begin_inset Formula $\mathbb{R}^{2}$
 \end_inset
@@ -139889,7 +139889,7 @@ These are the eigenvalues.
  consisting of eigenvectors
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 For 
 \begin_inset Formula $\lambda_{1}=\frac{1+\sqrt{5}}{2}$
 \end_inset
@@ -139902,7 +139902,7 @@ For
 :
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \begin{bmatrix}-\lambda_{1} & 1\\
@@ -139917,7 +139917,7 @@ For
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Similarly,
  for 
 \begin_inset Formula $\lambda_{2}=\frac{1-\sqrt{5}}{2}$
@@ -139926,7 +139926,7 @@ Similarly,
 :
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \Rightarrow v_{2}=\begin{bmatrix}1\\
@@ -139939,7 +139939,7 @@ Similarly,
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 So the basis is 
 \begin_inset Formula $\{v_{1},v_{2}\}$
 \end_inset
@@ -139947,7 +139947,7 @@ So the basis is
 .
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 (d) Use eigenvectors to compute 
 \begin_inset Formula $T^{n}(0,1)$
 \end_inset
@@ -139959,7 +139959,7 @@ So the basis is
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 We express 
 \begin_inset Formula $(0,1)$
 \end_inset
@@ -139967,7 +139967,7 @@ We express
  as a linear combination of eigenvectors:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 (0,1)=av_{1}+bv_{2}
@@ -139978,7 +139978,7 @@ We express
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Solving for 
 \begin_inset Formula $a,b$
 \end_inset
@@ -139986,7 +139986,7 @@ Solving for
 :
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \begin{cases}
@@ -140000,11 +140000,11 @@ a\lambda_{1}+b\lambda_{2}=1
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Then:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 T^{n}(0,1)=a\lambda_{1}^{n}v_{1}+b\lambda_{2}^{n}v_{2}
@@ -140015,11 +140015,11 @@ T^{n}(0,1)=a\lambda_{1}^{n}v_{1}+b\lambda_{2}^{n}v_{2}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Taking the first component (which is $F_n$):
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]
@@ -140030,11 +140030,11 @@ F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 This is **Binet's Formula**.
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 (e) Show that 
 \begin_inset Formula $F_{n}$
 \end_inset
@@ -140042,7 +140042,7 @@ This is **Binet's Formula**.
  is the closest integer to:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n}
@@ -140053,11 +140053,11 @@ This is **Binet's Formula**.
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Because the second term in Binet's formula:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 \left(\frac{1-\sqrt{5}}{2}\right)^{n}\in(-1,1)\text{ and rapidly decays as }n\to\infty
@@ -140068,11 +140068,11 @@ Because the second term in Binet's formula:
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Thus:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula 
 \[
 F_{n}\approx\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n}\pm\text{a very small number}
@@ -140083,7 +140083,7 @@ F_{n}\approx\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n}\pm\text{a ve
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 So 
 \begin_inset Formula $F_{n}$
 \end_inset
@@ -140091,30 +140091,398 @@ So
  is the nearest integer to that expression.
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 Remark
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 The number:
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 \begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 is called the golden ratio .
 \end_layout
 
-\begin_layout Example
+\begin_layout Solution
 This exercise elegantly ties together recurrence relations,
  linear transformations,
  eigenvalues,
  and diagonalization to derive a deep property of Fibonacci numbers.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $6^{x}-5^{x}=11$
+\end_inset
+
+,
+\begin_inset Formula $x\in Z^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+解法1:
+\end_layout
+
+\begin_layout Solution
+若 
+\begin_inset Formula $x>1$
+\end_inset
+
+，
+由不等式
+\begin_inset Formula $6^{x-1}<6^{x}-5^{x}=11<6^{x}$
+\end_inset
+
+，
+可得：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula $6^{x-1}<11<6^{x}\Rightarrow x\leq2\text{ 且 }x\geq2\Rightarrow x=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+解法2:
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+考虑函数 
+\begin_inset Formula $f(x)=6^{x}-5^{x}$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+由于 
+\begin_inset Formula $6^{x}$
+\end_inset
+
+ 和 
+\begin_inset Formula $5^{x}$
+\end_inset
+
+ 都是指数函数且严格单调递增，
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+而且因为 
+\begin_inset Formula $6>5$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $6^{x}$
+\end_inset
+
+ 的增长速度远快于 
+\begin_inset Formula $5^{x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+因此：
+ 
+\begin_inset Formula $f(x)=6^{x}-5^{x}$
+\end_inset
+
+ 也是严格单调递增函数，
+当 
+\begin_inset Formula $x$
+\end_inset
+
+ 增大时，
+ 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ 也增大。
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+由于函数是严格递增的，
+我们已经知道：
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $f(1)=1<11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $f(2)=11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $f(3)=6^{3}-5^{3}=216-125=91>11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+所以(讨论唯一性)：
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+当 
+\begin_inset Formula $x<2$
+\end_inset
+
+，
+
+\begin_inset Formula $f(x)<11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+当
+\begin_inset Formula $x=2$
+\end_inset
+
+，
+
+\begin_inset Formula $f(x)=11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+当 
+\begin_inset Formula $x>2$
+\end_inset
+
+，
+
+\begin_inset Formula $f(x)>11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+因此，
+唯一满足 
+\begin_inset Formula $6^{x}-5^{x}=11$
+\end_inset
+
+ 的正整数解是 
+\begin_inset Formula $x=2$
+\end_inset
+
+。
+
 \end_layout
 
 \begin_layout Bibliography
