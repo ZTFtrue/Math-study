@@ -98162,14 +98162,10 @@ Gamma函数），
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-{\displaystyle \Gamma(z)=\int_{0}^{\infty}t^{z-1}\mathrm{e}^{-t}{\rm dt,}}ℜ(z)>0.{\displaystyle \Re(z)>0.}
-\]
-
+\begin_inset Formula ${\displaystyle \Gamma(z)=\int_{0}^{\infty}t^{z-1}e^{-t}dt,}ℜ(z)>0$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
