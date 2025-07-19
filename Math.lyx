@@ -139016,11 +139016,10 @@ x_{4} & =y_{4}
 主要应用领域
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsection
 计算机图形学 (Computer Graphics)
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 齐次坐标 (Homogeneous Coordinates)是齐次化最直接的应用。
 通过将 2D 坐标 
@@ -139050,12 +139049,10 @@ x_{4} & =y_{4}
 
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
+\begin_layout Subsection
 代数几何 (Algebraic Geometry)
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 研究代数簇（多项式方程组的解集）在射影空间中的性质。
 很多定理在射影空间中表述得更简洁、更普适，
@@ -139063,12 +139060,433 @@ x_{4} & =y_{4}
 
 \end_layout
 
-\end_deeper
+\begin_layout Subsubsection
+解析几何齐次化
+\end_layout
+
+\begin_layout Standard
+核心目标：
+解决求“过原点的直线”与“圆锥曲线”的交点问题。
+ 
+\end_layout
+
+\begin_layout Standard
+更具体地说，
+当题目涉及以下情景时，
+齐次化方法是首选：
+
+\end_layout
+
+\begin_layout Standard
+一条不过原点的直线 
+\begin_inset Formula $L$
+\end_inset
+
+ 与一个圆锥曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 相交于
+\begin_inset Formula $A$
+\end_inset
+
+、
+\begin_inset Formula $B$
+\end_inset
+
+ 两点，
+需要研究连接原点 
+\begin_inset Formula $O$
+\end_inset
+
+与这两个交点的直线 
+\begin_inset Formula $OA$
+\end_inset
+
+和 
+\begin_inset Formula $OB$
+\end_inset
+
+ 的性质。
+
+\end_layout
+
+\begin_layout Standard
+这些性质包括：
+
+\end_layout
+
+\begin_layout Itemize
+求直线对
+\begin_inset Formula $OA$
+\end_inset
+
+和 
+\begin_inset Formula $OB$
+\end_inset
+
+的合并方程（a pair of straight lines）。
+
+\end_layout
+
+\begin_layout Itemize
+判断 
+\begin_inset Formula $OA$
+\end_inset
+
+与 
+\begin_inset Formula $OB$
+\end_inset
+
+是否垂直。
+
+\end_layout
+
+\begin_layout Itemize
+求 
+\begin_inset Formula $OA$
+\end_inset
+
+与 
+\begin_inset Formula $OB$
+\end_inset
+
+ 的夹角。
+
+\end_layout
+
+\begin_layout Itemize
+求 
+\begin_inset Formula $\triangle OAB$
+\end_inset
+
+ 的面积。
+
+\end_layout
+
+\begin_layout Standard
+传统方法的缺点：
+先联立直线 
+\begin_inset Formula $L$
+\end_inset
+
+和曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 的方程，
+解出 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+的坐标。
+这个过程通常会涉及复杂的二次方程求解，
+得到带根号的丑陋坐标，
+然后再去计算斜率、夹角等，
+计算量巨大且极易出错。
+
+\end_layout
+
+\begin_layout Standard
+齐次化方法的优越性：
+它可以在不解出 
+\begin_inset Formula $A$
+\end_inset
+
+、
+\begin_inset Formula $B$
+\end_inset
+
+ 点坐标的情况下，
+直接得到直线对 
+\begin_inset Formula $OA$
+\end_inset
+
+、
+\begin_inset Formula $OB$
+\end_inset
+
+ 的合并方程，
+从而绕过了最繁琐的计算步骤。
+
+\end_layout
+
+\begin_layout Paragraph
+齐次化的操作步骤 
+\end_layout
+
+\begin_layout Standard
+我们通过一个标准模型来讲解。
+
+\end_layout
+
+\begin_layout Standard
+圆锥曲线 
+\begin_inset Formula $C$
+\end_inset
+
+:
+ 
+\begin_inset Formula $Ax^{2}+Bxy+Cy^{2}+Dx+Ey+F=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+直线 
+\begin_inset Formula $L$
+\end_inset
+
+:
+ 
+\begin_inset Formula $mx+ny=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+关键前提：
+必须将直线 
+\begin_inset Formula $L$
+\end_inset
+
+ 的方程写成 
+\begin_inset Formula $\cdots=1$
+\end_inset
+
+的形式。
+ 如果原方程是 
+\begin_inset Formula $px+qy=k$
+\end_inset
+
+(
+\begin_inset Formula $k\neq0$
+\end_inset
+
+)，
+那么需要先变形为
+\begin_inset Formula $\frac{p}{k}x+\frac{q}{k}y=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+操作步骤：
+
+\end_layout
+
 \begin_layout Enumerate
-其他数学分支
+识别“污染项”:
+ 在圆锥曲线 
+\begin_inset Formula $C$
+\end_inset
+
+ 的方程中，
+
+\begin_inset Formula $Ax^{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Bxy$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Cy^{2}$
+\end_inset
+
+ 是二次项（齐次的），
+而 
+\begin_inset Formula $Dx$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Ey$
+\end_inset
+
+ 是一次项，
+
+\begin_inset Formula $F$
+\end_inset
+
+ 是零次项。
+这些非二次项就是“污染项”，
+我们的目标是把它们都“提升”到二次。
+
+\end_layout
+
+\begin_layout Enumerate
+“乘以1”的艺术:
+ 利用
+\begin_inset Formula $1=mx+ny$
+\end_inset
+
+来提升次数：
+
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+对于一次项
+\begin_inset Formula $Dx$
+\end_inset
+
+和
+\begin_inset Formula $Ey$
+\end_inset
+
+，
+我们乘以一个 
+\begin_inset Formula $1$
+\end_inset
+
+，
+即 
+\begin_inset Formula $(mx+ny)$
+\end_inset
+
+，
+使其变为二次：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Dx\rightarrow Dx\times1\rightarrow Dx(mx+ny)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ey\rightarrow Ey\times1\rightarrow Ey(mx+ny)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对于零次项 
+\begin_inset Formula $F$
+\end_inset
+
+，
+我们需要乘以两个 
+\begin_inset Formula $1$
+\end_inset
+
+，
+即
+\begin_inset Formula $(mx+ny)^{2}$
+\end_inset
+
+，
+使其变为二次：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $F\rightarrow F\times1^{2}\rightarrow F(mx+ny)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+代入替换:
+ 将处理后的项替换回原曲线方程：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $Ax^{2}+Bxy+Cy^{2}+D\times x\times(mx+ny)+E\times y\times(mx+ny)+F\times(mx+ny)^{2}=0$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+展开并合并同类项，
+得到一个形如 
+\begin_inset Formula $A'x^{2}+B'xy+C'y^{2}=0$
+\end_inset
+
+ 的新方程。
+这个新方程，
+就是直线 
+\begin_inset Formula $OA$
+\end_inset
+
+ 和 
+\begin_inset Formula $OB$
+\end_inset
+
+的合并方程。
+
+\end_layout
+
+\begin_layout Standard
+我们得到的新方程 
+\begin_inset Formula $A'x^{2}+B'xy+C'y^{2}=0$
+\end_inset
+
+ 是一个二次齐次方程。
+
+\end_layout
+
+\begin_layout Standard
+在解析几何中，
+任何一个二次齐次方程都代表**两条经过原点的直线**（或者一条，
+或者一个点，
+取决于判别式）。
+
+\end_layout
+
+\begin_layout Standard
+我们可以把它因式分解成 
+\begin_inset Formula $(k_{1}x-l_{1}y)(k_{2}x-l_{2}y)=0$
+\end_inset
+
+的形式，
+代表两条直线 
+\begin_inset Formula $k_{1}x-l_{1}y=0$
+\end_inset
+
+ 和 
+\begin_inset Formula $k_{2}x-l_{2}y$
+\end_inset
+
+，
+它们都过原点。
+这两条直线就是 
+\begin_inset Formula $OA$
+\end_inset
+
+ 和 
+\begin_inset Formula $OB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+其他数学分支
+\end_layout
+
 \begin_layout Standard
 微分方程：
 有“齐次微分方程”的概念，
@@ -139093,7 +139511,6 @@ x_{4} & =y_{4}
 
 \end_layout
 
-\end_deeper
 \begin_layout Chapter
 双峰函数 
 \end_layout
