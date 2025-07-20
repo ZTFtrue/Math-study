@@ -10766,6 +10766,68 @@ C_{n}^{m} & = & \frac{A_{n}^{m}}{A_{m}^{m}}\\
 
 \end_layout
 
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $C_{n}^{m}$
+\end_inset
+
+是国内人教版教材写法，
+表示
+\begin_inset Formula $n$
+\end_inset
+
+个元素中取出
+\begin_inset Formula $m$
+\end_inset
+
+个的组合数。
+
+\end_layout
+
+\begin_layout Standard
+另外还有其它写法：
+
+\begin_inset Formula ${\displaystyle C(n,k)}$
+\end_inset
+
+、 
+\begin_inset Formula ${\displaystyle _{n}C_{k}}$
+\end_inset
+
+、 
+\begin_inset Formula ${\displaystyle ^{n}C_{k}}$
+\end_inset
+
+、 
+\begin_inset Formula ${\displaystyle C_{k}^{n}}$
+\end_inset
+
+（英语）、 
+\begin_inset Formula ${\displaystyle C_{n}^{k}}$
+\end_inset
+
+（法语、罗马尼亚语、俄语、汉语、波兰语），
+
+\begin_inset Formula ${\displaystyle {n \choose k}}$
+\end_inset
+
+。
+
+\end_layout
+
 \begin_layout Subparagraph
 组合性质
 \begin_inset Formula 
@@ -11667,7 +11729,7 @@ uu
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 组合原理
 \end_layout
 
@@ -11689,7 +11751,7 @@ uu
 卡特兰问题
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 Dyck路径问题
 \end_layout
 
@@ -11777,46 +11839,19 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Subsubsection
-双射证明 (Bijective Proof)
-\end_layout
-
-\begin_layout Standard
-双射证明是组合数学中一种极其优美且强大的证明方法。
-
-\end_layout
-
-\begin_layout Standard
-* **核心思想**:
- 如果你想证明两个集合 $A$ 和 $B$ 的元素数量相等（$|A|=|B|$），
-你不需要分别去数它们，
-你只需要建立一个从 $A$ 到 $B$ 的**双射（一一对应关系）**即可。
-
-\end_layout
-
-\begin_layout Standard
-* **卡特兰数的应用**:
- 卡特兰数的神奇之处在于，
-有成百上千个看似毫无关联的问题，
-它们的答案都是卡特兰数。
-这正是通过**双射证明**联系起来的。
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 一些经典的“卡特兰问题”：
 
 \end_layout
 
-\begin_layout Standard
-1.
- Dyck路径问题。
+\begin_layout Enumerate
+Dyck路径问题。
 
 \end_layout
 
-\begin_layout Standard
-2.
- 合法的括号序列：
+\begin_layout Enumerate
+合法的括号序列：
 
 \begin_inset Formula $n$
 \end_inset
@@ -11837,9 +11872,8 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Standard
-3.
- 凸多边形三角剖分：
+\begin_layout Enumerate
+凸多边形三角剖分：
 一个凸 
 \begin_inset Formula $(n+2)$
 \end_inset
@@ -11850,9 +11884,8 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Standard
-4.
- 二叉树的形态数：
+\begin_layout Enumerate
+二叉树的形态数：
 有 
 \begin_inset Formula $n$
 \end_inset
@@ -11861,9 +11894,8 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Standard
-5.
- 出栈序列：
+\begin_layout Enumerate
+出栈序列：
 
 \begin_inset Formula $1,2,\dots,n$
 \end_inset
@@ -11874,6 +11906,50 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 \end_layout
 
 \begin_layout Standard
+卡特兰数的神奇之处在于，
+有成百上千个看似毫无关联的问题，
+它们的答案都是卡特兰数。
+这正是通过 双射证明 联系起来的。
+
+\end_layout
+
+\begin_layout Subsubsection
+双射证明 (Bijective Proof)
+\end_layout
+
+\begin_layout Standard
+双射证明是组合数学中一种极其优美且强大的证明方法。
+
+\end_layout
+
+\begin_layout Standard
+如果你想证明两个集合 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 的元素数量相等（
+\begin_inset Formula $|A|=|B|$
+\end_inset
+
+），
+你不需要分别去数它们，
+你只需要建立一个从 
+\begin_inset Formula $A$
+\end_inset
+
+ 到
+\begin_inset Formula $B$
+\end_inset
+
+ 的双射（一一对应关系）即可。
+
+\end_layout
+
+\begin_layout Example
 双射示例：
 Dyck路径 
 \begin_inset Formula $\leftrightarrow$
@@ -11882,7 +11958,7 @@ Dyck路径
  合法括号序列
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 一个从 
 \begin_inset Formula $(0,0$
 \end_inset
@@ -11917,7 +11993,7 @@ Dyck路径
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 路径不越过对角线 
 \begin_inset Formula $y=x$
 \end_inset
@@ -11935,29 +12011,41 @@ Dyck路径
 的数量。
 这完美地对应了合法括号序列中，
 在任何位置，
-右括号的数量不能超过左括号的数量**。
+右括号的数量不能超过左括号的数量。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 例如，
-对于 n=3 的路径 `R R U R U U`：
+对于 n=3 的路径 
+\begin_inset Formula $RRURUU$
+\end_inset
+
+：
 
 \end_layout
 
-\begin_layout Standard
-* 对应括号序列：
- `( ( ) ( ) )` (这是一个合法的括号序列)
+\begin_layout Example
+对应括号序列：
+
+\begin_inset Formula $(()())$
+\end_inset
+
+ (这是一个合法的括号序列)
 \end_layout
 
-\begin_layout Standard
-* 路径坐标：
-(0,0) → (1,0) → (2,0) → (2,1) → (3,1) → (3,2) → (3,3)。
-路径始终在对角线下方或上。
+\begin_layout Example
+路径坐标：
+
+\begin_inset Formula $(0,0)\rightarrow(1,0)\rightarrow(2,0)\rightarrow(2,1)\rightarrow(3,1)\rightarrow(3,2)\rightarrow(3,3)$
+\end_inset
+
+。
+路径始终在对角线下方。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 通过双射，
 我们证明了这些问题的本质是相同的，
 我们只需要解决其中一个，
@@ -11966,379 +12054,597 @@ Dyck路径
 \end_layout
 
 \begin_layout Standard
-好的，
-这是一个非常有趣且直观的方式来理解双射证明和Dyck路径。
-我们将使用一个经典的水果排列组合问题，
-并构建它与Dyck路径之间的双射关系。
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
-\begin_layout Standard
-### 问题设定：
+\begin_layout Example
 水果找零问题
 \end_layout
 
-\begin_layout Standard
-> 一个水果摊老板卖苹果和橙子，
+\begin_layout Example
+一个水果摊老板卖苹果和橙子，
 每个水果都卖1元钱。
-现在有 $n$ 个顾客只想买苹果，
-另外 $n$ 个顾客只想买橙子。
-这 $2n$ 个顾客随机排成一队。
+现在有 
+\begin_inset Formula $n$
+\end_inset
+
+ 个顾客只想买苹果，
+另外 
+\begin_inset Formula $n$
+\end_inset
+
+ 个顾客只想买橙子。
+这 
+\begin_inset Formula $2n$
+\end_inset
+
+ 个顾客随机排成一队。
 
 \end_layout
 
-\begin_layout Standard
->
-\end_layout
+\begin_layout Example
+老板一开始口袋里没有钱。
+每个买苹果的顾客会给老板
+\begin_inset Formula $1$
+\end_inset
 
-\begin_layout Standard
-> 老板一开始口袋里没有钱。
-每个买苹果的顾客会给老板1元钱。
+元钱。
 每个买橙子的顾客，
 老板需要找他1元钱（假设老板有一种神奇的橙子，
-顾客先给1元，
-老板再找回2元，
-效果等同于老板倒贴1元）。
+顾客先给
+\begin_inset Formula $1$
+\end_inset
+
+元，
+老板再找回
+\begin_inset Formula $2$
+\end_inset
+
+元，
+效果等同于老板倒贴
+\begin_inset Formula $1$
+\end_inset
+
+元）。
 
 \end_layout
 
-\begin_layout Standard
->
-\end_layout
+\begin_layout Example
+在所有可能的 
+\begin_inset Formula $2n$
+\end_inset
 
-\begin_layout Standard
-- **问题**:
- 在所有可能的 $2n$ 个顾客的排列中，
+ 个顾客的排列中，
 有多少种排列方式，
 能保证老板在整个交易过程中永远不会出现钱不够找（即口袋里的钱数始终大于或等于0）的情况？
 
 \end_layout
 
-\begin_layout Standard
-### 建立数学模型
-\end_layout
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+顾客序列:
+ 我们可以用一个长度为 
+\begin_inset Formula $2n$
+\end_inset
 
-\begin_layout Standard
-1.
- **顾客序列**:
- 我们可以用一个长度为 $2n$ 的序列来表示顾客的排列。
-
-\end_layout
-
-\begin_layout Standard
-* 买**苹果**的顾客记为 **A** (Apple)。
+ 的序列来表示顾客的排列。
 
 \end_layout
 
-\begin_layout Standard
-* 买**橙子**的顾客记为 **O** (Orange)。
+\begin_deeper
+\begin_layout Enumerate
+买苹果的顾客记为 A (Apple)。
 
 \end_layout
 
-\begin_layout Standard
-* 一个合法的排列包含 $n$ 个A和 $n$ 个O。
+\begin_layout Enumerate
+买橙子的顾客记为 O (Orange)。
 
 \end_layout
 
-\begin_layout Standard
-2.
- **老板的钱**:
-\end_layout
+\begin_layout Enumerate
+一个合法的排列包含 
+\begin_inset Formula $n$
+\end_inset
 
-\begin_layout Standard
-* 遇到一个 **A**，
-老板的钱 `+1`。
+ 个A和 
+\begin_inset Formula $n$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-* 遇到一个 **O**，
-老板的钱 `-1`。
+ 个O。
 
 \end_layout
 
-\begin_layout Standard
-3.
- **约束条件**:
- 在序列的任何一个前缀（从第1个顾客到第 $k$ 个顾客），
-老板的钱数始终 $
-\backslash
-ge 0$。
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+老板的钱:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+遇到一个 A，
+老板的钱 
+\begin_inset Formula $+1$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-* 用数学语言来说，
-对于任何 $k 
-\backslash
-in [1,
- 2n]$，
-序列的前 $k$ 项中，
-A的数量**始终不少于**O的数量。
+\begin_layout Enumerate
+遇到一个 O，
+老板的钱 
+\begin_inset Formula $-1$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-**示例 (n=3):**
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+约束条件:
+ 在序列的任何一个前缀（从第1个顾客到第 
+\begin_inset Formula $k$
+\end_inset
+
+ 个顾客），
+老板的钱数始终 
+\begin_inset Formula $\ge0$
+\end_inset
+
+。
+
 \end_layout
 
-\begin_layout Standard
-* **合法序列**:
- `AAOABO`
+\end_deeper
+\begin_layout Example
+用数学语言来说，
+对于任何 
+\begin_inset Formula $k\in[1,2n]$
+\end_inset
+
+，
+序列的前 
+\begin_inset Formula $k$
+\end_inset
+
+ 项中，
+A的数量始终不少于O的数量。
+
 \end_layout
 
-\begin_layout Standard
-* 钱的变化:
- 1 → 2 → 1 → 2 → 1 → 0 (始终 $
-\backslash
-ge 0$)
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+例如，
+设 (
+\begin_inset Formula $n=3$
+\end_inset
+
+):
 \end_layout
 
-\begin_layout Standard
-* **不合法序列**:
- `AOABOA`
+\begin_layout Enumerate
+合法序列:
+ 
+\begin_inset Formula $AAOABO$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 钱的变化:
- 1 → 0 → 1 → 0 → -1 (钱不够了!)
+钱的变化:
+ 
+\begin_inset Formula $1\rightarrow2\rightarrow1\rightarrow2\rightarrow1\rightarrow0$
+\end_inset
+
+ (始终 
+\begin_inset Formula $\ge0$
+\end_inset
+
+)
 \end_layout
 
-\begin_layout Standard
-### 双射证明：
-水果序列 ↔ Dyck路径
+\end_deeper
+\begin_layout Enumerate
+不合法序列:
+ 
+\begin_inset Formula $AOABOA$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
+钱的变化:
+ 
+\begin_inset Formula $1\rightarrow0\rightarrow1\rightarrow0\rightarrow-1$
+\end_inset
+
+ (钱不够了!)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+双射证明：
+水果序列 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ Dyck路径
+\end_layout
+
+\begin_layout Example
 现在，
-我们要在这两种看似不同的问题之间建立一个**双射 (Bijective Map)**。
+我们要在这两种看似不同的问题之间建立一个双射 (Bijective Map)。
 
 \end_layout
 
-\begin_layout Standard
-**映射规则:**
+\begin_layout Example
+映射规则:
+ 
 \end_layout
 
-\begin_layout Standard
-* **买苹果的顾客 (A)** ↔ **向右移动一步 (R)**
+\begin_layout Example
+买苹果的顾客 (
+\begin_inset Formula $A$
+\end_inset
+
+) 
+\begin_inset Formula $\longleftrightarrow$
+\end_inset
+
+ 向右移动一步 (
+\begin_inset Formula $R$
+\end_inset
+
+)
 \end_layout
 
-\begin_layout Standard
-* **买橙子的顾客 (O)** ↔ **向上移动一步 (U)**
+\begin_layout Example
+买橙子的顾客 (
+\begin_inset Formula $O$
+\end_inset
+
+) 
+\begin_inset Formula $\longleftrightarrow$
+\end_inset
+
+ 向上移动一步 (
+\begin_inset Formula $U$
+\end_inset
+
+)
 \end_layout
 
-\begin_layout Standard
-一个包含 $n$ 个A和 $n$ 个O的序列，
-正好对应一条从 `(0,0)` 到 `(n,n)` 的路径，
-因为它包含 $n$ 次向右移动和 $n$ 次向上移动。
+\begin_layout Example
+一个包含 
+\begin_inset Formula $n$
+\end_inset
+
+ 个
+\begin_inset Formula $A$
+\end_inset
+
+和 
+\begin_inset Formula $n$
+\end_inset
+
+ 个
+\begin_inset Formula $O$
+\end_inset
+
+的序列，
+正好对应一条从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的路径，
+因为它包含
+\begin_inset Formula $n$
+\end_inset
+
+ 次向右移动和 
+\begin_inset Formula $n$
+\end_inset
+
+ 次向上移动。
 
 \end_layout
 
-\begin_layout Standard
-**关键：
-约束条件的等价性**
+\begin_layout Example
+关键：
+约束条件的等价性
 \end_layout
 
-\begin_layout Standard
-* **水果问题中的约束**:
+\begin_layout Example
+水果问题中的约束:
  在序列的任何前缀中，
-A的数量 $
-\backslash
-ge$ O的数量。
+A的数量 
+\begin_inset Formula $\ge$
+\end_inset
+
+ O的数量。
 
 \end_layout
 
-\begin_layout Standard
-* **Dyck路径中的约束**:
- 在路径的任何一个点 `(x,y)`，
-都有 $x 
-\backslash
-ge y$。
+\begin_layout Example
+Dyck路径中的约束:
+ 在路径的任何一个点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
+都有 
+\begin_inset Formula $x\ge y$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-这两个约束是**完全等价的**！
+\begin_layout Example
+这两个约束是完全等价的！
 
 \end_layout
 
-\begin_layout Standard
-* 路径上的一个点 `(x,y)`，
-表示已经走了 $x$ 步向右（R）和 $y$ 步向上（U）。
+\begin_layout Example
+路径上的一个点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
+表示已经走了 
+\begin_inset Formula $x$
+\end_inset
+
+ 步向右（
+\begin_inset Formula $R$
+\end_inset
+
+）和 
+\begin_inset Formula $y$
+\end_inset
+
+ 步向上（U）。
 
 \end_layout
 
-\begin_layout Standard
-* 这对应于顾客序列的前 $x+y$ 个顾客中，
-有 $x$ 个A和 $y$ 个O。
+\begin_layout Example
+这对应于顾客序列的前 
+\begin_inset Formula $x+y$
+\end_inset
+
+ 个顾客中，
+有 
+\begin_inset Formula $x$
+\end_inset
+
+ 个A和 
+\begin_inset Formula $y$
+\end_inset
+
+ 个O。
 
 \end_layout
 
-\begin_layout Standard
-* $x 
-\backslash
-ge y$ 这个条件，
+\begin_layout Example
+\begin_inset Formula $x\ge y$
+\end_inset
+
+ 这个条件，
 不多不少，
-正好就是 **A的数量 $
-\backslash
-ge$ O的数量**。
+正好就是 A的数量
+\begin_inset Formula $\ge$
+\end_inset
+
+ O的数量。
 
 \end_layout
 
-\begin_layout Standard
-* 因此，
-一条合法的Dyck路径（不越过对角线 $y=x$）与一个合法的找零序列是**一一对应的**。
+\begin_layout Example
+因此，
+一条合法的Dyck路径（不越过对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+）与一个合法的找零序列是 一一对应的 。
 
 \end_layout
 
-\begin_layout Standard
-### 演示 (n=3)
-\end_layout
-
-\begin_layout Standard
-让我们来看一个具体的例子，
-$n=3$。
-我们知道答案是 $C_3=5$。
-
-\end_layout
-
-\begin_layout Standard
-| 合法的水果序列 | 钱数变化过程 | 对应的Dyck路径 | 路径坐标序列 |
-\end_layout
-
-\begin_layout Standard
-| :--- | :--- | :--- | :--- |
-\end_layout
-
-\begin_layout Standard
-| **AAABBB** | 1→2→3→2→1→0 | **RRRUUU** | (0,0)→(1,0)→(2,0)→(3,0)→(3,1)→(3,2)→(3,3) |
-\end_layout
-
-\begin_layout Standard
-| **AABABB** | 1→2→1→2→1→0 | **RRURUU** | (0,0)→(1,0)→(2,0)→(2,1)→(3,1)→(3,2)→(3,3) |
-\end_layout
-
-\begin_layout Standard
-| **AABBAB** | 1→2→1→0→1→0 | **RRUURU** | (0,0)→(1,0)→(2,0)→(2,1)→(2,2)→(3,2)→(3,3) |
-\end_layout
-
-\begin_layout Standard
-| **ABAABB** | 1→0→1→2→1→0 | **RURRUU** | (0,0)→(1,0)→(1,1)→(2,1)→(3,1)→(3,2)→(3,3) |
-\end_layout
-
-\begin_layout Standard
-| **ABABAB** | 1→0→1→0→1→0 | **RURURU** | (0,0)→(1,0)→(1,1)→(2,1)→(2,2)→(3,2)→(3,3) |
-\end_layout
-
-\begin_layout Standard
-<br>
-\end_layout
-
-\begin_layout Standard
-<img src="https://i.imgur.com/GzF4i3M.png" alt="n=3的5条Dyck路径" width="600">
-\end_layout
-
-\begin_layout Standard
-*上图展示了与这5个序列一一对应的5条Dyck路径。
-*
-\end_layout
-
-\begin_layout Standard
-### 如何用“折线法”解决水果问题？
-
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 既然我们已经建立了双射，
 那么解决Dyck路径问题的“折线法”也可以直接应用到水果问题上。
 
 \end_layout
 
-\begin_layout Standard
-1.
- **总排列数**:
- $2n$ 个顾客，
-其中 $n$ 个A，
- $n$ 个O，
-总排列数是 $
-\backslash
-binom{2n}{n}$。
+\begin_deeper
+\begin_layout Enumerate
+总排列数:
+ 
+\begin_inset Formula $2n$
+\end_inset
+
+ 个顾客，
+其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 个A，
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ 个O，
+总排列数是 
+\begin_inset Formula $\binom{2n}{n}$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-2.
- **不合法的排列**:
+\begin_layout Enumerate
+不合法的排列 :
  任何一个不合法的排列，
-必然存在一个最小的 $k$，
-使得在前 $k$ 个顾客中，
-O的数量**第一次**比A的数量多1。
+必然存在一个最小的 
+\begin_inset Formula $k$
+\end_inset
+
+，
+使得在前 
+\begin_inset Formula $k$
+\end_inset
+
+ 个顾客中，
+O的数量第一次比A的数量多
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+实施“反射”:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+找到这个最小的 
+\begin_inset Formula $k$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 例如 `AOABOA`，
-在 $k=5$ 时 (AOAB**O**)，
-有2个A，
-3个O。
+将前 
+\begin_inset Formula $k$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-3.
- **实施“反射”**:
-\end_layout
-
-\begin_layout Standard
-* 找到这个最小的 $k$。
-
-\end_layout
-
-\begin_layout Standard
-* 将前 $k$ 个顾客的身份**反转**：
+ 个顾客的身份反转：
 A变成O，
 O变成A。
 
 \end_layout
 
 \begin_layout Standard
-* `A O A B O A` → `[A O A B O]` `A` → $k=5$时，
-`O A O A A` (前5个反转) → `O A O A A A`
+示例
+\begin_inset Formula $n=3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A→k=5$
+\end_inset
+
+时,
+ 
+\begin_inset Formula $AOAOOA\rightarrow[OAOAAA]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-* **结果**:
+结果:
 \end_layout
 
 \begin_layout Standard
-* 原始不合法序列:
- $n$ 个A,
- $n$ 个O。
+原始不合法序列:
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ 个
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ 个
+\begin_inset Formula $O$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 反转后新序列:
- $(n-1)$ 个A,
- $(n+1)$ 个O。
+反转后新序列:
+ 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+ 个
+\begin_inset Formula $A$
+\end_inset
+
+,
+ 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ 个
+\begin_inset Formula $O$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-4.
- **建立双射**:
+\end_deeper
+\begin_layout Enumerate
+建立双射:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 任何一个不合法的找零序列，
+任何一个不合法的找零序列，
 都可以通过上述操作，
-唯一地对应一个包含 `(n-1)` 个A和 `(n+1)` 个O的序列。
+唯一地对应一个包含
+\begin_inset Formula $(n+1)$
+\end_inset
+
+ 个A和 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ 个O的序列。
 
 \end_layout
 
 \begin_layout Standard
-* 反之，
-任何一个包含 `(n-1)` 个A和 `(n+1)` 个O的序列，
+反之，
+任何一个包含 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ 个A和 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+ 个O的序列，
 由于O比A多，
 必然存在一个点O的数量超过A的数量。
 找到第一个这样的点，
@@ -12347,47 +12653,56 @@ O变成A。
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+计数:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-5.
- **计数**:
+包含 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ 个A和 
+\begin_inset Formula $(n+1)$
+\end_inset
+
+ 个O的序列总数是 
+\begin_inset Formula $\binom{2n}{n-1}$
+\end_inset
+
+ 或 
+\begin_inset Formula $\binom{2n}{n+1}$
+\end_inset
+
+。
+
 \end_layout
 
 \begin_layout Standard
-* 包含 `(n-1)` 个A和 `(n+1)` 个O的序列总数是 $
-\backslash
-binom{2n}{n-1}$ 或 $
-\backslash
-binom{2n}{n+1}$。
+这就是不合法序列的数量。
 
 \end_layout
 
-\begin_layout Standard
-* 这就是不合法序列的数量。
+\end_deeper
+\end_deeper
+\begin_layout Example
+最终答案:
+\end_layout
+
+\begin_layout Example
+合法序列数 = 总序列数 - 不合法序列数
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $C_{n}=\binom{2n}{n}-\binom{2n}{n-1}=\frac{1}{n+1}\binom{2n}{n}$
+\end_inset
+
 
 \end_layout
 
-\begin_layout Standard
-6.
- **最终答案**:
-\end_layout
-
-\begin_layout Standard
-* 合法序列数 = 总序列数 - 不合法序列数
-\end_layout
-
-\begin_layout Standard
-* $C_n = 
-\backslash
-binom{2n}{n} - 
-\backslash
-binom{2n}{n-1} = 
-\backslash
-frac{1}{n+1}
-\backslash
-binom{2n}{n}$
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 通过这个水果问题的例子，
 我们可以非常清晰地看到，
 双射证明是如何将一个应用问题转化为一个纯粹的几何路径问题，
@@ -12396,7 +12711,7 @@ binom{2n}{n}$
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 母函数 (Generating Function)
 \end_layout
 
@@ -12426,7 +12741,7 @@ binom{2n}{n}$
 \begin_layout Standard
 \begin_inset Formula 
 \[
-C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+\dots
+C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+\dots=\frac{1-\sqrt{1-4x}}{2x}
 \]
 
 \end_inset
@@ -12457,20 +12772,11 @@ C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+\dots
 \end_layout
 
 \begin_layout Standard
-我们已经推导出卡特兰数的递推关系：
-
-\begin_inset Formula 
-\[
-C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}=\sum_{i=0}^{n-1}C_{i}C_{n-1-i}\quad(\text{for }n\ge1)
-\]
-
-\end_inset
-
-
+推导 :
 \end_layout
 
 \begin_layout Standard
-并且我们定义了初始值：
+定义初始值：
 
 \end_layout
 
@@ -12486,7 +12792,15 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
-(代表从 `(0,0)` 到 `(0,0)` 的路径，
+(代表从 `
+\begin_inset Formula $(0,0)$
+\end_inset
+
+` 到 `
+\begin_inset Formula $(0,0)$
+\end_inset
+
+` 的路径，
 只有1种，
 即不动。
 这个初始值非常重要。
@@ -12499,7 +12813,6 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $C_{1}=C_{0}C_{0}=1\cdot1=1$
 \end_inset
 
@@ -12507,7 +12820,6 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
-* 
 \begin_inset Formula $C_{2}=C_{0}C_{1}+C_{1}C_{0}=1\cdot1+1\cdot1=2$
 \end_inset
 
@@ -12515,7 +12827,6 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
-*
 \begin_inset Formula $C_{3}=C_{0}C_{2}+C_{1}C_{1}+C_{2}C_{0}=1\cdot2+1\cdot1+2\cdot1=5$
 \end_inset
 
@@ -12523,153 +12834,99 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 第2步：
 将递推关系转化为母函数方程
 \end_layout
 
 \begin_layout Standard
-**1.
- 定义母函数**
+定义母函数 
 \end_layout
 
 \begin_layout Standard
-设卡特兰数列 $
-\backslash
-{C_n
-\backslash
-}_{n=0}^
-\backslash
-infty$ 的母函数为 $C(x)$:
+设卡特兰数列 
+\begin_inset Formula $\{C_{n}\}_{n=0}^{\infty}$
+\end_inset
+
+ 的母函数为
+\begin_inset Formula $C(x)$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
-$$ C(x) = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} C_n x^n = C_0 + C_1x + C_2x^2 + C_3x^3 + 
-\backslash
-dots $$
-\end_layout
+\begin_inset Formula 
+\[
+C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+C_{3}x^{3}+\dots
+\]
 
-\begin_layout Standard
-**2.
- 观察递推式的结构**
-\end_layout
+\end_inset
 
-\begin_layout Standard
-递推式 $C_n = 
-\backslash
-sum_{i=0}^{n-1} C_i C_{n-1-i}$ 的右边是一个**卷积 (Convolution)** 的形式。
 
 \end_layout
 
 \begin_layout Standard
-**3.
- 计算 $C(x)^2$**
-\end_layout
-
-\begin_layout Standard
-让我们来看看母函数的平方是什么样子的。
 根据两个幂级数的乘法法则（柯西乘积）：
 
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+\begin{aligned}C(x)^{2} & =\left(\sum_{i=0}^{\infty}C_{i}x^{i}\right)\left(\sum_{j=0}^{\infty}C_{j}x^{j}\right)\\
+ & =\sum_{n=0}^{\infty}\left(\sum_{i=0}^{n}C_{i}C_{n-i}\right)x^{n}\\
+ & =(C_{0}C_{0})x^{0}+(C_{0}C_{1}+C_{1}C_{0})x^{1}+(C_{0}C_{2}+C_{1}C_{1}+C_{2}C_{0})x^{2}+\dots
+\end{aligned}
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-begin{aligned}
-\end_layout
-
-\begin_layout Standard
-C(x)^2 &= 
-\backslash
-left(
-\backslash
-sum_{i=0}^{
-\backslash
-infty} C_i x^i
-\backslash
-right) 
-\backslash
-left(
-\backslash
-sum_{j=0}^{
-\backslash
-infty} C_j x^j
-\backslash
-right) 
-\backslash
-
-\backslash
 
 \end_layout
 
 \begin_layout Standard
-&= 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} 
-\backslash
-left( 
-\backslash
-sum_{i=0}^{n} C_i C_{n-i} 
-\backslash
-right) x^n 
-\backslash
+观察 
+\begin_inset Formula $C(x)^{2}$
+\end_inset
 
-\backslash
+ 中 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数，
+它正好是 
+\begin_inset Formula $C_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C(x)^{2}$
+\end_inset
+
+ 中 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数是:
+ 
+\begin_inset Formula $\sum_{i=0}^{n}C_{i}C_{n-i}$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-&= (C_0C_0)x^0 + (C_0C_1+C_1C_0)x^1 + (C_0C_2+C_1C_1+C_2C_0)x^2 + 
-\backslash
-dots
-\end_layout
+我们的递推关系是:
+ 
+\begin_inset Formula $C_{n+1}=\sum_{i=0}^{n}C_{i}C_{n-i}$
+\end_inset
 
-\begin_layout Standard
+ (将原递推式中的 $n$ 换成 
+\begin_inset Formula $n+1$
+\end_inset
 
-\backslash
-end{aligned}
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-观察 $C(x)^2$ 中 $x^n$ 的系数，
-它正好是 $C_{n+1}$！
-
-\end_layout
-
-\begin_layout Standard
-为什么？
-
-\end_layout
-
-\begin_layout Standard
-* $C(x)^2$ 中 $x^n$ 的系数是:
- $
-\backslash
-sum_{i=0}^{n} C_i C_{n-i}$
-\end_layout
-
-\begin_layout Standard
-* 我们的递推关系是:
- $C_{n+1} = 
-\backslash
-sum_{i=0}^{n} C_i C_{n-i}$ (将原递推式中的 $n$ 换成 $n+1$)
+)
 \end_layout
 
 \begin_layout Standard
@@ -12679,1004 +12936,49 @@ sum_{i=0}^{n} C_i C_{n-i}$ (将原递推式中的 $n$ 换成 $n+1$)
 \end_layout
 
 \begin_layout Standard
-$$ C(x)^2 = 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} C_{n+1} x^n $$
-\end_layout
+\begin_inset Formula 
+\[
+C(x)^{2}=\sum_{n=0}^{\infty}C_{n+1}x^{n}
+\]
 
-\begin_layout Standard
-**4.
- 建立方程**
-\end_layout
+\end_inset
 
-\begin_layout Standard
-我们来处理一下右边的和式：
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} C_{n+1} x^n = C_1 + C_2x + C_3x^2 + 
-\backslash
-dots $$
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}C_{n+1}x^{n}=C_{1}+C_{2}x+C_{3}x^{2}+\dots
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-这个级数和我们定义的 $C(x)$ 非常像，
+这个级数和我们定义的
+\begin_inset Formula $C(x)$
+\end_inset
+
+ 非常像，
 只是少了一个 $C_0$ 项，
-并且 $x$ 的次数都低了一次。
+并且
+\begin_inset Formula $x$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-我们可以通过代数变形把它和 $C(x)$ 联系起来：
-
-\end_layout
-
-\begin_layout Standard
-$$ C_1 + C_2x + C_3x^2 + 
-\backslash
-dots = 
-\backslash
-frac{C_0 + C_1x + C_2x^2 + C_3x^3 + 
-\backslash
-dots - C_0}{x} = 
-\backslash
-frac{C(x) - C_0}{x} $$
-\end_layout
-
-\begin_layout Standard
-因为 $C_0=1$，
-所以：
-
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-sum_{n=0}^{
-\backslash
-infty} C_{n+1} x^n = 
-\backslash
-frac{C(x) - 1}{x} $$
-\end_layout
-
-\begin_layout Standard
-现在，
-把等式两边的部分联立起来：
-
-\end_layout
-
-\begin_layout Standard
-$$ C(x)^2 = 
-\backslash
-frac{C(x) - 1}{x} $$
-\end_layout
-
-\begin_layout Standard
-这就是我们梦寐以求的，
-关于母函数 $C(x)$ 自身的**代数方程**。
-
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 第3步：
-解出母函数的显式表达式
-\end_layout
-
-\begin_layout Standard
-我们得到了一个关于 $C(x)$ 的一元二次方程：
-
-\end_layout
-
-\begin_layout Standard
-$$ x[C(x)]^2 - C(x) + 1 = 0 $$
-\end_layout
-
-\begin_layout Standard
-我们可以把 $C(x)$ 看作变量，
-用二次方程求根公式 $y = 
-\backslash
-frac{-b 
-\backslash
-pm 
-\backslash
-sqrt{b^2-4ac}}{2a}$ 来解。
-
-\end_layout
-
-\begin_layout Standard
-这里 $a=x,
- b=-1,
- c=1$。
-
-\end_layout
-
-\begin_layout Standard
-$$ C(x) = 
-\backslash
-frac{-(-1) 
-\backslash
-pm 
-\backslash
-sqrt{(-1)^2 - 4(x)(1)}}{2(x)} = 
-\backslash
-frac{1 
-\backslash
-pm 
-\backslash
-sqrt{1-4x}}{2x} $$
-\end_layout
-
-\begin_layout Standard
-现在我们得到了两个可能的解，
-应该选哪一个？
-
-\end_layout
-
-\begin_layout Standard
-**通过初始条件 $C(0)=C_0=1$ 来判断：
-**
-\end_layout
-
-\begin_layout Standard
-* **如果取“+”号**:
- $C(x) = 
-\backslash
-frac{1 + 
-\backslash
-sqrt{1-4x}}{2x}$
-\end_layout
-
-\begin_layout Standard
-当 $x 
-\backslash
-to 0$ 时，
-分子趋近于 $1+
-\backslash
-sqrt{1}=2$，
-分母趋近于 0。
-此时 $
-\backslash
-lim_{x
-\backslash
-to 0} C(x)$ 是无穷大，
-这与 $C(0)=1$ 矛盾。
-所以舍去“+”号解。
-
-\end_layout
-
-\begin_layout Standard
-* **如果取“-”号**:
- $C(x) = 
-\backslash
-frac{1 - 
-\backslash
-sqrt{1-4x}}{2x}$
-\end_layout
-
-\begin_layout Standard
-当 $x 
-\backslash
-to 0$ 时，
-分子趋近于 $1-
-\backslash
-sqrt{1}=0$，
-分母也趋近于 0，
-这是一个 $
-\backslash
-frac{0}{0}$ 型的不定式。
-我们可以使用洛必达法则来求极限：
-
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-to 0} C(x) = 
-\backslash
-lim_{x
-\backslash
-to 0} 
-\backslash
-frac{
-\backslash
-frac{d}{dx}(1 - 
-\backslash
-sqrt{1-4x})}{
-\backslash
-frac{d}{dx}(2x)} = 
-\backslash
-lim_{x
-\backslash
-to 0} 
-\backslash
-frac{-( 
-\backslash
-frac{1}{2
-\backslash
-sqrt{1-4x}} 
-\backslash
-cdot (-4))}{2} = 
-\backslash
-lim_{x
-\backslash
-to 0} 
-\backslash
-frac{2}{
-\backslash
-sqrt{1-4x}} = 
-\backslash
-frac{2}{1} = 2 $$
-\end_layout
-
-\begin_layout Standard
-嗯？
-算错了。
-让我们用泰勒展开来验证，
-这更可靠。
-
-\end_layout
-
-\begin_layout Standard
-**泰勒展开**:
- $
-\backslash
-sqrt{1+z} 
-\backslash
-approx 1 + 
-\backslash
-frac{1}{2}z$ 当 $z$ 很小时。
-
-\end_layout
-
-\begin_layout Standard
-令 $z=-4x$：
-
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-sqrt{1-4x} 
-\backslash
-approx 1 + 
-\backslash
-frac{1}{2}(-4x) = 1-2x $$
-\end_layout
-
-\begin_layout Standard
-代入表达式：
-
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-lim_{x
-\backslash
-to 0} 
-\backslash
-frac{1 - (1-2x)}{2x} = 
-\backslash
-lim_{x
-\backslash
-to 0} 
-\backslash
-frac{2x}{2x} = 1 $$
-\end_layout
-
-\begin_layout Standard
-这个结果与 $C(0)=1$ 相符！
-所以，
-我们选择“-”号解。
-
-\end_layout
-
-\begin_layout Standard
-最终，
-我们得到母函数的显式表达式：
-
-\end_layout
-
-\begin_layout Standard
-$$ C(x) = 
-\backslash
-frac{1 - 
-\backslash
-sqrt{1-4x}}{2x} $$
-\end_layout
-
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 第4步：
-将母函数展开成幂级数
-\end_layout
-
-\begin_layout Standard
-现在我们需要将 $C(x)$ 展开成 $C_0 + C_1x + C_2x^2 + 
-\backslash
-dots$ 的形式，
-然后找到 $x^n$ 的系数，
-这个系数就是 $C_n$。
-
-\end_layout
-
-\begin_layout Standard
-**1.
- 使用广义二项式定理**
-\end_layout
-
-\begin_layout Standard
-我们需要展开 $
-\backslash
-sqrt{1-4x} = (1-4x)^{1/2}$。
-
-\end_layout
-
-\begin_layout Standard
-广义二项式定理：
-
-\end_layout
-
-\begin_layout Standard
-$$ (1+z)^
-\backslash
-alpha = 
-\backslash
-sum_{k=0}^{
-\backslash
-infty} 
-\backslash
-binom{
-\backslash
-alpha}{k} z^k $$
-\end_layout
-
-\begin_layout Standard
-其中，
-广义二项式系数 $
-\backslash
-binom{
-\backslash
-alpha}{k} = 
-\backslash
-frac{
-\backslash
-alpha(
-\backslash
-alpha-1)
-\backslash
-cdots(
-\backslash
-alpha-k+1)}{k!}$。
-
-\end_layout
-
-\begin_layout Standard
-令 $z=-4x,
- 
-\backslash
-alpha=1/2$：
-
-\end_layout
-
-\begin_layout Standard
-$$ (1-4x)^{1/2} = 
-\backslash
-sum_{k=0}^{
-\backslash
-infty} 
-\backslash
-binom{1/2}{k} (-4x)^k = 
-\backslash
-sum_{k=0}^{
-\backslash
-infty} 
-\backslash
-binom{1/2}{k} (-4)^k x^k $$
-\end_layout
-
-\begin_layout Standard
-我们来计算一下这个系数 $
-\backslash
-binom{1/2}{k}$：
-
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-begin{aligned}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-binom{1/2}{k} &= 
-\backslash
-frac{(
-\backslash
-frac{1}{2})(
-\backslash
-frac{1}{2}-1)
-\backslash
-cdots(
-\backslash
-frac{1}{2}-k+1)}{k!} 
-\backslash
-
-\backslash
+ 的次数都低了一次。
 
 \end_layout
 
 \begin_layout Standard
-&= 
-\backslash
-frac{(
-\backslash
-frac{1}{2})(-
-\backslash
-frac{1}{2})(-
-\backslash
-frac{3}{2})
-\backslash
-cdots(-
-\backslash
-frac{2k-3}{2})}{k!} 
-\backslash
+我们可以通过代数变形把它和 
+\begin_inset Formula $C(x)$
+\end_inset
 
-\backslash
+ 联系起来：
 
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{(-1)^{k-1} 
-\backslash
-cdot 1 
-\backslash
-cdot 3 
-\backslash
-cdot 5 
-\backslash
-cdots (2k-3)}{2^k k!} 
-\backslash
-quad (
-\backslash
-text{for } k 
-\backslash
-ge 1)
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{aligned}
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-经过一系列繁琐但标准的化简（通过分子分母同乘偶数项凑阶乘），
-可以得到 (对于 $k 
-\backslash
-ge 1$):
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-binom{1/2}{k} = 
-\backslash
-frac{(-1)^{k-1}}{2k-1} 
-\backslash
-frac{1}{2^{2k-1}} 
-\backslash
-binom{2k-2}{k-1} $$
-\end_layout
-
-\begin_layout Standard
-**2.
- 代入并求系数**
-\end_layout
-
-\begin_layout Standard
-将展开式代入 $C(x)$：
-
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-begin{aligned}
-\end_layout
-
-\begin_layout Standard
-C(x) &= 
-\backslash
-frac{1 - 
-\backslash
-sum_{k=0}^{
-\backslash
-infty} 
-\backslash
-binom{1/2}{k} (-4x)^k}{2x} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{1 - 
-\backslash
-left( 
-\backslash
-binom{1/2}{0} + 
-\backslash
-sum_{k=1}^{
-\backslash
-infty} 
-\backslash
-binom{1/2}{k} (-4x)^k 
-\backslash
-right) }{2x} 
-\backslash
-quad (
-\backslash
-text{因为 } 
-\backslash
-binom{1/2}{0}=1) 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{- 
-\backslash
-sum_{k=1}^{
-\backslash
-infty} 
-\backslash
-binom{1/2}{k} (-4)^k x^k}{2x} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= - 
-\backslash
-sum_{k=1}^{
-\backslash
-infty} 
-\backslash
-frac{1}{2} 
-\backslash
-binom{1/2}{k} (-4)^k x^{k-1}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{aligned}
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-我们要求的是 $C_n$，
-也就是 $x^n$ 的系数。
-所以我们需要看当 $k-1=n$，
-即 $k=n+1$ 时的情况：
-
-\end_layout
-
-\begin_layout Standard
-$C_n = [x^n]C(x) = -
-\backslash
-frac{1}{2} 
-\backslash
-binom{1/2}{n+1} (-4)^{n+1}$
-\end_layout
-
-\begin_layout Standard
-代入我们之前化简的 $
-\backslash
-binom{1/2}{k}$ 表达式 (令 $k=n+1$)：
-
-\end_layout
-
-\begin_layout Standard
-$$ C_n = -
-\backslash
-frac{1}{2} 
-\backslash
-left[ 
-\backslash
-frac{(-1)^n}{2(n+1)-1} 
-\backslash
-frac{1}{2^{2(n+1)-1}} 
-\backslash
-binom{2(n+1)-2}{(n+1)-1} 
-\backslash
-right] (-4)^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-$$ C_n = -
-\backslash
-frac{1}{2} 
-\backslash
-left[ 
-\backslash
-frac{(-1)^n}{2n+1} 
-\backslash
-frac{1}{2^{2n+1}} 
-\backslash
-binom{2n}{n} 
-\backslash
-right] (-1)^{n+1} 4^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-化简符号和幂次：
-
-\end_layout
-
-\begin_layout Standard
-$$ C_n = 
-\backslash
-frac{1}{2} 
-\backslash
-cdot 
-\backslash
-frac{1}{2n+1} 
-\backslash
-cdot 
-\backslash
-frac{1}{2^{2n+1}} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot 4^{n+1} 
-\backslash
-quad ((-1)^{2n+1}=-1) $$
-\end_layout
-
-\begin_layout Standard
-$$ C_n = 
-\backslash
-frac{1}{2} 
-\backslash
-cdot 
-\backslash
-frac{1}{2n+1} 
-\backslash
-cdot 
-\backslash
-frac{1}{2^{2n+1}} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot (2^2)^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-$$ C_n = 
-\backslash
-frac{1}{2} 
-\backslash
-cdot 
-\backslash
-frac{1}{2n+1} 
-\backslash
-cdot 
-\backslash
-frac{1}{2^{2n+1}} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot 2^{2n+2} $$
-\end_layout
-
-\begin_layout Standard
-$$ C_n = 
-\backslash
-frac{2^{2n+2}}{2 
-\backslash
-cdot 2^{2n+1}} 
-\backslash
-cdot 
-\backslash
-frac{1}{2n+1} 
-\backslash
-binom{2n}{n} = 
-\backslash
-frac{1}{2n+1} 
-\backslash
-binom{2n}{n} $$
-\end_layout
-
-\begin_layout Standard
-这个结果看起来还不对，
-说明中间的化简还有一些更简洁的路径。
-
-\end_layout
-
-\begin_layout Standard
-**让我们用一种更直接的方法求系数。
-**
-\end_layout
-
-\begin_layout Standard
-$x^n$ in $(1-4x)^{1/2}$ 的系数是 $
-\backslash
-binom{1/2}{n}(-4)^n$。
-
-\end_layout
-
-\begin_layout Standard
-经过化简，
-这个系数是 $-
-\backslash
-frac{2}{n}
-\backslash
-binom{2n-2}{n-1}$ (for $n 
-\backslash
-ge 1$)。
-
-\end_layout
-
-\begin_layout Standard
-$C(x) = 
-\backslash
-frac{1 - (1-4x)^{1/2}}{2x} = 
-\backslash
-frac{1 - (1 + 
-\backslash
-sum_{n=1}^
-\backslash
-infty 
-\backslash
-binom{1/2}{n}(-4x)^n)}{2x} = -
-\backslash
-frac{1}{2x}
-\backslash
-sum_{n=1}^
-\backslash
-infty 
-\backslash
-binom{1/2}{n}(-4)^n x^n = -
-\backslash
-frac{1}{2}
-\backslash
-sum_{n=1}^
-\backslash
-infty 
-\backslash
-binom{1/2}{n}(-4)^n x^{n-1}$
-\end_layout
-
-\begin_layout Standard
-$C_k=[x^k]C(x)$，
-即$k=n-1 
-\backslash
-implies n=k+1$
-\end_layout
-
-\begin_layout Standard
-$C_k = -
-\backslash
-frac{1}{2}
-\backslash
-binom{1/2}{k+1}(-4)^{k+1}$
-\end_layout
-
-\begin_layout Standard
-代入 $
-\backslash
-binom{1/2}{k+1} = 
-\backslash
-frac{(-1)^k}{2(k+1)-1} 
-\backslash
-frac{1}{2^{2k+1}}
-\backslash
-binom{2k}{k} = 
-\backslash
-frac{(-1)^k}{2k+1} 
-\backslash
-frac{1}{2^{2k+1}}
-\backslash
-binom{2k}{k}$
-\end_layout
-
-\begin_layout Standard
-$C_k = -
-\backslash
-frac{1}{2} 
-\backslash
-frac{(-1)^k}{2k+1} 
-\backslash
-frac{1}{2^{2k+1}}
-\backslash
-binom{2k}{k} (-1)^{k+1} 4^{k+1} = 
-\backslash
-frac{1}{2k+1}
-\backslash
-binom{2k}{k}$.
-\end_layout
-
-\begin_layout Standard
-还是这个结果，
-说明 $
-\backslash
-binom{1/2}{k}$ 的化简结果可能不对。
-
-\end_layout
-
-\begin_layout Standard
-**我们用最可靠的那个版本**
-\end_layout
-
-\begin_layout Standard
-$$ 
-\backslash
-binom{1/2}{k} = 
-\backslash
-frac{(-1)^{k-1}}{2^{2k-1}} 
-\backslash
-frac{1}{k} 
-\backslash
-binom{2k-2}{k-1} 
-\backslash
-quad (
-\backslash
-text{for } k 
-\backslash
-ge 1) $$
-\end_layout
-
-\begin_layout Standard
-$C_n = [x^n]C(x)$，
-我们需要 $x^{n+1}$ 在 $(1-4x)^{1/2}$ 中的系数。
-
-\end_layout
-
-\begin_layout Standard
-$$ [x^{n+1}](1-4x)^{1/2} = 
-\backslash
-binom{1/2}{n+1}(-4)^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-$$ = 
-\backslash
-frac{(-1)^n}{2^{2n+1}} 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot (-4)^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-$$ = 
-\backslash
-frac{(-1)^n}{2^{2n+1}} 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot (-1)^{n+1} 4^{n+1} $$
-\end_layout
-
-\begin_layout Standard
-$$ = 
-\backslash
-frac{-1}{2^{2n+1}} 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot (2^2)^{n+1} = 
-\backslash
-frac{-1}{2^{2n+1}} 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n} 
-\backslash
-cdot 2^{2n+2} = 
-\backslash
-frac{-2}{n+1} 
-\backslash
-binom{2n}{n} $$
-\end_layout
-
-\begin_layout Standard
-现在，
-代入 $C(x) = 
-\backslash
-frac{1-
-\backslash
-sqrt{1-4x}}{2x}$
-\end_layout
-
-\begin_layout Standard
-$C_n = [x^n]C(x)$ 是 $x^{n+1}$ 在 $-
-\backslash
-frac{
-\backslash
-sqrt{1-4x}}{2}$ 中的系数。
-
-\end_layout
-
-\begin_layout Standard
-$$ C_n = -
-\backslash
-frac{1}{2} 
-\backslash
-left( [x^{n+1}](1-4x)^{1/2} 
-\backslash
-right) = -
-\backslash
-frac{1}{2} 
-\backslash
-left( 
-\backslash
-frac{-2}{n+1}
-\backslash
-binom{2n}{n} 
-\backslash
-right) = 
-\backslash
-frac{1}{n+1}
-\backslash
-binom{2n}{n} $$
-\end_layout
-
-\begin_layout Standard
-**这个对了！
-**
 \end_layout
 
 \begin_layout Standard
@@ -13686,15 +12988,18 @@ binom{2n}{n} $$
 \end_layout
 
 \begin_layout Standard
-$$ C_n = 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n} $$
+\begin_inset Formula 
+\[
+C_{n}=\frac{1}{n+1}\binom{2n}{n}
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-建立递推关系
+\begin_layout Paragraph
+非空Dyck路径
 \end_layout
 
 \begin_layout Standard
@@ -13825,194 +13130,312 @@ binom{2n}{n} $$
 \end_layout
 
 \begin_layout Standard
-好的，
-我们来详细、一步一步地拆解这个卡特兰数的递推关系是如何建立的。
+\begin_inset Formula 
+\[
+C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}\quad(\text{for }n\ge1)
+\]
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-$$ C_n = 
-\backslash
-sum_{k=1}^{n} C_{k-1} C_{n-k} 
-\backslash
-quad (
-\backslash
-text{for } n 
-\backslash
-ge 1) $$
-\end_layout
+我们的目标是计算 
+\begin_inset Formula $C_{n}$
+\end_inset
 
-\begin_layout Standard
-这个公式的推导是母函数方法的基石，
-理解它至关重要。
+，
+即从 `
+\begin_inset Formula $(0,0)$
+\end_inset
 
-\end_layout
+` 到 `
+\begin_inset Formula $(n,n)$
+\end_inset
 
-\begin_layout Standard
-### 1.
- 分解问题的思想
-\end_layout
+` 的所有不越过对角线 
+\begin_inset Formula $y=x$
+\end_inset
 
-\begin_layout Standard
-我们的目标是计算 $C_n$，
-即从 `(0,0)` 到 `(n,n)` 的所有不越过对角线 $y=x$ 的路径数量。
+ 的路径数量。
 
 \end_layout
 
 \begin_layout Standard
-直接计算 $C_n$ 很困难，
-所以我们采用**分解 (Decomposition)** 的思想。
-我们将所有 $C_n$ 条“好”路径，
+直接计算 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ 很困难，
+所以我们采用分解 (Decomposition) 的思想。
+我们将所有 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ 条“好”路径，
 根据某个清晰的标准，
-分解成若干个**互不相交的子集**，
+分解成若干个互不相交的子集，
 然后分别计算每个子集的路径数量，
 最后将它们相加。
 
 \end_layout
 
 \begin_layout Standard
-**分解的标准是什么？
-**
+分解的标准是什么？
+
 \end_layout
 
 \begin_layout Standard
 我们选择的标准是：
-**路径第一次接触对角线 $y=x$ 的位置。
-**
-\end_layout
+ 路径第一次接触对角线 
+\begin_inset Formula $y=x$
+\end_inset
 
-\begin_layout Standard
-### 2.
- 分析路径的结构
-\end_layout
-
-\begin_layout Standard
-考虑任何一条从 `(0,0)` 到 `(n,n)` 的“好”路径（Dyck路径），
-并且这条路径不是空路径（即 $n 
-\backslash
-ge 1$）。
+ 的位置。
 
 \end_layout
 
 \begin_layout Standard
-* **第一步**:
- 这条路径的第一步**必须**是向右（R）移动到 `(1,0)`。
+考虑任何一条从
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的“好”路径（Dyck路径），
+并且这条路径不是空路径（即 
+\begin_inset Formula $n\ge1$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+第一步:
+ 这条路径的第一步必须是向右（
+\begin_inset Formula $R$
+\end_inset
+
+）移动到 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+。
 为什么？
-因为如果第一步是向上（U）移动到 `(0,1)`，
-这个点的 $y$ 坐标大于 $x$ 坐标，
+因为如果第一步是向上（
+\begin_inset Formula $U$
+\end_inset
+
+）移动到 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+，
+这个点的 
+\begin_inset Formula $y$
+\end_inset
+
+ 坐标大于 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标，
 路径立即就“坏”了。
-所以所有“好”路径的起点都是 `(0,0) -> (1,0)`。
+所以所有“好”路径的起点都是 `
+\begin_inset Formula $(0,0)\rightarrow(1,0)$
+\end_inset
+
+`。
 
 \end_layout
 
 \begin_layout Standard
-* **第一次接触对角线**:
- 因为路径的终点 `(n,n)` 在对角线上，
-所以这条从 `(1,0)` 开始的路径**必然**会在某个时刻接触到对角线 $y=x$。
-我们把**第一次**接触到对角线的点记为 `(k,k)`。
+第一次接触对角线:
+ 因为路径的终点 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 在对角线上，
+所以这条从 `(1,0)` 开始的路径**必然**会在某个时刻接触到对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+。
+我们把第一次接触到对角线的点记为
+\begin_inset Formula $(k,k)$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* **k 的取值范围**:
- 既然 `(k,k)` 是一个接触点，
-它必然在 `(0,0)` 和 `(n,n)` 之间（或就是终点）。
+k 的取值范围:
+ 既然 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 是一个接触点，
+它必然在 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 和 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 之间（或就是终点）。
 因为我们已经走了第一步，
-所以 $k$ 至少是 1。
-终点是 `(n,n)`，
-所以 $k$ 最大是 $n$。
+所以 
+\begin_inset Formula $k$
+\end_inset
+
+ 至少是 1。
+终点是 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $k$
+\end_inset
+
+ 最大是 
+\begin_inset Formula $n$
+\end_inset
+
+。
 因此，
-$1 
-\backslash
-le k 
-\backslash
-le n$。
 
-\end_layout
+\begin_inset Formula $1\le k\le n$
+\end_inset
 
-\begin_layout Standard
-### 3.
- 分解成不相交的子集
+。
+
 \end_layout
 
 \begin_layout Standard
 现在，
-我们可以把所有 $C_n$ 条路径，
-根据它们**第一次接触对角线的点 $(k,k)$ 是哪里**，
-分成 $n$ 个子集：
+我们可以把所有 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ 条路径，
+根据它们第一次接触对角线的点 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 是哪里，
+分成 
+\begin_inset Formula $n$
+\end_inset
+
+ 个子集：
 
 \end_layout
 
 \begin_layout Standard
-* **子集1**:
- 第一次接触对角线的点是 `(1,1)` 的所有路径。
+子集1:
+ 第一次接触对角线的点是 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+ 的所有路径。
 
 \end_layout
 
 \begin_layout Standard
-* **子集2**:
- 第一次接触对角线的点是 `(2,2)` 的所有路径。
+子集2:
+ 第一次接触对角线的点是 
+\begin_inset Formula $(2,2)$
+\end_inset
+
+ 的所有路径。
 
 \end_layout
 
 \begin_layout Standard
-* ...
-\end_layout
+\begin_inset Formula $\cdots$
+\end_inset
 
-\begin_layout Standard
-* **子集k**:
- 第一次接触对角线的点是 `(k,k)` 的所有路径。
 
 \end_layout
 
 \begin_layout Standard
-* ...
+子集k:
+ 第一次接触对角线的点是 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 的所有路径。
+
 \end_layout
 
 \begin_layout Standard
-* **子集n**:
- 第一次接触对角线的点是 `(n,n)` 的所有路径。
+\begin_inset Formula $\cdots$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
-这 $n$ 个子集显然是**互不相交**的（一条路径不可能有两个“第一次”接触点），
-并且它们的**并集**包含了所有 $C_n$ 条路径。
+子集n:
+ 第一次接触对角线的点是 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的所有路径。
+
+\end_layout
+
+\begin_layout Standard
+这 
+\begin_inset Formula $n$
+\end_inset
+
+ 个子集显然是互不相交的（一条路径不可能有两个“第一次”接触点），
+并且它们的并集包含了所有 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ 条路径。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-根据**加法原理**，
+根据加法原理，
 我们有：
 
 \end_layout
 
 \begin_layout Standard
-$$ C_n = (
-\backslash
-text{子集1的数量}) + (
-\backslash
-text{子集2的数量}) + 
-\backslash
-dots + (
-\backslash
-text{子集n的数量}) = 
-\backslash
-sum_{k=1}^{n} (
-\backslash
-text{子集k的数量}) $$
+\begin_inset Formula 
+\[
+C_{n}=(\text{子集1的数量})+(\text{子集2的数量})+\dots+(\text{子集n的数量})=\sum_{k=1}^{n}(\text{子集k的数量})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-### 4.
- 计算每个子集的路径数量 (核心步骤)
+计算每个子集的路径数量 (核心步骤)
 \end_layout
 
 \begin_layout Standard
 现在，
 我们来分析“子集k”的数量，
-即第一次接触对角线的点是 `(k,k)` 的路径有多少条。
+即第一次接触对角线的点是 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 的路径有多少条。
 
 \end_layout
 
@@ -14022,53 +13445,95 @@ text{子集k的数量}) $$
 \end_layout
 
 \begin_layout Standard
-* **Part A**:
- 从 `(0,0)` 到 `(k,k)` 的部分。
+Part A:
+ 从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 的部分。
 
 \end_layout
 
 \begin_layout Standard
-* **Part B**:
- 从 `(k,k)` 到 `(n,n)` 的部分。
+Part B:
+ 从 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的部分。
 
 \end_layout
 
 \begin_layout Standard
-根据**乘法原理**，
-子集k的数量 = (Part A 的路径数) $
-\backslash
-times$ (Part B 的路径数)。
+根据乘法原理，
+子集k的数量 = (Part A 的路径数) 
+\begin_inset Formula $\times$
+\end_inset
+
+ (Part B 的路径数)。
 
 \end_layout
 
 \begin_layout Standard
-#### 分析 Part A:
- 从 `(0,0)` 到 `(k,k)`
+分析 Part A:
+ 从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **起点**:
- `(0,0)`
+起点:
+ 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **终点**:
- `(k,k)`
+终点:
+ 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **约束条件**:
+约束条件:
 \end_layout
 
 \begin_layout Standard
 1.
- 路径不越过对角线 $y=x$。
+ 路径不越过对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 2.
- 路径在 `(k,k)` **之前**不能接触对角线 $y=x$（因为 `(k,k)` 是**第一次**接触点）。
+ 路径在 `(k,k)` 之前不能接触对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+（因为 `(k,k)` 是**第一次**接触点）。
 
 \end_layout
 
