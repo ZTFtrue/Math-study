@@ -12615,7 +12615,12 @@ O变成A。
 
 \end_deeper
 \begin_layout Enumerate
-建立双射:
+建立双射:（
+\backslash
+
+\backslash
+TODO 这里看不懂，
+AI也解释不清）
 \end_layout
 
 \begin_deeper
@@ -12865,8 +12870,7 @@ C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+C_{3}x^{3}+\dots
 \end_layout
 
 \begin_layout Standard
-根据两个幂级数的乘法法则（柯西乘积）：
-
+根据两个幂级数的乘法法则(柯西乘积):
 \end_layout
 
 \begin_layout Standard
@@ -12874,7 +12878,9 @@ C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+C_{3}x^{3}+\dots
 \[
 \begin{aligned}C(x)^{2} & =\left(\sum_{i=0}^{\infty}C_{i}x^{i}\right)\left(\sum_{j=0}^{\infty}C_{j}x^{j}\right)\\
  & =\sum_{n=0}^{\infty}\left(\sum_{i=0}^{n}C_{i}C_{n-i}\right)x^{n}\\
- & =(C_{0}C_{0})x^{0}+(C_{0}C_{1}+C_{1}C_{0})x^{1}+(C_{0}C_{2}+C_{1}C_{1}+C_{2}C_{0})x^{2}+\dots
+ & =(C_{0}C_{0})x^{0}+(C_{0}C_{1}+C_{1}C_{0})x^{1}+(C_{0}C_{2}+C_{1}C_{1}+C_{2}C_{0})x^{2}+\dots\\
+ & =C_{1}+C_{2}x^{1}+C_{3}x^{2}\cdots\\
+ & =\frac{C(x)-C_{0}}{x}=\frac{C(x)-1}{x}
 \end{aligned}
 \]
 
@@ -12922,7 +12928,11 @@ C(x)=\sum_{n=0}^{\infty}C_{n}x^{n}=C_{0}+C_{1}x+C_{2}x^{2}+C_{3}x^{3}+\dots
 \begin_inset Formula $C_{n+1}=\sum_{i=0}^{n}C_{i}C_{n-i}$
 \end_inset
 
- (将原递推式中的 $n$ 换成 
+ (将原递推式中的 
+\begin_inset Formula $n$
+\end_inset
+
+ 换成 
 \begin_inset Formula $n+1$
 \end_inset
 
@@ -12963,7 +12973,11 @@ C(x)^{2}=\sum_{n=0}^{\infty}C_{n+1}x^{n}
 \end_inset
 
  非常像，
-只是少了一个 $C_0$ 项，
+只是少了一个 
+\begin_inset Formula $C_{0}$
+\end_inset
+
+ 项，
 并且
 \begin_inset Formula $x$
 \end_inset
@@ -12979,9 +12993,183 @@ C(x)^{2}=\sum_{n=0}^{\infty}C_{n+1}x^{n}
 
  联系起来：
 
+\begin_inset Formula $C(x)=1+xC(x)^{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
+使用求根公式，
+解这个方程：
+
+\begin_inset Formula $C(x)=\frac{1\pm\sqrt{1-4x}}{2x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们应该取正号还是负号？
+
+\end_layout
+
+\begin_layout Standard
+我们知道 
+\begin_inset Formula $C(0)=C_{0}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+如果取正号，
+当 
+\begin_inset Formula $x\to0$
+\end_inset
+
+ 时，
+分子趋向于 
+\begin_inset Formula $1+1=2$
+\end_inset
+
+，
+分母趋向于0，
+函数发散。
+
+\end_layout
+
+\begin_layout Standard
+如果取负号，
+当 
+\begin_inset Formula $x\to0$
+\end_inset
+
+ 时，
+是 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+ 型。
+根据洛必达法则或泰勒展开 
+\begin_inset Formula $\sqrt{1-4x}\approx1-2x$
+\end_inset
+
+，
+我们得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{x\to0}\frac{1-(1-2x)}{2x}=\lim_{x\to0}\frac{2x}{2x}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这与 
+\begin_inset Formula $C(0)=1$
+\end_inset
+
+ 相符。
+所以我们选择负号：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C(x)=\frac{1-\sqrt{1-4x}}{2x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用广义二项式定理展开 
+\begin_inset Formula $\sqrt{1-4x}=(1-4x)^{\frac{1}{2}}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(1+z)^{\alpha}=\sum_{k=0}^{\infty}\binom{\alpha}{k}z^{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里 
+\begin_inset Formula $\alpha=\frac{1}{2}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $z=-4x$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1-4x)^{\frac{1}{2}}=\stackrel[n=0]{\infty}{\sum}\binom{\frac{1}{2}}{n}(-4x)^{n}=1-2x-2x^{2}-4x^{3}\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+代回到 
+\begin_inset Formula $C(x)$
+\end_inset
+
+ 的表达式中
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+C(x) & =\frac{1-\sqrt{1-4x}}{2x}=\frac{1-(1-2x-2x^{2}-4x^{3}\cdots)}{2x}\\
+ & =1+x+2x^{2}\cdots\\
+ & =C_{0}+C_{1}x+C_{2}x^{2}\cdots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+最终可以得到 
+\begin_inset Formula $C(x)$
+\end_inset
+
+ 中 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ 的系数，
+即 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+，
 最终，
 我们得到了卡特兰数的通项公式：
 
@@ -12998,8 +13186,8 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Paragraph
-非空Dyck路径
+\begin_layout Subsubsection
+Dyck路径问题母函数解法
 \end_layout
 
 \begin_layout Standard
@@ -13529,11 +13717,19 @@ Part B:
 
 \begin_layout Standard
 2.
- 路径在 `(k,k)` 之前不能接触对角线 
+ 路径在 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 之前不能接触对角线 
 \begin_inset Formula $y=x$
 \end_inset
 
-（因为 `(k,k)` 是**第一次**接触点）。
+（因为 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 是第一次接触点）。
 
 \end_layout
 
@@ -13543,43 +13739,97 @@ Part B:
 \end_layout
 
 \begin_layout Standard
-* 第一步：
-必须从 `(0,0)` 到 `(1,0)`。
+第一步：
+必须从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 最后一步：
-为了到达 `(k,k)`，
-它必须从 `(k,
- k-1)` 向上（U）移动一步。
+最后一步：
+为了到达 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+，
+它必须从 
+\begin_inset Formula $(k,k-1)$
+\end_inset
+
+ 向上（
+\begin_inset Formula $U$
+\end_inset
+
+）移动一步。
 
 \end_layout
 
 \begin_layout Standard
-* 中间部分：
-路径从 `(1,0)` 移动到 `(k,
- k-1)`。
+中间部分：
+路径从
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ 移动到
+\begin_inset Formula $(k,k-1)$
+\end_inset
+
+。
 在这一段路程中，
-路径始终位于对角线 $y=x$ 的**下方**。
-即对于路径上的任意点 $(x_i,
- y_i)$，
-都有 $y_i < x_i$。
+路径始终位于对角线
+\begin_inset Formula $y=x$
+\end_inset
+
+ 的下方。
+即对于路径上的任意点 
+\begin_inset Formula $(x_{i},y_{i})$
+\end_inset
+
+，
+都有 
+\begin_inset Formula $y_{i}<x_{i}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-这等价于什么呢？
+考虑从 
+\begin_inset Formula $(1,0)$
+\end_inset
 
-\end_layout
+ 到 
+\begin_inset Formula $(k,k-1)$
+\end_inset
 
-\begin_layout Standard
-考虑从 `(1,0)` 到 `(k,
- k-1)` 的路径。
-如果我们将整个坐标系向下平移1个单位，
-再向左平移1个单位，
-这个路径就变成了一条从 `(0,-1)` 到 `(k-1,
- k-2)` 的路径。
+ 的路径。
+如果我们将整个坐标系向下平移
+\begin_inset Formula $1$
+\end_inset
+
+个单位，
+再向左平移
+\begin_inset Formula $1$
+\end_inset
+
+个单位，
+这个路径就变成了一条从 
+\begin_inset Formula $(0,-1)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(k-1,k-2)$
+\end_inset
+
+ 的路径。
 
 \end_layout
 
@@ -13590,102 +13840,188 @@ Part B:
 \end_layout
 
 \begin_layout Standard
-路径从 `(1,0)` 出发，
-到 `(k,
- k-1)` 结束，
-并且始终不能接触直线 $y=x$。
+路径从
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ 出发，
+到 
+\begin_inset Formula $(k,k-1)$
+\end_inset
+
+ 结束，
+并且始终不能接触直线 
+\begin_inset Formula $y=x$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-这相当于路径始终在 $y=x$ **下方一格或更多**的区域活动。
+这相当于路径始终在 
+\begin_inset Formula $y=x$
+\end_inset
+
+ 下方一格或更多 的区域活动。
 
 \end_layout
 
 \begin_layout Standard
 这等价于：
-一条从 `(1,0)` 到 `(k,
- k-1)` 的路径，
-不能越过直线 `y = x-1`。
+一条从 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(k,k-1)$
+\end_inset
+
+ 的路径，
+不能越过直线 
+\begin_inset Formula $y=x-1$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-**这正是一个标准的Dyck路径问题！
-**
+这正是一个标准的Dyck路径问题！
+ 
 \end_layout
 
 \begin_layout Standard
-* **新起点**:
- `(1,0)`
+新起点:
+ 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **新终点**:
- `(k,
- k-1)`
+新终点:
+ 
+\begin_inset Formula $(k,k-1)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **新对角线**:
- `y = x-1`
+新对角线 :
+ 
+\begin_inset Formula $y=x-1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-通过坐标平移（新坐标 $x' = x-1,
- y' = y$），
+通过坐标平移（新坐标 
+\begin_inset Formula $x'=x-1,y'=y$
+\end_inset
+
+），
 这个问题等价于：
 
 \end_layout
 
 \begin_layout Standard
-* **起点**:
- `(0,0)`
+起点:
+ 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **终点**:
- `(k-1,
- k-1)`
+终点:
+ 
+\begin_inset Formula $(k-1,k-1)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **对角线**:
- `y' = x'`
+对角线:
+ 
+\begin_inset Formula $y'=x'$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-从 `(0,0)` 到 `(k-1,
- k-1)` 的Dyck路径数量，
+从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(k-1,k-1)$
+\end_inset
+
+ 的Dyck路径数量，
 根据定义，
-就是 $C_{k-1}$。
+就是 
+\begin_inset Formula $C_{k-1}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 所以，
-**Part A 的路径数量是 $C_{k-1}$**。
+ Part A 的路径数量是 
+\begin_inset Formula $C_{k-1}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-#### 分析 Part B:
- 从 `(k,k)` 到 `(n,n)`
+分析 Part B:
+ 从 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **起点**:
- `(k,k)`
+起点:
+ 
+\begin_inset Formula $(k,k)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **终点**:
- `(n,n)`
+终点:
+ 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **约束条件**:
- 路径不越过对角线 $y=x$。
+约束条件:
+ 路径不越过对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+。
 
 \end_layout
 
@@ -13696,144 +14032,123 @@ Part B:
 \end_layout
 
 \begin_layout Standard
-通过坐标平移（新坐标 $x' = x-k,
- y' = y-k$），
+通过坐标平移（新坐标 
+\begin_inset Formula $x'=x-k,y'=y-k$
+\end_inset
+
+），
 这个问题等价于：
 
 \end_layout
 
 \begin_layout Standard
-* **起点**:
- `(0,0)`
+起点:
+ 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **终点**:
- `(n-k,
- n-k)`
+终点:
+ 
+\begin_inset Formula $(n-k,n-k)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* **对角线**:
- `y' = x'`
+对角线:
+ 
+\begin_inset Formula $y'=x'$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-从 `(0,0)` 到 `(n-k,
- n-k)` 的Dyck路径数量，
+从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n-k,n-k)$
+\end_inset
+
+的Dyck路径数量，
 根据定义，
-就是 $C_{n-k}$。
+就是 
+\begin_inset Formula $C_{n-k}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 所以，
-**Part B 的路径数量是 $C_{n-k}$**。
+Part B 的路径数量是 
+\begin_inset Formula $C_{n-k}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-### 5.
- 组合起来
+组合起来
 \end_layout
 
 \begin_layout Standard
 根据乘法原理，
-子集k（即第一次接触点为 `(k,k)` 的路径）的数量为：
+子集k（即第一次接触点为 
+\begin_inset Formula $(k,k)$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-$$ (
-\backslash
-text{子集k的数量}) = C_{k-1} 
-\backslash
-times C_{n-k} $$
-\end_layout
-
-\begin_layout Standard
-最后，
-根据加法原理，
-将所有子集的数量相加，
-就得到了 $C_n$ 的总数：
-
-\end_layout
-
-\begin_layout Standard
-$$ C_n = 
-\backslash
-sum_{k=1}^{n} (
-\backslash
-text{子集k的数量}) = 
-\backslash
-sum_{k=1}^{n} C_{k-1} C_{n-k} $$
-\end_layout
-
-\begin_layout Standard
-**至此，
-递推关系式证明完毕。
-**
-\end_layout
-
-\begin_layout Standard
-**直观理解**:
- 任何一个非空的卡特兰结构，
-都可以唯一地分解成一个“括号”，
-括号里面是**一个卡特兰结构 A**，
-括号外面紧跟着**另一个卡特兰结构 B**。
-
-\end_layout
-
-\begin_layout Standard
-`(A)B`
-\end_layout
-
-\begin_layout Standard
-A 的规模是 $k-1$，
-B 的规模是 $n-k$。
-遍历所有可能的分割点 $k$，
-就得到了总和。
-
-\end_layout
-
-\begin_layout Standard
-例如，
-对于括号序列 `(()())()` (n=4):
-\end_layout
-
-\begin_layout Standard
-* 第一次闭合是在 `k=3` 的位置（`(()())`）。
-
-\end_layout
-
-\begin_layout Standard
-* 内部的 `()`() (n=2,
- 对应 $C_2$) 是一个卡特兰结构。
-
-\end_layout
-
-\begin_layout Standard
-* 外部的 `()` (n=1,
- 对应 $C_1$) 是另一个卡特兰结构。
-
-\end_layout
-
-\begin_layout Standard
-* $C_4$ 的一部分就来自于 $C_2 
-\backslash
-cdot C_1$ 这一项。
+ 的路径）的数量为：
 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}\quad(\text{for }n\ge1)
+(\text{子集k的数量})=C_{k-1}\times C_{n-k}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+最后，
+根据加法原理，
+将所有子集的数量相加，
+就得到了
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ 的总数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{n}=\sum_{k=1}^{n}(\text{子集k的数量})=\sum_{k=1}^{n}C_{k-1}C_{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+至此，
+递推关系式证明完毕。
+ 
 \end_layout
 
 \begin_layout Standard
@@ -14113,13 +14428,8 @@ C(x)=\frac{1-\sqrt{1-4x}}{2x}
 \end_layout
 
 \begin_layout Standard
-#### 第4步：
-广义二项式定理
-\end_layout
-
-\begin_layout Standard
 利用广义二项式定理展开 
-\begin_inset Formula $\sqrt{1-4x}=(1-4x)^{1/2}$
+\begin_inset Formula $\sqrt{1-4x}=(1-4x)^{\frac{1}{2}}$
 \end_inset
 
 ：
@@ -14139,7 +14449,7 @@ C(x)=\frac{1-\sqrt{1-4x}}{2x}
 
 \begin_layout Standard
 这里 
-\begin_inset Formula $\alpha=1/2$
+\begin_inset Formula $\alpha=\frac{1}{2}$
 \end_inset
 
 ,
@@ -14148,9 +14458,9 @@ C(x)=\frac{1-\sqrt{1-4x}}{2x}
 \end_inset
 
 。
-经过一系列计算（这部分比较繁琐），
+经过一系列计算，
 可以得到 
-\begin_inset Formula $(1-4x)^{1/2}$
+\begin_inset Formula $(1-4x)^{\frac{1}{2}}$
 \end_inset
 
  中 
@@ -14200,86 +14510,47 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
-\begin_layout Standard
-### 总结
-\end_layout
-
-\begin_layout Standard
-1.
- **卡特兰数 / 上半区问题**:
- 描述了一类组合问题的解，
-其通项公式为 
-\begin_inset Formula $C_{n}=\frac{1}{n+1}\binom{2n}{n}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-2.
- **双射证明**:
- 向我们展示了许多看似不同的问题（括号匹配、二叉树、出栈序列等）其实和Dyck路径问题是等价的，
-从而极大地扩展了卡特兰数的应用范畴。
-
-\end_layout
-
-\begin_layout Standard
-3.
- **母函数**:
- 作为一个强大的代数工具，
-它将组合对象的**递推关系**转化为了一个**代数方程**。
-
-\end_layout
-
-\begin_layout Standard
-4.
- **推导过程**:
- 通过解这个代数方程得到母函数的显式表达式，
-再利用泰勒展开（广义二项式定理）等方法，
-我们成功地从递推关系中反解出了卡特兰数的**通项公式**，
-完成了整个逻辑的闭环。
-
-\end_layout
-
 \begin_layout Subsubsection
-上半区问题”（Dyck路径问题)折线法” (Reflection Principle)
+上半区问题 （Dyck路径问题)折线法 (Reflection Principle)
 \end_layout
 
 \begin_layout Standard
-好的，
 除了使用母函数这种比较高等的代数方法，
 解决“上半区问题”（Dyck路径问题）还有一种非常巧妙、直观的组合方法，
-通常被称为**“折线法” (Reflection Principle)**，
+通常被称为“折线法” (Reflection Principle)，
 由安德烈 (Désiré André) 在19世纪提出。
 
 \end_layout
 
 \begin_layout Standard
-这个方法的核心思想是利用**双射证明**，
+这个方法的核心思想是利用双射证明，
 将“坏”的路径（即穿过对角线的路径）与另一组更容易计数的路径建立一一对应关系。
 
 \end_layout
 
 \begin_layout Standard
-### 折线法 (Reflection Principle)
-\end_layout
+问题重述:
+ 从 
+\begin_inset Formula $(0,0)$
+\end_inset
 
-\begin_layout Standard
-**问题重述**:
- 从 `(0,0)` 到 `(n,n)`，
+ 到
+\begin_inset Formula $(n,n)$
+\end_inset
+
+，
 每次只能向右（R）或向上（U），
-路径不能穿过对角线 `y=x` 上方。
+路径不能穿过对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+ 上方。
 求路径总数。
 
 \end_layout
 
 \begin_layout Standard
-**解题步骤**:
-\end_layout
-
-\begin_layout Standard
-#### 第1步：
+第1步：
 计算所有路径的总数（无限制）
 \end_layout
 
@@ -14308,13 +14579,18 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 \end_layout
 
 \begin_layout Standard
-$$ T_n = 
-\backslash
-binom{2n}{n} $$
+\begin_inset Formula 
+\[
+T_{n}=\binom{2n}{n}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-#### 第2步：
+第2步：
 计算“坏”路径的数量
 \end_layout
 
@@ -14361,8 +14637,11 @@ binom{2n}{n} $$
 \end_layout
 
 \begin_layout Standard
-设对称点为 $(x',
- y')$，
+设对称点为 
+\begin_inset Formula $(x',y')$
+\end_inset
+
+，
 则有：
 
 \end_layout
@@ -14557,171 +14836,20 @@ binom{2n}{n-1} $$
 \end_layout
 
 \begin_layout Standard
-$$
-\end_layout
+\begin_inset Formula 
+\[
+\begin{aligned}C_{n} & =\frac{(2n)!}{n!n!}-\frac{(2n)!}{(n-1)!(n+1)!}\\
+ & =\frac{(2n)!}{(n-1)!n!}\left(\frac{1}{n}-\frac{1}{n+1}\right)\\
+ & =\frac{(2n)!}{(n-1)!n!}\left(\frac{n+1-n}{n(n+1)}\right)\\
+ & =\frac{(2n)!}{(n-1)!n!}\cdot\frac{1}{n(n+1)}\\
+ & =\frac{(2n)!}{n!(n+1)!}\\
+ & =\frac{1}{n+1}\cdot\frac{(2n)!}{n!n!}\\
+ & =\frac{1}{n+1}\binom{2n}{n}
+\end{aligned}
+\]
 
-\begin_layout Standard
+\end_inset
 
-\backslash
-begin{aligned}
-\end_layout
-
-\begin_layout Standard
-C_n &= 
-\backslash
-frac{(2n)!}{n!n!} - 
-\backslash
-frac{(2n)!}{(n-1)!(n+1)!} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{(2n)!}{(n-1)!n!} 
-\backslash
-left( 
-\backslash
-frac{1}{n} - 
-\backslash
-frac{1}{n+1} 
-\backslash
-right) 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{(2n)!}{(n-1)!n!} 
-\backslash
-left( 
-\backslash
-frac{n+1-n}{n(n+1)} 
-\backslash
-right) 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{(2n)!}{(n-1)!n!} 
-\backslash
-cdot 
-\backslash
-frac{1}{n(n+1)} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{(2n)!}{n!
- (n+1)!} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{1}{n+1} 
-\backslash
-cdot 
-\backslash
-frac{(2n)!}{n!n!} 
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Standard
-&= 
-\backslash
-frac{1}{n+1} 
-\backslash
-binom{2n}{n}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-end{aligned}
-\end_layout
-
-\begin_layout Standard
-$$
-\end_layout
-
-\begin_layout Standard
-我们成功地推导出了卡特兰数的通项公式！
-
-\end_layout
-
-\begin_layout Standard
-### 总结对比
-\end_layout
-
-\begin_layout Standard
-| 方法 | **母函数法 (Generating Functions)** | **折线法 (Reflection Principle)** |
-\end_layout
-
-\begin_layout Standard
-| :--- | :--- | :--- |
-\end_layout
-
-\begin_layout Standard
-| **性质** | **代数方法** | **组合方法** |
-\end_layout
-
-\begin_layout Standard
-| **核心思想**| 将序列的**递推关系**转化为母函数的**代数方程**，
-通过解方程和泰勒展开求通项公式。
- | 利用**双射**和**对称性**，
-将难以计数的“坏”集合与一个容易计数的集合建立一一对应关系，
-通过减法原理求得“好”集合的数量。
- |
-\end_layout
-
-\begin_layout Standard
-| **优点** | 威力强大，
-适用性广，
-是解决递推关系的系统性方法。
- | 非常直观、巧妙，
-几何意义清晰，
-更容易被理解。
- |
-\end_layout
-
-\begin_layout Standard
-| **缺点** | 过程抽象，
-涉及较多的代数和微积分技巧（如柯西乘积、广义二项式定理）。
- | 依赖于问题的几何结构，
-适用性相对较窄，
-需要巧妙地找到反射轴和对称关系。
- |
-\end_layout
-
-\begin_layout Standard
-对于“上半区问题”，
-折线法无疑是最优雅、最符合组合数学直觉的解法。
-而母函数法则展示了解决更一般递推问题的一种普适性武器。
 
 \end_layout
 
