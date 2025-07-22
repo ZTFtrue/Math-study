@@ -14555,26 +14555,58 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 \end_layout
 
 \begin_layout Standard
-* 从 `(0,0)` 到 `(n,n)`，
-一共需要移动 `2n` 步。
+从
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到
+\begin_inset Formula $(n,n)$
+\end_inset
+
+，
+一共需要移动 
+\begin_inset Formula $2n$
+\end_inset
+
+ 步。
 
 \end_layout
 
 \begin_layout Standard
-* 其中必须有 `n` 步是向右（R），
-`n` 步是向上（U）。
+其中必须有 n 步是向右（
+\begin_inset Formula $R$
+\end_inset
+
+），
+
+\begin_inset Formula $n$
+\end_inset
+
+ 步是向上（
+\begin_inset Formula $U$
+\end_inset
+
+）。
 
 \end_layout
 
 \begin_layout Standard
-* 这相当于在一个长度为 `2n` 的序列中，
-选择 `n` 个位置放 R（剩下的位置自动就是 U）。
+这相当于在一个长度为 
+\begin_inset Formula $2n$
+\end_inset
+
+ 的序列中，
+选择 n 个位置放 R（剩下的位置自动就是 U）。
 
 \end_layout
 
 \begin_layout Standard
-* 因此，
-总路径数（记为 $T_n$）为：
+因此，
+总路径数（记为 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+）为：
 
 \end_layout
 
@@ -14595,44 +14627,91 @@ T_{n}=\binom{2n}{n}
 \end_layout
 
 \begin_layout Standard
-“坏”路径是指**至少接触过一次**对角线 `y=x` 上方区域的路径。
+“坏”路径是指至少接触过一次对角线 
+\begin_inset Formula $y=x$
+\end_inset
+
+ 上方区域的路径。
 
 \end_layout
 
 \begin_layout Standard
 注意，
-我们说的是**穿过**，
-即路径上的某个点 `(x,y)` 满足 `y > x`。
+我们说的是穿过，
+即路径上的某个点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 满足 
+\begin_inset Formula $y>x$
+\end_inset
+
+。
 由于每次移动一格，
-这等价于路径**接触**了直线 `y = x + 1`。
+这等价于路径接触了直线
+\begin_inset Formula $y=x+1$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-**折线法的精髓来了：
-**
+折线法的精髓来了：
+
 \end_layout
 
-\begin_layout Standard
-1.
- **找到第一个“坏点”**:
+\begin_layout Enumerate
+找到第一个“坏点”:
  对于任何一条“坏”路径，
-找到它**第一次**接触直线 `y = x + 1` 的那个点，
-我们称之为 $P$。
+找到它第一次接触直线 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+ 的那个点，
+我们称之为 
+\begin_inset Formula $P$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-2.
- **实施“反射”**:
- 将这条路径**从起点 `(0,0)` 到点 $P$ 的部分**，
-关于直线 `y = x + 1` 做一个轴对称反射。
+\begin_layout Enumerate
+实施“反射”:
+ 将这条路径从起点
+\begin_inset Formula $(0,0)$
+\end_inset
+
+到点 
+\begin_inset Formula $P$
+\end_inset
+
+ 的部分，
+关于直线
+\begin_inset Formula $y=x+1$
+\end_inset
+
+ 做一个轴对称反射。
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 原路径的起点是 `(0,0)`。
-关于直线 `y = x + 1` (即 `x - y + 1 = 0`) 对称的点是什么？
+原路径的起点是 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+。
+关于直线 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+ (即 
+\begin_inset Formula $x-y+1=0$
+\end_inset
+
+) 对称的点是什么？
 
 \end_layout
 
@@ -14647,166 +14726,309 @@ T_{n}=\binom{2n}{n}
 \end_layout
 
 \begin_layout Standard
-* 中点 $(
-\backslash
-frac{x'}{2},
+中点 
+\begin_inset Formula $(\frac{x'-0}{2},\frac{y'-0}{2})$
+\end_inset
+
+ 在直线上 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+:
  
-\backslash
-frac{y'}{2})$ 在直线上：
-$
-\backslash
-frac{x'}{2} - 
-\backslash
-frac{y'}{2} + 1 = 0 
-\backslash
-implies x' - y' = -2$。
+\begin_inset Formula $\frac{x'}{2}-\frac{y'}{2}+1=0\implies x'-y'=-2$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 连接线段的斜率为 $
-\backslash
-frac{y'}{x'}$，
-与直线 $y=x+1$ (斜率1) 垂直：
-$
-\backslash
-frac{y'}{x'} 
-\backslash
-cdot 1 = -1 
-\backslash
-implies y' = -x'$。
+连接线段的斜率为 
+\begin_inset Formula $\frac{y'}{x'}$
+\end_inset
+
+，
+与直线 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+ (斜率1) 垂直：
+
+\begin_inset Formula $\frac{y'}{x'}\cdot1=-1\implies y'=-x'$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 解得 $x'=-1,
- y'=1$。
-所以 `(0,0)` 的对称点是 **`(-1,
- 1)`**。
+解得 
+\begin_inset Formula $x'=-1,y'=1$
+\end_inset
+
+。
+所以 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 的对称点是
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+建立双射:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+原始“坏”路径:
+ 从
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 出发，
+接触了
+\begin_inset Formula $y=x+1$
+\end_inset
+
+，
+最终到达 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-3.
- **建立双射**:
-\end_layout
+反射后新路径:
+ 从 
+\begin_inset Formula $(-1,1)$
+\end_inset
 
-\begin_layout Standard
-* **原始“坏”路径**:
- 从 `(0,0)` 出发，
-接触了 `y=x+1`，
-最终到达 `(n,n)`。
+ 出发，
+最终到达 
+\begin_inset Formula $(n,n)$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-* **反射后新路径**:
- 从 `(-1,1)` 出发，
-最终到达 `(n,n)`。
+。
 
 \end_layout
 
 \begin_layout Standard
-这是一个**双射（一一对应）**！
+这是一个双射（一一对应）！
 
 \end_layout
 
 \begin_layout Standard
-* **正向**:
- 任何一条从 `(0,0)` 到 `(n,n)` 的“坏”路径，
+正向:
+ 任何一条从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的“坏”路径，
 经过上述反射操作，
-都唯一地对应一条从 `(-1,1)` 到 `(n,n)` 的路径。
+都唯一地对应一条从 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的路径。
 
 \end_layout
 
 \begin_layout Standard
-* **反向**:
- 任何一条从 `(-1,1)` 到 `(n,n)` 的路径，
-必然会穿过直线 `y=x+1`（因为它起点在一边，
+反向:
+ 任何一条从 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的路径，
+必然会穿过直线 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+（因为它起点在一边，
 终点在另一边）。
-我们找到它第一次穿过 `y=x+1` 的点，
+我们找到它第一次穿过 
+\begin_inset Formula $y=x+1$
+\end_inset
+
+ 的点，
 将此前的部分再反射回去，
-就唯一地对应一条从 `(0,0)` 到 `(n,n)` 的“坏”路径。
+就唯一地对应一条从 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+ 的“坏”路径。
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
-*(上图展示了 n=3 的情况。
-红色是“坏”路径，
-它第一次接触 y=x+1 的点是(1,2)。
-蓝色是反射后的新路径，
-起点变成了(-1,1)。
-)*
-\end_layout
-
-\begin_layout Standard
-#### 第3步：
+第3步：
 计数新路径的数量
 \end_layout
 
 \begin_layout Standard
 现在问题变得非常简单：
-**计算从 `(-1,1)` 到 `(n,n)` 的路径总数是多少？
-**
-\end_layout
+计算从 
+\series bold
 
-\begin_layout Standard
-* **总步数**:
-\end_layout
+\begin_inset Formula $(-1,1)$
+\end_inset
 
-\begin_layout Standard
-* x方向需要移动 `n - (-1) = n+1` 步（向右）。
+ 到
+\begin_inset Formula $(n,n)$
+\end_inset
 
-\end_layout
 
-\begin_layout Standard
-* y方向需要移动 `n - 1` 步（向上）。
+\series default
+ 的路径总数是多少？
 
 \end_layout
 
 \begin_layout Standard
-* 总共需要移动 `(n+1) + (n-1) = 2n` 步。
+总步数:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x$
+\end_inset
+
+方向需要移动 
+\begin_inset Formula $n-(-1)=n+1$
+\end_inset
+
+ 步（向右）。
 
 \end_layout
 
 \begin_layout Standard
-* **组合计数**:
- 在 `2n` 步中，
-选择 `n+1` 步向右（或 `n-1` 步向上）。
+\begin_inset Formula $y$
+\end_inset
+
+方向需要移动 
+\begin_inset Formula $n-1$
+\end_inset
+
+ 步（向上）。
 
 \end_layout
 
 \begin_layout Standard
-* 所以，
-“坏”路径的数量（记为 $B_n$）等于从 `(-1,1)` 到 `(n,n)` 的路径数：
+总共需要移动 
+\begin_inset Formula $(n+1)+(n-1)=2n$
+\end_inset
+
+ 步。
 
 \end_layout
 
 \begin_layout Standard
-$$ B_n = 
-\backslash
-binom{2n}{n+1} 
-\backslash
-quad 
-\backslash
-text{或} 
-\backslash
-quad 
-\backslash
-binom{2n}{n-1} $$
+组合计数:
+ 在 
+\begin_inset Formula $2n$
+\end_inset
+
+ 步中，
+选择 
+\begin_inset Formula $n+1$
+\end_inset
+
+ 步向右（或 
+\begin_inset Formula $n-1$
+\end_inset
+
+ 步向上）。
+
+\end_layout
+
+\begin_layout Standard
+从 
+\begin_inset Formula $2n$
+\end_inset
+
+ 个总位置中，
+选择 n+1 个位置来放置
+\begin_inset Formula $n+1$
+\end_inset
+
+向右,有多少种选择方法？
+这些方法就是坏的路径数量。
+（剩下的
+\begin_inset Formula $n-1$
+\end_inset
+
+个位置就自动被向上占据了。
+）
+\end_layout
+
+\begin_layout Standard
+所以，
+
+\series bold
+“坏”路径的数量（记为 
+\begin_inset Formula $B_{n}$
+\end_inset
+
+）等于从 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(n,n)$
+\end_inset
+
+的路径数
+\series default
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B_{n}=\binom{2n}{n+1}\quad\text{或}\quad\binom{2n}{n-1}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 (这两个组合数是相等的：
-$
-\backslash
-binom{N}{K} = 
-\backslash
-binom{N}{N-K}$)
+
+\begin_inset Formula $\binom{N}{K}=\binom{N}{N-K}$
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
-#### 第4步：
+第4步：
 计算“好”路径的数量
 \end_layout
 
@@ -14816,17 +15038,28 @@ binom{N}{N-K}$)
 \end_layout
 
 \begin_layout Standard
-设第 $n$ 个卡特兰数为 $C_n$，
+设第 
+\begin_inset Formula $n$
+\end_inset
+
+ 个卡特兰数为 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+，
 则：
 
 \end_layout
 
 \begin_layout Standard
-$$ C_n = T_n - B_n = 
-\backslash
-binom{2n}{n} - 
-\backslash
-binom{2n}{n-1} $$
+\begin_inset Formula 
+\[
+C_{n}=T_{n}-B_{n}=\binom{2n}{n}-\binom{2n}{n-1}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
