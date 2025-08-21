@@ -14514,6 +14514,10 @@ C_{n}=\frac{1}{n+1}\binom{2n}{n}
 
 \end_layout
 
+\begin_layout Standard
+母函数可以求斐波那契数列通项公式（参考生成函数）
+\end_layout
+
 \begin_layout Subsubsection
 上半区问题 （Dyck路径问题)折线法 (Reflection Principle)
 \end_layout
@@ -15219,6 +15223,13 @@ T_{k+1}=C_{n}^{k}a^{n-k}b^{k}
 2^{n}=C_{n}^{0}+C_{n}^{1}+\cdots+C_{n}^{n}
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1+x)^{n}=\stackrel[i=0]{n}{\sum}C_{n}^{i}1^{n-i}x^{i}$
 \end_inset
 
 
@@ -26699,6 +26710,12 @@ v-e+f=2
 \end_layout
 
 \begin_layout Standard
+当 平行公设不成立 时，
+得到的几何体系统称非欧几何。
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 球面上的大圆可视为“直线
@@ -27043,9 +27060,15 @@ v-e+f=2
 \end_layout
 
 \begin_layout Section
-欧氏平行公理与非欧几何模型—
-—
-庞加莱模型 
+球面几何（椭圆几何）
+\end_layout
+
+\begin_layout Section
+双曲几何
+\end_layout
+
+\begin_layout Subsection
+庞加莱模型
 \end_layout
 
 \begin_layout Standard
@@ -27212,6 +27235,275 @@ v-e+f=2
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+高斯的“绝妙定理”（Theorema Egregium）
+\end_layout
+
+\begin_layout Standard
+“绝妙定理”通常是对 欧几里得几何里一个非常优美的结论的昵称。
+
+\end_layout
+
+\begin_layout Standard
+在数学史和几何中，
+最常被称为 “绝妙定理”（Theorem of Marvellous，
+或 Theorema Egregium） 的是 高斯的“卓越定理”（拉丁文 Theorema Egregium）。
+
+\end_layout
+
+\begin_layout Standard
+一个曲面的高斯曲率是曲面的内在量，
+与它如何嵌入三维空间无关。
+ 
+\end_layout
+
+\begin_layout Standard
+换句话说：
+
+\end_layout
+
+\begin_layout Standard
+如果你在一个曲面上量测距离、角度、面积等几何性质，
+高斯曲率可以通过这些“曲面内在数据”计算出来，
+而不用知道曲面在三维空间是怎么弯曲的。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+把平面纸卷成圆柱，
+表面看起来“弯”了，
+但它的高斯曲率仍然是零，
+因为曲面上的内在几何和原来平面一样。
+
+\end_layout
+
+\begin_layout Standard
+这一定理非常“绝妙”，
+因为它揭示了内蕴几何的思想：
+几何性质可以不依赖于外部空间，
+而只靠曲面自身来刻画。
+
+\end_layout
+
+\begin_layout Standard
+在高斯之前，
+人们研究曲面时常常依赖它们嵌在三维空间中的形状。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Itemize
+平面：
+看起来是平的。
+
+\end_layout
+
+\begin_layout Itemize
+球面：
+弯起来的。
+
+\end_layout
+
+\begin_layout Itemize
+圆柱面：
+也“弯”了。
+
+\end_layout
+
+\begin_layout Standard
+于是大家自然以为，
+“弯曲”是由曲面在外部空间的形状决定的。
+
+\end_layout
+
+\begin_layout Standard
+高斯证明了一个“惊人的”事实：
+曲面的弯曲程度（高斯曲率）可以完全由曲面上“内部的测量”得到，
+而不依赖于它如何嵌入三维空间。
+ 
+\end_layout
+
+\begin_layout Standard
+也就是说，
+即使你身处曲面之上、完全“看不到”外部空间，
+仅凭在曲面上测量长度、角度、面积，
+你就能计算出这个曲面的高斯曲率。
+
+\end_layout
+
+\begin_layout Standard
+什么是高斯曲率？
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率 
+\begin_inset Formula $K$
+\end_inset
+
+ 是描述曲面弯曲情况的一个数值。
+
+\end_layout
+
+\begin_layout Standard
+在某一点处，
+取两个互相垂直方向的“主曲率半径” 
+\begin_inset Formula $r_{1},r_{2}$
+\end_inset
+
+，
+定义：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K=\frac{1}{r_{1}}\cdot\frac{1}{r_{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例子：
+
+\end_layout
+
+\begin_layout Standard
+平面：
+两个主曲率都为 
+\begin_inset Formula $0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $K=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+圆柱面：
+一个方向曲率是 
+\begin_inset Formula $1/R$
+\end_inset
+
+，
+另一个方向是 
+\begin_inset Formula $0$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $K=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+球面（半径R）：
+两个方向曲率都是 
+\begin_inset Formula $1/R$
+\end_inset
+
+，
+所以 
+\begin_inset Formula $K=1/R^{2}>0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+## 4.
+ 卓越定理的核心
+\end_layout
+
+\begin_layout Standard
+高斯在 1827 年发表的论文中证明：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K=\frac{LN-M^{2}}{EG-F^{2}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ 是第一基本形式（曲面上的内在度量），
+
+\begin_inset Formula $L,M,N$
+\end_inset
+
+ 来自第二基本形式。
+经过推导，
+最终表达式只依赖于第一基本形式。
+
+\end_layout
+
+\begin_layout Standard
+这说明：
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率完全是内在几何量。
+
+\end_layout
+
+\begin_layout Standard
+不需要知道曲面在空间里“怎么弯”，
+只要知道曲面上距离的计算方式（即内在度量），
+就能算出它。
+
+\end_layout
+
+\begin_layout Standard
+这是第一次明确区分了
+\series bold
+外在几何
+\series default
+和
+\series bold
+内在几何
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+它为 黎曼几何 奠定了基础。
+
+\end_layout
+
+\begin_layout Standard
+黎曼几何后来成为 广义相对论 的核心语言（描述时空的弯曲）。
 
 \end_layout
 
