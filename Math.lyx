@@ -12797,15 +12797,15 @@ C_{0}=1
 \end_layout
 
 \begin_layout Standard
-(代表从 `
+(代表从 
 \begin_inset Formula $(0,0)$
 \end_inset
 
-` 到 `
+ 到 
 \begin_inset Formula $(0,0)$
 \end_inset
 
-` 的路径，
+ 的路径，
 只有1种，
 即不动。
 这个初始值非常重要。
@@ -13334,15 +13334,15 @@ C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}\quad(\text{for }n\ge1)
 \end_inset
 
 ，
-即从 `
+即从 
 \begin_inset Formula $(0,0)$
 \end_inset
 
-` 到 `
+ 到 
 \begin_inset Formula $(n,n)$
 \end_inset
 
-` 的所有不越过对角线 
+ 的所有不越过对角线 
 \begin_inset Formula $y=x$
 \end_inset
 
@@ -13448,7 +13448,11 @@ C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}\quad(\text{for }n\ge1)
 \end_inset
 
  在对角线上，
-所以这条从 `(1,0)` 开始的路径**必然**会在某个时刻接触到对角线 
+所以这条从 
+\begin_inset Formula $(1,0)$
+\end_inset
+
+ 开始的路径必然会在某个时刻接触到对角线 
 \begin_inset Formula $y=x$
 \end_inset
 
@@ -14971,7 +14975,11 @@ T_{n}=\binom{2n}{n}
 \end_inset
 
  个总位置中，
-选择 n+1 个位置来放置
+选择 
+\begin_inset Formula $n+1$
+\end_inset
+
+ 个位置来放置
 \begin_inset Formula $n+1$
 \end_inset
 
