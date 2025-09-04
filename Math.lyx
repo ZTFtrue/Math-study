@@ -5894,7 +5894,693 @@ a\mod b=a-b\times\lfloor a/y\rfloor,y\neq0
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Itemize
+对于三个数 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+：
+
+\begin_inset Formula 
+\[
+(x\times y\times z)\bmod m=((x\times y)\times z)\bmod m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+根据性质：
+
+\begin_inset Formula 
+\[
+(x\times y)\bmod m=((x\bmod m)\times(y\bmod m))\bmod m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\begin_inset Formula 
+\[
+(x\times y\times z)\bmod m=(((x\bmod m)\times(y\bmod m))\bmod m\times(z\bmod m))\bmod m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+平方求幂算法
+\end_layout
+
+\begin_layout Standard
+在密码学等领域，
+经常需要计算一个数的巨大次幂后再取模（例如计算 
+\begin_inset Formula $a^{b}\mod m$
+\end_inset
+
+），
+其中指数 
+\begin_inset Formula $b$
+\end_inset
+
+ 可能是一个非常大的数字。
+如果采用朴素的计算方法，
+即把 
+\begin_inset Formula $a$
+\end_inset
+
+ 连乘 
+\begin_inset Formula $b$
+\end_inset
+
+ 次，
+当 
+\begin_inset Formula $b$
+\end_inset
+
+ 巨大时，
+计算量会变得无法承受，
+同时中间结果也会超出计算机所能表示的数值范围。
+
+\end_layout
+
+\begin_layout Standard
+为了高效地解决这个问题，
+数学家和计算机科学家们使用了一种名为平方求幂（Exponentiation by Squaring）的算法，
+也称为二进制幂（Binary Exponentiation）。
+这种算法可以将计算复杂度从 O(b)（线性时间）显著降低到 
+\begin_inset Formula $O(\log b)$
+\end_inset
+
+（对数时间），
+极大地提高了计算效率。
+
+\end_layout
+
+\begin_layout Standard
+平方求幂算法的核心思想是巧妙地利用指数的二进制表示形式，
+将原本庞大的指数运算分解成一系列的平方和乘法操作。
+
+\end_layout
+
+\begin_layout Standard
+其原理基于以下两个简单的数学恒等式：
+
+\end_layout
+
+\begin_layout Enumerate
+当指数 
+\begin_inset Formula $b$
+\end_inset
+
+ 是偶数时：
  
+\begin_inset Formula $a^{b}=a^{(2k)}=(a^{k})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+当指数 
+\begin_inset Formula $b$
+\end_inset
+
+ 是奇数时：
+
+\begin_inset Formula $a^{b}=a^{(2k+1)}=a\times a^{(2k)}=a\times(a^{k})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+换句话说：
+
+\end_layout
+
+\begin_layout Enumerate
+如果 b 是偶数，
+可以通过先算 
+\begin_inset Formula $a^{b/2}$
+\end_inset
+
+，
+然后平方，
+得到结果。
+
+\end_layout
+
+\begin_layout Enumerate
+如果 b 是奇数，
+可以把它转化为 
+\begin_inset Formula $a\times a^{b-1}$
+\end_inset
+
+，
+而 
+\begin_inset Formula $b-1$
+\end_inset
+
+ 是偶数，
+就能用上面的规则。
+
+\end_layout
+
+\begin_layout Standard
+通过反复应用这两个规则，
+我们可以将求 
+\begin_inset Formula $a^{b}$
+\end_inset
+
+ 的问题递归地转化为规模更小的问题。
+
+\end_layout
+
+\begin_layout Standard
+任何整数 b 都可以表示成二进制：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+b=b_{k}2^{k}+b_{k-1}2^{k-1}+\cdots+b_{1}2+b_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{b}=a^{b_{k}2^{k}}\cdot a^{b_{k-1}2^{k-1}}\cdots a^{b_{1}2}\cdot a^{b_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在计算时，
+只需要遍历 b 的二进制位：
+
+\end_layout
+
+\begin_layout Standard
+每遇到 1 位 ，
+就把当前的基数 
+\begin_inset Formula $a$
+\end_inset
+
+ 乘进结果；
+
+\end_layout
+
+\begin_layout Standard
+每处理一位，
+都对 
+\begin_inset Formula $a$
+\end_inset
+
+ 进行平方。
+
+\end_layout
+
+\begin_layout Standard
+这样就能在 
+\begin_inset Formula $O(\log b)$
+\end_inset
+
+ 步完成计算。
+
+\end_layout
+
+\begin_layout Standard
+由于实际问题（如加密算法 RSA、离散对数）常常只需要结果的 模
+\begin_inset Formula $m$
+\end_inset
+
+ ，
+所以每次乘法后立刻取模，
+避免数值过大：
+
+\begin_inset Formula 
+\[
+(a\times b)\bmod m=\big((a\bmod m)\times(b\bmod m)\big)\bmod m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+算法步骤
+\end_layout
+
+\begin_layout Standard
+该算法可以通过迭代（循环）或递归两种方式实现。
+ 下面以更常见的迭代法为例，
+说明计算 
+\begin_inset Formula $a^{b}\mod m$
+\end_inset
+
+ 的步骤：
+
+\end_layout
+
+\begin_layout Enumerate
+初始化：
+创建一个变量 result 并将其初始化为 
+\begin_inset Formula $1$
+\end_inset
+
+。
+这个变量将用来存储最终结果。
+
+\end_layout
+
+\begin_layout Enumerate
+遍历指数的二进制位：
+ 循环遍历指数
+\begin_inset Formula $b$
+\end_inset
+
+ ，
+直到 
+\begin_inset Formula $b$
+\end_inset
+
+变为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+在每次循环中：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+检查最低位：
+ 判断 
+\begin_inset Formula $b$
+\end_inset
+
+ 的二进制表示的最低位是否为 1（即判断
+\begin_inset Formula $b$
+\end_inset
+
+ 是否为奇数）。
+如果是，
+则将 result 乘以当前的基数
+\begin_inset Formula $a$
+\end_inset
+
+ ，
+然后对
+\begin_inset Formula $m$
+\end_inset
+
+ 取模：
+
+\begin_inset Formula $\text{result}=(\text{result}\times a)\bmod m$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Itemize
+更新基数（基数平方）：
+将基数 
+\begin_inset Formula $a$
+\end_inset
+
+ 自身相乘，
+然后对 
+\begin_inset Formula $m$
+\end_inset
+
+ 取模：
+
+\begin_inset Formula $a=(a\times a)\bmod m$
+\end_inset
+
+。
+这相当于为指数的下一位做准备。
+
+\end_layout
+
+\begin_layout Itemize
+右移指数：
+ 将 
+\begin_inset Formula $b$
+\end_inset
+
+ 右移一位（相当于 
+\begin_inset Formula $b=\lfloor b/2\rfloor$
+\end_inset
+
+），
+以处理指数的下一位。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+返回结果：
+当循环结束时（
+\begin_inset Formula $b$
+\end_inset
+
+ 变为 0），
+变量 result 中存储的就是 
+\begin_inset Formula $a^{b}\mod m$
+\end_inset
+
+ 的最终结果。
+
+\end_layout
+
+\begin_layout Example
+计算 
+\begin_inset Formula $3^{13}\mod{100}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+初始化：
+ 
+\begin_inset Formula $a=3$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=13$
+\end_inset
+
+,
+ 
+\begin_inset Formula $m=100$
+\end_inset
+
+,
+ 
+\begin_inset Formula $result=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+指数 
+\begin_inset Formula $b$
+\end_inset
+
+ 的二进制表示：
+ 
+\begin_inset Formula $13$
+\end_inset
+
+ 的二进制是 
+\begin_inset Formula $1101$
+\end_inset
+
+ 。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $13=8+4+0+1=1\times2^{3}+1\times2^{2}+0\times2^{1}+1\times2^{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+
+\begin_inset Formula $a^{13}$
+\end_inset
+
+ 可以被写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a^{13}=a^{(8+4+1)}=a^{8}\times a^{4}\times a^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+我们最终要计算的是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+(a^{8}\times a^{4}\times a^{1})\mod m\\
+=((a^{8}\mod m)\times(a^{4}\mod m)\times(a^{1}\mod m))\mod m\\
+=(((a^{8}\mod m)\times(a^{4}\mod m))\times(a^{1}\mod m))\mod m
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+循环开始：
+ 
+\end_layout
+
+\begin_layout Enumerate
+第1步 (最低位):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $b=13$
+\end_inset
+
+ (二进制
+\begin_inset Formula $1101$
+\end_inset
+
+ ) 是奇数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $result=(1\times3)\mod{100}=3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=(3\times3)\mod{100}=9$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=13/2=6$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第2步:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $b=6$
+\end_inset
+
+ (二进制 110) 是偶数。
+
+\end_layout
+
+\begin_layout Standard
+result 不变，
+仍然是 3。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=(9\times9)\mod{100}=81$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=6/2=3$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第3步:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $b=3$
+\end_inset
+
+ (二进制 11) 是奇数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $result=(3\times81)\mod{100}=243\mod{100}=43$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=(81\times81)\mod{100}=6561\mod{100}=61$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=3/2=1$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第4步:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $b=1$
+\end_inset
+
+ (二进制 
+\begin_inset Formula $1$
+\end_inset
+
+) 是奇数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $result=(43\times61)\mod{100}=2623\mod{100}=23$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=(61\times61)\mod{100}=3721\mod{100}=21$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=1/2=0$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+循环结束：
+
+\begin_inset Formula $b$
+\end_inset
+
+ 已经为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+最终结果：
+ 
+\begin_inset Formula $result=23$
+\end_inset
+
+。
+因此，
+ 
+\begin_inset Formula $3^{13}\mod{100}=23$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+通过这个算法，
+我们只进行了少数几次乘法和取模运算，
+就完成了看似复杂的计算。
+而如果使用朴素算法，
+则需要进行12次乘法，
+中间结果会变得非常大。
+这正是平方求幂算法的威力所在。
+
 \end_layout
 
 \begin_layout Subsection
@@ -21459,10 +22145,56 @@ status open
 \end_layout
 
 \begin_layout Standard
+椭圆曲线（Elliptic Curve）和我们在中学学的椭圆（Ellipse）几乎没有任何关系！
+ 它之所以叫这个名字，
+是因为其数学方程的形式与计算椭圆周长的积分有关，
+这是一个历史遗留问题。
+
+\end_layout
+
+\begin_layout Standard
+从数学上讲，
+一条椭圆曲线是由一个满足特定方程的点的集合所定义的。
+这个方程通常写成：
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $y^{2}=x^{3}+ax+b$
 \end_inset
 
-,且满足其是无奇点(尖点或自相交)的.
+,为了让曲线能够用于密码学，
+我们需要确保它是一条“平滑”的曲线，
+即没有任何尖点或自相交点（通过 
+\begin_inset Formula $4a^{3}+27b^{2}\neq0$
+\end_inset
+
+ 来保证）.
+\end_layout
+
+\begin_layout Standard
+正式地，
+椭圆曲线是光滑的、射影的、亏格为1的代数曲线，
+其上有一个特定的点O。
+椭圆曲线是阿贝尔簇 – 也就是说，
+它有代数上定义的乘法，
+并且对该乘法形成阿贝尔群 – 其中 O即为单位元。
+ 
+\end_layout
+
+\begin_layout Standard
+对于密码学而言，
+我们不会在无限的实数平面上使用它，
+而是在一个 有限域（Finite Field） 上使用。
+你可以把它想象成把上面那张图“掰弯”后，
+放在一个有限的正方形网格里，
+所有点的坐标都是整数，
+并且超过边界就会“回卷”到另一边（通过模运算实现）。
+这使得曲线上的点是离散且有限的。
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement document
 alignment document
@@ -21499,6 +22231,276 @@ status open
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+椭圆曲线的真正威力在于它定义了一套非常独特的运算法则。
+最核心的是点加法（Point Addition）。
+
+\end_layout
+
+\begin_layout Enumerate
+点加法 (
+\begin_inset Formula $P+Q=R$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+在曲线上任意取两个不同的点 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+，
+画一条直线穿过它们。
+这条直线必然会与曲线相交于第三个点。
+将这个交点相对于 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴做对称，
+得到的新点就是 
+\begin_inset Formula $R$
+\end_inset
+
+，
+我们定义
+\begin_inset Formula $P+Q=R$
+\end_inset
+
+ 。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+零点
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这个“游戏”还有一个特殊的点，
+叫做无穷远点 (Point at Infinity)，
+可以看作是所有垂直线的交点，
+它扮演着类似于数字“0”的角色，
+我们记作 
+\begin_inset Formula $O$
+\end_inset
+
+。
+
+\begin_inset Formula $P+O=P$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+点翻倍 (
+\begin_inset Formula $P+P=2P$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+ 是同一个点怎么办？
+这时，
+我们画一条**切线**穿过 P 点。
+这条切线同样会与曲线相交于另一个点。
+将这个交点相对于 x 轴做对称，
+得到的新点就是 `2P`。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+标量乘法
+\end_layout
+
+\begin_layout Standard
+通过结合“点加法”和“点翻倍”，
+我们可以定义出标量乘法（Scalar Multiplication）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K=k\times P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 
+\begin_inset Formula $k$
+\end_inset
+
+ 是一个普通的整数（标量），
+
+\begin_inset Formula $P$
+\end_inset
+
+ 是曲线上的一个点。
+这个运算的含义是：
+ 将点 P 与自身相加 k 次。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\begin_inset Formula $3P=P+P+P$
+\end_inset
+
+。
+我们可以先计算 
+\begin_inset Formula $2P=P+P$
+\end_inset
+
+，
+然后再计算 
+\begin_inset Formula $3P=2P+P$
+\end_inset
+
+。
+通过高效的“平方求幂”思想（这里是“翻倍-相加”算法），
+即使 
+\begin_inset Formula $k$
+\end_inset
+
+ 是一个非常巨大的数字，
+我们也能非常快速地计算出最终的点 
+\begin_inset Formula $K$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+现在，
+密码学的“陷门”出现了：
+
+\end_layout
+
+\begin_layout Standard
+正向计算（容易）：
+ 给定一个整数 
+\begin_inset Formula $k$
+\end_inset
+
+ 和一个点 
+\begin_inset Formula $P$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $K=k\times P$
+\end_inset
+
+ 是非常容易的。
+
+\end_layout
+
+\begin_layout Standard
+逆向计算（极其困难）：
+ 给定点 
+\begin_inset Formula $K$
+\end_inset
+
+ 和点 
+\begin_inset Formula $P$
+\end_inset
+
+，
+让你反向求出整数 
+\begin_inset Formula $k$
+\end_inset
+
+ 是极其困难的。
+这个问题被称为椭圆曲线离散对数问题（ECDLP）。
+
+\end_layout
+
+\begin_layout Standard
+这就是椭圆曲线密码学（ECC）的安全基石。
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k$
+\end_inset
+
+ 就成了你的私钥（一个只有你知道的秘密大数）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K$
+\end_inset
+
+ 就成了你的公钥（一个公开的点，
+由你的私钥和公开的基点 
+\begin_inset Formula $P$
+\end_inset
+
+ 计算得出）。
+
+\end_layout
+
+\begin_layout Standard
+任何人都可以看到你的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 和基点 
+\begin_inset Formula $P$
+\end_inset
+
+，
+但他们无法推算出你的私钥 
+\begin_inset Formula $k$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+应用：
+ 
+\end_layout
+
+\begin_layout Standard
+ECDH (椭圆曲线迪菲-赫尔MAN)：
+用于密钥交换，
+是现代 HTTPS (TLS 1.3) 的核心。
+
+\end_layout
+
+\begin_layout Standard
+ECDSA (椭圆曲线数字签名算法)：
+用于数字签名，
+广泛应用于操作系统、软件更新和加密货币（如比特币、以太坊）中。
 
 \end_layout
 
