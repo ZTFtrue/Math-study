@@ -3457,33 +3457,50 @@ b不整除a
 \end_layout
 
 \begin_layout Standard
-由此可知,
- 能被非零整数
-\begin_inset Formula $n$
+如果一个非零整数 
+\begin_inset Formula $a$
 \end_inset
 
-整除的整数是
-\begin_inset Formula $n$
+ 能被另一个非零整数 
+\begin_inset Formula $b$
 \end_inset
 
-的倍数,
- 其一般形式为 
-\begin_inset Formula $nq$
+ 整除（即存在整数 
+\begin_inset Formula $k$
 \end_inset
 
-,这里
-\begin_inset Formula $q$
+，
+使得 
+\begin_inset Formula $a=b\times k$
 \end_inset
 
-为任意整数,能除尽的
-\begin_inset Formula $n$
+），
+那么 
+\begin_inset Formula $b$
 \end_inset
 
-整数是
-\begin_inset Formula $n$
+ 就叫做 
+\begin_inset Formula $a$
 \end_inset
 
-的因数.
+ 的 
+\series bold
+因数
+\series default
+.
+ 
+\begin_inset Formula $b$
+\end_inset
+
+和 
+\begin_inset Formula $k$
+\end_inset
+
+ 都是 
+\begin_inset Formula $a$
+\end_inset
+
+ 的因数.
 \end_layout
 
 \begin_layout Standard
@@ -3905,7 +3922,7 @@ N=m_{1}...m_{k}
 ：
 分别列出两数的素因数分解式,
  并计算共同项的乘积.
-  
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -3917,19 +3934,20 @@ N=m_{1}...m_{k}
 两数除以其共同素因数,
  直到两数互素时,
  所有除数的乘积即为最大公约数.
- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
-辗转相除法(欧几里得算法 Euclidean algorithm)
+最大公因数性质
 \end_layout
 
-\begin_layout Standard
-辗转相除法是一种递归算法,
- 每一步计算的输出值就是下一步计算时的输入值.
-\end_layout
-
-\begin_layout Standard
+\begin_layout Itemize
 结合律:
  有任意 
 \begin_inset Formula $GCD(a,b,c)=GCD(GCD(a,b),c)$
@@ -3939,16 +3957,15 @@ N=m_{1}...m_{k}
  对于多于三个整数的最大公因数,也有类似的结论.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 任意a和b的公因数都是
 \begin_inset Formula ${\displaystyle \gcd(a,b)}$
 \end_inset
 
 的约数.
-  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula ${\displaystyle \gcd}$
 \end_inset
 
@@ -3958,7 +3975,6 @@ N=m_{1}...m_{k}
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -3966,11 +3982,11 @@ N=m_{1}...m_{k}
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Theorem
 
 \series bold
 \color red
-设整数a,b不同时为零,
+贝祖定理:设整数a,b不同时为零,
  则存在一对整数 
 \begin_inset Formula $m,n$
 \end_inset
@@ -3980,12 +3996,9 @@ N=m_{1}...m_{k}
 \end_inset
 
 .
-\series default
-\color inherit
-(向量也有类似定理)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 性质1:
  
 \series bold
@@ -4000,6 +4013,7 @@ N=m_{1}...m_{k}
 是整除符号).
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 证明:
  因为
@@ -4009,26 +4023,32 @@ N=m_{1}...m_{k}
 ,
  即互素 ,
  得
-\begin_inset Formula $am+bn=1(m,n\in N^{*})$
+\begin_inset Formula $am+bn=1(m,n\in Z)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+将上式两边同乘以
+\begin_inset Formula $c$
+\end_inset
+
+，
 所以 
 \begin_inset Formula $(ac)m+(bc)n=c$
 \end_inset
 
-
+,
 \end_layout
 
 \begin_layout Standard
-又因为 
 \begin_inset Formula $a|ac$
 \end_inset
 
-,
+是显然成立的，
+根据我们的前提条件，
+已知
 \begin_inset Formula $a|bc$
 \end_inset
 
@@ -4036,24 +4056,570 @@ N=m_{1}...m_{k}
 \end_layout
 
 \begin_layout Standard
-所以
-\begin_inset Formula $a|(ac)m+(bc)n$
-\end_inset
-
-,
- 即
-\begin_inset Formula $a|c$
-\end_inset
-
+根据整除的性质：
 
 \end_layout
 
 \begin_layout Standard
+既然 
+\begin_inset Formula $a|ac$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $a$
+\end_inset
+
+ 也能整除
+\begin_inset Formula $(ac)m$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+既然 
+\begin_inset Formula $a|bc$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $a$
+\end_inset
+
+ 也能整除 
+\begin_inset Formula $(bc)n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因为 
+\begin_inset Formula $a$
+\end_inset
+
+ 能同时整除 
+\begin_inset Formula $(ac)m$
+\end_inset
+
+ 和 
+\begin_inset Formula $(bc)n$
+\end_inset
+
+ 这两项，
+所以 
+\begin_inset Formula $a$
+\end_inset
+
+ 也一定能整除这两项的和。
+因此，
+
+\begin_inset Formula $a|((ac)m+(bc)n)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+结合
+\begin_inset Formula $(ac)m+(bc)n=c$
+\end_inset
+
+，
+我们可以得出 
+\begin_inset Formula $a|c$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 性质2:
  若
 \begin_inset Formula $\text{设p为素数, 若}p|ab,\text{则}p|a,\text{或}p|b$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Paragraph
+辗转相除法(欧几里得算法 Euclidean algorithm)
+\end_layout
+
+\begin_layout Standard
+辗转相除法是一种递归算法,
+ 每一步计算的输出值就是下一步计算时的输入值.
+\end_layout
+
+\begin_layout Standard
+欧几里得算法的原理基于一个关键的定理：
+
+\end_layout
+
+\begin_layout Theorem
+两个整数 
+\begin_inset Formula $a$
+\end_inset
+
+和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的最大公因数等于
+\begin_inset Formula $b$
+\end_inset
+
+ 与 
+\begin_inset Formula $a$
+\end_inset
+
+ 除以 
+\begin_inset Formula $b$
+\end_inset
+
+ 的余数 
+\begin_inset Formula $r$
+\end_inset
+
+ 的最大公因数。
+
+\end_layout
+
+\begin_layout Theorem
+用数学语言表达就是：
+
+\begin_inset Formula $GCD(a,b)=GCD(b,a\mod b)$
+\end_inset
+
+ (其中 
+\begin_inset Formula $a>b$
+\end_inset
+
+ 且 
+\begin_inset Formula $r=a\mod b$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Proof
+假设 
+\begin_inset Formula $d$
+\end_inset
+
+ 是 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的任意一个公因数，
+那么 
+\begin_inset Formula $d|a$
+\end_inset
+
+ 且 
+\begin_inset Formula $d|b$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+因为 
+\begin_inset Formula $a=qb+r$
+\end_inset
+
+ (其中 
+\begin_inset Formula $q$
+\end_inset
+
+ 是商，
+
+\begin_inset Formula $r$
+\end_inset
+
+ 是余数)，
+所以 
+\begin_inset Formula $r=a-qb$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+既然
+\begin_inset Formula $d|a$
+\end_inset
+
+并且
+\begin_inset Formula $d|b$
+\end_inset
+
+，
+那么
+\begin_inset Formula $d$
+\end_inset
+
+ 也必然能整除
+\begin_inset Formula $a-qb$
+\end_inset
+
+。
+所以，
+
+\begin_inset Formula $d|r$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+这表明，
+
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的任意公因数也一定是 
+\begin_inset Formula $b$
+\end_inset
+
+ 和 
+\begin_inset Formula $r$
+\end_inset
+
+ 的公因数。
+
+\end_layout
+
+\begin_layout Proof
+反过来，
+假设 
+\begin_inset Formula $d'$
+\end_inset
+
+是 
+\begin_inset Formula $b$
+\end_inset
+
+ 和 
+\begin_inset Formula $r$
+\end_inset
+
+ 的任意一个公因数，
+那么 
+\begin_inset Formula $d'|b$
+\end_inset
+
+ 且 
+\begin_inset Formula $d'|r$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+因为
+\begin_inset Formula $a=qb+r$
+\end_inset
+
+，
+既然 
+\begin_inset Formula $d'|b$
+\end_inset
+
+ 并且 
+\begin_inset Formula $d'|r$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $d'$
+\end_inset
+
+ 也必然能整除 
+\begin_inset Formula $qb+r$
+\end_inset
+
+。
+所以，
+
+\begin_inset Formula $d'|a$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+这表明，
+
+\begin_inset Formula $b$
+\end_inset
+
+ 和 
+\begin_inset Formula $r$
+\end_inset
+
+ 的任意公因数也一定是 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的公因数。
+
+\end_layout
+
+\begin_layout Proof
+综合来看，
+
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ 的公因数集合与
+\begin_inset Formula $(b,r)$
+\end_inset
+
+ 的公因数集合是完全相同的。
+因此，
+它们的最大公因数也必然相等。
+
+\end_layout
+
+\begin_layout Paragraph
+算法步骤
+\end_layout
+
+\begin_layout Standard
+辗转相除法的步骤就是通过连续应用上述原理，
+将计算较大数字的GCD问题，
+一步步转化为计算较小数字的GCD问题，
+直到其中一个数为0为止。
+
+\end_layout
+
+\begin_layout Standard
+具体步骤如下：
+
+\end_layout
+
+\begin_layout Enumerate
+给定两个整数 
+\begin_inset Formula $a$
+\end_inset
+
+ 和
+\begin_inset Formula $b$
+\end_inset
+
+ (不妨设
+\begin_inset Formula $a>b$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Enumerate
+用 
+\begin_inset Formula $a$
+\end_inset
+
+ 除以 
+\begin_inset Formula $b$
+\end_inset
+
+，
+得到余数 
+\begin_inset Formula $r$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+如果 
+\begin_inset Formula $r=0$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $b$
+\end_inset
+
+ 就是 
+\begin_inset Formula $a$
+\end_inset
+
+ 和 
+\begin_inset Formula $b$
+\end_inset
+
+ 的最大公因数，
+算法结束。
+
+\end_layout
+
+\begin_layout Itemize
+如果 
+\begin_inset Formula $r\neq0$
+\end_inset
+
+，
+则将 
+\begin_inset Formula $b$
+\end_inset
+
+ 的值赋给 
+\begin_inset Formula $a$
+\end_inset
+
+，
+将 
+\begin_inset Formula $r$
+\end_inset
+
+ 的值赋给 
+\begin_inset Formula $b$
+\end_inset
+
+，
+然后回到第2步。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+这个过程不断重复，
+因为余数在每一步都会变小，
+所以最终余数一定会变成0，
+从而保证算法能够结束。
+当余数为0时，
+上一步的除数就是所求的最大公因数。
+
+\end_layout
+
+\begin_layout Example
+我们来计算一下
+\begin_inset Formula $1071$
+\end_inset
+
+和
+\begin_inset Formula $462$
+\end_inset
+
+的最大公因数，
+即求 
+\begin_inset Formula $GCD(1071,462)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第1步:
+\end_layout
+
+\begin_layout Example
+用 
+\begin_inset Formula $1071$
+\end_inset
+
+ 除以 462。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1071=2×462+147$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+余数是 147。
+现在问题转化为求 GCD(462,
+ 147)。
+
+\end_layout
+
+\begin_layout Example
+第2步:
+\end_layout
+
+\begin_layout Example
+用 462 除以 147。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $462=3×147+21$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+余数是 21。
+现在问题转化为求 GCD(147,
+ 21)。
+
+\end_layout
+
+\begin_layout Example
+第3步:
+\end_layout
+
+\begin_layout Example
+用 147 除以 21。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $147=7×21+0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+余数是 0。
+算法结束。
+
+\end_layout
+
+\begin_layout Example
+当余数为0时，
+上一步的除数是 21。
+因此，
+
+\begin_inset Formula $GCD(1071,462)=21$
+\end_inset
+
+。
 
 \end_layout
 
@@ -22501,6 +23067,583 @@ ECDH (椭圆曲线迪菲-赫尔MAN)：
 ECDSA (椭圆曲线数字签名算法)：
 用于数字签名，
 广泛应用于操作系统、软件更新和加密货币（如比特币、以太坊）中。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $secp256k1$
+\end_inset
+
+曲线上的生成点 
+\begin_inset Formula $G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+这条曲线之所以大名鼎鼎，
+是因为它是比特币（Bitcoin） 和 以太坊（Ethereum） 等众多加密货币选择的底层密码学基础。
+
+\end_layout
+
+\begin_layout Example
+曲线的定义：
+
+\begin_inset Formula $secp256k1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+首先，
+我们需要一个“舞台”—
+—
+也就是椭圆曲线本身。
+
+\begin_inset Formula $secp256k1$
+\end_inset
+
+ 这个名字本身就包含了它的定义信息：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+sec:
+ 由 Standards for Efficient Cryptography Group (SECG) 制定的标准。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p$
+\end_inset
+
+:
+ 表示曲线定义在素数域（prime field）上。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $256$
+\end_inset
+
+:
+ 指的是素数域的模数 
+\begin_inset Formula $p$
+\end_inset
+
+ 是一个 256 位的数字。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+:
+ 表示这是一个 
+\begin_inset Formula $Koblitz$
+\end_inset
+
+ 曲线的变体，
+它具有一些特殊的性质，
+可以稍微加速计算。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1$
+\end_inset
+
+:
+ 表示这是该类型的第 
+\begin_inset Formula $1$
+\end_inset
+
+ 条被标准化的曲线。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+它的核心参数如下：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+曲线方程:
+ 
+\begin_inset Formula $y^{2}=x^{3}+7(\mod p)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是一个非常简洁的
+\begin_inset Formula $y^{2}=x^{3}+ax+b$
+\end_inset
+
+ 形式，
+其中 
+\begin_inset Formula $a=0$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=7$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+素数模数 (p):
+ 定义了有限域的大小。
+这是一个巨大到难以想象的 256 位素数。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p=115792089237316195423570985008687907853269984665640564039457584007908834671663$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+子群的阶 
+\begin_inset Formula $(n)$
+\end_inset
+
+:
+ 由生成点 
+\begin_inset Formula $G$
+\end_inset
+
+ 生成的子群中点的数量。
+这也是一个巨大的质数，
+略小于 
+\begin_inset Formula $p$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $n=115792089237316195423570985008687907852837564279074904382605163141518161494337$
+\end_inset
+
+这个 n 定义了比特币私钥的可能数量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+余因子 (
+\begin_inset Formula $h$
+\end_inset
+
+):
+ 
+\begin_inset Formula $h=1$
+\end_inset
+
+ 。
+这意味着生成点 G 生成的子群包含了曲线上所有的点，
+安全性极佳。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+生成点 G (即 P) 的诞生
+\end_layout
+
+\begin_layout Example
+对于 
+\begin_inset Formula $secp256k1$
+\end_inset
+
+，
+这个点是标准中明确规定的：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+G 的 x 坐标:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $Gx=55066263022277343669578718895168534326250603453777594175500187360389116729240$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+G 的 y 坐标:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $Gy=32670510020758816978083085130507043184471273380659243275938904335757337482424$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $secp256k1$
+\end_inset
+
+的文档并没有像 NIST 曲线那样提供一个明确的“种子”来证明其“无可争议”的来源。
+但我们可以推断出其选择过程，
+这很可能遵循了我们之前讨论的“随机选择并验证”的方法，
+只不过这里的“随机”可能被简化为“从一个简单的、非特意的数字开始尝试”。
+
+\end_layout
+
+\begin_layout Example
+可能的生成步骤如下：
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+尝试一个简单的
+\begin_inset Formula $x$
+\end_inset
+
+ 值：
+ 设计者们不会选择一个看起来很复杂的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标。
+他们会从最简单的整数开始，
+比如
+\begin_inset Formula $x=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求解 
+\begin_inset Formula $y$
+\end_inset
+
+：
+ 将这个 
+\begin_inset Formula $x$
+\end_inset
+
+ 值代入曲线方程
+\begin_inset Formula $y^{2}=x^{3}+7(\mod p)$
+\end_inset
+
+，
+然后检查
+\begin_inset Formula $x^{3}+7$
+\end_inset
+
+ 这个结果在模
+\begin_inset Formula $p$
+\end_inset
+
+ 的有限域下是否是一个“完全平方数”（专业术语叫二次剩余）。
+如果不是，
+就意味着没有对应的整数 
+\begin_inset Formula $y$
+\end_inset
+
+ 存在，
+这个 
+\begin_inset Formula $x$
+\end_inset
+
+ 值就失败了，
+继续尝试下一个 
+\begin_inset Formula $x$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+找到候选点：
+ 经过若干次尝试，
+他们找到了一个 
+\begin_inset Formula $x$
+\end_inset
+
+ 值（我们上面看到的 
+\begin_inset Formula $Gx$
+\end_inset
+
+），
+使得 
+\begin_inset Formula $Gx^{3}+7$
+\end_inset
+
+ 恰好是一个完全平方数。
+然后他们计算其平方根，
+得到了 
+\begin_inset Formula $Gy$
+\end_inset
+
+。
+这样，
+一个候选点 
+\begin_inset Formula $G=(Gx,Gy)$
+\end_inset
+
+ 就诞生了。
+
+\end_layout
+
+\begin_layout Enumerate
+进行严格的安全验证：
+这是最关键的一步。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+计算阶：
+ 他们用专门的算法计算这个候选点 
+\begin_inset Formula $G$
+\end_inset
+
+ 的阶。
+
+\end_layout
+
+\begin_layout Itemize
+验证阶是否为 
+\begin_inset Formula $n$
+\end_inset
+
+：
+他们发现这个
+\begin_inset Formula $G$
+\end_inset
+
+ 的阶恰好是上面那个巨大的质数 
+\begin_inset Formula $n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+验证余因子：
+ 由于曲线总点数 
+\begin_inset Formula $N$
+\end_inset
+
+ 正好等于 
+\begin_inset Formula $n$
+\end_inset
+
+，
+所以余因子 
+\begin_inset Formula $h=N/n=1$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+因为这个 
+\begin_inset Formula $G$
+\end_inset
+
+ 满足了所有苛刻的数学安全要求（在曲线上、生成的子群阶是巨大质数、余因子为
+\begin_inset Formula $1$
+\end_inset
+
+），
+所以它被选定为 
+\begin_inset Formula $secp256k1$
+\end_inset
+
+ 标准的生成点。
+
+\end_layout
+
+\begin_layout Example
+实际应用：
+生成一个比特币钱包
+\end_layout
+
+\begin_layout Example
+现在，
+让我们看看这个 
+\begin_inset Formula $G$
+\end_inset
+
+ 在实际中是如何工作的。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+生成私钥 (k)：
+ 你（的钱包软件）生成一个 
+\begin_inset Formula $256$
+\end_inset
+
+ 位的随机数。
+这个数就是你的私钥 
+\begin_inset Formula $k$
+\end_inset
+
+。
+它必须是 
+\begin_inset Formula $1$
+\end_inset
+
+ 和 
+\begin_inset Formula $n-1$
+\end_inset
+
+ 之间的一个数，
+并且绝对保密。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如（简化）：
+
+\begin_inset Formula $k=12345$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+导出公钥 (K)：
+你的钱包软件执行椭圆曲线标量乘法：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $K=k\times G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里的 G 就是上面那个固定的、公开的、写在比特币核心代码里的生成点。
+
+\end_layout
+
+\begin_layout Standard
+钱包会用的“翻倍-相加”算法，
+快速计算出 
+\begin_inset Formula $12345\times G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+得到的结果 
+\begin_inset Formula $K$
+\end_inset
+
+ 是一个新的点，
+有它自己的 
+\begin_inset Formula $(Kx,Ky)$
+\end_inset
+
+ 坐标。
+这个点 
+\begin_inset Formula $K$
+\end_inset
+
+ 就是你的公钥。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+生成地址：
+ 钱包再对公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 进行一系列的哈希和编码操作，
+最终生成你可以公开给别人、用于接收比特币的地址。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+整个过程的安全性在于：
+ 你把你的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+（或者地址）告诉别人，
+他们都知道 
+\begin_inset Formula $G$
+\end_inset
+
+。
+但即使全世界都知道 
+\begin_inset Formula $K$
+\end_inset
+
+ 和 
+\begin_inset Formula $G$
+\end_inset
+
+，
+由于椭圆曲线离散对数难题（ECDLP），
+没有人能反向计算出你的私钥 
+\begin_inset Formula $k$
+\end_inset
+
+。
 
 \end_layout
 
