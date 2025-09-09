@@ -3903,6 +3903,21 @@ N=m_{1}...m_{k}
 ,依此类推.
 \end_layout
 
+\begin_layout Standard
+“公约数” 和 “公因数” 这两个词在数学上指的是完全相同的概念，
+它们可以互换使用，
+没有任何区别。
+
+\end_layout
+
+\begin_layout Standard
+在英文中，
+这个概念对应 Common Divisor 或 Common Factor。
+ 同样地，
+“最大公因数”可以被称为 "Greatest Common Divisor" (GCD) 或 "Highest Common Factor" (HCF)。
+
+\end_layout
+
 \begin_layout Itemize
 
 \series bold
@@ -4620,6 +4635,396 @@ N=m_{1}...m_{k}
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Paragraph
+模反元素（Modular Multiplicative Inverse）
+\end_layout
+
+\begin_layout Example
+如何计算
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这个式子等价于说：
+
+\begin_inset Formula $w\times s$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数是1。
+
+\end_layout
+
+\begin_layout Example
+用数学语言来写，
+就是存在一个整数
+\begin_inset Formula $k$
+\end_inset
+
+ ，
+使得：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $w\times s=k\times n+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们把 
+\begin_inset Formula $k\times n$
+\end_inset
+
+ 移到等式的左边，
+得到：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $w\times s-k\times n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+如果我们将 
+\begin_inset Formula $w$
+\end_inset
+
+ 视为变量 
+\begin_inset Formula $x$
+\end_inset
+
+，
+将 
+\begin_inset Formula $-k$
+\end_inset
+
+ 视为变量 
+\begin_inset Formula $y$
+\end_inset
+
+，
+这个方程就变成了：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这正是裴蜀定理 (Bézout's identity) 的形式！
+扩展欧几里得算法就是专门用来求解这样形式的方程 
+\begin_inset Formula $ax+by=GCD(a,b)$
+\end_inset
+
+ 中的 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+ 的。
+
+\end_layout
+
+\begin_layout Example
+因此，
+我们的计算步骤如下：
+
+\end_layout
+
+\begin_layout Enumerate
+前提条件：
+计算
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+的前提是 
+\begin_inset Formula $s$
+\end_inset
+
+ 和 
+\begin_inset Formula $n$
+\end_inset
+
+ 必须互素，
+即
+\begin_inset Formula $GCD(s,n)=1$
+\end_inset
+
+。
+如果它们的最大公因数不是1，
+那么模反元素就不存在。
+
+\end_layout
+
+\begin_layout Enumerate
+目标：
+利用扩展欧几里得算法，
+找到一对整数 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+，
+使得
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+结果：
+我们找到的这个 `x`，
+就是我们要求的 `w`。
+有时候 `x` 可能是个负数，
+我们只需要将它转换到 `
+\begin_inset Formula $[0,n-1]$
+\end_inset
+
+` 的范围内即可。
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+### 计算示例：
+求 `17⁻¹ mod 26`
+\end_layout
+
+\begin_layout Example
+我们来计算一个具体的例子。
+假设 `s = 17`,
+ `n = 26`。
+我们要找到 `w` 使得 `17w ≡ 1 (mod 26)`。
+
+\end_layout
+
+\begin_layout Example
+#### 第1步：
+运行标准的欧几里得算法，
+确认GCD为1
+\end_layout
+
+\begin_layout Example
+我们先用辗转相除法求 `GCD(26,
+ 17)`:
+\end_layout
+
+\begin_layout Example
+(1) `26 = 1 × 17 + 9`
+\end_layout
+
+\begin_layout Example
+(2) `17 = 1 × 9 + 8`
+\end_layout
+
+\begin_layout Example
+(3) `9 = 1 × 8 + 1`
+\end_layout
+
+\begin_layout Example
+(4) `8 = 8 × 1 + 0`
+\end_layout
+
+\begin_layout Example
+最大公因数是最后一个非零余数，
+即 `1`。
+太好了，
+`GCD(26,
+ 17) = 1`，
+所以模反元素一定存在。
+
+\end_layout
+
+\begin_layout Example
+#### 第2步：
+反向代入，
+表达 `1`
+\end_layout
+
+\begin_layout Example
+现在，
+我们从倒数第二步开始，
+反向工作，
+把 `1` 表示成 `s` 和 `n` (即 `17` 和 `26`) 的线性组合。
+这个过程也叫**回代 (Back Substitution)**。
+
+\end_layout
+
+\begin_layout Example
+* 从式子 (3) 开始，
+将 `1` 隔离出来：
+
+\end_layout
+
+\begin_layout Example
+`1 = 9 - 1 × 8`
+\end_layout
+
+\begin_layout Example
+* 现在看式子 (2)，
+将 `8` 隔离出来：
+`8 = 17 - 1 × 9`。
+把这个 `8` 代入到上面的方程中：
+
+\end_layout
+
+\begin_layout Example
+`1 = 9 - 1 × (17 - 1 × 9)`
+\end_layout
+
+\begin_layout Example
+展开并合并关于 `9` 的项：
+
+\end_layout
+
+\begin_layout Example
+`1 = 9 - 1 × 17 + 1 × 9`
+\end_layout
+
+\begin_layout Example
+`1 = 2 × 9 - 1 × 17`
+\end_layout
+
+\begin_layout Example
+* 最后看式子 (1)，
+将 `9` 隔离出来：
+`9 = 26 - 1 × 17`。
+把这个 `9` 代入到我们刚刚得到的方程中：
+
+\end_layout
+
+\begin_layout Example
+`1 = 2 × (26 - 1 × 17) - 1 × 17`
+\end_layout
+
+\begin_layout Example
+展开并合并关于 `17` 的项：
+
+\end_layout
+
+\begin_layout Example
+`1 = 2 × 26 - 2 × 17 - 1 × 17`
+\end_layout
+
+\begin_layout Example
+`1 = 2 × 26 - 3 × 17`
+\end_layout
+
+\begin_layout Example
+#### 第3步：
+找到 `w`
+\end_layout
+
+\begin_layout Example
+我们已经得到了 `1 = 2 × 26 - 3 × 17` 这个结果。
+
+\end_layout
+
+\begin_layout Example
+为了匹配 
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+ 的形式，
+我们把它写成：
+
+\end_layout
+
+\begin_layout Example
+`17 * (-3) + 26 * (2) = 1`
+\end_layout
+
+\begin_layout Example
+与 
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+ 对比，
+我们得到 `s=17,
+ n=26,
+ x=-3,
+ y=2`。
+
+\end_layout
+
+\begin_layout Example
+我们需要的模反元素 `w` 就是这个 `x`，
+即 `w = -3`。
+
+\end_layout
+
+\begin_layout Example
+#### 第4步：
+将结果调整到 `[0,
+ n-1]` 范围
+\end_layout
+
+\begin_layout Example
+通常我们希望得到一个正数作为结果。
+ `-3` 和 `23` 在模 `26` 的意义下是等价的，
+因为 `-3 + 26 = 23`。
+
+\end_layout
+
+\begin_layout Example
+所以 `w = 23`。
+
+\end_layout
+
+\begin_layout Example
+**最终答案**：
+`17⁻¹ mod 26 = 23`。
+
+\end_layout
+
+\begin_layout Example
+**验证一下**:
+\end_layout
+
+\begin_layout Example
+`(17 × 23) mod 26 = 391 mod 26`
+\end_layout
+
+\begin_layout Example
+`391 = 15 × 26 + 1`
+\end_layout
+
+\begin_layout Example
+余数确实是
+\begin_inset Formula $1$
+\end_inset
+
 
 \end_layout
 
@@ -23521,14 +23926,14 @@ G 的 y 坐标:
 
 \begin_deeper
 \begin_layout Enumerate
-生成私钥 (k)：
+生成私钥 (d)：
  你（的钱包软件）生成一个 
 \begin_inset Formula $256$
 \end_inset
 
  位的随机数。
 这个数就是你的私钥 
-\begin_inset Formula $k$
+\begin_inset Formula $d$
 \end_inset
 
 。
@@ -23549,7 +23954,7 @@ G 的 y 坐标:
 \begin_layout Standard
 例如（简化）：
 
-\begin_inset Formula $k=12345$
+\begin_inset Formula $d=12345$
 \end_inset
 
 
@@ -23564,7 +23969,7 @@ G 的 y 坐标:
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $K=k\times G$
+\begin_inset Formula $K=d\times G$
 \end_inset
 
 
@@ -23644,6 +24049,1091 @@ G 的 y 坐标:
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Example
+ECDSA 签名（Signing） 的步骤，
+是由持有私钥的人主动执行的操作。
+
+\end_layout
+
+\begin_layout Example
+签名的核心目标是，
+为一条特定的 消息 （例如一笔比特币交易）创建一个
+\series bold
+ 数字标记
+\series default
+，
+这个标记能够向全世界证明三件事：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+真实性 (Authenticity):
+ 这个标记确实是由“我”（我的私钥）生成的。
+
+\end_layout
+
+\begin_layout Description
+完整性 (Integrity):
+ 消息内容从签名那一刻起，
+就再也没有被篡改过。
+
+\end_layout
+
+\begin_layout Description
+不可否认性 (Non-repudiation):
+ 我不能否认我签署过这条消息。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+要生成一个有效的签名，
+签名者（例如，
+你的钱包软件）必须拥有以下几样东西：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+私钥 (d):
+ 这是你的终极秘密。
+一个巨大的、随机生成的整数。
+
+\end_layout
+
+\begin_layout Enumerate
+消息的哈希 (z):
+ 待签名交易的“数字指纹”。
+
+\end_layout
+
+\begin_layout Enumerate
+全局曲线参数 (G,
+ n):
+ 公开的椭圆曲线“游戏规则”，
+包括生成点 G 和子群的阶 n。
+
+\end_layout
+
+\begin_layout Enumerate
+一个密码学安全的随机数 (k):这是本次签名的临时秘密，
+极其重要！
+每次签名都必须使用一个全新的、不可预测的k。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+签名算法的详细步骤
+\end_layout
+
+\begin_layout Example
+签名过程就是将上述“工具”代入一系列公式，
+最终计算出一对数字 (r,
+ s)，
+这就是签名。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+第 1 步：
+生成一次性的秘密 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是至关重要且必须是第一步的操作。
+钱包软件必须生成一个密码学安全的随机整数 k，
+它必须满足 
+\begin_inset Formula $1<k<n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 必须保密。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 绝不能重复使用。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 绝不能被预测。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 2 步：
+计算点 
+\begin_inset Formula $P$
+\end_inset
+
+ 并导出 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+使用这个一次性的秘密 
+\begin_inset Formula $k$
+\end_inset
+
+ 和公共的生成点 
+\begin_inset Formula $G$
+\end_inset
+
+，
+进行椭圆曲线标量乘法，
+计算出一个新的点 
+\begin_inset Formula $P$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=k\times G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个点 
+\begin_inset Formula $P$
+\end_inset
+
+ 有自己的坐标 
+\begin_inset Formula $(Px,Py)$
+\end_inset
+
+。
+签名的第一部分 
+\begin_inset Formula $r$
+\end_inset
+
+ 就是这个点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标，
+对 
+\begin_inset Formula $n$
+\end_inset
+
+ 取模。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r=Px\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+然后，
+检查 
+\begin_inset Formula $r$
+\end_inset
+
+ 是否等于 
+\begin_inset Formula $0$
+\end_inset
+
+。
+如果 
+\begin_inset Formula $r=0$
+\end_inset
+
+，
+说明这次随机选择的 
+\begin_inset Formula $k$
+\end_inset
+
+ 不好，
+必须返回第 1 步，
+重新选择一个 
+\begin_inset Formula $k$
+\end_inset
+
+。
+这种情况极其罕见。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 3 步：
+计算 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+签名的第二部分
+\begin_inset Formula $s$
+\end_inset
+
+是通过一个公式计算出来的，
+这个公式巧妙地将消息哈希
+\begin_inset Formula $z$
+\end_inset
+
+、 私钥 
+\begin_inset Formula $d$
+\end_inset
+
+、随机数 
+\begin_inset Formula $k$
+\end_inset
+
+ 以及刚刚算出的 
+\begin_inset Formula $r$
+\end_inset
+
+ 全部绑定在了一起：
+
+\begin_inset Formula $s=k^{-1}\times(z+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+让我们来分解这个公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k^{-1}$
+\end_inset
+
+:
+ 这是 
+\begin_inset Formula $k$
+\end_inset
+
+ 对 
+\begin_inset Formula $n$
+\end_inset
+
+ 的模反元素，
+即 
+\begin_inset Formula $(k^{-1}\times k)\mod n=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r\times d$
+\end_inset
+
+:
+ 这是 
+\begin_inset Formula $r$
+\end_inset
+
+ 值与你的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 的乘积。
+这是整个过程中唯一用到私钥 d 的地方！
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z+\cdots$
+\end_inset
+
+:
+ 将消息哈希 
+\begin_inset Formula $z$
+\end_inset
+
+ 与上面的乘积相加。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k^{-1}\times\cdots$
+\end_inset
+
+:
+ 将总和乘以 k 的模反元素。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mod n$
+\end_inset
+
+`:
+ 确保最终结果 s 保持在有限域内。
+
+\end_layout
+
+\begin_layout Standard
+同样，
+检查 s 是否等于 0。
+如果是，
+也必须返回第 1 步，
+重新选择 k。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 4 步：
+最终的签名
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+经过以上计算，
+你就得到了一个由两个整数组成的对 (r,
+ s)。
+这就是你对消息 z 的最终数字签名。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+现在，
+你的钱包软件可以把原始交易、你的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+以及这个签名 (r,
+ s) 一起广播出去，
+供全网节点验证。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $k$
+\end_inset
+
+ 的重要性：
+为什么绝不能重复使用？
+
+\end_layout
+
+\begin_layout Example
+这是 ECDSA 实现中最容易出错、也最致命的地方。
+如果同一个私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 对两条不同的消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ 使用了相同的随机数
+\begin_inset Formula $k$
+\end_inset
+
+进行签名，
+那么你的私钥 d 将会瞬间暴露给全世界！
+
+\end_layout
+
+\begin_layout Example
+推导过程如下：
+ 
+\end_layout
+
+\begin_layout Example
+假设你用同一个 
+\begin_inset Formula $k$
+\end_inset
+
+ 签署了两条消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+，
+得到了两个签名：
+(r,
+ 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+) 和 (r,
+ 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s_{2}=k^{-1}(z_{2}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+攻击者拿到了这两条消息和两个签名，
+他可以做如下计算：
+
+\end_layout
+
+\begin_layout Example
+1.
+ 
+\begin_inset Formula $s_{1}-s_{2}=k^{-1}(z_{1}-z_{2})\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times(s_{1}-s_{2})=z_{1}-z_{2}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 求解 ：
+
+\begin_inset Formula $k=\frac{(z_{1}-z_{2})}{(s_{1}-s_{2})}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+攻击者已经从公开信息中计算出了你当时使用的秘密随机数 k！
+
+\end_layout
+
+\begin_layout Example
+4.
+ 将求出的 
+\begin_inset Formula $k$
+\end_inset
+
+ 代入任意一个 
+\begin_inset Formula $s$
+\end_inset
+
+ 的原始公式，
+比如 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+5.
+ 两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times s_{1}=z_{1}+r\times d\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+6.
+ 求解私钥 
+\begin_inset Formula $d$
+\end_inset
+
+：
+
+\begin_inset Formula $d=(k\times s_{1}-z_{1})/r\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+攻击者仅仅通过分析你发布的两个签名，
+就完整地计算出了你的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+，
+然后他就可以卷走你地址里所有的币。
+
+\end_layout
+
+\begin_layout Example
+真实案例：
+ 2010年，
+索尼 PlayStation 3 的软件签名系统被破解，
+原因就是索尼在实现 ECDSA 签名时，
+为所有签名使用了一个静态的、而不是随机的 
+\begin_inset Formula $k$
+\end_inset
+
+ 值。
+这导致黑客能够轻易地计算出索尼的软件主签名私钥。
+
+\end_layout
+
+\begin_layout Example
+验证算法的官方名称是 ECDSA (Elliptic Curve Digital Signature Algorithm) 的验证部分。
+
+\end_layout
+
+\begin_layout Example
+验证的最高目标是：
+ “这个提供的
+\series bold
+签名
+\series default
+，
+是否真的是由与这个公钥相对应的那个私钥，
+对这条
+\series bold
+消息
+\series default
+（交易）所签署的？
+”
+\end_layout
+
+\begin_layout Example
+如何验证：
+
+\end_layout
+
+\begin_layout Example
+当一个比特币节点（矿工）开始验证一笔交易时，
+它手上已经拿到了所有必需的公开信息：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+消息的哈希 (z)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是原始交易数据经过哈希运算后得到的一个数字。
+我们
+\series bold
+不直接对整个交易签名
+\series default
+，
+而是
+\series bold
+对其哈希值签名
+\series default
+。
+这既高效又安全。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+签名 (r,
+ s)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是由发送方用其私钥生成的。
+签名本身由两部分组成，
+r 和 s，
+它们都是大整数。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+公钥 (K)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是发送方公开的、在椭圆曲线上的一个点 
+\begin_inset Formula $(Kx,Ky)$
+\end_inset
+
+。
+它包含在交易数据中。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+4.
+ 全局曲线参数 (G,
+ n)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+所有人都知道并使用相同的椭圆曲线参数，
+包括
+\series bold
+生成点 G
+\series default
+ 和 
+\series bold
+子群的阶 n
+\series default
+ 。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+验证者（矿工）绝对没有、也绝不需要发送方的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+第 1 步：
+基础检查
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+首先，
+验证者会做一些基本的“sanity check”，
+确保签名中的
+\begin_inset Formula $r$
+\end_inset
+
+和
+\begin_inset Formula $s$
+\end_inset
+
+ 都在合法的范围内，
+即它们都必须在 
+\begin_inset Formula $1$
+\end_inset
+
+ 和 
+\begin_inset Formula $n-1$
+\end_inset
+
+ 之间。
+如果不是，
+验证直接失败。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 2 步：
+计算 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是验证的第一步计算。
+验证者需要计算 
+\begin_inset Formula $s$
+\end_inset
+
+ 的模反元素，
+记为 
+\begin_inset Formula $w$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w$
+\end_inset
+
+ 是一个数字，
+它满足 
+\begin_inset Formula $(w\times s)\mod n=1$
+\end_inset
+
+。
+这个计算可以通过“扩展欧几里得算法”快速完成。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 3 步：
+计算 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+接下来，
+验证者使用上一步的 
+\begin_inset Formula $w$
+\end_inset
+
+ 以及消息哈希 
+\begin_inset Formula $z$
+\end_inset
+
+ 和签名的 
+\begin_inset Formula $r$
+\end_inset
+
+ 部分，
+来计算两个重要的中间值 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}=z\times w\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{2}=r\times wmodn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+也是两个大整数。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 4 步：
+计算曲线上的点
+\begin_inset Formula $P$
+\end_inset
+
+ (关键步骤) 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+验证者将使用 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+，
+以及两个公开的点—
+—
+ 生成点 
+\begin_inset Formula $G$
+\end_inset
+
+ 和 发送方的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ —
+—
+来进行一次椭圆曲线运算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=(u_{1}\times G)+(u_{2}\times K)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+让我们拆解这个运算：
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $u_{1}\times G$
+\end_inset
+
+)：
+对基点 
+\begin_inset Formula $G$
+\end_inset
+
+ 进行标量乘法，
+得到一个新的点。
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $u_{2}\times K$
+\end_inset
+
+)：
+对发送方的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 进行标量乘法，
+得到另一个新的点。
+
+\end_layout
+
+\begin_layout Standard
+将这两个新点进行椭圆曲线的点加法。
+
+\end_layout
+
+\begin_layout Standard
+最终，
+计算结果 P 是椭圆曲线上的一个点，
+拥有 
+\begin_inset Formula $(Px,Py)$
+\end_inset
+
+ 坐标。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 5 步：
+最终的验证
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+现在，
+验证者拿到了计算出的点 P。
+他们会取出这个点的 x 坐标，
+我们称之为 Px。
+
+\end_layout
+
+\begin_layout Standard
+验证的最后一步是做一个简单的比较：
+
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $Px\mod n==r$
+\end_inset
+
+，
+则签名有效！
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $Px\mod n\neq r$
+\end_inset
+
+，
+则签名无效！
+
+\end_layout
+
+\begin_layout Standard
+如果计算出的点的 x 坐标（模 n 后）与签名中的 
+\begin_inset Formula $r$
+\end_inset
+
+ 值完全相等，
+那么整个交易就被确认为合法。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+为什么这个过程是有效的？
+ 
+\end_layout
+
+\begin_layout Example
+在签名时，
+
+\begin_inset Formula $s$
+\end_inset
+
+的计算公式大致是 `
+\begin_inset Formula $s=(z+r\times d)/k$
+\end_inset
+
+` (这里的 `d` 是私钥,
+ `k` 是一个临时随机数)。
+
+\end_layout
+
+\begin_layout Example
+在**验证时**，
+我们计算的点 `P = u1*G + u2*K`，
+如果把 `u1`,
+ `u2` 和 `K=d*G` 代入并展开，
+经过一系列数学变换，
+最终可以证明 `P` 等于 `k * G`。
+
+\end_layout
+
+\begin_layout Example
+而在**签名时**，
+`r` 是如何生成的呢？
+`r` 正是 `
+\begin_inset Formula $k\times G$
+\end_inset
+
+` 这个点的 x 坐标！
+
+\end_layout
+
+\begin_layout Example
+所以，
+整个验证过程实际上是在**重新构建**签名时使用的那个 临时点 
+\begin_inset Formula $k\times G$
+\end_inset
+
+ 。
+它通过公开信息 `(z,
+ r,
+ s,
+ K,
+ G)`，
+以一种不同的路径，
+最终计算出了一个点 `P`。
+如果这个点 `P` 的 x 坐标恰好等于签名中的 `r`，
+就完美地证明了所有这些变量之间存在着一个由私钥 `d` 构成的、正确的数学关系。
+
+\end_layout
+
+\begin_layout Example
+如果有人试图伪造签名，
+比如随便编一个 `(r',
+ s')`，
+那么在第4步计算出的点 `P'` 的 x 坐标几乎不可能恰好等于他编的 `r'`。
+这个数学 puzzle 只有在拥有正确的私钥 `d` 的情况下才能被“解开”并生成正确的 `(r,
+ s)` 组合。
 
 \end_layout
 
