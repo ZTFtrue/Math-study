@@ -4642,7 +4642,7 @@ N=m_{1}...m_{k}
 模反元素（Modular Multiplicative Inverse）
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 如何计算
 \begin_inset Formula $w=s^{-1}\mod n$
 \end_inset
@@ -4650,7 +4650,7 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 这个式子等价于说：
 
 \begin_inset Formula $w\times s$
@@ -4664,7 +4664,7 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 用数学语言来写，
 就是存在一个整数
 \begin_inset Formula $k$
@@ -4675,14 +4675,14 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 \begin_inset Formula $w\times s=k\times n+1$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 现在，
 我们把 
 \begin_inset Formula $k\times n$
@@ -4693,14 +4693,14 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 \begin_inset Formula $w\times s-k\times n=1$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 如果我们将 
 \begin_inset Formula $w$
 \end_inset
@@ -4723,14 +4723,14 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 \begin_inset Formula $s\times x+n\times y=1$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 这正是裴蜀定理 (Bézout's identity) 的形式！
 扩展欧几里得算法就是专门用来求解这样形式的方程 
 \begin_inset Formula $ax+by=GCD(a,b)$
@@ -4748,7 +4748,7 @@ N=m_{1}...m_{k}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 因此，
 我们的计算步骤如下：
 
@@ -4801,67 +4801,123 @@ N=m_{1}...m_{k}
 
 \begin_layout Enumerate
 结果：
-我们找到的这个 `x`，
-就是我们要求的 `w`。
-有时候 `x` 可能是个负数，
-我们只需要将它转换到 `
+我们找到的这个 
+\begin_inset Formula $x$
+\end_inset
+
+，
+就是我们要求的 
+\begin_inset Formula $w$
+\end_inset
+
+。
+有时候 
+\begin_inset Formula $x$
+\end_inset
+
+ 可能是个负数，
+我们只需要将它转换到 
 \begin_inset Formula $[0,n-1]$
 \end_inset
 
-` 的范围内即可。
+ 的范围内即可。
 
 \end_layout
 
 \begin_layout Example
----
-\end_layout
+求 
+\begin_inset Formula $17^{-1}\mod{26}$
+\end_inset
 
-\begin_layout Example
-### 计算示例：
-求 `17⁻¹ mod 26`
-\end_layout
-
-\begin_layout Example
-我们来计算一个具体的例子。
-假设 `s = 17`,
- `n = 26`。
-我们要找到 `w` 使得 `17w ≡ 1 (mod 26)`。
 
 \end_layout
 
 \begin_layout Example
-#### 第1步：
+假设 
+\begin_inset Formula $s=17$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n=26$
+\end_inset
+
+。
+我们要找到 
+\begin_inset Formula $w$
+\end_inset
+
+ 使得 
+\begin_inset Formula $17w\equiv1(\mod{26})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第1步：
 运行标准的欧几里得算法，
-确认GCD为1
+确认
+\begin_inset Formula $GCD$
+\end_inset
+
+为
+\begin_inset Formula $1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-我们先用辗转相除法求 `GCD(26,
- 17)`:
+我们先用辗转相除法求 
+\begin_inset Formula $GCD(26,17)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-(1) `26 = 1 × 17 + 9`
+\begin_inset Formula $26=1\times17+9$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-(2) `17 = 1 × 9 + 8`
+\begin_inset Formula $17=1\times9+8$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-(3) `9 = 1 × 8 + 1`
+\begin_inset Formula $9=1\times8+1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-(4) `8 = 8 × 1 + 0`
+\begin_inset Formula $8=8\times1+0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 最大公因数是最后一个非零余数，
-即 `1`。
+即 
+\begin_inset Formula $1$
+\end_inset
+
+。
 太好了，
-`GCD(26,
- 17) = 1`，
+
+\begin_inset Formula $GCD(26,17)=1$
+\end_inset
+
+，
 所以模反元素一定存在。
 
 \end_layout
@@ -4869,85 +4925,158 @@ N=m_{1}...m_{k}
 \begin_layout Example
 #### 第2步：
 反向代入，
-表达 `1`
+表达 
+\begin_inset Formula $1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
 现在，
 我们从倒数第二步开始，
 反向工作，
-把 `1` 表示成 `s` 和 `n` (即 `17` 和 `26`) 的线性组合。
+把 1 表示成 s 和 n (即 17 和 26) 的线性组合,
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+。
 这个过程也叫**回代 (Back Substitution)**。
 
 \end_layout
 
 \begin_layout Example
-* 从式子 (3) 开始，
-将 `1` 隔离出来：
+* 从式子 
+\begin_inset Formula $9=1\times8+1$
+\end_inset
+
+开始，
+将 1 隔离出来：
 
 \end_layout
 
 \begin_layout Example
-`1 = 9 - 1 × 8`
-\end_layout
+\begin_inset Formula $1=9-1\times8$
+\end_inset
 
-\begin_layout Example
-* 现在看式子 (2)，
-将 `8` 隔离出来：
-`8 = 17 - 1 × 9`。
-把这个 `8` 代入到上面的方程中：
 
 \end_layout
 
 \begin_layout Example
-`1 = 9 - 1 × (17 - 1 × 9)`
-\end_layout
+现在看式子
+\begin_inset Formula $17=1\times9+8$
+\end_inset
 
-\begin_layout Example
-展开并合并关于 `9` 的项：
+，
+将 
+\begin_inset Formula $8$
+\end_inset
 
-\end_layout
+ 隔离出来：
 
-\begin_layout Example
-`1 = 9 - 1 × 17 + 1 × 9`
-\end_layout
+\begin_inset Formula $8=17-1\times9$
+\end_inset
 
-\begin_layout Example
-`1 = 2 × 9 - 1 × 17`
-\end_layout
-
-\begin_layout Example
-* 最后看式子 (1)，
-将 `9` 隔离出来：
-`9 = 26 - 1 × 17`。
-把这个 `9` 代入到我们刚刚得到的方程中：
+。
 
 \end_layout
 
 \begin_layout Example
-`1 = 2 × (26 - 1 × 17) - 1 × 17`
-\end_layout
-
-\begin_layout Example
-展开并合并关于 `17` 的项：
+把这个 8 代入到上面的方程中：
 
 \end_layout
 
 \begin_layout Example
-`1 = 2 × 26 - 2 × 17 - 1 × 17`
+\begin_inset Formula $1=9-1\times(17-1\times9)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-`1 = 2 × 26 - 3 × 17`
+展开并合并关于 9 的项：
+
 \end_layout
 
 \begin_layout Example
-#### 第3步：
-找到 `w`
+\begin_inset Formula $1=9-1\times17+1\times9$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-我们已经得到了 `1 = 2 × 26 - 3 × 17` 这个结果。
+\begin_inset Formula $1=2\times9-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+最后看式子
+\begin_inset Formula $26=1\times17+9$
+\end_inset
+
+，
+将 9 隔离出来：
+
+\begin_inset Formula $9=26-1\times17$
+\end_inset
+
+。
+把这个 
+\begin_inset Formula $9$
+\end_inset
+
+ 代入到我们刚刚得到的方程中：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times(26-1\times17)-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+展开并合并关于 
+\begin_inset Formula $17$
+\end_inset
+
+ 的项：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times26-2\times17-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times26-3\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+第3步：
+找到 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们已经得到了 
+\begin_inset Formula $1=2\times26-3\times17$
+\end_inset
+
+ 这个结果。
 
 \end_layout
 
@@ -4962,7 +5091,10 @@ N=m_{1}...m_{k}
 \end_layout
 
 \begin_layout Example
-`17 * (-3) + 26 * (2) = 1`
+\begin_inset Formula $17\times(-3)+26\times(2)=1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -4971,53 +5103,111 @@ N=m_{1}...m_{k}
 \end_inset
 
  对比，
-我们得到 `s=17,
- n=26,
- x=-3,
- y=2`。
+我们得到 
+\begin_inset Formula $s=17$
+\end_inset
+
+,
+\begin_inset Formula $n=26$
+\end_inset
+
+,
+\begin_inset Formula $,x=-3$
+\end_inset
+
+,
+\begin_inset Formula $y=2$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-我们需要的模反元素 `w` 就是这个 `x`，
-即 `w = -3`。
+我们需要的模反元素 
+\begin_inset Formula $w$
+\end_inset
+
+ 就是这个 
+\begin_inset Formula $x$
+\end_inset
+
+，
+即 
+\begin_inset Formula $w=-3$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-#### 第4步：
-将结果调整到 `[0,
- n-1]` 范围
+第4步：
+将结果调整到 
+\begin_inset Formula $[0,n-1]$
+\end_inset
+
+ 范围
 \end_layout
 
 \begin_layout Example
 通常我们希望得到一个正数作为结果。
- `-3` 和 `23` 在模 `26` 的意义下是等价的，
-因为 `-3 + 26 = 23`。
+ 
+\begin_inset Formula $-3$
+\end_inset
+
+ 和 
+\begin_inset Formula $23$
+\end_inset
+
+ 在模 
+\begin_inset Formula $26$
+\end_inset
+
+ 的意义下是等价的，
+因为
+\begin_inset Formula $-3+26=23$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-所以 `w = 23`。
+所以 
+\begin_inset Formula $w=23$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-**最终答案**：
-`17⁻¹ mod 26 = 23`。
+最终答案：
+
+\begin_inset Formula $17^{-1}\mod{26}=23$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-**验证一下**:
+验证一下:
 \end_layout
 
 \begin_layout Example
-`(17 × 23) mod 26 = 391 mod 26`
+\begin_inset Formula $(17\times23)\mod{26}=391\mod{26}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-`391 = 15 × 26 + 1`
+\begin_inset Formula $391=15\times26+1$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -25134,6 +25324,1560 @@ r 和 s，
 那么在第4步计算出的点 `P'` 的 x 坐标几乎不可能恰好等于他编的 `r'`。
 这个数学 puzzle 只有在拥有正确的私钥 `d` 的情况下才能被“解开”并生成正确的 `(r,
  s)` 组合。
+
+\end_layout
+
+\begin_layout Example
+我们来举一个非常小、可以用纸笔手动计算的例子，
+来完整地演示 
+\begin_inset Formula $K=d\times G$
+\end_inset
+
+ 的计算过程。
+
+\end_layout
+
+\begin_layout Example
+我们不能在无限的平面上计算，
+所以我们先定义一个非常小的、有限的椭圆曲线“宇宙”。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 曲线方程：
+
+\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $a=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $p=17$
+\end_inset
+
+ (我们的宇宙边界，
+所有计算结果都不能超过16)
+\end_layout
+
+\begin_layout Example
+在这里，
+更严谨、更标准的数学记法是使用
+\series bold
+同余符号
+\series default
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+为什么用“同余” (
+\begin_inset Formula $\equiv$
+\end_inset
+
+) 更为准确？
+
+\end_layout
+
+\begin_layout Enumerate
+定义域不同：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+等号 
+\begin_inset Formula $=$
+\end_inset
+
+ 通常表示等式两边的数值完全相等。
+它作用于我们熟悉的实数、整数等领域。
+
+\end_layout
+
+\begin_layout Plain Layout
+同余符号 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 表示的是等式两边的数在“除以某个数（模数）后，
+余数相等”。
+它作用于模算术（Modular Arithmetic）这个特殊的数学体系中。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+表达的数学关系不同：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula $A=B$
+\end_inset
+
+意味着 A 和 B 是同一个数。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\equiv B(\mod n)$
+\end_inset
+
+ 意味着 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 在“模n的剩余类”中是等价的。
+换句话说，
+
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $B$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数相同，
+或者说 
+\begin_inset Formula $A-B$
+\end_inset
+
+ 是 
+\begin_inset Formula $n$
+\end_inset
+
+ 的整数倍。
+
+\end_layout
+
+\begin_layout Plain Layout
+例如：
+
+\begin_inset Formula $18\equiv3(\mod 5)$
+\end_inset
+
+ 是正确的，
+因为它们除以5的余数都是3。
+但 18 = 3 显然是错误的。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+3.
+ 在椭圆曲线上下文中的含义：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+当我们写 
+\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
+\end_inset
+
+ 时，
+我们的意思是：
+
+\end_layout
+
+\begin_layout Plain Layout
+“一个点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 属于这条定义在有限域 
+\begin_inset Formula $F_{17}$
+\end_inset
+
+ 上的椭圆曲线，
+当且仅当
+\begin_inset Formula $y^{2}$
+\end_inset
+
+这个数值和
+\begin_inset Formula $x^{3}+2x+2$
+\end_inset
+
+ 这个数值在除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 之后，
+具有相同的余数。
+”
+\end_layout
+
+\begin_layout Plain Layout
+例如，
+对于点
+\begin_inset Formula $(5,1)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $y^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $x^{3}+2x+2=5^{3}+2\times5+2=137$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+ 除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 的余数是 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $137$
+\end_inset
+
+ 除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 的余数也是 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+因为 
+\begin_inset Formula $1\equiv1(\mod 17)$
+\end_inset
+
+，
+原同余式 
+\begin_inset Formula $1\equiv137(\mod 17)$
+\end_inset
+
+ 也成立，
+所以这个点在曲线上。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+为什么经常会看到用等号 (
+\begin_inset Formula $=$
+\end_inset
+
+)？
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+尽管
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 更严谨，
+但在计算机科学和密码学的文献中，
+为了简洁，
+经常会看到使用 
+\begin_inset Formula $=$
+\end_inset
+
+ 的写法。
+这是一种“滥用符号”（Abuse of notation）的常见情况。
+
+\end_layout
+
+\begin_layout Plain Layout
+他们默认读者已经理解这里的等式是在“模17的有限域”这个上下文中进行的。
+此时的
+\begin_inset Formula $=$
+\end_inset
+
+应该被解读为“在 
+\begin_inset Formula $F_{17}$
+\end_inset
+
+ 这个域中的相等”，
+这实际上就等同于同余关系。
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 生成点 G (公共起点):
+ 经过计算，
+我们知道点 
+\begin_inset Formula $G=(5,1)$
+\end_inset
+
+ 在这条曲线上。
+我们就用它作为我们的公共起点。
+
+\end_layout
+
+\begin_layout Example
+验证一下：
+ 
+\begin_inset Formula $1^{2}\equiv5³+2\times5+2(\mod{17})$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $1\equiv125+10+2(\mod{17})$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $1\equiv137(\mod{17})$
+\end_inset
+
+，
+验证通过！
+
+\end_layout
+
+\begin_layout Example
+3.
+ 私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ :
+ 我们选择一个非常小的秘密数字作为私钥。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $d=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算公钥 
+\begin_inset Formula $K=6\times G$
+\end_inset
+
+，
+也就是 
+\begin_inset Formula $6\times(5,1)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第2步：
+The Toolset 
+\end_layout
+
+\begin_layout Example
+我们需要两个核心工具：
+ 点翻倍 和 点相加 。
+
+\end_layout
+
+\begin_layout Example
+点翻倍 (计算 
+\begin_inset Formula $2P$
+\end_inset
+
+):
+ 
+\begin_inset Formula $P=(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 计算斜率 
+\begin_inset Formula $s=(3x^{2}+a)\times(2y)^{-1}\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+在标准的实数运算中，
+我们是做除法。
+但在 有限域（模算术）的世界里，
+没有“除法”这个操作。
+
+\end_layout
+
+\begin_layout Itemize
+“除以 a” 被替换为 “乘以 a 的模乘法逆元”。
+
+\begin_inset Formula $(x_{2}-x_{1})^{-1}\mod p$
+\end_inset
+
+就是
+\begin_inset Formula $x_{2}-x_{1}$
+\end_inset
+
+在模 p 意义下的那个唯一的“倒数”。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mod p$
+\end_inset
+
+告诉我们，
+所有的计算都是在一个有限的“时钟”上进行的，
+结果不能超过 
+\begin_inset Formula $p-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+给定一条椭圆曲线 
+\begin_inset Formula 
+\[
+y^{2}\equiv x^{3}+ax+b\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+以及曲线上的一个点 
+\begin_inset Formula 
+\[
+P=(x_{p},y_{p})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+我们的目标是计算出点 
+\begin_inset Formula $R=2P=P+P=(x_{r},y_{r})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+点翻倍是点相加在两个点重合（
+\begin_inset Formula $Q\to P$
+\end_inset
+
+）时的极限情况。
+因此，
+连接两点的割线就变成了曲线在该点的切线。
+
+\end_layout
+
+\begin_layout Plain Layout
+几何直觉
+\end_layout
+
+\begin_layout Enumerate
+在点 
+\begin_inset Formula $P$
+\end_inset
+
+ 处画一条与椭圆曲线相切的切线。
+
+\end_layout
+
+\begin_layout Enumerate
+找到这条切线与曲线的另一个交点，
+我们称之为 
+\begin_inset Formula $R'=(x_{r},y_{r'})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+最终的结果 
+\begin_inset Formula $R$
+\end_inset
+
+ 是 
+\begin_inset Formula $R'$
+\end_inset
+
+ 关于 x 轴的对称点，
+即 
+\begin_inset Formula $R=(x_{r},-y_{r'})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+代数推导与公式详解 
+\end_layout
+
+\begin_layout Plain Layout
+我们将上述几何操作翻译成代数公式。
+
+\end_layout
+
+\begin_layout Plain Layout
+第一步：
+计算切线的斜率 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+为了找到切线的斜率，
+我们使用微积分中的隐函数求导法。
+
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ 曲线方程:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y^{2}=x^{3}+ax+b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ 对 `x` 求导:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{d}{dx}(y^{2})=\frac{d}{dx}(x^{3}+ax+b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ 应用链式法则:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+2y\frac{dy}{dx}=3x^{2}+a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ 解出斜率 
+\begin_inset Formula $s=dy/dx$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+s=\frac{3x^{2}+a}{2y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+在有限域 
+\begin_inset Formula 
+\[
+\mathbb{F}_{p}
+\]
+
+\end_inset
+
+ 中，
+“除以 `
+\begin_inset Formula $2y$
+\end_inset
+
+`”的操作被替换为“乘以 `
+\begin_inset Formula $2y$
+\end_inset
+
+` 的模乘法逆元”。
+因此，
+在点
+\begin_inset Formula 
+\[
+P=(x_{p},y_{p})
+\]
+
+\end_inset
+
+ 处的斜率公式为：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+s\equiv(3x_{p}^{2}+a)(2y_{p})^{-1}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这是我们计算的第一步。
+这里要求 
+\begin_inset Formula 
+\[
+2y_{p}\not\equiv0\pmod p
+\]
+
+\end_inset
+
+，
+即 
+\begin_inset Formula 
+\[
+y_{p}\neq0
+\]
+
+\end_inset
+
+。
+如果 
+\begin_inset Formula 
+\[
+y_{p}=0
+\]
+
+\end_inset
+
+，
+切线是垂直的，
+交点是无穷远点
+\begin_inset Formula 
+\[
+O
+\]
+
+\end_inset
+
+，
+所以 
+\begin_inset Formula 
+\[
+2P=O
+\]
+
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+---
+\end_layout
+
+\begin_layout Plain Layout
+#### **第二步：
+计算交点的 x 坐标 `x_r`**
+\end_layout
+
+\begin_layout Plain Layout
+我们知道切线与曲线相交于三个点（考虑到重根）。
+
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ **切线方程** (点斜式):
+\end_layout
+
+\begin_layout Plain Layout
+$$ y - y_p = s(x - x_p) 
+\backslash
+implies y = s(x - x_p) + y_p $$
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ **代入曲线方程** 以求交点:
+\end_layout
+
+\begin_layout Plain Layout
+$$ (s(x - x_p) + y_p)^2 
+\backslash
+equiv x^3 + ax + b 
+\backslash
+pmod{p} $$
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ **展开并整理**，
+这是一个关于 `x` 的三次方程。
+我们只关心 `x³` 和 `x²` 的系数：
+
+\end_layout
+
+\begin_layout Plain Layout
+$$ s^2(x^2 - 2x_px + x_p^2) + 
+\backslash
+dots 
+\backslash
+equiv x^3 + ax + b 
+\backslash
+pmod{p} $$
+\end_layout
+
+\begin_layout Plain Layout
+$$ s^2x^2 - 2s^2x_px + 
+\backslash
+dots 
+\backslash
+equiv x^3 + ax + b 
+\backslash
+pmod{p} $$
+\end_layout
+
+\begin_layout Plain Layout
+移项得到：
+
+\end_layout
+
+\begin_layout Plain Layout
+$$ x^3 - s^2x^2 + 
+\backslash
+dots 
+\backslash
+equiv 0 $$
+\end_layout
+
+\begin_layout Plain Layout
+4.
+ 根据**韦达定理**，
+一元三次方程的三个根 $$x_1,
+ x_2,
+ x_3$$ 之和等于二次项系数的相反数。
+在本例中，
+三个根是切线与曲线交点的 x 坐标。
+
+\end_layout
+
+\begin_layout Plain Layout
+5.
+ 因为是在点 $$P$$ 相切，
+所以 $$P$$ 是一个**二重根**。
+这意味着三个根中有两个是 $$x_p$$。
+设第三个交点 $$R'$$ 的 x 坐标为 $$x_{r'}$$。
+
+\end_layout
+
+\begin_layout Plain Layout
+$$ x_p + x_p + x_{r'} = -(-s^2) = s^2 $$
+\end_layout
+
+\begin_layout Plain Layout
+6.
+ **解出 `x_{r'}`:**
+\end_layout
+
+\begin_layout Plain Layout
+$$ x_{r'} = s^2 - 2x_p $$
+\end_layout
+
+\begin_layout Plain Layout
+7.
+ 由于最终结果 $$R$$ 是 $$R'$$ 的镜像，
+它们的 x 坐标相同，
+即 $$x_r = x_{r'}$$。
+因此：
+
+\end_layout
+
+\begin_layout Plain Layout
+$$ x_r 
+\backslash
+equiv s^2 - 2x_p 
+\backslash
+pmod{p} $$
+\end_layout
+
+\begin_layout Plain Layout
+---
+\end_layout
+
+\begin_layout Plain Layout
+#### **第三步：
+计算交点的 y 坐标 `y_r`**
+\end_layout
+
+\begin_layout Plain Layout
+我们已经求出了交点 $$R'$$ 的 x 坐标 $$x_r$$。
+因为 $$R'$$ 在切线上，
+它的 y 坐标 $$y_{r'}$$ 必须满足切线方程。
+
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ **代入切线方程:**
+\end_layout
+
+\begin_layout Plain Layout
+$$ y_{r'} = s(x_r - x_p) + y_p $$
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ 我们的最终点 $$R=(x_r,
+ y_r)$$ 是 $$R'=(x_r,
+ y_{r'})$$ 关于 x 轴的镜像。
+因此，
+$$y_r = -y_{r'}$$。
+
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ **代入并整理:**
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y_{r}=-(s(x_{r}-x_{p})+y_{p})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y_{r}=-s(x_{r}-x_{p})-y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y_{r}=s(x_{p}-x_{r})-y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+因此，
+最终的 y 坐标公式为：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+---
+\end_layout
+
+\begin_layout Plain Layout
+### **总结：
+点翻倍的完整算法**
+\end_layout
+
+\begin_layout Plain Layout
+给定点 
+\begin_inset Formula 
+\[
+P=(x_{p},y_{p})
+\]
+
+\end_inset
+
+ 和曲线参数 
+\begin_inset Formula $a,p$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $2P=(x_{r},y_{r})$
+\end_inset
+
+ 的步骤如下：
+
+\end_layout
+
+\begin_layout Plain Layout
+1.
+ 
+\begin_inset Formula 
+\[
+s\equiv(3x_{p}^{2}+a)(2y_{p})^{-1}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ 
+\begin_inset Formula 
+\[
+x_{r}\equiv s^{2}-2x_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula 
+\[
+y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 新点 
+\begin_inset Formula $x_{new}=(s^{2}-2x)\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 新点 
+\begin_inset Formula $y_{new}=(s(x-x_{new})-y)\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+点相加 (计算 
+\begin_inset Formula $P+Q$
+\end_inset
+
+):
+\begin_inset Formula $P=(x_{1},y_{1})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q=(x_{2},y_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 计算斜率
+\begin_inset Formula $s=(y_{2}-y_{1})\times(x_{2}-x_{1})^{-1}\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 新点 
+\begin_inset Formula $x_{new}=(s^{2}-x_{1}-x_{2})\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+3.
+ 新点 
+\begin_inset Formula $y_{new}=(s(x_{1}-x_{new})-y_{1})\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(注：
+
+\begin_inset Formula $n^{-1}\mod p$
+\end_inset
+
+是模反元素，
+我们这里直接给出需要的值，
+例如 
+\begin_inset Formula $2^{-1}\mod{17}=9$
+\end_inset
+
+`,这个式子等价于说：
+
+\begin_inset Formula $w\times s$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数是1。
+)
+\end_layout
+
+\begin_layout Example
+第3步：
+The Calculation (使用“翻倍-相加”算法)
+\end_layout
+
+\begin_layout Example
+我们要计算 
+\begin_inset Formula $6\times G$
+\end_inset
+
+`。
+
+\begin_inset Formula $6$
+\end_inset
+
+ 的二进制是 
+\begin_inset Formula $110$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+我们可以把它看作 `6G = 2 * (2G + G)` 或者更简单地 `6G = 2G + 4G`。
+
+\end_layout
+
+\begin_layout Example
+我们就一步步来算：
+`G -> 2G -> 4G -> 6G`。
+
+\end_layout
+
+\begin_layout Example
+#### A.
+ 计算 `2G` (翻倍)
+\end_layout
+
+\begin_layout Example
+* `P = G = (5,
+ 1)`,
+ `a=2`,
+ `p=17`
+\end_layout
+
+\begin_layout Example
+* **斜率 s:**
+\end_layout
+
+\begin_layout Example
+`s = (3 * 5² + 2) * (2 * 1)⁻¹ mod 17`
+\end_layout
+
+\begin_layout Example
+`s = (3 * 25 + 2) * 2⁻¹ mod 17`
+\end_layout
+
+\begin_layout Example
+`s = (77) * 9 mod 17` (因为 `77 = 4*17 + 9`,
+ 所以 `77  
+\backslash
+equiv  9`)
+\end_layout
+
+\begin_layout Example
+`s = 9 * 9 = 81 mod 17` (因为 `81 = 4*17 + 13`,
+ 所以 `81  
+\backslash
+equiv  13`)
+\end_layout
+
+\begin_layout Example
+`s = 13`
+\end_layout
+
+\begin_layout Example
+* **新点 x:**
+\end_layout
+
+\begin_layout Example
+`x_new = (13² - 2*5) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = (169 - 10) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = 159 mod 17` (因为 `159 = 9*17 + 6`,
+ 所以 `159  
+\backslash
+equiv  6`)
+\end_layout
+
+\begin_layout Example
+`x_new = 6`
+\end_layout
+
+\begin_layout Example
+* **新点 y:**
+\end_layout
+
+\begin_layout Example
+`y_new = (13(5 - 6) - 1) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = (13 * -1 - 1) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = -14 mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = 3`
+\end_layout
+
+\begin_layout Example
+**结果 1:
+ `2G = (6,
+ 3)`**
+\end_layout
+
+\begin_layout Example
+#### B.
+ 计算 `4G` (再次翻倍)
+\end_layout
+
+\begin_layout Example
+* `P = 2G = (6,
+ 3)`
+\end_layout
+
+\begin_layout Example
+* **斜率 s:**
+\end_layout
+
+\begin_layout Example
+`s = (3 * 6² + 2) * (2 * 3)⁻¹ mod 17`
+\end_layout
+
+\begin_layout Example
+`s = (3 * 36 + 2) * 6⁻¹ mod 17` (我们需要 `6⁻¹ mod 17`,
+ `6*3=18 
+\backslash
+equiv 1`,
+ 所以 `6⁻¹=3`)
+\end_layout
+
+\begin_layout Example
+`s = (110) * 3 mod 17` (因为 `110 = 6*17 + 8`,
+ 所以 `110  
+\backslash
+equiv  8`)
+\end_layout
+
+\begin_layout Example
+`s = 8 * 3 = 24 mod 17`
+\end_layout
+
+\begin_layout Example
+`s = 7`
+\end_layout
+
+\begin_layout Example
+* **新点 x:**
+\end_layout
+
+\begin_layout Example
+`x_new = (7² - 2*6) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = (49 - 12) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = 37 mod 17` (因为 `37 = 2*17 + 3`,
+ 所以 `37  
+\backslash
+equiv  3`)
+\end_layout
+
+\begin_layout Example
+`x_new = 3`
+\end_layout
+
+\begin_layout Example
+* **新点 y:**
+\end_layout
+
+\begin_layout Example
+`y_new = (7(6 - 3) - 3) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = (7 * 3 - 3) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = 18 mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = 1`
+\end_layout
+
+\begin_layout Example
+**结果 2:
+ `4G = (3,
+ 1)`**
+\end_layout
+
+\begin_layout Example
+#### C.
+ 计算 `6G` (点相加)
+\end_layout
+
+\begin_layout Example
+* `6G = 2G + 4G`
+\end_layout
+
+\begin_layout Example
+* `P = 2G = (6,
+ 3)`,
+ `Q = 4G = (3,
+ 1)`
+\end_layout
+
+\begin_layout Example
+* **斜率 s:**
+\end_layout
+
+\begin_layout Example
+`s = (1 - 3) * (3 - 6)⁻¹ mod 17`
+\end_layout
+
+\begin_layout Example
+`s = -2 * (-3)⁻¹ mod 17` (我们需要 `(-3)⁻¹  
+\backslash
+equiv  14⁻¹ mod 17`,
+ `14*11=154=9*17+1`,
+ 所以 `14⁻¹=11`)
+\end_layout
+
+\begin_layout Example
+`s = 15 * 11 = 165 mod 17` (因为 `165 = 9*17 + 12`,
+ 所以 `165  
+\backslash
+equiv  12`)
+\end_layout
+
+\begin_layout Example
+`s = 12`
+\end_layout
+
+\begin_layout Example
+* **新点 x:**
+\end_layout
+
+\begin_layout Example
+`x_new = (12² - 6 - 3) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = (144 - 9) mod 17`
+\end_layout
+
+\begin_layout Example
+`x_new = 135 mod 17` (因为 `135 = 7*17 + 16`,
+ 所以 `135  
+\backslash
+equiv  16`)
+\end_layout
+
+\begin_layout Example
+`x_new = 16`
+\end_layout
+
+\begin_layout Example
+* **新点 y:**
+\end_layout
+
+\begin_layout Example
+`y_new = (12(6 - 16) - 3) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = (12 * -10 - 3) mod 17`
+\end_layout
+
+\begin_layout Example
+`y_new = -123 mod 17` (因为 `-123 = -8*17 + 13`,
+ 所以 `-123  
+\backslash
+equiv  13`)
+\end_layout
+
+\begin_layout Example
+`y_new = 13`
+\end_layout
+
+\begin_layout Example
+**最终结果:
+ `
+\begin_inset Formula $6G=(16,13)$
+\end_inset
+
+`**
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+### 第4步：
+The Conclusion (陷门困境)
+\end_layout
+
+\begin_layout Example
+我们完成了这个**简单的正向计算**：
+
+\end_layout
+
+\begin_layout Example
+* **私钥 d:** `6`
+\end_layout
+
+\begin_layout Example
+* **生成点 G:** `(5,
+ 1)`
+\end_layout
+
+\begin_layout Example
+* **公钥 K:** `(16,
+ 13)`
+\end_layout
+
+\begin_layout Example
+现在，
+最关键的问题来了：
+
+\end_layout
+
+\begin_layout Example
+> 我现在告诉你，
+我们的起点是 `G = (5,
+ 1)`，
+经过一系列运算后的终点是 `K = (16,
+ 13)`。
+请问，
+我们中间到底走了多少步？
+（也就是 `d` 是多少？
+）
+\end_layout
+
+\begin_layout Example
+在这个玩具例子里，
+你唯一的办法就是**暴力破解**：
+
+\end_layout
+
+\begin_layout Example
+1.
+ 计算 `1*G = (5,
+ 1)`。
+不对。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 计算 `2*G = (6,
+ 3)`。
+不对。
+
+\end_layout
+
+\begin_layout Example
+3.
+ 计算 `3*G = ...`。
+不对。
+
+\end_layout
+
+\begin_layout Example
+4.
+ ...
+\end_layout
+
+\begin_layout Example
+5.
+ 直到你计算 `6*G` 时，
+发现结果恰好是 `(16,
+ 13)`，
+你才能确定 `d=6`。
+
+\end_layout
+
+\begin_layout Example
+**现在，
+想象一下真实的世界：
+**
+\end_layout
+
+\begin_layout Example
+* `p` 不是 `17`，
+而是一个 256 位的、有 78 个数字长的巨数。
+
+\end_layout
+
+\begin_layout Example
+* `d` 不是 `6`，
+而是一个同样有 78 个数字长的随机数。
+
+\end_layout
+
+\begin_layout Example
+你的“暴力破解”清单将会有 `10^77` 项。
+这就是为什么即使公布了公钥 `K` 和生成点 `G`，
+也绝对无法推导出私钥 `d` 的原因。
 
 \end_layout
 
@@ -92821,31 +94565,25 @@ mathbf{F}$ 沿着 $D$ 内任意一条闭合路径的线积分为零。
 \begin_layout Standard
 4.
  如果 $D$ 是单连通的，
-则 $
-\backslash
-mathbf{F}$ 的旋度 $
-\backslash
-nabla 
-\backslash
-times 
-\backslash
-mathbf{F} = 
-\backslash
-mathbf{0}$。
+则 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ 的旋度 
+\begin_inset Formula $\nabla\times\mathbf{F}=\mathbf{0}$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
 在实际应用中，
-检查 **$
-\backslash
-nabla 
-\backslash
-times 
-\backslash
-mathbf{F} = 
-\backslash
-mathbf{0}$** 是最常用的方法来判断一个向量场是否为保守场（并因此其线积分是否与路径无关），
+检查 **
+\begin_inset Formula $\nabla\times\mathbf{F}=\mathbf{0}$
+\end_inset
+
+** 是最常用的方法来判断一个向量场是否为保守场（并因此其线积分是否与路径无关），
 前提是我们需要确认其定义域是单连通的。
 
 \end_layout
@@ -117383,7 +119121,11 @@ Y：
 \begin_inset Text
 
 \begin_layout Plain Layout
-第一次抽到次品 × 第二次再抽次品
+第一次抽到次品  
+\begin_inset Formula $\times$
+\end_inset
+
+ 第二次再抽次品
 \end_layout
 
 \end_inset
@@ -117418,7 +119160,11 @@ Y：
 \begin_inset Text
 
 \begin_layout Plain Layout
-第一次抽次品 × 第二次抽正品
+第一次抽次品  
+\begin_inset Formula $\times$
+\end_inset
+
+ 第二次抽正品
 \end_layout
 
 \end_inset
@@ -117467,7 +119213,11 @@ Y：
 \begin_inset Text
 
 \begin_layout Plain Layout
-第一次抽正品 × 第二次抽次品
+第一次抽正品  
+\begin_inset Formula $\times$
+\end_inset
+
+ 第二次抽次品
 \end_layout
 
 \end_inset
@@ -117502,7 +119252,11 @@ Y：
 \begin_inset Text
 
 \begin_layout Plain Layout
-第一次抽正品 × 第二次再抽正品
+第一次抽正品 
+\begin_inset Formula $\times$
+\end_inset
+
+ 第二次再抽正品
 \end_layout
 
 \end_inset
@@ -121541,35 +123295,14 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{E}[X]=6\times0.7+5.4\times0.1+5\times0.1+4\times0.06+0\times0.04=5.48\ \text{(元)}
+\]
 
-\backslash
-[
-\end_layout
+\end_inset
 
-\begin_layout Standard
 
-\backslash
-mathbb{E}[X] = 6 
-\backslash
-times 0.7 + 5.4 
-\backslash
-times 0.1 + 5 
-\backslash
-times 0.1 + 4 
-\backslash
-times 0.06 + 0 
-\backslash
-times 0.04 = 5.48
-\backslash
- 
-\backslash
-text{(元)}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
 \end_layout
 
 \begin_layout Standard
@@ -130096,7 +131829,11 @@ det(A)=a_{11}​C_{11}​−a_{12}​C_{12​}+a_{13}​C_{13​}−a_{14}​C_{
 \begin_inset Formula $j$
 \end_inset
 
- 列后得到的 3×3 子矩阵的行列式。
+ 列后得到的 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ 子矩阵的行列式。
 
 \end_layout
 
@@ -132097,7 +133834,11 @@ unitary matrix
 \begin_inset Formula $I_{n}$
 \end_inset
 
- 是 n×n 单位矩阵。
+ 是
+\begin_inset Formula $n\times n$
+\end_inset
+
+ 单位矩阵。
 
 \end_layout
 
@@ -145307,77 +147048,65 @@ det(M) = -1$。
 \end_layout
 
 \begin_layout Standard
-$ M_{xy} = 
-\backslash
-begin{pmatrix} 1 & 0 & 0 
-\backslash
+\begin_inset Formula $M_{xy}=\begin{pmatrix}1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & -1
+\end{pmatrix}$
+\end_inset
 
-\backslash
- 0 & 1 & 0 
-\backslash
 
-\backslash
- 0 & 0 & -1 
-\backslash
-end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **关于 XZ 平面反射**
+关于 XZ 平面反射
 \end_layout
 
 \begin_layout Standard
-点 `(x,
- y,
- z)` 变为 `(x,
+点 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+变为 `(x,
  -y,
  z)`。
 
 \end_layout
 
 \begin_layout Standard
-$ M_{xz} = 
-\backslash
-begin{pmatrix} 1 & 0 & 0 
-\backslash
+\begin_inset Formula $M_{xz}=\begin{pmatrix}1 & 0 & 0\\
+0 & -1 & 0\\
+0 & 0 & 1
+\end{pmatrix}$
+\end_inset
 
-\backslash
- 0 & -1 & 0 
-\backslash
-
-\backslash
- 0 & 0 & 1 
-\backslash
-end{pmatrix} $
-\end_layout
-
-\begin_layout Standard
-* **关于 YZ 平面反射**
-\end_layout
-
-\begin_layout Standard
-点 `(x,
- y,
- z)` 变为 `(-x,
- y,
- z)`。
 
 \end_layout
 
 \begin_layout Standard
-$ M_{yz} = 
-\backslash
-begin{pmatrix} -1 & 0 & 0 
-\backslash
+关于 YZ 平面反射
+\end_layout
 
-\backslash
- 0 & 1 & 0 
-\backslash
+\begin_layout Standard
+点
+\begin_inset Formula $(x,y,z)$
+\end_inset
 
-\backslash
- 0 & 0 & 1 
-\backslash
-end{pmatrix} $
+ 变为 
+\begin_inset Formula $(-x,y,z)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{yz}=\begin{pmatrix}-1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
