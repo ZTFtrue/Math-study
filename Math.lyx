@@ -23395,9 +23395,300 @@ status open
 
 \end_layout
 
+\begin_layout Subsection
+椭圆曲线点加法
+\end_layout
+
 \begin_layout Standard
-椭圆曲线的真正威力在于它定义了一套非常独特的运算法则。
-最核心的是点加法（Point Addition）。
+椭圆曲线上的点加法并非简单的坐标相加，
+而是一种基于几何的特殊运算规则。
+它在密码学等领域有着重要的应用，
+是椭圆曲线密码学（ECC）的基础。
+
+\end_layout
+
+\begin_layout Subsubsection
+几何意义：
+一条直线与曲线的三个交点
+\end_layout
+
+\begin_layout Standard
+椭圆曲线点加法的核心思想源于一个几何事实：
+任何一条非垂直的直线与一条椭圆曲线最多有三个交点。
+基于此，
+我们可以定义点的加法运算：
+
+\end_layout
+
+\begin_layout Enumerate
+取两点 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+：
+在椭圆曲线上选择两个不同的点 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+画一条直线：
+画一条穿过 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+ 的直线，
+这条直线会与椭圆曲线相交于第三个点，
+我们称之为 
+\begin_inset Formula $R'$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+取对称点：
+取 
+\begin_inset Formula $R'$
+\end_inset
+
+ 关于 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴的对称点 
+\begin_inset Formula $R$
+\end_inset
+
+，
+这个点 
+\begin_inset Formula $R$
+\end_inset
+
+ 就是 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+ 相加的结果，
+即 
+\begin_inset Formula $P+Q=R$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+特殊情况：
+
+\end_layout
+
+\begin_layout Standard
+点倍加 (
+\begin_inset Formula $P=Q$
+\end_inset
+
+)：
+如果要计算 
+\begin_inset Formula $P+P$
+\end_inset
+
+（即
+\begin_inset Formula $2P$
+\end_inset
+
+），
+则画一条经过点 P 的切线。
+ 这条切线会与椭圆曲线相交于另一点 
+\begin_inset Formula $R'$
+\end_inset
+
+。
+
+\begin_inset Formula $R'$
+\end_inset
+
+ 关于 x 轴的对称点 R 就是 2P 的结果。
+
+\end_layout
+
+\begin_layout Standard
+无穷远点 
+\begin_inset Formula $O$
+\end_inset
+
+：
+椭圆曲线上的点集构成一个阿贝尔群，
+其中单位元是无穷远点 
+\begin_inset Formula $O$
+\end_inset
+
+。
+ 如果 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q$
+\end_inset
+
+ 是一对关于 x 轴对称的点，
+那么连接它们的直线是垂直的，
+与曲线在无穷远处相交。
+因此，
+
+\begin_inset Formula $P+Q=O$
+\end_inset
+
+。
+ 任何点 
+\begin_inset Formula $P$
+\end_inset
+
+ 加上无穷远点 
+\begin_inset Formula $O$
+\end_inset
+
+，
+结果仍为 
+\begin_inset Formula $P$
+\end_inset
+
+ (
+\begin_inset Formula $P+O=P$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Subsubsection
+代数公式
+\end_layout
+
+\begin_layout Standard
+为了在计算机中进行运算，
+我们需要将上述几何概念转化为代数公式。
+假设椭圆曲线方程为 y² = x³ + ax + b，
+点 P(x₁,
+ y₁) 和 Q(x₂,
+ y₂) 的和为 R(x₃,
+ y₃)。
+
+\end_layout
+
+\begin_layout Standard
+**1.
+ 两个不同的点相加 (P ≠ Q)**
+\end_layout
+
+\begin_layout Standard
+* 首先计算斜率 λ = (y₂ - y₁) / (x₂ - x₁)
+\end_layout
+
+\begin_layout Standard
+* 然后计算 R 的坐标：
+
+\end_layout
+
+\begin_layout Standard
+* x₃ = λ² - x₁ - x₂
+\end_layout
+
+\begin_layout Standard
+* y₃ = λ(x₁ - x₃) - y₁
+\end_layout
+
+\begin_layout Standard
+**2.
+ 点倍加 (P = Q)**
+\end_layout
+
+\begin_layout Standard
+* 此时，
+直线的斜率是曲线在点 P 的切线斜率：
+λ = (3x₁² + a) / (2y₁)
+\end_layout
+
+\begin_layout Standard
+* R 的坐标计算公式与上面相同：
+
+\end_layout
+
+\begin_layout Standard
+* x₃ = λ² - 2x₁
+\end_layout
+
+\begin_layout Standard
+* y₃ = λ(x₁ - x₃) - y₁
+\end_layout
+
+\begin_layout Standard
+在有限域（常用于密码学）上的椭圆曲线，
+所有计算都需要在模 p 的意义下进行。
+
+\end_layout
+
+\begin_layout Paragraph
+点加法的重要性
+\end_layout
+
+\begin_layout Standard
+椭圆曲线点加法是椭圆曲线密码学的基础。
+通过重复的点加法运算，
+可以定义点乘（标量乘法）运算：
+
+\begin_inset Formula $kP=P+P+\cdots+P$
+\end_inset
+
+（k 次）。
+ 这种点乘运算具有一个关键特性：
+给定
+\begin_inset Formula $k$
+\end_inset
+
+ 和 
+\begin_inset Formula $P$
+\end_inset
+
+，
+很容易计算出 
+\begin_inset Formula $Q=kP$
+\end_inset
+
+；
+但给定 
+\begin_inset Formula $Q$
+\end_inset
+
+ 和 P，
+很难计算出 
+\begin_inset Formula $k$
+\end_inset
+
+。
+这就是椭圆曲线离散对数问题，
+也是椭圆曲线密码学安全性的基础。
 
 \end_layout
 
@@ -23447,8 +23738,7 @@ status open
 
 \begin_deeper
 \begin_layout Standard
-这个“游戏”还有一个特殊的点，
-叫做无穷远点 (Point at Infinity)，
+无穷远点 (Point at Infinity)，
 可以看作是所有垂直线的交点，
 它扮演着类似于数字“0”的角色，
 我们记作 
@@ -149103,6 +149393,139 @@ x_{4} & =y_{4}
 定理8
 \series default
 可知,由寄点出发回到另一个寄点.
+\end_layout
+
+\begin_layout Chapter
+分形学
+\end_layout
+
+\begin_layout Standard
+## 分形学与绳子：
+看似简单之物中的无限复杂性
+\end_layout
+
+\begin_layout Standard
+分形学，
+一门研究在不同尺度下皆呈现出相似复杂形态的几何学，
+与我们日常生活中常见的“绳子”有着深刻而巧妙的联系。
+这种关联并非指存在某种名为“分形绳子”的特定产品，
+而是分形学的核心概念，
+如“分形维数”和“自相似性”，
+为我们理解绳子这类看似简单物体的内在复杂性提供了全新的视角。
+
+\end_layout
+
+\begin_layout Standard
+### 绳子的维度之谜：
+从一维到分形
+\end_layout
+
+\begin_layout Standard
+在传统观念中，
+一根绳子被视为一维物体。
+然而，
+分形几何学的创始人伯努瓦·曼德尔布罗特（Benoit B.
+ Mandelbrot）通过一个关于绳球的例子，
+巧妙地挑战了这种看法。
+ 他指出，
+我们对一个物体的维度认知取决于观察的尺度：
+
+\end_layout
+
+\begin_layout Standard
+* **远观**：
+一个绳球在远处看只是一个点，
+呈现为零维。
+
+\end_layout
+
+\begin_layout Standard
+* **稍近**：
+走近后，
+它呈现为一个球状，
+是三维的。
+
+\end_layout
+
+\begin_layout Standard
+* **再近**：
+当距离足够近时，
+我们能清晰地看到绳子的线条，
+这是一维的。
+
+\end_layout
+
+\begin_layout Standard
+* **微观**：
+在显微镜下，
+这根“一维”的绳子会展现出其由更细的纤维构成的三维柱状结构。
+而这些纤维本身，
+又是由更细微的一维纤维组成的。
+
+\end_layout
+
+\begin_layout Standard
+这个例子生动地揭示了自然界中许多物体的复杂性，
+它们在不同尺度下展现出不同的形态和维度。
+
+\end_layout
+
+\begin_layout Standard
+### 分形维数与自相似性
+\end_layout
+
+\begin_layout Standard
+分形理论的核心原则之一是“自相似性”，
+即一个物体的局部和整体在某种程度上是相似的。
+ 标准的分形，
+如科赫雪花曲线，
+在无限放大后其局部细节仍与整体结构保持一致。
+ 虽然现实世界中的物体，
+如绳子，
+不具备这种严格的数学上的无限自相似性，
+但它们在统计意义上存在这种特征。
+
+\end_layout
+
+\begin_layout Standard
+另一个关键概念是“分形维数”，
+它是一个用于量化分形对空间填充程度的统计量，
+通常是一个分数。
+ 传统的拓扑维数只能是整数（点为0维，
+线为1维，
+面为2维，
+体为3维）。
+ 然而，
+分形几何允许维数为非整数，
+这为描述那些“介于”整数维度之间的复杂形状提供了工具。
+
+\end_layout
+
+\begin_layout Section
+海岸线悖论
+\end_layout
+
+\begin_layout Standard
+曼德尔布罗特提出的“英国的海岸线有多长？
+”这一著名问题，
+与绳子的分形理解异曲同工。
+ 他发现，
+测量海岸线的长度会随着测量单位的缩小而无限增加，
+因为更小的测量单位能捕捉到更多微小的曲折和细节。
+ 同样地，
+一根绳子的“长度”也取决于我们测量的精度。
+如果我们考虑到其表面的所有微小起伏和纤维的缠绕，
+其“真实”长度将远超我们通常所说的长度。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+分形学为我们提供了一种数学框架，
+来描述和理解绳子这类看似简单物体背后所蕴含的、跨越不同尺度的复杂结构。
+它揭示了自然界中普遍存在的，
+从宏观到微观的、不断重复的几何模式。
+
 \end_layout
 
 \begin_layout Part
