@@ -23499,6 +23499,49 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/椭圆曲线/椭圆曲线P+Q.png
+	lyxscale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $P+Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 特殊情况：
 
 \end_layout
@@ -23528,7 +23571,19 @@ status open
 \begin_inset Formula $R'$
 \end_inset
 
- 关于 x 轴的对称点 R 就是 2P 的结果。
+ 关于 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴的对称点 
+\begin_inset Formula $R$
+\end_inset
+
+ 就是 
+\begin_inset Formula $2P$
+\end_inset
+
+ 的结果。
 
 \end_layout
 
