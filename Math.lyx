@@ -23579,6 +23579,209 @@ status open
 \end_layout
 
 \begin_layout Section
+射影平面
+\end_layout
+
+\begin_layout Standard
+我们平常画的二维平面
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+叫 仿射平面，
+点用坐标 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 表示。
+
+\end_layout
+
+\begin_layout Standard
+但是在这里，
+平行直线永远不相交。
+为了让几何更加“对称”，
+数学家引入了 射影平面：
+
+\end_layout
+
+\begin_layout Standard
+在射影平面 
+\begin_inset Formula $\mathbb{P}^{2}$
+\end_inset
+
+ 中：
+
+\end_layout
+
+\begin_layout Itemize
+每条直线都与其它直线相交 恰好一次。
+
+\end_layout
+
+\begin_layout Itemize
+即便是平行直线，
+它们也会在“无穷远点”相交。
+
+\end_layout
+
+\begin_layout Itemize
+所有这些无穷远点组成一条“无穷远直线”。
+
+\end_layout
+
+\begin_layout Paragraph
+射影坐标
+\end_layout
+
+\begin_layout Standard
+在射影平面中，
+一个点不是用 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
+而是用 齐次坐标 
+\begin_inset Formula $(X:Y:Z)$
+\end_inset
+
+ 表示。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+，
+可以“归一化”得到：
+
+\begin_inset Formula $(X:Y:Z)\sim\Bigl(\frac{X}{Z},\frac{Y}{Z},1\Bigr)\quad\leftrightarrow(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这对应普通的仿射坐标点。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $Z=0$
+\end_inset
+
+，
+则得不到有限的 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
+这种点就叫 无穷远点 。
+
+\end_layout
+
+\begin_layout Standard
+换句话说：
+
+\end_layout
+
+\begin_layout Standard
+仿射平面 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 嵌入在射影平面里（对应 
+\begin_inset Formula $Z=1$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+射影平面比仿射平面“多了一圈”无穷远点。
+
+\end_layout
+
+\begin_layout Paragraph
+直线在射影平面里的意义
+\end_layout
+
+\begin_layout Itemize
+一条直线在射影平面中总会和“无穷远直线”相交。
+
+\end_layout
+
+\begin_layout Itemize
+所有水平直线在一个无穷远点交汇。
+
+\end_layout
+
+\begin_layout Itemize
+所有垂直直线在另一个无穷远点交汇。
+
+\end_layout
+
+\begin_layout Itemize
+所有斜率相同的直线在对应的无穷远点交汇。
+
+\end_layout
+
+\begin_layout Standard
+这样，
+“平行线相交于无穷远处”这个几何直观就被形式化了。
+
+\end_layout
+
+\begin_layout Paragraph
+椭圆曲线在射影平面中的方程
+\end_layout
+
+\begin_layout Standard
+普通椭圆曲线（仿射方程）：
+
+\begin_inset Formula $y^{2}=x^{3}+ax+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在射影坐标中写成：
+
+\begin_inset Formula $Y^{2}Z=X^{3}+aXZ^{2}+bZ^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里，
+点 
+\begin_inset Formula $(0:1:0)$
+\end_inset
+
+ 总是解（因为代入后 
+\begin_inset Formula $0=0$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+这就是椭圆曲线唯一的 无穷远点 
+\begin_inset Formula $O$
+\end_inset
+
+，
+也是我们在群律中作为单位元的点。
+
+\end_layout
+
+\begin_layout Section
 椭圆曲线
 \end_layout
 
@@ -23677,20 +23880,29 @@ status open
 \end_layout
 
 \begin_layout Standard
-群律：
-抽象的代数结构
-\end_layout
+在抽象代数里，
+一个 群 
+\begin_inset Formula $(G,\ast)$
+\end_inset
 
-\begin_layout Standard
-一个集合要构成一个群，
-必须满足以下四个条件：
+ )是满足以下四条“群律”的代数结构：
 
 \end_layout
 
 \begin_layout Enumerate
-封闭性:
+封闭性（Closure）:
  集合中的任意两个元素进行群运算，
-结果仍然在该集合内。
+结果仍然在该集合内；
+对任意
+\begin_inset Formula $(a,b\in G)$
+\end_inset
+
+，
+有
+\begin_inset Formula $(a\ast b\in G)$
+\end_inset
+
+。
 对于椭圆曲线，
 任意两点
 \begin_inset Formula $P$
@@ -23710,7 +23922,7 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-单位元:
+单位元（Identity element）:
  集合中存在一个特殊的“单位元”
 \begin_inset Formula $O$
 \end_inset
@@ -23722,6 +23934,20 @@ status open
 \end_inset
 
 ）。
+存在一个元素
+\begin_inset Formula $(e\in G)$
+\end_inset
+
+，
+对所有
+\begin_inset Formula $(a\in G)$
+\end_inset
+
+ 有
+\begin_inset Formula $(a\ast e=e\ast a=a)$
+\end_inset
+
+。
 在以Weierstrass正规式表示的椭圆曲线上，
 这个单位元是无穷远点
 \begin_inset Formula $O$
@@ -23732,7 +23958,7 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-逆元:
+逆元（Inverse element）:
  集合中的每一个元素
 \begin_inset Formula $P$
 \end_inset
@@ -23766,13 +23992,38 @@ status open
 \end_inset
 
 轴的对称点。
+对任意 
+\begin_inset Formula $(a\in G)$
+\end_inset
+
+，
+存在 
+\begin_inset Formula $(a^{-1}\in G)$
+\end_inset
+
+，
+使得
+\begin_inset Formula $(a\ast a^{-1}=a^{-1}\ast a=e)$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Enumerate
-结合律:
- 群运算满足结合律，
-即
+结合律（Associativity）:
+ 群运算满足结合律；
+对任意 
+\begin_inset Formula $(a,b,c\in G)$
+\end_inset
+
+，
+有
+\begin_inset Formula $(a\ast b)\ast c=a\ast(b\ast c)$
+\end_inset
+
+。
+
 \begin_inset Formula $(P+Q)+R=P+(Q+R)$
 \end_inset
 
@@ -23780,14 +24031,393 @@ status open
 
 \end_layout
 
+\begin_layout Subsubsection
+椭圆曲线上的群结构（Group Law on Elliptic Curve）
+\end_layout
+
 \begin_layout Standard
-此外，
-由于椭圆曲线的点加法还满足交换律（
-\begin_inset Formula $P+Q=Q+P$
+椭圆曲线上的点（加上一个无穷远点 (
+\begin_inset Formula $\mathcal{O}$
 \end_inset
 
-），
-因此它构成的是一个阿贝尔群。
+)）可以组成一个 交换群。
+
+\end_layout
+
+\begin_layout Standard
+元素：
+曲线上的所有点 ( 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ )，
+再加上无穷远点 (
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+单位元：
+无穷远点 (
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+逆元：
+点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 的逆元是 
+\begin_inset Formula $(x,-y)$
+\end_inset
+
+（在实数域上取相反数；
+在有限域
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+上是 (
+\begin_inset Formula $(x,p-y)$
+\end_inset
+
+)）。
+
+\end_layout
+
+\begin_layout Subsubsection
+无穷远点 (
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+在椭圆曲线群中，
+我们需要有一个 单位元（identity element），
+就像加法里的
+\begin_inset Formula $0$
+\end_inset
+
+，
+乘法里的 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在椭圆曲线的几何“加法”定义中，
+经过两点
+\begin_inset Formula $P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+的直线，
+必定会与曲线交于第三点
+\begin_inset Formula $R$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+然后我们取它关于 
+\begin_inset Formula $x$
+\end_inset
+
+轴的对称点作为
+\begin_inset Formula $P+Q$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+问题是：
+如果我们要定义“单位元”，
+谁能扮演这个角色？
+
+\end_layout
+
+\begin_layout Standard
+答案就是：
+ 无穷远点 (
+\begin_inset Formula $O$
+\end_inset
+
+) 。
+它是一个
+\series bold
+虚拟点
+\series default
+，
+不在普通的平面坐标里，
+而是加在“扩展平面”（射影几何）里。
+
+\end_layout
+
+\begin_layout Standard
+几何上，
+无穷远点 (
+\begin_inset Formula $O$
+\end_inset
+
+) 可以看作是“所有平行直线在无穷远处的交点”。
+
+\end_layout
+
+\begin_layout Standard
+在普通欧几里得平面上：
+平行线 永不相交 。
+
+\end_layout
+
+\begin_layout Standard
+但在射影几何（projective geometry）中，
+我们扩展了空间：
+ 每一族平行直线在“无穷远处”交于一个点，
+所有这些“无穷远点”再连成一条 无穷远直线。
+
+\end_layout
+
+\begin_layout Standard
+这样处理后，
+几何规律会更统一：
+
+\end_layout
+
+\begin_layout Standard
+任意两条不同直线必定相交 （要么在有限点，
+要么在无穷远点）。
+
+\end_layout
+
+\begin_layout Standard
+在椭圆曲线加法中：
+
+\end_layout
+
+\begin_layout Standard
+如果取 
+\begin_inset Formula $P=(x,y)$
+\end_inset
+
+，
+它的逆元是 
+\begin_inset Formula $-P=(x,-y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+连接 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $-P$
+\end_inset
+
+ 的直线是 垂直线。
+
+\end_layout
+
+\begin_layout Standard
+这条直线不会和曲线在有限平面上有第三个交点。
+
+\end_layout
+
+\begin_layout Standard
+为了解决这个问题，
+我们把直线延伸到射影平面，
+在“无穷远处”补上一个交点，
+这个点就是 
+\begin_inset Formula $O$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+任何一条直线和椭圆曲线总有 3 个交点（计重数），
+其中有时候第三个点就是无穷远点。
+
+\end_layout
+
+\begin_layout Paragraph
+在群律中的作用
+\end_layout
+
+\begin_layout Standard
+在椭圆曲线群里：
+
+\end_layout
+
+\begin_layout Standard
+单位元是 
+\begin_inset Formula $O$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+点 
+\begin_inset Formula $P=(x,y)$
+\end_inset
+
+ 的逆元是 
+\begin_inset Formula $(x,-y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+如果我们用直线经过 
+\begin_inset Formula $P$
+\end_inset
+
+ 和它的逆元 
+\begin_inset Formula $(x,-y)$
+\end_inset
+
+，
+这条直线是竖直的，
+它和曲线的“第三个交点”就在无穷远点 
+\begin_inset Formula $O$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\begin_inset Formula $P+(-P)=O$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就和普通加法里(
+\begin_inset Formula $a+(-a)=0$
+\end_inset
+
+对应起来。
+
+\end_layout
+
+\begin_layout Standard
+射影几何里的正式定义
+\end_layout
+
+\begin_layout Standard
+在代数几何中，
+我们不只在仿射坐标系 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 下看曲线，
+而是放到射影平面 
+\begin_inset Formula $\mathbb{P}^{2}$
+\end_inset
+
+ 中。
+
+\end_layout
+
+\begin_layout Standard
+仿射坐标：
+
+\begin_inset Formula $(x,y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+射影坐标：
+
+\begin_inset Formula $(X:Y:Z)$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $(x,y)=(X/Z,Y/Z)$
+\end_inset
+
+ 当 
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+椭圆曲线方程：
+
+\begin_inset Formula $y^{2}=x^{3}+ax+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在射影坐标里写成：
+
+\begin_inset Formula $Y^{2}Z=X^{3}+aXZ^{2}+bZ^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+此时，
+当 
+\begin_inset Formula $Z=0$
+\end_inset
+
+ 时方程还能成立，
+解是唯一的点：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $O=(0:1:0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+它就是椭圆曲线的 无穷远点 。
 
 \end_layout
 
@@ -23900,6 +24530,27 @@ status open
 \end_inset
 
 。
+
+\end_layout
+
+\begin_layout Standard
+这样定义的加法运算满足群律，
+构成一个 交换群
+\begin_inset Formula $(E,+)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+此外，
+由于椭圆曲线的点加法还满足交换律（
+\begin_inset Formula $P+Q=Q+P$
+\end_inset
+
+），
+因此它构成的是一个阿贝尔群。
 
 \end_layout
 
@@ -24049,39 +24700,70 @@ status open
 \begin_layout Standard
 为了在计算机中进行运算，
 我们需要将上述几何概念转化为代数公式。
-假设椭圆曲线方程为 y² = x³ + ax + b，
-点 P(x₁,
- y₁) 和 Q(x₂,
- y₂) 的和为 R(x₃,
- y₃)。
+假设椭圆曲线方程为
+\begin_inset Formula $y^{2}=x^{3}+ax+b$
+\end_inset
+
+，
+点 
+\begin_inset Formula $P(x_{1},y_{1})$
+\end_inset
+
+ 和
+\begin_inset Formula $Q(x_{2},y_{2})$
+\end_inset
+
+ 的和为 
+\begin_inset Formula $R(x_{3},y_{3})$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-**1.
- 两个不同的点相加 (P ≠ Q)**
-\end_layout
+1.
+ 两个不同的点相加 
+\begin_inset Formula $P\neq Q$
+\end_inset
 
-\begin_layout Standard
-* 首先计算斜率 λ = (y₂ - y₁) / (x₂ - x₁)
-\end_layout
-
-\begin_layout Standard
-* 然后计算 R 的坐标：
 
 \end_layout
 
 \begin_layout Standard
-* x₃ = λ² - x₁ - x₂
+首先计算斜率 
+\begin_inset Formula $\lambda=(y_{2}-y_{1})/(x_{2}-x_{1})$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-* y₃ = λ(x₁ - x₃) - y₁
+然后计算 R 的坐标：
+
 \end_layout
 
 \begin_layout Standard
-**2.
- 点倍加 (P = Q)**
+\begin_inset Formula $x_{3}=\lambda^{2}-x_{1}-x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{3}=\lambda(x_{1}-x_{3})-y_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 点倍加 (
+\begin_inset Formula $P=Q$
+\end_inset
+
+) 
 \end_layout
 
 \begin_layout Standard
