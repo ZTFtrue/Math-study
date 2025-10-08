@@ -23597,24 +23597,377 @@ status open
 \end_layout
 
 \begin_layout Standard
-但是在这里，
-平行直线永远不相交。
-为了让几何更加“对称”，
-数学家引入了 射影平面：
+在普通平面（仿射平面）中，
+一个点用 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 表示。
 
 \end_layout
 
 \begin_layout Standard
-在射影平面 
-\begin_inset Formula $\mathbb{P}^{2}$
+但这有个问题：
+
+\end_layout
+
+\begin_layout Standard
+👉 当某条直线“延伸到无穷远”时，
+比如：
+
+\begin_inset Formula $y=kx+b$
 \end_inset
 
- 中：
+
+\end_layout
+
+\begin_layout Standard
+随着 
+\begin_inset Formula $x\to\infty$
+\end_inset
+
+，
+点“跑向无穷远”，
+不在任何有限坐标中表示。
+
+\end_layout
+
+\begin_layout Standard
+为了能把“无穷远处”的点也算作平面的一部分，
+我们引入了 射影坐标。
+
+\end_layout
+
+\begin_layout Standard
+一个射影平面上的点用 齐次坐标 (homogeneous coordinates)表示：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(X:Y:Z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：
+这不是普通的有序三元组，
+而是一种比例关系，
+定义为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(X:Y:Z)\equiv(kX:kY:kZ),\quad\forall k\neq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+也就是说，
+
+\begin_inset Formula $(1:2:1)$
+\end_inset
+
+ 和 
+\begin_inset Formula $(2:4:2)$
+\end_inset
+
+ 表示同一个点。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+，
+我们可以“归一化”成：
+
+\begin_inset Formula 
+\[
+(x,y)=\left(\frac{X}{Z},\frac{Y}{Z}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这时，
+
+\begin_inset Formula $(X:Y:Z)$
+\end_inset
+
+对应仿射平面上的点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(2:4:2)\Rightarrow(x,y)=(1,2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(3:6:3)$
+\end_inset
+
+和
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(2:4:2)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+也是同一个仿射点 
+\begin_inset Formula $(1,2)$
+\end_inset
+
+ （因为比例相同）
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+：
+可以换算成普通坐标。
+
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $Z=0$
+\end_inset
+
+：
+就表示“无穷远点”，
+没有对应的有限 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+更一般地说:
+ 所有形如 
+\begin_inset Formula $(X:Y:Z)=(kx:ky:k)$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Standard
+只要 
+\begin_inset Formula $(k\neq0)$
+\end_inset
+
+，
+都表示同一个仿射点
+\begin_inset Formula $(x,y)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+仿射平面是射影平面中
+\begin_inset Formula $Z=1$
+\end_inset
+
+的那一层,
+\begin_inset Formula $(X:Y:Z)=(x:y:1)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+仿射平面 = 射影平面去掉无穷远线
+\end_layout
+
+\begin_layout Itemize
+射影平面是一个“封闭”的几何空间—
+—
+所有直线都会相交。
+
+\end_layout
+
+\begin_layout Itemize
+仿射平面只是它的一个“开口部分”，
+把无穷远那一圈去掉了。
+
+\end_layout
+
+\begin_layout Standard
+特别注意：
+
+\end_layout
+
+\begin_layout Itemize
+当 (
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+)：
+可以换算成普通坐标。
+
+\end_layout
+
+\begin_layout Itemize
+当 (
+\begin_inset Formula $Z=0)$
+\end_inset
+
+：
+就表示“无穷远点”，
+没有对应的有限 ((x,y))。
+
+\end_layout
+
+\begin_layout Subparagraph
+无穷远点（Z = 0 的点）
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $Z=0$
+\end_inset
+
+时，
+无法计算 
+\begin_inset Formula $x=X/Z$
+\end_inset
+
+，
+说明这个点“不在有限平面内”，
+这些点就叫做 无穷远点。
+
+\end_layout
+
+\begin_layout Standard
+比如：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(1:0:0)$
+\end_inset
+
+：
+代表“x 方向的无穷远点”
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(0:1:0)$
+\end_inset
+
+：
+代表“y 方向的无穷远点”
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(a:b:0)$
+\end_inset
+
+：
+代表斜率为 (
+\begin_inset Formula $\frac{b}{a}$
+\end_inset
+
+) 的所有平行直线在无穷远处交汇的点
+\end_layout
+
+\begin_layout Standard
+射影几何让我们能：
+
+\end_layout
+
+\begin_layout Itemize
+让所有直线都相交（包括平行线）；
 
 \end_layout
 
 \begin_layout Itemize
 每条直线都与其它直线相交 恰好一次。
+
+\end_layout
+
+\begin_layout Itemize
+在代数几何中写出统一的多项式方程；
+
+\end_layout
+
+\begin_layout Itemize
+在椭圆曲线中，
+自然地定义“无穷远点” (
+\begin_inset Formula $O=(0:1:0)$
+\end_inset
+
+)。
 
 \end_layout
 
@@ -23626,82 +23979,6 @@ status open
 
 \begin_layout Itemize
 所有这些无穷远点组成一条“无穷远直线”。
-
-\end_layout
-
-\begin_layout Paragraph
-射影坐标
-\end_layout
-
-\begin_layout Standard
-在射影平面中，
-一个点不是用 
-\begin_inset Formula $(x,y)$
-\end_inset
-
-，
-而是用 齐次坐标 
-\begin_inset Formula $(X:Y:Z)$
-\end_inset
-
- 表示。
-
-\end_layout
-
-\begin_layout Standard
-如果 
-\begin_inset Formula $Z\neq0$
-\end_inset
-
-，
-可以“归一化”得到：
-
-\begin_inset Formula $(X:Y:Z)\sim\Bigl(\frac{X}{Z},\frac{Y}{Z},1\Bigr)\quad\leftrightarrow(x,y)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这对应普通的仿射坐标点。
-
-\end_layout
-
-\begin_layout Standard
-如果 
-\begin_inset Formula $Z=0$
-\end_inset
-
-，
-则得不到有限的 
-\begin_inset Formula $(x,y)$
-\end_inset
-
-，
-这种点就叫 无穷远点 。
-
-\end_layout
-
-\begin_layout Standard
-换句话说：
-
-\end_layout
-
-\begin_layout Standard
-仿射平面 
-\begin_inset Formula $(x,y)$
-\end_inset
-
- 嵌入在射影平面里（对应 
-\begin_inset Formula $Z=1$
-\end_inset
-
-）。
-
-\end_layout
-
-\begin_layout Standard
-射影平面比仿射平面“多了一圈”无穷远点。
 
 \end_layout
 
@@ -23726,12 +24003,6 @@ status open
 
 \begin_layout Itemize
 所有斜率相同的直线在对应的无穷远点交汇。
-
-\end_layout
-
-\begin_layout Standard
-这样，
-“平行线相交于无穷远处”这个几何直观就被形式化了。
 
 \end_layout
 
@@ -23778,6 +24049,306 @@ status open
 
 ，
 也是我们在群律中作为单位元的点。
+
+\end_layout
+
+\begin_layout Paragraph
+为什么在射影平面中，
+所有 平行线会在同一个无穷远点
+\begin_inset Formula $(a:b:0)$
+\end_inset
+
+相交？
+
+\end_layout
+
+\begin_layout Standard
+在普通的平面（仿射平面）里：
+
+\end_layout
+
+\begin_layout Standard
+一条直线可以写成：
+
+\begin_inset Formula $ax+by+c=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $a,b$
+\end_inset
+
+ 决定了直线的方向（法向量） ，
+而 
+\begin_inset Formula $c$
+\end_inset
+
+决定了直线在平面上的具体位置（平移）。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x+2y+3=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x+2y-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这两条直线的法向量
+\begin_inset Formula $(a,b)=(1,2)$
+\end_inset
+
+相同,
+ 说明它们 平行 ，
+永远不会在有限的平面上相交。
+
+\end_layout
+
+\begin_layout Standard
+我们用射影坐标来扩展平面。
+
+\end_layout
+
+\begin_layout Standard
+令：
+
+\begin_inset Formula $x=\frac{X}{Z},\quad y=\frac{Y}{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把仿射方程 
+\begin_inset Formula $ax+by+c=0$
+\end_inset
+
+ 写成射影形式：
+
+\begin_inset Formula $aX+bY+cZ=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+当 (
+\begin_inset Formula $Z\neq0$
+\end_inset
+
+)：
+我们得到普通的有限点（仿射点）。
+
+\end_layout
+
+\begin_layout Itemize
+当 (
+\begin_inset Formula $Z=0$
+\end_inset
+
+)：
+就是 无穷远直线 上的点。
+
+\end_layout
+
+\begin_layout Standard
+来看两条平行线：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $aX+bY+c_{1}Z=0,\quad aX+bY+c_{2}Z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+要找它们的交点，
+就要解这个方程组：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+aX+bY+c_{1}Z=0\\
+aX+bY+c_{2}Z=0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+把两式相减：
+
+\begin_inset Formula $(c_{1}-c_{2})Z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以：
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $c_{1}\neq c_{2}$
+\end_inset
+
+，
+则必须有 
+\begin_inset Formula $Z=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+把
+\begin_inset Formula $Z=0$
+\end_inset
+
+代入原方程：
+
+\begin_inset Formula $aX+bY=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程描述的是一个
+\series bold
+无穷远点
+\series default
+：
+任取一个比例解，
+比如：
+
+\begin_inset Formula $(X:Y:Z)=(b:−a:0)$
+\end_inset
+
+（当然可以乘以任意常数，
+比如 
+\begin_inset Formula $(−b:a:0)$
+\end_inset
+
+，
+都表示同一个射影点。
+）。
+这个点的坐标只依赖于直线的方向系数
+\begin_inset Formula $a,$
+\end_inset
+
+
+\begin_inset Formula $b$
+\end_inset
+
+，
+而与位置参数 
+\begin_inset Formula $c$
+\end_inset
+
+无关。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+这个点：
+
+\begin_inset Formula $(a:b:0)$
+\end_inset
+
+：
+代表斜率为 (
+\begin_inset Formula $\frac{b}{a}$
+\end_inset
+
+) 的所有平行直线(方向向量
+\begin_inset Formula $(a,b)$
+\end_inset
+
+)在无穷远处交汇的点
+\end_layout
+
+\begin_layout Standard
+这意味着：
+
+\end_layout
+
+\begin_layout Standard
+所有法向量相同（即平行方向相同）的直线，
+在射影平面中有同一个无穷远点！
+
+\end_layout
+
+\begin_layout Standard
+可以想象为：
+
+\end_layout
+
+\begin_layout Standard
+如果你往远处看（例
+\series bold
+如铁路的两条铁轨
+\series default
+），
+
+\end_layout
+
+\begin_layout Standard
+它们虽然在现实中平行，
+但在视线中“会聚”到远方的某个点。
+
+\end_layout
+
+\begin_layout Itemize
+那个视觉上汇聚的点，
+就是对应的无穷远点。
+
+\end_layout
+
+\begin_layout Itemize
+仿射平面是地球的一张平面地图；
+
+\end_layout
+
+\begin_layout Itemize
+射影平面是整个地球球面；
+
+\end_layout
+
+\begin_layout Itemize
+而无穷远线 
+\begin_inset Formula $Z=0$
+\end_inset
+
+就是地图四周“被折回球面的赤道”部分。
 
 \end_layout
 
@@ -24265,7 +24836,7 @@ status open
 \end_layout
 
 \begin_layout Paragraph
-在群律中的作用
+在群律中的作用 
 \end_layout
 
 \begin_layout Standard
