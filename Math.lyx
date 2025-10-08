@@ -24375,7 +24375,11 @@ aX+bY+c_{2}Z=0
 \begin_inset Formula $y^{2}=x^{3}+ax+b$
 \end_inset
 
-,为了让曲线能够用于密码学，
+,
+\end_layout
+
+\begin_layout Standard
+为了让曲线能够用于密码学，
 我们需要确保它是一条“平滑”的曲线，
 即没有任何尖点或自相交点（通过 
 \begin_inset Formula $4a^{3}+27b^{2}\neq0$
@@ -24385,12 +24389,71 @@ aX+bY+c_{2}Z=0
 \end_layout
 
 \begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a,b\in K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+必须满足 判别式非零（保证曲线“光滑”）：
+
+\begin_inset Formula $\Delta=-16(4a^{3}+27b^{2})\ne0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这条曲线上的点包括：
+
+\end_layout
+
+\begin_layout Itemize
+所有满足方程的有序对 
+\begin_inset Formula $(x,y)\in K^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+以及一个 无穷远点 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+于是有：
+
+\begin_inset Formula $E(K)=\{(x,y)\in K^{2}:y^{2}=x^{3}+ax+b\}\cup\{\mathcal{O}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 正式地，
 椭圆曲线是光滑的、射影的、亏格为1的代数曲线，
-其上有一个特定的点O。
+其上有一个特定的点
+\begin_inset Formula $O$
+\end_inset
+
+。
 椭圆曲线是阿贝尔簇 – 也就是说，
 它有代数上定义的乘法，
-并且对该乘法形成阿贝尔群 – 其中 O即为单位元。
+并且对该乘法形成阿贝尔群 – 其中 
+\begin_inset Formula $O$
+\end_inset
+
+即为单位元。
  
 \end_layout
 
@@ -24663,6 +24726,22 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+我们可以在这条几何曲线上的点之间定义一个“加法运算”，
+使得整个集合
+\begin_inset Formula $E(K)$
+\end_inset
+
+ 成为一个阿贝尔群。
+
+\end_layout
+
+\begin_layout Standard
+换句话说，
+椭圆曲线上的点 + 群运算 = 一个代数群（Algebraic Group） 。
+
+\end_layout
+
 \begin_layout Subsubsection
 无穷远点 (
 \begin_inset Formula $\mathcal{O}$
@@ -24836,7 +24915,7 @@ status open
 \end_layout
 
 \begin_layout Paragraph
-在群律中的作用 
+在群律中的作用
 \end_layout
 
 \begin_layout Standard
@@ -25005,11 +25084,633 @@ status open
 
 \end_layout
 
+\begin_layout Paragraph
+如何定义加法
+\end_layout
+
+\begin_layout Standard
+设曲线上有两点 
+\begin_inset Formula $P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ 。
+
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+(有些地方会写成
+\begin_inset Formula $0$
+\end_inset
+
+) 是单位元
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $P\neq Q$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+画出通过
+\begin_inset Formula $P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ 的直线，
+它一般会与椭圆曲线第三次相交于另一点
+\begin_inset Formula $R$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+然后定义：
+
+\begin_inset Formula $P+Q=-R$
+\end_inset
+
+（
+\begin_inset Formula $P+Q+R=\mathcal{O}$
+\end_inset
+
+或
+\begin_inset Formula $P+Q+R=0$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Standard
+其中 
+\begin_inset Formula $-R$
+\end_inset
+
+ 表示将点
+\begin_inset Formula $R$
+\end_inset
+
+关于 x 轴对称。
+
+\end_layout
+
+\begin_layout Standard
+为什么第三次？
+
+\end_layout
+
+\begin_layout Standard
+因为三次曲线与一条直线相交，
+最多有三个交点（代数基本定理）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+\begin_inset Formula $P=Q$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+此时要用曲线在 
+\begin_inset Formula $P$
+\end_inset
+
+ 处的
+\series bold
+切线
+\series default
+来代替直线。
+
+\end_layout
+
+\begin_layout Standard
+切线与曲线第三次相交于
+\begin_inset Formula $R$
+\end_inset
+
+ ，
+同样定义：
+
+\begin_inset Formula $2P=-R$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+相加的点互为相反数
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果 
+\begin_inset Formula $Q=-P$
+\end_inset
+
+ ，
+也就是说 
+\begin_inset Formula $Q$
+\end_inset
+
+ 是 
+\begin_inset Formula $P$
+\end_inset
+
+ 关于x轴的镜像，
+
+\end_layout
+
+\begin_layout Standard
+那么过 
+\begin_inset Formula $P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ 的直线是竖直的，
+
+\end_layout
+
+\begin_layout Standard
+它与曲线的“第三个交点”就是无穷远点 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ ，
+于是定义：
+
+\begin_inset Formula $P+(-P)=\mathcal{O}$
+\end_inset
+
+（
+\begin_inset Formula $P+Q+\mathcal{O}=\mathcal{O}$
+\end_inset
+
+或
+\begin_inset Formula $P+Q=\mathcal{O}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ 是单位元。
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+特殊情况
+\begin_inset Formula $P+Q+Q=0$
+\end_inset
+
+,
+\begin_inset Formula $P+2Q=0$
+\end_inset
+
+,
+\begin_inset Formula $2Q=-R$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/椭圆曲线/P+Q+Q=0.png
+	lyxscale 15
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+特殊情况
+\begin_inset Formula $P+P+0=0$
+\end_inset
+
+意味着 P 是一个2 阶元素（order 2），
+即它自己加自己得零。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+在群论中，
+一个元素若满足 
+\begin_inset Formula $2P=0$
+\end_inset
+
+，
+就叫它是二阶点
+\begin_inset Formula $order=2$
+\end_inset
+
+。
+在椭圆曲线上，
+二阶点即满足 
+\begin_inset Formula $P=-P$
+\end_inset
+
+，
+也就是说 
+\begin_inset Formula $P$
+\end_inset
+
+ 的
+\begin_inset Formula $y$
+\end_inset
+
+ 坐标为 
+\begin_inset Formula $0$
+\end_inset
+
+（在 Weierstrass 形式下），
+因为点反射关于 x 轴时若反射后不变，
+说明
+\begin_inset Formula $y=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename image/椭圆曲线/椭圆曲线P+P=0.png
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+代数表达式（坐标公式）
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $P=(x_{1},y_{1})$
+\end_inset
+
+、
+\begin_inset Formula $Q=(x_{2},y_{2})$
+\end_inset
+
+，
+
+\end_layout
+
+\begin_layout Standard
+则可以代数地写出群运算公式：
+
+\end_layout
+
+\begin_layout Case
+当 
+\begin_inset Formula $P\neq Q$
+\end_inset
+
+ 时：
+
+\begin_inset Formula 
+\[
+\lambda=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{3}=\lambda^{2}-x_{1}-x_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{3}=\lambda(x_{1}-x_{3})-y_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P+Q=(x_{3},-y_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+当 
+\begin_inset Formula $P=Q$
+\end_inset
+
+时（切线公式）：
+
+\begin_inset Formula 
+\[
+\lambda=\frac{3x_{1}^{2}+a}{2y_{1}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{3}=\lambda^{2}-2x_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{3}=\lambda(x_{1}-x_{3})-y_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+2P=(x_{3},-y_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+三次曲线（椭圆曲线）上定义了一个非常“几何化”的加法；
+
+\end_layout
+
+\begin_layout Itemize
+每次加法其实对应一次求第三交点然后对称；
+
+\end_layout
+
+\begin_layout Itemize
+无穷远点作为“零”；
+
+\end_layout
+
+\begin_layout Standard
+在密码学中，
+我们通常取域 ( 
+\begin_inset Formula $K=\mathbb{F}_{p}$
+\end_inset
+
+ )（一个素数有限域）。
+
+\end_layout
+
+\begin_layout Standard
+于是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E(\mathbb{F}_{p})={(x,y)\in\mathbb{F}_{p}^{2}:y^{2}=x^{3}+ax+b}\cup{\mathcal{O}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+此时加法定义仍然成立，
+只是所有运算都在模 
+\begin_inset Formula $p$
+\end_inset
+
+下进行。
+
+\end_layout
+
 \begin_layout Standard
 椭圆曲线上的点加法并非简单的坐标相加，
 而是一种基于几何的特殊运算规则。
-它在密码学等领域有着重要的应用，
-是椭圆曲线密码学（ECC）的基础。
+ 给定 
+\begin_inset Formula $P$
+\end_inset
+
+ 和 
+\begin_inset Formula $Q=kP$
+\end_inset
+
+ ，
+求出 
+\begin_inset Formula $k$
+\end_inset
+
+ —
+—
+ 这就是椭圆曲线离散对数问题 (ECDLP)。
+
+\end_layout
+
+\begin_layout Standard
+这是椭圆曲线密码（ECC）安全性的基础。
+
+\end_layout
+
+\begin_layout Paragraph
+群的性质
+\end_layout
+
+\begin_layout Standard
+椭圆曲线的群满足阿贝尔群的四条公理：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+性质
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+表达
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+封闭性
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P+Q\in E(K)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+结合律 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(P+Q)+R=P+(Q+R)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+单位元
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+存在 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+，
+使 
+\begin_inset Formula $P+\mathcal{O}=P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+逆元
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+对每个 
+\begin_inset Formula $P=(x,y)$
+\end_inset
+
+，
+存在 
+\begin_inset Formula $-P=(x,-y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
 
 \end_layout
 
@@ -25264,104 +25965,6 @@ status open
 
 \end_layout
 
-\begin_layout Paragraph
-代数公式
-\end_layout
-
-\begin_layout Standard
-为了在计算机中进行运算，
-我们需要将上述几何概念转化为代数公式。
-假设椭圆曲线方程为
-\begin_inset Formula $y^{2}=x^{3}+ax+b$
-\end_inset
-
-，
-点 
-\begin_inset Formula $P(x_{1},y_{1})$
-\end_inset
-
- 和
-\begin_inset Formula $Q(x_{2},y_{2})$
-\end_inset
-
- 的和为 
-\begin_inset Formula $R(x_{3},y_{3})$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-1.
- 两个不同的点相加 
-\begin_inset Formula $P\neq Q$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-首先计算斜率 
-\begin_inset Formula $\lambda=(y_{2}-y_{1})/(x_{2}-x_{1})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-然后计算 R 的坐标：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $x_{3}=\lambda^{2}-x_{1}-x_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $y_{3}=\lambda(x_{1}-x_{3})-y_{1}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-2.
- 点倍加 (
-\begin_inset Formula $P=Q$
-\end_inset
-
-) 
-\end_layout
-
-\begin_layout Standard
-* 此时，
-直线的斜率是曲线在点 P 的切线斜率：
-λ = (3x₁² + a) / (2y₁)
-\end_layout
-
-\begin_layout Standard
-* R 的坐标计算公式与上面相同：
-
-\end_layout
-
-\begin_layout Standard
-* x₃ = λ² - 2x₁
-\end_layout
-
-\begin_layout Standard
-* y₃ = λ(x₁ - x₃) - y₁
-\end_layout
-
-\begin_layout Standard
-在有限域（常用于密码学）上的椭圆曲线，
-所有计算都需要在模 p 的意义下进行。
-
-\end_layout
-
 \begin_layout Subparagraph
 点加法的重要性
 \end_layout
@@ -25488,7 +26091,7 @@ status open
 
  是同一个点怎么办？
 这时，
-我们画一条**切线**穿过 P 点。
+我们画一条切线穿过 P 点。
 这条切线同样会与曲线相交于另一个点。
 将这个交点相对于 x 轴做对称，
 得到的新点就是 `2P`。
