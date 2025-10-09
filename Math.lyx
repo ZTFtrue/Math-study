@@ -26003,12 +26003,78 @@ status open
 \end_inset
 
 。
+如果 
+\begin_inset Formula $k=6$
+\end_inset
+
+，
+计算
+\begin_inset Formula $6P$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2P=P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $4P=2P+2P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6P=4P+2P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+逆向计算需则要
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2P=P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3P=2P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6P=5P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 这就是椭圆曲线离散对数问题，
 也是椭圆曲线密码学安全性的基础。
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 点加法 (
 \begin_inset Formula $P+Q=R$
 \end_inset
@@ -26048,7 +26114,7 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
+\begin_layout Itemize
 零点
 \end_layout
 
@@ -26071,7 +26137,7 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
+\begin_layout Itemize
 点翻倍 (
 \begin_inset Formula $P+P=2P$
 \end_inset
@@ -26091,10 +26157,22 @@ status open
 
  是同一个点怎么办？
 这时，
-我们画一条切线穿过 P 点。
+我们画一条切线穿过 
+\begin_inset Formula $P$
+\end_inset
+
+ 点。
 这条切线同样会与曲线相交于另一个点。
-将这个交点相对于 x 轴做对称，
-得到的新点就是 `2P`。
+将这个交点相对于
+\begin_inset Formula $x$
+\end_inset
+
+ 轴做对称，
+得到的新点就是 
+\begin_inset Formula $2P$
+\end_inset
+
+。
 
 \end_layout
 
@@ -26171,7 +26249,7 @@ status open
 
 \begin_layout Standard
 正向计算（容易）：
- 给定一个整数 
+ 给定一个整数
 \begin_inset Formula $k$
 \end_inset
 
@@ -26205,6 +26283,52 @@ status open
 
  是极其困难的。
 这个问题被称为椭圆曲线离散对数问题（ECDLP）。
+
+\end_layout
+
+\begin_layout Enumerate
+一个 256 位的私钥 k 大约是 
+\begin_inset Formula $10^{77}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+线性方法需要进行 
+\begin_inset Formula $10^{77}$
+\end_inset
+
+ 次加法，
+这在宇宙毁灭前都无法完成。
+
+\end_layout
+
+\begin_layout Enumerate
+对数方法（翻倍-相加）只需要大约 256 次翻倍和平均 128 次加法，
+总共不到 400 次运算。
+
+\end_layout
+
+\begin_layout Enumerate
+没有“点除法”:
+ 椭圆曲线的运算法则只定义了加法。
+没有一个已知的、高效的逆运算可以让我们直接计算
+\begin_inset Formula $k=Q/P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+每一次点加法，
+都会让点“跳”到曲线上一个看似毫不相关的新位置。
+P,
+ 2P,
+ 3P,
+ 4P...
+ 这个序列的位置是高度不可预测的。
 
 \end_layout
 
@@ -26469,7 +26593,19 @@ sec:
 
 \end_deeper
 \begin_layout Example
-生成点 G (即 P) 的诞生
+生成点 
+\begin_inset Formula $G$
+\end_inset
+
+ (
+\series bold
+即 
+\begin_inset Formula $P$
+\end_inset
+
+
+\series default
+) 的诞生
 \end_layout
 
 \begin_layout Example
@@ -26948,7 +27084,11 @@ ECDSA 签名（Signing） 的步骤，
 \begin_deeper
 \begin_layout Standard
 这是至关重要且必须是第一步的操作。
-钱包软件必须生成一个密码学安全的随机整数 k，
+钱包软件必须生成一个密码学安全的随机整数 
+\begin_inset Formula $k$
+\end_inset
+
+，
 它必须满足 
 \begin_inset Formula $1<k<n$
 \end_inset
@@ -27199,7 +27339,7 @@ ECDSA 签名（Signing） 的步骤，
 \begin_inset Formula $\mod n$
 \end_inset
 
-`:
+:
  确保最终结果 s 保持在有限域内。
 
 \end_layout
@@ -27878,18 +28018,46 @@ r 和 s，
 \begin_inset Formula $s=(z+r\times d)/k$
 \end_inset
 
-` (这里的 `d` 是私钥,
- `k` 是一个临时随机数)。
+` (这里的 `
+\begin_inset Formula $d$
+\end_inset
+
+` 是私钥,
+ `
+\begin_inset Formula $k$
+\end_inset
+
+` 是一个临时随机数)。
 
 \end_layout
 
 \begin_layout Example
-在**验证时**，
-我们计算的点 `P = u1*G + u2*K`，
-如果把 `u1`,
- `u2` 和 `K=d*G` 代入并展开，
+在验证时**，
+我们计算的点
+\begin_inset Formula $P=u_{1}*G+u_{2}*K$
+\end_inset
+
+`，
+如果把 `
+\begin_inset Formula $u_{1}$
+\end_inset
+
+`,
+ `
+\begin_inset Formula $u_{2}$
+\end_inset
+
+` 和 `
+\begin_inset Formula $K=d*G$
+\end_inset
+
+` 代入并展开，
 经过一系列数学变换，
-最终可以证明 `P` 等于 `k * G`。
+最终可以证明 `P` 等于 `
+\begin_inset Formula $k*G$
+\end_inset
+
+`。
 
 \end_layout
 
