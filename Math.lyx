@@ -5200,7 +5200,7 @@ N=m_{1}...m_{k}
 \end_layout
 
 \begin_layout Example
-#### 第2步：
+ 第2步：
 反向代入，
 表达 
 \begin_inset Formula $1$
@@ -5218,12 +5218,12 @@ N=m_{1}...m_{k}
 \end_inset
 
 。
-这个过程也叫**回代 (Back Substitution)**。
+这个过程也叫回代 (Back Substitution)。
 
 \end_layout
 
 \begin_layout Example
-* 从式子 
+从式子 
 \begin_inset Formula $9=1\times8+1$
 \end_inset
 
@@ -15557,11 +15557,11 @@ C_{n}=\sum_{k=1}^{n}C_{k-1}C_{n-k}\quad(\text{for }n\ge1)
 
  坐标，
 路径立即就“坏”了。
-所以所有“好”路径的起点都是 `
+所以所有“好”路径的起点都是 
 \begin_inset Formula $(0,0)\rightarrow(1,0)$
 \end_inset
 
-`。
+。
 
 \end_layout
 
@@ -18857,7 +18857,7 @@ x+2y=5\\
 \end_layout
 
 \begin_layout Standard
-## 一、公式来源（推导简略）
+ 一、公式来源（推导简略）
 \end_layout
 
 \begin_layout Standard
@@ -18981,7 +18981,7 @@ x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
 \end_inset
 
 ：
-**判别式**，
+判别式，
 记作 
 \begin_inset Formula $\Delta$
 \end_inset
@@ -23534,7 +23534,7 @@ a-c<a
 \end_layout
 
 \begin_layout Standard
-\begin_inset Marginal
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
@@ -23608,20 +23608,13 @@ status open
 
 \begin_layout Standard
 但这有个问题：
-
-\end_layout
-
-\begin_layout Standard
-👉 当某条直线“延伸到无穷远”时，
+当某条直线“延伸到无穷远”时，
 比如：
 
 \begin_inset Formula $y=kx+b$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+。
 随着 
 \begin_inset Formula $x\to\infty$
 \end_inset
@@ -25071,7 +25064,7 @@ status open
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 椭圆曲线点加法
 \end_layout
 
@@ -25965,115 +25958,6 @@ status open
 
 \end_layout
 
-\begin_layout Subparagraph
-点加法的重要性
-\end_layout
-
-\begin_layout Standard
-椭圆曲线点加法是椭圆曲线密码学的基础。
-通过重复的点加法运算，
-可以定义点乘（标量乘法）运算：
-
-\begin_inset Formula $kP=P+P+\cdots+P$
-\end_inset
-
-（k 次）。
- 这种点乘运算具有一个关键特性：
-给定
-\begin_inset Formula $k$
-\end_inset
-
- 和 
-\begin_inset Formula $P$
-\end_inset
-
-，
-很容易计算出 
-\begin_inset Formula $Q=kP$
-\end_inset
-
-；
-但给定 
-\begin_inset Formula $Q$
-\end_inset
-
- 和 P，
-很难计算出 
-\begin_inset Formula $k$
-\end_inset
-
-。
-如果 
-\begin_inset Formula $k=6$
-\end_inset
-
-，
-计算
-\begin_inset Formula $6P$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $2P=P+P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $4P=2P+2P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $6P=4P+2P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-逆向计算需则要
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $2P=P+P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $3P=2P+P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\vdots$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $6P=5P+P$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这就是椭圆曲线离散对数问题，
-也是椭圆曲线密码学安全性的基础。
-
-\end_layout
-
 \begin_layout Itemize
 点加法 (
 \begin_inset Formula $P+Q=R$
@@ -26177,21 +26061,23 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\begin_layout Subsection
 标量乘法
 \end_layout
 
 \begin_layout Standard
+椭圆曲线点加法是椭圆曲线密码学的基础。
 通过结合“点加法”和“点翻倍”，
+重复的点加法运算，
 我们可以定义出标量乘法（Scalar Multiplication）：
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $K=k\times P$
+\begin_inset Formula $K=k\times P=kP=P+P+\cdots+P$
 \end_inset
 
-
+（k 次）
 \end_layout
 
 \begin_layout Standard
@@ -26207,6 +26093,39 @@ status open
  是曲线上的一个点。
 这个运算的含义是：
  将点 P 与自身相加 k 次。
+
+\end_layout
+
+\begin_layout Standard
+这种点乘运算具有一个关键特性：
+给定
+\begin_inset Formula $k$
+\end_inset
+
+ 和 
+\begin_inset Formula $P$
+\end_inset
+
+，
+很容易计算出 
+\begin_inset Formula $Q=kP$
+\end_inset
+
+；
+但给定 
+\begin_inset Formula $Q$
+\end_inset
+
+ 和 
+\begin_inset Formula $P$
+\end_inset
+
+，
+很难计算出 
+\begin_inset Formula $k$
+\end_inset
+
+。
 
 \end_layout
 
@@ -26283,6 +26202,78 @@ status open
 
  是极其困难的。
 这个问题被称为椭圆曲线离散对数问题（ECDLP）。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $k=6$
+\end_inset
+
+，
+计算
+\begin_inset Formula $6P$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2P=P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $4P=2P+2P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6P=4P+2P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+逆向计算需则要
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2P=P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3P=2P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $6P=5P+P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是椭圆曲线离散对数问题，
+也是椭圆曲线密码学安全性的基础。
 
 \end_layout
 
@@ -26392,6 +26383,3248 @@ ECDH (椭圆曲线迪菲-赫尔MAN)：
 ECDSA (椭圆曲线数字签名算法)：
 用于数字签名，
 广泛应用于操作系统、软件更新和加密货币（如比特币、以太坊）中。
+
+\end_layout
+
+\begin_layout Subsection
+签名和验证
+\end_layout
+
+\begin_layout Standard
+ECDSA 签名（Signing） 的步骤，
+是由持有私钥的人主动执行的操作。
+
+\end_layout
+
+\begin_layout Standard
+签名的核心目标是，
+为一条特定的 消息 （例如一笔比特币交易）创建一个
+\series bold
+ 数字标记
+\series default
+，
+这个标记能够向全世界证明三件事：
+
+\end_layout
+
+\begin_layout Description
+真实性 (Authenticity):
+ 这个标记确实是由“我”（我的私钥）生成的。
+
+\end_layout
+
+\begin_layout Description
+完整性 (Integrity):
+ 消息内容从签名那一刻起，
+就再也没有被篡改过。
+
+\end_layout
+
+\begin_layout Description
+不可否认性 (Non-repudiation):
+ 我不能否认我签署过这条消息。
+
+\end_layout
+
+\begin_layout Standard
+要生成一个有效的签名，
+签名者（例如，
+你的钱包软件）必须拥有以下几样东西：
+
+\end_layout
+
+\begin_layout Enumerate
+私钥 (d):
+ 这是你的终极秘密。
+一个巨大的、随机生成的整数。
+
+\end_layout
+
+\begin_layout Enumerate
+消息的哈希 (z):
+ 待签名交易的“数字指纹”。
+
+\end_layout
+
+\begin_layout Enumerate
+全局曲线参数 (G,
+ n):
+ 公开的椭圆曲线“游戏规则”，
+包括生成点 G 和子群的阶 n。
+
+\end_layout
+
+\begin_layout Enumerate
+一个密码学安全的随机数 (k):这是本次签名的临时秘密，
+极其重要！
+每次签名都必须使用一个全新的、不可预测的k。
+
+\end_layout
+
+\begin_layout Paragraph
+签名
+\end_layout
+
+\begin_layout Standard
+签名过程就是将上述“工具”代入一系列公式，
+最终计算出一对数字 (r,
+ s)，
+这就是签名。
+
+\end_layout
+
+\begin_layout Enumerate
+第 1 步：
+生成一次性的秘密 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是至关重要且必须是第一步的操作。
+钱包软件必须生成一个密码学安全的随机整数 
+\begin_inset Formula $k$
+\end_inset
+
+，
+它必须满足 
+\begin_inset Formula $1<k<n$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 必须保密。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 绝不能重复使用。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $k$
+\end_inset
+
+ 绝不能被预测。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+第 2 步：
+计算点 
+\begin_inset Formula $P$
+\end_inset
+
+ 并导出 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+使用这个一次性的秘密 
+\begin_inset Formula $k$
+\end_inset
+
+ 和公共的生成点 
+\begin_inset Formula $G$
+\end_inset
+
+，
+进行椭圆曲线标量乘法，
+计算出一个新的点 
+\begin_inset Formula $P$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=k\times G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个点 
+\begin_inset Formula $P$
+\end_inset
+
+ 有自己的坐标 
+\begin_inset Formula $(Px,Py)$
+\end_inset
+
+。
+签名的第一部分 
+\begin_inset Formula $r$
+\end_inset
+
+ 就是这个点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标，
+对 
+\begin_inset Formula $n$
+\end_inset
+
+ 取模。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r=Px\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+然后，
+检查 
+\begin_inset Formula $r$
+\end_inset
+
+ 是否等于 
+\begin_inset Formula $0$
+\end_inset
+
+。
+如果 
+\begin_inset Formula $r=0$
+\end_inset
+
+，
+说明这次随机选择的 
+\begin_inset Formula $k$
+\end_inset
+
+ 不好，
+必须返回第 1 步，
+重新选择一个 
+\begin_inset Formula $k$
+\end_inset
+
+。
+这种情况极其罕见。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 3 步：
+计算 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+签名的第二部分
+\begin_inset Formula $s$
+\end_inset
+
+是通过一个公式计算出来的，
+这个公式巧妙地将消息哈希
+\begin_inset Formula $z$
+\end_inset
+
+、 私钥 
+\begin_inset Formula $d$
+\end_inset
+
+、随机数 
+\begin_inset Formula $k$
+\end_inset
+
+ 以及刚刚算出的 
+\begin_inset Formula $r$
+\end_inset
+
+ 全部绑定在了一起：
+
+\begin_inset Formula $s=k^{-1}\times(z+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+让我们来分解这个公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k^{-1}$
+\end_inset
+
+:
+ 这是 
+\begin_inset Formula $k$
+\end_inset
+
+ 对 
+\begin_inset Formula $n$
+\end_inset
+
+ 的模反元素，
+即 
+\begin_inset Formula $(k^{-1}\times k)\mod n=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r\times d$
+\end_inset
+
+:
+ 这是 
+\begin_inset Formula $r$
+\end_inset
+
+ 值与你的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 的乘积。
+这是整个过程中唯一用到私钥 d 的地方！
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z+\cdots$
+\end_inset
+
+:
+ 将消息哈希 
+\begin_inset Formula $z$
+\end_inset
+
+ 与上面的乘积相加。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k^{-1}\times\cdots$
+\end_inset
+
+:
+ 将总和乘以 k 的模反元素。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mod n$
+\end_inset
+
+:
+ 确保最终结果 s 保持在有限域内。
+
+\end_layout
+
+\begin_layout Standard
+同样，
+检查 s 是否等于 0。
+如果是，
+也必须返回第 1 步，
+重新选择 k。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 4 步：
+最终的签名
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+经过以上计算，
+你就得到了一个由两个整数组成的对 (r,
+ s)。
+这就是你对消息 z 的最终数字签名。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+现在，
+你的钱包软件可以把原始交易、你的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+以及这个签名 (r,
+ s) 一起广播出去，
+供全网节点验证。
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $k$
+\end_inset
+
+ 的重要性：
+为什么绝不能重复使用？
+
+\end_layout
+
+\begin_layout Standard
+这是 ECDSA 实现中最容易出错、也最致命的地方。
+如果同一个私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 对两条不同的消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ 使用了相同的随机数
+\begin_inset Formula $k$
+\end_inset
+
+进行签名，
+那么你的私钥 d 将会瞬间暴露给全世界！
+
+\end_layout
+
+\begin_layout Standard
+推导过程如下：
+
+\end_layout
+
+\begin_layout Standard
+假设你用同一个 
+\begin_inset Formula $k$
+\end_inset
+
+ 签署了两条消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+，
+得到了两个签名：
+(r,
+ 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+) 和 (r,
+ 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{2}=k^{-1}(z_{2}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+攻击者拿到了这两条消息和两个签名，
+他可以做如下计算：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s_{1}-s_{2}=k^{-1}(z_{1}-z_{2})\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times(s_{1}-s_{2})=z_{1}-z_{2}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求解 ：
+
+\begin_inset Formula $k=\frac{(z_{1}-z_{2})}{(s_{1}-s_{2})}\mod n$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+现在，
+攻击者已经从公开信息中计算出了你当时使用的秘密随机数 k！
+
+\end_layout
+
+\begin_layout Enumerate
+将求出的 
+\begin_inset Formula $k$
+\end_inset
+
+ 代入任意一个 
+\begin_inset Formula $s$
+\end_inset
+
+ 的原始公式，
+比如 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+：
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times s_{1}=z_{1}+r\times d\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求解私钥 
+\begin_inset Formula $d$
+\end_inset
+
+：
+
+\begin_inset Formula $d=(k\times s_{1}-z_{1})/r\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+攻击者仅仅通过分析你发布的两个签名，
+就完整地计算出了你的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+，
+然后他就可以卷走你地址里所有的币。
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+真实案例：
+ 2010年，
+索尼 PlayStation 3 的软件签名系统被破解，
+原因就是索尼在实现 ECDSA 签名时，
+为所有签名使用了一个静态的、而不是随机的 
+\begin_inset Formula $k$
+\end_inset
+
+ 值。
+这导致黑客能够轻易地计算出索尼的软件主签名私钥。
+
+\end_layout
+
+\begin_layout Paragraph
+如何验证：
+
+\end_layout
+
+\begin_layout Standard
+验证算法的官方名称是 ECDSA (Elliptic Curve Digital Signature Algorithm) 的验证部分。
+
+\end_layout
+
+\begin_layout Standard
+验证的最高目标是：
+ “这个提供的
+\series bold
+签名
+\series default
+，
+是否真的是由与这个公钥相对应的那个私钥，
+对这条
+\series bold
+消息
+\series default
+（交易）所签署的？
+”
+\end_layout
+
+\begin_layout Standard
+当一个比特币节点（矿工）开始验证一笔交易时，
+它手上已经拿到了所有必需的公开信息：
+
+\end_layout
+
+\begin_layout Enumerate
+消息的哈希 (z)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是原始交易数据经过哈希运算后得到的一个数字。
+我们
+\series bold
+不直接对整个交易签名
+\series default
+，
+而是
+\series bold
+对其哈希值签名
+\series default
+。
+这既高效又安全。
+
+\end_layout
+
+\begin_layout Enumerate
+签名 (r,
+ s)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是由发送方用其私钥生成的。
+签名本身由两部分组成，
+r 和 s，
+它们都是大整数。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+公钥 (K)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是发送方公开的、在椭圆曲线上的一个点 
+\begin_inset Formula $(Kx,Ky)$
+\end_inset
+
+。
+它包含在交易数据中。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+4.
+ 全局曲线参数 (G,
+ n)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+所有人都知道并使用相同的椭圆曲线参数，
+包括
+\series bold
+生成点 G
+\series default
+ 和 
+\series bold
+子群的阶 n
+\series default
+ 。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+验证者（矿工）绝对没有、也绝不需要发送方的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+第 1 步：
+基础检查
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+首先，
+验证者会做一些基本的“sanity check”，
+确保签名中的
+\begin_inset Formula $r$
+\end_inset
+
+和
+\begin_inset Formula $s$
+\end_inset
+
+ 都在合法的范围内，
+即它们都必须在 
+\begin_inset Formula $1$
+\end_inset
+
+ 和 
+\begin_inset Formula $n-1$
+\end_inset
+
+ 之间。
+如果不是，
+验证直接失败。
+
+\end_layout
+
+\begin_layout Enumerate
+第 2 步：
+计算 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是验证的第一步计算。
+验证者需要计算 
+\begin_inset Formula $s$
+\end_inset
+
+ 的模反元素，
+记为 
+\begin_inset Formula $w$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w$
+\end_inset
+
+ 是一个数字，
+它满足 
+\begin_inset Formula $(w\times s)\mod n=1$
+\end_inset
+
+。
+这个计算可以通过“扩展欧几里得算法”快速完成。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 3 步：
+计算 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+接下来，
+验证者使用上一步的 
+\begin_inset Formula $w$
+\end_inset
+
+ 以及消息哈希 
+\begin_inset Formula $z$
+\end_inset
+
+ 和签名的 
+\begin_inset Formula $r$
+\end_inset
+
+ 部分，
+来计算两个重要的中间值 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}=z\times w\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{2}=r\times wmodn$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+也是两个大整数。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 4 步：
+计算曲线上的点
+\begin_inset Formula $P$
+\end_inset
+
+ (关键步骤) 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+验证者将使用 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $u_{2}$
+\end_inset
+
+，
+以及两个公开的点—
+—
+ 生成点 
+\begin_inset Formula $G$
+\end_inset
+
+ 和 发送方的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ —
+—
+来进行一次椭圆曲线运算：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=(u_{1}\times G)+(u_{2}\times K)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+让我们拆解这个运算：
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $u_{1}\times G$
+\end_inset
+
+)：
+对基点 
+\begin_inset Formula $G$
+\end_inset
+
+ 进行标量乘法，
+得到一个新的点。
+
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $u_{2}\times K$
+\end_inset
+
+)：
+对发送方的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 进行标量乘法，
+得到另一个新的点。
+
+\end_layout
+
+\begin_layout Standard
+将这两个新点进行椭圆曲线的点加法。
+
+\end_layout
+
+\begin_layout Standard
+最终，
+计算结果 P 是椭圆曲线上的一个点，
+拥有 
+\begin_inset Formula $(Px,Py)$
+\end_inset
+
+ 坐标。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第 5 步：
+最终的验证
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+现在，
+验证者拿到了计算出的点 P。
+他们会取出这个点的 x 坐标，
+我们称之为 Px。
+
+\end_layout
+
+\begin_layout Standard
+验证的最后一步是做一个简单的比较：
+
+\end_layout
+
+\begin_layout Standard
+如果
+\begin_inset Formula $Px\mod n==r$
+\end_inset
+
+，
+则签名有效！
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $Px\mod n\neq r$
+\end_inset
+
+，
+则签名无效！
+
+\end_layout
+
+\begin_layout Standard
+如果计算出的点的 x 坐标（模 n 后）与签名中的 
+\begin_inset Formula $r$
+\end_inset
+
+ 值完全相等，
+那么整个交易就被确认为合法。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Paragraph
+为什么这个过程是有效的？
+
+\end_layout
+
+\begin_layout Standard
+在签名时，
+
+\begin_inset Formula $s$
+\end_inset
+
+的计算公式大致是 
+\begin_inset Formula $s=(z+r\times d)/k$
+\end_inset
+
+ (这里的 
+\begin_inset Formula $d$
+\end_inset
+
+ 是私钥,
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ 是一个临时随机数)。
+
+\end_layout
+
+\begin_layout Standard
+在验证时，
+我们计算的点
+\begin_inset Formula $P=u_{1}*G+u_{2}*K$
+\end_inset
+
+，
+如果把 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ 和 
+\begin_inset Formula $K=d*G$
+\end_inset
+
+ 代入并展开，
+经过一系列数学变换，
+最终可以证明 
+\begin_inset Formula $P$
+\end_inset
+
+ 等于 
+\begin_inset Formula $k*G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+而在签名时，
+
+\begin_inset Formula $r$
+\end_inset
+
+ 是如何生成的呢？
+
+\begin_inset Formula $r$
+\end_inset
+
+ 正是 
+\begin_inset Formula $k\times G$
+\end_inset
+
+ 这个点的 x 坐标！
+
+\end_layout
+
+\begin_layout Standard
+所以，
+整个验证过程实际上是在重新构建签名时使用的那个 临时点 
+\begin_inset Formula $k\times G$
+\end_inset
+
+ 。
+它通过公开信息 (
+\begin_inset Formula $z$
+\end_inset
+
+,
+ 
+\begin_inset Formula $r$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s$
+\end_inset
+
+,
+ 
+\begin_inset Formula $K$
+\end_inset
+
+,
+ 
+\begin_inset Formula $G$
+\end_inset
+
+)，
+以一种不同的路径，
+最终计算出了一个点 
+\begin_inset Formula $P$
+\end_inset
+
+。
+如果这个点 
+\begin_inset Formula $P$
+\end_inset
+
+ 的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标恰好等于签名中的 
+\begin_inset Formula $r$
+\end_inset
+
+，
+就完美地证明了所有这些变量之间存在着一个由私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 构成的、正确的数学关系。
+
+\end_layout
+
+\begin_layout Standard
+如果有人试图伪造签名，
+比如随便编一个 (
+\begin_inset Formula $r'$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s'$
+\end_inset
+
+)，
+那么在第4步计算出的点 
+\begin_inset Formula $P'$
+\end_inset
+
+ 的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标几乎不可能恰好等于他编的 
+\begin_inset Formula $r'$
+\end_inset
+
+。
+这个数学 puzzle 只有在拥有正确的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 的情况下才能被“解开”并生成正确的 (
+\begin_inset Formula $r$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s$
+\end_inset
+
+) 组合。
+
+\end_layout
+
+\begin_layout Example
+我们来举一个非常小、可以用纸笔手动计算的例子，
+来完整地演示 
+\begin_inset Formula $K=d\times G$
+\end_inset
+
+ 的计算过程。
+
+\end_layout
+
+\begin_layout Example
+我们不能在无限的平面上计算，
+所以我们先定义一个非常小的、有限的椭圆曲线“宇宙”。
+
+\end_layout
+
+\begin_layout Example
+曲线方程：
+
+\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $a=2$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p=17$
+\end_inset
+
+ (我们的宇宙边界，
+所有计算结果都不能超过
+\begin_inset Formula $16$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+在这里，
+更严谨、更标准的数学记法是使用
+\series bold
+同余符号
+\series default
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+。
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+为什么用“同余” (
+\begin_inset Formula $\equiv$
+\end_inset
+
+) 更为准确？
+
+\end_layout
+
+\begin_layout Enumerate
+定义域不同：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+等号 
+\begin_inset Formula $=$
+\end_inset
+
+ 通常表示等式两边的数值完全相等。
+它作用于我们熟悉的实数、整数等领域。
+
+\end_layout
+
+\begin_layout Plain Layout
+同余符号 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 表示的是等式两边的数在“除以某个数（模数）后，
+余数相等”。
+它作用于模算术（Modular Arithmetic）这个特殊的数学体系中。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+表达的数学关系不同：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula $A=B$
+\end_inset
+
+意味着 A 和 B 是同一个数。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\equiv B(\mod n)$
+\end_inset
+
+ 意味着 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 在“模n的剩余类”中是等价的。
+换句话说，
+
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $B$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数相同，
+或者说 
+\begin_inset Formula $A-B$
+\end_inset
+
+ 是 
+\begin_inset Formula $n$
+\end_inset
+
+ 的整数倍。
+
+\end_layout
+
+\begin_layout Plain Layout
+例如：
+
+\begin_inset Formula $18\equiv3(\mod 5)$
+\end_inset
+
+ 是正确的，
+因为它们除以5的余数都是3。
+但 18 = 3 显然是错误的。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+3.
+ 在椭圆曲线上下文中的含义：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+当我们写 
+\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
+\end_inset
+
+ 时，
+我们的意思是：
+
+\end_layout
+
+\begin_layout Plain Layout
+“一个点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 属于这条定义在有限域 
+\begin_inset Formula $F_{17}$
+\end_inset
+
+ 上的椭圆曲线，
+当且仅当
+\begin_inset Formula $y^{2}$
+\end_inset
+
+这个数值和
+\begin_inset Formula $x^{3}+2x+2$
+\end_inset
+
+ 这个数值在除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 之后，
+具有相同的余数。
+”
+\end_layout
+
+\begin_layout Plain Layout
+例如，
+对于点
+\begin_inset Formula $(5,1)$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $y^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $x^{3}+2x+2=5^{3}+2\times5+2=137$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+ 除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 的余数是 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $137$
+\end_inset
+
+ 除以 
+\begin_inset Formula $17$
+\end_inset
+
+ 的余数也是 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+因为 
+\begin_inset Formula $1\equiv1(\mod 17)$
+\end_inset
+
+，
+原同余式 
+\begin_inset Formula $1\equiv137(\mod 17)$
+\end_inset
+
+ 也成立，
+所以这个点在曲线上。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+为什么经常会看到用等号 (
+\begin_inset Formula $=$
+\end_inset
+
+)？
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+尽管
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 更严谨，
+但在计算机科学和密码学的文献中，
+为了简洁，
+经常会看到使用 
+\begin_inset Formula $=$
+\end_inset
+
+ 的写法。
+这是一种“滥用符号”（Abuse of notation）的常见情况。
+
+\end_layout
+
+\begin_layout Plain Layout
+他们默认读者已经理解这里的等式是在“模17的有限域”这个上下文中进行的。
+此时的
+\begin_inset Formula $=$
+\end_inset
+
+应该被解读为“在 
+\begin_inset Formula $F_{17}$
+\end_inset
+
+ 这个域中的相等”，
+这实际上就等同于同余关系。
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+生成点 G (公共起点):
+ 经过计算，
+我们知道点 
+\begin_inset Formula $G=(5,1)$
+\end_inset
+
+ 在这条曲线上。
+我们就用它作为我们的公共起点。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+验证一下：
+ 
+\begin_inset Formula $1^{2}\equiv5³+2\times5+2(\mod{17})$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $1\equiv125+10+2(\mod{17})$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\begin_inset Formula $1\equiv137(\mod{17})$
+\end_inset
+
+，
+验证通过！
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ :
+ 我们选择一个非常小的秘密数字作为私钥。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $d=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算公钥 
+\begin_inset Formula $K=6\times G$
+\end_inset
+
+，
+也就是 
+\begin_inset Formula $6\times(5,1)$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+我们需要两个核心工具：
+ 点翻倍 和 点相加。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+点翻倍 (计算 
+\begin_inset Formula $2P$
+\end_inset
+
+):
+ 
+\begin_inset Formula $P=(x,y)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+计算切线的斜率 
+\begin_inset Formula $s=(3x^{2}+a)\times(2y)^{-1}\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+为了找到切线的斜率，
+我们使用微积分中的隐函数求导法。
+
+\end_layout
+
+\begin_layout Standard
+曲线方程:
+\begin_inset Formula $y^{2}=x^{3}+ax+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+对 x 求导:
+\begin_inset Formula $\frac{d}{dx}(y^{2})=\frac{d}{dx}(x^{3}+ax+b)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+应用链式法则:
+\begin_inset Formula $2y\frac{dy}{dx}=3x^{2}+a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+解出斜率 
+\begin_inset Formula $s=dy/dx\Longrightarrow$
+\end_inset
+
+
+\begin_inset Formula $s=\frac{3x^{2}+a}{2y}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+在有限域 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+ 中，
+“除以 
+\begin_inset Formula $2y$
+\end_inset
+
+”的操作被替换为“乘以 
+\begin_inset Formula $2y$
+\end_inset
+
+ 的模乘法逆元”。
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Definition
+模乘法逆元 在模 
+\begin_inset Formula $p$
+\end_inset
+
+ 的世界里，
+一个数
+\begin_inset Formula $a$
+\end_inset
+
+的
+\series bold
+模乘法逆元
+\series default
+，
+记作 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+，
+是一个唯一的整数 b (在 1 到 
+\begin_inset Formula $p-1$
+\end_inset
+
+ 之间)，
+它满足：
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+a\cdot b\equiv1\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+这里的 
+\begin_inset Formula $1$
+\end_inset
+
+ 仍然是乘法的单位元，
+而 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ (同余) 是这个世界里的“相等”。
+这个 
+\begin_inset Formula $b$
+\end_inset
+
+ 完美地扮演了 
+\begin_inset Formula $a$
+\end_inset
+
+ 的“倒数”的角色。
+
+\end_layout
+
+\begin_layout Plain Layout
+在 
+\begin_inset Formula $\mod{17}$
+\end_inset
+
+ 的世界里，
+
+\begin_inset Formula $2$
+\end_inset
+
+ 的逆元是多少？
+我们在寻找 
+\begin_inset Formula $2\cdot b\equiv1\pmod{17}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+我们发现 
+\begin_inset Formula $2*9=18$
+\end_inset
+
+，
+而 18 在这个“17小时制”的时钟上恰好就是 
+\begin_inset Formula $1$
+\end_inset
+
+ 点的位置 (
+\begin_inset Formula $18\equiv1\pmod{17}$
+\end_inset
+
+)。
+因此，
+ 
+\begin_inset Formula $9$
+\end_inset
+
+ 就是 
+\begin_inset Formula $2$
+\end_inset
+
+ 在模
+\begin_inset Formula $17$
+\end_inset
+
+下的逆元。
+
+\end_layout
+
+\begin_layout Plain Layout
+当且仅当模数 
+\begin_inset Formula $p$
+\end_inset
+
+ 是一个素数时,模逆元为什么总是存在且唯一。
+
+\end_layout
+
+\begin_layout Plain Layout
+这背后的数学原理是费马小定理 (Fermat's Little Theorem) 和贝祖定理 (Bézout's identity)的推论。
+
+\end_layout
+
+\begin_layout Enumerate
+存在性 (来自贝祖定理):
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+贝祖定理告诉我们，
+对于任意两个整数 a 和 p，
+它们的最大公约数 gcd(a,
+ p) 总可以表示为它们的线性组合，
+即 ax + py = gcd(a,
+ p)。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 因为
+\begin_inset Formula $p$
+\end_inset
+
+是素数，
+只要
+\begin_inset Formula $a$
+\end_inset
+
+不是
+\begin_inset Formula $p$
+\end_inset
+
+的倍数（即
+\begin_inset Formula $a\not\equiv0\pmod p$
+\end_inset
+
+），
+那么
+\begin_inset Formula $a$
+\end_inset
+
+和
+\begin_inset Formula $p$
+\end_inset
+
+的最大公约数就是 
+\begin_inset Formula $1$
+\end_inset
+
+ (
+\begin_inset Formula $gcd(a,p)=1$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 所以，
+方程 
+\begin_inset Formula $ax+py=1$
+\end_inset
+
+ 一定有整数解
+\begin_inset Formula $x,y$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 对这个方程两边同时 mod p，
+我们得到 ax + py 
+\backslash
+equiv 1 
+\backslash
+pmod p。
+因为 py 是 p 的倍数，
+所以 py 
+\backslash
+equiv 0 
+\backslash
+pmod p。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 于是，
+方程简化为 ax 
+\backslash
+equiv 1 
+\backslash
+pmod p。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 这个整数解 x，
+就是 a 的模 p 逆元！
+这就证明了它的存在性。
+而这个解 x 可以通过高效的扩展欧几里得算法找到。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+唯一性：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+* 假设 b 和 c 都是 a 的模 p 逆元。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 那么 
+\begin_inset Formula $ab\equiv1$
+\end_inset
+
+ 且
+\begin_inset Formula $ac\equiv1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 所以 
+\begin_inset Formula $ab\equiv ac$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+* 因为 
+\begin_inset Formula $a\not\equiv0$
+\end_inset
+
+且 
+\begin_inset Formula $p$
+\end_inset
+
+ 是素数，
+我们可以进行“模约分”，
+两边同乘以 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+ (就是 b 或 c 本身)，
+得到 
+\begin_inset Formula $b\equiv c$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Plain Layout
+这证明了在
+\begin_inset Formula $1$
+\end_inset
+
+ 到
+\begin_inset Formula $p-1$
+\end_inset
+
+ 的范围内，
+逆元是唯一的。
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+回到我们的斜率公式：
+
+\begin_inset Formula 
+\[
+s\equiv(3x^{2}+a)(2y)^{-1}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(3x^{2}+a)$
+\end_inset
+
+：
+ 计算出分子这个整数。
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(2y)$
+\end_inset
+
+ ：
+ 计算出“分母”这个整数。
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $(2y)^{-1}$
+\end_inset
+
+ ：
+ 调用扩展欧几里得算法，
+找到 
+\begin_inset Formula $2y$
+\end_inset
+
+ 在模 
+\begin_inset Formula $p$
+\end_inset
+
+下那个 唯一存在 的乘法逆元。
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $*$
+\end_inset
+
+ ：
+将分子与这个求出的逆元相乘。
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\mod p$
+\end_inset
+
+：
+ 确保最终结果始终在我们定义的“时钟”世界内。
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+在点
+\begin_inset Formula $P=(x_{p},y_{p})$
+\end_inset
+
+ 处的斜率公式为：
+
+\begin_inset Formula $s\equiv(3x_{p}^{2}+a)\left[(2y_{p})^{-1}\pmod p\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是我们计算的第一步。
+这里要求
+\begin_inset Formula $2y_{p}\not\equiv0\pmod p$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+即 
+\begin_inset Formula 
+\[
+y_{p}\neq0
+\]
+
+\end_inset
+
+。
+如果 
+\begin_inset Formula 
+\[
+y_{p}=0
+\]
+
+\end_inset
+
+，
+切线是垂直的，
+交点是无穷远点
+\begin_inset Formula 
+\[
+O
+\]
+
+\end_inset
+
+，
+所以 
+\begin_inset Formula 
+\[
+2P=O
+\]
+
+\end_inset
+
+。
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+点翻倍的完整算法
+\end_layout
+
+\begin_layout Standard
+给定点 
+\begin_inset Formula 
+\[
+P=(x_{p},y_{p})
+\]
+
+\end_inset
+
+ 和曲线参数 
+\begin_inset Formula $a,p$
+\end_inset
+
+，
+计算 
+\begin_inset Formula $2P=(x_{r},y_{r})$
+\end_inset
+
+ 的步骤如下：
+
+\begin_inset Formula 
+\[
+s\equiv(3x_{p}^{2}+a)(2y_{p})^{-1}\pmod p
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{r}\equiv s^{2}-2x_{p}\pmod p
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+新点 
+\begin_inset Formula $x_{new}=(s^{2}-2x)\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+新点 
+\begin_inset Formula $y_{new}=(s(x-x_{new})-y)\mod p$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Case
+点相加
+\end_layout
+
+\begin_layout Enumerate
+计算交点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标 
+\begin_inset Formula $x_{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+我们知道切线与曲线相交于三个点（考虑到重根）。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 切线方程 (点斜式)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y-y_{p}=s(x-x_{p})\implies y=s(x-x_{p})+y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 代入曲线方程 以求交点:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(s(x-x_{p})+y_{p})^{2}\equiv x^{3}+ax+b\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 展开并整理，
+这是一个关于 x 的三次方程。
+我们只关心
+\begin_inset Formula $x^{3}$
+\end_inset
+
+和
+\begin_inset Formula $x^{2}$
+\end_inset
+
+的系数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s^{2}(x^{2}-2x_{p}x+x_{p}^{2})+\dots\equiv x^{3}+ax+b\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s^{2}x^{2}-2s^{2}x_{p}x+\dots\equiv x^{3}+ax+b\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+移项得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{3}-s^{2}x^{2}+\dots\equiv0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 根据韦达定理，
+一元三次方程的三个根 $$x_1,
+ x_2,
+ x_3$$ 之和等于二次项系数的相反数。
+在本例中，
+三个根是切线与曲线交点的 x 坐标。
+
+\end_layout
+
+\begin_layout Standard
+5.
+ 因为是在点 
+\begin_inset Formula 
+\[
+P
+\]
+
+\end_inset
+
+ 相切，
+所以 $$P$$ 是一个二重根。
+这意味着三个根中有两个是 $$x_p$$。
+设第三个交点 $$R'$$ 的 x 坐标为 $$x_{r'}$$。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{p}+x_{p}+x_{r'}=-(-s^{2})=s^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6.
+ 解出 
+\begin_inset Formula $x_{r'}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{r'}=s^{2}-2x_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+ 由于最终结果 $$R$$ 是 $$R'$$ 的镜像，
+它们的 x 坐标相同，
+即 $$x_r = x_{r'}$$。
+因此：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{r}\equiv s^{2}-2x_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ 第三步：
+计算交点的 y 坐标 y_r
+\end_layout
+
+\begin_layout Standard
+我们已经求出了交点 $$R'$$ 的 x 坐标 $$x_r$$。
+因为 $$R'$$ 在切线上，
+它的 y 坐标 $$y_{r'}$$ 必须满足切线方程。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 代入切线方程:
+\begin_inset Formula $y_{r'}=s(x_{r}-x_{p})+y_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 我们的最终点 
+\begin_inset Formula $R=(x_{r},y_{r})$
+\end_inset
+
+ 是 
+\begin_inset Formula $R'=(x_{r},y_{r'})$
+\end_inset
+
+ 关于 x 轴的镜像。
+因此，
+
+\begin_inset Formula $y_{r}=-y_{r'}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 代入并整理:
+\begin_inset Formula 
+\[
+y_{r}=-(s(x_{r}-x_{p})+y_{p})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{r}=-s(x_{r}-x_{p})-y_{p}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{r}=s(x_{p}-x_{r})-y_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+因此，
+最终的 y 坐标公式为：
+
+\begin_inset Formula 
+\[
+y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+点相加 (计算 
+\begin_inset Formula $P+Q$
+\end_inset
+
+):
+\begin_inset Formula $P=(x_{1},y_{1})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $Q=(x_{2},y_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+计算斜率
+\begin_inset Formula $s=(y_{2}-y_{1})\times(x_{2}-x_{1})^{-1}\mod p$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(注：
+
+\begin_inset Formula $n^{-1}\mod p$
+\end_inset
+
+是模反元素，
+我们这里直接给出需要的值，
+例如 
+\begin_inset Formula $2^{-1}\mod{17}=9$
+\end_inset
+
+,这个式子等价于说：
+
+\begin_inset Formula $w\times s$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数是1。
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+新点 
+\begin_inset Formula $x_{new}=(s^{2}-x_{1}-x_{2})\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+新点 
+\begin_inset Formula $y_{new}=(s(x_{1}-x_{new})-y_{1})\mod p$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Example
+使用“翻倍-相加”算法
+\end_layout
+
+\begin_layout Example
+我们要计算 
+\begin_inset Formula $6\times G$
+\end_inset
+
+。
+
+\begin_inset Formula $6$
+\end_inset
+
+ 的二进制是 
+\begin_inset Formula $110$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+我们可以把它看作 
+\begin_inset Formula $6G=2*(2G+G)$
+\end_inset
+
+ 或者更简单地 
+\begin_inset Formula $6G=2G+4G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+我们就一步步来算：
+
+\begin_inset Formula $G\rightarrow2G\rightarrow4G\rightarrow6G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+计算 
+\begin_inset Formula $2G$
+\end_inset
+
+ (翻倍)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P=G=(5,1)$
+\end_inset
+
+,
+ 
+\begin_inset Formula $a=2$
+\end_inset
+
+,
+ p=17
+\end_layout
+
+\begin_layout Example
+斜率 
+\begin_inset Formula $s$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(3*5^{2}+2)*(2*1)^{-1}\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(3*25+2)*2^{-1}\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(77)*9\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $77=4*17+9$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $77\equiv9$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=9*9=81\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $81=4*17+13$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $81\equiv13$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=13$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+新点 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(13^{2}-2*5)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(169-10)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=159\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $159=9*17+6$
+\end_inset
+
+,
+ 所以
+\begin_inset Formula $159\equiv6$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+新点 
+\begin_inset Formula $y$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(13(5-6)-1)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(13*(-1)-1)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=-14\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+结果 1:
+ 
+\begin_inset Formula $2G=(6,3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算 4G (再次翻倍)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P=2G=(6,3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+斜率 s:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(3*6^{2}+2)*(2*3)^{-1}\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(3*36+2)*6^{-1}\mod{17}$
+\end_inset
+
+ (我们需要 
+\begin_inset Formula $6^{-1}\mod{\ensuremath{17}}$
+\end_inset
+
+},
+ 
+\begin_inset Formula $6*3=18\equiv1$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $6^{-1}=3$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(110)*3\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $110=6*17+8$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $110\equiv8$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=8*3=24\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+新点
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(7^{2}-2*6)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(49-12)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=37\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $37=2*17+3$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $37\equiv3$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+新点 y:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(7(6-3)-3)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(7*3-3)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=18\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+结果 2:
+ 4G = (3,
+ 1)
+\end_layout
+
+\begin_layout Example
+ C.
+ 计算 6G (点相加)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $6G=2G+4G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+P = 2G = (6,
+ 3),
+ Q = 4G = (3,
+ 1)
+\end_layout
+
+\begin_layout Example
+斜率 s:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=(1-3)*(3-6)^{-1}\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=-2*(-3)^{-1}\mod{17}$
+\end_inset
+
+ (我们需要 
+\begin_inset Formula $(-3)^{-1}\equiv14^{-1}\mod{17}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $14*11=154=9*17+1$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $14^{-1}=11$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=15*11=165\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $165=9*17+12$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $165\equiv12$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $s=12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+* 新点 x:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(12^{2}-6-3)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=(144-9)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=135\mod{17}$
+\end_inset
+
+ (因为 
+\begin_inset Formula $135=7*17+16$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $135\equiv16$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $x_{new}=16$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+* 新点 y:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(12(6-16)-3)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=(12*-10-3)\mod{17}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=-123\mod{17}$
+\end_inset
+
+ (因为
+\begin_inset Formula $-123=-8*17+13$
+\end_inset
+
+,
+ 所以 
+\begin_inset Formula $-123\equiv13$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $y_{new}=13$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+最终结果:
+ 
+\begin_inset Formula $6G=(16,13)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+ 第4步：
+The Conclusion (陷门困境)
+\end_layout
+
+\begin_layout Example
+我们完成了这个简单的正向计算：
+
+\end_layout
+
+\begin_layout Example
+私钥 d:
+ 
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+生成点 G:
+ 
+\begin_inset Formula $(5,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+公钥 K:
+ 
+\begin_inset Formula $(16,13)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+最关键的问题来了：
+
+\end_layout
+
+\begin_layout Example
+我现在告诉你，
+我们的起点是 G = (5,
+ 1)，
+经过一系列运算后的终点是 K = (16,
+ 13)。
+请问，
+我们中间到底走了多少步？
+（也就是 d 是多少？
+）
+\end_layout
+
+\begin_layout Example
+在这个玩具例子里，
+你唯一的办法就是暴力破解：
+
+\end_layout
+
+\begin_layout Example
+1.
+ 计算 
+\begin_inset Formula $1*G=(5,1)$
+\end_inset
+
+。
+不对。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 计算 
+\begin_inset Formula $2*G=(6,3)$
+\end_inset
+
+。
+不对。
+
+\end_layout
+
+\begin_layout Example
+3.
+ 计算 
+\begin_inset Formula $3*G=\cdots$
+\end_inset
+
+。
+不对。
+
+\end_layout
+
+\begin_layout Example
+4.
+ 
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+5.
+ 直到你计算 
+\begin_inset Formula $6*G$
+\end_inset
+
+ 时，
+发现结果恰好是
+\begin_inset Formula $(16,13)$
+\end_inset
+
+，
+你才能确定 d=6。
+
+\end_layout
+
+\begin_layout Standard
+现在，
+想象一下真实的世界：
+
+\end_layout
+
+\begin_layout Itemize
+p 不是 17，
+而是一个 256 位的、有 78 个数字长的巨数。
+
+\end_layout
+
+\begin_layout Itemize
+d 不是 6，
+而是一个同样有 78 个数字长的随机数。
+
+\end_layout
+
+\begin_layout Standard
+你的“暴力破解”清单将会有 
+\begin_inset Formula $10^{77}$
+\end_inset
+
+ 项。
+这就是为什么即使公布了公钥 K 和生成点 G，
+也绝对无法推导出私钥 d 的原因。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
 
 \end_layout
 
@@ -26981,2677 +30214,6 @@ G 的 y 坐标:
 \end_inset
 
 。
-
-\end_layout
-
-\begin_layout Example
-ECDSA 签名（Signing） 的步骤，
-是由持有私钥的人主动执行的操作。
-
-\end_layout
-
-\begin_layout Example
-签名的核心目标是，
-为一条特定的 消息 （例如一笔比特币交易）创建一个
-\series bold
- 数字标记
-\series default
-，
-这个标记能够向全世界证明三件事：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-真实性 (Authenticity):
- 这个标记确实是由“我”（我的私钥）生成的。
-
-\end_layout
-
-\begin_layout Description
-完整性 (Integrity):
- 消息内容从签名那一刻起，
-就再也没有被篡改过。
-
-\end_layout
-
-\begin_layout Description
-不可否认性 (Non-repudiation):
- 我不能否认我签署过这条消息。
-
-\end_layout
-
-\end_deeper
-\begin_layout Example
-要生成一个有效的签名，
-签名者（例如，
-你的钱包软件）必须拥有以下几样东西：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-私钥 (d):
- 这是你的终极秘密。
-一个巨大的、随机生成的整数。
-
-\end_layout
-
-\begin_layout Enumerate
-消息的哈希 (z):
- 待签名交易的“数字指纹”。
-
-\end_layout
-
-\begin_layout Enumerate
-全局曲线参数 (G,
- n):
- 公开的椭圆曲线“游戏规则”，
-包括生成点 G 和子群的阶 n。
-
-\end_layout
-
-\begin_layout Enumerate
-一个密码学安全的随机数 (k):这是本次签名的临时秘密，
-极其重要！
-每次签名都必须使用一个全新的、不可预测的k。
-
-\end_layout
-
-\end_deeper
-\begin_layout Example
-签名算法的详细步骤
-\end_layout
-
-\begin_layout Example
-签名过程就是将上述“工具”代入一系列公式，
-最终计算出一对数字 (r,
- s)，
-这就是签名。
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-第 1 步：
-生成一次性的秘密 
-\begin_inset Formula $k$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这是至关重要且必须是第一步的操作。
-钱包软件必须生成一个密码学安全的随机整数 
-\begin_inset Formula $k$
-\end_inset
-
-，
-它必须满足 
-\begin_inset Formula $1<k<n$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $k$
-\end_inset
-
- 必须保密。
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $k$
-\end_inset
-
- 绝不能重复使用。
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $k$
-\end_inset
-
- 绝不能被预测。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 2 步：
-计算点 
-\begin_inset Formula $P$
-\end_inset
-
- 并导出 
-\begin_inset Formula $r$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-使用这个一次性的秘密 
-\begin_inset Formula $k$
-\end_inset
-
- 和公共的生成点 
-\begin_inset Formula $G$
-\end_inset
-
-，
-进行椭圆曲线标量乘法，
-计算出一个新的点 
-\begin_inset Formula $P$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $P=k\times G$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个点 
-\begin_inset Formula $P$
-\end_inset
-
- 有自己的坐标 
-\begin_inset Formula $(Px,Py)$
-\end_inset
-
-。
-签名的第一部分 
-\begin_inset Formula $r$
-\end_inset
-
- 就是这个点的 
-\begin_inset Formula $x$
-\end_inset
-
- 坐标，
-对 
-\begin_inset Formula $n$
-\end_inset
-
- 取模。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $r=Px\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-然后，
-检查 
-\begin_inset Formula $r$
-\end_inset
-
- 是否等于 
-\begin_inset Formula $0$
-\end_inset
-
-。
-如果 
-\begin_inset Formula $r=0$
-\end_inset
-
-，
-说明这次随机选择的 
-\begin_inset Formula $k$
-\end_inset
-
- 不好，
-必须返回第 1 步，
-重新选择一个 
-\begin_inset Formula $k$
-\end_inset
-
-。
-这种情况极其罕见。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 3 步：
-计算 
-\begin_inset Formula $s$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-签名的第二部分
-\begin_inset Formula $s$
-\end_inset
-
-是通过一个公式计算出来的，
-这个公式巧妙地将消息哈希
-\begin_inset Formula $z$
-\end_inset
-
-、 私钥 
-\begin_inset Formula $d$
-\end_inset
-
-、随机数 
-\begin_inset Formula $k$
-\end_inset
-
- 以及刚刚算出的 
-\begin_inset Formula $r$
-\end_inset
-
- 全部绑定在了一起：
-
-\begin_inset Formula $s=k^{-1}\times(z+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-让我们来分解这个公式：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $k^{-1}$
-\end_inset
-
-:
- 这是 
-\begin_inset Formula $k$
-\end_inset
-
- 对 
-\begin_inset Formula $n$
-\end_inset
-
- 的模反元素，
-即 
-\begin_inset Formula $(k^{-1}\times k)\mod n=1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $r\times d$
-\end_inset
-
-:
- 这是 
-\begin_inset Formula $r$
-\end_inset
-
- 值与你的私钥 
-\begin_inset Formula $d$
-\end_inset
-
- 的乘积。
-这是整个过程中唯一用到私钥 d 的地方！
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $z+\cdots$
-\end_inset
-
-:
- 将消息哈希 
-\begin_inset Formula $z$
-\end_inset
-
- 与上面的乘积相加。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $k^{-1}\times\cdots$
-\end_inset
-
-:
- 将总和乘以 k 的模反元素。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\mod n$
-\end_inset
-
-:
- 确保最终结果 s 保持在有限域内。
-
-\end_layout
-
-\begin_layout Standard
-同样，
-检查 s 是否等于 0。
-如果是，
-也必须返回第 1 步，
-重新选择 k。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 4 步：
-最终的签名
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-经过以上计算，
-你就得到了一个由两个整数组成的对 (r,
- s)。
-这就是你对消息 z 的最终数字签名。
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Example
-现在，
-你的钱包软件可以把原始交易、你的公钥 
-\begin_inset Formula $K$
-\end_inset
-
-以及这个签名 (r,
- s) 一起广播出去，
-供全网节点验证。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $k$
-\end_inset
-
- 的重要性：
-为什么绝不能重复使用？
-
-\end_layout
-
-\begin_layout Example
-这是 ECDSA 实现中最容易出错、也最致命的地方。
-如果同一个私钥 
-\begin_inset Formula $d$
-\end_inset
-
- 对两条不同的消息 
-\begin_inset Formula $z_{1}$
-\end_inset
-
- 和 
-\begin_inset Formula $z_{2}$
-\end_inset
-
- 使用了相同的随机数
-\begin_inset Formula $k$
-\end_inset
-
-进行签名，
-那么你的私钥 d 将会瞬间暴露给全世界！
-
-\end_layout
-
-\begin_layout Example
-推导过程如下：
- 
-\end_layout
-
-\begin_layout Example
-假设你用同一个 
-\begin_inset Formula $k$
-\end_inset
-
- 签署了两条消息 
-\begin_inset Formula $z_{1}$
-\end_inset
-
- 和 
-\begin_inset Formula $z_{2}$
-\end_inset
-
-，
-得到了两个签名：
-(r,
- 
-\begin_inset Formula $s_{1}$
-\end_inset
-
-) 和 (r,
- 
-\begin_inset Formula $s_{2}$
-\end_inset
-
-)。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $s_{2}=k^{-1}(z_{2}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-攻击者拿到了这两条消息和两个签名，
-他可以做如下计算：
-
-\end_layout
-
-\begin_layout Example
-1.
- 
-\begin_inset Formula $s_{1}-s_{2}=k^{-1}(z_{1}-z_{2})\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 两边同乘以 
-\begin_inset Formula $k$
-\end_inset
-
-：
-
-\begin_inset Formula $k\times(s_{1}-s_{2})=z_{1}-z_{2}\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-3.
- 求解 ：
-
-\begin_inset Formula $k=\frac{(z_{1}-z_{2})}{(s_{1}-s_{2})}\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在，
-攻击者已经从公开信息中计算出了你当时使用的秘密随机数 k！
-
-\end_layout
-
-\begin_layout Example
-4.
- 将求出的 
-\begin_inset Formula $k$
-\end_inset
-
- 代入任意一个 
-\begin_inset Formula $s$
-\end_inset
-
- 的原始公式，
-比如 
-\begin_inset Formula $s_{1}$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-5.
- 两边同乘以 
-\begin_inset Formula $k$
-\end_inset
-
-：
-
-\begin_inset Formula $k\times s_{1}=z_{1}+r\times d\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-6.
- 求解私钥 
-\begin_inset Formula $d$
-\end_inset
-
-：
-
-\begin_inset Formula $d=(k\times s_{1}-z_{1})/r\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-攻击者仅仅通过分析你发布的两个签名，
-就完整地计算出了你的私钥 
-\begin_inset Formula $d$
-\end_inset
-
-，
-然后他就可以卷走你地址里所有的币。
-
-\end_layout
-
-\begin_layout Example
-真实案例：
- 2010年，
-索尼 PlayStation 3 的软件签名系统被破解，
-原因就是索尼在实现 ECDSA 签名时，
-为所有签名使用了一个静态的、而不是随机的 
-\begin_inset Formula $k$
-\end_inset
-
- 值。
-这导致黑客能够轻易地计算出索尼的软件主签名私钥。
-
-\end_layout
-
-\begin_layout Example
-验证算法的官方名称是 ECDSA (Elliptic Curve Digital Signature Algorithm) 的验证部分。
-
-\end_layout
-
-\begin_layout Example
-验证的最高目标是：
- “这个提供的
-\series bold
-签名
-\series default
-，
-是否真的是由与这个公钥相对应的那个私钥，
-对这条
-\series bold
-消息
-\series default
-（交易）所签署的？
-”
-\end_layout
-
-\begin_layout Example
-如何验证：
-
-\end_layout
-
-\begin_layout Example
-当一个比特币节点（矿工）开始验证一笔交易时，
-它手上已经拿到了所有必需的公开信息：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-消息的哈希 (z)：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这是原始交易数据经过哈希运算后得到的一个数字。
-我们
-\series bold
-不直接对整个交易签名
-\series default
-，
-而是
-\series bold
-对其哈希值签名
-\series default
-。
-这既高效又安全。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-签名 (r,
- s)：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这是由发送方用其私钥生成的。
-签名本身由两部分组成，
-r 和 s，
-它们都是大整数。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-公钥 (K)：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这是发送方公开的、在椭圆曲线上的一个点 
-\begin_inset Formula $(Kx,Ky)$
-\end_inset
-
-。
-它包含在交易数据中。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-4.
- 全局曲线参数 (G,
- n)：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-所有人都知道并使用相同的椭圆曲线参数，
-包括
-\series bold
-生成点 G
-\series default
- 和 
-\series bold
-子群的阶 n
-\series default
- 。
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Example
-验证者（矿工）绝对没有、也绝不需要发送方的私钥 
-\begin_inset Formula $d$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-第 1 步：
-基础检查
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-首先，
-验证者会做一些基本的“sanity check”，
-确保签名中的
-\begin_inset Formula $r$
-\end_inset
-
-和
-\begin_inset Formula $s$
-\end_inset
-
- 都在合法的范围内，
-即它们都必须在 
-\begin_inset Formula $1$
-\end_inset
-
- 和 
-\begin_inset Formula $n-1$
-\end_inset
-
- 之间。
-如果不是，
-验证直接失败。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 2 步：
-计算 
-\begin_inset Formula $w$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-这是验证的第一步计算。
-验证者需要计算 
-\begin_inset Formula $s$
-\end_inset
-
- 的模反元素，
-记为 
-\begin_inset Formula $w$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $w=s^{-1}\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $w$
-\end_inset
-
- 是一个数字，
-它满足 
-\begin_inset Formula $(w\times s)\mod n=1$
-\end_inset
-
-。
-这个计算可以通过“扩展欧几里得算法”快速完成。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 3 步：
-计算 
-\begin_inset Formula $u_{1}$
-\end_inset
-
- 和
-\begin_inset Formula $u_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-接下来，
-验证者使用上一步的 
-\begin_inset Formula $w$
-\end_inset
-
- 以及消息哈希 
-\begin_inset Formula $z$
-\end_inset
-
- 和签名的 
-\begin_inset Formula $r$
-\end_inset
-
- 部分，
-来计算两个重要的中间值 
-\begin_inset Formula $u_{1}$
-\end_inset
-
- 和
-\begin_inset Formula $u_{2}$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $u_{1}=z\times w\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $u_{2}=r\times wmodn$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $u_{1}$
-\end_inset
-
- 和
-\begin_inset Formula $u_{2}$
-\end_inset
-
-也是两个大整数。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 4 步：
-计算曲线上的点
-\begin_inset Formula $P$
-\end_inset
-
- (关键步骤) 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-验证者将使用 
-\begin_inset Formula $u_{1}$
-\end_inset
-
- 和
-\begin_inset Formula $u_{2}$
-\end_inset
-
-，
-以及两个公开的点—
-—
- 生成点 
-\begin_inset Formula $G$
-\end_inset
-
- 和 发送方的公钥 
-\begin_inset Formula $K$
-\end_inset
-
- —
-—
-来进行一次椭圆曲线运算：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $P=(u_{1}\times G)+(u_{2}\times K)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-让我们拆解这个运算：
-
-\end_layout
-
-\begin_layout Standard
-(
-\begin_inset Formula $u_{1}\times G$
-\end_inset
-
-)：
-对基点 
-\begin_inset Formula $G$
-\end_inset
-
- 进行标量乘法，
-得到一个新的点。
-
-\end_layout
-
-\begin_layout Standard
-(
-\begin_inset Formula $u_{2}\times K$
-\end_inset
-
-)：
-对发送方的公钥 
-\begin_inset Formula $K$
-\end_inset
-
- 进行标量乘法，
-得到另一个新的点。
-
-\end_layout
-
-\begin_layout Standard
-将这两个新点进行椭圆曲线的点加法。
-
-\end_layout
-
-\begin_layout Standard
-最终，
-计算结果 P 是椭圆曲线上的一个点，
-拥有 
-\begin_inset Formula $(Px,Py)$
-\end_inset
-
- 坐标。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-第 5 步：
-最终的验证
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-现在，
-验证者拿到了计算出的点 P。
-他们会取出这个点的 x 坐标，
-我们称之为 Px。
-
-\end_layout
-
-\begin_layout Standard
-验证的最后一步是做一个简单的比较：
-
-\end_layout
-
-\begin_layout Standard
-如果
-\begin_inset Formula $Px\mod n==r$
-\end_inset
-
-，
-则签名有效！
-
-\end_layout
-
-\begin_layout Standard
-如果 
-\begin_inset Formula $Px\mod n\neq r$
-\end_inset
-
-，
-则签名无效！
-
-\end_layout
-
-\begin_layout Standard
-如果计算出的点的 x 坐标（模 n 后）与签名中的 
-\begin_inset Formula $r$
-\end_inset
-
- 值完全相等，
-那么整个交易就被确认为合法。
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Example
-为什么这个过程是有效的？
- 
-\end_layout
-
-\begin_layout Example
-在签名时，
-
-\begin_inset Formula $s$
-\end_inset
-
-的计算公式大致是 `
-\begin_inset Formula $s=(z+r\times d)/k$
-\end_inset
-
-` (这里的 `
-\begin_inset Formula $d$
-\end_inset
-
-` 是私钥,
- `
-\begin_inset Formula $k$
-\end_inset
-
-` 是一个临时随机数)。
-
-\end_layout
-
-\begin_layout Example
-在验证时**，
-我们计算的点
-\begin_inset Formula $P=u_{1}*G+u_{2}*K$
-\end_inset
-
-`，
-如果把 `
-\begin_inset Formula $u_{1}$
-\end_inset
-
-`,
- `
-\begin_inset Formula $u_{2}$
-\end_inset
-
-` 和 `
-\begin_inset Formula $K=d*G$
-\end_inset
-
-` 代入并展开，
-经过一系列数学变换，
-最终可以证明 `P` 等于 `
-\begin_inset Formula $k*G$
-\end_inset
-
-`。
-
-\end_layout
-
-\begin_layout Example
-而在**签名时**，
-`r` 是如何生成的呢？
-`r` 正是 `
-\begin_inset Formula $k\times G$
-\end_inset
-
-` 这个点的 x 坐标！
-
-\end_layout
-
-\begin_layout Example
-所以，
-整个验证过程实际上是在**重新构建**签名时使用的那个 临时点 
-\begin_inset Formula $k\times G$
-\end_inset
-
- 。
-它通过公开信息 `(z,
- r,
- s,
- K,
- G)`，
-以一种不同的路径，
-最终计算出了一个点 `P`。
-如果这个点 `P` 的 x 坐标恰好等于签名中的 `r`，
-就完美地证明了所有这些变量之间存在着一个由私钥 `d` 构成的、正确的数学关系。
-
-\end_layout
-
-\begin_layout Example
-如果有人试图伪造签名，
-比如随便编一个 `(r',
- s')`，
-那么在第4步计算出的点 `P'` 的 x 坐标几乎不可能恰好等于他编的 `r'`。
-这个数学 puzzle 只有在拥有正确的私钥 `d` 的情况下才能被“解开”并生成正确的 `(r,
- s)` 组合。
-
-\end_layout
-
-\begin_layout Example
-我们来举一个非常小、可以用纸笔手动计算的例子，
-来完整地演示 
-\begin_inset Formula $K=d\times G$
-\end_inset
-
- 的计算过程。
-
-\end_layout
-
-\begin_layout Example
-我们不能在无限的平面上计算，
-所以我们先定义一个非常小的、有限的椭圆曲线“宇宙”。
-
-\end_layout
-
-\begin_layout Example
-1.
- 曲线方程：
-
-\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $a=2$
-\end_inset
-
-,
- 
-\begin_inset Formula $b=2$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $p=17$
-\end_inset
-
- (我们的宇宙边界，
-所有计算结果都不能超过16)
-\end_layout
-
-\begin_layout Example
-在这里，
-更严谨、更标准的数学记法是使用
-\series bold
-同余符号
-\series default
-
-\begin_inset Formula $\equiv$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-为什么用“同余” (
-\begin_inset Formula $\equiv$
-\end_inset
-
-) 更为准确？
-
-\end_layout
-
-\begin_layout Enumerate
-定义域不同：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-等号 
-\begin_inset Formula $=$
-\end_inset
-
- 通常表示等式两边的数值完全相等。
-它作用于我们熟悉的实数、整数等领域。
-
-\end_layout
-
-\begin_layout Plain Layout
-同余符号 
-\begin_inset Formula $\equiv$
-\end_inset
-
- 表示的是等式两边的数在“除以某个数（模数）后，
-余数相等”。
-它作用于模算术（Modular Arithmetic）这个特殊的数学体系中。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-表达的数学关系不同：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-\begin_inset Formula $A=B$
-\end_inset
-
-意味着 A 和 B 是同一个数。
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $A\equiv B(\mod n)$
-\end_inset
-
- 意味着 
-\begin_inset Formula $A$
-\end_inset
-
- 和 
-\begin_inset Formula $B$
-\end_inset
-
- 在“模n的剩余类”中是等价的。
-换句话说，
-
-\begin_inset Formula $A$
-\end_inset
-
- 和
-\begin_inset Formula $B$
-\end_inset
-
- 除以 
-\begin_inset Formula $n$
-\end_inset
-
- 的余数相同，
-或者说 
-\begin_inset Formula $A-B$
-\end_inset
-
- 是 
-\begin_inset Formula $n$
-\end_inset
-
- 的整数倍。
-
-\end_layout
-
-\begin_layout Plain Layout
-例如：
-
-\begin_inset Formula $18\equiv3(\mod 5)$
-\end_inset
-
- 是正确的，
-因为它们除以5的余数都是3。
-但 18 = 3 显然是错误的。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-3.
- 在椭圆曲线上下文中的含义：
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-当我们写 
-\begin_inset Formula $y^{2}\equiv x^{3}+2x+2(\mod{17})$
-\end_inset
-
- 时，
-我们的意思是：
-
-\end_layout
-
-\begin_layout Plain Layout
-“一个点 
-\begin_inset Formula $(x,y)$
-\end_inset
-
- 属于这条定义在有限域 
-\begin_inset Formula $F_{17}$
-\end_inset
-
- 上的椭圆曲线，
-当且仅当
-\begin_inset Formula $y^{2}$
-\end_inset
-
-这个数值和
-\begin_inset Formula $x^{3}+2x+2$
-\end_inset
-
- 这个数值在除以 
-\begin_inset Formula $17$
-\end_inset
-
- 之后，
-具有相同的余数。
-”
-\end_layout
-
-\begin_layout Plain Layout
-例如，
-对于点
-\begin_inset Formula $(5,1)$
-\end_inset
-
-：
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $y^{2}=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $x^{3}+2x+2=5^{3}+2\times5+2=137$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $1$
-\end_inset
-
- 除以 
-\begin_inset Formula $17$
-\end_inset
-
- 的余数是 
-\begin_inset Formula $1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $137$
-\end_inset
-
- 除以 
-\begin_inset Formula $17$
-\end_inset
-
- 的余数也是 
-\begin_inset Formula $1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Plain Layout
-因为 
-\begin_inset Formula $1\equiv1(\mod 17)$
-\end_inset
-
-，
-原同余式 
-\begin_inset Formula $1\equiv137(\mod 17)$
-\end_inset
-
- 也成立，
-所以这个点在曲线上。
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-为什么经常会看到用等号 (
-\begin_inset Formula $=$
-\end_inset
-
-)？
-
-\end_layout
-
-\begin_deeper
-\begin_layout Plain Layout
-尽管
-\begin_inset Formula $\equiv$
-\end_inset
-
- 更严谨，
-但在计算机科学和密码学的文献中，
-为了简洁，
-经常会看到使用 
-\begin_inset Formula $=$
-\end_inset
-
- 的写法。
-这是一种“滥用符号”（Abuse of notation）的常见情况。
-
-\end_layout
-
-\begin_layout Plain Layout
-他们默认读者已经理解这里的等式是在“模17的有限域”这个上下文中进行的。
-此时的
-\begin_inset Formula $=$
-\end_inset
-
-应该被解读为“在 
-\begin_inset Formula $F_{17}$
-\end_inset
-
- 这个域中的相等”，
-这实际上就等同于同余关系。
-
-\end_layout
-
-\end_deeper
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 生成点 G (公共起点):
- 经过计算，
-我们知道点 
-\begin_inset Formula $G=(5,1)$
-\end_inset
-
- 在这条曲线上。
-我们就用它作为我们的公共起点。
-
-\end_layout
-
-\begin_layout Example
-验证一下：
- 
-\begin_inset Formula $1^{2}\equiv5³+2\times5+2(\mod{17})$
-\end_inset
-
-
-\begin_inset Formula $\rightarrow$
-\end_inset
-
-
-\begin_inset Formula $1\equiv125+10+2(\mod{17})$
-\end_inset
-
-
-\begin_inset Formula $\rightarrow$
-\end_inset
-
-
-\begin_inset Formula $1\equiv137(\mod{17})$
-\end_inset
-
-，
-验证通过！
-
-\end_layout
-
-\begin_layout Example
-3.
- 私钥 
-\begin_inset Formula $d$
-\end_inset
-
- :
- 我们选择一个非常小的秘密数字作为私钥。
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $d=6$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-计算公钥 
-\begin_inset Formula $K=6\times G$
-\end_inset
-
-，
-也就是 
-\begin_inset Formula $6\times(5,1)$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-第2步：
-The Toolset 
-\end_layout
-
-\begin_layout Example
-我们需要两个核心工具：
- 点翻倍 和 点相加 。
-
-\end_layout
-
-\begin_layout Example
-点翻倍 (计算 
-\begin_inset Formula $2P$
-\end_inset
-
-):
- 
-\begin_inset Formula $P=(x,y)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-1.
- 计算斜率 
-\begin_inset Formula $s=(3x^{2}+a)\times(2y)^{-1}\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-在标准的实数运算中，
-我们是做除法。
-但在 有限域（模算术）的世界里，
-没有“除法”这个操作。
-
-\end_layout
-
-\begin_layout Itemize
-“除以 a” 被替换为 “乘以 a 的模乘法逆元”。
-
-\begin_inset Formula $(x_{2}-x_{1})^{-1}\mod p$
-\end_inset
-
-就是
-\begin_inset Formula $x_{2}-x_{1}$
-\end_inset
-
-在模 p 意义下的那个唯一的“倒数”。
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\mod p$
-\end_inset
-
-告诉我们，
-所有的计算都是在一个有限的“时钟”上进行的，
-结果不能超过 
-\begin_inset Formula $p-1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Plain Layout
-给定一条椭圆曲线 
-\begin_inset Formula 
-\[
-y^{2}\equiv x^{3}+ax+b\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-以及曲线上的一个点 
-\begin_inset Formula 
-\[
-P=(x_{p},y_{p})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-我们的目标是计算出点 
-\begin_inset Formula $R=2P=P+P=(x_{r},y_{r})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-点翻倍是点相加在两个点重合（
-\begin_inset Formula $Q\to P$
-\end_inset
-
-）时的极限情况。
-因此，
-连接两点的割线就变成了曲线在该点的切线。
-
-\end_layout
-
-\begin_layout Plain Layout
-几何直觉
-\end_layout
-
-\begin_layout Enumerate
-在点 
-\begin_inset Formula $P$
-\end_inset
-
- 处画一条与椭圆曲线相切的切线。
-
-\end_layout
-
-\begin_layout Enumerate
-找到这条切线与曲线的另一个交点，
-我们称之为 
-\begin_inset Formula $R'=(x_{r},y_{r'})$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-最终的结果 
-\begin_inset Formula $R$
-\end_inset
-
- 是 
-\begin_inset Formula $R'$
-\end_inset
-
- 关于 x 轴的对称点，
-即 
-\begin_inset Formula $R=(x_{r},-y_{r'})$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Plain Layout
-代数推导与公式详解 
-\end_layout
-
-\begin_layout Plain Layout
-我们将上述几何操作翻译成代数公式。
-
-\end_layout
-
-\begin_layout Plain Layout
-第一步：
-计算切线的斜率 
-\begin_inset Formula $s$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-为了找到切线的斜率，
-我们使用微积分中的隐函数求导法。
-
-\end_layout
-
-\begin_layout Plain Layout
-1.
- 曲线方程:
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-y^{2}=x^{3}+ax+b
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-2.
- 对 `x` 求导:
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-\frac{d}{dx}(y^{2})=\frac{d}{dx}(x^{3}+ax+b)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-3.
- 应用链式法则:
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-2y\frac{dy}{dx}=3x^{2}+a
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-4.
- 解出斜率 
-\begin_inset Formula $s=dy/dx$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-s=\frac{3x^{2}+a}{2y}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-在有限域 
-\begin_inset Formula 
-\[
-\mathbb{F}_{p}
-\]
-
-\end_inset
-
- 中，
-“除以 `
-\begin_inset Formula $2y$
-\end_inset
-
-`”的操作被替换为“乘以 `
-\begin_inset Formula $2y$
-\end_inset
-
-` 的模乘法逆元”。
-因此，
-在点
-\begin_inset Formula 
-\[
-P=(x_{p},y_{p})
-\]
-
-\end_inset
-
- 处的斜率公式为：
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-s\equiv(3x_{p}^{2}+a)(2y_{p})^{-1}\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-这是我们计算的第一步。
-这里要求 
-\begin_inset Formula 
-\[
-2y_{p}\not\equiv0\pmod p
-\]
-
-\end_inset
-
-，
-即 
-\begin_inset Formula 
-\[
-y_{p}\neq0
-\]
-
-\end_inset
-
-。
-如果 
-\begin_inset Formula 
-\[
-y_{p}=0
-\]
-
-\end_inset
-
-，
-切线是垂直的，
-交点是无穷远点
-\begin_inset Formula 
-\[
-O
-\]
-
-\end_inset
-
-，
-所以 
-\begin_inset Formula 
-\[
-2P=O
-\]
-
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Plain Layout
----
-\end_layout
-
-\begin_layout Plain Layout
-#### **第二步：
-计算交点的 x 坐标 `x_r`**
-\end_layout
-
-\begin_layout Plain Layout
-我们知道切线与曲线相交于三个点（考虑到重根）。
-
-\end_layout
-
-\begin_layout Plain Layout
-1.
- **切线方程** (点斜式):
-\end_layout
-
-\begin_layout Plain Layout
-$$ y - y_p = s(x - x_p) 
-\backslash
-implies y = s(x - x_p) + y_p $$
-\end_layout
-
-\begin_layout Plain Layout
-2.
- **代入曲线方程** 以求交点:
-\end_layout
-
-\begin_layout Plain Layout
-$$ (s(x - x_p) + y_p)^2 
-\backslash
-equiv x^3 + ax + b 
-\backslash
-pmod{p} $$
-\end_layout
-
-\begin_layout Plain Layout
-3.
- **展开并整理**，
-这是一个关于 `x` 的三次方程。
-我们只关心 `x³` 和 `x²` 的系数：
-
-\end_layout
-
-\begin_layout Plain Layout
-$$ s^2(x^2 - 2x_px + x_p^2) + 
-\backslash
-dots 
-\backslash
-equiv x^3 + ax + b 
-\backslash
-pmod{p} $$
-\end_layout
-
-\begin_layout Plain Layout
-$$ s^2x^2 - 2s^2x_px + 
-\backslash
-dots 
-\backslash
-equiv x^3 + ax + b 
-\backslash
-pmod{p} $$
-\end_layout
-
-\begin_layout Plain Layout
-移项得到：
-
-\end_layout
-
-\begin_layout Plain Layout
-$$ x^3 - s^2x^2 + 
-\backslash
-dots 
-\backslash
-equiv 0 $$
-\end_layout
-
-\begin_layout Plain Layout
-4.
- 根据**韦达定理**，
-一元三次方程的三个根 $$x_1,
- x_2,
- x_3$$ 之和等于二次项系数的相反数。
-在本例中，
-三个根是切线与曲线交点的 x 坐标。
-
-\end_layout
-
-\begin_layout Plain Layout
-5.
- 因为是在点 $$P$$ 相切，
-所以 $$P$$ 是一个**二重根**。
-这意味着三个根中有两个是 $$x_p$$。
-设第三个交点 $$R'$$ 的 x 坐标为 $$x_{r'}$$。
-
-\end_layout
-
-\begin_layout Plain Layout
-$$ x_p + x_p + x_{r'} = -(-s^2) = s^2 $$
-\end_layout
-
-\begin_layout Plain Layout
-6.
- **解出 `x_{r'}`:**
-\end_layout
-
-\begin_layout Plain Layout
-$$ x_{r'} = s^2 - 2x_p $$
-\end_layout
-
-\begin_layout Plain Layout
-7.
- 由于最终结果 $$R$$ 是 $$R'$$ 的镜像，
-它们的 x 坐标相同，
-即 $$x_r = x_{r'}$$。
-因此：
-
-\end_layout
-
-\begin_layout Plain Layout
-$$ x_r 
-\backslash
-equiv s^2 - 2x_p 
-\backslash
-pmod{p} $$
-\end_layout
-
-\begin_layout Plain Layout
----
-\end_layout
-
-\begin_layout Plain Layout
-#### **第三步：
-计算交点的 y 坐标 `y_r`**
-\end_layout
-
-\begin_layout Plain Layout
-我们已经求出了交点 $$R'$$ 的 x 坐标 $$x_r$$。
-因为 $$R'$$ 在切线上，
-它的 y 坐标 $$y_{r'}$$ 必须满足切线方程。
-
-\end_layout
-
-\begin_layout Plain Layout
-1.
- **代入切线方程:**
-\end_layout
-
-\begin_layout Plain Layout
-$$ y_{r'} = s(x_r - x_p) + y_p $$
-\end_layout
-
-\begin_layout Plain Layout
-2.
- 我们的最终点 $$R=(x_r,
- y_r)$$ 是 $$R'=(x_r,
- y_{r'})$$ 关于 x 轴的镜像。
-因此，
-$$y_r = -y_{r'}$$。
-
-\end_layout
-
-\begin_layout Plain Layout
-3.
- **代入并整理:**
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-y_{r}=-(s(x_{r}-x_{p})+y_{p})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-y_{r}=-s(x_{r}-x_{p})-y_{p}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-y_{r}=s(x_{p}-x_{r})-y_{p}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-因此，
-最终的 y 坐标公式为：
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\[
-y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
----
-\end_layout
-
-\begin_layout Plain Layout
-### **总结：
-点翻倍的完整算法**
-\end_layout
-
-\begin_layout Plain Layout
-给定点 
-\begin_inset Formula 
-\[
-P=(x_{p},y_{p})
-\]
-
-\end_inset
-
- 和曲线参数 
-\begin_inset Formula $a,p$
-\end_inset
-
-，
-计算 
-\begin_inset Formula $2P=(x_{r},y_{r})$
-\end_inset
-
- 的步骤如下：
-
-\end_layout
-
-\begin_layout Plain Layout
-1.
- 
-\begin_inset Formula 
-\[
-s\equiv(3x_{p}^{2}+a)(2y_{p})^{-1}\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-2.
- 
-\begin_inset Formula 
-\[
-x_{r}\equiv s^{2}-2x_{p}\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-3.
- 
-\begin_inset Formula 
-\[
-y_{r}\equiv s(x_{p}-x_{r})-y_{p}\pmod p
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 新点 
-\begin_inset Formula $x_{new}=(s^{2}-2x)\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-3.
- 新点 
-\begin_inset Formula $y_{new}=(s(x-x_{new})-y)\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-点相加 (计算 
-\begin_inset Formula $P+Q$
-\end_inset
-
-):
-\begin_inset Formula $P=(x_{1},y_{1})$
-\end_inset
-
-,
- 
-\begin_inset Formula $Q=(x_{2},y_{2})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-1.
- 计算斜率
-\begin_inset Formula $s=(y_{2}-y_{1})\times(x_{2}-x_{1})^{-1}\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-2.
- 新点 
-\begin_inset Formula $x_{new}=(s^{2}-x_{1}-x_{2})\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-3.
- 新点 
-\begin_inset Formula $y_{new}=(s(x_{1}-x_{new})-y_{1})\mod p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-(注：
-
-\begin_inset Formula $n^{-1}\mod p$
-\end_inset
-
-是模反元素，
-我们这里直接给出需要的值，
-例如 
-\begin_inset Formula $2^{-1}\mod{17}=9$
-\end_inset
-
-`,这个式子等价于说：
-
-\begin_inset Formula $w\times s$
-\end_inset
-
- 除以 
-\begin_inset Formula $n$
-\end_inset
-
- 的余数是1。
-)
-\end_layout
-
-\begin_layout Example
-第3步：
-The Calculation (使用“翻倍-相加”算法)
-\end_layout
-
-\begin_layout Example
-我们要计算 
-\begin_inset Formula $6\times G$
-\end_inset
-
-`。
-
-\begin_inset Formula $6$
-\end_inset
-
- 的二进制是 
-\begin_inset Formula $110$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-我们可以把它看作 `6G = 2 * (2G + G)` 或者更简单地 `6G = 2G + 4G`。
-
-\end_layout
-
-\begin_layout Example
-我们就一步步来算：
-`G -> 2G -> 4G -> 6G`。
-
-\end_layout
-
-\begin_layout Example
-#### A.
- 计算 `2G` (翻倍)
-\end_layout
-
-\begin_layout Example
-* `P = G = (5,
- 1)`,
- `a=2`,
- `p=17`
-\end_layout
-
-\begin_layout Example
-* **斜率 s:**
-\end_layout
-
-\begin_layout Example
-`s = (3 * 5² + 2) * (2 * 1)⁻¹ mod 17`
-\end_layout
-
-\begin_layout Example
-`s = (3 * 25 + 2) * 2⁻¹ mod 17`
-\end_layout
-
-\begin_layout Example
-`s = (77) * 9 mod 17` (因为 `77 = 4*17 + 9`,
- 所以 `77  
-\backslash
-equiv  9`)
-\end_layout
-
-\begin_layout Example
-`s = 9 * 9 = 81 mod 17` (因为 `81 = 4*17 + 13`,
- 所以 `81  
-\backslash
-equiv  13`)
-\end_layout
-
-\begin_layout Example
-`s = 13`
-\end_layout
-
-\begin_layout Example
-* **新点 x:**
-\end_layout
-
-\begin_layout Example
-`x_new = (13² - 2*5) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = (169 - 10) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = 159 mod 17` (因为 `159 = 9*17 + 6`,
- 所以 `159  
-\backslash
-equiv  6`)
-\end_layout
-
-\begin_layout Example
-`x_new = 6`
-\end_layout
-
-\begin_layout Example
-* **新点 y:**
-\end_layout
-
-\begin_layout Example
-`y_new = (13(5 - 6) - 1) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = (13 * -1 - 1) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = -14 mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = 3`
-\end_layout
-
-\begin_layout Example
-**结果 1:
- `2G = (6,
- 3)`**
-\end_layout
-
-\begin_layout Example
-#### B.
- 计算 `4G` (再次翻倍)
-\end_layout
-
-\begin_layout Example
-* `P = 2G = (6,
- 3)`
-\end_layout
-
-\begin_layout Example
-* **斜率 s:**
-\end_layout
-
-\begin_layout Example
-`s = (3 * 6² + 2) * (2 * 3)⁻¹ mod 17`
-\end_layout
-
-\begin_layout Example
-`s = (3 * 36 + 2) * 6⁻¹ mod 17` (我们需要 `6⁻¹ mod 17`,
- `6*3=18 
-\backslash
-equiv 1`,
- 所以 `6⁻¹=3`)
-\end_layout
-
-\begin_layout Example
-`s = (110) * 3 mod 17` (因为 `110 = 6*17 + 8`,
- 所以 `110  
-\backslash
-equiv  8`)
-\end_layout
-
-\begin_layout Example
-`s = 8 * 3 = 24 mod 17`
-\end_layout
-
-\begin_layout Example
-`s = 7`
-\end_layout
-
-\begin_layout Example
-* **新点 x:**
-\end_layout
-
-\begin_layout Example
-`x_new = (7² - 2*6) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = (49 - 12) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = 37 mod 17` (因为 `37 = 2*17 + 3`,
- 所以 `37  
-\backslash
-equiv  3`)
-\end_layout
-
-\begin_layout Example
-`x_new = 3`
-\end_layout
-
-\begin_layout Example
-* **新点 y:**
-\end_layout
-
-\begin_layout Example
-`y_new = (7(6 - 3) - 3) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = (7 * 3 - 3) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = 18 mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = 1`
-\end_layout
-
-\begin_layout Example
-**结果 2:
- `4G = (3,
- 1)`**
-\end_layout
-
-\begin_layout Example
-#### C.
- 计算 `6G` (点相加)
-\end_layout
-
-\begin_layout Example
-* `6G = 2G + 4G`
-\end_layout
-
-\begin_layout Example
-* `P = 2G = (6,
- 3)`,
- `Q = 4G = (3,
- 1)`
-\end_layout
-
-\begin_layout Example
-* **斜率 s:**
-\end_layout
-
-\begin_layout Example
-`s = (1 - 3) * (3 - 6)⁻¹ mod 17`
-\end_layout
-
-\begin_layout Example
-`s = -2 * (-3)⁻¹ mod 17` (我们需要 `(-3)⁻¹  
-\backslash
-equiv  14⁻¹ mod 17`,
- `14*11=154=9*17+1`,
- 所以 `14⁻¹=11`)
-\end_layout
-
-\begin_layout Example
-`s = 15 * 11 = 165 mod 17` (因为 `165 = 9*17 + 12`,
- 所以 `165  
-\backslash
-equiv  12`)
-\end_layout
-
-\begin_layout Example
-`s = 12`
-\end_layout
-
-\begin_layout Example
-* **新点 x:**
-\end_layout
-
-\begin_layout Example
-`x_new = (12² - 6 - 3) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = (144 - 9) mod 17`
-\end_layout
-
-\begin_layout Example
-`x_new = 135 mod 17` (因为 `135 = 7*17 + 16`,
- 所以 `135  
-\backslash
-equiv  16`)
-\end_layout
-
-\begin_layout Example
-`x_new = 16`
-\end_layout
-
-\begin_layout Example
-* **新点 y:**
-\end_layout
-
-\begin_layout Example
-`y_new = (12(6 - 16) - 3) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = (12 * -10 - 3) mod 17`
-\end_layout
-
-\begin_layout Example
-`y_new = -123 mod 17` (因为 `-123 = -8*17 + 13`,
- 所以 `-123  
-\backslash
-equiv  13`)
-\end_layout
-
-\begin_layout Example
-`y_new = 13`
-\end_layout
-
-\begin_layout Example
-**最终结果:
- `
-\begin_inset Formula $6G=(16,13)$
-\end_inset
-
-`**
-\end_layout
-
-\begin_layout Example
----
-\end_layout
-
-\begin_layout Example
-### 第4步：
-The Conclusion (陷门困境)
-\end_layout
-
-\begin_layout Example
-我们完成了这个**简单的正向计算**：
-
-\end_layout
-
-\begin_layout Example
-* **私钥 d:** `6`
-\end_layout
-
-\begin_layout Example
-* **生成点 G:** `(5,
- 1)`
-\end_layout
-
-\begin_layout Example
-* **公钥 K:** `(16,
- 13)`
-\end_layout
-
-\begin_layout Example
-现在，
-最关键的问题来了：
-
-\end_layout
-
-\begin_layout Example
-> 我现在告诉你，
-我们的起点是 `G = (5,
- 1)`，
-经过一系列运算后的终点是 `K = (16,
- 13)`。
-请问，
-我们中间到底走了多少步？
-（也就是 `d` 是多少？
-）
-\end_layout
-
-\begin_layout Example
-在这个玩具例子里，
-你唯一的办法就是**暴力破解**：
-
-\end_layout
-
-\begin_layout Example
-1.
- 计算 `1*G = (5,
- 1)`。
-不对。
-
-\end_layout
-
-\begin_layout Example
-2.
- 计算 `2*G = (6,
- 3)`。
-不对。
-
-\end_layout
-
-\begin_layout Example
-3.
- 计算 `3*G = ...`。
-不对。
-
-\end_layout
-
-\begin_layout Example
-4.
- ...
-\end_layout
-
-\begin_layout Example
-5.
- 直到你计算 `6*G` 时，
-发现结果恰好是 `(16,
- 13)`，
-你才能确定 `d=6`。
-
-\end_layout
-
-\begin_layout Example
-**现在，
-想象一下真实的世界：
-**
-\end_layout
-
-\begin_layout Example
-* `p` 不是 `17`，
-而是一个 256 位的、有 78 个数字长的巨数。
-
-\end_layout
-
-\begin_layout Example
-* `d` 不是 `6`，
-而是一个同样有 78 个数字长的随机数。
-
-\end_layout
-
-\begin_layout Example
-你的“暴力破解”清单将会有 `10^77` 项。
-这就是为什么即使公布了公钥 `K` 和生成点 `G`，
-也绝对无法推导出私钥 `d` 的原因。
 
 \end_layout
 
@@ -33224,12 +33786,12 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Standard
-* `a`,
- `b`,
- `c` 是三个正实数，
+* a,
+ b,
+ c 是三个正实数，
 分别代表椭球面在 x,
  y,
- z 轴上的**半轴长**。
+ z 轴上的半轴长。
 
 \end_layout
 
@@ -33253,7 +33815,7 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 
 \begin_layout Standard
 有界性：
-椭球面是**有界**的。
+椭球面是有界的。
 它完全包含在一个长方体内。
 
 \end_layout
@@ -33261,23 +33823,23 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \begin_layout Standard
 截面：
 用任何一个与坐标平面平行的平面去截椭球面，
-得到的截面（如果存在）都是一个**椭圆**或一个**点**。
+得到的截面（如果存在）都是一个椭圆或一个点。
 
 \end_layout
 
 \begin_layout Standard
 *特殊情况：
-当 `
+当 
 \begin_inset Formula $a=b=c$
 \end_inset
 
-` 时，
-椭球面就变成了我们熟悉的球面**，
-方程为 `
+ 时，
+椭球面就变成了我们熟悉的球面，
+方程为 
 \begin_inset Formula $x^{2}+y^{2}+z^{2}=a^{2}$
 \end_inset
 
-`。
+。
 
 \end_layout
 
@@ -33292,11 +33854,11 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Standard
-#### 定义与特征
+ 定义与特征
 \end_layout
 
 \begin_layout Standard
-* **核心概念**：
+* 核心概念：
 一个开放的、无限延伸的曲面。
 它的“底面”是一个椭圆，
 然后这个椭圆沿着一条直线（称为母线）平行移动形成。
@@ -33304,13 +33866,13 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 \end_layout
 
 \begin_layout Standard
-* **生活中的例子**：
+* 生活中的例子：
 一个椭圆形的管道、隧道、某些建筑的柱子。
 
 \end_layout
 
 \begin_layout Standard
-* **标准方程**：
+* 标准方程：
 
 \end_layout
 
@@ -33334,55 +33896,59 @@ z^{2}=\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}
 
 \begin_layout Standard
 * 注意！
-这个方程中**不包含变量 `z`**。
+这个方程中不包含变量 z。
 这就是它成为“柱面”的关键。
 
 \end_layout
 
 \begin_layout Standard
-* 这意味着对于**任意高度 `z`**，
-曲面在 `z` 高度处的横截面都是同一个椭圆 `
+* 这意味着对于任意高度 z，
+曲面在 z 高度处的横截面都是同一个椭圆 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
 \end_inset
 
-`。
+。
 
 \end_layout
 
 \begin_layout Standard
-#### 性质
+ 性质
 \end_layout
 
 \begin_layout Standard
-* **有界性**：
-椭圆柱面是**无界**的。
+* 有界性：
+椭圆柱面是无界的。
 它沿着一个轴的方向（在这个例子中是 z 轴）无限延伸。
 
 \end_layout
 
 \begin_layout Standard
-* **截面**：
+* 截面：
 
 \end_layout
 
 \begin_layout Standard
-* 用一个平行于 xy 平面（`z = k`）的平面去截，
-得到的截面永远是**同一个椭圆**。
+* 用一个平行于 xy 平面（z = k）的平面去截，
+得到的截面永远是同一个椭圆。
 
 \end_layout
 
 \begin_layout Standard
-* 用一个平行于 xz 平面（`y = k`）或 yz 平面（`x = k`）的平面去截，
-得到的截面是**两条平行的直线**（如果平面与柱面相交）。
+* 用一个平行于 xz 平面（y = k）或 yz 平面（x = k）的平面去截，
+得到的截面是两条平行的直线（如果平面与柱面相交）。
 
 \end_layout
 
 \begin_layout Standard
-* **特殊情况**：
-当 `a = b` 时，
+* 特殊情况：
+当 a = b 时，
 底面椭圆变成了圆，
-这时椭圆柱面就变成了我们最常见的**圆柱面**，
-方程为 `x² + y² = a²`。
+这时椭圆柱面就变成了我们最常见的圆柱面，
+方程为 
+\begin_inset Formula $x^{2}+y^{2}=a^{2}$
+\end_inset
+
+。
 
 \end_layout
 
@@ -35584,7 +36150,7 @@ K=\frac{1}{r_{1}}\cdot\frac{1}{r_{2}}.
 \end_layout
 
 \begin_layout Standard
-## 4.
+ 4.
  卓越定理的核心
 \end_layout
 
@@ -43529,7 +44095,7 @@ a_{n}\leq c_{n}\leq b_{n}\quad(\forall n\geq N)
 \end_layout
 
 \begin_layout Subsubsection
-极限乘法性质（无穷小与常量）**
+极限乘法性质（无穷小与常量）
 \end_layout
 
 \begin_layout Standard
@@ -47083,18 +47649,18 @@ f(x)=\frac{P(x)}{Q(x)}
 \end_layout
 
 \begin_layout Standard
-**1.
- 垂直渐近线 (Vertical Asymptotes)**
+1.
+ 垂直渐近线 (Vertical Asymptotes)
 \end_layout
 
 \begin_layout Standard
-垂直渐近线出现在**使简化后函数的分母为零**的 $x$ 值处。
+垂直渐近线出现在使简化后函数的分母为零的 $x$ 值处。
 
 \end_layout
 
 \begin_layout Standard
-* **如何求解：
-**
+* 如何求解：
+
 \end_layout
 
 \begin_layout Standard
@@ -47112,17 +47678,17 @@ f(x)=\frac{P(x)}{Q(x)}
 \end_layout
 
 \begin_layout Standard
-* **注意：
-** 如果一个 $x$ 值使原始分母为零，
+* 注意：
+ 如果一个 $x$ 值使原始分母为零，
 但在约分后不再使分母为零，
-那么该点是一个**孔 (Hole)**，
+那么该点是一个孔 (Hole)，
 而不是垂直渐近线。
 
 \end_layout
 
 \begin_layout Standard
-* **示例：
-** 对于 $f(x) = 
+* 示例：
+ 对于 $f(x) = 
 \backslash
 frac{x+2}{x-3}$，
 分母在 $x=3$ 处为零，
@@ -47132,8 +47698,8 @@ frac{x+2}{x-3}$，
 \end_layout
 
 \begin_layout Standard
-**2.
- 水平渐近线 (Horizontal Asymptotes)**
+2.
+ 水平渐近线 (Horizontal Asymptotes)
 \end_layout
 
 \begin_layout Standard
@@ -47152,13 +47718,13 @@ infty$ 时，
 \end_layout
 
 \begin_layout Standard
-* **规则：
-**
+* 规则：
+
 \end_layout
 
 \begin_layout Standard
-* **如果 $n < m$：
-** 水平渐近线是 $y=0$ (即 x 轴)。
+* 如果 $n < m$：
+ 水平渐近线是 $y=0$ (即 x 轴)。
 
 \end_layout
 
@@ -47172,8 +47738,8 @@ frac{x+1}{x^2+3}$ (次数 1 < 2)，
 \end_layout
 
 \begin_layout Standard
-* **如果 $n = m$：
-** 水平渐近线是 $y = 
+* 如果 $n = m$：
+ 水平渐近线是 $y = 
 \backslash
 frac{P(x) 
 \backslash
@@ -47195,26 +47761,26 @@ frac{2}{3}$。
 \end_layout
 
 \begin_layout Standard
-* **如果 $n > m$：
-** **没有**水平渐近线。
+* 如果 $n > m$：
+ 没有水平渐近线。
 但可能有斜渐近线。
 
 \end_layout
 
 \begin_layout Standard
-**3.
- 斜渐近线 (Slant / Oblique Asymptotes)**
+3.
+ 斜渐近线 (Slant / Oblique Asymptotes)
 \end_layout
 
 \begin_layout Standard
-当**分子的次数恰好比分母的次数大 1** (即 $n = m+1$) 时，
+当分子的次数恰好比分母的次数大 1 (即 $n = m+1$) 时，
 存在斜渐近线。
 
 \end_layout
 
 \begin_layout Standard
-* **如何求解：
-**
+* 如何求解：
+
 \end_layout
 
 \begin_layout Standard
@@ -47232,8 +47798,8 @@ frac{2}{3}$。
 \end_layout
 
 \begin_layout Standard
-* **示例：
-** 对于 $f(x) = 
+* 示例：
+ 对于 $f(x) = 
 \backslash
 frac{x^2+1}{x-1}$ (次数 2 比 1 大 1)。
 
@@ -47271,45 +47837,45 @@ div (x-1)$ 的商是 $x+1$，
 
 \begin_layout Standard
 1.
- **化简函数：
-** 约去所有公因式，
+ 化简函数：
+ 约去所有公因式，
 并记下孔的位置。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **找零点：
-** 令分子为零，
+ 找零点：
+ 令分子为零，
 找到 x 轴截距。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **找 y 轴截距：
-** 计算 $f(0)$ 的值。
+ 找 y 轴截距：
+ 计算 $f(0)$ 的值。
 
 \end_layout
 
 \begin_layout Standard
 4.
- **找垂直渐近线：
-** 令化简后的分母为零。
+ 找垂直渐近线：
+ 令化简后的分母为零。
 
 \end_layout
 
 \begin_layout Standard
 5.
- **找水平或斜渐近线：
-** 比较分子和分母的次数。
+ 找水平或斜渐近线：
+ 比较分子和分母的次数。
 
 \end_layout
 
 \begin_layout Standard
 6.
- **分析符号：
-** 在 x 轴上标记出所有的零点和垂直渐近线，
+ 分析符号：
+ 在 x 轴上标记出所有的零点和垂直渐近线，
 将数轴分成几个区间。
 在每个区间内取一个测试点，
 判断函数值的正负。
@@ -47318,8 +47884,8 @@ div (x-1)$ 的商是 $x+1$，
 
 \begin_layout Standard
 7.
- **绘制图像：
-** 先画出所有的渐近线和截距点，
+ 绘制图像：
+ 先画出所有的渐近线和截距点，
 然后根据符号分析，
 在各个区间内画出平滑的曲线，
 使其趋近于相应的渐近线。
@@ -48034,7 +48600,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Marginal
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
@@ -50606,7 +51172,11 @@ g(x)\leq f(x)\leq h(x)
 \begin_inset Formula $x_{0}$
 \end_inset
 
- 是 ∞ 或 -∞ 时它也适用;
+ 是  
+\backslash
+infty  或 - 
+\backslash
+infty  时它也适用;
  在那种情况下,
  要求对于所有的非常大的 (分别是正的或负的)
 \begin_inset Formula $x$
@@ -50859,7 +51429,7 @@ g(x)\leq f(x)\leq h(x)
 \end_layout
 
 \begin_layout Standard
-第一步永远是尝试直接将 `a` 代入函数，
+第一步永远是尝试直接将 a 代入函数，
 即计算 
 \begin_inset Formula $f(a)=\frac{P(a)}{Q(a)}$
 \end_inset
@@ -50875,7 +51445,7 @@ g(x)\leq f(x)\leq h(x)
 \end_layout
 
 \begin_layout Standard
-### 情况 1：
+ 情况 1：
 最简单的情况（分母不为零）
 \end_layout
 
@@ -50894,14 +51464,14 @@ g(x)\leq f(x)\leq h(x)
 \begin_inset Formula $x=a$
 \end_inset
 
- 处是**连续的**。
+ 处是连续的。
 求极限就像求函数值一样简单。
 
 \end_layout
 
 \begin_layout Standard
-**规则：
-**
+规则：
+
 \end_layout
 
 \begin_layout Standard
@@ -50930,7 +51500,7 @@ g(x)\leq f(x)\leq h(x)
 
 \begin_layout Standard
 1.
- 直接代入** 
+ 直接代入 
 \begin_inset Formula $x=2$
 \end_inset
 
@@ -51392,8 +51962,8 @@ to a^-$：
 \end_layout
 
 \begin_layout Standard
-**示例：
-**
+示例：
+
 \end_layout
 
 \begin_layout Standard
@@ -51408,7 +51978,7 @@ frac{x+1}{x-2}$
 
 \begin_layout Standard
 1.
- **直接代入** $x=2$：
+ 直接代入 $x=2$：
 
 \end_layout
 
@@ -51432,9 +52002,9 @@ frac{3}{0}$ 的形式。
 
 \begin_layout Standard
 2.
- **分析右极限 ($x 
+ 分析右极限 ($x 
 \backslash
-to 2^+$)**：
+to 2^+$)：
 
 \end_layout
 
@@ -51479,9 +52049,9 @@ infty$
 
 \begin_layout Standard
 3.
- **分析左极限 ($x 
+ 分析左极限 ($x 
 \backslash
-to 2^-$)**：
+to 2^-$)：
 
 \end_layout
 
@@ -51525,8 +52095,8 @@ infty$
 \end_layout
 
 \begin_layout Standard
-**结论：
-**
+结论：
+
 \end_layout
 
 \begin_layout Standard
@@ -51542,7 +52112,7 @@ lim_{x
 \backslash
 to 2} 
 \backslash
-frac{x+1}{x-2}$ **不存在**。
+frac{x+1}{x-2}$ 不存在。
 
 \end_layout
 
@@ -51810,8 +52380,8 @@ status open
 
 \begin_layout Example
 首先，
-我们尝试将 `x = 5` 直接代入表达式中，
-得到了 `0/0` 的结果。
+我们尝试将 x = 5 直接代入表达式中，
+得到了 0/0 的结果。
 这是一个
 \series bold
 不定式
@@ -51880,9 +52450,9 @@ status open
 \end_layout
 
 \begin_layout Example
-因为 `x` 趋近于 5，
-但 `x` 不等于 5，
-所以 `(x - 5)` 不为零，
+因为 x 趋近于 5，
+但 x 不等于 5，
+所以 (x - 5) 不为零，
 我们可以安全地将它约分掉。
 
 \end_layout
@@ -51901,7 +52471,7 @@ status open
 \begin_layout Example
 现在，
 我们得到了一个良性的表达式。
-再次将 `x = 5` 代入 ，
+再次将 x = 5 代入 ，
 极限值为：
 
 \end_layout
@@ -51952,47 +52522,47 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \end_layout
 
 \begin_layout Standard
-其中 `
+其中 
 \begin_inset Formula $P(x)$
 \end_inset
 
-` 和 `
+ 和 
 \begin_inset Formula $Q(x)$
 \end_inset
 
-` 是多项式，
-`
+ 是多项式，
+
 \begin_inset Formula $a_{n}$
 \end_inset
 
-` 和 `
+ 和 
 \begin_inset Formula $b_{m}$
 \end_inset
 
-` 分别是它们的最高次项系数 (leading coefficients)，
-`n` 和 `m` 分别是它们的次数 (degree)**。
+ 分别是它们的最高次项系数 (leading coefficients)，
+n 和 m 分别是它们的次数 (degree)。
 
 \end_layout
 
 \begin_layout Standard
-当 `x` 变得非常非常大（趋向于无穷）时，
+当 x 变得非常非常大（趋向于无穷）时，
 多项式的值主要由其最高次项决定。
-低次项（如 `
+低次项（如 
 \begin_inset Formula $x^{2}$
 \end_inset
 
-`,
- `x`,
- 常数项）的增长速度远不及最高次项（如 `
+,
+ x,
+ 常数项）的增长速度远不及最高次项（如 
 \begin_inset Formula $x^{3}$
 \end_inset
 
-`,
- `
+,
+ 
 \begin_inset Formula $x^{4}$
 \end_inset
 
-`），
+），
 它们的影响可以忽略不计。
 这里的要点是,
  当 x 变大时,
@@ -52098,11 +52668,11 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \begin_inset Formula $\frac{c}{x^{k}}$
 \end_inset
 
- (其中 `
+ (其中 
 \begin_inset Formula $k>0$
 \end_inset
 
-`) 的项的极限都为 0。
+) 的项的极限都为 0。
 
 \end_layout
 
@@ -52191,11 +52761,11 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \series bold
 最高次项系数之比
 \series default
- (`
+ (
 \begin_inset Formula $a_{n}/b_{m}$
 \end_inset
 
-`)。
+)。
 
 \end_layout
 
@@ -52237,11 +52807,11 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \end_layout
 
 \begin_layout Enumerate
-看最高次项 `
+看最高次项 
 \begin_inset Formula $(a_{n}x^{n})/(b_{m}x^{m})$
 \end_inset
 
-` 的符号。
+ 的符号。
 
 \end_layout
 
@@ -52251,11 +52821,11 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \end_inset
 
  时，
-符号由 `
+符号由 
 \begin_inset Formula $a_{n}/b_{m}$
 \end_inset
 
-` 的正负决定。
+ 的正负决定。
 
 \end_layout
 
@@ -52265,11 +52835,11 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \end_inset
 
 时，
-需要考虑 `
+需要考虑 
 \begin_inset Formula $n-m$
 \end_inset
 
-` 的奇偶性，
+ 的奇偶性，
 但通常直接代入一个很大的负数来判断符号更简单。
 
 \end_layout
@@ -52283,25 +52853,25 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 \end_layout
 
 \begin_layout Solution
-分子次数 `
+分子次数 
 \begin_inset Formula $n=3$
 \end_inset
 
-`，
-分母次数 `
+，
+分母次数 
 \begin_inset Formula $m=1$
 \end_inset
 
-`。
+。
 
 \end_layout
 
 \begin_layout Solution
-最高次项之比为 `
+最高次项之比为 
 \begin_inset Formula $x³/x=x²$
 \end_inset
 
-`。
+。
 当 
 \begin_inset Formula $x\rightarrow+\infty$
 \end_inset
@@ -52337,38 +52907,77 @@ f(x)=\frac{P(x)}{Q(x)}=\frac{a_{n}x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}}{b_{m}x^{m}+b
 
 \begin_layout Standard
 同样，
-最高次项之比为 `x²`。
-当 `x` 是一个很大的负数时（例如 `-1000`），
-`x²` 仍然是正数。
+最高次项之比为 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+。
+当 x 是一个很大的负数时（例如
+\begin_inset Formula $-1000$
+\end_inset
+
+），
+
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ 仍然是正数。
 
 \end_layout
 
 \begin_layout Standard
-所以极限仍然是 `+∞`。
+所以极限仍然是 
+\begin_inset Formula $+\infty$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Example
-`lim (x→-∞) (2x³ + 1) / (-x² + 5)`
-\end_layout
+\begin_inset Formula $\underset{x→-\infty}{\lim}\frac{2x^{3}+1}{-x^{2}+5}$
+\end_inset
 
-\begin_layout Example
-分子次数 `n=3`，
-分母次数 `m=2`。
-`3 > 2`。
 
 \end_layout
 
 \begin_layout Example
-最高次项之比为 `2x³ / (-x²) = -2x`。
-当 `x` 是一个很大的负数时，
-`-2x` 是一个很大的正数（例如 `x=-1000`,
- `-2x=2000`）。
+分子次数 n=3，
+分母次数 m=2。
+3 > 2。
 
 \end_layout
 
 \begin_layout Example
-所以极限是 `+∞`。
+最高次项之比为 
+\begin_inset Formula $2x^{3}/(-x^{2})=-2x$
+\end_inset
+
+。
+当 x 是一个很大的负数时，
+
+\begin_inset Formula $-2x$
+\end_inset
+
+ 是一个很大的正数（例如 
+\begin_inset Formula $x=-1000$
+\end_inset
+
+,
+ 
+\begin_inset Formula $-2x=2000$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Example
+所以极限是 
+\begin_inset Formula $+\infty$
+\end_inset
+
+ 。
 
 \end_layout
 
@@ -52396,7 +53005,7 @@ n 是偶的而 m 是奇的。
 \end_layout
 
 \begin_layout Standard
-方法依然是找到**增长最快的项 (Dominant Term)**，
+方法依然是找到增长最快的项 (Dominant Term)，
 整个函数的极限由这一项决定。
 
 \end_layout
@@ -52698,7 +53307,11 @@ u, & \text{if }u\ge0\\
  的正负。
 因此，
 在求极限时，
-我们必须考虑当 `x` 从左侧和右侧趋近于某一点
+我们必须考虑当
+\begin_inset Formula $x$
+\end_inset
+
+ 从左侧和右侧趋近于某一点
 \begin_inset Formula $a$
 \end_inset
 
@@ -52712,12 +53325,12 @@ u, & \text{if }u\ge0\\
 \end_layout
 
 \begin_layout Standard
-这自然引出了**左极限**和**右极限**的概念。
+这自然引出了左极限和右极限的概念。
 
 \end_layout
 
 \begin_layout Standard
-### 通用解题步骤
+ 通用解题步骤
 \end_layout
 
 \begin_layout Standard
@@ -52773,22 +53386,50 @@ u, & \text{if }u\ge0\\
 \end_inset
 
 ):
- 假设 `x` 从比 `a` 稍大的值趋近 `a`。
-判断此时 `u(x)` 的符号。
+ 假设 x 从比 a 稍大的值趋近 a。
+判断此时 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 的符号。
 
 \end_layout
 
 \begin_layout Standard
-* 如果 `u(x) > 0`，
+* 如果 
+\begin_inset Formula $u(x)>0$
+\end_inset
+
+，
 则去掉绝对值符号，
-用 `u(x)` 替换 `|u(x)|`。
+用 
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 替换 
+\begin_inset Formula $|u(x)|$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 如果 `u(x) < 0`，
+* 如果 
+\begin_inset Formula $u(x)<0$
+\end_inset
+
+，
 则去掉绝对值符号，
-用 `-u(x)` 替换 `|u(x)|`。
+用 
+\begin_inset Formula $-u(x)$
+\end_inset
+
+ 替换 
+\begin_inset Formula $|u(x)|$
+\end_inset
+
+。
 
 \end_layout
 
@@ -52798,38 +53439,39 @@ u, & \text{if }u\ge0\\
 \end_layout
 
 \begin_layout Standard
-* **求左极限 (
+* 求左极限 (
 \begin_inset Formula $x\rightarrow a^{-}$
 \end_inset
 
-):** 假设 `x` 从比 `a` 稍小的值趋近 `a`。
-用同样的方法判断 `u(x)` 的符号，
-并替换 `|u(x)|`。
+):
+ 假设 x 从比 a 稍小的值趋近 a。
+用同样的方法判断 u(x) 的符号，
+并替换 |u(x)|。
 然后计算极限。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **比较左右极限：
+ 比较左右极限：
 
 \end_layout
 
 \begin_layout Standard
-* 如果**左极限 = 右极限 = L**，
+* 如果左极限 = 右极限 = L，
 那么原极限存在，
-且等于 `L`。
+且等于 L。
 
 \end_layout
 
 \begin_layout Standard
-* 如果**左极限 
+* 如果左极限 
 \begin_inset Formula $\neq$
 \end_inset
 
- 右极限**，
-那么原极限**不存在 (Does Not Exist,
- DNE)**。
+ 右极限，
+那么原极限不存在 (Does Not Exist,
+ DNE)。
 
 \end_layout
 
@@ -52838,11 +53480,11 @@ u, & \text{if }u\ge0\\
 \end_layout
 
 \begin_layout Standard
-### 示例分析
+ 示例分析
 \end_layout
 
 \begin_layout Standard
-#### 示例 1：
+ 示例 1：
 经典例子 (极限不存在)
 \end_layout
 
@@ -52856,39 +53498,39 @@ u, & \text{if }u\ge0\\
 
 \begin_layout Standard
 1.
- **临界点：
-** `
+ 临界点：
+ 
 \begin_inset Formula $|x|$
 \end_inset
 
-` 的临界点是 `x = 0`。
+ 的临界点是 x = 0。
 我们正在这个点上求极限。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **计算左右极限：
-**
+ 计算左右极限：
+
 \end_layout
 
 \begin_layout Standard
-* **右极限 (
+* 右极限 (
 \begin_inset Formula $x\rightarrow0^{+}$
 \end_inset
 
-):**
+):
 \end_layout
 
 \begin_layout Standard
-当 `x` 从右侧趋近 0 时，
-`x` 是一个很小的正数 (`x > 0`)。
+当 x 从右侧趋近 0 时，
+x 是一个很小的正数 (x > 0)。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-`|x| = x`。
+|x| = x。
 
 \end_layout
 
@@ -52904,22 +53546,22 @@ u, & \text{if }u\ge0\\
 \end_layout
 
 \begin_layout Standard
-* **左极限 (
+* 左极限 (
 \begin_inset Formula $x\rightarrow0^{-}$
 \end_inset
 
-):**
+):
 \end_layout
 
 \begin_layout Standard
-当 `x` 从左侧趋近 0 时，
-`x` 是一个很小的负数 (`x < 0`)。
+当 x 从左侧趋近 0 时，
+x 是一个很小的负数 (x < 0)。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-`|x| = -x`。
+|x| = -x。
 
 \end_layout
 
@@ -52936,8 +53578,8 @@ u, & \text{if }u\ge0\\
 
 \begin_layout Standard
 3.
- **比较结果：
-**
+ 比较结果：
+
 \end_layout
 
 \begin_layout Standard
@@ -52955,21 +53597,25 @@ u, & \text{if }u\ge0\\
 \begin_inset Formula $\underset{x\rightarrow0}{\lim}\frac{|x|}{x}$
 \end_inset
 
- **不存在**。
+ 不存在。
 
 \end_layout
 
 \begin_layout Standard
-如果求极限的点 `a` **不是** `u(x)=0` 的解，
+如果求极限的点 a 不是 u(x)=0 的解，
 那么问题会简单得多。
-你只需要判断在 `a` 点附近 `u(x)` 的符号即可，
+你只需要判断在 a 点附近
+\begin_inset Formula $u(x)$
+\end_inset
+
+ 的符号即可，
 无需分别计算左右极限。
 
 \end_layout
 
 \begin_layout Standard
-**示例 3：
-非临界点**
+示例 3：
+非临界点
 \end_layout
 
 \begin_layout Standard
@@ -52982,44 +53628,44 @@ u, & \text{if }u\ge0\\
 
 \begin_layout Standard
 1.
- **临界点：
-** `
+ 临界点：
+ 
 \begin_inset Formula $|x-2|$
 \end_inset
 
-` 的临界点是 `
+ 的临界点是 
 \begin_inset Formula $x=2$
 \end_inset
 
-`。
+。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **分析极限点：
-** 我们要求极限的点是 `x = 5`，
-它**不是**临界点 `2`。
+ 分析极限点：
+ 我们要求极限的点是 x = 5，
+它不是临界点 2。
 
 \end_layout
 
 \begin_layout Standard
-当 `x` 在 `5` 的附近时（例如 4.9 或 5.1），
-`x - 2` 总是正数。
+当 x 在 5 的附近时（例如 4.9 或 5.1），
+x - 2 总是正数。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-在 `x=5` 的邻域内，
-`|x - 2|` 就等于 `x - 2`。
+在 x=5 的邻域内，
+|x - 2| 就等于 x - 2。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **直接计算：
-**
+ 直接计算：
+
 \end_layout
 
 \begin_layout Standard
@@ -53471,7 +54117,7 @@ u, & \text{if }u\ge0\\
 
 \end_deeper
 \begin_layout Paragraph
-第二类间断点（极限不存在）**
+第二类间断点（极限不存在）
 \end_layout
 
 \begin_layout Standard
@@ -55956,15 +56602,15 @@ x^{2}+y^{2}\geq\max(x^{2},y^{2})\geq\frac{1}{2}(x^{2}+y^{2})
 在它被发现之前，
 数学家们普遍凭直觉认为，
 一个连续的函数“大部分”应该是可导的，
-顶多在一些孤立的点上（比如 `
+顶多在一些孤立的点上（比如 
 \begin_inset Formula $y=|x|$
 \end_inset
 
-` 在 `
+ 在 
 \begin_inset Formula $x=0$
 \end_inset
 
-` 处的尖点）不可导。
+ 处的尖点）不可导。
 魏尔斯特拉斯函数的出现，
 彻底粉碎了这种直觉，
 并推动了数学分析走向更严格的逻辑基础。
@@ -56070,7 +56716,15 @@ f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)
 \end_inset
 
 ，
-这是一个振幅更小 (因为 `a<1`) 但频率更高 (因为 `b>1`) 的波。
+这是一个振幅更小 (因为 
+\begin_inset Formula $a<1$
+\end_inset
+
+) 但频率更高 (因为 
+\begin_inset Formula $b>1$
+\end_inset
+
+) 的波。
 
 \end_layout
 
@@ -56122,7 +56776,7 @@ f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)
 
 \begin_layout Enumerate
 4.
- 重复这个过程**无限次**。
+ 重复这个过程无限次。
 
 \end_layout
 
@@ -56132,11 +56786,11 @@ f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)
 \end_layout
 
 \begin_layout Standard
-每一项 `
+每一项 
 \begin_inset Formula $a^{n}\cos(b^{n}\pi x)$
 \end_inset
 
-` 本身都是一个连续函数。
+ 本身都是一个连续函数。
 
 \end_layout
 
@@ -56240,7 +56894,7 @@ f(x)=\sum_{n=0}^{\infty}a^{n}\cos(b^{n}\pi x)
 \backslash
 varepsilon$–$
 \backslash
-delta$ 的思想来**严格证明魏尔斯特拉斯函数处处连续但处处不可导**，
+delta$ 的思想来严格证明魏尔斯特拉斯函数处处连续但处处不可导，
 需要分成两个部分来讨论：
 
 \end_layout
@@ -56249,8 +56903,8 @@ delta$ 的思想来**严格证明魏尔斯特拉斯函数处处连续但处处�
 ---
 \end_layout
 
-\begin_layout Standard
-## 魏尔斯特拉斯函数定义：
+\begin_layout Paragraph
+魏尔斯特拉斯函数定义：
 
 \end_layout
 
@@ -56310,7 +56964,7 @@ pi$（或更强条件，
 \end_layout
 
 \begin_layout Standard
-## 一、证明它 **处处连续**（用 $
+ 一、证明它 处处连续（用 $
 \backslash
 varepsilon$–$
 \backslash
@@ -56318,19 +56972,19 @@ delta$ ）
 \end_layout
 
 \begin_layout Standard
-### 思想：
+ 思想：
 
 \end_layout
 
 \begin_layout Standard
 函数是无限和，
-但我们可以证明它是**一致收敛**的，
+但我们可以证明它是一致收敛的，
 进而在逐项连续的前提下得到极限函数的连续性。
 
 \end_layout
 
 \begin_layout Standard
-### 详细步骤：
+ 详细步骤：
 
 \end_layout
 
@@ -56482,7 +57136,7 @@ $$
 \end_layout
 
 \begin_layout Standard
-### 如果要求用 $
+ 如果要求用 $
 \backslash
 varepsilon$-$
 \backslash
@@ -56708,7 +57362,7 @@ varepsilon$
 
 \begin_layout Standard
 因此，
-**$f(x)$ 在 $x_0$ 处连续**。
+$f(x)$ 在 $x_0$ 处连续。
 
 \end_layout
 
@@ -56717,22 +57371,22 @@ varepsilon$
 \end_layout
 
 \begin_layout Standard
-## 二、证明它 **处处不可导**
+ 二、证明它 处处不可导
 \end_layout
 
 \begin_layout Standard
 这是魏尔斯特拉斯函数最著名的性质，
-但 **不可用 $
+但 不可用 $
 \backslash
 varepsilon$-$
 \backslash
-delta$** 方法直接证明。
-它属于**反常振荡+无界导数增幅**的思想。
+delta$ 方法直接证明。
+它属于反常振荡+无界导数增幅的思想。
 
 \end_layout
 
 \begin_layout Standard
-### 思路简述：
+ 思路简述：
 
 \end_layout
 
@@ -56810,10 +57464,10 @@ cdot b^n$ 的项。
 
 \begin_layout Standard
 也就是说：
-**振荡频率 $b^n$ 增长太快，
+振荡频率 $b^n$ 增长太快，
 振幅 $a^n$ 又不够快衰减，
 结果导致导数发散或震荡不收敛。
-**
+
 \end_layout
 
 \begin_layout Standard
@@ -56821,7 +57475,7 @@ cdot b^n$ 的项。
 \end_layout
 
 \begin_layout Standard
-## 总结：
+ 总结：
 
 \end_layout
 
@@ -56834,7 +57488,7 @@ cdot b^n$ 的项。
 \end_layout
 
 \begin_layout Standard
-| **连续性** | $
+| 连续性 | $
 \backslash
 varepsilon$-$
 \backslash
@@ -56843,7 +57497,7 @@ delta$ 直接可证 | 利用一致收敛和逐项连续性，
 \end_layout
 
 \begin_layout Standard
-| **不可导性** | 不可直接用 $
+| 不可导性 | 不可直接用 $
 \backslash
 varepsilon$-$
 \backslash
@@ -56856,11 +57510,11 @@ delta$ | 利用导数极限表达式发散或震荡，
 \end_layout
 
 \begin_layout Standard
-如需我**写出更完整的 $
+如需我写出更完整的 $
 \backslash
 varepsilon$–$
 \backslash
-delta$** 证明结构（包含具体不等式控制），
+delta$ 证明结构（包含具体不等式控制），
 或给出不可导性的详细分析（包含震荡图像或级数下界），
 我可以继续帮你补充。
 
@@ -57757,7 +58411,15 @@ c处
 \end_layout
 
 \begin_layout Standard
-分别讨论 `y = |x|` 在点 `x = 0` 处的极限和导数。
+分别讨论 
+\begin_inset Formula $y=|x|`$
+\end_inset
+
+ 在点 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 处的极限和导数。
 
 \end_layout
 
@@ -57814,11 +58476,11 @@ c处
 
 \begin_layout Standard
 根据绝对值的定义，
-此时 `
+此时 
 \begin_inset Formula $|x|=x$
 \end_inset
 
-`。
+。
 
 \end_layout
 
@@ -63442,7 +64104,7 @@ y''',y^{(4)},\cdots,y^{(n)}
 \end_inset
 
 （单调不增），
-那么函数的单调性是**非严格**的。
+那么函数的单调性是非严格的。
 
 \end_layout
 
@@ -65267,7 +65929,7 @@ f'(x_{2})-f'(x_{1})>0
 \begin_inset Formula $f'(x)$
 \end_inset
 
- 是严格**递增**的。
+ 是严格递增的。
 
 \end_layout
 
@@ -67247,12 +67909,12 @@ alpha}{dx} = y''$
 \end_layout
 
 \begin_layout Standard
-**第二步：
+第二步：
 解出 $
 \backslash
 frac{d
 \backslash
-alpha}{dx}$**
+alpha}{dx}$
 \end_layout
 
 \begin_layout Standard
@@ -67328,8 +67990,8 @@ frac{y''}{1 + (y')^2}$
 \end_layout
 
 \begin_layout Standard
-**第三步：
-引入弧长 $s$**
+第三步：
+引入弧长 $s$
 \end_layout
 
 \begin_layout Standard
@@ -67447,8 +68109,8 @@ sqrt{1 + (y')^2}}$
 \end_layout
 
 \begin_layout Standard
-**第四步：
-将所有部分组合起来**
+第四步：
+将所有部分组合起来
 \end_layout
 
 \begin_layout Standard
@@ -67517,8 +68179,8 @@ frac{3}{2}}}$
 \end_layout
 
 \begin_layout Standard
-**最后：
-取绝对值得到曲率 K**
+最后：
+取绝对值得到曲率 K
 \end_layout
 
 \begin_layout Standard
@@ -74468,7 +75130,7 @@ Q(x)=Q_{1}(x)Q_{2}(x)
 
 \begin_layout Standard
 多项式除法类似于我们在小学学过的长除法，
-但它用于**两个多项式之间的除法**。
+但它用于两个多项式之间的除法。
  
 \end_layout
 
@@ -85115,7 +85777,7 @@ x_{n+1}=2x_{n}+3
 \end_layout
 
 \begin_layout Standard
-求齐次解**
+求齐次解
 \end_layout
 
 \begin_layout Standard
@@ -86294,7 +86956,7 @@ L=\int_{a}^{b}\sqrt{1+\left(\frac{dy}{dx}\right)^{2}}\,dx
 
 \begin_layout Standard
 光滑曲线的弧长是微积分中的经典问题之一，
-下面是常见情况下的**弧长公式**和**使用方法**整理：
+下面是常见情况下的弧长公式和使用方法整理：
 
 \end_layout
 
@@ -86307,7 +86969,7 @@ L=\int_{a}^{b}\sqrt{1+\left(\frac{dy}{dx}\right)^{2}}\,dx
 \end_layout
 
 \begin_layout Standard
-### 一、直角坐标系中的曲线：
+ 一、直角坐标系中的曲线：
 
 \begin_inset Formula $y=f(x)$
 \end_inset
@@ -86352,7 +87014,7 @@ $$
 \end_layout
 
 \begin_layout Standard
-### 二、参数方程表示的曲线：
+ 二、参数方程表示的曲线：
 $x = x(t),
  y = y(t)$，
 $t 
@@ -86410,7 +87072,7 @@ $$
 \end_layout
 
 \begin_layout Standard
-### 三、极坐标形式：
+ 三、极坐标形式：
 $r = r(
 \backslash
 theta)$，
@@ -86469,7 +87131,7 @@ $$
 \end_layout
 
 \begin_layout Standard
-## 示例：
+ 示例：
 求曲线 $y = 
 \backslash
 frac{1}{3}x^{3/2}$ 在区间 $x 
@@ -86479,8 +87141,8 @@ in [0,
 \end_layout
 
 \begin_layout Standard
-**步骤：
-**
+步骤：
+
 \end_layout
 
 \begin_layout Standard
@@ -87067,7 +87729,7 @@ frac{1}{4}x$，
 
 \begin_layout Standard
 目标：
-企业选择最优的产量 `Q` 来最大化利润 
+企业选择最优的产量 Q 来最大化利润 
 \begin_inset Formula $\Pi(Q)$
 \end_inset
 
@@ -91927,7 +92589,15 @@ dA=\frac{1}{2}\cdot r\cdot(rd\theta)=\frac{1}{2}r^{2}d\theta
 \end_layout
 
 \begin_layout Standard
-有了无限小面积 `dA` 与无限小时间 `dt` 的关系，
+有了无限小面积 
+\begin_inset Formula $dA$
+\end_inset
+
+ 与无限小时间 
+\begin_inset Formula $dt$
+\end_inset
+
+ 的关系，
 就可以通过积分求出有限时间内的总面积 
 \begin_inset Formula $\Delta A$
 \end_inset
@@ -94656,7 +95326,7 @@ int_C (P
 \end_layout
 
 \begin_layout Standard
-### 1.
+ 1.
  存在标量势函数（Potential Function）
 \end_layout
 
@@ -94722,7 +95392,7 @@ partial y} $$
 此时，
 该向量场 $
 \backslash
-mathbf{F}$ 称为**保守向量场**。
+mathbf{F}$ 称为保守向量场。
 
 \end_layout
 
@@ -94755,13 +95425,13 @@ phi(A) $$
 \end_layout
 
 \begin_layout Standard
-### 2.
+ 2.
  沿任何闭合路径的积分为零
 \end_layout
 
 \begin_layout Standard
 如果线积分与路径无关，
-那么沿该区域内任何一条**封闭曲线** $C$ 的线积分都必须为零：
+那么沿该区域内任何一条封闭曲线 $C$ 的线积分都必须为零：
 
 \end_layout
 
@@ -94786,7 +95456,7 @@ oint_C (P
 \end_layout
 
 \begin_layout Standard
-### 3.
+ 3.
  克莱罗定理条件（偏导数交叉相等）
 \end_layout
 
@@ -94796,7 +95466,7 @@ oint_C (P
 \end_layout
 
 \begin_layout Standard
-如果函数 $P(x,y)$ 和 $Q(x,y)$ 在一个**单连通区域** $D$ 内具有连续的一阶偏导数，
+如果函数 $P(x,y)$ 和 $Q(x,y)$ 在一个单连通区域 $D$ 内具有连续的一阶偏导数，
 那么线积分与路径无关的充要条件是：
 
 \end_layout
@@ -94818,13 +95488,13 @@ partial x} $$
 \end_layout
 
 \begin_layout Standard
-**解释：
-**
+解释：
+
 \end_layout
 
 \begin_layout Standard
-* **推导过程：
-** 如果存在 $
+* 推导过程：
+ 如果存在 $
 \backslash
 phi(x,y)$ 使得 $P = 
 \backslash
@@ -94963,13 +95633,13 @@ partial x}$ 成立。
 \end_layout
 
 \begin_layout Standard
-* **“单连通区域”的重要性：
-**
+* “单连通区域”的重要性：
+
 \end_layout
 
 \begin_layout Standard
-这个条件是**充要条件**的关键。
-一个区域是**单连通区域**意味着该区域内没有“洞”（holes）。
+这个条件是充要条件的关键。
+一个区域是单连通区域意味着该区域内没有“洞”（holes）。
 例如，
 整个平面、一个圆盘、一个矩形区域都是单连通的。
 而一个被挖去一个点的圆盘（例如 $R^2 
@@ -95065,7 +95735,7 @@ setminus
 \end_layout
 
 \begin_layout Standard
-### 总结
+ 总结
 \end_layout
 
 \begin_layout Standard
@@ -95075,8 +95745,8 @@ setminus
 
 \begin_layout Standard
 1.
- **最根本的判断：
-** 是否存在一个标量函数 $
+ 最根本的判断：
+ 是否存在一个标量函数 $
 \backslash
 phi(x,y)$（势函数），
 使得 $
@@ -95091,15 +95761,15 @@ phi$。
 
 \begin_layout Standard
 2.
- **几何判断：
-** 沿区域内任意闭合路径的线积分是否为零。
+ 几何判断：
+ 沿区域内任意闭合路径的线积分是否为零。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **计算判断（最常用）：
-** 在**单连通区域**内，
+ 计算判断（最常用）：
+ 在单连通区域内，
 检查 $
 \backslash
 frac{
@@ -95196,12 +95866,12 @@ Planimeter），
 \end_layout
 
 \begin_layout Standard
-### 1.
+ 1.
  工作原理
 \end_layout
 
 \begin_layout Standard
-面积仪的工作原理是基于**格林公式（Green's Theorem）**。
+面积仪的工作原理是基于格林公式（Green's Theorem）。
 格林公式将平面上一个封闭曲线的线积分与该曲线所围区域的面积分联系起来：
 
 \end_layout
@@ -95306,7 +95976,7 @@ oint_C (x
 \end_layout
 
 \begin_layout Standard
-### 2.
+ 2.
  主要类型
 \end_layout
 
@@ -95316,19 +95986,19 @@ oint_C (x
 \end_layout
 
 \begin_layout Standard
-* **极坐标面积仪（Polar Planimeter）**：
+* 极坐标面积仪（Polar Planimeter）：
 这是最常见和最经典的类型。
-它有一个固定的**极点（Pole）**，
-通过一根**极杆（Pole Arm）**连接到一个**测量单元（Measuring Unit）**。
-测量单元上有一根**描绘杆（Tracer Arm）**，
-末端是**描绘点（Tracer Point）**。
+它有一个固定的极点（Pole），
+通过一根极杆（Pole Arm）连接到一个测量单元（Measuring Unit）。
+测量单元上有一根描绘杆（Tracer Arm），
+末端是描绘点（Tracer Point）。
 当描绘点沿着图形边界移动时，
 测量单元上的轮子会滚动并记录移动量。
 
 \end_layout
 
 \begin_layout Standard
-* **直线面积仪（Linear Planimeter）**：
+* 直线面积仪（Linear Planimeter）：
 这种面积仪沿着一条直线轨道移动，
 通常用于测量长条形或带状图形的面积，
 如公路、河流的横截面积图。
@@ -95336,7 +96006,7 @@ oint_C (x
 \end_layout
 
 \begin_layout Standard
-* **数字面积仪（Digital Planimeter）**：
+* 数字面积仪（Digital Planimeter）：
 现代的面积仪，
 使用光学传感器代替机械轮，
 将描绘点的运动数据直接输入微处理器进行计算，
@@ -95347,7 +96017,7 @@ oint_C (x
 \end_layout
 
 \begin_layout Standard
-### 3.
+ 3.
  极坐标面积仪的组成部分
 \end_layout
 
@@ -95359,30 +96029,30 @@ oint_C (x
 
 \begin_layout Standard
 1.
- **极点/锚点（Anchor Point/Pole）：
-** 一个固定在图纸上不动的小重物或针点。
+ 极点/锚点（Anchor Point/Pole）：
+ 一个固定在图纸上不动的小重物或针点。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **极杆（Pole Arm）：
-** 一根连接极点和测量单元的固定长度的杆。
+ 极杆（Pole Arm）：
+ 一根连接极点和测量单元的固定长度的杆。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **测量单元（Measuring Unit）：
-** 包含一个精密滚轮和读数装置（刻度盘、游标尺或数字显示屏）。
+ 测量单元（Measuring Unit）：
+ 包含一个精密滚轮和读数装置（刻度盘、游标尺或数字显示屏）。
 这个滚轮只测量垂直于其轴线的运动。
 
 \end_layout
 
 \begin_layout Standard
 4.
- **描绘杆（Tracer Arm）：
-** 一根连接测量单元和描绘点的杆，
+ 描绘杆（Tracer Arm）：
+ 一根连接测量单元和描绘点的杆，
 其长度可调节，
 以适应不同的比例尺或测量精度。
 
@@ -95390,45 +96060,45 @@ oint_C (x
 
 \begin_layout Standard
 5.
- **描绘点（Tracer Point）：
-** 一个带有放大镜的尖点，
+ 描绘点（Tracer Point）：
+ 一个带有放大镜的尖点，
 用于精确地沿着图形边界移动。
 
 \end_layout
 
 \begin_layout Standard
-### 4.
+ 4.
  使用方法（以极坐标面积仪为例）
 \end_layout
 
 \begin_layout Standard
 1.
- **准备：
-** 将要测量的图纸平铺在平坦的表面上。
+ 准备：
+ 将要测量的图纸平铺在平坦的表面上。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **放置：
-** 将极点固定在图纸上，
+ 放置：
+ 将极点固定在图纸上，
 位置应确保描绘点能覆盖整个待测图形。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **校准/读数归零：
-** 将测量轮的读数归零。
+ 校准/读数归零：
+ 将测量轮的读数归零。
 
 \end_layout
 
 \begin_layout Standard
 4.
- **描绘：
-** 将描绘点精确地放置在图形边界的某一固定起点上。
+ 描绘：
+ 将描绘点精确地放置在图形边界的某一固定起点上。
 然后，
-沿着图形边界以**顺时针或逆时针方向**（通常建议逆时针，
+沿着图形边界以顺时针或逆时针方向（通常建议逆时针，
 以获得正值结果）精确地描绘一圈，
 最终回到起点。
 描绘过程应尽可能平稳和精确。
@@ -95437,88 +96107,88 @@ oint_C (x
 
 \begin_layout Standard
 5.
- **读取：
-** 描绘完成后，
+ 读取：
+ 描绘完成后，
 从测量单元上读取最终的数值。
 
 \end_layout
 
 \begin_layout Standard
 6.
- **计算：
-** 根据面积仪的比例尺或设置的杆长，
+ 计算：
+ 根据面积仪的比例尺或设置的杆长，
 将读数乘以相应的常数（称为“面积仪常数”或“标尺因子”），
 即可得到实际面积。
 
 \end_layout
 
 \begin_layout Standard
-### 5.
+ 5.
  优点与缺点
 \end_layout
 
 \begin_layout Standard
-**优点：
-**
+优点：
+
 \end_layout
 
 \begin_layout Standard
-* **测量不规则图形：
-** 能够精确测量任意形状的平面图形面积，
+* 测量不规则图形：
+ 能够精确测量任意形状的平面图形面积，
 而不仅仅是规则的几何形状。
 
 \end_layout
 
 \begin_layout Standard
-* **操作相对简单：
-** 一旦掌握了技巧，
+* 操作相对简单：
+ 一旦掌握了技巧，
 操作并不复杂。
 
 \end_layout
 
 \begin_layout Standard
-* **无需复杂计算：
-** 仪器本身完成积分，
+* 无需复杂计算：
+ 仪器本身完成积分，
 用户只需读数和简单的乘法。
 
 \end_layout
 
 \begin_layout Standard
-* **广泛应用：
-** 在工程、测绘、生物学、医学等领域，
+* 广泛应用：
+ 在工程、测绘、生物学、医学等领域，
 用于测量地图面积、土地面积、叶片面积、病灶面积等。
 
 \end_layout
 
 \begin_layout Standard
-**缺点：
-**
+缺点：
+
 \end_layout
 
 \begin_layout Standard
-* **精度依赖于操作者：
-** 描绘点的精确度直接影响测量结果的准确性，
+* 精度依赖于操作者：
+ 描绘点的精确度直接影响测量结果的准确性，
 需要一定的练习和技巧。
 
 \end_layout
 
 \begin_layout Standard
-* **机械磨损和校准：
-** 机械式面积仪容易磨损，
+* 机械磨损和校准：
+ 机械式面积仪容易磨损，
 需要定期校准以保持精度。
 
 \end_layout
 
 \begin_layout Standard
-* **局限性：
-** 测量面积的大小受限于面积仪臂长，
+* 局限性：
+ 测量面积的大小受限于面积仪臂长，
 对于过大或过小的图形可能不适用。
 
 \end_layout
 
 \begin_layout Standard
-* **被取代：
-** 随着计算机技术的发展，
+* 被取代：
+ 随着计算机技术的发展，
 CAD软件、GIS（地理信息系统）和图像处理软件现在可以更方便、更精确地计算图形面积，
 因此物理面积仪的使用已经大大减少。
 
@@ -96089,8 +96759,8 @@ Q_{enc}=\iiint_{V}\rho\,dV
 \end_layout
 
 \begin_layout Standard
-**向量场的散度 (Divergence) 处处为零。
-**
+向量场的散度 (Divergence) 处处为零。
+
 \end_layout
 
 \begin_layout Standard
@@ -96098,19 +96768,19 @@ Q_{enc}=\iiint_{V}\rho\,dV
 \end_layout
 
 \begin_layout Standard
-### 详细解释：
+ 详细解释：
 
 \end_layout
 
 \begin_layout Standard
-这个结论是根据 **散度定理 (Divergence Theorem)**，
-也称为 **高斯定理 (Gauss's Theorem)** 得出的。
+这个结论是根据 散度定理 (Divergence Theorem)，
+也称为 高斯定理 (Gauss's Theorem) 得出的。
 
 \end_layout
 
 \begin_layout Standard
-**散度定理的表达式：
-**
+散度定理的表达式：
+
 \end_layout
 
 \begin_layout Standard
@@ -96137,8 +96807,8 @@ mathbf{F})
 \end_layout
 
 \begin_layout Standard
-**各项的含义：
-**
+各项的含义：
+
 \end_layout
 
 \begin_layout Standard
@@ -96253,8 +96923,8 @@ mathbf{F})
 \end_layout
 
 \begin_layout Standard
-**根据问题：
-**
+根据问题：
+
 \end_layout
 
 \begin_layout Standard
@@ -96266,7 +96936,7 @@ mathbf{F}
 \backslash
 cdot d
 \backslash
-mathbf{S} = 0$ 对于**任意**封闭曲面 $S$ 都成立。
+mathbf{S} = 0$ 对于任意封闭曲面 $S$ 都成立。
 
 \end_layout
 
@@ -96292,20 +96962,20 @@ mathbf{F})
 \end_layout
 
 \begin_layout Standard
-如果一个连续函数在**任意**体积 $V$ 上的体积分都为零，
+如果一个连续函数在任意体积 $V$ 上的体积分都为零，
 那么这个函数本身必须在整个区域内处处为零。
 
 \end_layout
 
 \begin_layout Standard
 因此，
-**$
+$
 \backslash
 nabla 
 \backslash
 cdot 
 \backslash
-mathbf{F} = 0$**。
+mathbf{F} = 0$。
 
 \end_layout
 
@@ -96314,20 +96984,20 @@ mathbf{F} = 0$**。
 \end_layout
 
 \begin_layout Standard
-### 物理意义与术语：
+ 物理意义与术语：
 
 \end_layout
 
 \begin_layout Standard
-* **无散场 (Solenoidal Field) / 源场 (Source-free Field)：
-** 当一个向量场的散度处处为零时，
+* 无散场 (Solenoidal Field) / 源场 (Source-free Field)：
+ 当一个向量场的散度处处为零时，
 这个场被称为无散场或源场。
 
 \end_layout
 
 \begin_layout Standard
-* **物理直观：
-**
+* 物理直观：
+
 \end_layout
 
 \begin_layout Standard
@@ -96363,14 +97033,14 @@ mathbf{F} = 0$，
 \end_layout
 
 \begin_layout Standard
-### 常见例子：
+ 常见例子：
 
 \end_layout
 
 \begin_layout Standard
 1.
- **不可压缩流体：
-** 如果 $
+ 不可压缩流体：
+ 如果 $
 \backslash
 mathbf{v}$ 是流体的速度场，
 那么 $
@@ -96387,8 +97057,8 @@ mathbf{v} = 0$ 表示流体是不可压缩的，
 
 \begin_layout Standard
 2.
- **磁场：
-** 磁感应强度 $
+ 磁场：
+ 磁感应强度 $
 \backslash
 mathbf{B}$ 场总是满足 $
 \backslash
@@ -96407,8 +97077,8 @@ mathbf{B} = 0$。
 
 \begin_layout Standard
 3.
- **任何向量场的旋度：
-** 任何向量场 $
+ 任何向量场的旋度：
+ 任何向量场 $
 \backslash
 mathbf{A}$ 的旋度 $
 \backslash
@@ -96439,8 +97109,8 @@ mathbf{A}) = 0$。
 \end_layout
 
 \begin_layout Standard
-**斯托克斯公式 (Stokes' Theorem)**，
-也称为**旋度定理 (Curl Theorem)**，
+斯托克斯公式 (Stokes' Theorem)，
+也称为旋度定理 (Curl Theorem)，
 是多变量微积分中的一个基本定理，
 它将三维空间中一个向量场的旋度（curl）在一个曲面上的积分，
 与其在这个曲面边界上的线积分联系起来。
@@ -96448,7 +97118,7 @@ mathbf{A}) = 0$。
 \end_layout
 
 \begin_layout Standard
-可以看作是**格林公式 (Green's Theorem)** 在三维空间中的推广。
+可以看作是格林公式 (Green's Theorem) 在三维空间中的推广。
 
 \end_layout
 
@@ -96457,7 +97127,7 @@ mathbf{A}) = 0$。
 \end_layout
 
 \begin_layout Standard
-### 公式表达
+ 公式表达
 \end_layout
 
 \begin_layout Standard
@@ -96522,14 +97192,14 @@ mathbf{n}
 \end_layout
 
 \begin_layout Standard
-**各项的含义：
-**
+各项的含义：
+
 \end_layout
 
 \begin_layout Standard
-* **$
+* $
 \backslash
-mathbf{F}$**：
+mathbf{F}$：
 一个三维向量场，
 通常表示为 $
 \backslash
@@ -96552,22 +97222,22 @@ mathbf{k}$。
 \end_layout
 
 \begin_layout Standard
-* **$C$**：
+* $C$：
 一个简单、闭合、分段光滑的曲线，
 它是曲面 $S$ 的边界。
 
 \end_layout
 
 \begin_layout Standard
-* **$d
+* $d
 \backslash
-mathbf{r}$**：
+mathbf{r}$：
 沿着曲线 $C$ 的微分位移向量。
 
 \end_layout
 
 \begin_layout Standard
-* **$
+* $
 \backslash
 oint_C 
 \backslash
@@ -96575,32 +97245,32 @@ mathbf{F}
 \backslash
 cdot d
 \backslash
-mathbf{r}$**：
+mathbf{r}$：
 表示向量场 $
 \backslash
 mathbf{F}$ 沿着闭合曲线 $C$ 的线积分，
-也称为 **环量 (Circulation)** 或做功。
+也称为 环量 (Circulation) 或做功。
 
 \end_layout
 
 \begin_layout Standard
-* **$S$**：
+* $S$：
 一个开放（不闭合）、定向、分段光滑的曲面，
 它的边界是曲线 $C$。
 
 \end_layout
 
 \begin_layout Standard
-* **$
+* $
 \backslash
 nabla 
 \backslash
 times 
 \backslash
-mathbf{F}$**：
+mathbf{F}$：
 向量场 $
 \backslash
-mathbf{F}$ 的 **旋度 (Curl)**。
+mathbf{F}$ 的 旋度 (Curl)。
 在笛卡尔坐标系中，
 旋度为：
 
@@ -96671,9 +97341,9 @@ mathbf{k} $$
 \end_layout
 
 \begin_layout Standard
-* **$d
+* $d
 \backslash
-mathbf{S}$**：
+mathbf{S}$：
 曲面 $S$ 上的微分向量面积元，
 其方向由曲面的单位法向量 $
 \backslash
@@ -96690,15 +97360,15 @@ mathbf{n}
 \end_layout
 
 \begin_layout Standard
-* **$
+* $
 \backslash
-mathbf{n}$**：
+mathbf{n}$：
 曲面 $S$ 的单位法向量。
 
 \end_layout
 
 \begin_layout Standard
-* **$
+* $
 \backslash
 iint_S (
 \backslash
@@ -96710,10 +97380,10 @@ mathbf{F})
 \backslash
 cdot d
 \backslash
-mathbf{S}$**：
+mathbf{S}$：
 表示向量场 $
 \backslash
-mathbf{F}$ 的旋度穿过曲面 $S$ 的 **通量 (Flux)**。
+mathbf{F}$ 的旋度穿过曲面 $S$ 的 通量 (Flux)。
 
 \end_layout
 
@@ -96722,16 +97392,16 @@ mathbf{F}$ 的旋度穿过曲面 $S$ 的 **通量 (Flux)**。
 \end_layout
 
 \begin_layout Standard
-### 核心思想与直观理解
+ 核心思想与直观理解
 \end_layout
 
 \begin_layout Standard
 斯托克斯公式的核心思想是：
-**一个向量场 $
+一个向量场 $
 \backslash
 mathbf{F}$ 沿着一个闭合曲线 $C$ 的环量，
 等于该向量场旋度穿过以 $C$ 为边界的任意曲面 $S$ 的通量。
-**
+
 \end_layout
 
 \begin_layout Standard
@@ -96741,15 +97411,15 @@ mathbf{F}$ 沿着一个闭合曲线 $C$ 的环量，
 
 \begin_layout Standard
 1.
- **连接性：
-** 它将一个只与曲面边界有关的积分（线积分）与一个涉及曲面内部性质的积分（曲面积分）联系起来。
+ 连接性：
+ 它将一个只与曲面边界有关的积分（线积分）与一个涉及曲面内部性质的积分（曲面积分）联系起来。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **路径无关性（在某种意义上）：
-** 只要两个曲面有相同的边界曲线 $C$ 并且方向一致，
+ 路径无关性（在某种意义上）：
+ 只要两个曲面有相同的边界曲线 $C$ 并且方向一致，
 那么 $
 \backslash
 mathbf{F}$ 的旋度穿过它们的通量将是相同的。
@@ -96759,8 +97429,8 @@ mathbf{F}$ 的旋度穿过它们的通量将是相同的。
 
 \begin_layout Standard
 3.
- **局部效应的累积：
-** 旋度 $
+ 局部效应的累积：
+ 旋度 $
 \backslash
 nabla 
 \backslash
@@ -96778,20 +97448,20 @@ mathbf{F}$ 描述了向量场在某一点的“旋转”趋势或“涡旋”程
 \end_layout
 
 \begin_layout Standard
-### 定向匹配 (Orientation Matching)
+ 定向匹配 (Orientation Matching)
 \end_layout
 
 \begin_layout Standard
 应用斯托克斯公式时，
-**曲面 $S$ 的法向量 $
+曲面 $S$ 的法向量 $
 \backslash
 mathbf{n}$ 的方向必须与曲线 $C$ 的行进方向遵循右手定则。
-**
+
 \end_layout
 
 \begin_layout Standard
-* **右手定则：
-** 如果你用右手握住曲面 $S$，
+* 右手定则：
+ 如果你用右手握住曲面 $S$，
 并让你的拇指指向法向量 $
 \backslash
 mathbf{n}$ 的方向（通常指向曲面的外侧），
@@ -96804,7 +97474,7 @@ mathbf{n}$ 的方向（通常指向曲面的外侧），
 \end_layout
 
 \begin_layout Standard
-### 与其他基本定理的关系
+ 与其他基本定理的关系
 \end_layout
 
 \begin_layout Standard
@@ -96813,8 +97483,8 @@ mathbf{n}$ 的方向（通常指向曲面的外侧），
 \end_layout
 
 \begin_layout Standard
-* **微积分基本定理 (Fundamental Theorem of Calculus)：
-** $
+* 微积分基本定理 (Fundamental Theorem of Calculus)：
+ $
 \backslash
 int_a^b f'(x) 
 \backslash
@@ -96828,8 +97498,8 @@ int_a^b f'(x)
 \end_layout
 
 \begin_layout Standard
-* **格林公式 (Green's Theorem)：
-** $
+* 格林公式 (Green's Theorem)：
+ $
 \backslash
 oint_C (P 
 \backslash
@@ -96879,8 +97549,8 @@ mathbf{F}$ 只有 $z$ 分量。
 \end_layout
 
 \begin_layout Standard
-* **散度定理 (Divergence Theorem / Gauss's Theorem)：
-** $
+* 散度定理 (Divergence Theorem / Gauss's Theorem)：
+ $
 \backslash
 iint_S 
 \backslash
@@ -96915,7 +97585,7 @@ mathbf{F})
 \end_layout
 
 \begin_layout Standard
-### 应用领域
+ 应用领域
 \end_layout
 
 \begin_layout Standard
@@ -96926,8 +97596,8 @@ mathbf{F})
 
 \begin_layout Standard
 1.
- **流体力学：
-** 用于理解流体的环量和涡旋。
+ 流体力学：
+ 用于理解流体的环量和涡旋。
 旋度 $
 \backslash
 nabla 
@@ -96941,27 +97611,27 @@ mathbf{F}$ 代表流体的涡度（vorticity），
 
 \begin_layout Standard
 2.
- **电磁学：
-** 它是麦克斯韦方程组的积分形式的基础。
+ 电磁学：
+ 它是麦克斯韦方程组的积分形式的基础。
 
 \end_layout
 
 \begin_layout Standard
-* **法拉第电磁感应定律 (Faraday's Law of Induction)：
-** 将感应电动势（电场环量）与磁通量随时间的变化联系起来。
+* 法拉第电磁感应定律 (Faraday's Law of Induction)：
+ 将感应电动势（电场环量）与磁通量随时间的变化联系起来。
 
 \end_layout
 
 \begin_layout Standard
-* **安培定律 (Ampere's Law)：
-** 将磁场环量与电流联系起来。
+* 安培定律 (Ampere's Law)：
+ 将磁场环量与电流联系起来。
 
 \end_layout
 
 \begin_layout Standard
 3.
- **简化计算：
-** 在某些情况下，
+ 简化计算：
+ 在某些情况下，
 计算线积分可能非常复杂，
 而计算旋度的曲面积分则相对简单（反之亦然），
 斯托克斯公式提供了一种转换计算方式的强大工具。
@@ -96973,7 +97643,7 @@ mathbf{F}$ 代表流体的涡度（vorticity），
 \end_layout
 
 \begin_layout Standard
-### 总结
+ 总结
 \end_layout
 
 \begin_layout Standard
@@ -97034,12 +97704,12 @@ mathbf{r}$ 与路径无关的条件主要有以下几种等价表达：
 \end_layout
 
 \begin_layout Standard
-### 主要条件 (等价条件)
+ 主要条件 (等价条件)
 \end_layout
 
 \begin_layout Standard
 1.
- **存在标量势函数 (Conservative Field):**
+ 存在标量势函数 (Conservative Field):
 \end_layout
 
 \begin_layout Standard
@@ -97047,7 +97717,7 @@ mathbf{r}$ 与路径无关的条件主要有以下几种等价表达：
 \backslash
 phi(x,
  y,
- z)$（称为 **标量势函数** 或 **势能函数**），
+ z)$（称为 标量势函数 或 势能函数），
 使得向量场 $
 \backslash
 mathbf{F}$ 是它的梯度。
@@ -97105,7 +97775,7 @@ partial z} $$
 
 \begin_layout Standard
 如果这个条件成立，
-根据 **线积分基本定理 (Fundamental Theorem for Line Integrals)**，
+根据 线积分基本定理 (Fundamental Theorem for Line Integrals)，
 线积分的值只取决于起点和终点：
 
 \end_layout
@@ -97139,17 +97809,17 @@ phi(A) $$
 \begin_layout Standard
 其中 $A$ 是积分的起点，
  $B$ 是积分的终点。
-这样的向量场被称为 **保守场 (Conservative Field)**。
+这样的向量场被称为 保守场 (Conservative Field)。
 
 \end_layout
 
 \begin_layout Standard
 2.
- **向量场的旋度为零 (Irrotational Field):**
+ 向量场的旋度为零 (Irrotational Field):
 \end_layout
 
 \begin_layout Standard
-在**单连通 (Simply Connected)** 区域内，
+在单连通 (Simply Connected) 区域内，
 向量场 $
 \backslash
 mathbf{F}$ 的旋度处处为零。
@@ -97223,13 +97893,13 @@ partial y} = 0 $$
 \end_layout
 
 \begin_layout Standard
-这样的场被称为 **无旋场 (Irrotational Field)**。
+这样的场被称为 无旋场 (Irrotational Field)。
 
 \end_layout
 
 \begin_layout Standard
-* **单连通区域的重要性：
-** 这个条件只有在场的定义域是单连通时才充分。
+* 单连通区域的重要性：
+ 这个条件只有在场的定义域是单连通时才充分。
 单连通区域是指区域内任意一个闭合曲线都可以连续地收缩为一点，
 而不会遇到区域的“洞”。
 例如，
@@ -97251,7 +97921,7 @@ mathbb{R}^3$），
 
 \begin_layout Standard
 3.
- **沿任意闭合路径的线积分为零:**
+ 沿任意闭合路径的线积分为零:
 \end_layout
 
 \begin_layout Standard
@@ -97293,7 +97963,7 @@ phi(A) = 0$。
 \end_layout
 
 \begin_layout Standard
-### 总结
+ 总结
 \end_layout
 
 \begin_layout Standard
@@ -97353,11 +98023,11 @@ mathbf{F}$ 沿着 $D$ 内任意一条闭合路径的线积分为零。
 
 \begin_layout Standard
 在实际应用中，
-检查 **
+检查 
 \begin_inset Formula $\nabla\times\mathbf{F}=\mathbf{0}$
 \end_inset
 
-** 是最常用的方法来判断一个向量场是否为保守场（并因此其线积分是否与路径无关），
+ 是最常用的方法来判断一个向量场是否为保守场（并因此其线积分是否与路径无关），
 前提是我们需要确认其定义域是单连通的。
 
 \end_layout
@@ -98960,7 +99630,7 @@ H_{n}= & 1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}\\
 \end_layout
 
 \begin_layout Standard
-#### **例 2（发散）**
+ 例 2（发散）
 \end_layout
 
 \begin_layout Standard
@@ -99083,7 +99753,7 @@ frac{n}{e} =
 infty 
 \backslash
 )，
-所以级数**发散**。
+所以级数发散。
 
 \end_layout
 
@@ -105070,11 +105740,11 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 \begin_inset Newline newline
 \end_inset
 
-它的系数序列正是 `
+它的系数序列正是 
 \begin_inset Formula $(0,1,2,3,\cdots)$
 \end_inset
 
-`
+
 \end_layout
 
 \begin_layout Enumerate
@@ -105111,12 +105781,12 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 \end_layout
 
 \begin_layout Standard
-### 主要应用领域
+ 主要应用领域
 \end_layout
 
 \begin_layout Standard
 1.
- **解决组合计数问题**：
+ 解决组合计数问题：
 这是生成函数的“主场”。
 例如，
 计算用1分、5分、10分的硬币凑成1元的方案数，
@@ -105126,7 +105796,7 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 
 \begin_layout Standard
 2.
- **求解递推关系 (Recurrence Relations)**：
+ 求解递推关系 (Recurrence Relations)：
 像斐波那契数列 $F_n = F_{n-1} + F_{n-2}$ 这样的问题，
 可以用生成函数找到其通项公式，
 而无需猜测。
@@ -105135,7 +105805,7 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 
 \begin_layout Standard
 3.
- **证明组合恒等式**：
+ 证明组合恒等式：
 要证明两个复杂的和式相等，
 只需证明它们的生成函数是同一个函数。
 
@@ -105143,7 +105813,7 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 
 \begin_layout Standard
 4.
- **在概率论中**：
+ 在概率论中：
 矩生成函数 (Moment-generating function) 是一个类似的概念，
 用于描述概率分布。
 
@@ -106567,9 +107237,9 @@ g(1)=\frac{1}{1+1}=\frac{1}{2}
 \end_layout
 
 \begin_layout Standard
-**这就是我们通过生成函数法得到 1/2 的严格数学解释。
+这就是我们通过生成函数法得到 1/2 的严格数学解释。
 我们实际上是在计算其解析延拓后的函数在那个点的值。
-**
+
 \end_layout
 
 \begin_layout Paragraph
@@ -106832,7 +107502,7 @@ g(1)=\frac{1}{1+1}=\frac{1}{2}
 
 \begin_layout Standard
 有的。
-当函数的定义域边界成为自然边界 (Natural Boundary)** 时，
+当函数的定义域边界成为自然边界 (Natural Boundary) 时，
 就无法进行解析延拓。
 
 \end_layout
@@ -107271,7 +107941,7 @@ S=1-1+1-1+\cdots
 \begin_inset Formula $1-S$
 \end_inset
 
- 等于原始的级数 `S`。
+ 等于原始的级数 S。
 所以：
 
 \begin_inset Formula 
@@ -111047,7 +111717,11 @@ Zeta函数可以写成一个涉及所有素数的无穷乘积：
 \end_inset
 
 ，
-其他所有括号里都取 `1`。
+其他所有括号里都取 
+\begin_inset Formula $1$
+\end_inset
+
+。
 
 \end_layout
 
@@ -111252,7 +111926,7 @@ Zeta函数在负整数点的值
 是的，
 还有无穷多个！
 这些零点被称为非平凡零点 (non-trivial zeros)。
-黎曼证明了所有非平凡零点都位于所谓的**临界带 (critical strip) 中，
+黎曼证明了所有非平凡零点都位于所谓的临界带 (critical strip) 中，
 即满足 
 \begin_inset Formula $0<\text{Re}(s)<1$
 \end_inset
@@ -111281,7 +111955,7 @@ Zeta函数在负整数点的值
 \begin_layout Standard
 这意味着，
 所有这些非平凡零点都位于复平面上一条非常特殊的直线上，
-这条线被称为**临界线 (critical line)**。
+这条线被称为临界线 (critical line)。
 
 \end_layout
 
@@ -111291,7 +111965,7 @@ Zeta函数在负整数点的值
 \end_layout
 
 \begin_layout Standard
-因为非平凡零点的位置与**素数的分布**有着极其深刻和精确的联系。
+因为非平凡零点的位置与素数的分布有着极其深刻和精确的联系。
 
 \end_layout
 
@@ -111299,11 +111973,11 @@ Zeta函数在负整数点的值
 如果黎曼猜想成立，
 我们就能对素数的分布规律有前所未有的精确理解。
 例如，
-我们可以得到关于**素数计数函数 
+我们可以得到关于素数计数函数 
 \begin_inset Formula $\pi(x)$
 \end_inset
 
-** (小于x的素数个数) 的最佳误差估计。
+ (小于x的素数个数) 的最佳误差估计。
 
 \end_layout
 
@@ -114119,8 +114793,8 @@ P(A_{1})=\frac{5}{8}
 
 \begin_layout Example
 2.
- **如果出售的 1 台是正品，
-1 台是次品** 
+ 如果出售的 1 台是正品，
+1 台是次品 
 \end_layout
 
 \begin_layout Example
@@ -115836,7 +116510,7 @@ a-e^{-\lambda x} & x>0\\
 \end_layout
 
 \begin_layout Standard
-### 定义：
+ 定义：
 
 \end_layout
 
@@ -115879,7 +116553,7 @@ a-e^{-\lambda x} & x>0\\
 \end_layout
 
 \begin_layout Standard
-### 含义：
+ 含义：
 
 \end_layout
 
@@ -117013,7 +117687,7 @@ F(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-- **期望值（均值）**：
+- 期望值（均值）：
  
 \begin_inset Formula 
 \[
@@ -117026,7 +117700,7 @@ E[X]=\frac{a+b}{2}
 \end_layout
 
 \begin_layout Standard
-- **方差**：
+- 方差：
  
 \begin_inset Formula 
 \[
@@ -117312,8 +117986,8 @@ P(X=k)=C_{n}^{k}p^{k}(1-p)^{n-k},k=0,1,2,…,n
 
 \begin_layout Standard
 二项分布（Binomial Distribution）和几何分布（Geometric Distribution）都是离散型概率分布，
-常用于**伯努利试验**（即只有“成功/失败”两种结果的重复试验）。
-不过它们的**研究重点不同**，
+常用于伯努利试验（即只有“成功/失败”两种结果的重复试验）。
+不过它们的研究重点不同，
 区别如下：
 
 \end_layout
@@ -118419,7 +119093,7 @@ p_{n}^{k}(1-p)^{n-k}\thickapprox\frac{\lambda^{k}e^{-k}}{k!}\text{ (其\text{中
 \end_layout
 
 \begin_layout Standard
-## 定义公式：
+ 定义公式：
 
 \end_layout
 
@@ -118484,7 +119158,7 @@ P(X=x)=\frac{{\binom{K}{x}\binom{N-K}{n-x}}}{\binom{N}{n}}
 \end_layout
 
 \begin_layout Standard
-## 期望和方差：
+ 期望和方差：
 
 \end_layout
 
@@ -118622,7 +119296,7 @@ Var(X)=n\cdot\frac{K}{N}\cdot\left(1-\frac{K}{N}\right)\cdot\frac{N-n}{N-1}
 \end_layout
 
 \begin_layout Standard
-##  数学上的近似：
+  数学上的近似：
 
 \end_layout
 
@@ -118737,7 +119411,7 @@ X\sim\text{Binomial}(10,\frac{500}{10000}=0.05)\Rightarrow P(X=2)=\binom{10}{2}\
 \end_layout
 
 \begin_layout Standard
-## 什么时候不能近似？
+ 什么时候不能近似？
 
 \end_layout
 
@@ -118773,7 +119447,7 @@ X\sim\text{Binomial}(10,\frac{500}{10000}=0.05)\Rightarrow P(X=2)=\binom{10}{2}\
 \end_layout
 
 \begin_layout Standard
-##  和二项分布的对比总结：
+  和二项分布的对比总结：
 
 \end_layout
 
@@ -122945,7 +123619,7 @@ X 与 Y 相互独立。
 
 \begin_layout Standard
 1.
- **边缘分布：
+ 边缘分布：
  
 \end_layout
 
@@ -122959,7 +123633,7 @@ X 与 Y 相互独立。
 
 \begin_layout Standard
 2.
- **条件分布**：
+ 条件分布：
  
 \end_layout
 
@@ -122973,7 +123647,7 @@ X 与 Y 相互独立。
 
 \begin_layout Standard
 3.
- **等密度曲线是椭圆形**：
+ 等密度曲线是椭圆形：
  
 \end_layout
 
@@ -124195,7 +124869,7 @@ F_{X,Y}(x,y)=F_{X}(x)\cdot F_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 二、离散型情形
+ 二、离散型情形
 \end_layout
 
 \begin_layout Standard
@@ -124234,7 +124908,7 @@ P(X=x_{i},Y=y_{j})=P(X=x_{i})\cdot P(Y=y_{j})
 \end_layout
 
 \begin_layout Standard
-## 三、连续型情形
+ 三、连续型情形
 \end_layout
 
 \begin_layout Standard
@@ -124281,7 +124955,7 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 四、边缘分布与独立性关系
+ 四、边缘分布与独立性关系
 \end_layout
 
 \begin_layout Standard
@@ -124291,8 +124965,8 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-- 但反过来 **仅知道边缘分布，
-不能判断是否独立**。
+- 但反过来 仅知道边缘分布，
+不能判断是否独立。
 
 \end_layout
 
@@ -124301,7 +124975,7 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-### 例子（离散）
+ 例子（离散）
 \end_layout
 
 \begin_layout Standard
@@ -124360,7 +125034,7 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-所以 **X 和 Y 不独立**。
+所以 X 和 Y 不独立。
 
 \end_layout
 
@@ -124369,23 +125043,23 @@ f_{X,Y}(x,y)=f_{X}(x)\cdot f_{Y}(y)
 \end_layout
 
 \begin_layout Standard
-## 六、与“不相关”的区别
+ 六、与“不相关”的区别
 \end_layout
 
 \begin_layout Standard
-- **独立
+- 独立
 \begin_inset Formula $\Longrightarrow$
 \end_inset
 
- 不相关**（协方差为 0）
+ 不相关（协方差为 0）
 \end_layout
 
 \begin_layout Standard
-- 但 **不相关 
+- 但 不相关 
 \begin_inset Formula $\neq$
 \end_inset
 
- 独立**，
+ 独立，
 只有当两个变量是正态分布时，
 协方差为 0 才意味着独立。
 
@@ -125724,8 +126398,8 @@ P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
 
 \begin_layout Standard
 1.
- **伯努利分布加法：
-**
+ 伯努利分布加法：
+
 \end_layout
 
 \begin_layout Standard
@@ -125738,8 +126412,8 @@ P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
 
 \begin_layout Standard
 2.
- **多伯努利变量之和：
-**
+ 多伯努利变量之和：
+
 \end_layout
 
 \begin_layout Standard
@@ -125752,8 +126426,8 @@ P(Z=k)=\sum_{i=0}^{k}P(X=i)\cdot P(Y=k-i)
 
 \begin_layout Standard
 3.
- **泊松分布的再生性：
-**
+ 泊松分布的再生性：
+
 \end_layout
 
 \begin_layout Standard
@@ -125913,13 +126587,13 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-以下是图中两道**例题的识别与整理**，
+以下是图中两道例题的识别与整理，
 包括题干、概率分布表与计算过程：
 
 \end_layout
 
 \begin_layout Standard
-**题目**：
+题目：
  
 \end_layout
 
@@ -125939,7 +126613,7 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-**分布表**：
+分布表：
 
 \end_layout
 
@@ -125964,7 +126638,7 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-**计算过程**：
+计算过程：
  
 \end_layout
 
@@ -125980,7 +126654,7 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-**题目**：
+题目：
  
 \end_layout
 
@@ -126033,13 +126707,13 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-**目标**：
-求产品的**平均产值**。
+目标：
+求产品的平均产值。
 
 \end_layout
 
 \begin_layout Standard
-**分布表**：
+分布表：
 
 \end_layout
 
@@ -126064,7 +126738,7 @@ E(X)=\stackrel[k=1]{\infty}{\varSigma}x_{k}p_{k}
 \end_layout
 
 \begin_layout Standard
-**计算过程**：
+计算过程：
  
 \end_layout
 
@@ -126491,7 +127165,7 @@ mathbb{E}[2X - 1]
 \end_layout
 
 \begin_layout Standard
-#### 1.
+ 1.
  计算 
 \backslash
 ( 
@@ -126518,7 +127192,7 @@ mathbb{E}[X^2]
 \end_layout
 
 \begin_layout Standard
-#### 2.
+ 2.
  计算 
 \backslash
 ( 
@@ -126740,11 +127414,11 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-## 三、特别常用的例子
+ 三、特别常用的例子
 \end_layout
 
 \begin_layout Standard
-### 1.
+ 1.
  协方差（Covariance）：
 
 \end_layout
@@ -126761,7 +127435,7 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-### 2.
+ 2.
  相关系数（Correlation Coefficient）：
 
 \end_layout
@@ -126805,8 +127479,8 @@ f(x)=\begin{cases}
 \end_layout
 
 \begin_layout Standard
-* **求：
-** 
+* 求：
+ 
 \begin_inset Formula $E(X+Y)$
 \end_inset
 
@@ -127669,7 +128343,7 @@ D(X)=E(X^{2})-[E(X)]^{2}
  如果两个随机变量的均值大小差异很大，
 直接比较它们的方差或标准差可能不够直观。
 在这种情况下，
-可以使用**变异系数**（Coefficient of Variation,
+可以使用变异系数（Coefficient of Variation,
  CV），
 它是标准差与均值之比（$CV = 
 \backslash
@@ -127685,21 +128359,21 @@ mu|}$），
 \end_layout
 
 \begin_layout Standard
-**影响方差大小的因素：
-**
+影响方差大小的因素：
+
 \end_layout
 
 \begin_layout Standard
-* **随机变量的分布类型：
-** 不同的概率分布本身就具有不同的离散程度。
+* 随机变量的分布类型：
+ 不同的概率分布本身就具有不同的离散程度。
 例如，
 均匀分布通常比正态分布在相同取值范围内具有更大的方差。
 
 \end_layout
 
 \begin_layout Standard
-* **参数的影响：
-** 概率分布的参数会影响其方差的大小。
+* 参数的影响：
+ 概率分布的参数会影响其方差的大小。
 例如，
 二项分布 $B(n,
  p)$ 的方差为 $np(1-p)$，
@@ -127708,8 +128382,8 @@ mu|}$），
 \end_layout
 
 \begin_layout Standard
-* **数据本身的波动性：
-** 如果观测到的数据本身波动就很大，
+* 数据本身的波动性：
+ 如果观测到的数据本身波动就很大，
 那么计算得到的样本方差也会相应地较大。
 
 \end_layout
@@ -149405,14 +150079,17 @@ x
 \end_layout
 
 \begin_layout Standard
-对于二维平面上的一个点 `(x,
- y)`，
+对于二维平面上的一个点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
 绕原点逆时针旋转 
 \begin_inset Formula $\theta$
 \end_inset
 
- 角度后得到的新坐标 `(x',
- y')` 可以通过以下矩阵乘法计算：
+ 角度后得到的新坐标 (x',
+ y') 可以通过以下矩阵乘法计算：
 
 \end_layout
 
@@ -149486,9 +150163,9 @@ y
 \end_layout
 
 \begin_layout Standard
-* **绕 Z 轴旋转 $
+* 绕 Z 轴旋转 $
 \backslash
-theta$ (俯仰角/yaw)**
+theta$ (俯仰角/yaw)
 \end_layout
 
 \begin_layout Standard
@@ -149532,9 +150209,9 @@ end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **绕 X 轴旋转 $
+* 绕 X 轴旋转 $
 \backslash
-theta$ (滚转角/roll)**
+theta$ (滚转角/roll)
 \end_layout
 
 \begin_layout Standard
@@ -149572,9 +150249,9 @@ end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **绕 Y 轴旋转 $
+* 绕 Y 轴旋转 $
 \backslash
-theta$ (偏航角/pitch)**
+theta$ (偏航角/pitch)
 \end_layout
 
 \begin_layout Standard
@@ -149618,8 +150295,8 @@ end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **组合旋转：
-** 如果需要进行多个轴向的旋转，
+* 组合旋转：
+ 如果需要进行多个轴向的旋转，
 可以将相应的旋转矩阵相乘。
 但要注意，
 矩阵乘法不满足交换律，
@@ -149649,78 +150326,75 @@ neq R_y R_x$。
 \end_layout
 
 \begin_layout Standard
-点 `(x,
- y)` 变为 `(x,
- -y)`。
+点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 变为 
+\begin_inset Formula $(x,-y)$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-$ M_x = 
-\backslash
-begin{pmatrix} 1 & 0 
-\backslash
+\begin_inset Formula $M_{x}=\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}$
+\end_inset
 
-\backslash
- 0 & -1 
-\backslash
-end{pmatrix} $
-\end_layout
-
-\begin_layout Standard
-* **关于 Y 轴反射**
-\end_layout
-
-\begin_layout Standard
-点 `(x,
- y)` 变为 `(-x,
- y)`。
 
 \end_layout
 
 \begin_layout Standard
-$ M_y = 
-\backslash
-begin{pmatrix} -1 & 0 
-\backslash
-
-\backslash
- 0 & 1 
-\backslash
-end{pmatrix} $
+* 关于 Y 轴反射
 \end_layout
 
 \begin_layout Standard
-* **关于直线 y = x 反射**
-\end_layout
-
-\begin_layout Standard
-点 `(x,
- y)` 变为 `(y,
- x)`。
+点 (x,
+ y) 变为 (-x,
+ y)。
 
 \end_layout
 
 \begin_layout Standard
-$ M_{y=x} = 
-\backslash
-begin{pmatrix} 0 & 1 
-\backslash
+\begin_inset Formula $M_{y}=\begin{pmatrix}-1 & 0\\
+0 & 1
+\end{pmatrix}$
+\end_inset
 
-\backslash
- 1 & 0 
-\backslash
-end{pmatrix} $
+
 \end_layout
 
 \begin_layout Standard
-* **关于直线 y = -x 反射**
+* 关于直线 y = x 反射
 \end_layout
 
 \begin_layout Standard
-点 `(x,
- y)` 变为 `(-y,
- -x)`。
+点 (x,
+ y) 变为 (y,
+ x)。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{y=x}=\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 关于直线 y = -x 反射
+\end_layout
+
+\begin_layout Standard
+点 (x,
+ y) 变为 (-y,
+ -x)。
 
 \end_layout
 
@@ -149737,7 +150411,7 @@ end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **关于过原点的任意直线反射**
+* 关于过原点的任意直线反射
 \end_layout
 
 \begin_layout Standard
@@ -149779,18 +150453,18 @@ end{pmatrix} $
 \end_layout
 
 \begin_layout Standard
-* **特性：
-**
+* 特性：
+
 \end_layout
 
 \begin_layout Standard
-* 反射矩阵也是**正交矩阵**，
+* 反射矩阵也是正交矩阵，
 即 $M^T M = I$。
 
 \end_layout
 
 \begin_layout Standard
-* 其**行列式**为 $
+* 其行列式为 $
 \backslash
 det(M) = -1$。
 行列式为-1表示它是一个反向的刚体变换（不改变形状、大小，
@@ -149809,15 +150483,15 @@ det(M) = -1$。
 \end_layout
 
 \begin_layout Standard
-* **关于 XY 平面反射**
+* 关于 XY 平面反射
 \end_layout
 
 \begin_layout Standard
-点 `(x,
+点 (x,
  y,
- z)` 变为 `(x,
+ z) 变为 (x,
  y,
- -z)`。
+ -z)。
 
 \end_layout
 
@@ -149840,9 +150514,9 @@ det(M) = -1$。
 \begin_inset Formula $(x,y,z)$
 \end_inset
 
-变为 `(x,
+变为 (x,
  -y,
- z)`。
+ z)。
 
 \end_layout
 
@@ -151884,7 +152558,7 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-## 分形学与绳子：
+ 分形学与绳子：
 看似简单之物中的无限复杂性
 \end_layout
 
@@ -151900,7 +152574,7 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-### 绳子的维度之谜：
+ 绳子的维度之谜：
 从一维到分形
 \end_layout
 
@@ -151917,14 +152591,14 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-* **远观**：
+* 远观：
 一个绳球在远处看只是一个点，
 呈现为零维。
 
 \end_layout
 
 \begin_layout Standard
-* **稍近**：
+* 稍近：
 走近后，
 它呈现为一个球状，
 是三维的。
@@ -151932,7 +152606,7 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-* **再近**：
+* 再近：
 当距离足够近时，
 我们能清晰地看到绳子的线条，
 这是一维的。
@@ -151940,7 +152614,7 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-* **微观**：
+* 微观：
 在显微镜下，
 这根“一维”的绳子会展现出其由更细的纤维构成的三维柱状结构。
 而这些纤维本身，
@@ -151955,7 +152629,7 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-### 分形维数与自相似性
+ 分形维数与自相似性
 \end_layout
 
 \begin_layout Standard
@@ -153067,7 +153741,7 @@ x_{4} & =y_{4}
 
 \begin_layout Standard
 在解析几何中，
-任何一个二次齐次方程都代表**两条经过原点的直线**（或者一条，
+任何一个二次齐次方程都代表两条经过原点的直线（或者一条，
 或者一个点，
 取决于判别式）。
 
@@ -153218,10 +153892,6 @@ s为定宽。
 
 \begin_layout Standard
 勒洛三角在机械工程上也可以用来钻方孔 (孔带有圆角)
-\end_layout
-
-\begin_layout Standard
-https://zh.m.wikipedia.org/zh-hans/%E5%8B%92%E6%B4%9B%E4%B8%89%E8%A7%92%E5%BD%A2#/media/File%3AReuleaux_triangle_Animation.gif
 \end_layout
 
 \begin_layout Standard
@@ -154057,7 +154727,7 @@ x取最小,
 \end_layout
 
 \begin_layout Section
-求x³+y³+z³=3的整数解
+求x^3+y^3+z^3=3的整数解
 \end_layout
 
 \begin_layout Standard
@@ -154128,7 +154798,7 @@ x取最小,
 \begin_inset Formula $d$
 \end_inset
 
-的余数是z³
+的余数是z^3
 \begin_inset Formula 
 \[
 k\equiv z^{3}(\mod d)
@@ -154622,7 +155292,7 @@ F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{
 \end_layout
 
 \begin_layout Solution
-This is **Binet's Formula**.
+This is Binet's Formula.
 \end_layout
 
 \begin_layout Solution
