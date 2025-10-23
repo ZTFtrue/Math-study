@@ -25074,6 +25074,7 @@ status open
 “群律”是一套规则，
 它规定了椭圆曲线上的点集如何构成一个阿贝尔群（交换群），
 而“点加法”则是实现这套规则的几何与代数方法。
+椭圆曲线点加法是椭圆曲线密码学的基础。
 
 \end_layout
 
@@ -26066,23 +26067,22 @@ status open
 \end_layout
 
 \begin_layout Standard
-椭圆曲线点加法是椭圆曲线密码学的基础。
 通过结合“点加法”和“点翻倍”，
-重复的点加法运算，
 我们可以定义出标量乘法（Scalar Multiplication）：
 
-\end_layout
+\begin_inset Formula 
+\[
+K=k\cdot P=kP=\underbrace{P+P+\dots+P}_{k\text{ 次}}
+\]
 
-\begin_layout Standard
-\begin_inset Formula $K=k\times P=kP=P+P+\cdots+P$
 \end_inset
 
-（k 次）
+
 \end_layout
 
 \begin_layout Standard
 这里的 
-\begin_inset Formula $k$
+\begin_inset Formula $d$
 \end_inset
 
  是一个普通的整数（标量），
@@ -26092,13 +26092,25 @@ status open
 
  是曲线上的一个点。
 这个运算的含义是：
- 将点 P 与自身相加 k 次。
+ 将点 
+\begin_inset Formula $P$
+\end_inset
+
+ 与自身相加 
+\begin_inset Formula $k-1$
+\end_inset
+
+ 次。
 
 \end_layout
 
 \begin_layout Standard
 这种点乘运算具有一个关键特性：
-给定
+
+\end_layout
+
+\begin_layout Itemize
+正向计算(容易) :给定
 \begin_inset Formula $k$
 \end_inset
 
@@ -26108,12 +26120,17 @@ status open
 
 ，
 很容易计算出 
-\begin_inset Formula $Q=kP$
+\begin_inset Formula $K=kP$
 \end_inset
 
 ；
-但给定 
-\begin_inset Formula $Q$
+
+\end_layout
+
+\begin_layout Itemize
+逆向计算(极其困难) :
+ 但给定 
+\begin_inset Formula $K$
 \end_inset
 
  和 
@@ -26126,26 +26143,25 @@ status open
 \end_inset
 
 。
-
+这个问题被称为 
+\series bold
+椭圆曲线离散对数问题 
+\series default
+(ECDLP)
 \end_layout
 
 \begin_layout Standard
 例如：
-
-\begin_inset Formula $3P=P+P+P$
-\end_inset
-
-。
-我们可以先计算 
-\begin_inset Formula $2P=P+P$
+如果 
+\begin_inset Formula $d=6$
 \end_inset
 
 ，
-然后再计算 
-\begin_inset Formula $3P=2P+P$
+计算
+\begin_inset Formula $6P$
 \end_inset
 
-。
+，
 通过高效的“平方求幂”思想（这里是“翻倍-相加”算法），
 即使 
 \begin_inset Formula $k$
@@ -26158,64 +26174,6 @@ status open
 
 。
 
-\end_layout
-
-\begin_layout Standard
-现在，
-密码学的“陷门”出现了：
-
-\end_layout
-
-\begin_layout Standard
-正向计算（容易）：
- 给定一个整数
-\begin_inset Formula $k$
-\end_inset
-
- 和一个点 
-\begin_inset Formula $P$
-\end_inset
-
-，
-计算 
-\begin_inset Formula $K=k\times P$
-\end_inset
-
- 是非常容易的。
-
-\end_layout
-
-\begin_layout Standard
-逆向计算（极其困难）：
- 给定点 
-\begin_inset Formula $K$
-\end_inset
-
- 和点 
-\begin_inset Formula $P$
-\end_inset
-
-，
-让你反向求出整数 
-\begin_inset Formula $k$
-\end_inset
-
- 是极其困难的。
-这个问题被称为椭圆曲线离散对数问题（ECDLP）。
-
-\end_layout
-
-\begin_layout Standard
-如果 
-\begin_inset Formula $k=6$
-\end_inset
-
-，
-计算
-\begin_inset Formula $6P$
-\end_inset
-
-:
 \end_layout
 
 \begin_layout Enumerate
@@ -26271,14 +26229,17 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-这就是椭圆曲线离散对数问题，
-也是椭圆曲线密码学安全性的基础。
-
+\begin_layout Paragraph
+安全性的来源：
+计算复杂度的巨大不对称
 \end_layout
 
 \begin_layout Enumerate
-一个 256 位的私钥 k 大约是 
+一个 256 位的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 大约是 
 \begin_inset Formula $10^{77}$
 \end_inset
 
@@ -26306,7 +26267,7 @@ status open
 没有“点除法”:
  椭圆曲线的运算法则只定义了加法。
 没有一个已知的、高效的逆运算可以让我们直接计算
-\begin_inset Formula $k=Q/P$
+\begin_inset Formula $k=K/P$
 \end_inset
 
 
@@ -26315,55 +26276,35 @@ status open
 \begin_layout Enumerate
 每一次点加法，
 都会让点“跳”到曲线上一个看似毫不相关的新位置。
-P,
- 2P,
- 3P,
- 4P...
+
+\begin_inset Formula $P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $2P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $3P$
+\end_inset
+
+,
+ 
+\begin_inset Formula $4P$
+\end_inset
+
+,
+\begin_inset Formula $\cdots$
+\end_inset
+
  这个序列的位置是高度不可预测的。
 
 \end_layout
 
 \begin_layout Standard
 这就是椭圆曲线密码学（ECC）的安全基石。
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $k$
-\end_inset
-
- 就成了你的私钥（一个只有你知道的秘密大数）。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $K$
-\end_inset
-
- 就成了你的公钥（一个公开的点，
-由你的私钥和公开的基点 
-\begin_inset Formula $P$
-\end_inset
-
- 计算得出）。
-
-\end_layout
-
-\begin_layout Standard
-任何人都可以看到你的公钥 
-\begin_inset Formula $K$
-\end_inset
-
- 和基点 
-\begin_inset Formula $P$
-\end_inset
-
-，
-但他们无法推算出你的私钥 
-\begin_inset Formula $k$
-\end_inset
-
-。
 
 \end_layout
 
@@ -26387,7 +26328,11 @@ ECDSA (椭圆曲线数字签名算法)：
 \end_layout
 
 \begin_layout Subsection
-签名和验证
+ECDSA 签名和验证
+\end_layout
+
+\begin_layout Subsubsection
+签名 (Signing)
 \end_layout
 
 \begin_layout Standard
@@ -26426,6 +26371,10 @@ ECDSA 签名（Signing） 的步骤，
 
 \end_layout
 
+\begin_layout Description
+密钥对的创建
+\end_layout
+
 \begin_layout Standard
 要生成一个有效的签名，
 签名者（例如，
@@ -26434,41 +26383,164 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \begin_layout Enumerate
-私钥 (d):
- 这是你的终极秘密。
-一个巨大的、随机生成的整数。
+私钥 (
+\begin_inset Formula $d$
+\end_inset
+
+):
+ 一个巨大的、随机生成的整数。
 
 \end_layout
 
 \begin_layout Enumerate
-消息的哈希 (z):
+消息的哈希 (
+\begin_inset Formula $z$
+\end_inset
+
+):
  待签名交易的“数字指纹”。
+通常是对交易做两次 SHA-256 后的结果（或按曲线阶长度作截断）。
+当消息哈希长度大于 
+\begin_inset Formula $n$
+\end_inset
 
+ 的比特长度时，
+要把哈希结果按比特长截断（或取模 
+\begin_inset Formula $n$
+\end_inset
+
+）
 \end_layout
 
 \begin_layout Enumerate
-全局曲线参数 (G,
- n):
+全局曲线参数 (
+\begin_inset Formula $G$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+):
  公开的椭圆曲线“游戏规则”，
-包括生成点 G 和子群的阶 n。
+包括生成点 
+\begin_inset Formula $G$
+\end_inset
+
+ 和子群的阶 
+\begin_inset Formula $n$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Enumerate
-一个密码学安全的随机数 (k):这是本次签名的临时秘密，
-极其重要！
-每次签名都必须使用一个全新的、不可预测的k。
+一个密码学安全的随机数 (
+\begin_inset Formula $k$
+\end_inset
+
+):
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ 满足
+\begin_inset Formula $1<k<n$
+\end_inset
+
+（或使用 RFC6979 确定性生成）,这里的 
+\begin_inset Formula $k$
+\end_inset
+
+ 是临时的，
+与私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 不同！
+每次签名都必须使用一个全新的、不可预测的
+\begin_inset Formula $k$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $K$
+\end_inset
+
+设置为公钥（一个公开的点，
+由随机数 (k):和公开的基点 
+\begin_inset Formula $P$
+\end_inset
+
+ 计算得出）。
+
+\begin_inset Formula 
+\[
+K=k\cdot G
+\]
+
+\end_inset
+
+这里的
+\begin_inset Formula $G$
+\end_inset
+
+ 就是那个被标准选定的、所有人都使用的公共基点。
+在通用公式 
+\begin_inset Formula $K=k\cdot P=kP$
+\end_inset
+
+ 中，
+
+\begin_inset Formula $P$
+\end_inset
+
+ 被具体化为 
+\begin_inset Formula $G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+任何人都可以看到你的公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 和基点 
+\begin_inset Formula $G$
+\end_inset
+
+，
+但他们无法推算出 随机数 
+\begin_inset Formula $k$
+\end_inset
+
+和私钥 
+\begin_inset Formula $d$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Paragraph
-签名
+签名步骤
 \end_layout
 
 \begin_layout Standard
 签名过程就是将上述“工具”代入一系列公式，
-最终计算出一对数字 (r,
- s)，
+最终计算出一对数字 
+\begin_inset Formula $(r,s)$
+\end_inset
+
+，
 这就是签名。
 
 \end_layout
@@ -26494,7 +26566,11 @@ ECDSA 签名（Signing） 的步骤，
 \begin_inset Formula $1<k<n$
 \end_inset
 
-。
+(或使用 
+\begin_inset Formula $RFC6979$
+\end_inset
+
+ 确定性生成)。
 
 \end_layout
 
@@ -26506,7 +26582,6 @@ ECDSA 签名（Signing） 的步骤，
 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 \begin_inset Formula $k$
 \end_inset
@@ -26524,11 +26599,10 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \end_deeper
-\end_deeper
 \begin_layout Enumerate
 第 2 步：
 计算点 
-\begin_inset Formula $P$
+\begin_inset Formula $R$
 \end_inset
 
  并导出 
@@ -26551,7 +26625,7 @@ ECDSA 签名（Signing） 的步骤，
 ，
 进行椭圆曲线标量乘法，
 计算出一个新的点 
-\begin_inset Formula $P$
+\begin_inset Formula $R$
 \end_inset
 
 。
@@ -26559,7 +26633,7 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $P=k\times G$
+\begin_inset Formula $R=k\times G$
 \end_inset
 
 
@@ -26567,11 +26641,11 @@ ECDSA 签名（Signing） 的步骤，
 
 \begin_layout Standard
 这个点 
-\begin_inset Formula $P$
+\begin_inset Formula $R$
 \end_inset
 
- 有自己的坐标 
-\begin_inset Formula $(Px,Py)$
+有自己的坐标 
+\begin_inset Formula $(Kx,Ky)$
 \end_inset
 
 。
@@ -26593,7 +26667,7 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $r=Px\mod n$
+\begin_inset Formula $r=R_{x}\mod n$
 \end_inset
 
 
@@ -26665,10 +26739,14 @@ ECDSA 签名（Signing） 的步骤，
 
  全部绑定在了一起：
 
-\begin_inset Formula $s=k^{-1}\times(z+r\times d)\mod n$
+\begin_inset Formula $s=\left[k^{-1}\times(z+r\times d)\right]\mod n$
 \end_inset
 
+（或者
+\begin_inset Formula $s=\left[(k^{-1}\mod n)\times(z+r\times d)\right]\mod n$
+\end_inset
 
+）
 \end_layout
 
 \begin_layout Standard
@@ -26690,11 +26768,63 @@ ECDSA 签名（Signing） 的步骤，
 \end_inset
 
  的模反元素，
-即 
-\begin_inset Formula $(k^{-1}\times k)\mod n=1$
+即
+\begin_inset Formula $k\cdot k^{-1}\equiv1\pmod n$
 \end_inset
 
 。
+
+\begin_inset Newline newline
+\end_inset
+
+对于一个整数 
+\begin_inset Formula $k$
+\end_inset
+
+，
+它的模 
+\begin_inset Formula $n$
+\end_inset
+
+ 乘法逆元，
+记作 
+\begin_inset Formula $k^{-1}$
+\end_inset
+
+，
+是另一个整数（我们不妨称之为 
+\begin_inset Formula $b$
+\end_inset
+
+），
+这个整数 
+\begin_inset Formula $b$
+\end_inset
+
+ 必须满足一个条件：
+
+\begin_inset Formula 
+\[
+k\cdot b\equiv1\pmod n
+\]
+
+\end_inset
+
+为了书写方便，
+我们直接用 
+\begin_inset Formula $k^{-1}$
+\end_inset
+
+来代替 b，
+所以定义就写成了：
+
+\begin_inset Formula 
+\[
+k\cdot k^{-1}\equiv1\pmod n
+\]
+
+\end_inset
+
 
 \end_layout
 
@@ -26734,7 +26864,11 @@ ECDSA 签名（Signing） 的步骤，
 \end_inset
 
 :
- 将总和乘以 k 的模反元素。
+ 将总和乘以 k 的模反元素(
+\begin_inset Formula $k\times k^{-1}=\mod n$
+\end_inset
+
+)。
 
 \end_layout
 
@@ -26765,9 +26899,36 @@ ECDSA 签名（Signing） 的步骤，
 \begin_deeper
 \begin_layout Standard
 经过以上计算，
-你就得到了一个由两个整数组成的对 (r,
- s)。
+你就得到了一个由两个整数组成的对 (
+\begin_inset Formula $r$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s$
+\end_inset
+
+)。
 这就是你对消息 z 的最终数字签名。
+
+\end_layout
+
+\begin_layout Standard
+比特币采用 low-S 规范（即若 
+\begin_inset Formula $s>\frac{n}{2}$
+\end_inset
+
+，
+用 
+\begin_inset Formula $n-s$
+\end_inset
+
+ 作为规范化后的 
+\begin_inset Formula $s$
+\end_inset
+
+），
+以避免签名非唯一性带来的问题。
 
 \end_layout
 
@@ -26784,208 +26945,8 @@ ECDSA 签名（Signing） 的步骤，
 
 \end_layout
 
-\begin_layout Paragraph
-\begin_inset Formula $k$
-\end_inset
-
- 的重要性：
-为什么绝不能重复使用？
-
-\end_layout
-
-\begin_layout Standard
-这是 ECDSA 实现中最容易出错、也最致命的地方。
-如果同一个私钥 
-\begin_inset Formula $d$
-\end_inset
-
- 对两条不同的消息 
-\begin_inset Formula $z_{1}$
-\end_inset
-
- 和 
-\begin_inset Formula $z_{2}$
-\end_inset
-
- 使用了相同的随机数
-\begin_inset Formula $k$
-\end_inset
-
-进行签名，
-那么你的私钥 d 将会瞬间暴露给全世界！
-
-\end_layout
-
-\begin_layout Standard
-推导过程如下：
-
-\end_layout
-
-\begin_layout Standard
-假设你用同一个 
-\begin_inset Formula $k$
-\end_inset
-
- 签署了两条消息 
-\begin_inset Formula $z_{1}$
-\end_inset
-
- 和 
-\begin_inset Formula $z_{2}$
-\end_inset
-
-，
-得到了两个签名：
-(r,
- 
-\begin_inset Formula $s_{1}$
-\end_inset
-
-) 和 (r,
- 
-\begin_inset Formula $s_{2}$
-\end_inset
-
-)。
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $s_{2}=k^{-1}(z_{2}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-攻击者拿到了这两条消息和两个签名，
-他可以做如下计算：
-
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $s_{1}-s_{2}=k^{-1}(z_{1}-z_{2})\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-两边同乘以 
-\begin_inset Formula $k$
-\end_inset
-
-：
-
-\begin_inset Formula $k\times(s_{1}-s_{2})=z_{1}-z_{2}\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-求解 ：
-
-\begin_inset Formula $k=\frac{(z_{1}-z_{2})}{(s_{1}-s_{2})}\mod n$
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-现在，
-攻击者已经从公开信息中计算出了你当时使用的秘密随机数 k！
-
-\end_layout
-
-\begin_layout Enumerate
-将求出的 
-\begin_inset Formula $k$
-\end_inset
-
- 代入任意一个 
-\begin_inset Formula $s$
-\end_inset
-
- 的原始公式，
-比如 
-\begin_inset Formula $s_{1}$
-\end_inset
-
-：
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-两边同乘以 
-\begin_inset Formula $k$
-\end_inset
-
-：
-
-\begin_inset Formula $k\times s_{1}=z_{1}+r\times d\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-求解私钥 
-\begin_inset Formula $d$
-\end_inset
-
-：
-
-\begin_inset Formula $d=(k\times s_{1}-z_{1})/r\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-攻击者仅仅通过分析你发布的两个签名，
-就完整地计算出了你的私钥 
-\begin_inset Formula $d$
-\end_inset
-
-，
-然后他就可以卷走你地址里所有的币。
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-真实案例：
- 2010年，
-索尼 PlayStation 3 的软件签名系统被破解，
-原因就是索尼在实现 ECDSA 签名时，
-为所有签名使用了一个静态的、而不是随机的 
-\begin_inset Formula $k$
-\end_inset
-
- 值。
-这导致黑客能够轻易地计算出索尼的软件主签名私钥。
-
-\end_layout
-
-\begin_layout Paragraph
-如何验证：
-
+\begin_layout Subsubsection
+如何验证
 \end_layout
 
 \begin_layout Standard
@@ -27037,9 +26998,18 @@ ECDSA 签名（Signing） 的步骤，
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
-签名 (r,
- s)：
+签名 (
+\begin_inset Formula $r$
+\end_inset
+
+,
+ 
+\begin_inset Formula $s$
+\end_inset
+
+)：
 
 \end_layout
 
@@ -27054,7 +27024,11 @@ r 和 s，
 
 \end_deeper
 \begin_layout Enumerate
-公钥 (K)：
+公钥 (
+\begin_inset Formula $K$
+\end_inset
+
+)：
 
 \end_layout
 
@@ -27071,9 +27045,16 @@ r 和 s，
 
 \end_deeper
 \begin_layout Enumerate
-4.
- 全局曲线参数 (G,
- n)：
+全局曲线参数 (
+\begin_inset Formula $G$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n$
+\end_inset
+
+)：
 
 \end_layout
 
@@ -27082,21 +27063,32 @@ r 和 s，
 所有人都知道并使用相同的椭圆曲线参数，
 包括
 \series bold
-生成点 G
+生成点 
+\begin_inset Formula $G$
+\end_inset
+
+
 \series default
  和 
 \series bold
-子群的阶 n
+子群的阶 
+\begin_inset Formula $n$
+\end_inset
+
+
 \series default
  。
 
 \end_layout
 
 \end_deeper
-\end_deeper
 \begin_layout Standard
 验证者（矿工）绝对没有、也绝不需要发送方的私钥 
 \begin_inset Formula $d$
+\end_inset
+
+和
+\begin_inset Formula $k$
 \end_inset
 
 。
@@ -27135,6 +27127,7 @@ r 和 s，
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 第 2 步：
 计算 
@@ -27224,14 +27217,14 @@ r 和 s，
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $u_{1}=z\times w\mod n$
+\begin_inset Formula $u_{1}=z\times w\,(\bmod n)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $u_{2}=r\times wmodn$
+\begin_inset Formula $u_{2}=r\times w\,(\bmod n)$
 \end_inset
 
 
@@ -27366,7 +27359,7 @@ r 和 s，
 
 \begin_layout Standard
 如果
-\begin_inset Formula $Px\mod n==r$
+\begin_inset Formula $Px\mod n=r$
 \end_inset
 
 ，
@@ -27395,7 +27388,10 @@ r 和 s，
 \end_layout
 
 \end_deeper
-\end_deeper
+\begin_layout Subsubsection
+总结
+\end_layout
+
 \begin_layout Paragraph
 为什么这个过程是有效的？
 
@@ -27408,7 +27404,7 @@ r 和 s，
 \end_inset
 
 的计算公式大致是 
-\begin_inset Formula $s=(z+r\times d)/k$
+\begin_inset Formula $s=\frac{z+r\times d}{k}$
 \end_inset
 
  (这里的 
@@ -27441,7 +27437,7 @@ r 和 s，
 \end_inset
 
  和 
-\begin_inset Formula $K=d*G$
+\begin_inset Formula $K=k*G$
 \end_inset
 
  代入并展开，
@@ -27575,6 +27571,543 @@ r 和 s，
 \end_inset
 
 ) 组合。
+
+\end_layout
+
+\begin_layout Proof
+在验证算法的第4步中计算出的点 
+\begin_inset Formula $P_{val}$
+\end_inset
+
+，
+实际上等于签名时使用的那个临时的、秘密的点 
+\begin_inset Formula $k*G$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\text{证明目标：}\quad(u_{1}\cdot G)+(u_{2}\cdot K)=k\cdot G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+已知 
+\begin_inset Formula $K=k\cdot G$
+\end_inset
+
+，
+签名 s 
+\begin_inset Formula $s\equiv k^{-1}(z+r\cdot d)\pmod n$
+\end_inset
+
+，
+ 
+\begin_inset Formula $w$
+\end_inset
+
+ 的定义
+\begin_inset Formula $w\equiv s^{-1}\pmod n$
+\end_inset
+
+，
+ 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ 的定义
+\begin_inset Formula $u_{1}\equiv z\cdot w\pmod n$
+\end_inset
+
+，
+
+\begin_inset Formula $u_{2}\equiv r\cdot w\pmod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+第1步：
+代入 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ 的定义
+\end_layout
+
+\begin_layout Proof
+我们先把 
+\begin_inset Formula $u_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $u_{2}$
+\end_inset
+
+ 替换成它们的定义式：
+
+\begin_inset Formula 
+\[
+P_{val}=(z\cdot w\cdot G)+(r\cdot w\cdot K)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(为了简洁，
+我们暂时省略 
+\begin_inset Formula $\mod n$
+\end_inset
+
+，
+默认所有标量运算都在模n下进行)
+\end_layout
+
+\begin_layout Proof
+第2步：
+提取公因式 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们看到两项中都有 
+\begin_inset Formula $w$
+\end_inset
+
+，
+根据标量乘法的分配律 
+\begin_inset Formula $(a+b)P=aP+bP$
+\end_inset
+
+，
+我们可以把 w 提取出来：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+P_{val}=w\cdot(z\cdot G+r\cdot K)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+第3步：
+代入公钥 
+\begin_inset Formula $K$
+\end_inset
+
+ 的定义
+\end_layout
+
+\begin_layout Proof
+现在，
+我们将
+\begin_inset Formula $K=d*G$
+\end_inset
+
+代入上式：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+P_{val}=w\cdot(z\cdot G+r\cdot(d\cdot G))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+第4步：
+再次提取公因式 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们看到括号内的两项现在都有 
+\begin_inset Formula $G$
+\end_inset
+
+，
+我们再次利用分配律，
+把 
+\begin_inset Formula $G$
+\end_inset
+
+提取出来：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+P_{val}=w\cdot(z+r\cdot d)\cdot G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+第5步：
+代入 
+\begin_inset Formula $w$
+\end_inset
+
+ 的定义 (关键一步)
+\end_layout
+
+\begin_layout Proof
+现在，
+我们将 
+\begin_inset Formula $w=s^{-1}$
+\end_inset
+
+ 代入：
+
+\begin_inset Formula 
+\[
+P_{val}=s^{-1}\cdot(z+r\cdot d)\cdot G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+第6步：
+观察与替换
+\end_layout
+
+\begin_layout Proof
+让我们仔细观察上式中的 
+\begin_inset Formula $s^{-1}*(z+r*d)$
+\end_inset
+
+部分。
+
+\end_layout
+
+\begin_layout Proof
+再回头看看我们的已知条件中签名 s 的定义：
+
+\begin_inset Formula 
+\[
+s=k^{-1}(z+r\cdot d)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+如果我们对这个定义式两边同时乘以 
+\begin_inset Formula $k$
+\end_inset
+
+，
+再除以 
+\begin_inset Formula $s$
+\end_inset
+
+，
+我们就可以得到 
+\begin_inset Formula $k$
+\end_inset
+
+ 的表达式：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+k=s^{-1}(z+r\cdot d)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(这里的除法是模算术意义下的，
+即乘以逆元) 
+\end_layout
+
+\begin_layout Proof
+在第5步中
+\begin_inset Formula $P_{val}$
+\end_inset
+
+ 公式里 
+\begin_inset Formula $G$
+\end_inset
+
+ 前面的那一整串标量
+\begin_inset Formula $s^{-1}*(z+r*d)$
+\end_inset
+
+，
+不多不少，
+正好就是 k！
+
+\end_layout
+
+\begin_layout Proof
+所以，
+我们可以进行最终的替换：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+P_{val}=k\cdot G
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+证明完毕 (Q.E.D.)
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $k$
+\end_inset
+
+ 的重要性：
+为什么绝不能重复使用？
+
+\end_layout
+
+\begin_layout Standard
+这是 ECDSA 实现中最容易出错、也最致命的地方。
+如果同一个私钥 
+\begin_inset Formula $d$
+\end_inset
+
+ 对两条不同的消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+ 使用了相同的随机数
+\begin_inset Formula $k$
+\end_inset
+
+进行签名，
+那么你的私钥 d 将会瞬间暴露给全世界！
+
+\end_layout
+
+\begin_layout Standard
+推导过程如下：
+
+\end_layout
+
+\begin_layout Standard
+假设你用同一个 
+\begin_inset Formula $k$
+\end_inset
+
+ 签署了两条消息 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+，
+得到了两个签名：
+(r,
+ 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+) 和 (r,
+ 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{2}=k^{-1}(z_{2}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+攻击者拿到了这两条消息和两个签名，
+他可以做如下计算：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s_{1}-s_{2}=k^{-1}(z_{1}-z_{2})\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times(s_{1}-s_{2})=(z_{1}-z_{2})\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求解 ：
+
+\begin_inset Formula $k=\frac{(z_{1}-z_{2})}{(s_{1}-s_{2})}\mod n$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+现在，
+攻击者已经从公开信息中计算出了你当时使用的秘密随机数 k！
+
+\end_layout
+
+\begin_layout Enumerate
+将求出的 
+\begin_inset Formula $k$
+\end_inset
+
+ 代入任意一个 
+\begin_inset Formula $s$
+\end_inset
+
+ 的原始公式，
+比如 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+：
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $s_{1}=k^{-1}(z_{1}+r\times d)\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+两边同乘以 
+\begin_inset Formula $k$
+\end_inset
+
+：
+
+\begin_inset Formula $k\times s_{1}=z_{1}+r\times d\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+求解私钥 
+\begin_inset Formula $d$
+\end_inset
+
+：
+
+\begin_inset Formula $d=(k\times s_{1}-z_{1})/r\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+攻击者仅仅通过分析你发布的两个签名，
+就完整地计算出了你的私钥 
+\begin_inset Formula $d$
+\end_inset
+
+，
+然后他就可以卷走你地址里所有的币。
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+真实案例：
+ 2010年，
+索尼 PlayStation 3 的软件签名系统被破解，
+原因就是索尼在实现 ECDSA 签名时，
+为所有签名使用了一个静态的、而不是随机的 
+\begin_inset Formula $k$
+\end_inset
+
+ 值。
+这导致黑客能够轻易地计算出索尼的软件主签名私钥。
 
 \end_layout
 
@@ -28275,17 +28808,17 @@ a\cdot b\equiv1\pmod p
 
 \begin_layout Plain Layout
 * 对这个方程两边同时 mod p，
-我们得到 ax + py 
-\backslash
-equiv 1 
-\backslash
-pmod p。
+我们得到 
+\begin_inset Formula $ax+py\equiv1\pmod p$
+\end_inset
+
+。
 因为 py 是 p 的倍数，
-所以 py 
-\backslash
-equiv 0 
-\backslash
-pmod p。
+所以 
+\begin_inset Formula $py\equiv0\pmod p$
+\end_inset
+
+。
 
 \end_layout
 
@@ -28703,11 +29236,17 @@ x^{3}-s^{2}x^{2}+\dots\equiv0
 \begin_layout Standard
 4.
  根据韦达定理，
-一元三次方程的三个根 $$x_1,
- x_2,
- x_3$$ 之和等于二次项系数的相反数。
+一元三次方程的三个根 
+\begin_inset Formula $x_{1},x_{2},x_{3}$
+\end_inset
+
+ 之和等于二次项系数的相反数。
 在本例中，
-三个根是切线与曲线交点的 x 坐标。
+三个根是切线与曲线交点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标。
 
 \end_layout
 
@@ -28722,13 +29261,30 @@ P
 \end_inset
 
  相切，
-所以 $$P$$ 是一个二重根。
-这意味着三个根中有两个是 $$x_p$$。
-设第三个交点 $$R'$$ 的 x 坐标为 $$x_{r'}$$。
+所以 
+\begin_inset Formula $P$
+\end_inset
 
-\end_layout
+ 是一个二重根。
+这意味着三个根中有两个是 
+\begin_inset Formula $x_{p}$
+\end_inset
 
-\begin_layout Standard
+。
+设第三个交点 
+\begin_inset Formula $R'$
+\end_inset
+
+ 的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标为 
+\begin_inset Formula $x_{r'}$
+\end_inset
+
+。
+
 \begin_inset Formula 
 \[
 x_{p}+x_{p}+x_{r'}=-(-s^{2})=s^{2}
@@ -28746,9 +29302,6 @@ x_{p}+x_{p}+x_{r'}=-(-s^{2})=s^{2}
 \end_inset
 
 :
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 x_{r'}=s^{2}-2x_{p}
@@ -28761,14 +29314,31 @@ x_{r'}=s^{2}-2x_{p}
 
 \begin_layout Standard
 7.
- 由于最终结果 $$R$$ 是 $$R'$$ 的镜像，
-它们的 x 坐标相同，
-即 $$x_r = x_{r'}$$。
+ 由于最终结果
+\begin_inset Formula $R$
+\end_inset
+
+ 是 
+\begin_inset Formula $R'$
+\end_inset
+
+ 的镜像，
+它们的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标相同，
+即 
+\begin_inset Formula 
+\[
+x_{r}=x_{r'}
+\]
+
+\end_inset
+
+。
 因此：
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 x_{r}\equiv s^{2}-2x_{p}\pmod p
@@ -28781,13 +29351,45 @@ x_{r}\equiv s^{2}-2x_{p}\pmod p
 
 \begin_layout Standard
  第三步：
-计算交点的 y 坐标 y_r
+计算交点的 
+\begin_inset Formula $y$
+\end_inset
+
+ 坐标 
+\begin_inset Formula $y_{r}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-我们已经求出了交点 $$R'$$ 的 x 坐标 $$x_r$$。
-因为 $$R'$$ 在切线上，
-它的 y 坐标 $$y_{r'}$$ 必须满足切线方程。
+我们已经求出了交点 
+\begin_inset Formula $R'$
+\end_inset
+
+ 的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标 
+\begin_inset Formula $x_{r}$
+\end_inset
+
+。
+因为 
+\begin_inset Formula $R'$
+\end_inset
+
+ 在切线上，
+它的 
+\begin_inset Formula $y$
+\end_inset
+
+ 坐标 
+\begin_inset Formula $y_{r'}$
+\end_inset
+
+ 必须满足切线方程。
 
 \end_layout
 
@@ -29383,7 +29985,7 @@ P = 2G = (6,
 \end_layout
 
 \begin_layout Example
-* 新点 x:
+新点 x:
 \end_layout
 
 \begin_layout Example
@@ -29424,7 +30026,7 @@ P = 2G = (6,
 \end_layout
 
 \begin_layout Example
-* 新点 y:
+新点 y:
 \end_layout
 
 \begin_layout Example
@@ -30210,7 +30812,7 @@ G 的 y 坐标:
 ，
 由于椭圆曲线离散对数难题（ECDLP），
 没有人能反向计算出你的私钥 
-\begin_inset Formula $k$
+\begin_inset Formula $d$
 \end_inset
 
 。
