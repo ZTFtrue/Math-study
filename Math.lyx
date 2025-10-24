@@ -25060,7 +25060,63 @@ status open
 \end_layout
 
 \begin_layout Standard
+将 
+\begin_inset Formula $(0,1,0)$
+\end_inset
+
+ 代入齐次方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1^{2}\times0=0^{3}+a\times0\times0^{2}+b\times0^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0=0+0+0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 它就是椭圆曲线的 无穷远点 。
+
+\end_layout
+
+\begin_layout Itemize
+直观上，
+ 无穷远点没有
+\begin_inset Formula $(x,y)$
+\end_inset
+
+坐标，
+它是一个为了填补几何和代数漏洞而引入的概念点。
+
+\end_layout
+
+\begin_layout Itemize
+几何上，
+ 它是所有垂直线的共同交点。
+
+\end_layout
+
+\begin_layout Itemize
+代数上，
+ 它是点群的单位元。
+
+\end_layout
+
+\begin_layout Itemize
+在射影几何的齐次坐标系中，
+ 它可以被精确地表示为 
+\begin_inset Formula $(0,1,0)$
+\end_inset
+
+。
 
 \end_layout
 
@@ -26399,17 +26455,25 @@ ECDSA 签名（Signing） 的步骤，
 
 ):
  待签名交易的“数字指纹”。
-通常是对交易做两次 SHA-256 后的结果（或按曲线阶长度作截断）。
+通常是对交易数据做 一次或两次 SHA-256（在比特币中通常是两次），
+得到 256 比特的哈希值。
+通常是对交易做两次 SHA-256 后的结果。
 当消息哈希长度大于 
 \begin_inset Formula $n$
 \end_inset
 
- 的比特长度时，
-要把哈希结果按比特长截断（或取模 
+ 的比特长度时(哈希结果比曲线阶 n 的位长更长)，
+应将哈希截断为与 n 等长的比特（通常取 
+\series bold
+最左侧/高位
+\series default
+ 的比特），
+或按需要对 
 \begin_inset Formula $n$
 \end_inset
 
-）
+ 取模。
+
 \end_layout
 
 \begin_layout Enumerate
@@ -26437,20 +26501,24 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \begin_layout Enumerate
-一个密码学安全的随机数 (
+一个密码学安全的随机数（
 \begin_inset Formula $k$
 \end_inset
 
-):
+）:
  
 \begin_inset Formula $k$
 \end_inset
 
  满足
-\begin_inset Formula $1<k<n$
+\begin_inset Formula $1\leqslant k<n$
 \end_inset
 
-（或使用 RFC6979 确定性生成）,这里的 
+（或使用 
+\begin_inset Formula $RFC6979$
+\end_inset
+
+ 确定性生成）,这里的 
 \begin_inset Formula $k$
 \end_inset
 
@@ -26469,19 +26537,25 @@ ECDSA 签名（Signing） 的步骤，
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $K$
+长期公钥 (
+\begin_inset Formula $Q$
 \end_inset
 
-设置为公钥（一个公开的点，
-由随机数 (k):和公开的基点 
-\begin_inset Formula $P$
+)，
+（一个公开的椭圆曲线点，
+由私钥 
+\begin_inset Formula $d$
+\end_inset
+
+和公开的基点 
+\begin_inset Formula $G$
 \end_inset
 
  计算得出）。
 
 \begin_inset Formula 
 \[
-K=k\cdot G
+Q=d\cdot G
 \]
 
 \end_inset
@@ -26491,26 +26565,12 @@ K=k\cdot G
 \end_inset
 
  就是那个被标准选定的、所有人都使用的公共基点。
-在通用公式 
-\begin_inset Formula $K=k\cdot P=kP$
+
+\begin_inset Newline newline
 \end_inset
 
- 中，
-
-\begin_inset Formula $P$
-\end_inset
-
- 被具体化为 
-\begin_inset Formula $G$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Itemize
 任何人都可以看到你的公钥 
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
  和基点 
@@ -26563,7 +26623,7 @@ K=k\cdot G
 
 ，
 它必须满足 
-\begin_inset Formula $1<k<n$
+\begin_inset Formula $1\leqslant k<n$
 \end_inset
 
 (或使用 
@@ -26645,7 +26705,7 @@ K=k\cdot G
 \end_inset
 
 有自己的坐标 
-\begin_inset Formula $(Kx,Ky)$
+\begin_inset Formula $(R_{x},R_{y})$
 \end_inset
 
 。
@@ -26739,11 +26799,11 @@ K=k\cdot G
 
  全部绑定在了一起：
 
-\begin_inset Formula $s=\left[k^{-1}\times(z+r\times d)\right]\mod n$
+\begin_inset Formula $s=\left[k^{-1}\times(z+r\cdot d)\right]\mod n$
 \end_inset
 
 （或者
-\begin_inset Formula $s=\left[(k^{-1}\mod n)\times(z+r\times d)\right]\mod n$
+\begin_inset Formula $s=\left[(k^{-1}\mod n)\times(z+r\cdot d)\right]\mod n$
 \end_inset
 
 ）
@@ -26829,7 +26889,7 @@ k\cdot k^{-1}\equiv1\pmod n
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $r\times d$
+\begin_inset Formula $r\cdot d$
 \end_inset
 
 :
@@ -26842,7 +26902,6 @@ k\cdot k^{-1}\equiv1\pmod n
 \end_inset
 
  的乘积。
-这是整个过程中唯一用到私钥 d 的地方！
 
 \end_layout
 
@@ -26865,7 +26924,7 @@ k\cdot k^{-1}\equiv1\pmod n
 
 :
  将总和乘以 k 的模反元素(
-\begin_inset Formula $k\times k^{-1}=\mod n$
+\begin_inset Formula $k\times k^{-1}\equiv1\pmod n$
 \end_inset
 
 )。
@@ -26887,6 +26946,33 @@ k\cdot k^{-1}\equiv1\pmod n
 如果是，
 也必须返回第 1 步，
 重新选择 k。
+
+\end_layout
+
+\begin_layout Standard
+比特币采用 
+\begin_inset Quotes eld
+\end_inset
+
+Low-S
+\begin_inset Quotes erd
+\end_inset
+
+ 规范（即若 
+\begin_inset Formula $s>\frac{n}{2}$
+\end_inset
+
+，
+用 
+\begin_inset Formula $s'=n-s$
+\end_inset
+
+ 作为规范化后的 
+\begin_inset Formula $s$
+\end_inset
+
+），
+以确保唯一性并防止非规范签名。
 
 \end_layout
 
@@ -26913,30 +26999,11 @@ k\cdot k^{-1}\equiv1\pmod n
 
 \end_layout
 
-\begin_layout Standard
-比特币采用 low-S 规范（即若 
-\begin_inset Formula $s>\frac{n}{2}$
-\end_inset
-
-，
-用 
-\begin_inset Formula $n-s$
-\end_inset
-
- 作为规范化后的 
-\begin_inset Formula $s$
-\end_inset
-
-），
-以避免签名非唯一性带来的问题。
-
-\end_layout
-
 \end_deeper
 \begin_layout Standard
 现在，
 你的钱包软件可以把原始交易、你的公钥 
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
 以及这个签名 (r,
@@ -26955,18 +27022,13 @@ k\cdot k^{-1}\equiv1\pmod n
 \end_layout
 
 \begin_layout Standard
-验证的最高目标是：
- “这个提供的
+验证算法的目标是：
+“
 \series bold
-签名
+确认提供的签名确实由与该公钥对应的私钥生成，
+并且消息内容未被修改。
+
 \series default
-，
-是否真的是由与这个公钥相对应的那个私钥，
-对这条
-\series bold
-消息
-\series default
-（交易）所签署的？
 ”
 \end_layout
 
@@ -26977,7 +27039,11 @@ k\cdot k^{-1}\equiv1\pmod n
 \end_layout
 
 \begin_layout Enumerate
-消息的哈希 (z)：
+消息的哈希 (
+\begin_inset Formula $z$
+\end_inset
+
+)：
 
 \end_layout
 
@@ -27025,7 +27091,7 @@ r 和 s，
 \end_deeper
 \begin_layout Enumerate
 公钥 (
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
 )：
@@ -27034,8 +27100,12 @@ r 和 s，
 
 \begin_deeper
 \begin_layout Standard
-这是发送方公开的、在椭圆曲线上的一个点 
-\begin_inset Formula $(Kx,Ky)$
+这是发送方公开的、在椭圆曲线上的一个点
+\begin_inset Formula $Q=d\cdot G$
+\end_inset
+
+ 
+\begin_inset Formula $(Q_{x},Q_{y})$
 \end_inset
 
 。
@@ -27125,6 +27195,14 @@ r 和 s，
 如果不是，
 验证直接失败。
 
+\begin_inset Formula $1\leqslant r<n$
+\end_inset
+
+,
+\begin_inset Formula $1\leqslant s<n$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -27169,9 +27247,13 @@ r 和 s，
 \begin_inset Formula $(w\times s)\mod n=1$
 \end_inset
 
-。
-这个计算可以通过“扩展欧几里得算法”快速完成。
+（或
+\begin_inset Formula $(w\times s)\equiv1(\mod n)$
+\end_inset
 
+）。
+这个计算可以通过“扩展欧几里得算法”快速完成。
+ 
 \end_layout
 
 \end_deeper
@@ -27246,7 +27328,7 @@ r 和 s，
 \begin_layout Enumerate
 第 4 步：
 计算曲线上的点
-\begin_inset Formula $P$
+\begin_inset Formula $X$
 \end_inset
 
  (关键步骤) 
@@ -27270,7 +27352,7 @@ r 和 s，
 \end_inset
 
  和 发送方的公钥 
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
  —
@@ -27280,7 +27362,7 @@ r 和 s，
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $P=(u_{1}\times G)+(u_{2}\times K)$
+\begin_inset Formula $X=(u_{1}\times G)+(u_{2}\times Q)$
 \end_inset
 
 
@@ -27308,12 +27390,12 @@ r 和 s，
 
 \begin_layout Standard
 (
-\begin_inset Formula $u_{2}\times K$
+\begin_inset Formula $u_{2}\times Q$
 \end_inset
 
 )：
 对发送方的公钥 
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
  进行标量乘法，
@@ -27328,12 +27410,30 @@ r 和 s，
 
 \begin_layout Standard
 最终，
-计算结果 P 是椭圆曲线上的一个点，
+计算结果 
+\begin_inset Formula $X$
+\end_inset
+
+ 是椭圆曲线上的一个点，
 拥有 
-\begin_inset Formula $(Px,Py)$
+\begin_inset Formula $(X_{x},X_{y})$
 \end_inset
 
  坐标。
+
+\end_layout
+
+\begin_layout Standard
+若计算结果 
+\begin_inset Formula $X$
+\end_inset
+
+是椭圆曲线的无穷远点（
+\begin_inset Formula $\infty$
+\end_inset
+
+），
+验证失败。
 
 \end_layout
 
@@ -27346,9 +27446,21 @@ r 和 s，
 \begin_deeper
 \begin_layout Standard
 现在，
-验证者拿到了计算出的点 P。
-他们会取出这个点的 x 坐标，
-我们称之为 Px。
+验证者拿到了计算出的点 
+\begin_inset Formula $X$
+\end_inset
+
+。
+他们会取出这个点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标，
+我们称之为 
+\begin_inset Formula $X_{x}$
+\end_inset
+
+。
 
 \end_layout
 
@@ -27359,26 +27471,30 @@ r 和 s，
 
 \begin_layout Standard
 如果
-\begin_inset Formula $Px\mod n=r$
+\begin_inset Formula $X_{x}\mod n=r$
 \end_inset
 
 ，
-则签名有效！
-
-\end_layout
-
-\begin_layout Standard
+则签名有效，
 如果 
-\begin_inset Formula $Px\mod n\neq r$
+\begin_inset Formula $X_{x}\mod n\neq r$
 \end_inset
 
 ，
-则签名无效！
+则签名无效。
 
 \end_layout
 
 \begin_layout Standard
-如果计算出的点的 x 坐标（模 n 后）与签名中的 
+如果计算出的点的 
+\begin_inset Formula $x$
+\end_inset
+
+ 坐标（模 
+\begin_inset Formula $n$
+\end_inset
+
+ 后）与签名中的 
 \begin_inset Formula $r$
 \end_inset
 
@@ -27398,249 +27514,312 @@ r 和 s，
 \end_layout
 
 \begin_layout Standard
-在签名时，
+\begin_inset Float table
+placement document
+alignment document
+wide false
+sideways false
+status open
 
-\begin_inset Formula $s$
-\end_inset
-
-的计算公式大致是 
-\begin_inset Formula $s=\frac{z+r\times d}{k}$
-\end_inset
-
- (这里的 
+\begin_layout Plain Layout
+私钥 (
 \begin_inset Formula $d$
 \end_inset
 
- 是私钥,
- 
-\begin_inset Formula $k$
-\end_inset
-
- 是一个临时随机数)。
-
-\end_layout
-
-\begin_layout Standard
-在验证时，
-我们计算的点
-\begin_inset Formula $P=u_{1}*G+u_{2}*K$
-\end_inset
-
-，
-如果把 
-\begin_inset Formula $u_{1}$
-\end_inset
-
-,
- 
-\begin_inset Formula $u_{2}$
-\end_inset
-
- 和 
-\begin_inset Formula $K=k*G$
-\end_inset
-
- 代入并展开，
-经过一系列数学变换，
-最终可以证明 
-\begin_inset Formula $P$
-\end_inset
-
- 等于 
-\begin_inset Formula $k*G$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Standard
-而在签名时，
-
-\begin_inset Formula $r$
-\end_inset
-
- 是如何生成的呢？
-
-\begin_inset Formula $r$
-\end_inset
-
- 正是 
-\begin_inset Formula $k\times G$
-\end_inset
-
- 这个点的 x 坐标！
-
-\end_layout
-
-\begin_layout Standard
-所以，
-整个验证过程实际上是在重新构建签名时使用的那个 临时点 
-\begin_inset Formula $k\times G$
-\end_inset
-
- 。
-它通过公开信息 (
+)，
+消息的哈希 (
 \begin_inset Formula $z$
 \end_inset
 
-,
- 
-\begin_inset Formula $r$
-\end_inset
-
-,
- 
-\begin_inset Formula $s$
-\end_inset
-
-,
- 
-\begin_inset Formula $K$
-\end_inset
-
-,
- 
+)，
+全局曲线参数(
 \begin_inset Formula $G$
 \end_inset
 
-)，
-以一种不同的路径，
-最终计算出了一个点 
-\begin_inset Formula $P$
-\end_inset
-
-。
-如果这个点 
-\begin_inset Formula $P$
-\end_inset
-
- 的 
-\begin_inset Formula $x$
-\end_inset
-
- 坐标恰好等于签名中的 
-\begin_inset Formula $r$
-\end_inset
-
-，
-就完美地证明了所有这些变量之间存在着一个由私钥 
-\begin_inset Formula $d$
-\end_inset
-
- 构成的、正确的数学关系。
-
-\end_layout
-
-\begin_layout Standard
-如果有人试图伪造签名，
-比如随便编一个 (
-\begin_inset Formula $r'$
-\end_inset
-
 ,
  
-\begin_inset Formula $s'$
+\begin_inset Formula $n$
 \end_inset
 
 )，
-那么在第4步计算出的点 
-\begin_inset Formula $P'$
+随机数（
+\begin_inset Formula $k$
 \end_inset
 
- 的 
-\begin_inset Formula $x$
+），
+长期公钥 (
+\begin_inset Formula $Q=d\cdot G$
 \end_inset
 
- 坐标几乎不可能恰好等于他编的 
-\begin_inset Formula $r'$
-\end_inset
-
-。
-这个数学 puzzle 只有在拥有正确的私钥 
-\begin_inset Formula $d$
-\end_inset
-
- 的情况下才能被“解开”并生成正确的 (
-\begin_inset Formula $r$
-\end_inset
-
-,
- 
-\begin_inset Formula $s$
-\end_inset
-
-) 组合。
-
+)
 \end_layout
 
-\begin_layout Proof
-在验证算法的第4步中计算出的点 
-\begin_inset Formula $P_{val}$
-\end_inset
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-，
-实际上等于签名时使用的那个临时的、秘密的点 
-\begin_inset Formula $k*G$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Proof
-\begin_inset Formula 
-\[
-\text{证明目标：}\quad(u_{1}\cdot G)+(u_{2}\cdot K)=k\cdot G
-\]
-
+\begin_layout Plain Layout
+生成
+\begin_inset Formula $k$
 \end_inset
 
 
 \end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R=k\times G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r=R_{x}\bmod n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{x}\bmod n=r$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s=\left[(k^{-1}\mod n)\times(z+r\cdot d)\right]\mod n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w=s^{−1}\bmod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $u_{1}=z\times w(\bmod n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $u_{2}=r\times w(\bmod n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=(u_{1}\times G)+(u_{2}\times Q)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(r,s)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Proof
-已知 
-\begin_inset Formula $K=k\cdot G$
+目标：
+证明验证方计算的点
+\begin_inset Formula $X=u_{1}\cdot G+u_{2}\cdot Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+等于签名时的临时点 
+\begin_inset Formula $R=k\cdot G$
+\end_inset
+
+（在群意义下），
+从而 (
+\begin_inset Formula $X_{x}\bmod n=r$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Proof
+已知：
+
+\begin_inset Formula $Q=d\cdot G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+签名定义：
+
+\begin_inset Formula $r=R_{x}\bmod n$
 \end_inset
 
 ，
-签名 s 
-\begin_inset Formula $s\equiv k^{-1}(z+r\cdot d)\pmod n$
+且 
+\begin_inset Formula $s\equiv k^{-1}(z+rd)\pmod n$
 \end_inset
 
-，
- 
-\begin_inset Formula $w$
-\end_inset
+.
+\end_layout
 
- 的定义
+\begin_layout Proof
+验证时：
+
 \begin_inset Formula $w\equiv s^{-1}\pmod n$
 \end_inset
 
-，
+,
  
-\begin_inset Formula $u_{1}$
+\begin_inset Formula $u_{1}\equiv zw\pmod n$
 \end_inset
 
- 和 
-\begin_inset Formula $u_{2}$
+,
+ 
+\begin_inset Formula $u_{2}\equiv rw\pmod n$
 \end_inset
 
- 的定义
-\begin_inset Formula $u_{1}\equiv z\cdot w\pmod n$
+.
+\end_layout
+
+\begin_layout Proof
+（注：
+下面标量运算均在模 
+\begin_inset Formula $n$
 \end_inset
 
-，
+ 下进行；
+点运算是在椭圆曲线群上。
+）
+\end_layout
 
-\begin_inset Formula $u_{2}\equiv r\cdot w\pmod n$
-\end_inset
-
+\begin_layout Proof
+推导：
 
 \end_layout
 
 \begin_layout Proof
 第1步：
+写出验证的点：
+
+\begin_inset Formula $X=u_{1}\cdot G+u_{2}\cdot Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
 代入 
 \begin_inset Formula $u_{1}$
 \end_inset
@@ -27665,7 +27844,7 @@ r 和 s，
 
 \begin_inset Formula 
 \[
-P_{val}=(z\cdot w\cdot G)+(r\cdot w\cdot K)
+X=(z\cdot w\cdot G)+(r\cdot w\cdot Q)
 \]
 
 \end_inset
@@ -27699,7 +27878,11 @@ P_{val}=(z\cdot w\cdot G)+(r\cdot w\cdot K)
 
 ，
 根据标量乘法的分配律 
-\begin_inset Formula $(a+b)P=aP+bP$
+\begin_inset Formula 
+\[
+(a+b)P=aP+bP
+\]
+
 \end_inset
 
 ，
@@ -27710,7 +27893,7 @@ P_{val}=(z\cdot w\cdot G)+(r\cdot w\cdot K)
 \begin_layout Proof
 \begin_inset Formula 
 \[
-P_{val}=w\cdot(z\cdot G+r\cdot K)
+X=w\cdot(z\cdot G+r\cdot Q)
 \]
 
 \end_inset
@@ -27721,7 +27904,7 @@ P_{val}=w\cdot(z\cdot G+r\cdot K)
 \begin_layout Proof
 第3步：
 代入公钥 
-\begin_inset Formula $K$
+\begin_inset Formula $Q$
 \end_inset
 
  的定义
@@ -27730,7 +27913,7 @@ P_{val}=w\cdot(z\cdot G+r\cdot K)
 \begin_layout Proof
 现在，
 我们将
-\begin_inset Formula $K=d*G$
+\begin_inset Formula $Q=d*G$
 \end_inset
 
 代入上式：
@@ -27740,7 +27923,7 @@ P_{val}=w\cdot(z\cdot G+r\cdot K)
 \begin_layout Proof
 \begin_inset Formula 
 \[
-P_{val}=w\cdot(z\cdot G+r\cdot(d\cdot G))
+X=w\cdot(z\cdot G+r\cdot(d\cdot G))
 \]
 
 \end_inset
@@ -27775,7 +27958,7 @@ P_{val}=w\cdot(z\cdot G+r\cdot(d\cdot G))
 \begin_layout Proof
 \begin_inset Formula 
 \[
-P_{val}=w\cdot(z+r\cdot d)\cdot G
+X=w\cdot(z+r\cdot d)\cdot G
 \]
 
 \end_inset
@@ -27802,7 +27985,7 @@ P_{val}=w\cdot(z+r\cdot d)\cdot G
 
 \begin_inset Formula 
 \[
-P_{val}=s^{-1}\cdot(z+r\cdot d)\cdot G
+X=s^{-1}\cdot(z+r\cdot d)\cdot G
 \]
 
 \end_inset
@@ -27854,12 +28037,14 @@ s=k^{-1}(z+r\cdot d)
 
  的表达式：
 
-\end_layout
+\begin_inset Formula $k=s^{-1}(z+r\cdot d)$
+\end_inset
 
-\begin_layout Proof
+，
+并对模 n 取逆可得
 \begin_inset Formula 
 \[
-k=s^{-1}(z+r\cdot d)
+k\equiv s^{-1}\big(z+rd\big)\pmod n
 \]
 
 \end_inset
@@ -27868,13 +28053,13 @@ k=s^{-1}(z+r\cdot d)
 \end_layout
 
 \begin_layout Proof
-(这里的除法是模算术意义下的，
-即乘以逆元) 
+(这里的“除法”是模算术意义下的，
+即乘以模逆元) 
 \end_layout
 
 \begin_layout Proof
 在第5步中
-\begin_inset Formula $P_{val}$
+\begin_inset Formula $X$
 \end_inset
 
  公式里 
@@ -27887,7 +28072,11 @@ k=s^{-1}(z+r\cdot d)
 
 ，
 不多不少，
-正好就是 k！
+正好就是 
+\begin_inset Formula $k$
+\end_inset
+
+！
 
 \end_layout
 
@@ -27900,7 +28089,7 @@ k=s^{-1}(z+r\cdot d)
 \begin_layout Proof
 \begin_inset Formula 
 \[
-P_{val}=k\cdot G
+X=k\cdot G=R
 \]
 
 \end_inset
@@ -28114,7 +28303,7 @@ P_{val}=k\cdot G
 \begin_layout Example
 我们来举一个非常小、可以用纸笔手动计算的例子，
 来完整地演示 
-\begin_inset Formula $K=d\times G$
+\begin_inset Formula $Q=d\times G$
 \end_inset
 
  的计算过程。
@@ -30104,7 +30293,11 @@ The Conclusion (陷门困境)
 \end_layout
 
 \begin_layout Example
-公钥 K:
+公钥 
+\begin_inset Formula $Q$
+\end_inset
+
+:
  
 \begin_inset Formula $(16,13)$
 \end_inset
