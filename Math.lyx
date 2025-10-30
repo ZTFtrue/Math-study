@@ -7273,9 +7273,11 @@ I(x)=-\log_{b}(P(x))
 
  的对数成比例。
 例如，
-二分查找算法的复杂度就是 $O(
-\backslash
-log n)$。
+二分查找算法的复杂度就是 
+\begin_inset Formula $O(\log n)$
+\end_inset
+
+。
 
 \end_layout
 
