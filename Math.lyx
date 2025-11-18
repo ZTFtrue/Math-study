@@ -107523,7 +107523,11 @@ xG'(x)=x(1+2x+3x^{2}+\cdots)=x+2x^{2}+3x^{3}+\cdots=\sum_{n=0}^{\infty}nx^{n}
 \begin_layout Standard
 2.
  求解递推关系 (Recurrence Relations)：
-像斐波那契数列 $F_n = F_{n-1} + F_{n-2}$ 这样的问题，
+像斐波那契数列 
+\begin_inset Formula $F_{n}=F_{n-1}+F_{n-2}$
+\end_inset
+
+ 这样的问题，
 可以用生成函数找到其通项公式，
 而无需猜测。
 
@@ -110047,6 +110051,11 @@ G(x)=\frac{1}{1-(-x)}=\frac{1}{1+x}
 \end{matrix}\right]\cdot\left[\begin{matrix}x^{0} & x^{1} & x^{2} & x^{3} & \cdots\end{matrix}\right]$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+求闭合形式：
 
 \end_layout
 
