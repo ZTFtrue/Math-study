@@ -4916,582 +4916,6 @@ N=m_{1}...m_{k}
 \end_layout
 
 \begin_layout Paragraph
-模反元素（Modular Multiplicative Inverse）
-\end_layout
-
-\begin_layout Standard
-如何计算
-\begin_inset Formula $w=s^{-1}\mod n$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这个式子等价于说：
-
-\begin_inset Formula $w\times s$
-\end_inset
-
- 除以 
-\begin_inset Formula $n$
-\end_inset
-
- 的余数是1。
-
-\end_layout
-
-\begin_layout Standard
-用数学语言来写，
-就是存在一个整数
-\begin_inset Formula $k$
-\end_inset
-
- ，
-使得：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $w\times s=k\times n+1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-现在，
-我们把 
-\begin_inset Formula $k\times n$
-\end_inset
-
- 移到等式的左边，
-得到：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $w\times s-k\times n=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-如果我们将 
-\begin_inset Formula $w$
-\end_inset
-
- 视为变量 
-\begin_inset Formula $x$
-\end_inset
-
-，
-将 
-\begin_inset Formula $-k$
-\end_inset
-
- 视为变量 
-\begin_inset Formula $y$
-\end_inset
-
-，
-这个方程就变成了：
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $s\times x+n\times y=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-这正是裴蜀定理 (Bézout's identity) 的形式！
-扩展欧几里得算法就是专门用来求解这样形式的方程 
-\begin_inset Formula $ax+by=GCD(a,b)$
-\end_inset
-
- 中的 
-\begin_inset Formula $x$
-\end_inset
-
- 和 
-\begin_inset Formula $y$
-\end_inset
-
- 的。
-
-\end_layout
-
-\begin_layout Standard
-因此，
-我们的计算步骤如下：
-
-\end_layout
-
-\begin_layout Enumerate
-前提条件：
-计算
-\begin_inset Formula $w=s^{-1}\mod n$
-\end_inset
-
-的前提是 
-\begin_inset Formula $s$
-\end_inset
-
- 和 
-\begin_inset Formula $n$
-\end_inset
-
- 必须互素，
-即
-\begin_inset Formula $GCD(s,n)=1$
-\end_inset
-
-。
-如果它们的最大公因数不是1，
-那么模反元素就不存在。
-
-\end_layout
-
-\begin_layout Enumerate
-目标：
-利用扩展欧几里得算法，
-找到一对整数 
-\begin_inset Formula $x$
-\end_inset
-
- 和 
-\begin_inset Formula $y$
-\end_inset
-
-，
-使得
-\begin_inset Formula $s\times x+n\times y=1$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Enumerate
-结果：
-我们找到的这个 
-\begin_inset Formula $x$
-\end_inset
-
-，
-就是我们要求的 
-\begin_inset Formula $w$
-\end_inset
-
-。
-有时候 
-\begin_inset Formula $x$
-\end_inset
-
- 可能是个负数，
-我们只需要将它转换到 
-\begin_inset Formula $[0,n-1]$
-\end_inset
-
- 的范围内即可。
-
-\end_layout
-
-\begin_layout Example
-求 
-\begin_inset Formula $17^{-1}\mod{26}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-假设 
-\begin_inset Formula $s=17$
-\end_inset
-
-,
- 
-\begin_inset Formula $n=26$
-\end_inset
-
-。
-我们要找到 
-\begin_inset Formula $w$
-\end_inset
-
- 使得 
-\begin_inset Formula $17w\equiv1(\mod{26})$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-第1步：
-运行标准的欧几里得算法，
-确认
-\begin_inset Formula $GCD$
-\end_inset
-
-为
-\begin_inset Formula $1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们先用辗转相除法求 
-\begin_inset Formula $GCD(26,17)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $26=1\times17+9$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $17=1\times9+8$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $9=1\times8+1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $8=8\times1+0$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-最大公因数是最后一个非零余数，
-即 
-\begin_inset Formula $1$
-\end_inset
-
-。
-太好了，
-
-\begin_inset Formula $GCD(26,17)=1$
-\end_inset
-
-，
-所以模反元素一定存在。
-
-\end_layout
-
-\begin_layout Example
- 第2步：
-反向代入，
-表达 
-\begin_inset Formula $1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在，
-我们从倒数第二步开始，
-反向工作，
-把 1 表示成 s 和 n (即 17 和 26) 的线性组合,
-\begin_inset Formula $s\times x+n\times y=1$
-\end_inset
-
-。
-这个过程也叫回代 (Back Substitution)。
-
-\end_layout
-
-\begin_layout Example
-从式子 
-\begin_inset Formula $9=1\times8+1$
-\end_inset
-
-开始，
-将 1 隔离出来：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=9-1\times8$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-现在看式子
-\begin_inset Formula $17=1\times9+8$
-\end_inset
-
-，
-将 
-\begin_inset Formula $8$
-\end_inset
-
- 隔离出来：
-
-\begin_inset Formula $8=17-1\times9$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-把这个 8 代入到上面的方程中：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=9-1\times(17-1\times9)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-展开并合并关于 9 的项：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=9-1\times17+1\times9$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=2\times9-1\times17$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-最后看式子
-\begin_inset Formula $26=1\times17+9$
-\end_inset
-
-，
-将 9 隔离出来：
-
-\begin_inset Formula $9=26-1\times17$
-\end_inset
-
-。
-把这个 
-\begin_inset Formula $9$
-\end_inset
-
- 代入到我们刚刚得到的方程中：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=2\times(26-1\times17)-1\times17$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-展开并合并关于 
-\begin_inset Formula $17$
-\end_inset
-
- 的项：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=2\times26-2\times17-1\times17$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $1=2\times26-3\times17$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-第3步：
-找到 
-\begin_inset Formula $w$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-我们已经得到了 
-\begin_inset Formula $1=2\times26-3\times17$
-\end_inset
-
- 这个结果。
-
-\end_layout
-
-\begin_layout Example
-为了匹配 
-\begin_inset Formula $s\times x+n\times y=1$
-\end_inset
-
- 的形式，
-我们把它写成：
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $17\times(-3)+26\times(2)=1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-与 
-\begin_inset Formula $s\times x+n\times y=1$
-\end_inset
-
- 对比，
-我们得到 
-\begin_inset Formula $s=17$
-\end_inset
-
-,
-\begin_inset Formula $n=26$
-\end_inset
-
-,
-\begin_inset Formula $,x=-3$
-\end_inset
-
-,
-\begin_inset Formula $y=2$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-我们需要的模反元素 
-\begin_inset Formula $w$
-\end_inset
-
- 就是这个 
-\begin_inset Formula $x$
-\end_inset
-
-，
-即 
-\begin_inset Formula $w=-3$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-第4步：
-将结果调整到 
-\begin_inset Formula $[0,n-1]$
-\end_inset
-
- 范围
-\end_layout
-
-\begin_layout Example
-通常我们希望得到一个正数作为结果。
- 
-\begin_inset Formula $-3$
-\end_inset
-
- 和 
-\begin_inset Formula $23$
-\end_inset
-
- 在模 
-\begin_inset Formula $26$
-\end_inset
-
- 的意义下是等价的，
-因为
-\begin_inset Formula $-3+26=23$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-所以 
-\begin_inset Formula $w=23$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-最终答案：
-
-\begin_inset Formula $17^{-1}\mod{26}=23$
-\end_inset
-
-。
-
-\end_layout
-
-\begin_layout Example
-验证一下:
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $(17\times23)\mod{26}=391\mod{26}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-\begin_inset Formula $391=15\times26+1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Example
-余数确实是
-\begin_inset Formula $1$
-\end_inset
-
 
 \end_layout
 
@@ -7359,6 +6783,287 @@ literal "false"
 \end_layout
 
 \begin_layout Section
+素数
+\end_layout
+
+\begin_layout Subsection
+梅森素数
+\end_layout
+
+\begin_layout Standard
+**梅森素数**（Mersenne Prime）是指形如 $2^n - 1$ 的素数（质数），
+其中 $n$ 为整数。
+
+\end_layout
+
+\begin_layout Standard
+它是数论中最著名的素数序列之一，
+以17世纪法国数学家**马兰·梅森**（Marin Mersenne）的名字命名。
+
+\end_layout
+
+\begin_layout Standard
+以下是关于梅森素数的详细介绍：
+
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 基本定义与公式
+\end_layout
+
+\begin_layout Standard
+梅森素数的通用公式是：
+
+\end_layout
+
+\begin_layout Standard
+$$M_n = 2^n - 1$$
+\end_layout
+
+\begin_layout Standard
+如果 $M_n$ 是素数，
+那么 $n$ 也必须是素数。
+
+\end_layout
+
+\begin_layout Standard
+* 例如：
+
+\end_layout
+
+\begin_layout Standard
+* 当 $n=2$ 时，
+$2^2 - 1 = 3$（是素数）
+\end_layout
+
+\begin_layout Standard
+* 当 $n=3$ 时，
+$2^3 - 1 = 7$（是素数）
+\end_layout
+
+\begin_layout Standard
+* 当 $n=5$ 时，
+$2^5 - 1 = 31$（是素数）
+\end_layout
+
+\begin_layout Standard
+**注意：
+** 虽然 $n$ 必须是素数，
+但并非所有素数 $n$ 对应的 $2^n-1$ 都是梅森素数。
+
+\end_layout
+
+\begin_layout Standard
+* 反例：
+当 $n=11$ 时，
+$2^{11} - 1 = 2047 = 23 
+\backslash
+times 89$（不是素数）。
+
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 历史渊源
+\end_layout
+
+\begin_layout Standard
+早在公元前300年，
+古希腊数学家欧几里得就研究过这种形式的数字，
+但他主要关注它们与**完全数**（Perfect Number）的关系。
+
+\end_layout
+
+\begin_layout Standard
+17世纪，
+马兰·梅森列出了当时已知的梅森素数，
+并大胆猜测了 $n 
+\backslash
+le 257$ 范围内哪些是素数。
+虽然他的猜测中有部分错误，
+但他的研究激发了后世无数数学家（如欧拉、卢卡斯）的探索热情。
+
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 与完全数的关系
+\end_layout
+
+\begin_layout Standard
+梅森素数与完全数（一个数等于其所有真因子之和，
+如 $6=1+2+3$）有着一一对应的关系：
+
+\end_layout
+
+\begin_layout Standard
+> **欧几里得-欧拉定理**：
+
+\end_layout
+
+\begin_layout Standard
+> 如果 $2^n - 1$ 是梅森素数，
+那么 $2^{n-1} 
+\backslash
+times (2^n - 1)$ 就是一个偶完全数。
+
+\end_layout
+
+\begin_layout Standard
+这意味着每发现一个新的梅森素数，
+我们就自动发现了一个新的完全数。
+
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 如何寻找：
+GIMPS 项目
+\end_layout
+
+\begin_layout Standard
+寻找梅森素数非常困难，
+因为数字增长极快。
+为了寻找更大的梅森素数，
+人们成立了**互联网梅森素数大搜索**（GIMPS,
+ Great Internet Mersenne Prime Search）项目。
+这是一个分布式计算项目，
+利用全球志愿者的计算机空闲算力来进行计算。
+
+\end_layout
+
+\begin_layout Standard
+为什么主要搜寻梅森素数来打破“最大素数”记录？
+
+\end_layout
+
+\begin_layout Standard
+因为有一种专门针对梅森数的素数测试方法叫**卢卡斯-莱默检验法**（Lucas–Lehmer primality test），
+它比测试普通数字是否为素数要快得多且高效。
+
+\end_layout
+
+\begin_layout Standard
+### 5.
+ 现状与记录（截至2024-2025年）
+\end_layout
+
+\begin_layout Standard
+截至目前，
+人类一共只发现了 **52** 个梅森素数。
+
+\end_layout
+
+\begin_layout Standard
+* **最新发现（第52个）：
+**
+\end_layout
+
+\begin_layout Standard
+2024年10月，
+GIMPS 项目宣布由 Luke Durant 发现了第 52 个梅森素数 $M_{136279841}$。
+
+\end_layout
+
+\begin_layout Standard
+* 数值：
+$2^{136,279,841} - 1$
+\end_layout
+
+\begin_layout Standard
+* 位数：
+这个数字拥有超过 **4100万** 位十进制数字。
+
+\end_layout
+
+\begin_layout Standard
+* 这也是目前人类已知**最大**的素数。
+
+\end_layout
+
+\begin_layout Standard
+### 6.
+ 前几个梅森素数列表
+\end_layout
+
+\begin_layout Standard
+1.
+ $n=2,
+ 
+\backslash
+quad M_2 = 3$
+\end_layout
+
+\begin_layout Standard
+2.
+ $n=3,
+ 
+\backslash
+quad M_3 = 7$
+\end_layout
+
+\begin_layout Standard
+3.
+ $n=5,
+ 
+\backslash
+quad M_5 = 31$
+\end_layout
+
+\begin_layout Standard
+4.
+ $n=7,
+ 
+\backslash
+quad M_7 = 127$
+\end_layout
+
+\begin_layout Standard
+5.
+ $n=13,
+ 
+\backslash
+quad M_{13} = 8191$
+\end_layout
+
+\begin_layout Standard
+6.
+ $n=17,
+ 
+\backslash
+quad M_{17} = 131071$
+\end_layout
+
+\begin_layout Standard
+7.
+ $n=19,
+ 
+\backslash
+quad M_{19} = 524287$
+\end_layout
+
+\begin_layout Standard
+8.
+ $n=31,
+ 
+\backslash
+quad M_{31} = 2147483647$
+\end_layout
+
+\begin_layout Standard
+关于梅森素数，
+至今仍有一个著名的未解决数学猜想：
+
+\end_layout
+
+\begin_layout Standard
+目前数学界普遍认为有无穷多个，
+但尚未被证明。
+
+\end_layout
+
+\begin_layout Section
 逆元
 \end_layout
 
@@ -8454,7 +8159,11 @@ b=b_{k}2^{k}+b_{k-1}2^{k-1}+\cdots+b_{1}2+b_{0}
 
 \end_inset
 
+该式子就是二进制按 2 的幂展开的定义.
+\begin_inset Formula $b_{k}$
+\end_inset
 
+是最高有效位.
 \end_layout
 
 \begin_layout Standard
@@ -9596,6 +9305,1821 @@ a^{n}\equiv b^{n}(\mod m),\forall n\in\mathbb{N}^{0}
 
 \begin_layout Subsection
 求模逆元
+\end_layout
+
+\begin_layout Paragraph
+模反元素（Modular Multiplicative Inverse）
+\end_layout
+
+\begin_layout Standard
+如何计算
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个式子等价于说：
+
+\begin_inset Formula $w\times s$
+\end_inset
+
+ 除以 
+\begin_inset Formula $n$
+\end_inset
+
+ 的余数是1。
+
+\end_layout
+
+\begin_layout Standard
+用数学语言来写，
+就是存在一个整数
+\begin_inset Formula $k$
+\end_inset
+
+ ，
+使得：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w\times s=k\times n+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+现在，
+我们把 
+\begin_inset Formula $k\times n$
+\end_inset
+
+ 移到等式的左边，
+得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w\times s-k\times n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果我们将 
+\begin_inset Formula $w$
+\end_inset
+
+ 视为变量 
+\begin_inset Formula $x$
+\end_inset
+
+，
+将 
+\begin_inset Formula $-k$
+\end_inset
+
+ 视为变量 
+\begin_inset Formula $y$
+\end_inset
+
+，
+这个方程就变成了：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这正是裴蜀定理 (Bézout's identity) 的形式！
+扩展欧几里得算法就是专门用来求解这样形式的方程 
+\begin_inset Formula $ax+by=GCD(a,b)$
+\end_inset
+
+ 中的 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+ 的。
+
+\end_layout
+
+\begin_layout Standard
+因此，
+我们的计算步骤如下：
+
+\end_layout
+
+\begin_layout Enumerate
+前提条件：
+计算
+\begin_inset Formula $w=s^{-1}\mod n$
+\end_inset
+
+的前提是 
+\begin_inset Formula $s$
+\end_inset
+
+ 和 
+\begin_inset Formula $n$
+\end_inset
+
+ 必须互素，
+即
+\begin_inset Formula $GCD(s,n)=1$
+\end_inset
+
+。
+如果它们的最大公因数不是1，
+那么模反元素就不存在。
+
+\end_layout
+
+\begin_layout Enumerate
+目标：
+利用扩展欧几里得算法，
+找到一对整数 
+\begin_inset Formula $x$
+\end_inset
+
+ 和 
+\begin_inset Formula $y$
+\end_inset
+
+，
+使得
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+结果：
+我们找到的这个 
+\begin_inset Formula $x$
+\end_inset
+
+，
+就是我们要求的 
+\begin_inset Formula $w$
+\end_inset
+
+。
+有时候 
+\begin_inset Formula $x$
+\end_inset
+
+ 可能是个负数，
+我们只需要将它转换到 
+\begin_inset Formula $[0,n-1]$
+\end_inset
+
+ 的范围内即可。
+
+\end_layout
+
+\begin_layout Example
+求 
+\begin_inset Formula $17^{-1}\mod{26}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+假设 
+\begin_inset Formula $s=17$
+\end_inset
+
+,
+ 
+\begin_inset Formula $n=26$
+\end_inset
+
+。
+我们要找到 
+\begin_inset Formula $w$
+\end_inset
+
+ 使得 
+\begin_inset Formula $17w\equiv1(\mod{26})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第1步：
+运行标准的欧几里得算法，
+确认
+\begin_inset Formula $GCD$
+\end_inset
+
+为
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们先用辗转相除法求 
+\begin_inset Formula $GCD(26,17)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $26=1\times17+9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $17=1\times9+8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $9=1\times8+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $8=8\times1+0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+最大公因数是最后一个非零余数，
+即 
+\begin_inset Formula $1$
+\end_inset
+
+。
+太好了，
+
+\begin_inset Formula $GCD(26,17)=1$
+\end_inset
+
+，
+所以模反元素一定存在。
+
+\end_layout
+
+\begin_layout Example
+ 第2步：
+反向代入，
+表达 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在，
+我们从倒数第二步开始，
+反向工作，
+把 1 表示成 s 和 n (即 17 和 26) 的线性组合,
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+。
+这个过程也叫回代 (Back Substitution)。
+
+\end_layout
+
+\begin_layout Example
+从式子 
+\begin_inset Formula $9=1\times8+1$
+\end_inset
+
+开始，
+将 1 隔离出来：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=9-1\times8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+现在看式子
+\begin_inset Formula $17=1\times9+8$
+\end_inset
+
+，
+将 
+\begin_inset Formula $8$
+\end_inset
+
+ 隔离出来：
+
+\begin_inset Formula $8=17-1\times9$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+把这个 8 代入到上面的方程中：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=9-1\times(17-1\times9)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+展开并合并关于 9 的项：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=9-1\times17+1\times9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times9-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+最后看式子
+\begin_inset Formula $26=1\times17+9$
+\end_inset
+
+，
+将 9 隔离出来：
+
+\begin_inset Formula $9=26-1\times17$
+\end_inset
+
+。
+把这个 
+\begin_inset Formula $9$
+\end_inset
+
+ 代入到我们刚刚得到的方程中：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times(26-1\times17)-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+展开并合并关于 
+\begin_inset Formula $17$
+\end_inset
+
+ 的项：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times26-2\times17-1\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1=2\times26-3\times17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+第3步：
+找到 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们已经得到了 
+\begin_inset Formula $1=2\times26-3\times17$
+\end_inset
+
+ 这个结果。
+
+\end_layout
+
+\begin_layout Example
+为了匹配 
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+ 的形式，
+我们把它写成：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $17\times(-3)+26\times(2)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+与 
+\begin_inset Formula $s\times x+n\times y=1$
+\end_inset
+
+ 对比，
+我们得到 
+\begin_inset Formula $s=17$
+\end_inset
+
+,
+\begin_inset Formula $n=26$
+\end_inset
+
+,
+\begin_inset Formula $,x=-3$
+\end_inset
+
+,
+\begin_inset Formula $y=2$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+我们需要的模反元素 
+\begin_inset Formula $w$
+\end_inset
+
+ 就是这个 
+\begin_inset Formula $x$
+\end_inset
+
+，
+即 
+\begin_inset Formula $w=-3$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第4步：
+将结果调整到 
+\begin_inset Formula $[0,n-1]$
+\end_inset
+
+ 范围
+\end_layout
+
+\begin_layout Example
+通常我们希望得到一个正数作为结果。
+ 
+\begin_inset Formula $-3$
+\end_inset
+
+ 和 
+\begin_inset Formula $23$
+\end_inset
+
+ 在模 
+\begin_inset Formula $26$
+\end_inset
+
+ 的意义下是等价的，
+因为
+\begin_inset Formula $-3+26=23$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+所以 
+\begin_inset Formula $w=23$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+最终答案：
+
+\begin_inset Formula $17^{-1}\mod{26}=23$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+验证一下:
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $(17\times23)\mod{26}=391\mod{26}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $391=15\times26+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+余数确实是
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+迪菲-赫尔曼密钥交换
+\end_layout
+
+\begin_layout Standard
+迪菲-赫尔曼密钥交换（Diffie-Hellman Key Exchange）是一种革命性的安全协议，
+它允许两个素未谋面的通信方在一个不安全的公共信道上，
+安全地协商出一个共享的秘密密钥。
+这个共享密钥随后可以用于对称加密，
+来保护他们之间后续的通信内容。
+该协议于1976年由惠特菲尔德·迪菲（Whitfield Diffie）和马丁·赫尔曼（Martin Hellman）发表，
+是公钥密码学的早期实践之一。
+
+\end_layout
+
+\begin_layout Subsubsection
+数学原理：
+离散对数难题
+\end_layout
+
+\begin_layout Standard
+该协议的步骤如下：
+
+\end_layout
+
+\begin_layout Enumerate
+公开参数的约定：
+Alice和Bob首先公开约定两个大数：
+一个质数 
+\begin_inset Formula $p$
+\end_inset
+
+ 和一个原根 
+\begin_inset Formula $g$
+\end_inset
+
+。
+这两个数是公开的，
+网络上的任何人都可以看到。
+
+\end_layout
+
+\begin_layout Enumerate
+生成私钥和公钥：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Alice选择一个秘密的整数 
+\begin_inset Formula $a$
+\end_inset
+
+（她的
+\series bold
+私钥
+\series default
+），
+然后计算 
+\begin_inset Formula $A=g^{a}\mod p$
+\end_inset
+
+。
+这个计算结果 
+\begin_inset Formula $A$
+\end_inset
+
+ 是她的公钥。
+
+\end_layout
+
+\begin_layout Enumerate
+Bob也选择一个秘密的整数 
+\begin_inset Formula $b$
+\end_inset
+
+（他的私钥），
+然后计算 
+\begin_inset Formula $B=g^{b}\mod p$
+\end_inset
+
+。
+计算结果 
+\begin_inset Formula $B$
+\end_inset
+
+ 是他的公钥。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+交换公钥：
+Alice将她的公钥 
+\begin_inset Formula $A$
+\end_inset
+
+ 发送给Bob，
+Bob也将他的公钥 
+\begin_inset Formula $B$
+\end_inset
+
+ 发送给Alice。
+这个交换过程是在不安全的信道上进行的，
+所以 
+\begin_inset Formula $A$
+\end_inset
+
+ 和 
+\begin_inset Formula $B$
+\end_inset
+
+ 可能会被窃听者截获。
+
+\end_layout
+
+\begin_layout Enumerate
+计算共享密钥：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Alice收到Bob的公钥 
+\begin_inset Formula $B$
+\end_inset
+
+ 后，
+进行计算：
+
+\begin_inset Formula $s=B^{a}\mod p$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+Bob收到Alice的公钥 
+\begin_inset Formula $A$
+\end_inset
+
+ 后，
+进行计算：
+
+\begin_inset Formula $s=A^{b}\mod p$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+最终，
+Alice和Bob会计算出完全相同的结果 
+\begin_inset Formula $s$
+\end_inset
+
+，
+这就是他们共享的秘密密钥。
+
+\end_layout
+
+\begin_layout Standard
+为什么他们会得到相同的结果？
+
+\end_layout
+
+\begin_layout Enumerate
+Alice的计算是：
+
+\begin_inset Formula 
+\[
+s=B^{a}\mod p=(g^{b}\mod p)^{a}\mod p=(g^{b})^{a}\mod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Bob 的计算是 ：
+
+\begin_inset Formula 
+\[
+s=A^{b}\mod p=(g^{a}\mod p)^{b}\mod p=(g^{a})^{b}\mod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据模幂运算规则，
+两者都等价于
+\begin_inset Formula $g^{(b\times a)}\mod p$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $(g^{b}\mod p)^{a}\mod p=(g^{b})^{a}\mod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+简单来说，
+这个等式之所以成立，
+是因为：
+在模运算中，
+我们可以随时把“多余的 
+\begin_inset Formula $p$
+\end_inset
+
+ 的倍数”扔掉，
+而不影响最终结果。
+
+\end_layout
+
+\begin_layout Proof
+为了证明等式：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(g^{b}\pmod p)^{a}\pmod p=(g^{b})^{a}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们需要利用 同余（Congruence） 的基本性质。
+为了方便理解，
+我们可以通过 代数定义 和 二项式定理 两个步骤来进行严格证明。
+
+\end_layout
+
+\begin_layout Proof
+证明步骤
+\end_layout
+
+\begin_layout Proof
+定义余数,
+ 令 
+\begin_inset Formula $x=g^{b}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+根据模运算的定义，
+我们可以将 
+\begin_inset Formula $x$
+\end_inset
+
+ 写成关于 
+\begin_inset Formula $p$
+\end_inset
+
+ 的表达式：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+g^{b}=k\cdot p+r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+其中：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $k$
+\end_inset
+
+ 是某个整数（商）。
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $r$
+\end_inset
+
+ 是余数，
+即 
+\begin_inset Formula $r=g^{b}\pmod p$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+分析等式左边 (LHS)
+\end_layout
+
+\begin_layout Proof
+等式左边是：
+
+\begin_inset Formula $(g^{b}\pmod p)^{a}\pmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们将 
+\begin_inset Formula $g^{b}\pmod p$
+\end_inset
+
+ 替换为 
+\begin_inset Formula $r$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\text{LHS}=r^{a}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+分析等式右边 (RHS)
+\end_layout
+
+\begin_layout Proof
+等式右边是：
+
+\begin_inset Formula $(g^{b})^{a}\pmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们将 
+\begin_inset Formula $g^{b}$
+\end_inset
+
+ 替换为 
+\begin_inset Formula $k\cdot p+r$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\text{RHS}=(k\cdot p+r)^{a}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+利用二项式定理展开
+\end_layout
+
+\begin_layout Proof
+根据二项式定理，
+
+\begin_inset Formula $(A+B)^{a}$
+\end_inset
+
+ 可以展开为一系列项的和。
+在这里
+\begin_inset Formula $A=k\cdot p$
+\end_inset
+
+，
+
+\begin_inset Formula $B=r$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(k\cdot p+r)^{a}=\sum_{i=0}^{a}\binom{a}{i}(k\cdot p)^{i}(r)^{a-i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+展开后的具体形式为：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(k\cdot p+r)^{a}=\binom{a}{0}r^{a}+\binom{a}{1}(k\cdot p)r^{a-1}+\binom{a}{2}(k\cdot p)^{2}r^{a-2}+\dots+\binom{a}{a}(k\cdot p)^{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对展开式取模 
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+我们需要计算上述展开式 
+\begin_inset Formula $\pmod p$
+\end_inset
+
+ 的结果。
+
+\end_layout
+
+\begin_layout Proof
+观察发现，
+ 除了第一项以外，
+所有项都包含因子 
+\begin_inset Formula $p$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+第一项：
+
+\begin_inset Formula $\binom{a}{0}r^{a}=1\cdot r^{a}=r^{a}$
+\end_inset
+
+ （不包含 
+\begin_inset Formula $p$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Proof
+第二项：
+包含 
+\begin_inset Formula $(k\cdot p)$
+\end_inset
+
+，
+所以能被
+\begin_inset Formula $p$
+\end_inset
+
+ 整除，
+模 
+\begin_inset Formula $p$
+\end_inset
+
+ 为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Proof
+第三项：
+包含
+\begin_inset Formula $(k\cdot p)^{2}$
+\end_inset
+
+，
+也能被 
+\begin_inset Formula $p$
+\end_inset
+
+ 整除，
+模 
+\begin_inset Formula $p$
+\end_inset
+
+ 为 0。
+
+\end_layout
+
+\begin_layout Proof
+...以此类推，
+直到最后一项。
+
+\end_layout
+
+\begin_layout Proof
+因此，
+在模 
+\begin_inset Formula $p$
+\end_inset
+
+ 的运算下：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(k\cdot p+r)^{a}\equiv r^{a}+0+0+\dots+0\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\text{RHS}=r^{a}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+对比第 2 步和第 5 步的结果：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\text{LHS}=r^{a}\pmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\text{RHS}=r^{a}\pmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+因此：
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+(g^{b}\pmod p)^{a}\pmod p=(g^{b})^{a}\pmod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+证毕。
+
+\end_layout
+
+\begin_layout Proof
+在计算机（尤其是 Diffie-Hellman 密钥交换）中，
+
+\begin_inset Formula $g^{b}$
+\end_inset
+
+ 可能会是一个大得惊人的数字，
+超出了计算机的内存限制。
+而利用这个等式，
+我们可以 边乘边取模（左边的方法），
+始终让数字保持在小于 
+\begin_inset Formula $p$
+\end_inset
+
+ 的范围内，
+从而能够快速且安全地计算出结果。
+
+\end_layout
+
+\begin_layout Standard
+对于窃听者来说，
+他们可以轻易获得 
+\begin_inset Formula $p$
+\end_inset
+
+,
+ 
+\begin_inset Formula $g$
+\end_inset
+
+,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ 和
+\begin_inset Formula $B$
+\end_inset
+
+。
+但是，
+要从 
+\begin_inset Formula $A=g^{a}\mod p$
+\end_inset
+
+ 中计算出私钥 
+\begin_inset Formula $a$
+\end_inset
+
+（即求解离散对数），
+在
+\begin_inset Formula $p$
+\end_inset
+
+ 非常大的情况下，
+计算上是极其困难的。
+ 这正是迪菲-赫尔曼协议安全性的基石。
+
+\end_layout
+
+\begin_layout Subsection
+RSA
+\end_layout
+
+\begin_layout Standard
+RSA（以其三位发明者 Rivest、Shamir、Adleman 的名字命名）是现代密码学中最著名、应用最广泛的非对称加密算法。
+它既可以用于加密数据，
+也可以用于数字签名。
+
+\end_layout
+
+\begin_layout Standard
+RSA 的安全性建立在一个著名的数学难题之上：
+大整数分解难题 (Large Integer Factorization Problem)。
+
+\end_layout
+
+\begin_layout Standard
+这个难题指的是：
+
+\end_layout
+
+\begin_layout Enumerate
+很容易：
+ 随机挑选两个非常大的质数 
+\begin_inset Formula $p$
+\end_inset
+
+ 和 
+\begin_inset Formula $q$
+\end_inset
+
+，
+然后将它们相乘得到 
+\begin_inset Formula $N$
+\end_inset
+
+。
+这个计算过程非常快。
+
+\end_layout
+
+\begin_layout Enumerate
+极其困难：
+只告诉你 
+\begin_inset Formula $N$
+\end_inset
+
+，
+让你反向分解出原来的 
+\begin_inset Formula $p$
+\end_inset
+
+ 和 
+\begin_inset Formula $q$
+\end_inset
+
+。
+当 
+\begin_inset Formula $N$
+\end_inset
+
+ 非常大时（例如有几百位长），
+目前已知的最快算法也需要花费天文数字般的时间才能完成。
+
+\end_layout
+
+\begin_layout Standard
+RSA 巧妙地利用了这个“正向计算容易，
+逆向计算困难”的特性，
+构建了一个所谓的 “陷门单向函数” 。
+加密就像是掉进陷门，
+没有“后门”（私钥）的人出不来。
+
+\end_layout
+
+\begin_layout Standard
+整个 RSA 体系包含三个主要部分：
+密钥生成、加密和解密。
+
+\end_layout
+
+\begin_layout Enumerate
+密钥生成
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是准备阶段，
+由信息接收方（Bob）来完成：
+
+\end_layout
+
+\begin_layout Enumerate
+选择质数：
+ 随机选择两个不相等且足够大的质数 
+\begin_inset Formula $p$
+\end_inset
+
+ 和 
+\begin_inset Formula $q$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如：
+
+\begin_inset Formula $p=61$
+\end_inset
+
+,
+ 
+\begin_inset Formula $q=53$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算模数 
+\begin_inset Formula $N$
+\end_inset
+
+：
+ 计算 
+\begin_inset Formula $N=p\times q$
+\end_inset
+
+。
+这个
+\begin_inset Formula $N$
+\end_inset
+
+ 是公钥和私钥的一部分。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如：
+
+\begin_inset Formula $N=61×53=3233$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算欧拉函数
+\begin_inset Formula $\varphi(N)$
+\end_inset
+
+ ：
+ 计算 
+\begin_inset Formula $\varphi(N)=(p-1)\times(q-1)$
+\end_inset
+
+。
+这个值在后续计算中至关重要，
+但需要保密。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如：
+
+\begin_inset Formula $\varphi(N)=(61-1)\times(53-1)=60\times52=3120$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+选择公钥指数 
+\begin_inset Formula $e$
+\end_inset
+
+：
+ 选择一个整数 
+\begin_inset Formula $e$
+\end_inset
+
+，
+使得 
+\begin_inset Formula $e$
+\end_inset
+
+ 与
+\begin_inset Formula $\varphi(N)$
+\end_inset
+
+互质，
+并且 
+\begin_inset Formula $1<e<\varphi(N)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如：
+选择 
+\begin_inset Formula $e=17$
+\end_inset
+
+ (
+\begin_inset Formula $17$
+\end_inset
+
+与
+\begin_inset Formula $3120$
+\end_inset
+
+没有公约数)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算私钥指数 
+\begin_inset Formula $d$
+\end_inset
+
+：
+ 找到一个整数 
+\begin_inset Formula $d$
+\end_inset
+
+，
+使得
+\begin_inset Formula $(d\times e)\mod{\varphi}(N)=1$
+\end_inset
+
+。
+
+\begin_inset Formula $d$
+\end_inset
+
+ 是 
+\begin_inset Formula $e$
+\end_inset
+
+ 对于 
+\begin_inset Formula $\varphi(N)$
+\end_inset
+
+ 的模反元素。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+例如：
+找到 
+\begin_inset Formula $d$
+\end_inset
+
+ 使得 
+\begin_inset Formula $(d\times17)\mod{3120}=1$
+\end_inset
+
+。
+可以计算出 
+\begin_inset Formula $d=2753$
+\end_inset
+
+。
+ 
+\end_layout
+
+\begin_layout Standard
+最终，
+Bob 得到了他的密钥对：
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+公钥：
+
+\begin_inset Formula $(N,e)=(3233,17)$
+\end_inset
+
+这个可以公开给任何人
+\end_layout
+
+\begin_layout Itemize
+私钥：
+
+\begin_inset Formula $(N,d)=(3233,2753)$
+\end_inset
+
+ 这个必须严格保密
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+加密（Alice 用公钥锁上信箱）
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Alice 想把消息 M（必须是小于 N 的整数）发送给 Bob。
+
+\end_layout
+
+\begin_layout Standard
+她获取 Bob 的公钥 (N,
+ e)，
+使用以下公式计算出密文 C：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=M^{e}\mod N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例如：
+Alice 想发送消息 
+\begin_inset Formula $M=65$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+她计算：
+
+\begin_inset Formula $C=65^{17}\mod{3233}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+经过快速模幂运算，
+得到
+\begin_inset Formula $C=2790$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+Alice 将密文 
+\begin_inset Formula $2790$
+\end_inset
+
+发送给 Bob。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+解密（Bob 用私钥打开信箱）
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bob 收到了来自 Alice 的密文 
+\begin_inset Formula $C=2790$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+他使用自己的私钥
+\begin_inset Formula $(N,d)$
+\end_inset
+
+和以下公式恢复出原始消息 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M=C^{d}\mod N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bob 计算：
+
+\begin_inset Formula $M=2790^{2753}\mod 3233$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+经过计算，
+他会得到 
+\begin_inset Formula $M=65$
+\end_inset
+
+，
+这就是 Alice 的原始消息。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+RSA 的数字签名功能
+\end_layout
+
+\begin_layout Standard
+RSA 还有一个同样重要的功能：
+数字签名。
+这相当于在文件上盖章，
+证明文件确实是你发出的，
+并且没有被篡改。
+
+\end_layout
+
+\begin_layout Standard
+其过程与加密解密恰好相反，
+是用私钥签名，
+用公钥验证。
+
+\end_layout
+
+\begin_layout Enumerate
+签名（Bob 盖章）：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Bob 想对一个消息 
+\begin_inset Formula $M$
+\end_inset
+
+ 进行签名。
+他用自己的私钥对消息进行“加密”操作，
+生成签名 
+\begin_inset Formula $S$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S=M^{d}\mod N$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+验证（Alice 验章）：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Alice 收到了消息 
+\begin_inset Formula $M$
+\end_inset
+
+ 和签名 
+\begin_inset Formula $S$
+\end_inset
+
+。
+她用 Bob 的 
+\series bold
+公钥
+\series default
+ 对签名 
+\begin_inset Formula $S$
+\end_inset
+
+ 进行“解密”操作。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M'=S^{e}\mod N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果计算出的 
+\begin_inset Formula $M'$
+\end_inset
+
+ 和原始消息 
+\begin_inset Formula $M`$
+\end_inset
+
+ 完全一致，
+那么签名验证成功。
+这证明：
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+身份认证：
+ 消息确实来自 Bob，
+因为只有他拥有能生成此签名的私钥。
+
+\end_layout
+
+\begin_layout Itemize
+数据完整性：
+ 消息在传输过程中没有被修改过，
+否则 
+\begin_inset Formula $M'$
+\end_inset
+
+ 将不会等于 
+\begin_inset Formula $M$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+不可否认性：
+ Bob 不能否认他发送过这个消息。
+
+\end_layout
+
+\begin_layout Standard
+注意：
+ 在实际应用中，
+为了效率和安全，
+通常不是对整个消息进行签名，
+而是对消息的哈希值 (Hash) 进行签名。
+
+\end_layout
+
+\begin_layout Standard
+由于其速度较慢，
+RSA 通常不用于加密大量数据。
+它最常见的用法是“信封加密”：
+用 RSA 加密一个速度更快的对称密钥（如AES密钥），
+然后用这个对称密钥来加密海量的通信数据。
+这结合了两种加密方式的优点。
+存在一个巨大的潜在风险：
+服务器的长期私钥是一个“万能钥匙”。
+
 \end_layout
 
 \begin_layout Subsection
@@ -29728,7 +31252,7 @@ status collapsed
  的模乘法逆元”。
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Definition
 模乘法逆元 在模 
