@@ -6791,14 +6791,22 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-**梅森素数**（Mersenne Prime）是指形如 $2^n - 1$ 的素数（质数），
-其中 $n$ 为整数。
+梅森素数（Mersenne Prime）是指形如 
+\begin_inset Formula $2^{n}-1$
+\end_inset
+
+ 的素数（质数），
+其中 
+\begin_inset Formula $n$
+\end_inset
+
+ 为整数。
 
 \end_layout
 
 \begin_layout Standard
 它是数论中最著名的素数序列之一，
-以17世纪法国数学家**马兰·梅森**（Marin Mersenne）的名字命名。
+以17世纪法国数学家马兰·梅森（Marin Mersenne）的名字命名。
 
 \end_layout
 
@@ -6808,8 +6816,7 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-### 1.
- 基本定义与公式
+基本定义与公式
 \end_layout
 
 \begin_layout Standard
@@ -6818,95 +6825,154 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-$$M_n = 2^n - 1$$
-\end_layout
+\begin_inset Formula 
+\[
+M_{n}=2^{n}-1
+\]
 
-\begin_layout Standard
-如果 $M_n$ 是素数，
-那么 $n$ 也必须是素数。
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-* 例如：
 
 \end_layout
 
 \begin_layout Standard
-* 当 $n=2$ 时，
-$2^2 - 1 = 3$（是素数）
-\end_layout
+如果 
+\begin_inset Formula $M_{n}$
+\end_inset
 
-\begin_layout Standard
-* 当 $n=3$ 时，
-$2^3 - 1 = 7$（是素数）
-\end_layout
+ 是素数，
+那么 
+\begin_inset Formula $n$
+\end_inset
 
-\begin_layout Standard
-* 当 $n=5$ 时，
-$2^5 - 1 = 31$（是素数）
-\end_layout
-
-\begin_layout Standard
-**注意：
-** 虽然 $n$ 必须是素数，
-但并非所有素数 $n$ 对应的 $2^n-1$ 都是梅森素数。
+ 也必须是素数。
 
 \end_layout
 
 \begin_layout Standard
-* 反例：
-当 $n=11$ 时，
-$2^{11} - 1 = 2047 = 23 
-\backslash
-times 89$（不是素数）。
+例如：
+
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $n=2$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $2^{2}-1=3$
+\end_inset
+
+（是素数）
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $n=3$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $2^{3}-1=7$
+\end_inset
+
+（是素数）
+\end_layout
+
+\begin_layout Itemize
+当 
+\begin_inset Formula $n=5$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $2^{5}-1=31$
+\end_inset
+
+（是素数）
+\end_layout
+
+\begin_layout Standard
+注意：
+ 虽然 
+\begin_inset Formula $n$
+\end_inset
+
+ 必须是素数，
+但
+\series bold
+并非所有
+\series default
+素数 
+\begin_inset Formula $n$
+\end_inset
+
+ 对应的 
+\begin_inset Formula $2^{n}-1$
+\end_inset
+
+ 都是梅森素数。
 
 \end_layout
 
 \begin_layout Standard
-### 2.
- 历史渊源
+反例：
+当 
+\begin_inset Formula $n=11$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $2^{11}-1=2047=23\times89$
+\end_inset
+
+（不是素数）。
+
 \end_layout
 
 \begin_layout Standard
 早在公元前300年，
 古希腊数学家欧几里得就研究过这种形式的数字，
-但他主要关注它们与**完全数**（Perfect Number）的关系。
+但他主要关注它们与完全数（Perfect Number）的关系。
 
 \end_layout
 
 \begin_layout Standard
 17世纪，
 马兰·梅森列出了当时已知的梅森素数，
-并大胆猜测了 $n 
-\backslash
-le 257$ 范围内哪些是素数。
+并大胆猜测了 
+\begin_inset Formula $n\le257$
+\end_inset
+
+ 范围内哪些是素数。
 虽然他的猜测中有部分错误，
 但他的研究激发了后世无数数学家（如欧拉、卢卡斯）的探索热情。
 
 \end_layout
 
 \begin_layout Standard
-### 3.
- 与完全数的关系
-\end_layout
-
-\begin_layout Standard
 梅森素数与完全数（一个数等于其所有真因子之和，
-如 $6=1+2+3$）有着一一对应的关系：
+如 
+\begin_inset Formula $6=1+2+3$
+\end_inset
+
+）有着一一对应的关系：
 
 \end_layout
 
-\begin_layout Standard
-> **欧几里得-欧拉定理**：
+\begin_layout Theorem
+欧几里得-欧拉定理：
+ 如果 
+\begin_inset Formula $2^{n}-1$
+\end_inset
 
-\end_layout
+ 是梅森素数，
+那么 
+\begin_inset Formula $2^{n-1}\times(2^{n}-1)$
+\end_inset
 
-\begin_layout Standard
-> 如果 $2^n - 1$ 是梅森素数，
-那么 $2^{n-1} 
-\backslash
-times (2^n - 1)$ 就是一个偶完全数。
+ 就是一个偶完全数。
 
 \end_layout
 
@@ -6917,16 +6983,10 @@ times (2^n - 1)$ 就是一个偶完全数。
 \end_layout
 
 \begin_layout Standard
-### 4.
- 如何寻找：
-GIMPS 项目
-\end_layout
-
-\begin_layout Standard
 寻找梅森素数非常困难，
 因为数字增长极快。
 为了寻找更大的梅森素数，
-人们成立了**互联网梅森素数大搜索**（GIMPS,
+人们成立了 互联网梅森素数大搜索 （GIMPS,
  Great Internet Mersenne Prime Search）项目。
 这是一个分布式计算项目，
 利用全球志愿者的计算机空闲算力来进行计算。
@@ -6939,121 +6999,120 @@ GIMPS 项目
 \end_layout
 
 \begin_layout Standard
-因为有一种专门针对梅森数的素数测试方法叫**卢卡斯-莱默检验法**（Lucas–Lehmer primality test），
+因为有一种专门针对梅森数的素数测试方法叫 卢卡斯-莱默检验法 （Lucas–Lehmer primality test），
 它比测试普通数字是否为素数要快得多且高效。
 
 \end_layout
 
 \begin_layout Standard
-### 5.
- 现状与记录（截至2024-2025年）
+现状与记录（截至2024-2025年）
 \end_layout
 
 \begin_layout Standard
 截至目前，
-人类一共只发现了 **52** 个梅森素数。
+人类一共只发现了 52 个梅森素数。
 
 \end_layout
 
-\begin_layout Standard
-* **最新发现（第52个）：
-**
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+最新发现（第52个）：
+
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 2024年10月，
-GIMPS 项目宣布由 Luke Durant 发现了第 52 个梅森素数 $M_{136279841}$。
+GIMPS 项目宣布由 Luke Durant 发现了第 52 个梅森素数 
+\begin_inset Formula $M_{136279841}$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-* 数值：
-$2^{136,279,841} - 1$
-\end_layout
+\begin_layout Itemize
+数值：
 
-\begin_layout Standard
-* 位数：
-这个数字拥有超过 **4100万** 位十进制数字。
+\begin_inset Formula $2^{136,279,841}-1$
+\end_inset
+
 
 \end_layout
 
-\begin_layout Standard
-* 这也是目前人类已知**最大**的素数。
+\begin_layout Itemize
+位数：
+这个数字拥有超过 4100万 位十进制数字。
 
 \end_layout
 
-\begin_layout Standard
-### 6.
- 前几个梅森素数列表
+\begin_layout Itemize
+这也是目前人类已知 
+\series bold
+最大
+\series default
+ 的素数。
+
 \end_layout
 
+\end_deeper
 \begin_layout Standard
-1.
- $n=2,
- 
-\backslash
-quad M_2 = 3$
+前几个梅森素数列表
 \end_layout
 
-\begin_layout Standard
-2.
- $n=3,
- 
-\backslash
-quad M_3 = 7$
+\begin_layout Enumerate
+\begin_inset Formula $n=2,\quad M_{2}=3$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-3.
- $n=5,
- 
-\backslash
-quad M_5 = 31$
+\begin_layout Enumerate
+\begin_inset Formula $n=3,\quad M_{3}=7$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-4.
- $n=7,
- 
-\backslash
-quad M_7 = 127$
+\begin_layout Enumerate
+\begin_inset Formula $n=5,\quad M_{5}=31$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-5.
- $n=13,
- 
-\backslash
-quad M_{13} = 8191$
+\begin_layout Enumerate
+\begin_inset Formula $n=7,\quad M_{7}=127$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-6.
- $n=17,
- 
-\backslash
-quad M_{17} = 131071$
+\begin_layout Enumerate
+\begin_inset Formula $n=13,\quad M_{13}=8191$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-7.
- $n=19,
- 
-\backslash
-quad M_{19} = 524287$
+\begin_layout Enumerate
+\begin_inset Formula $n=17,\quad M_{17}=131071$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-8.
- $n=31,
- 
-\backslash
-quad M_{31} = 2147483647$
+\begin_layout Enumerate
+\begin_inset Formula $n=19,\quad M_{19}=524287$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-关于梅森素数，
-至今仍有一个著名的未解决数学猜想：
+\begin_layout Enumerate
+\begin_inset Formula $n=31,\quad M_{31}=2147483647$
+\end_inset
+
 
 \end_layout
 
@@ -118784,7 +118843,7 @@ P(A\cap B)=P(A)\cdot P(B)
 \end_inset
 
 .
-  
+ 
 \end_layout
 
 \begin_layout Standard
@@ -118833,7 +118892,88 @@ P(A\vert B)=\frac{P(B\vert A)\cdot P(A)}{P(B)}
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+在分类问题中，
+我们可以把它转化为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(\text{类别}|\text{特征})=\frac{P(\text{特征}|\text{类别})\cdot P(\text{类别})}{P(\text{特征})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P(\text{类别}|\text{特征})$
+\end_inset
+
+ (
+\series bold
+后验概率
+\series default
+)
+\series bold
+：
+
+\series default
+ 我们想要求的值。
+比如：
+给定一封邮件的内容（特征），
+它是垃圾邮件（类别）的概率是多少？
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P(\text{特征}|\text{类别})$
+\end_inset
+
+ (
+\series bold
+似然概率
+\series default
+)：
+ 如果这封信是垃圾邮件，
+出现这些词（特征）的概率是多少？
+（通过统计训练数据得到）
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P(\text{类别})$
+\end_inset
+
+ (
+\series bold
+先验概率
+\series default
+)：
+ 总体上，
+垃圾邮件出现的概率是多少？
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $P(\text{特征})$
+\end_inset
+
+ (
+\series bold
+证据
+\series default
+)：
+ 这些词在所有邮件中出现的概率。
+（在比较不同类别时，
+分母通常是一样的，
+可以忽略）。
+
 \end_layout
 
 \begin_layout Theorem
@@ -118904,7 +119044,7 @@ P(A|B)=\frac{P(B|A)P(A)}{P(B)}=\frac{\frac{P(A\cap B)}{P(A)}\cdot P(A)}{P(B)}=\f
 
 \begin_inset Formula 
 \[
-P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
+P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 \]
 
 \end_inset
@@ -119207,6 +119347,305 @@ P(B\vert A)=0.9\cdot\frac{2}{7305}\cdot\frac{7}{3}=0.0005749486653...
 \begin_inset Formula $P(B_{1}|A)=\frac{P(A|B_{1})P(B_{1})}{P(A)}=\frac{(3/10)\times0.4}{0.48}=\frac{0.12}{0.48}=0.25$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsubsection
+朴素贝叶斯定理
+\end_layout
+
+\begin_layout Standard
+它假设所有特征之间是相互独立的。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+ 假设我们在判断一种水果是不是“苹果”。
+特征有：
+圆的、红的、直径10cm。
+
+\end_layout
+
+\begin_layout Standard
+现实中：
+ “圆”和“直径”可能有关联，
+“红”和“圆”也可能有关联。
+
+\end_layout
+
+\begin_layout Standard
+朴素贝叶斯的视角：
+ 它认为“圆”就是“圆”，
+“红”就是“红”，
+它们之间毫无关系，
+各自独立地对分类结果产生影响。
+
+\end_layout
+
+\begin_layout Standard
+虽然这个假设在现实中很难成立，
+但它极大地简化了计算，
+且在实际应用中效果依然很好。
+
+\end_layout
+
+\begin_layout Standard
+三种常见的朴素贝叶斯模型
+\end_layout
+
+\begin_layout Standard
+根据数据的类型不同，
+朴素贝叶斯有三种主要变体：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 高斯朴素贝叶斯 (Gaussian NB):
+\end_layout
+
+\begin_layout Standard
+* 适用场景：
+ 特征是连续数值（如身高、体重、温度）。
+
+\end_layout
+
+\begin_layout Standard
+* 假设：
+ 假设特征符合高斯分布（正态分布）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 多项式朴素贝叶斯 (Multinomial NB):
+\end_layout
+
+\begin_layout Standard
+* 适用场景：
+ 特征是离散的计数（如文本分类中单词出现的次数）。
+
+\end_layout
+
+\begin_layout Standard
+* 应用：
+ 这是自然语言处理 (NLP) 中最常用的变体。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 伯努利朴素贝叶斯 (Bernoulli NB):
+\end_layout
+
+\begin_layout Standard
+* 适用场景：
+ 特征是二值的（0或1，
+出现或没出现）。
+
+\end_layout
+
+\begin_layout Standard
+* 应用：
+ 关注单词是否出现，
+而不关心出现几次。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 举个例子：
+垃圾邮件分类
+\end_layout
+
+\begin_layout Standard
+假设我们有一封邮件，
+内容包含单词：
+“中奖”和“免费”。
+我们要判断它是“垃圾邮件 (Spam)”还是“正常邮件 (Ham)”。
+
+\end_layout
+
+\begin_layout Standard
+根据朴素贝叶斯公式，
+我们需要比较以下两个概率的大小：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ P(Spam | "中奖",
+ "免费") 
+\begin_inset Formula $\propto P(\text{Spam})\times P(\text{"中奖"}|\text{Spam})\times P(\text{"免费"}|\text{Spam})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ P(Ham | "中奖",
+ "免费") 
+\begin_inset Formula $\propto P(\text{Ham})\times P(\text{"中奖"}|\text{Ham})\times P(\text{"免费"}|\text{Ham})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+步骤：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 看先验：
+ 统计数据库，
+发现垃圾邮件占 40%，
+正常邮件占 60%。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 看似然：
+
+\end_layout
+
+\begin_layout Standard
+* 在垃圾邮件里，
+“中奖”出现的概率是 50%，
+“免费”出现的概率是 60%。
+
+\end_layout
+
+\begin_layout Standard
+* 在正常邮件里，
+“中奖”出现的概率是 1%，
+“免费”出现的概率是 5%。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 计算得分（忽略分母）：
+
+\end_layout
+
+\begin_layout Standard
+* 垃圾邮件得分：
+ 
+\begin_inset Formula $0.4\times0.5\times0.6=0.12$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 正常邮件得分：
+
+\begin_inset Formula $0.6\times0.01\times0.05=0.0003$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结论：
+
+\begin_inset Formula $0.12\gg0.0003$
+\end_inset
+
+，
+所以这封邮件被判定为垃圾邮件。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 优缺点分析
+\end_layout
+
+\begin_layout Standard
+#### 优点：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 速度快、效率高：
+ 计算主要是简单的概率乘法，
+训练和预测都非常快。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 对小规模数据表现好：
+ 即使训练数据不多，
+也能训练出不错的模型。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 处理高维数据能力强：
+ 在文本分类（几万个特征）中表现优异。
+
+\end_layout
+
+\begin_layout Standard
+4.
+ 对缺失数据不敏感。
+
+\end_layout
+
+\begin_layout Standard
+朴素贝叶斯是机器学习领域的基准模型 (Baseline)。
+当你拿到一个分类任务（特别是文本相关），
+如果不确定用什么复杂算法，
+通常先试一下朴素贝叶斯。
+它简单、快速，
+且往往能提供意想不到的良好效果。
+
+\end_layout
+
+\begin_layout Standard
+#### 缺点：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ “朴素”的假设过于理想化：
+ 如果特征之间关联性非常强（比如“机器学习”和“人工智能”经常一起出现），
+朴素贝叶斯的效果会下降。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 零概率问题：
+ 如果在训练集中某个词从来没在垃圾邮件里出现过，
+概率会变成 0，
+导致整个计算结果为 0。
+
+\end_layout
+
+\begin_layout Standard
+* *解决方案：
+* 使用拉普拉斯平滑 (Laplace Smoothing)，
+给每个计数加 1，
+避免 0 的出现。
 
 \end_layout
 
