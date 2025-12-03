@@ -268,6 +268,16 @@ Math
 \end_layout
 
 \begin_layout Standard
+符号 
+\begin_inset Formula $\propto$
+\end_inset
+
+ 在数学和逻辑中表示 “与\SpecialChar ldots
+\SpecialChar ldots
+成正比” (is proportional to)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $\forall$
 \end_inset
 
@@ -39387,7 +39397,7 @@ v-e+f=2
 \begin_inset Formula $r_{1},r_{2}$
 \end_inset
 
-，
+（两个主曲率的乘积），
 定义：
 
 \end_layout
@@ -39395,7 +39405,7 @@ v-e+f=2
 \begin_layout Standard
 \begin_inset Formula 
 \[
-K=\frac{1}{r_{1}}\cdot\frac{1}{r_{2}}.
+K=\kappa_{1}\cdot\kappa_{2}=\frac{1}{r_{1}}\cdot\frac{1}{r_{2}}.
 \]
 
 \end_inset
@@ -39459,8 +39469,894 @@ K=\frac{1}{r_{1}}\cdot\frac{1}{r_{2}}.
 \end_layout
 
 \begin_layout Standard
- 4.
- 卓越定理的核心
+你无法在不产生褶皱或撕裂的情况下，
+把一张平纸（
+\begin_inset Formula $K=0$
+\end_inset
+
+ ）完美地包裹在一个球体（
+\begin_inset Formula $K>0$
+\end_inset
+
+）上。
+因为这需要改变两点间的内蕴距离，
+也就改变了高斯曲率。
+这就是为什么世界地图（平面）总是会扭曲地球（球面）的真实比例。
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率
+\begin_inset Formula $K$
+\end_inset
+
+ 告诉我们，
+一个曲面在本质上与平面有多大的不同。
+如果 
+\begin_inset Formula $K\neq0$
+\end_inset
+
+，
+我们就无法在保持距离不变的情况下将其展平为平面。
+
+\end_layout
+
+\begin_layout Theorem
+绝妙定理 高斯曲率 
+\begin_inset Formula $K$
+\end_inset
+
+ 是一个 内蕴不变量 。
+它仅取决于曲面的 第一基本形式 （即曲面上的长度、角度和面积的测量方式），
+而与其在三维空间中的嵌入方式（弯曲方式）无关。
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+在数学上，
+内蕴几何完全由 第一基本形式 (First Fundamental Form) 决定。
+
+\end_layout
+
+\begin_layout Plain Layout
+设曲面上的弧长元素 
+\begin_inset Formula $ds$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+ds^{2}=E\,du^{2}+2F\,du\,dv+G\,dv^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这里的 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ 是曲面坐标 
+\begin_inset Formula $(u,v)$
+\end_inset
+
+ 的函数，
+称为 度量张量 (Metric Tensor) 的分量。
+
+\end_layout
+
+\begin_layout Plain Layout
+内蕴性质 ：
+任何只依赖于 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ 及其导数的量。
+
+\end_layout
+
+\begin_layout Plain Layout
+高斯曲率 
+\begin_inset Formula $K$
+\end_inset
+
+ 的计算公式虽然复杂，
+但它 只包含 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ 及其一阶、二阶导数。
+这就是为什么高斯曲率是内蕴的。
+
+\end_layout
+
+\begin_layout Plain Layout
+外嵌性质 ：
+依赖于曲面在三维空间中的法向量 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ 或第二基本形式的量。
+
+\end_layout
+
+\begin_layout Plain Layout
+例如 平均曲率 (Mean Curvature)
+\begin_inset Formula $H=\frac{\kappa_{1}+\kappa_{2}}{2}$
+\end_inset
+
+ 就是外嵌的。
+
+\end_layout
+
+\begin_layout Plain Layout
+为什么要区分这个？
+
+\end_layout
+
+\begin_layout Plain Layout
+区分“内蕴”的重要性在于 广义相对论 。
+
+\end_layout
+
+\begin_layout Plain Layout
+爱因斯坦提出，
+我们生活的宇宙（四维时空）是弯曲的。
+
+\end_layout
+
+\begin_layout Plain Layout
+但是，
+我们人类就生活在这个宇宙“表面”上（就像那只蚂蚁）。
+
+\end_layout
+
+\begin_layout Plain Layout
+我们无法跳出宇宙，
+去一个更高维的“五维空间”来观察宇宙是怎么弯曲的。
+
+\end_layout
+
+\begin_layout Plain Layout
+我们不需要由外部空间来定义弯曲。
+我们只需要通过测量光线（测地线）是否偏折、三角形内角和是否为
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+，
+就能内蕴地知道时空不仅是弯曲的，
+而且其弯曲程度（引力）是可以计算的。
+
+\end_layout
+
+\begin_layout Plain Layout
+要计算
+\begin_inset Formula $E,F,G$
+\end_inset
+
+，
+我们需要先知道曲面的 参数方程 。
+
+\end_layout
+
+\begin_layout Plain Layout
+假设我们在三维空间 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ 中有一个曲面 
+\begin_inset Formula $S$
+\end_inset
+
+，
+它由位置向量 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ 来描述，
+参数为 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}(u,v)=(x(u,v),\,y(u,v),\,z(u,v))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这里的 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ 都是关于 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 的函数。
+
+\end_layout
+
+\begin_layout Plain Layout
+计算切向量 (Tangent Vectors)
+\end_layout
+
+\begin_layout Plain Layout
+首先，
+我们需要求位置向量 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ 对参数 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 的偏导数。
+这两个偏导数代表了曲面上的切线方向向量：
+
+\end_layout
+
+\begin_layout Plain Layout
+对 
+\begin_inset Formula $u$
+\end_inset
+
+ 的切向量：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}_{u}=\frac{\partial\mathbf{r}}{\partial u}=\left(\frac{\partial x}{\partial u},\,\frac{\partial y}{\partial u},\,\frac{\partial z}{\partial u}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+对 
+\begin_inset Formula $v$
+\end_inset
+
+ 的切向量：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}_{v}=\frac{\partial\mathbf{r}}{\partial v}=\left(\frac{\partial x}{\partial v},\,\frac{\partial y}{\partial v},\,\frac{\partial z}{\partial v}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+定义
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ (点积公式)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ 本质上就是这些切向量的点积 (Dot Product)。
+它们描述了切向量的长度以及它们之间的夹角。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+ (描述 
+\begin_inset Formula $u$
+\end_inset
+
+ 方向的拉伸)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+E=\mathbf{r}_{u}\cdot\mathbf{r}_{u}=|\mathbf{r}_{u}|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $F$
+\end_inset
+
+ (描述 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 方向的夹角/相互作用)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+F=\mathbf{r}_{u}\cdot\mathbf{r}_{v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $G$
+\end_inset
+
+ (描述 
+\begin_inset Formula $v$
+\end_inset
+
+ 方向的拉伸)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G=\mathbf{r}_{v}\cdot\mathbf{r}_{v}=|\mathbf{r}_{v}|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+展开形式 (用于具体计算)
+\end_layout
+
+\begin_layout Plain Layout
+如果你把点积展开，
+$E,
+ F,
+ G$ 的具体计算公式如下：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+E=\left(\frac{\partial x}{\partial u}\right)^{2}+\left(\frac{\partial y}{\partial u}\right)^{2}+\left(\frac{\partial z}{\partial u}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+F=\frac{\partial x}{\partial u}\frac{\partial x}{\partial v}+\frac{\partial y}{\partial u}\frac{\partial y}{\partial v}+\frac{\partial z}{\partial u}\frac{\partial z}{\partial v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G=\left(\frac{\partial x}{\partial v}\right)^{2}+\left(\frac{\partial y}{\partial v}\right)^{2}+\left(\frac{\partial z}{\partial v}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+矩阵形式 (度量张量)
+\end_layout
+
+\begin_layout Plain Layout
+“度量张量” (Metric Tensor)，
+通常记为 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+。
+在二维曲面上，
+它是一个 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ 的对称矩阵，
+其分量正是 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+(g_{ij})=\begin{pmatrix}g_{11} & g_{12}\\
+g_{21} & g_{22}
+\end{pmatrix}=\begin{pmatrix}E & F\\
+F & G
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第一基本形式可以写成向量和矩阵的乘积：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+I=ds^{2}=\begin{pmatrix}du & dv\end{pmatrix}\begin{pmatrix}E & F\\
+F & G
+\end{pmatrix}\begin{pmatrix}du\\
+dv
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+球面的 
+\begin_inset Formula $E,F,G$
+\end_inset
+
+ ，
+我们以半径为 
+\begin_inset Formula $R$
+\end_inset
+
+ 的球面为例。
+
+\end_layout
+
+\begin_layout Plain Layout
+使用球坐标系，
+参数为
+\begin_inset Formula $\theta$
+\end_inset
+
+ (经度) 和 
+\begin_inset Formula $\phi$
+\end_inset
+
+ (纬度/天顶角)。
+
+\end_layout
+
+\begin_layout Plain Layout
+参数方程：
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}(\theta,\phi)=(R\sin\phi\cos\theta,\,R\sin\phi\sin\theta,\,R\cos\phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(这里 
+\begin_inset Formula $u=\theta,v=\phi$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+第一步：
+求偏导 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}_{\theta}=(-R\sin\phi\sin\theta,\,R\sin\phi\cos\theta,\,0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathbf{r}_{\phi}=(R\cos\phi\cos\theta,\,R\cos\phi\sin\theta,\,-R\sin\phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+第二步：
+计算点积 
+\end_layout
+
+\begin_layout Plain Layout
+计算 
+\begin_inset Formula $E$
+\end_inset
+
+ (对应 
+\begin_inset Formula $\theta$
+\end_inset
+
+)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+E=\mathbf{r}_{\theta}\cdot\mathbf{r}_{\theta}=(-R\sin\phi\sin\theta)^{2}+(R\sin\phi\cos\theta)^{2}+0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+E=R^{2}\sin^{2}\phi(\sin^{2}\theta+\cos^{2}\theta)=R^{2}\sin^{2}\phi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+计算 
+\begin_inset Formula $G$
+\end_inset
+
+ (对应 
+\begin_inset Formula $\phi$
+\end_inset
+
+)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G=\mathbf{r}_{\phi}\cdot\mathbf{r}_{\phi}=(R\cos\phi\cos\theta)^{2}+(R\cos\phi\sin\theta)^{2}+(-R\sin\phi)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G=R^{2}\cos^{2}\phi(\cos^{2}\theta+\sin^{2}\theta)+R^{2}\sin^{2}\phi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+G=R^{2}(\cos^{2}\phi+\sin^{2}\phi)=R^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+计算 
+\begin_inset Formula $F$
+\end_inset
+
+ (交叉项)：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+F=\mathbf{r}_{\theta}\cdot\mathbf{r}_{\phi}=(\dots)\cdot(\dots)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+通过简单的代数计算，
+你会发现交叉项相消，
+结果为：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+F=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(这说明经线和纬线是垂直的)
+\end_layout
+
+\begin_layout Plain Layout
+结果：
+ 
+\end_layout
+
+\begin_layout Plain Layout
+对于球面，
+度量张量分量为：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+E=R^{2}\sin^{2}\phi,\quad F=0,\quad G=R^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这就定义了球面上的距离测量方式。
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率的符号决定了曲面在该点附近的局部几何形状：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $K>0$
+\end_inset
+
+：
+椭圆点 (Elliptic Point)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+含义 ：
+
+\begin_inset Formula $\kappa_{1}$
+\end_inset
+
+ 和
+\begin_inset Formula $\kappa_{2}$
+\end_inset
+
+ 同号（同为正或同为负）。
+这意味着曲面在所有方向上都朝同一个方向弯曲。
+
+\end_layout
+
+\begin_layout Standard
+形状 ：
+像一个 球面 。
+
+\end_layout
+
+\begin_layout Standard
+例子 ：
+球体表面的任何一点。
+
+\end_layout
+
+\begin_layout Standard
+几何性质 ：
+如果在该点附近画一个三角形，
+其内角和 $
+\backslash
+sum 
+\backslash
+alpha > 
+\backslash
+pi$（大于 180 度）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $K<0$
+\end_inset
+
+：
+双曲点 (Hyperbolic Point)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+含义 ：
+
+\begin_inset Formula $\kappa_{1}$
+\end_inset
+
+ 和 
+\begin_inset Formula $\kappa_{2}$
+\end_inset
+
+ 异号（一个正，
+一个负）。
+这意味着曲面在一个方向上向上弯，
+在垂直的方向上向下弯。
+
+\end_layout
+
+\begin_layout Standard
+形状：
+像一个 马鞍面 (Saddle) 或 薯片 的形状。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+单叶双曲面，
+或者人体脖子侧面的皮肤。
+
+\end_layout
+
+\begin_layout Standard
+几何性质：
+如果在该点附近画一个三角形，
+其内角和 
+\begin_inset Formula $\sum\alpha<\pi$
+\end_inset
+
+（小于 180 度）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $K=0$
+\end_inset
+
+：
+抛物点或平点 (Parabolic/Flat Point)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+含义：
+至少有一个主曲率为 0。
+这意味着曲面在某个方向上是直的。
+
+\end_layout
+
+\begin_layout Standard
+形状：
+像一张平面，
+或者一个圆柱面、圆锥面。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+卷起的纸筒。
+虽然它在三维空间中看起来是弯的，
+但它的高斯曲率为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+几何性质：
+在该点附近的局部几何是欧几里得几何，
+三角形内角和 
+\begin_inset Formula $\sum\alpha=\pi$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+卓越定理的核心
 \end_layout
 
 \begin_layout Standard
@@ -39532,6 +40428,115 @@ K=\frac{LN-M^{2}}{EG-F^{2}},
 
 \begin_layout Standard
 黎曼几何后来成为 广义相对论 的核心语言（描述时空的弯曲）。
+
+\end_layout
+
+\begin_layout Standard
+高斯-博内定理 (Gauss-Bonnet Theorem)
+\end_layout
+
+\begin_layout Standard
+这个定理将局部的几何量（高斯曲率）与整体的拓扑性质联系了起来，
+是微分几何中最深刻的定理之一。
+
+\end_layout
+
+\begin_layout Standard
+对于一个紧致无边界的曲面 $M$，
+其高斯曲率的总积分等于其欧拉示性数 (Euler Characteristic) $
+\backslash
+chi(M)$ 的 $2
+\backslash
+pi$ 倍：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{M}K\,dA=2\pi\chi(M)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中
+\begin_inset Formula $\chi(M)=2-2g$
+\end_inset
+
+，
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ 是曲面的“孔”的数量（亏格）。
+
+\end_layout
+
+\begin_layout Standard
+例子：
+
+\end_layout
+
+\begin_layout Standard
+球体  (
+\begin_inset Formula $g=0$
+\end_inset
+
+)：
+任何变形的球体，
+其高斯曲率在整个表面上的积分总是等于 $4
+\backslash
+pi$。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{S^{2}}K\,dA=2\pi(2-0)=4\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+如果你把球压扁一点，
+某些地方曲率变大，
+某些地方变小，
+但总和不变。
+
+\end_layout
+
+\begin_layout Standard
+甜甜圈 (环面) (
+\begin_inset Formula $g=1$
+\end_inset
+
+)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{T^{2}}K\,dA=2\pi(2-2)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+环面外侧是正曲率（像球面），
+内侧是负曲率（像马鞍面），
+它们在积分中刚好完全抵消。
 
 \end_layout
 
@@ -101558,7 +102563,7 @@ S_{n} & =\frac{1}{1\cdot2}+\frac{1}{2\cdot3}\cdots+\frac{1}{n(n+1)}+\cdots\\
 几何级数
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
 无穷级数
 \begin_inset Formula $\stackrel[k=1]{n}{\sum}aq^{n-1}=a+aq+\cdots+aq^{n-1}+\cdots$
 \end_inset
@@ -102939,80 +103944,50 @@ H_{n}= & 1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots+\frac{1}{n}\\
 \end_layout
 
 \begin_layout Standard
- 例 2（发散）
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 考虑级数：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sum n!
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-sum n!
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 令 
-\backslash
-( a_n = n!
- 
-\backslash
-)，
+\begin_inset Formula $a_{n}=n!$
+\end_inset
+
+，
 计算：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+\begin_inset Formula 
+\[
+\limsup\limits_{n\to\infty}\sqrt[n]{|a_{n}|}=\limsup\limits_{n\to\infty}\sqrt[n]{n!}
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-limsup
-\backslash
-limits_{n 
-\backslash
-to 
-\backslash
-infty} 
-\backslash
-sqrt[n]{|a_n|} = 
-\backslash
-limsup
-\backslash
-limits_{n 
-\backslash
-to 
-\backslash
-infty} 
-\backslash
-sqrt[n]{n!}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 利用斯特林公式
 \begin_inset Formula $n!\approx\sqrt{2\pi n}\left(\frac{n}{e}\right)^{n}$
 \end_inset
@@ -103022,56 +103997,1681 @@ sqrt[n]{n!}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+\begin_inset Formula 
+\[
+\sqrt[n]{n!}\approx\frac{n}{e}
+\]
 
-\backslash
-[
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-
-\backslash
-sqrt[n]{n!} 
-\backslash
-approx 
-\backslash
-frac{n}{e}
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-]
-\end_layout
-
-\begin_layout Standard
+\begin_layout Example
 显然 
-\backslash
-( 
-\backslash
-lim
-\backslash
-limits_{n 
-\backslash
-to 
-\backslash
-infty} 
-\backslash
-frac{n}{e} = 
-\backslash
-infty 
-\backslash
-)，
+\begin_inset Formula $\lim\limits_{n\to\infty}\frac{n}{e}=\infty$
+\end_inset
+
+，
 所以级数发散。
 
 \end_layout
 
 \begin_layout Standard
----
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sophomore's Dream 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
--
+正项级数 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+ 是一个收敛速度非常快的级数。
+
+\end_layout
+
+\begin_layout Standard
+首先，
+我们来看级数的前几项：
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{1}=\frac{1}{1^{1}}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{2}=\frac{1}{2^{2}}=\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{3}=\frac{1}{3^{3}}=\frac{1}{27}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{4}=\frac{1}{4^{4}}=\frac{1}{256}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{5}=\frac{1}{5^{5}}=\frac{1}{3125}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+可以看到，
+分母 
+\begin_inset Formula $n^{n}$
+\end_inset
+
+ 的增长速度极快，
+导致每一项 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ 都迅速地趋近于零。
+当级数的项以如此快的速度减小时，
+其和通常是有限的，
+即级数收敛。
+
+\end_layout
+
+\begin_layout Itemize
+根值审敛法 (Root Test) - 最简洁的方法
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+根值审敛法对于通项包含 
+\begin_inset Formula $n$
+\end_inset
+
+ 次方的级数特别有效。
+
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $a_{n}=\frac{1}{n^{n}}$
+\end_inset
+
+。
+我们计算以下极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\sqrt[n]{|a_{n}|}=\underset{n\to\infty}{\lim}\sqrt[n]{\frac{1}{n^{n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\frac{\sqrt[n]{1}}{\sqrt[n]{n^{n}}}=\underset{n\to\infty}{\lim}\frac{1}{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据根值审敛法，
+因为 
+\begin_inset Formula $L=0<1$
+\end_inset
+
+，
+所以级数 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+ 收敛 。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+比较审敛法 (Comparison Test)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+我们可以将这个级数与一个已知的收敛级数进行比较。
+
+\end_layout
+
+\begin_layout Standard
+选择一个收敛的几何级数，
+例如 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{2^{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n=1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $a_{1}=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n=2$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $a_{2}=\frac{1}{2^{2}}=\frac{1}{4}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 时，
+我们有 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+，
+因此 
+\begin_inset Formula $n^{n}\ge2^{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+取倒数后，
+不等号反向：
+
+\begin_inset Formula $\frac{1}{n^{n}}\le\frac{1}{2^{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+我们知道，
+几何级数
+\begin_inset Formula $\sum_{n=1}^{\infty}(\frac{1}{2})^{n}$
+\end_inset
+
+ 是收敛的（因为其公比 
+\begin_inset Formula $r=\frac{1}{2}<1$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+由于从第二项开始，
+我们级数的每一项都小于一个收敛级数的对应项，
+根据比较审敛法，
+级数 
+\begin_inset Formula $\sum_{n=2}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+ 收敛。
+再加上有限的第一项 
+\begin_inset Formula $a_{1}=1$
+\end_inset
+
+，
+整个级数 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+ 仍然 收敛。
+
+\end_layout
+
+\begin_layout Standard
+我们也可以和收敛的
+\begin_inset Formula $p-$
+\end_inset
+
+级数 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$
+\end_inset
+
+ 进行比较。
+当
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $n^{n}>n^{2}$
+\end_inset
+
+，
+因此 
+\begin_inset Formula $\frac{1}{n^{n}}<\frac{1}{n^{2}}$
+\end_inset
+
+。
+同样可以得出收敛的结论。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+比值审敛法 (Ratio Test)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+令 
+\begin_inset Formula $a_{n}=\frac{1}{n^{n}}$
+\end_inset
+
+。
+我们计算以下极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\left|\frac{a_{n+1}}{a_{n}}\right|=\underset{n\to\infty}{\lim}\frac{\frac{1}{(n+1)^{n+1}}}{\frac{1}{n^{n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\frac{n^{n}}{(n+1)^{n+1}}=\underset{n\to\infty}{\lim}\frac{n^{n}}{(n+1)^{n}\cdot(n+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\left(\frac{n}{n+1}\right)^{n}\cdot\frac{1}{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=\underset{n\to\infty}{\lim}\left(\frac{1}{1+\frac{1}{n}}\right)^{n}\cdot\underset{n\to\infty}{\lim}\frac{1}{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们知道两个重要的极限：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\to\infty}{\lim}\left(1+\frac{1}{n}\right)^{n}=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{1}{n+1}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+所以，
+
+\begin_inset Formula $L=\frac{1}{e}\cdot0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据比值审敛法，
+因为 
+\begin_inset Formula $L=0<1$
+\end_inset
+
+，
+所以级数 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+ 收敛。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+它与函数 
+\begin_inset Formula $x^{-x}$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ 上的定积分相等。
+这是一个非常令人惊讶且优雅的数学恒等式：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\int_{0}^{1}\frac{1}{x^{x}}\,dx=\sum_{n=1}^{\infty}\frac{1}{n^{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+这个恒等式实际上是由著名的瑞士数学家 约翰·伯努利 (Johann Bernoulli) 在 1697年 发现并证明的。
+
+\end_layout
+
+\begin_layout Itemize
+这个级数收敛得非常快，
+因为 
+\begin_inset Formula $n^{n}$
+\end_inset
+
+ 增长得极快。
+其总和是一个无理数，
+约等于：
+
+\begin_inset Formula $1.291285997062663540...$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+你可以看到，
+前两项加起来是 
+\begin_inset Formula $1+0.25=1.25$
+\end_inset
+
+，
+这已经非常接近最终结果了。
+第三项仅为 
+\begin_inset Formula $1/27\approx0.037$
+\end_inset
+
+，
+之后的项对总和的贡献微乎其微。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+证明
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}\frac{1}{x^{x}}\,dx=\sum_{n=1}^{\infty}\frac{1}{n^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+将底数变形为指数形式
+\end_layout
+
+\begin_layout Standard
+首先，
+利用恒等式 
+\begin_inset Formula $a^{b}=e^{b\ln a}$
+\end_inset
+
+（
+\begin_inset Formula $e^{b\ln a}=(e^{\ln a})^{b}$
+\end_inset
+
+），
+将 integrand（被积函数）重写：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{-x}=\frac{1}{x^{x}}=e^{-x\ln x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+泰勒级数展开
+\end_layout
+
+\begin_layout Standard
+我们知道 
+\begin_inset Formula $e^{u}$
+\end_inset
+
+ 的泰勒展开式（麦克劳林级数）为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{u}=\sum_{n=0}^{\infty}\frac{u^{n}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+令
+\begin_inset Formula $u=-x\ln x$
+\end_inset
+
+，
+代入上式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{-x\ln x}=\sum_{n=0}^{\infty}\frac{(-x\ln x)^{n}}{n!}=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n}(\ln x)^{n}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+逐项积分
+\end_layout
+
+\begin_layout Standard
+将级数代回积分符号中。
+这里是和的积分（先把里面的东西加起来，
+再把结果拿去积分），
+假设我们可以交换积分和求和的顺序（在区间 
+\begin_inset Formula $(0,1]$
+\end_inset
+
+ 上是一致收敛的）：
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+积分 (
+\begin_inset Formula $\int$
+\end_inset
+
+) 本质上是一种极限（黎曼和），
+级数求和 (
+\begin_inset Formula $\sum$
+\end_inset
+
+) 也是一种极限（部分和的极限）。
+
+\end_layout
+
+\begin_layout Plain Layout
+所谓的“交换顺序”，
+实际上是在问：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\lim(\lim(\dots))\stackrel{?}{=}\lim(\lim(\dots))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+两个极限过程通常是不能随意交换顺序的。
+
+\end_layout
+
+\begin_layout Plain Layout
+如果级数收敛得“不够快”或者“不够均匀”，
+先积分再求和，
+与先求和再积分，
+可能会得到完全不同的结果（甚至一个存在一个不存在）。
+
+\end_layout
+
+\begin_layout Plain Layout
+为了保证交换是合法的，
+数学家们制定了几个著名的判定准则。
+最常用的是 一致收敛 (Uniform Convergence) 。
+
+\end_layout
+
+\begin_layout Theorem
+如果函数级数 
+\begin_inset Formula $\sum f_{n}(x)$
+\end_inset
+
+ 在积分区间
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ 上 一致收敛 于 
+\begin_inset Formula $S(x)$
+\end_inset
+
+，
+且每个 
+\begin_inset Formula $f_{n}(x)$
+\end_inset
+
+ 都是连续的，
+那么就可以交换积分和求和的顺序：
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\int_{a}^{b}\left(\sum_{n=0}^{\infty}f_{n}(x)\right)dx=\sum_{n=0}^{\infty}\int_{a}^{b}f_{n}(x)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{-x}\,dx=\int_{0}^{1}\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n}(\ln x)^{n}}{n!}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}\int_{0}^{1}x^{n}(\ln x)^{n}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+计算内部积分 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们需要计算定积分 
+\begin_inset Formula $I_{n}=\int_{0}^{1}x^{n}(\ln x)^{n}\,dx$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这里使用换元法最简单。
+
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $x=e^{-t}$
+\end_inset
+
+，
+则 
+\begin_inset Formula $\ln x=-t$
+\end_inset
+
+，
+且 
+\begin_inset Formula $dx=-e^{-t}dt$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+积分限变换：
+当 
+\begin_inset Formula $x=0$
+\end_inset
+
+ 时 
+\begin_inset Formula $t=\infty$
+\end_inset
+
+；
+当 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 时 
+\begin_inset Formula $t=0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+代入积分：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{n}=\int_{\infty}^{0}(e^{-t})^{n}(-t)^{n}(-e^{-t})\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{n}=\int_{\infty}^{0}e^{-nt}(-1)^{n}t^{n}(-1)e^{-t}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{n}=(-1)^{n}\int_{0}^{\infty}t^{n}e^{-(n+1)t}\,dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个积分的形式与 Gamma 函数 
+\begin_inset Formula $\Gamma(z)=\int_{0}^{\infty}t^{z-1}e^{-t}dt$
+\end_inset
+
+ 非常相似。
+
+\end_layout
+
+\begin_layout Standard
+为了凑成 Gamma 函数的标准形式，
+令 
+\begin_inset Formula $u=(n+1)t$
+\end_inset
+
+，
+则 
+\begin_inset Formula $t=\frac{u}{n+1}$
+\end_inset
+
+，
+
+\begin_inset Formula $dt=\frac{du}{n+1}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}t^{n}e^{-(n+1)t}\,dt=\int_{0}^{\infty}\left(\frac{u}{n+1}\right)^{n}e^{-u}\frac{du}{n+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{1}{(n+1)^{n+1}}\int_{0}^{\infty}u^{n}e^{-u}\,du
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+积分部分
+\begin_inset Formula $\int_{0}^{\infty}u^{n}e^{-u}\,du$
+\end_inset
+
+ 正是 
+\begin_inset Formula $\Gamma(n+1)$
+\end_inset
+
+，
+即阶乘 
+\begin_inset Formula $n!$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+内部积分 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ 的结果是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{n}=(-1)^{n}\frac{n!}{(n+1)^{n+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+组合最终结果
+\end_layout
+
+\begin_layout Standard
+现在将 
+\begin_inset Formula $I_{n}$
+\end_inset
+
+ 代回第3步的级数公式中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{-x}\,dx=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}\cdot\left[(-1)^{n}\frac{n!}{(n+1)^{n+1}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里发生了一些非常美妙的消去：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(-1)^{n}\cdot(-1)^{n}=(-1)^{2n}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分子中的 
+\begin_inset Formula $n!$
+\end_inset
+
+ 与分母中的 
+\begin_inset Formula $n!$
+\end_inset
+
+ 抵消。
+
+\end_layout
+
+\begin_layout Standard
+剩下的就是：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}\frac{1}{(n+1)^{n+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了让式子更好看，
+我们改变求和索引。
+令 
+\begin_inset Formula $k=n+1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n=0$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $k=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+于是得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=1}^{\infty}\frac{1}{k^{k}}=1+\frac{1}{2^{2}}+\frac{1}{3^{3}}+\frac{1}{4^{4}}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}\frac{1}{x^{x}}\,dx=\sum_{n=1}^{\infty}\frac{1}{n^{n}}\approx1.29128...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+交错级数
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{n}}=\ensuremath{\int_{0}^{1}x^{x}\,dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这是上一题 
+\begin_inset Formula $\int x^{-x}dx$
+\end_inset
+
+ 的“姊妹题”，
+它们共同构成了著名的 “大二之梦” (Sophomore's Dream) 恒等式对。
+
+\end_layout
+
+\begin_layout Standard
+积分
+\begin_inset Formula $\int_{0}^{1}x^{x}\,dx$
+\end_inset
+
+ 的结果是一个 交错级数 ：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x}\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{n}}=1-\frac{1}{2^{2}}+\frac{1}{3^{3}}-\frac{1}{4^{4}}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+它的数值约为 
+\begin_inset Formula $0.78343\cdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+推导思路与 
+\begin_inset Formula $x^{-x}$
+\end_inset
+
+ 几乎完全一致，
+唯一的区别在于符号的处理。
+
+\end_layout
+
+\begin_layout Standard
+变形为指数形式并展开
+\end_layout
+
+\begin_layout Standard
+利用 
+\begin_inset Formula $x^{x}=e^{x\ln x}$
+\end_inset
+
+，
+将其展开为泰勒级数：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{x}=\sum_{n=0}^{\infty}\frac{(x\ln x)^{n}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：
+这里与上一题不同，
+指数部分是正的 
+\begin_inset Formula $x\ln x$
+\end_inset
+
+，
+所以展开式中没有 
+\begin_inset Formula $(-1)^{n}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+逐项积分
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x}\,dx=\sum_{n=0}^{\infty}\frac{1}{n!}\int_{0}^{1}x^{n}(\ln x)^{n}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+利用已知积分结果
+\end_layout
+
+\begin_layout Standard
+我们在上一题中已经计算过内部积分
+\begin_inset Formula $I_{n}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{n}(\ln x)^{n}\,dx=(-1)^{n}\frac{n!}{(n+1)^{n+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+注意：
+这个 
+\begin_inset Formula $(-1)^{n}$
+\end_inset
+
+ 是由积分 
+\begin_inset Formula $\int(\ln x)^{n}$
+\end_inset
+
+ 产生的（因为 
+\begin_inset Formula $\ln x$
+\end_inset
+
+ 在 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 区间是负数）。
+ 
+\end_layout
+
+\begin_layout Standard
+将积分结果代回级数公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x}\,dx=\sum_{n=0}^{\infty}\frac{1}{n!}\cdot\left[(-1)^{n}\frac{n!}{(n+1)^{n+1}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+消去
+\begin_inset Formula $n!$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{(n+1)^{n+1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+重新索引 (整理格式)
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $k=n+1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n=0$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $k=1$
+\end_inset
+
+，
+且
+\begin_inset Formula $(-1)^{0}=1=(-1)^{1-1}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n=1$
+\end_inset
+
+ 时，
+
+\begin_inset Formula $k=2$
+\end_inset
+
+，
+且 
+\begin_inset Formula $(-1)^{1}=-1=(-1)^{2-1}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以级数可以写成：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k=1}^{\infty}\frac{(-1)^{k-1}}{k^{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1-\frac{1}{2^{2}}+\frac{1}{3^{3}}-\frac{1}{4^{4}}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+伯努利发现的这两条“大二之梦”公式极其对称：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula 
+\[
+\int_{0}^{1}\frac{1}{x^{x}}\,dx=\sum_{n=1}^{\infty}\frac{1}{n^{n}}\quad(\text{各项均为正})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x}\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{n}}\quad(\text{正负交错})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $y=x^{(-x)}$
+\end_inset
+
+ ，
+
+\begin_inset Formula $y=x^{(x)}$
+\end_inset
+
+ 这 两个函数围成的图形面积
+\end_layout
+
+\begin_layout Standard
+要证明由函数 
+\begin_inset Formula $f(x)=x^{-x}$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(x)=x^{x}$
+\end_inset
+
+ 在区间 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 上围成的面积是一个特定的级数，
+我们可以利用我们之前推导出的两个“大二之梦”恒等式。
+
+\end_layout
+
+\begin_layout Standard
+首先，
+我们需要确定两个函数在区间 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 上的相对位置。
+
+\end_layout
+
+\begin_layout Standard
+在 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ 区间内，
+
+\begin_inset Formula $\ln x<0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+因此 
+\begin_inset Formula $-x\ln x>0$
+\end_inset
+
+ 且 
+\begin_inset Formula $x\ln x<0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这意味着 
+\begin_inset Formula $e^{-x\ln x}>e^{x\ln x}$
+\end_inset
+
+，
+即 
+\begin_inset Formula $x^{-x}>x^{x}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+围成的面积 
+\begin_inset Formula $A$
+\end_inset
+
+ 可以表示为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\int_{0}^{1}(x^{-x}-x^{x})\,dx=\int_{0}^{1}x^{-x}\,dx-\int_{0}^{1}x^{x}\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+根据我们之前的推导，
+我们已知：
+
+\end_layout
+
+\begin_layout Standard
+第一部分：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{-x}\,dx=\sum_{n=1}^{\infty}\frac{1}{n^{n}}=1+\frac{1}{2^{2}}+\frac{1}{3^{3}}+\frac{1}{4^{4}}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+第二部分：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x}\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{n}}=1-\frac{1}{2^{2}}+\frac{1}{3^{3}}-\frac{1}{4^{4}}+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们将两个级数逐项相减：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\left(\sum_{n=1}^{\infty}\frac{1}{n^{n}}\right)-\left(\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+为了看清楚规律，
+我们写出前几项：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\left(1+\frac{1}{2^{2}}+\frac{1}{3^{3}}+\frac{1}{4^{4}}+\dots\right)-\left(1-\frac{1}{2^{2}}+\frac{1}{3^{3}}-\frac{1}{4^{4}}+\dots\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n$
+\end_inset
+
+ 为奇数时 (
+\begin_inset Formula $n=1,3,5...$
+\end_inset
+
+)：
+ 
+\end_layout
+
+\begin_layout Standard
+第一部分的项是 
+\begin_inset Formula $\frac{1}{n^{n}}$
+\end_inset
+
+，
+ 第二部分的通项是 
+\begin_inset Formula $\frac{(-1)^{n-1}}{n^{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当
+\begin_inset Formula $n=1$
+\end_inset
+
+：
+
+\begin_inset Formula $1-1=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n=3$
+\end_inset
+
+：
+
+\begin_inset Formula $\frac{1}{3^{3}}-\frac{1}{3^{3}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结论：
+所有奇数项相减后相互抵消。
+ 
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $n$
+\end_inset
+
+ 为偶数时 (
+\begin_inset Formula $n=2,4,6...$
+\end_inset
+
+)：
+ 
+\end_layout
+
+\begin_layout Standard
+第一部分的项是 
+\begin_inset Formula $\frac{1}{n^{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+第二部分的项是 
+\begin_inset Formula $-\frac{1}{n^{n}}$
+\end_inset
+
+（因为
+\begin_inset Formula $(-1)^{even-1}=-1$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+相减得：
+
+\begin_inset Formula $\frac{1}{n^{n}}-(-\frac{1}{n^{n}})=\frac{2}{n^{n}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+所有偶数项相加后翻倍。
+ 
+\end_layout
+
+\begin_layout Standard
+经过上述计算，
+面积 
+\begin_inset Formula $A$
+\end_inset
+
+ 只剩下偶数项的两倍。
+
+\end_layout
+
+\begin_layout Standard
+令 
+\begin_inset Formula $n=2k$
+\end_inset
+
+（其中
+\begin_inset Formula $k=1,2,3,\dots$
+\end_inset
+
+），
+我们可以得到：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=\sum_{k=1}^{\infty}\frac{2}{(2k)^{2k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或者写成展开形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+A=2\left(\frac{1}{2^{2}}+\frac{1}{4^{4}}+\frac{1}{6^{6}}+\dots\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这两条曲线围成的面积等于：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Area}=\sum_{n=1}^{\infty}\frac{1-(-1)^{n-1}}{n^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个通项公式 
+\begin_inset Formula $1-(-1)^{n-1}$
+\end_inset
+
+ 在
+\begin_inset Formula $n$
+\end_inset
+
+ 为奇数时为
+\begin_inset Formula $0$
+\end_inset
+
+，
+在 
+\begin_inset Formula $n$
+\end_inset
+
+ 为偶数时为
+\begin_inset Formula $2$
+\end_inset
+
+。
+因此最终结果证明为偶数项级数的两倍：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Area}=2\sum_{k=1}^{\infty}(2k)^{-2k}\approx0.5078
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -103186,23 +105786,21 @@ infty
 \end_layout
 
 \begin_layout Standard
-- 若 
-\backslash
-( |r| < 1 
-\backslash
-)，
+- 若
+\begin_inset Formula $|r|<1$
+\end_inset
+
+，
 收敛。
 
 \end_layout
 
 \begin_layout Standard
-- 若 
-\backslash
-( |r| 
-\backslash
-geq 1 
-\backslash
-)，
+- 若
+\begin_inset Formula $|r|\geq1$
+\end_inset
+
+，
 发散。
 
 \end_layout
@@ -119400,70 +121998,63 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
-1.
- 高斯朴素贝叶斯 (Gaussian NB):
+\begin_layout Enumerate
+高斯朴素贝叶斯 (Gaussian NB):
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 适用场景：
+适用场景：
  特征是连续数值（如身高、体重、温度）。
 
 \end_layout
 
 \begin_layout Standard
-* 假设：
+假设：
  假设特征符合高斯分布（正态分布）。
 
 \end_layout
 
-\begin_layout Standard
-2.
- 多项式朴素贝叶斯 (Multinomial NB):
+\end_deeper
+\begin_layout Enumerate
+多项式朴素贝叶斯 (Multinomial NB):
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 适用场景：
+适用场景：
  特征是离散的计数（如文本分类中单词出现的次数）。
 
 \end_layout
 
 \begin_layout Standard
-* 应用：
+应用：
  这是自然语言处理 (NLP) 中最常用的变体。
 
 \end_layout
 
-\begin_layout Standard
-3.
- 伯努利朴素贝叶斯 (Bernoulli NB):
+\end_deeper
+\begin_layout Enumerate
+伯努利朴素贝叶斯 (Bernoulli NB):
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-* 适用场景：
+适用场景：
  特征是二值的（0或1，
 出现或没出现）。
 
 \end_layout
 
 \begin_layout Standard
-* 应用：
+应用：
  关注单词是否出现，
 而不关心出现几次。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 3.
- 举个例子：
-垃圾邮件分类
-\end_layout
-
-\begin_layout Standard
+\end_deeper
+\begin_layout Example
 假设我们有一封邮件，
 内容包含单词：
 “中奖”和“免费”。
@@ -119471,15 +122062,15 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 根据朴素贝叶斯公式，
 我们需要比较以下两个概率的大小：
 
 \end_layout
 
-\begin_layout Standard
-1.
- P(Spam | "中奖",
+\begin_deeper
+\begin_layout Enumerate
+P(Spam | "中奖",
  "免费") 
 \begin_inset Formula $\propto P(\text{Spam})\times P(\text{"中奖"}|\text{Spam})\times P(\text{"免费"}|\text{Spam})$
 \end_inset
@@ -119487,9 +122078,8 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
-2.
- P(Ham | "中奖",
+\begin_layout Enumerate
+P(Ham | "中奖",
  "免费") 
 \begin_inset Formula $\propto P(\text{Ham})\times P(\text{"中奖"}|\text{Ham})\times P(\text{"免费"}|\text{Ham})$
 \end_inset
@@ -119497,48 +122087,74 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Example
 步骤：
 
 \end_layout
 
-\begin_layout Standard
-1.
- 看先验：
+\begin_deeper
+\begin_layout Enumerate
+看先验：
  统计数据库，
-发现垃圾邮件占 40%，
-正常邮件占 60%。
+发现垃圾邮件占 
+\begin_inset Formula $40\%$
+\end_inset
+
+，
+正常邮件占 
+\begin_inset Formula $60\%$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-2.
- 看似然：
+\begin_layout Enumerate
+看似然：
 
 \end_layout
 
-\begin_layout Standard
-* 在垃圾邮件里，
-“中奖”出现的概率是 50%，
-“免费”出现的概率是 60%。
+\begin_deeper
+\begin_layout Itemize
+在垃圾邮件里，
+“中奖”出现的概率是 
+\begin_inset Formula $50\%$
+\end_inset
+
+，
+“免费”出现的概率是 
+\begin_inset Formula $60\%$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-* 在正常邮件里，
-“中奖”出现的概率是 1%，
-“免费”出现的概率是 5%。
+\begin_layout Itemize
+在正常邮件里，
+“中奖”出现的概率是 
+\begin_inset Formula $1\%$
+\end_inset
+
+，
+“免费”出现的概率是 
+\begin_inset Formula $5\%$
+\end_inset
+
+。
 
 \end_layout
 
-\begin_layout Standard
-3.
- 计算得分（忽略分母）：
+\end_deeper
+\begin_layout Enumerate
+计算得分（忽略分母）：
 
 \end_layout
 
-\begin_layout Standard
-* 垃圾邮件得分：
+\begin_deeper
+\begin_layout Itemize
+垃圾邮件得分：
  
 \begin_inset Formula $0.4\times0.5\times0.6=0.12$
 \end_inset
@@ -119546,8 +122162,8 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
-* 正常邮件得分：
+\begin_layout Itemize
+正常邮件得分：
 
 \begin_inset Formula $0.6\times0.01\times0.05=0.0003$
 \end_inset
@@ -119555,7 +122171,8 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
-\begin_layout Standard
+\end_deeper
+\begin_layout Enumerate
 结论：
 
 \begin_inset Formula $0.12\gg0.0003$
@@ -119566,46 +122183,149 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
----
-\end_layout
+\begin_inset Separator plain
+\end_inset
 
-\begin_layout Standard
-### 4.
- 优缺点分析
-\end_layout
-
-\begin_layout Standard
-#### 优点：
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
+符号 
+\begin_inset Formula $\propto$
+\end_inset
+
+ 在数学和逻辑中表示 “与\SpecialChar ldots
+\SpecialChar ldots
+成正比” (is proportional to)。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $P(\text{类别}|\text{特征})=\frac{P(\text{特征}|\text{类别})\cdot P(\text{类别})}{P(\text{特征})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+当我们做分类任务时（比如判断是“垃圾邮件”还是“正常邮件”），
+我们需要比较两个概率的大小：
+
+\end_layout
+
+\begin_layout Example
 1.
- 速度快、效率高：
+ 垃圾邮件概率：
+
+\begin_inset Formula $\frac{P(\text{特征}|\text{垃圾})\cdot P(\text{垃圾})}{P(\text{特征})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 正常邮件概率：
+
+\begin_inset Formula $\frac{P(\text{特征}|\text{正常})\cdot P(\text{正常})}{P(\text{特征})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+请注意：
+
+\end_layout
+
+\begin_layout Example
+这两个式子的分母都是 
+\begin_inset Formula $P(\text{特征})$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+因为我们要处理的是同一封邮件（同一组特征），
+所以分母对于两个类别来说是完全一样的常数。
+
+\end_layout
+
+\begin_layout Example
+结论：
+
+\end_layout
+
+\begin_layout Example
+既然分母一样，
+我们在比较大小时，
+完全可以扔掉分母，
+只比较分子。
+
+\end_layout
+
+\begin_layout Example
+所以公式简化为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+P(\text{类别}|\text{特征})\propto P(\text{特征}|\text{类别})\cdot P(\text{类别})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(后验概率 正比于 似然概率 
+\begin_inset Formula $\times$
+\end_inset
+
+ 先验概率)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+优点：
+
+\end_layout
+
+\begin_layout Enumerate
+速度快、效率高：
  计算主要是简单的概率乘法，
 训练和预测都非常快。
 
 \end_layout
 
-\begin_layout Standard
-2.
- 对小规模数据表现好：
+\begin_layout Enumerate
+对小规模数据表现好：
  即使训练数据不多，
 也能训练出不错的模型。
 
 \end_layout
 
-\begin_layout Standard
-3.
- 处理高维数据能力强：
+\begin_layout Enumerate
+处理高维数据能力强：
  在文本分类（几万个特征）中表现优异。
 
 \end_layout
 
-\begin_layout Standard
-4.
- 对缺失数据不敏感。
+\begin_layout Enumerate
+对缺失数据不敏感。
 
 \end_layout
 
@@ -119620,30 +122340,28 @@ P(B\vert A)=0.9\times\frac{2}{7305}\times\frac{7}{3}=0.0005749486653\cdots
 \end_layout
 
 \begin_layout Standard
-#### 缺点：
+缺点：
 
 \end_layout
 
-\begin_layout Standard
-1.
- “朴素”的假设过于理想化：
+\begin_layout Enumerate
+“朴素”的假设过于理想化：
  如果特征之间关联性非常强（比如“机器学习”和“人工智能”经常一起出现），
 朴素贝叶斯的效果会下降。
 
 \end_layout
 
-\begin_layout Standard
-2.
- 零概率问题：
+\begin_layout Enumerate
+零概率问题：
  如果在训练集中某个词从来没在垃圾邮件里出现过，
 概率会变成 0，
 导致整个计算结果为 0。
 
 \end_layout
 
-\begin_layout Standard
-* *解决方案：
-* 使用拉普拉斯平滑 (Laplace Smoothing)，
+\begin_layout Enumerate
+解决方案：
+ 使用拉普拉斯平滑 (Laplace Smoothing)，
 给每个计数加 1，
 避免 0 的出现。
 
@@ -156410,6 +159128,6736 @@ x_{4} & =y_{4}
  赵爽弦图
 \end_layout
 
+\begin_layout Chapter
+三角形内角
+\end_layout
+
+\begin_layout Standard
+三角形内角和是否等于
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+ (
+\begin_inset Formula $\pi$
+\end_inset
+
+)，
+完全取决于这个三角形所在的空间的曲率，
+也就是我们刚才讨论的高斯曲率 
+\begin_inset Formula $K$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在几何学的三大流派中，
+答案截然不同：
+
+\end_layout
+
+\begin_layout Enumerate
+欧几里得几何 (Euclidean Geometry)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+环境：
+平坦的空间（如一张平铺的纸）。
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率：
+
+\begin_inset Formula $K=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结论：
+内角和 等于 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha+\beta+\gamma=\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+黎曼几何 / 椭圆几何 (Elliptic Geometry)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+环境：
+正曲率空间（如球体表面）。
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率：
+
+\begin_inset Formula $K>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+直观想象：
+想象在一个地球仪上画三角形。
+
+\end_layout
+
+\begin_layout Enumerate
+从北极出发，
+沿着 0 度经线走到赤道（夹角 
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Enumerate
+沿着赤道向东走 90 度经度。
+
+\end_layout
+
+\begin_layout Enumerate
+再沿着 90 度经线回到北极。
+
+\end_layout
+
+\begin_layout Standard
+结果：
+这个三角形的三个角都是 
+\begin_inset Formula $90^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+结论：
+内角和 大于 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha+\beta+\gamma>\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+三角形面积越大，
+内角和超出的部分越多。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+罗巴切夫斯基几何 / 双曲几何 (Hyperbolic Geometry)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+环境：
+负曲率空间（如马鞍面）。
+
+\end_layout
+
+\begin_layout Standard
+高斯曲率：
+
+\begin_inset Formula $K<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+直观想象：
+在一个像“薯片”一样的马鞍面上画三角形。
+由于空间向内收缩，
+三角形的边（测地线）会向内弯曲，
+看起来比较“瘦”。
+
+\end_layout
+
+\begin_layout Standard
+结论：
+内角和 小于 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha+\beta+\gamma<\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+高斯-博内定理的局部形式
+\end_layout
+
+\begin_layout Standard
+为什么高斯曲率会决定内角和？
+这可以通过高斯-博内定理 (Gauss-Bonnet Theorem) 的局部形式来精确描述。
+
+\end_layout
+
+\begin_layout Standard
+对于一个由测地线（曲面上的“直线”）围成的三角形 $T$，
+其内角和 $
+\backslash
+Sigma$ 满足以下公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i=1}^{3}\alpha_{i}=\pi+\iint_{T}K\,dA
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum\alpha_{i}$
+\end_inset
+
+ 是内角和。
+
+\end_layout
+
+\begin_layout Standard
+$
+\backslash
+pi$ 是 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+$
+\backslash
+iint_{T} K 
+\backslash
+,
+ dA$ 是该三角形区域内高斯曲率的总积分（总曲率）。
+
+\end_layout
+
+\begin_layout Standard
+推导分析：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 平坦空间 ($K=0$)：
+
+\end_layout
+
+\begin_layout Standard
+积分项 $
+\backslash
+iint 0 
+\backslash
+,
+ dA = 0$。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+sum 
+\backslash
+alpha_i = 
+\backslash
+pi + 0 = 180^{
+\backslash
+circ} $$
+\end_layout
+
+\begin_layout Standard
+2.
+ 球面 ($K > 0$)：
+
+\end_layout
+
+\begin_layout Standard
+积分项为正数。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+sum 
+\backslash
+alpha_i = 
+\backslash
+pi + (
+\backslash
+text{正数}) > 180^{
+\backslash
+circ} $$
+\end_layout
+
+\begin_layout Standard
+*(这就是为什么地球上画的小三角形近似 $180^{
+\backslash
+circ}$，
+因为面积 $dA$ 很小，
+积分项接近 0；
+但大三角形会明显超过 $180^{
+\backslash
+circ}$。
+)*
+\end_layout
+
+\begin_layout Standard
+3.
+ 双曲面 ($K < 0$)：
+
+\end_layout
+
+\begin_layout Standard
+积分项为负数。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+sum 
+\backslash
+alpha_i = 
+\backslash
+pi + (
+\backslash
+text{负数}) < 180^{
+\backslash
+circ} $$
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+三角形内角和等于 $180^{
+\backslash
+circ}$ 只是欧几里得几何中的一个特例。
+在更广义的内蕴几何视角下，
+内角和是探测空间弯曲程度（高斯曲率）的一把尺子。
+
+\end_layout
+
+\begin_layout Section
+欧几里得几何体系内 三角形内角和
+\end_layout
+
+\begin_layout Standard
+在欧几里得几何中，
+三角形内角和必须、绝对、永远等于 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+欧几里得几何：
+证明内角和为 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个证明完全依赖于平行公设（Parallel Postulate）。
+
+\end_layout
+
+\begin_layout Standard
+目标：
+证明任意 
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+ 的内角和 
+\begin_inset Formula $\alpha+\beta+\gamma=180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+证明步骤：
+
+\end_layout
+
+\begin_layout Enumerate
+作辅助线：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+过三角形的顶点 
+\begin_inset Formula $A$
+\end_inset
+
+，
+作一条直线 
+\begin_inset Formula $l$
+\end_inset
+
+，
+使得 
+\begin_inset Formula $l$
+\end_inset
+
+ 平行于底边
+\begin_inset Formula $BC$
+\end_inset
+
+（即
+\begin_inset Formula $l\parallel BC$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+注意：
+这一步在欧氏几何中是合法的，
+因为欧氏几何的第五公设保证了过直线外一点有且只有一条平行线。
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+利用平角定义：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+在顶点 
+\begin_inset Formula $A$
+\end_inset
+
+ 处，
+直线 
+\begin_inset Formula $l$
+\end_inset
+
+ 形成了一个平角。
+
+\end_layout
+
+\begin_layout Standard
+设直线 
+\begin_inset Formula $l$
+\end_inset
+
+ 上在
+\begin_inset Formula $A$
+\end_inset
+
+ 左侧的角为 
+\begin_inset Formula $\angle1$
+\end_inset
+
+，
+右侧的角为 
+\begin_inset Formula $\angle2$
+\end_inset
+
+，
+中间是三角形的内角 
+\begin_inset Formula $\angle BAC$
+\end_inset
+
+（即 
+\begin_inset Formula $\alpha$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+显然：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\angle1+\alpha+\angle2=180^{\circ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+利用平行线的性质（内错角相等）：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+因为 
+\begin_inset Formula $l\parallel BC$
+\end_inset
+
+，
+根据平行线的性质：
+
+\end_layout
+
+\begin_layout Standard
+直线 
+\begin_inset Formula $AB$
+\end_inset
+
+ 截 
+\begin_inset Formula $l$
+\end_inset
+
+ 和 
+\begin_inset Formula $BC$
+\end_inset
+
+，
+则内错角相等：
+
+\begin_inset Formula 
+\[
+\angle1=\angle ABC=\beta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+直线 
+\begin_inset Formula $AC$
+\end_inset
+
+ 截 
+\begin_inset Formula $l$
+\end_inset
+
+ 和 
+\begin_inset Formula $BC$
+\end_inset
+
+，
+则内错角相等：
+
+\begin_inset Formula 
+\[
+\angle2=\angle ACB=\gamma
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+代换：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+将第 3 步的结果代入第 2 步的等式中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta+\alpha+\gamma=180^{\circ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+即：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha+\beta+\gamma=180^{\circ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+结论：
+在欧几里得几何中，
+三角形内角和恒为 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+图灵图斑
+\end_layout
+
+\begin_layout Standard
+图灵图斑 (Turing Patterns) 是自然界中一种通过 反应-扩散机制 (Reaction-Diffusion Mechanism) 自发产生的空间纹理或图案（如斑点、条纹、迷宫纹等）。
+
+\end_layout
+
+\begin_layout Standard
+这一概念由著名的数学家、计算机科学之父 艾伦·图灵 (Alan Turing) 于 1952 年在其唯一的生物学论文《形态发生的化学基础》(The Chemical Basis of Morphogenesis) 中提出。
+他用数学方程证明了，
+即使是从一个完全均匀的初始状态开始，
+化学物质的相互作用和扩散也能打破对称性，
+自组织形成复杂的稳定图案。
+
+\end_layout
+
+\begin_layout Standard
+图灵图斑展示了复杂性如何从简单规则中涌现。
+只需两个方程和简单的扩散差异条件：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D_{\text{inhibitor}}>D_{\text{activator}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+大自然就能在原本均匀的画布上描绘出大千世界中最美丽的图案。
+
+\end_layout
+
+\begin_layout Standard
+以下是图灵图斑的详细解释，
+涵盖其直观机制和数学原理。
+
+\end_layout
+
+\begin_layout Enumerate
+核心机制：
+反应-扩散系统
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+图灵模型通常假设存在两种化学物质，
+称为形态发生素 (Morphogens)。
+它们在空间中扩散并相互发生化学反应。
+这两种物质分别扮演不同的角色：
+
+\end_layout
+
+\begin_layout Enumerate
+激活剂 (Activator,
+ 用 
+\begin_inset Formula $u$
+\end_inset
+
+ 表示)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+它能促进自身的生成（自催化，
+Autocatalysis）。
+
+\end_layout
+
+\begin_layout Itemize
+它能促进抑制剂的生成。
+
+\end_layout
+
+\begin_layout Itemize
+它的扩散速度较慢。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+抑制剂 (Inhibitor,
+ 用 
+\begin_inset Formula $v$
+\end_inset
+
+ 表示)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+它能抑制激活剂的生成。
+
+\end_layout
+
+\begin_layout Itemize
+它的扩散速度很快。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+这种机制被称为局部激活，
+长程抑制 (Local Activation,
+ Long-range Inhibition)。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+数学描述 (LaTeX)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+图灵图斑通过一组偏微分方程 (Partial Differential Equations,
+ PDEs) 来描述。
+最通用的形式如下：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{c}}{\partial t}=\mathbf{f}(\mathbf{c})+\mathbf{D}\nabla^{2}\mathbf{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+其中：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{c}$
+\end_inset
+
+ 是浓度向量，
+包含激活剂 
+\begin_inset Formula $u$
+\end_inset
+
+ 和抑制剂 
+\begin_inset Formula $v$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{f}(\mathbf{c})$
+\end_inset
+
+ 是反应项，
+描述化学反应动力学（非线性）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{D}\nabla^{2}\mathbf{c}$
+\end_inset
+
+ 是扩散项，
+描述物质在空间中的流动。
+
+\end_layout
+
+\begin_layout Standard
+具体的双变量反应-扩散方程组通常写为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=f(u,v)+D_{u}\nabla^{2}u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial t}=g(u,v)+D_{v}\nabla^{2}v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u(x,t)$
+\end_inset
+
+ 和
+\begin_inset Formula $v(x,t)$
+\end_inset
+
+ 是激活剂和抑制剂在位置 
+\begin_inset Formula $x$
+\end_inset
+
+ 和时间 
+\begin_inset Formula $t$
+\end_inset
+
+ 的浓度。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(u,v)$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(u,v)$
+\end_inset
+
+ 是描述两者相互作用的非线性函数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D_{u}$
+\end_inset
+
+ 和
+\begin_inset Formula $D_{v}$
+\end_inset
+
+ 分别是激活剂和抑制剂的扩散系数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+ 是拉普拉斯算子（Laplacian operator），
+在二维空间中为 
+\begin_inset Formula $\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+产生图斑的关键条件
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+图灵最惊人的发现是图灵不稳定性 (Turing Instability)，
+也称为扩散驱动的不稳定性。
+
+\end_layout
+
+\begin_layout Standard
+通常我们认为扩散会使系统趋于均匀（就像把一滴墨水滴入水中，
+最后水会变成均匀的颜色）。
+但在图灵系统中，
+扩散恰恰是产生图案的原因。
+
+\end_layout
+
+\begin_layout Standard
+要产生稳定的图斑，
+必须满足以下数学不等式条件：
+
+\end_layout
+
+\begin_layout Enumerate
+无扩散时稳定：
+在没有扩散项时，
+均匀稳态
+\begin_inset Formula $(u_{0},v_{0})$
+\end_inset
+
+ 是稳定的。
+
+\end_layout
+
+\begin_layout Enumerate
+扩散差异：
+抑制剂的扩散速度必须显著快于激活剂。
+数学上表示为：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D_{v}\gg D_{u}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $D_{v}$
+\end_inset
+
+ 足够大时，
+抑制剂迅速跑到激活剂聚集区的周围，
+压制那里的激活剂生成，
+从而将激活剂“禁锢”在局部峰值中。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+常见的数学模型例子
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+为了模拟这些图案，
+数学家设计了特定的 
+\begin_inset Formula $f(u,v)$
+\end_inset
+
+ 和 
+\begin_inset Formula $g(u,v)$
+\end_inset
+
+ 函数。
+
+\end_layout
+
+\begin_layout Enumerate
+Gierer-Meinhardt 模型 (1972)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是一个经典的生物图案生成模型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=\rho\frac{u^{2}}{v}-\mu_{u}u+D_{u}\nabla^{2}u+\rho_{u}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial t}=\rho u^{2}-\mu_{v}v+D_{v}\nabla^{2}v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+项 
+\begin_inset Formula $\frac{u^{2}}{v}$
+\end_inset
+
+ 表示激活剂 
+\begin_inset Formula $u$
+\end_inset
+
+ 的自催化，
+同时被 
+\begin_inset Formula $v$
+\end_inset
+
+ 抑制。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Gray-Scott 模型
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是计算机图形学中常用来生成迷幻图案的模型：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=-uv^{2}+F(1-u)+D_{u}\nabla^{2}u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial t}=uv^{2}-(F+k)v+D_{v}\nabla^{2}v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里 
+\begin_inset Formula $u$
+\end_inset
+
+ 是被消耗的“食物”，
+
+\begin_inset Formula $v$
+\end_inset
+
+ 是繁殖的“细胞”。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F$
+\end_inset
+
+ 是进给率 (Feed rate)，
+
+\begin_inset Formula $k$
+\end_inset
+
+ 是杀灭率 (Kill rate)。
+
+\end_layout
+
+\begin_layout Standard
+通过调整 
+\begin_inset Formula $F$
+\end_inset
+
+ 和 
+\begin_inset Formula $k$
+\end_inset
+
+，
+可以生成斑点、条纹、甚至分裂细胞般的动态图案。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+自然界中的例子
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+虽然图灵在 1952 年就提出了理论，
+但在生物学上的确凿证据直到几十年后才被发现。
+现在普遍认为以下现象与图灵机制有关：
+
+\end_layout
+
+\begin_layout Enumerate
+动物皮毛：
+斑马的条纹、猎豹的斑点、长颈鹿的网纹。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+由于胚胎发育过程中区域大小的变化，
+同样的方程参数可能在尾巴（细圆柱体）产生条纹，
+而在身体（宽平面）产生斑点。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+热带鱼：
+神仙鱼（Angelfish）身上的条纹不仅是固定的，
+还能在生长过程中移动和重组，
+这完全符合动态反应-扩散系统的模拟。
+
+\end_layout
+
+\begin_layout Enumerate
+指距的形成：
+脊椎动物胚胎在发育手掌时，
+手指和指缝的区别可能由图灵波决定。
+
+\end_layout
+
+\begin_layout Enumerate
+贝壳纹理：
+许多海螺壳上的复杂三角形和波浪图案。
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+计算图灵图斑（Turing Patterns）
+\end_layout
+
+\begin_layout Subsection
+数值模拟
+\end_layout
+
+\begin_layout Standard
+通过计算机编程求解偏微分方程，
+生成可视化的图案。
+
+\end_layout
+
+\begin_layout Subsubsection
+Gray-Scott 模型
+\end_layout
+
+\begin_layout Paragraph
+数学模型：
+Gray-Scott 方程组
+\end_layout
+
+\begin_layout Standard
+这是一个包含两个变量 
+\begin_inset Formula $u$
+\end_inset
+
+ 和
+\begin_inset Formula $v$
+\end_inset
+
+ 的反应-扩散方程组。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u$
+\end_inset
+
+：
+某种被消耗的化学物质（食物）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v$
+\end_inset
+
+：
+某种通过消耗 
+\begin_inset Formula $u$
+\end_inset
+
+ 进行自我复制的物质（细胞）。
+
+\end_layout
+
+\begin_layout Standard
+公式：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=D_{u}\nabla^{2}u-uv^{2}+F(1-u)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial t}=D_{v}\nabla^{2}v+uv^{2}-(F+k)v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+各项含义详解：
+ 
+\end_layout
+
+\begin_layout Itemize
+左边 
+\begin_inset Formula $\frac{\partial}{\partial t}$
+\end_inset
+
+：
+物质浓度随时间的变化率。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+扩散项 
+\begin_inset Formula $D\nabla^{2}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $D_{u},D_{v}$
+\end_inset
+
+ 是扩散系数。
+图灵条件要求
+\begin_inset Formula $D_{u}>D_{v}$
+\end_inset
+
+（抑制剂/食物扩散快于激活剂/细胞，
+但在 Gray-Scott 中通常 
+\begin_inset Formula $D_{u}\approx2D_{v}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+ 是拉普拉斯算子，
+描述物质如何从高浓度向低浓度流动。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+反应项 (非线性部分)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $uv^{2}$
+\end_inset
+
+：
+这是核心反应。
+两个 
+\begin_inset Formula $v$
+\end_inset
+
+ 遇到一个 
+\begin_inset Formula $u$
+\end_inset
+
+，
+把 
+\begin_inset Formula $u$
+\end_inset
+
+ 变成了 
+\begin_inset Formula $v$
+\end_inset
+
+（自催化）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(1-u)$
+\end_inset
+
+：
+进给 (Feed) 项。
+系统不断以速率 
+\begin_inset Formula $F$
+\end_inset
+
+ 补充 
+\begin_inset Formula $u$
+\end_inset
+
+，
+使其恢复到 
+\begin_inset Formula $1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-(F+k)v$
+\end_inset
+
+：
+杀灭 (Kill) 项。
+
+\begin_inset Formula $v$
+\end_inset
+
+ 会以 
+\begin_inset Formula $(F+k)$
+\end_inset
+
+ 的速率自然死亡或流失。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Paragraph
+数值计算方法：
+有限差分法 (Finite Difference Method)
+\end_layout
+
+\begin_layout Standard
+计算机无法处理连续的空间和时间，
+我们需要把它们切成网格（离散化）。
+
+\end_layout
+
+\begin_layout Subparagraph
+空间的离散化：
+拉普拉斯算子 
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在二维网格 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 上，
+拉普拉斯算子描述了一个点 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 的浓度与它周围邻居平均浓度的差异。
+
+\end_layout
+
+\begin_layout Standard
+我们可以使用 五点差分格式 或 九点卷积核 来近似计算。
+最常用的是卷积核（Convolution Kernel）。
+
+\end_layout
+
+\begin_layout Standard
+公式近似为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u_{i,j}\approx\frac{1}{h^{2}}\sum_{m,n}w_{m,n}\cdot u_{i+m,j+n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+常用的 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ 离散拉普拉斯卷积核 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{K}=\begin{pmatrix}0.05 & 0.2 & 0.05\\
+0.2 & -1 & 0.2\\
+0.05 & 0.2 & 0.05
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(注：
+卷积核的具体权重可以调整，
+只要周围系数之和等于中心系数的绝对值即可)
+\end_layout
+
+\begin_layout Standard
+这意味着，
+计算某一点的扩散效应时：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u\approx(0.2\times\text{上下左右邻居}+0.05\times\text{对角邻居})-1\times\text{中心点}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ ：
+当前中心点
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+正在计算的那一个网格点 （像素）的坐标。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $i$
+\end_inset
+
+：
+横坐标。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $j$
+\end_inset
+
+：
+纵坐标。
+
+\end_layout
+
+\begin_layout Standard
+我们在代码中需要遍历整个网格，
+对于每一个点 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+，
+都要算一遍这个公式。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $m,n$
+\end_inset
+
+ ：
+相对偏移量
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是为了访问中心点 周围的邻居 。
+
+\end_layout
+
+\begin_layout Standard
+通常在一个 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ 的卷积核中，
+
+\begin_inset Formula $m$
+\end_inset
+
+ 和 
+\begin_inset Formula $n$
+\end_inset
+
+ 的取值范围是 
+\begin_inset Formula $\{-1,0,1\}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=-1$
+\end_inset
+
+：
+左边；
+ $m=1$：
+右边。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n=-1$
+\end_inset
+
+：
+下边；
+ $n=1$：
+上边。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=0,n=0$
+\end_inset
+
+：
+中心点自己。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $u_{i+m,j+n}$
+\end_inset
+
+ ：
+邻居的浓度值
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是去读取邻居位置上的 $u$ 值。
+
+\end_layout
+
+\begin_layout Standard
+* 当 $m=-1,
+ n=0$ 时，
+读取的是 $u_{i-1,
+ j}$（左邻居的浓度）。
+
+\end_layout
+
+\begin_layout Standard
+* 当 $m=0,
+ n=0$ 时，
+读取的是 $u_{i,
+ j}$（中心点自己的浓度）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $w_{m,n}$
+\end_inset
+
+ ：
+权重 (Weight)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是卷积核矩阵中对应位置的数值。
+它决定了每个邻居对扩散贡献的“分量”。
+
+\end_layout
+
+\begin_layout Standard
+回顾之前给出的拉普拉斯卷积核 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{K}=\begin{pmatrix}0.05 & 0.2 & 0.05\\
+0.2 & -1 & 0.2\\
+0.05 & 0.2 & 0.05
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就对应了 $w_{m,n}$ 的值：
+
+\end_layout
+
+\begin_layout Standard
+* 中心权重 ($m=0,
+ n=0$)：
+$w_{0,0} = -1$。
+
+\end_layout
+
+\begin_layout Standard
+* 上下左右权重 ($|m|+|n|=1$)：
+$w = 0.2$。
+
+\end_layout
+
+\begin_layout Standard
+* 对角线权重 ($|m|+|n|=2$)：
+$w = 0.05$。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+$
+\backslash
+sum_{m,n}$ ：
+加权求和
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这个符号的意思是：
+把所有邻居（包括中心点自己）的“浓度 $
+\backslash
+times$ 权重”全部加起来。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+把这个求和展开，
+物理意义就非常清晰了：
+
+\begin_inset Formula 
+\[
+\sum(\dots)=\underbrace{0.2\times(u_{\text{上}}+u_{\text{下}}+u_{\text{左}}+u_{\text{右}})}_{\text{正权重：从邻居流入}}+\underbrace{0.05\times(u_{\text{四个角}})}_{\text{正权重：从角落流入}}+\underbrace{(-1)\times u_{\text{中心}}}_{\text{负权重：从中心流出}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这个算式本质上是在计算：
+“周围的平均浓度”减去“中心的浓度”。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 如果周围比中心高（计算结果 $>0$）：
+
+\end_layout
+
+\begin_layout Standard
+物质会从四周扩散进来，
+中心的 $u$ 会增加。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 如果周围比中心低（计算结果 $<0$）：
+
+\end_layout
+
+\begin_layout Standard
+物质会从中心扩散出去，
+中心的 $u$ 会减少。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 如果完全平坦（周围等于中心）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0.2\times4+0.05\times4-1=1-1=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+扩散停止，
+没有净流动。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+其中，
+
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ 是空间步长 (step size) 的缩放因子。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ 代表网格间距（Grid Spacing），
+也就是模拟空间中两个相邻点之间的物理距离。
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果你把模拟区域看作一张像素图，
+
+\begin_inset Formula $h$
+\end_inset
+
+ 就是一个像素的宽度。
+
+\end_layout
+
+\begin_layout Standard
+例如：
+
+\begin_inset Formula $x_{i+1}-x_{i}=h$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+拉普拉斯算子
+\begin_inset Formula $\nabla^{2}u$
+\end_inset
+
+ 本质上是二阶导数的和：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u=\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+我们可以用泰勒展开或差分定义来看看二阶导数是如何近似的。
+
+\end_layout
+
+\begin_layout Standard
+一阶导数的近似（斜率）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}\approx\frac{u(x+h)-u(x)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(注意分母是 
+\begin_inset Formula $h$
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+二阶导数的近似（曲率）：
+
+\end_layout
+
+\begin_layout Standard
+二阶导数是“导数的导数”。
+利用中心差分法：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial x^{2}}\approx\frac{u(x+h)-2u(x)+u(x-h)}{h^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+分母变成了 
+\begin_inset Formula $h^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+当我们把
+\begin_inset Formula $x$
+\end_inset
+
+ 方向和 
+\begin_inset Formula $y$
+\end_inset
+
+ 方向的二阶导数加起来（这就是拉普拉斯算子），
+所有的项都含有分母
+\begin_inset Formula $h^{2}$
+\end_inset
+
+，
+所以我们可以把它提取出来放在求和符号的前面：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla^{2}u\approx\frac{1}{h^{2}}\left(\sum(\text{周围的点})-\text{中心点权重}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+从单位（量纲）的角度理解最直观：
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u$
+\end_inset
+
+ 是浓度（例如 
+\begin_inset Formula $\text{mol}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x$
+\end_inset
+
+ 是距离（例如 
+\begin_inset Formula $\text{m}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ 是距离步长（单位也是 
+\begin_inset Formula $\text{m}$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Standard
+那么：
+
+\end_layout
+
+\begin_layout Itemize
+一阶导数 
+\begin_inset Formula $\frac{\partial u}{\partial x}$
+\end_inset
+
+ 表示浓度梯度，
+单位是
+\begin_inset Formula $\text{mol}/\text{m}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+二阶导数 
+\begin_inset Formula $\frac{\partial^{2}u}{\partial x^{2}}$
+\end_inset
+
+ 表示扩散通量的变化率，
+单位是 
+\begin_inset Formula $\text{mol}/\text{m}^{2}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Itemize
+为了让计算结果的单位变成 
+\begin_inset Formula $\text{1}/\text{m}^{2}$
+\end_inset
+
+，
+必须在公式中除以距离的平方，
+即 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在很多简单的计算机图形学演示或艺术创作（如 Shader 编程）中，
+为了省事，
+通常假设 
+\begin_inset Formula $h=1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+这意味着我们把“1个像素”定义为“1个距离单位”。
+
+\end_layout
+
+\begin_layout Standard
+此时 
+\begin_inset Formula $\frac{1}{h^{2}}=1$
+\end_inset
+
+，
+所以你在很多代码里看不到这一项，
+只看到卷积核的权重相加。
+
+\end_layout
+
+\begin_layout Standard
+但是，
+如果在做科学计算（比如模拟真实的化学反应，
+需要对应真实的扩散系数 
+\begin_inset Formula $D$
+\end_inset
+
+），
+那么 
+\begin_inset Formula $h$
+\end_inset
+
+ 必须取一个真实的物理数值（比如 
+\begin_inset Formula $h=0.01\text{cm}$
+\end_inset
+
+），
+此时 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ 这一项就非常关键，
+否则扩散速度会算出错误的结果。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+总结：
+ 
+\end_layout
+
+\begin_layout Plain Layout
+将它们放在一起，
+表示
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ 点处的拉普拉斯值：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+(\nabla^{2}u)_{i,j}\approx\frac{1}{h^{2}}\left[\sum_{m,n}w_{m,n}\cdot u_{i+m,j+n}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{dx^{2}}\approx\frac{u(x+h)-2u(x)+u(x-h)}{h^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+我们可以把这个分式拆开写：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{dx^{2}}\approx\frac{1}{h^{2}}\times\underbrace{\left(1\cdot u_{i+1}+(-2)\cdot u_{i}+1\cdot u_{i-1}\right)}_{\text{这就是一维的 }\sum w\cdot u}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+括号里的部分：
+就是 
+\begin_inset Formula $\sum w\cdot u$
+\end_inset
+
+。
+对应的权重卷积核是 
+\begin_inset Formula $[1,-2,1]$
+\end_inset
+
+。
+它只关心相对数值。
+
+\end_layout
+
+\begin_layout Plain Layout
+外面的部分 ：
+
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+。
+它负责把空间距离的影响加进去。
+
+\end_layout
+
+\begin_layout Plain Layout
+结论 ：
+这就解释了为什么 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ 是整个求和式的系数。
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+时间的离散化：
+欧拉法 (Forward Euler)
+\end_layout
+
+\begin_layout Standard
+我们将时间 
+\begin_inset Formula $t$
+\end_inset
+
+ 推进一个极小的步长
+\begin_inset Formula $\Delta t$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+根据导数定义 
+\begin_inset Formula $\frac{\partial u}{\partial t}\approx\frac{u_{new}-u_{old}}{\Delta t}$
+\end_inset
+
+，
+我们可以得出迭代公式。
+
+\end_layout
+
+\begin_layout Standard
+在图灵图斑（Gray-Scott 模型）的迭代计算中，
+我们把这个组合代入到 
+\begin_inset Formula $u$
+\end_inset
+
+ 的更新公式中。
+
+\end_layout
+
+\begin_layout Standard
+原始微分方程：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=D_{u}\nabla^{2}u-uv^{2}+F(1-u)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这个方程描述了物质 
+\begin_inset Formula $u$
+\end_inset
+
+ 的浓度随时间变化的规律。
+ 
+\end_layout
+
+\begin_layout Standard
+应用有限差分法
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+这一步在数值分析中被称为 “有限差分法” (Finite Difference Method) 的应用。
+
+\end_layout
+
+\begin_layout Plain Layout
+让我们一步步把左边的微分方程变形成右边的代码公式。
+
+\end_layout
+
+\begin_layout Enumerate
+第一步：
+处理左边的时间导数 
+\begin_inset Formula $\frac{\partial u}{\partial t}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+在微积分中，
+导数是变化的极限。
+但在计算机里，
+我们不能取无限小，
+所以用一个很小的时间步长 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ 来近似。
+
+\end_layout
+
+\begin_layout Plain Layout
+使用 前向欧拉法 (Forward Euler Method) ：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}\approx\frac{u_{new}-u_{old}}{\Delta t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $u_{old}$
+\end_inset
+
+：
+当前时刻 (
+\begin_inset Formula $t$
+\end_inset
+
+) 的 
+\begin_inset Formula $u$
+\end_inset
+
+ 值。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $u_{new}$
+\end_inset
+
+：
+下一时刻 (
+\begin_inset Formula $t+\Delta t$
+\end_inset
+
+) 的 
+\begin_inset Formula $u$
+\end_inset
+
+ 值。
+
+\end_layout
+
+\begin_layout Plain Layout
+把这个代入原方程：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{u_{new}-u_{old}}{\Delta t}=\text{右边的所有项}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第二步：
+处理右边的空间导数 
+\begin_inset Formula $\nabla^{2}u$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+这就是我们之前详细讨论过的。
+拉普拉斯算子 
+\begin_inset Formula $\nabla^{2}u$
+\end_inset
+
+ 被离散化为卷积求和形式：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\nabla^{2}u\approx\frac{1}{h^{2}}\sum_{m,n}w_{m,n}\cdot u_{neighbor}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+这里 
+\begin_inset Formula $u_{neighbor}$
+\end_inset
+
+ 其实就是基于当前时刻 
+\begin_inset Formula $u_{old}$
+\end_inset
+
+ 的邻居值。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第三步：
+处理反应项和进给项
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+这两项是非线性的代数项，
+不需要特殊的差分处理，
+直接用当前时刻的值（
+\begin_inset Formula $u_{old}$
+\end_inset
+
+ 和 
+\begin_inset Formula $v_{old}$
+\end_inset
+
+）计算即可。
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $-uv^{2}\rightarrow-u_{old}v_{old}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $F(1-u)\rightarrow F(1-u_{old})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+第四步：
+像解代数方程一样“组装”
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+现在我们把上面所有的部分拼回到原方程中：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\frac{u_{new}-u_{old}}{\Delta t}=D_{u}\cdot\underbrace{\left[\frac{1}{h^{2}}\sum w\cdot u\right]}_{\text{扩散项}}-u_{old}v_{old}^{2}+F(1-u_{old})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+我们的目标是求出 
+\begin_inset Formula $u_{new}$
+\end_inset
+
+ （因为这是我们在代码里要更新的值）。
+
+\end_layout
+
+\begin_layout Enumerate
+两边同时乘以 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+u_{new}-u_{old}=\Delta t\cdot\left(D_{u}\cdot\left[\frac{1}{h^{2}}\sum\dots\right]-u_{old}v_{old}^{2}+F(1-u_{old})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+把 
+\begin_inset Formula $u_{old}$
+\end_inset
+
+ 移到等式右边：
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+u_{new}=u_{old}+\Delta t\cdot\left(D_{u}\cdot\left[\frac{1}{h^{2}}\sum_{m,n}w_{m,n}\cdot u_{neighbor}\right]-u_{old}v_{old}^{2}+F(1-u_{old})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+代入离散化公式后的代码实现形式：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{new}=u_{old}+\Delta t\cdot\left(D_{u}\cdot\underbrace{\left[\frac{1}{h^{2}}\sum_{m,n}w_{m,n}\cdot u_{neighbor}\right]}_{\text{这是 }\nabla^{2}u}-u_{old}v_{old}^{2}+F(1-u_{old})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这里有三个系数连乘：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $D_{u}$
+\end_inset
+
+ (扩散系数，
+物质本身的性质)
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ (空间步长的平方倒数，
+网格的几何性质)
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $\sum$
+\end_inset
+
+ (卷积和，
+局部的浓度差)
+\end_layout
+
+\begin_layout Standard
+在实际编程或阅读别人的代码时，
+你会看到两种处理 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ 的方式，
+本质是一样的：
+
+\end_layout
+
+\begin_layout Standard
+方式 A：
+显式乘法（推荐，
+物理意义清晰）
+\end_layout
+
+\begin_layout Standard
+保持卷积核权重简单（例如中心为 
+\begin_inset Formula $-1$
+\end_inset
+
+，
+四周和为 
+\begin_inset Formula $1$
+\end_inset
+
+），
+在计算扩散项时单独乘 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Laplacian}=(\text{convolve}(U,K))/(h*h)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+du=D_{u}*\text{Laplacian}-\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+方式 B：
+预处理进权重（常见于 Shader 或优化代码）
+\end_layout
+
+\begin_layout Standard
+为了减少乘法次数，
+有些程序员会直接把 
+\begin_inset Formula $\frac{1}{h^{2}}$
+\end_inset
+
+ 乘到权重矩阵 
+\begin_inset Formula $w_{m,n}$
+\end_inset
+
+ 里面去。
+
+\end_layout
+
+\begin_layout Standard
+如果 
+\begin_inset Formula $h=0.1$
+\end_inset
+
+，
+那么 
+\begin_inset Formula $\frac{1}{h^{2}}=100$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+原来的卷积核
+\begin_inset Formula $\mathbf{K}=\begin{pmatrix}0 & 1 & 0\\
+1 & -4 & 1\\
+0 & 1 & 0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+就会变成新的核
+\begin_inset Formula $\mathbf{K}'=\begin{pmatrix}0 & 100 & 0\\
+100 & -400 & 100\\
+0 & 100 & 0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这样在循环里就只算 
+\begin_inset Formula $\sum$
+\end_inset
+
+，
+不用再除以 
+\begin_inset Formula $h^{2}$
+\end_inset
+
+ 了。
+
+\end_layout
+
+\begin_layout Standard
+我们将它拆解为 三个部分：
+
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial t}=D_{u}\nabla^{2}u-uv^{2}+F(1-u)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underbrace{\frac{\partial u}{\partial t}}_{\text{总变化率}}=\underbrace{D_{u}\nabla^{2}u}_{\text{扩散项}}\underbrace{-uv^{2}}_{\text{反应项}}+\underbrace{F(1-u)}_{\text{进给项}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Enumerate
+左边：
+
+\begin_inset Formula $\frac{\partial u}{\partial t}$
+\end_inset
+
+ (总变化率)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+* 含义：
+这是 “速度”。
+
+\end_layout
+
+\begin_layout Standard
+* 它描述了在网格的某一个点上，
+物质 $u$ 的浓度在下一瞬间是增加还是减少。
+
+\end_layout
+
+\begin_layout Standard
+* 如果右边的计算结果为正，
+该点的 $u$ 就会变多；
+为负则变少。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+右边第一项：
+
+\begin_inset Formula $D_{u}\nabla^{2}u$
+\end_inset
+
+ (扩散项 / Diffusion)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+* 含义：
+“流动与平滑”。
+
+\end_layout
+
+\begin_layout Standard
+* $D_{u}$：
+扩散系数。
+表示物质 $u$ 跑得有多快。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+nabla^{2}u$：
+拉普拉斯算子。
+正如我们之前详细讨论的，
+它表示该点浓度与周围邻居的差异（凹凸性）。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $
+\backslash
+nabla^{2}u < 0$（中心比四周高），
+物质会流走，
+导致 $u$ 减少。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $
+\backslash
+nabla^{2}u > 0$（中心比四周低），
+物质会流入，
+导致 $u$ 增加。
+
+\end_layout
+
+\begin_layout Standard
+* 作用：
+这一项总是试图抹平差异，
+让分布变得均匀。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+### 3.
+ 右边第二项：
+$-uv^{2}$ (反应项 / Reaction)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+* 含义：
+“消耗与被吃”。
+
+\end_layout
+
+\begin_layout Standard
+* 符号：
+注意前面的 负号 $(-)$。
+这意味着这个过程会使 $u$ 的数量减少。
+
+\end_layout
+
+\begin_layout Standard
+* 物理机制：
+这是 Gray-Scott 模型的核心化学反应：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U+2V\rightarrow3V
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 意味着：
+1 个 $u$ 分子遇到 2 个 $v$ 分子，
+发生反应，
+导致 $u$ 变成了 $v$。
+
+\end_layout
+
+\begin_layout Standard
+* 所以在 $u$ 的方程里，
+这一项是减少（被消耗）。
+
+\end_layout
+
+\begin_layout Standard
+* 而在 $v$ 的方程里，
+这一项是增加（繁殖）。
+
+\end_layout
+
+\begin_layout Standard
+* 为什么是平方？
+：
+因为它需要 2 个 $v$ 同时参与。
+这正是非线性的来源，
+也是产生复杂图案的关键。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+右边第三项：
+
+\begin_inset Formula $F(1-u)$
+\end_inset
+
+ (进给项 / Feed)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+* 含义：
+“补充与喂食”。
+
+\end_layout
+
+\begin_layout Standard
+* 符号：
+前面是 正号 $(+)$，
+表示这会使 $u$ 增加。
+
+\end_layout
+
+\begin_layout Standard
+* $F$ (Feed Rate)：
+进给率，
+表示补充食物的速度有多快。
+
+\end_layout
+
+\begin_layout Standard
+* $(1-u)$：
+这是一个限制因子。
+
+\end_layout
+
+\begin_layout Standard
+* 系统假设环境最大的 $u$ 浓度为 $1$。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $u=0$（空了），
+补充速度最快（$=F$）。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $u=1$（满了），
+$1-1=0$，
+补充停止。
+
+\end_layout
+
+\begin_layout Standard
+* 作用：
+这就像一个自动水泵，
+试图把环境中的“食物” $u$ 维持在最高水平 $1$。
+如果没有反应项和扩散，
+这一项最终会让全场的 $u$ 都变成 $1$。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+想象一片草地（
+\begin_inset Formula $u$
+\end_inset
+
+）：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $D_{u}\nabla^{2}u$
+\end_inset
+
+ ：
+草的种子随风飘散，
+试图让草地长得均匀。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $-uv^{2}$
+\end_inset
+
+：
+一群羊（
+\begin_inset Formula $v$
+\end_inset
+
+）来了。
+羊越多（$v$大），
+草（$u$）被吃掉的速度就越快（负号）。
+而且是呈指数级被吃掉。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $F(1-u)$
+\end_inset
+
+ ：
+天在下雨，
+试图让被吃秃的草地重新长回茂盛的状态（$u=1$）。
+
+\end_layout
+
+\begin_layout Standard
+图灵图斑就是这三种力量—
+—
+扩散（流动）、被吃（反应）、生长（进给）—
+—
+在空间中相互博弈形成的动态平衡结果。
+
+\end_layout
+
+\begin_layout Paragraph
+详细计算步骤 (迭代算法)
+\end_layout
+
+\begin_layout Standard
+假设我们在一个 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ 的网格上计算。
+
+\end_layout
+
+\begin_layout Enumerate
+第一步：
+初始化 (Initialization)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+图灵图斑需要从随机噪声中涌现。
+不能从完全均匀的状态开始。
+
+\end_layout
+
+\begin_layout Enumerate
+把整个网格的 
+\begin_inset Formula $u$
+\end_inset
+
+ 设为 
+\begin_inset Formula $1.0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+把整个网格的 
+\begin_inset Formula $v$
+\end_inset
+
+ 设为 
+\begin_inset Formula $0$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+关键操作 ：
+在网格中心（或随机位置）的一个小方块区域内，
+加入干扰：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $u=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=0.25$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+或者加上一些随机噪声 
+\begin_inset Formula $\text{noise}\in[-0.05,0.05]$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+第二步：
+循环迭代 (The Loop)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+对每一个时间步 
+\begin_inset Formula $t$
+\end_inset
+
+（例如循环 10,000 次）：
+
+\end_layout
+
+\begin_layout Standard
+对于网格中的每一个点 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+，
+执行以下计算：
+
+\end_layout
+
+\begin_layout Enumerate
+计算拉普拉斯项 (扩散)：
+
+\begin_inset Formula 
+\[
+L_{u}=(D_{u}\times\nabla^{2}u)_{i,j}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L_{v}=(D_{v}\times\nabla^{2}v)_{i,j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+实际代码中，
+这通常通过对整个矩阵进行卷积运算来实现。
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+计算反应项 (化学反应)：
+
+\begin_inset Formula 
+\[
+R=u_{i,j}\cdot(v_{i,j})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+更新 
+\begin_inset Formula $u$
+\end_inset
+
+ (Update u)：
+
+\begin_inset Formula 
+\[
+u_{i,j}^{new}=u_{i,j}+\Delta t\cdot\left(L_{u}-R+F\cdot(1-u_{i,j})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+更新 
+\begin_inset Formula $v$
+\end_inset
+
+ (Update v)：
+
+\begin_inset Formula 
+\[
+v_{i,j}^{new}=v_{i,j}+\Delta t\cdot\left(L_{v}+R-(F+k)\cdot v_{i,j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+应用结果：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+将 
+\begin_inset Formula $u^{new},v^{new}$
+\end_inset
+
+ 作为下一步的 
+\begin_inset Formula $u,v$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+第三步：
+可视化
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+将矩阵 
+\begin_inset Formula $v$
+\end_inset
+
+（或者 
+\begin_inset Formula $u$
+\end_inset
+
+）的值映射为颜色。
+通常 
+\begin_inset Formula $v$
+\end_inset
+
+ 的分布就是我们看到的图案。
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+参数选择与图案类型
+\end_layout
+
+\begin_layout Standard
+Gray-Scott 模型的图案对参数 
+\begin_inset Formula $F$
+\end_inset
+
+ (Feed) 和 
+\begin_inset Formula $k$
+\end_inset
+
+ (Kill) 非常敏感。
+这被称为 Pearson 分类。
+
+\end_layout
+
+\begin_layout Standard
+可以尝试以下参数组合来计算出不同的图案：
+
+\end_layout
+
+\begin_layout Standard
+扩散率 (通常固定)：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D_{u}=0.16,\quad D_{v}=0.08
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta t=1.0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+有趣的 
+\begin_inset Formula $(F,k)$
+\end_inset
+
+ 组合：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+图案名称
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F (进给率)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+k (杀灭率) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+描述
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solitons (孤立波/点)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.030$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.062$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+孤立的游走点
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Coral (珊瑚状/迷宫)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.0545$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.062$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+类似指纹的连接条纹
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mitosis (细胞分裂)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.025$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.060$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+斑点不断分裂复制
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Holes (孔洞)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.039$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.058$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+填充区域中的空洞
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+总结公式
+\end_layout
+
+\begin_layout Standard
+如果你要写代码计算，
+核心就是这两个离散更新方程：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{new}=u+\Delta t\left(D_{u}\sum_{\text{neighbors}}w(u_{nb}-u)-uv^{2}+F(1-u)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v_{new}=v+\Delta t\left(D_{v}\sum_{\text{neighbors}}w(v_{nb}-v)+uv^{2}-(F+k)v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+只要不断重复这个简单的加减乘除过程，
+复杂的自然纹理就会神奇地出现在屏幕上。
+
+\end_layout
+
+\begin_layout Example
+手动计算 Gray-Scott 模型 在一个
+\begin_inset Formula $5\times5$
+\end_inset
+
+网格中心点的一步迭代。
+ 
+\end_layout
+
+\begin_layout Example
+假设我们的物理参数和离散化参数如下：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+扩散系数：
+
+\begin_inset Formula $D_{u}=0.2,\quad D_{v}=0.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+进给率与杀灭率：
+
+\begin_inset Formula $F=0.04,\quad k=0.06$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+时间步长：
+
+\begin_inset Formula $\Delta t=1.0$
+\end_inset
+
+ (为了简化乘法)
+\end_layout
+
+\begin_layout Enumerate
+空间步长：
+
+\begin_inset Formula $h=1.0$
+\end_inset
+
+ (意味着 
+\begin_inset Formula $\frac{1}{h^{2}}=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+拉普拉斯卷积核：
+使用标准的 5点差分核 (上下左右权重为1，
+中心为
+\begin_inset Formula $-4$
+\end_inset
+
+)：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{K}=\begin{pmatrix}0 & 1 & 0\\
+1 & -4 & 1\\
+0 & 1 & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Example
+我们有一个
+\begin_inset Formula $5\times5$
+\end_inset
+
+ 的网格。
+为了演示，
+我们只关注 中心点 
+\begin_inset Formula $(3,3)$
+\end_inset
+
+ 及其周围邻居的数据。
+
+\end_layout
+
+\begin_layout Example
+矩阵 
+\begin_inset Formula $U$
+\end_inset
+
+ (食物浓度):
+\end_layout
+
+\begin_layout Example
+假设中心点食物较少，
+四周食物较多。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+U=\begin{pmatrix}1 & 1 & 1 & 1 & 1\\
+1 & 1 & \mathbf{0.1} & 1 & 1\\
+1 & \mathbf{0.2} & {\color{red}\mathbf{0.5}} & 0.1 & 1\\
+1 & 1 & 0.3 & 1 & 1\\
+1 & 1 & 1 & 1 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+矩阵 
+\begin_inset Formula $V$
+\end_inset
+
+ (细胞浓度):
+\end_layout
+
+\begin_layout Example
+假设中心点有细胞，
+四周比较少。
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+V=\begin{pmatrix}0 & 0 & 0 & 0 & 0\\
+0 & 0 & \mathbf{0.1} & 0 & 0\\
+0 & \mathbf{0.2} & {\color{blue}\mathbf{0.4}} & 0.1 & 0\\
+0 & 0 & 0.3 & 0 & 0\\
+0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们的目标：
+ 根据 5点差分公式 （十字形卷积核）计算中心点 
+\begin_inset Formula $(3,3)$
+\end_inset
+
+ 在 
+\begin_inset Formula $t+1$
+\end_inset
+
+ 时刻的新值 
+\begin_inset Formula $u_{new}$
+\end_inset
+
+ 和 
+\begin_inset Formula $v_{new}$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+中心点
+\begin_inset Formula $(3,3)$
+\end_inset
+
+ 的当前值：
+
+\begin_inset Formula $u_{old}=0.5,\quad v_{old}=0.4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+邻居坐标：
+上
+\begin_inset Formula $(2,3)$
+\end_inset
+
+,
+ 下
+\begin_inset Formula $(4,3)$
+\end_inset
+
+,
+ 左
+\begin_inset Formula $(3,2)$
+\end_inset
+
+,
+ 右
+\begin_inset Formula $(3,4)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+我们将公式代入：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+u_{new}=u_{old}+\Delta t\left(D_{u}\nabla^{2}u-uv^{2}+F(1-u)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+v_{new}=v_{old}+\Delta t\left(D_{v}\nabla^{2}v+uv^{2}-(F+k)v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+第一步：
+计算拉普拉斯项 
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+ (扩散)
+\end_layout
+
+\begin_layout Example
+根据卷积核
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+，
+公式为：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\nabla^{2}\phi=\frac{1}{h^{2}}(u_{\text{上}}+u_{\text{下}}+u_{\text{左}}+u_{\text{右}}-4u_{\text{中}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+计算 
+\begin_inset Formula $\nabla^{2}u$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+核心公式：
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\nabla^{2}u\approx u_{\text{上}}+u_{\text{下}}+u_{\text{左}}+u_{\text{右}}-4u_{\text{中}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+邻居：
+
+\begin_inset Formula $0.8,0.7,0.8,0.9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+中心：
+
+\begin_inset Formula $0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\nabla^{2}u=(0.8+0.7+0.8+0.9)-4\times0.5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\nabla^{2}u=3.2-2.0=\mathbf{1.2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(解释：
+周围浓度高，
+中心低，
+
+\begin_inset Formula $1.2$
+\end_inset
+
+ 表示 
+\begin_inset Formula $u$
+\end_inset
+
+ 将通过扩散流入中心) 
+\end_layout
+
+\begin_layout Example
+计算 
+\begin_inset Formula $\nabla^{2}v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Example
+邻居：
+
+\begin_inset Formula $0.1,0.3,0.2,0.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+中心：
+
+\begin_inset Formula $0.4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\nabla^{2}v=(0.1+0.3+0.2+0.1)-4\times0.4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\nabla^{2}v=0.7-1.6=\mathbf{-0.9}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(解释：
+中心浓度高，
+周围低，
+
+\begin_inset Formula $-0.9$
+\end_inset
+
+ 表示 
+\begin_inset Formula $v$
+\end_inset
+
+ 将通过扩散流出中心)
+\end_layout
+
+\begin_layout Example
+第二步：
+计算反应项 
+\begin_inset Formula $uv^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+使用中心点的值进行计算：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Reaction}=u_{old}\cdot(v_{old})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Reaction}=0.5\times(0.4)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Reaction}=0.5\times0.16=\mathbf{0.08}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+第三步：
+计算进给与杀灭项 (Feed & Kill)
+\end_layout
+
+\begin_layout Example
+1.
+ 进给项 (对于 $u$):
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Feed}=F(1-u_{old})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Feed}=0.04\times(1-0.5)=0.04\times0.5=\mathbf{0.02}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 杀灭项 (对于 $v$):
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Kill}=(F+k)v_{old}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\text{Kill}=(0.04+0.06)\times0.4=0.1\times0.4=\mathbf{0.04}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+第四步：
+组装最终结果
+\end_layout
+
+\begin_layout Example
+现在我们把所有部分加起来。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 更新
+\begin_inset Formula $u$
+\end_inset
+
+ (食物):
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+u_{new}=u_{old}+\Delta t\cdot(D_{u}\cdot\nabla^{2}u-\text{Reaction}+\text{Feed})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+u_{new}=0.5+1.0\times(\underbrace{0.2\times1.2}_{\text{扩散流入}}-\underbrace{0.08}_{\text{被吃掉}}+\underbrace{0.02}_{\text{补充}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+u_{new}=0.5+(0.24-0.08+0.02)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+u_{new}=0.5+0.18
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\mathbf{u_{new}=0.68}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析：
+尽管
+\begin_inset Formula $u$
+\end_inset
+
+ 被消耗了，
+但因为周围 
+\begin_inset Formula $u$
+\end_inset
+
+ 很多（扩散强），
+加上进给，
+中心的食物 $u$ 总体增加了。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 更新 
+\begin_inset Formula $v$
+\end_inset
+
+ (细胞):
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+v_{new}=v_{old}+\Delta t\cdot(D_{v}\cdot\nabla^{2}v+\text{Reaction}-\text{Kill})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+v_{new}=0.4+1.0\times(\underbrace{0.1\times(-0.9)}_{\text{扩散流失}}+\underbrace{0.08}_{\text{繁殖增加}}-\underbrace{0.04}_{\text{死亡}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+v_{new}=0.4+(-0.09+0.08-0.04)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+v_{new}=0.4-0.05
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+\mathbf{v_{new}=0.35}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+分析：
+虽然 
+\begin_inset Formula $v$
+\end_inset
+
+ 繁殖了，
+但由于扩散流失太快（周围太“空”了）以及自然死亡，
+中心的细胞 
+\begin_inset Formula $v$
+\end_inset
+
+ 总体减少了。
+
+\end_layout
+
+\begin_layout Example
+计算点
+\begin_inset Formula $(1,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+这是一个极好的切入点！
+计算点 $(1,1)$ —
+—
+也就是网格的左上角—
+—
+会引出一个在数值模拟中极其重要的问题：
+边界条件 (Boundary Conditions)。
+
+\end_layout
+
+\begin_layout Example
+因为 $(1,1)$ 在角上，
+它缺了两个邻居（“上面”的邻居和“左边”的邻居）。
+
+\end_layout
+
+\begin_layout Example
+在图灵图斑模拟中，
+最常用的处理方法是周期性边界条件 (Periodic Boundary Conditions)，
+也就是“贪吃蛇”或“吃豆人”模式：
+
+\end_layout
+
+\begin_layout Example
+* 左边的邻居是这一行的最右边。
+
+\end_layout
+
+\begin_layout Example
+* 上面的邻居是这一列的最下边。
+
+\end_layout
+
+\begin_layout Example
+我们将使用这个规则来演示计算。
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+### 1.
+ 确定邻居 (The Neighbors)
+\end_layout
+
+\begin_layout Example
+对于 $5 
+\backslash
+times 5$ 矩阵中的点 $(1,1)$：
+
+\end_layout
+
+\begin_layout Example
+* 当前点 (Center):
+ $(1,1)$
+\end_layout
+
+\begin_layout Example
+* 右邻居 (Right):
+ $(1,2)$ —
+—
+ 正常存在。
+
+\end_layout
+
+\begin_layout Example
+* 下邻居 (Down):
+ $(2,1)$ —
+—
+ 正常存在。
+
+\end_layout
+
+\begin_layout Example
+* 左邻居 (Left):
+ $(1,5)$ —
+—
+ 绕到最右边。
+
+\end_layout
+
+\begin_layout Example
+* 上邻居 (Up):
+ $(5,1)$ —
+—
+ 绕到最下边。
+
+\end_layout
+
+\begin_layout Example
+### 2.
+ 读取数据
+\end_layout
+
+\begin_layout Example
+基于上一题我们定义的矩阵状态（边缘区域 $U$ 都是 1，
+$V$ 都是 0）：
+
+\end_layout
+
+\begin_layout Example
+$$ U = 
+\backslash
+begin{pmatrix} 
+\backslash
+color{red}{
+\backslash
+mathbf{1}} & 
+\backslash
+mathbf{1} & 1 & 1 & 
+\backslash
+color{blue}{
+\backslash
+mathbf{1}} 
+\backslash
+
+\backslash
+ 
+\backslash
+mathbf{1} & 1 & 0.8 & 1 & 1 
+\backslash
+
+\backslash
+ 1 & 0.8 & 0.5 & 0.9 & 1 
+\backslash
+
+\backslash
+ 1 & 1 & 0.7 & 1 & 1 
+\backslash
+
+\backslash
+ 
+\backslash
+color{blue}{
+\backslash
+mathbf{1}} & 1 & 1 & 1 & 1 
+\backslash
+end{pmatrix} $$
+\end_layout
+
+\begin_layout Example
+*(注：
+左上角红色是中心，
+蓝色是绕回来的邻居)*
+\end_layout
+
+\begin_layout Example
+* $u$ 的值：
+
+\end_layout
+
+\begin_layout Example
+* $u_{
+\backslash
+text{center}} (1,1) = 1$
+\end_layout
+
+\begin_layout Example
+* $u_{
+\backslash
+text{right}} (1,2) = 1$
+\end_layout
+
+\begin_layout Example
+* $u_{
+\backslash
+text{down}} (2,1) = 1$
+\end_layout
+
+\begin_layout Example
+* $u_{
+\backslash
+text{left}} (1,5) = 1$
+\end_layout
+
+\begin_layout Example
+* $u_{
+\backslash
+text{up}} (5,1) = 1$
+\end_layout
+
+\begin_layout Example
+$$ V = 
+\backslash
+begin{pmatrix} 
+\backslash
+color{red}{
+\backslash
+mathbf{0}} & 
+\backslash
+mathbf{0} & 0 & 0 & 
+\backslash
+color{blue}{
+\backslash
+mathbf{0}} 
+\backslash
+
+\backslash
+ 
+\backslash
+mathbf{0} & 0 & 0.1 & 0 & 0 
+\backslash
+
+\backslash
+ 0 & 0.2 & 0.4 & 0.1 & 0 
+\backslash
+
+\backslash
+ 0 & 0 & 0.3 & 0 & 0 
+\backslash
+
+\backslash
+ 
+\backslash
+color{blue}{
+\backslash
+mathbf{0}} & 0 & 0 & 0 & 0 
+\backslash
+end{pmatrix} $$
+\end_layout
+
+\begin_layout Example
+* $v$ 的值：
+
+\end_layout
+
+\begin_layout Example
+* $v_{
+\backslash
+text{center}} (1,1) = 0$
+\end_layout
+
+\begin_layout Example
+* $v_{
+\backslash
+text{neighbors}}$ 全都是 $0$。
+
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+### 3.
+ 开始计算
+\end_layout
+
+\begin_layout Example
+参数保持不变：
+$D_u=0.2,
+ D_v=0.1,
+ F=0.04,
+ k=0.06,
+ 
+\backslash
+Delta t=1$。
+
+\end_layout
+
+\begin_layout Example
+#### 第一步：
+计算拉普拉斯项 $
+\backslash
+nabla^2$ (扩散)
+\end_layout
+
+\begin_layout Example
+公式：
+$
+\backslash
+nabla^2 = 
+\backslash
+text{上} + 
+\backslash
+text{下} + 
+\backslash
+text{左} + 
+\backslash
+text{右} - 4 
+\backslash
+times 
+\backslash
+text{中}$
+\end_layout
+
+\begin_layout Example
+1.
+ 对于 $u$:
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+nabla^2 u = u_{5,1} + u_{2,1} + u_{1,5} + u_{1,2} - 4u_{1,1} $$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+nabla^2 u = 1 + 1 + 1 + 1 - 4(1) $$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+nabla^2 u = 4 - 4 = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+*(解释：
+周围浓度和中心一样，
+没有扩散发生)*
+\end_layout
+
+\begin_layout Example
+2.
+ 对于 $v$:
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+nabla^2 v = 0 + 0 + 0 + 0 - 4(0) = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+#### 第二步：
+计算反应项 $uv^2$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Reaction} = u_{1,1} 
+\backslash
+cdot (v_{1,1})^2 $$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Reaction} = 1 
+\backslash
+cdot (0)^2 = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+*(解释：
+没有细胞 $v$，
+反应无法发生)*
+\end_layout
+
+\begin_layout Example
+#### 第三步：
+计算进给与杀灭 (Feed & Kill)
+\end_layout
+
+\begin_layout Example
+1.
+ 进给 $u$:
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Feed} = F(1 - u_{1,1}) $$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Feed} = 0.04 
+\backslash
+times (1 - 1) = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+*(解释：
+$u$ 已经是满的 1.0 了，
+不需要进给)*
+\end_layout
+
+\begin_layout Example
+2.
+ 杀灭 $v$:
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Kill} = (F + k)v_{1,1} $$
+\end_layout
+
+\begin_layout Example
+$$ 
+\backslash
+text{Kill} = 0.1 
+\backslash
+times 0 = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+---
+\end_layout
+
+\begin_layout Example
+### 4.
+ 最终更新
+\end_layout
+
+\begin_layout Example
+$$ u_{new} = u_{old} + 
+\backslash
+Delta t(D_u 
+\backslash
+cdot 0 - 0 + 0) = 1 + 0 = 
+\backslash
+mathbf{1} $$
+\end_layout
+
+\begin_layout Example
+$$ v_{new} = v_{old} + 
+\backslash
+Delta t(D_v 
+\backslash
+cdot 0 + 0 - 0) = 0 + 0 = 
+\backslash
+mathbf{0} $$
+\end_layout
+
+\begin_layout Example
+### 结论与意义
+\end_layout
+
+\begin_layout Example
+对于点 $(1,1)$，
+计算结果是 状态保持不变。
+
+\end_layout
+
+\begin_layout Example
+这揭示了 Gray-Scott 模型的一个重要特性：
+背景稳定性 (Background Stability)。
+
+\end_layout
+
+\begin_layout Example
+1.
+ 稳态：
+当 $u=1,
+ v=0$ 时，
+这是一个完美的平衡状态。
+没有扩散（因为周围都是1），
+没有反应（因为没有 $v$），
+没有进给（因为满了）。
+
+\end_layout
+
+\begin_layout Example
+2.
+ 图案的由来：
+图灵图斑只会发生在平衡被打破的地方（也就是我们在中间加入扰动的那块区域）。
+
+\end_layout
+
+\begin_layout Example
+3.
+ 边界处理：
+如果没有周期性边界条件（比如假设边界外全是0），
+那么边缘的 $u=1$ 就会向外扩散流失，
+导致 $u$ 开始下降，
+进而引发整个网格的变化。
+使用周期性边界条件可以让模拟看起来像是在一个无限大的平面上进行。
+
+\end_layout
+
+\begin_layout Paragraph
+颜色映射
+\end_layout
+
+\begin_layout Standard
+在数值模拟（如 Gray-Scott 模型）中，
+我们最终得到的是两个全是浮点数的 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ 矩阵：
+
+\begin_inset Formula $U$
+\end_inset
+
+ 和 
+\begin_inset Formula $V$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+为了让人眼能看到“图灵图斑”，
+我们需要建立一个映射函数 (Mapping Function)，
+将这些数值（通常是浓度 
+\begin_inset Formula $v$
+\end_inset
+
+）转换为屏幕像素颜色（RGB值）。
+
+\end_layout
+
+\begin_layout Standard
+以下是几种常用的着色方案：
+
+\end_layout
+
+\begin_layout Enumerate
+灰度映射 (Grayscale) —
+—
+ 最基础
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是最直接的方法。
+由于 
+\begin_inset Formula $v$
+\end_inset
+
+（细胞/抑制剂）通常代表了图案的形状，
+我们直接用它的浓度来决定亮度。
+
+\end_layout
+
+\begin_layout Standard
+通常 
+\begin_inset Formula $v$
+\end_inset
+
+ 的取值范围大约是 
+\begin_inset Formula $[0,0.4]$
+\end_inset
+
+ 左右。
+为了显示清晰，
+我们需要把它映射到 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+ 或 
+\begin_inset Formula $[0,255]$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+公式：
+
+\end_layout
+
+\begin_layout Standard
+设 
+\begin_inset Formula $P_{i,j}$
+\end_inset
+
+ 为像素的灰度值（
+\begin_inset Formula $0=$
+\end_inset
+
+黑，
+
+\begin_inset Formula $255=$
+\end_inset
+
+白）：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{i,j}=\text{clamp}\left(\frac{v_{i,j}}{v_{max}}\cdot255,\,0,\,255\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{max}$
+\end_inset
+
+ 是归一化因子（例如取 
+\begin_inset Formula $0.5$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+效果：
+
+\begin_inset Formula $v$
+\end_inset
+
+ 浓度越高的地方越亮（白色），
+没有 
+\begin_inset Formula $v$
+\end_inset
+
+ 的地方是黑色。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+双色插值 (Linear Interpolation / Lerp) —
+—
+ 最常用
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+为了让图案看起来像斑马、豹纹或珊瑚，
+我们通常定义两种颜色：
+背景色和前景色，
+然后根据浓度在它们之间过渡。
+
+\end_layout
+
+\begin_layout Standard
+定义颜色向量：
+
+\end_layout
+
+\begin_layout Itemize
+背景色 (无 
+\begin_inset Formula $v$
+\end_inset
+
+):
+ 
+\begin_inset Formula $\mathbf{C}_{bg}=(R_{1},G_{1},B_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+前景色 (高 
+\begin_inset Formula $v$
+\end_inset
+
+):
+ 
+\begin_inset Formula $\mathbf{C}_{fg}=(R_{2},G_{2},B_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+混合公式：
+
+\end_layout
+
+\begin_layout Standard
+设
+\begin_inset Formula $t$
+\end_inset
+
+ 为归一化的浓度系数，
+
+\begin_inset Formula $t=\text{clamp}(v_{i,j}\times s,\,0,\,1)$
+\end_inset
+
+，
+其中 
+\begin_inset Formula $s$
+\end_inset
+
+ 是缩放系数（比如 3.0）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{C}_{pixel}=\mathbf{C}_{bg}\cdot(1-t)+\mathbf{C}_{fg}\cdot t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例子：
+ 
+\end_layout
+
+\begin_layout Itemize
+背景：
+深蓝色
+\begin_inset Formula $(0,0,50)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+前景：
+青绿色 
+\begin_inset Formula $(0,255,200)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+结果：
+你会得到那种经典的“发光海洋生物”的视觉效果。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+阈值二值化 (Thresholding) —
+—
+ 斑马纹风格
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+如果你想要边缘非常锐利、非黑即白的图案（像二维码或纯粹的斑马纹），
+可以使用阶跃函数。
+
+\end_layout
+
+\begin_layout Standard
+公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{C}_{pixel}=\begin{cases}
+\mathbf{C}_{black}, & \text{if }v_{i,j}<\text{threshold}\\
+\mathbf{C}_{white}, & \text{if }v_{i,j}\ge\text{threshold}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+通常 
+\begin_inset Formula $\text{threshold}$
+\end_inset
+
+ 取
+\begin_inset Formula $0.1$
+\end_inset
+
+ 到 
+\begin_inset Formula $0.2$
+\end_inset
+
+ 之间。
+这会去掉所有模糊的过渡，
+只留下清晰的轮廓。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+根据 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 综合着色 (Multi-channel)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Gray-Scott 模型有两个变量 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u$
+\end_inset
+
+ 是食物（大部分地方是 
+\begin_inset Formula $1$
+\end_inset
+
+，
+斑点处降低）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v$
+\end_inset
+
+ 是细胞（大部分地方是 
+\begin_inset Formula $0$
+\end_inset
+
+，
+斑点处升高）。
+
+\end_layout
+
+\begin_layout Standard
+我们可以利用这一反比关系来制造对比色。
+
+\end_layout
+
+\begin_layout Standard
+公式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=v_{i,j}\times\text{scale}_{1}\quad(\text{红色通道随 v 增加})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+B=u_{i,j}\times\text{scale}_{2}\quad(\text{蓝色通道随 u 增加})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+效果：
+
+\end_layout
+
+\begin_layout Itemize
+背景是 蓝色（因为
+\begin_inset Formula $u\approx1,v\approx0$
+\end_inset
+
+）。
+
+\end_layout
+
+\begin_layout Itemize
+斑点是 红色（因为 
+\begin_inset Formula $v$
+\end_inset
+
+ 升高，
+
+\begin_inset Formula $u$
+\end_inset
+
+ 降低）。
+
+\end_layout
+
+\begin_layout Itemize
+边缘会有紫色的过渡。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+热力图 / 伪彩色 (Heatmap)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+在科学可视化中，
+常用彩虹色谱（如 Jet,
+ Viridis,
+ Plasma）。
+这通常通过查表法 (Lookup Table,
+ LUT) 实现。
+
+\end_layout
+
+\begin_layout Standard
+它的原理是线性插值 (Linear Interpolation,
+ LERP)。
+我们定义两个（或多个）颜色，
+然后根据
+\begin_inset Formula $v$
+\end_inset
+
+的大小在它们之间混合。
+
+\end_layout
+
+\begin_layout Standard
+数学表达：
+ 
+\end_layout
+
+\begin_layout Standard
+定义一个颜色映射函数 
+\begin_inset Formula $\Phi:[0,1]\to(R,G,B)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{C}_{pixel}=\Phi(v_{i,j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $v$
+\end_inset
+
+ 很小时：
+对应蓝色/紫色。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $v$
+\end_inset
+
+ 中等时：
+对应绿色/黄色。
+
+\end_layout
+
+\begin_layout Standard
+当 
+\begin_inset Formula $v$
+\end_inset
+
+ 很大时：
+对应红色。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float algorithm
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<!DOCTYPE html>
+\end_layout
+
+\begin_layout Plain Layout
+
+<html lang="zh-CN">
+\end_layout
+
+\begin_layout Plain Layout
+
+<head>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <meta charset="UTF-8">
+\end_layout
+
+\begin_layout Plain Layout
+
+    <title>图灵图斑 - 双色插值演示</title>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <style>
+\end_layout
+
+\begin_layout Plain Layout
+
+        body {
+\end_layout
+
+\begin_layout Plain Layout
+
+            background-color:
+ #222;
+\end_layout
+
+\begin_layout Plain Layout
+
+            display:
+ flex;
+\end_layout
+
+\begin_layout Plain Layout
+
+            flex-direction:
+ column;
+\end_layout
+
+\begin_layout Plain Layout
+
+            align-items:
+ center;
+\end_layout
+
+\begin_layout Plain Layout
+
+            justify-content:
+ center;
+\end_layout
+
+\begin_layout Plain Layout
+
+            height:
+ 100vh;
+\end_layout
+
+\begin_layout Plain Layout
+
+            margin:
+ 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+            color:
+ white;
+\end_layout
+
+\begin_layout Plain Layout
+
+            font-family:
+ sans-serif;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        canvas {
+\end_layout
+
+\begin_layout Plain Layout
+
+            border:
+ 1px solid #555;
+\end_layout
+
+\begin_layout Plain Layout
+
+            box-shadow:
+ 0 0 20px rgba(0,0,0,0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            /* 为了看清像素，
+采用临近采样 */
+\end_layout
+
+\begin_layout Plain Layout
+
+            image-rendering:
+ pixelated;
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        .controls {
+\end_layout
+
+\begin_layout Plain Layout
+
+            margin-top:
+ 10px;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    </style>
+\end_layout
+
+\begin_layout Plain Layout
+
+</head>
+\end_layout
+
+\begin_layout Plain Layout
+
+<body>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    <h2>Gray-Scott 反应扩散模型</h2>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <canvas id="simCanvas" width="200" height="200"></canvas>
+\end_layout
+
+\begin_layout Plain Layout
+
+    <div class="controls">
+\end_layout
+
+\begin_layout Plain Layout
+
+        <p>颜色基于物质 V 的浓度进行线性插值 (Lerp)</p>
+\end_layout
+
+\begin_layout Plain Layout
+
+    </div>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<script>
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ================= 配置参数 =================
+\end_layout
+
+\begin_layout Plain Layout
+
+    const width = 200;
+\end_layout
+
+\begin_layout Plain Layout
+
+    const height = 200;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 物理参数 (尝试调整 F 和 k 可以改变图案形状)
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 经典 "Coral" (珊瑚) 参数
+\end_layout
+
+\begin_layout Plain Layout
+
+    const F = 0.0545;
+  // 进给率
+\end_layout
+
+\begin_layout Plain Layout
+
+    const k = 0.0620;
+  // 杀灭率
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 扩散系数
+\end_layout
+
+\begin_layout Plain Layout
+
+    const Du = 1.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    const Dv = 0.5;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 时间步长
+\end_layout
+
+\begin_layout Plain Layout
+
+    const dt = 1.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 定义双色插值的颜色
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 颜色1:
+ 背景色 (低浓度 V) - 深紫色
+\end_layout
+
+\begin_layout Plain Layout
+
+    const colorLow = { r:
+ 20,
+ g:
+ 0,
+ b:
+ 50 };
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 颜色2:
+ 前景色 (高浓度 V) - 亮青色
+\end_layout
+
+\begin_layout Plain Layout
+
+    const colorHigh = { r:
+ 0,
+ g:
+ 255,
+ b:
+ 255 };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ================= 初始化网格 =================
+\end_layout
+
+\begin_layout Plain Layout
+
+    // grid[x][y] = { u:
+ float,
+ v:
+ float }
+\end_layout
+
+\begin_layout Plain Layout
+
+    let grid = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+    let nextGrid = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    function init() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 1.
+ 初始化数组
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (let x = 0;
+ x < width;
+ x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            grid[x] = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+            nextGrid[x] = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (let y = 0;
+ y < height;
+ y++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 初始状态：
+u=1 (满),
+ v=0 (空)
+\end_layout
+
+\begin_layout Plain Layout
+
+                grid[x][y] = { u:
+ 1.0,
+ v:
+ 0.0 };
+\end_layout
+
+\begin_layout Plain Layout
+
+                nextGrid[x][y] = { u:
+ 1.0,
+ v:
+ 0.0 };
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 2.
+ 播种 (Seed)
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 在中心区域放入一些 V，
+打破平衡
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 对应讨论中的 "加入干扰"
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (let x = 90;
+ x < 110;
+ x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (let y = 90;
+ y < 110;
+ y++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                grid[x][y].u = 0.5;
+\end_layout
+
+\begin_layout Plain Layout
+
+                grid[x][y].v = 0.25;
+ // 放入一点 V
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ================= 核心计算函数 =================
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 线性插值函数 (Linear Interpolation)
+\end_layout
+
+\begin_layout Plain Layout
+
+    // result = start * (1-t) + end * t
+\end_layout
+
+\begin_layout Plain Layout
+
+    function lerp(start,
+ end,
+ t) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        return start * (1 - t) + end * t;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 计算拉普拉斯算子 (Convolution)
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 包含周期性边界处理
+\end_layout
+
+\begin_layout Plain Layout
+
+    function computeLaplacian(x,
+ y,
+ component) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        let sum = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 卷积核权重 (3x3)
+\end_layout
+
+\begin_layout Plain Layout
+
+        //  0.05  0.20  0.05
+\end_layout
+
+\begin_layout Plain Layout
+
+        //  0.20 -1.00  0.20
+\end_layout
+
+\begin_layout Plain Layout
+
+        //  0.05  0.20  0.05
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 遍历 3x3 邻居
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (let i = -1;
+ i <= 1;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (let j = -1;
+ j <= 1;
+ j++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 周期性边界 (Wrap around):
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 如果 x+i 超出范围，
+就绕到另一边
+\end_layout
+
+\begin_layout Plain Layout
+
+                let nx = (x + i + width) % width;
+\end_layout
+
+\begin_layout Plain Layout
+
+                let ny = (y + j + height) % height;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                let val = (component === 'u') ?
+ grid[nx][ny].u :
+ grid[nx][ny].v;
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\begin_layout Plain Layout
+
+                let weight = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+                if (i === 0 && j === 0) weight = -1.0;
+      // 中心
+\end_layout
+
+\begin_layout Plain Layout
+
+                else if (Math.abs(i) + Math.abs(j) === 1) weight = 0.2;
+ // 上下左右
+\end_layout
+
+\begin_layout Plain Layout
+
+                else weight = 0.05;
+                         // 对角线
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\begin_layout Plain Layout
+
+                sum += val * weight;
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        return sum;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // 更新一帧物理状态
+\end_layout
+
+\begin_layout Plain Layout
+
+    function update() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (let x = 0;
+ x < width;
+ x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (let y = 0;
+ y < height;
+ y++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 获取当前值
+\end_layout
+
+\begin_layout Plain Layout
+
+                let u = grid[x][y].u;
+\end_layout
+
+\begin_layout Plain Layout
+
+                let v = grid[x][y].v;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 1.
+ 计算扩散 (Laplacian)
+\end_layout
+
+\begin_layout Plain Layout
+
+                let lapU = computeLaplacian(x,
+ y,
+ 'u');
+\end_layout
+
+\begin_layout Plain Layout
+
+                let lapV = computeLaplacian(x,
+ y,
+ 'v');
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 2.
+ 计算反应项 uv^2
+\end_layout
+
+\begin_layout Plain Layout
+
+                let uvv = u * v * v;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 3.
+ Gray-Scott 更新公式
+\end_layout
+
+\begin_layout Plain Layout
+
+                // du/dt = Du*LapU - uv^2 + F(1-u)
+\end_layout
+
+\begin_layout Plain Layout
+
+                let du = (Du * lapU - uvv + F * (1 - u)) * dt;
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\begin_layout Plain Layout
+
+                // dv/dt = Dv*LapV + uv^2 - (F+k)v
+\end_layout
+
+\begin_layout Plain Layout
+
+                let dv = (Dv * lapV + uvv - (F + k) * v) * dt;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 4.
+ 写入新状态 (并限制在 0-1 之间)
+\end_layout
+
+\begin_layout Plain Layout
+
+                nextGrid[x][y].u = Math.min(1,
+ Math.max(0,
+ u + du));
+\end_layout
+
+\begin_layout Plain Layout
+
+                nextGrid[x][y].v = Math.min(1,
+ Math.max(0,
+ v + dv));
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 交换 buffer (nextGrid 变成当前的 grid)
+\end_layout
+
+\begin_layout Plain Layout
+
+        let temp = grid;
+\end_layout
+
+\begin_layout Plain Layout
+
+        grid = nextGrid;
+\end_layout
+
+\begin_layout Plain Layout
+
+        nextGrid = temp;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ================= 渲染函数 =================
+\end_layout
+
+\begin_layout Plain Layout
+
+    const canvas = document.getElementById('simCanvas');
+\end_layout
+
+\begin_layout Plain Layout
+
+    const ctx = canvas.getContext('2d');
+\end_layout
+
+\begin_layout Plain Layout
+
+    const imageData = ctx.createImageData(width,
+ height);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    function draw() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        const data = imageData.data;
+ // 像素数组 [r,
+ g,
+ b,
+ a,
+ r,
+ g,
+ b,
+ a,
+ ...]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (let x = 0;
+ x < width;
+ x++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (let y = 0;
+ y < height;
+ y++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                let index = (y * width + x) * 4;
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\begin_layout Plain Layout
+
+                let v = grid[x][y].v;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 为了更好的视觉效果，
+将 v 的值归一化/放大
+\end_layout
+
+\begin_layout Plain Layout
+
+                // v 通常在 0 到 0.4 之间波动，
+我们把它拉伸到 0 到 1
+\end_layout
+
+\begin_layout Plain Layout
+
+                // t 是插值系数 (0.0 ~ 1.0)
+\end_layout
+
+\begin_layout Plain Layout
+
+                let t = Math.min(1,
+ Math.max(0,
+ (v - 0.2) / 0.4));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // --- 核心：
+双色插值 (Lerp) ---
+\end_layout
+
+\begin_layout Plain Layout
+
+                let r = lerp(colorLow.r,
+ colorHigh.r,
+ t);
+\end_layout
+
+\begin_layout Plain Layout
+
+                let g = lerp(colorLow.g,
+ colorHigh.g,
+ t);
+\end_layout
+
+\begin_layout Plain Layout
+
+                let b = lerp(colorLow.b,
+ colorHigh.b,
+ t);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                // 赋值给像素
+\end_layout
+
+\begin_layout Plain Layout
+
+                data[index + 0] = r;
+     // Red
+\end_layout
+
+\begin_layout Plain Layout
+
+                data[index + 1] = g;
+     // Green
+\end_layout
+
+\begin_layout Plain Layout
+
+                data[index + 2] = b;
+     // Blue
+\end_layout
+
+\begin_layout Plain Layout
+
+                data[index + 3] = 255;
+   // Alpha (不透明)
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        ctx.putImageData(imageData,
+ 0,
+ 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ================= 主循环 =================
+\end_layout
+
+\begin_layout Plain Layout
+
+    init();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    function loop() {
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 为了加快生长速度，
+每次渲染前计算多次物理更新
+\end_layout
+
+\begin_layout Plain Layout
+
+        // 如果这里只有 1 次，
+生长会非常慢
+\end_layout
+
+\begin_layout Plain Layout
+
+        for(let i=0;
+ i<5;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            update();
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\begin_layout Plain Layout
+
+        draw();
+\end_layout
+
+\begin_layout Plain Layout
+
+        requestAnimationFrame(loop);
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    loop();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+</script>
+\end_layout
+
+\begin_layout Plain Layout
+
+</body>
+\end_layout
+
+\begin_layout Plain Layout
+
+</html>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename image/图灵图斑-双色插值演示.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gray-Scott 反应扩散模型
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+理论分析
+\end_layout
+
+\begin_layout Standard
+通过线性稳定性分析，
+计算哪些参数组合会导致系统不稳定从而产生图斑。
+
+\end_layout
+
+\begin_layout Section
+为什么自然界的生物会符合图灵图斑
+\end_layout
+
+\begin_layout Standard
+简单来说，
+自然界的生物之所以“符合”图灵图斑，
+是因为图灵机制（反应-扩散系统）是生物体构建复杂结构最“经济”、最“耐受（Robust）”且符合物理化学定律的方式。
+
+\end_layout
+
+\begin_layout Standard
+生物并不是“懂得”了图灵方程去模仿，
+而是进化的选择和物理化学的必然性导向了这种机制。
+以下是几个核心层面的解释：
+
+\end_layout
+
+\begin_layout Enumerate
+基因组的“压缩算法” (Genetic Economy)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是最重要的原因。
+
+\end_layout
+
+\begin_layout Itemize
+问题：
+如果斑马的 DNA 必须逐个像素地记录每一条条纹的位置，
+或者猎豹的 DNA 要记录每一个斑点的坐标，
+那么基因组的信息量将大得惊人，
+且极其容易出错。
+
+\end_layout
+
+\begin_layout Itemize
+解决方案：
+图灵机制就像一个压缩包。
+DNA 不需要存储最终的“图像”，
+只需要存储“生成图像的方程参数”。
+
+\end_layout
+
+\begin_layout Itemize
+生物体不需要记录“在坐标 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 处生成黑色素”。
+
+\end_layout
+
+\begin_layout Itemize
+生物体只需要记录：
+“制造激活剂 A 和抑制剂 B，
+设定扩散系数 
+\begin_inset Formula $D_{A}$
+\end_inset
+
+ 和 
+\begin_inset Formula $D_{B}$
+\end_inset
+
+”。
+
+\end_layout
+
+\begin_layout Itemize
+结果：
+只需几个基因（编码这两种蛋白），
+就能在宏观尺度上涌现出千万个复杂的斑点。
+这对生物进化来说是极高的信息效率。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+2.
+ 自组织与耐受性 (Self-Organization & Robustness)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+胚胎发育是一个充满噪声和不确定性的过程。
+细胞会移动、死亡，
+温度和环境也会波动。
+
+\end_layout
+
+\begin_layout Itemize
+传统的蓝图模式：
+如果按照严格的坐标施工，
+一旦胚胎在发育早期受损或大小发生变化，
+整个图案就会错位。
+
+\end_layout
+
+\begin_layout Itemize
+图灵模式：
+反应-扩散系统是一个动态平衡系统。
+
+\end_layout
+
+\begin_layout Itemize
+自修复：
+如果干扰了正在形成的图案，
+化学物质会重新扩散和反应，
+自动填补空缺或调整间距。
+
+\end_layout
+
+\begin_layout Itemize
+适应性：
+图灵机制可以适应生物体的大小变化。
+例如，
+随着动物生长，
+原本的条纹可能会分裂（就像神仙鱼身上的条纹），
+或者新的斑点会插入空隙中。
+这在数学上对应着由于区域变大，
+原本的波模式不再稳定，
+从而倍增出新的波。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+物理化学的必然性 (Physicochemical Inevitability)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+生物体归根结底是由分子组成的袋子。
+
+\end_layout
+
+\begin_layout Itemize
+扩散是免费的：
+分子从高浓度流向低浓度（扩散）是物理铁律，
+不需要消耗能量。
+
+\end_layout
+
+\begin_layout Itemize
+反应是生命的本质：
+细胞内的蛋白质合成、酶促反应无时无刻不在进行。
+
+\end_layout
+
+\begin_layout Standard
+当一个多细胞生物想要区分“这里长毛”和“那里不长毛”时，
+利用现成的化学物质扩散（长程信号）和细胞局部的反应（短程信号）是最自然的物理实现路径。
+图灵所描述的“局部激活、长程抑制”，
+正是细胞间通讯最基础的模式之一。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+进化的灵活性 (Evolvability)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+图灵机制为物种多样性提供了一个极其灵活的调色板。
+
+\end_layout
+
+\begin_layout Itemize
+参数微调：
+正如我们在 Gray-Scott 模型中看到的，
+只需要微调一下进给率 $F$ 或杀灭率 $k$（在生物中对应蛋白质的合成速率或降解速率），
+图案就能从斑点变成条纹，
+再变成迷宫纹。
+
+\end_layout
+
+\begin_layout Itemize
+例子：
+猫科动物（老虎、豹子、狮子、家猫）的基因组非常相似。
+它们皮毛花纹的巨大差异，
+很可能只是控制形态发生素扩散速度或反应阈值的几个参数发生了微小突变。
+这让进化可以快速“实验”出不同的伪装图案。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+真实的生物学证据
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+几十年来，
+图灵理论只是一个数学猜想，
+但最近二十年，
+生物学家终于找到了对应的分子（形态发生素）：
+
+\end_layout
+
+\begin_layout Enumerate
+小鼠毛囊分布 (2006)：
+科学家发现 WNT 信号通路（激活剂）和 DKK 蛋白（抑制剂）完全符合图灵模型。
+WNT 促进毛囊生长并激活 DKK，
+而 DKK 扩散得更快并抑制周围的 WNT，
+从而确保毛囊之间保持均匀的间距（避免所有的毛都长在同一个地方）。
+
+\end_layout
+
+\begin_layout Enumerate
+斑马鱼的条纹：
+斑马鱼皮肤上的色素细胞（黑色素细胞和黄色素细胞）之间的相互追逐和推斥，
+在数学上完美对应反应-扩散方程。
+
+\end_layout
+
+\begin_layout Enumerate
+指纹的形成 (2023)：
+最新研究表明，
+人类指纹的脊状突起也是由图灵机制（WNT 和 BMP 信号通路）在胚胎发育期定型的。
+指尖的波纹是从三个起始点（指尖、指节、指甲边缘）开始扩散并碰撞形成的图灵波。
+
+\end_layout
+
+\end_deeper
 \begin_layout Chapter
 齐次化 （Homogenization）
 \end_layout

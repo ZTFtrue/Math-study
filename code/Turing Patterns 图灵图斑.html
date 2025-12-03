@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图灵图斑 - 双色插值演示</title>
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: sans-serif;
+        }
+        canvas {
+            border: 1px solid #555;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            /* 为了看清像素，采用临近采样 */
+            image-rendering: pixelated; 
+        }
+        .controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gray-Scott 反应扩散模型</h2>
+    <canvas id="simCanvas" width="200" height="200"></canvas>
+    <div class="controls">
+        <p>颜色基于物质 V 的浓度进行线性插值 (Lerp)</p>
+    </div>
+
+<script>
+    // ================= 配置参数 =================
+    const width = 200;
+    const height = 200;
+    
+    // 物理参数 (尝试调整 F 和 k 可以改变图案形状)
+    // 经典 "Coral" (珊瑚) 参数
+    const F = 0.0545;  // 进给率
+    const k = 0.0620;  // 杀灭率
+
+    // 扩散系数
+    const Du = 1.0;
+    const Dv = 0.5;
+
+    // 时间步长
+    const dt = 1.0;
+
+    // 定义双色插值的颜色
+    // 颜色1: 背景色 (低浓度 V) - 深紫色
+    const colorLow = { r: 20, g: 0, b: 50 }; 
+    // 颜色2: 前景色 (高浓度 V) - 亮青色
+    const colorHigh = { r: 0, g: 255, b: 255 };
+
+    // ================= 初始化网格 =================
+    // grid[x][y] = { u: float, v: float }
+    let grid = [];
+    let nextGrid = [];
+
+    function init() {
+        // 1. 初始化数组
+        for (let x = 0; x < width; x++) {
+            grid[x] = [];
+            nextGrid[x] = [];
+            for (let y = 0; y < height; y++) {
+                // 初始状态：u=1 (满), v=0 (空)
+                grid[x][y] = { u: 1.0, v: 0.0 };
+                nextGrid[x][y] = { u: 1.0, v: 0.0 };
+            }
+        }
+
+        // 2. 播种 (Seed)
+        // 在中心区域放入一些 V，打破平衡
+        // 对应讨论中的 "加入干扰"
+        for (let x = 90; x < 110; x++) {
+            for (let y = 90; y < 110; y++) {
+                grid[x][y].u = 0.5;
+                grid[x][y].v = 0.25; // 放入一点 V
+            }
+        }
+    }
+
+    // ================= 核心计算函数 =================
+
+    // 线性插值函数 (Linear Interpolation)
+    // result = start * (1-t) + end * t
+    function lerp(start, end, t) {
+        return start * (1 - t) + end * t;
+    }
+
+    // 计算拉普拉斯算子 (Convolution)
+    // 包含周期性边界处理
+    function computeLaplacian(x, y, component) {
+        let sum = 0;
+        
+        // 卷积核权重 (3x3)
+        //  0.05  0.20  0.05
+        //  0.20 -1.00  0.20
+        //  0.05  0.20  0.05
+        
+        // 遍历 3x3 邻居
+        for (let i = -1; i <= 1; i++) {
+            for (let j = -1; j <= 1; j++) {
+                // 周期性边界 (Wrap around): 
+                // 如果 x+i 超出范围，就绕到另一边
+                let nx = (x + i + width) % width;
+                let ny = (y + j + height) % height;
+
+                let val = (component === 'u') ? grid[nx][ny].u : grid[nx][ny].v;
+                
+                let weight = 0;
+                if (i === 0 && j === 0) weight = -1.0;      // 中心
+                else if (Math.abs(i) + Math.abs(j) === 1) weight = 0.2; // 上下左右
+                else weight = 0.05;                         // 对角线
+                
+                sum += val * weight;
+            }
+        }
+        return sum;
+    }
+
+    // 更新一帧物理状态
+    function update() {
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
+                
+                // 获取当前值
+                let u = grid[x][y].u;
+                let v = grid[x][y].v;
+
+                // 1. 计算扩散 (Laplacian)
+                let lapU = computeLaplacian(x, y, 'u');
+                let lapV = computeLaplacian(x, y, 'v');
+
+                // 2. 计算反应项 uv^2
+                let uvv = u * v * v;
+
+                // 3. Gray-Scott 更新公式
+                // du/dt = Du*LapU - uv^2 + F(1-u)
+                let du = (Du * lapU - uvv + F * (1 - u)) * dt;
+                
+                // dv/dt = Dv*LapV + uv^2 - (F+k)v
+                let dv = (Dv * lapV + uvv - (F + k) * v) * dt;
+
+                // 4. 写入新状态 (并限制在 0-1 之间)
+                nextGrid[x][y].u = Math.min(1, Math.max(0, u + du));
+                nextGrid[x][y].v = Math.min(1, Math.max(0, v + dv));
+            }
+        }
+
+        // 交换 buffer (nextGrid 变成当前的 grid)
+        let temp = grid;
+        grid = nextGrid;
+        nextGrid = temp;
+    }
+
+    // ================= 渲染函数 =================
+    const canvas = document.getElementById('simCanvas');
+    const ctx = canvas.getContext('2d');
+    const imageData = ctx.createImageData(width, height);
+
+    function draw() {
+        const data = imageData.data; // 像素数组 [r, g, b, a, r, g, b, a, ...]
+
+        for (let x = 0; x < width; x++) {
+            for (let y = 0; y < height; y++) {
+                let index = (y * width + x) * 4;
+                
+                let v = grid[x][y].v;
+
+                // 为了更好的视觉效果，将 v 的值归一化/放大
+                // v 通常在 0 到 0.4 之间波动，我们把它拉伸到 0 到 1
+                // t 是插值系数 (0.0 ~ 1.0)
+                let t = Math.min(1, Math.max(0, (v - 0.2) / 0.4));
+
+                // --- 核心：双色插值 (Lerp) ---
+                let r = lerp(colorLow.r, colorHigh.r, t);
+                let g = lerp(colorLow.g, colorHigh.g, t);
+                let b = lerp(colorLow.b, colorHigh.b, t);
+
+                // 赋值给像素
+                data[index + 0] = r;     // Red
+                data[index + 1] = g;     // Green
+                data[index + 2] = b;     // Blue
+                data[index + 3] = 255;   // Alpha (不透明)
+            }
+        }
+        ctx.putImageData(imageData, 0, 0);
+    }
+
+    // ================= 主循环 =================
+    init();
+
+    function loop() {
+        // 为了加快生长速度，每次渲染前计算多次物理更新
+        // 如果这里只有 1 次，生长会非常慢
+        for(let i=0; i<5; i++) {
+            update();
+        }
+        
+        draw();
+        requestAnimationFrame(loop);
+    }
+
+    loop();
+
+</script>
+</body>
+</html>
