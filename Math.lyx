@@ -16396,6 +16396,264 @@ uu
 排容原理
 \end_layout
 
+\begin_layout Example
+某城市街道呈现为一个网格状。
+小明住在城市的左上角（坐标为 
+\begin_inset Formula $1,1$
+\end_inset
+
+），
+他的公司位于城市的右下角（坐标为
+\begin_inset Formula $8,6$
+\end_inset
+
+，
+即第
+\begin_inset Formula $8$
+\end_inset
+
+列第 
+\begin_inset Formula $6$
+\end_inset
+
+ 行）。
+
+\end_layout
+
+\begin_layout Example
+小明每天上班只能向右或向下行走。
+但是，
+在去公司之前，
+他必须经过一家位于坐标
+\begin_inset Formula $(5,3)$
+\end_inset
+
+（第 
+\begin_inset Formula $5$
+\end_inset
+
+ 列第 
+\begin_inset Formula $3$
+\end_inset
+
+ 行）的咖啡店买早餐。
+
+\end_layout
+
+\begin_layout Example
+请问小明从家出发，
+经过咖啡店，
+最后到达公司，
+总共有多少条不同的路径？
+
+\end_layout
+
+\begin_layout Solution
+可以先分为两个阶段
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+第一阶段：
+ 从起点 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+ 到咖啡店
+\begin_inset Formula $(5,3)$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Enumerate
+第二阶段：
+ 从咖啡店 
+\begin_inset Formula $(5,3)$
+\end_inset
+
+ 到终点
+\begin_inset Formula $(8,6)$
+\end_inset
+
+。
+
+\end_layout
+
+\end_deeper
+\begin_layout Solution
+根据分步计数原理（乘法原理），
+总路径数 = （第一阶段的路径数）
+\begin_inset Formula $\times$
+\end_inset
+
+ （第二阶段的路径数）。
+
+\end_layout
+
+\begin_layout Solution
+第一步：
+计算从起点到咖啡店的路径
+\end_layout
+
+\begin_layout Solution
+这相当于在一个
+\begin_inset Formula $5\times3$
+\end_inset
+
+ 的网格中（宽5，
+高3），
+从左上走到右下。
+
+\end_layout
+
+\begin_layout Solution
+向右步数：
+ 
+\begin_inset Formula $5-1=4$
+\end_inset
+
+ 步
+\end_layout
+
+\begin_layout Solution
+向下步数：
+ 
+\begin_inset Formula $3-1=2$
+\end_inset
+
+ 步
+\end_layout
+
+\begin_layout Solution
+总步数：
+ 
+\begin_inset Formula $4+2=6$
+\end_inset
+
+ 步
+\end_layout
+
+\begin_layout Solution
+路径数 
+\begin_inset Formula $N_{1}$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+N_{1}=C_{6}^{2}=\binom{6}{2}=\frac{6\times5}{2\times1}=15
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第二步：
+计算从咖啡店到终点的路径
+\end_layout
+
+\begin_layout Solution
+从 
+\begin_inset Formula $(5,3)$
+\end_inset
+
+ 到 
+\begin_inset Formula $(8,6)$
+\end_inset
+
+，
+相当于在一个新的小网格里走。
+
+\end_layout
+
+\begin_layout Solution
+新网格的宽度（列数差）：
+
+\begin_inset Formula $8-5+1=4$
+\end_inset
+
+ （即需要向右走 
+\begin_inset Formula $8-5=3$
+\end_inset
+
+ 步）
+\end_layout
+
+\begin_layout Solution
+新网格的高度（行数差）：
+
+\begin_inset Formula $6-3+1=4$
+\end_inset
+
+ （即需要向下走 
+\begin_inset Formula $6-3=3$
+\end_inset
+
+ 步）
+\end_layout
+
+\begin_layout Solution
+总步数：
+
+\begin_inset Formula $3+3=6$
+\end_inset
+
+ 步
+\end_layout
+
+\begin_layout Solution
+路径数 
+\begin_inset Formula $N_{2}$
+\end_inset
+
+ 为：
+
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+N_{2}=C_{6}^{3}=\binom{6}{3}=\frac{6\times5\times4}{3\times2\times1}=20
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+第三步：
+计算总路径
+\end_layout
+
+\begin_layout Solution
+\begin_inset Formula 
+\[
+\text{总路径}=N_{1}\times N_{2}=15\times20=300
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Solution
+总共有 
+\begin_inset Formula $300$
+\end_inset
+
+ 条不同的路径。
+
+\end_layout
+
 \begin_layout Subsection
 卡特兰问题
 \end_layout
@@ -112597,7 +112855,939 @@ f_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{
 \end_layout
 
 \begin_layout Section
-解析函数（复变函数）
+复变函数 （Complex Analysis）
+\end_layout
+
+\begin_layout Standard
+什么是复变函数 (Complex Function)？
+ —
+—
+ 只是个“容器”
+\end_layout
+
+\begin_layout Standard
+定义非常宽泛：
+ 只要你的输入是复数
+\begin_inset Formula $z$
+\end_inset
+
+，
+输出也是复数
+\begin_inset Formula $w$
+\end_inset
+
+，
+那你就是复变函数。
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=f(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就好比说“只要是个人，
+就是人类”。
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $z$
+\end_inset
+
+的形式
+\end_layout
+
+\begin_layout Standard
+在复变函数中，
+变量 
+\begin_inset Formula $z$
+\end_inset
+
+ 通常有三种写法。
+
+\end_layout
+
+\begin_layout Subsubsection
+代数形式 (Algebraic Form) —
+—
+ 最基础的积木
+\end_layout
+
+\begin_layout Standard
+这是最常见的写法，
+用来做加减法最方便。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=x+iy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x$
+\end_inset
+
+：
+实部 (Real Part)，
+对应横坐标。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y$
+\end_inset
+
+：
+虚部 (Imaginary Part)，
+对应纵坐标。
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i$
+\end_inset
+
+：
+虚数单位，
+满足 
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+在这个形式下看 
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+：
+ 
+\end_layout
+
+\begin_layout Standard
+* 原数：
+
+\begin_inset Formula $z=x+iy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* 共轭：
+
+\begin_inset Formula $\bar{z}=x-iy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+几何意义：
+ 也就是把 
+\begin_inset Formula $y$
+\end_inset
+
+ 变成 
+\begin_inset Formula $-y$
+\end_inset
+
+，
+相当于关于 $x$ 轴做了一个镜像对称（上下翻转）。
+
+\end_layout
+
+\begin_layout Subsubsection
+几何形式 (Geometric Form) —
+—
+ 距离与模长
+\end_layout
+
+\begin_layout Standard
+我们将 
+\begin_inset Formula $z$
+\end_inset
+
+ 看作复平面上的一个点 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+，
+或者从原点指向这个点的一个向量。
+
+\end_layout
+
+\begin_layout Standard
+这里最重要的概念是模长 (Modulus)，
+也就是
+\begin_inset Formula $z$
+\end_inset
+
+ 到原点的距离，
+记作 
+\begin_inset Formula $|z|$
+\end_inset
+
+ 或 
+\begin_inset Formula $r$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|z|=\sqrt{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+例子：
+ 如果 
+\begin_inset Formula $z=3+4i$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+距离：
+ 
+\begin_inset Formula $|z|=\sqrt{3^{2}+4^{2}}=\sqrt{9+16}=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+在这个形式下看
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+：
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $z$
+\end_inset
+
+ 和
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+ 的长度（距离）是一模一样的。
+
+\end_layout
+
+\begin_layout Standard
+* $|z| = |
+\backslash
+bar{z}|$。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Subsubsection
+指数/极坐标形式 (Exponential Form)
+\end_layout
+
+\begin_layout Standard
+这是复变函数的灵魂，
+由欧拉公式提供支持。
+用来做乘除法、乘方、旋转最方便。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=re^{i\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r$
+\end_inset
+
+：
+就是上面的模长（距离）。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\theta$
+\end_inset
+
+：
+幅角 (Argument)。
+即向量与
+\begin_inset Formula $x$
+\end_inset
+
+ 轴正方向的夹角。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e^{i\theta}$
+\end_inset
+
+：
+表示方向/旋转。
+
+\end_layout
+
+\begin_layout Standard
+在这个形式下看 
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Itemize
+原数：
+
+\begin_inset Formula $z=re^{i\theta}$
+\end_inset
+
+ （逆时针转了 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 角）
+\end_layout
+
+\begin_layout Itemize
+共轭：
+
+\begin_inset Formula $\bar{z}=re^{-i\theta}$
+\end_inset
+
+ （顺时针转了 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 角）
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Subsubsection
+三种形式的转换
+\end_layout
+
+\begin_layout Standard
+假设我们有一个复数 
+\begin_inset Formula $z=1+i$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 代数形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=1+1i
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(含义：
+向右走1步，
+向上走1步)
+\end_layout
+
+\begin_layout Standard
+2.
+ 几何/模长形式：
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|z|=\sqrt{1^{2}+1^{2}}=\sqrt{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(含义：
+它离原点的距离是 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+3.
+ 指数形式：
+
+\end_layout
+
+\begin_layout Standard
+因为横坐标1，
+纵坐标1，
+所以角度是 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+ (即 
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+)。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=\sqrt{2}e^{i\frac{\pi}{4}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(含义：
+长度 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ 的杆子，
+抬高了 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+关于 
+\begin_inset Formula $f(z)=\bar{z}$
+\end_inset
+
+ ：
+
+\end_layout
+
+\begin_layout Standard
+用形式 1 看：
+
+\begin_inset Formula $x+iy$
+\end_inset
+
+ 变成了 
+\begin_inset Formula $x-iy$
+\end_inset
+
+（只是 
+\begin_inset Formula $y$
+\end_inset
+
+ 变符号，
+看似简单）。
+
+\end_layout
+
+\begin_layout Standard
+用形式 3 看：
+角度从 
+\begin_inset Formula $\theta$
+\end_inset
+
+ 突变到了 
+\begin_inset Formula $-\theta$
+\end_inset
+
+。
+这种角度的“反转”破坏了导数所需要的“旋转一致性”，
+所以它不可导。
+
+\end_layout
+
+\begin_layout Subsection
+复变函数
+\end_layout
+
+\begin_layout Standard
+在这个大集合里，
+鱼龙混杂：
+
+\end_layout
+
+\begin_layout Itemize
+好的函数：
+ 
+\begin_inset Formula $f(z)=z^{2}$
+\end_inset
+
+（很顺滑，
+
+\begin_inset Formula $f(z)=(x+iy)^{2}$
+\end_inset
+
+）
+\end_layout
+
+\begin_layout Itemize
+坏的函数：
+ 
+\begin_inset Formula $f(z)=\bar{z}$
+\end_inset
+
+（共轭，
+虽然看起来简单，
+但在微积分层面上是“破碎”的）
+\end_layout
+
+\begin_layout Itemize
+丑的函数：
+ 各种不连续、不可导的乱七八糟的映射。
+
+\end_layout
+
+\begin_layout Standard
+复变函数这个词，
+更多是指研究领域的名字，
+而不是指某种特定的函数性质。
+
+\end_layout
+
+\begin_layout Standard
+引入虚数 
+\begin_inset Formula $i$
+\end_inset
+
+ 之后，
+微积分的规则发生了 质变。
+复变函数展现出了一种在实数领域无法想象的“完美性”和“刚性”。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 核心门槛：
+全纯性 (Holomorphism) —
+—
+ 苛刻的完美
+\end_layout
+
+\begin_layout Standard
+在实数微积分里，
+一个函数可以是光滑的，
+但如果你把它的局部放大，
+可能还是一团乱麻。
+
+\end_layout
+
+\begin_layout Standard
+但在复变函数里，
+我们要定义“导数”非常困难。
+
+\end_layout
+
+\begin_layout Standard
+在实数轴上，
+逼近一个点只有两个方向（左、右）。
+
+\end_layout
+
+\begin_layout Standard
+在复平面上，
+逼近一个点有无数个方向（上下左右、斜着、螺旋着\SpecialChar ldots
+\SpecialChar ldots
+）。
+
+\end_layout
+
+\begin_layout Standard
+全纯函数的定义：
+ 无论你从哪个方向逼近，
+导数都必须相等。
+
+\end_layout
+
+\begin_layout Standard
+这导致了一个惊人的结论：
+
+\end_layout
+
+\begin_layout Standard
+如果一个复变函数在某个区域内可导（一次），
+那么它就自动无限次可导。
+
+\end_layout
+
+\begin_layout Standard
+这就好比说：
+如果你能造出一块积木是完美的，
+那么整座城堡都必须是完美的。
+
+\end_layout
+
+\begin_layout Standard
+> 直觉：
+ 复变函数是非常“硬”的。
+你只要知道了它的一小块（比如它在一个小圆盘里的值），
+你就知道了它在整个定义域里的值（这叫解析延拓）。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 积分的魔法：
+柯西积分定理 (Cauchy's Integral Theorem)
+\end_layout
+
+\begin_layout Standard
+这是复变函数最迷人的地方，
+也是它和拓扑学的交汇点。
+
+\end_layout
+
+\begin_layout Standard
+在实数里，
+积分计算 $
+\backslash
+int_a^b f(x)dx$ 往往很难算出解析解。
+
+\end_layout
+
+\begin_layout Standard
+但在复平面上，
+积分变成了“路径游戏”。
+
+\end_layout
+
+\begin_layout Standard
+#### 定理内容：
+
+\end_layout
+
+\begin_layout Standard
+如果你在一个没有洞的区域里，
+沿着一个闭合的圈走一圈，
+积分结果永远是 0。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C f(z) dz = 0 $$
+\end_layout
+
+\begin_layout Standard
+不管你这个圈画得像圆，
+还是画得像扭曲的土豆，
+只要圈里没有“坏点”（奇点），
+结果都是 0。
+这意味着路径不重要（路径无关性）。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 留数定理 (Residue Theorem) —
+—
+ 数洞洞
+\end_layout
+
+\begin_layout Standard
+如果圈里有“坏点”怎么办？
+比如 $f(z) = 
+\backslash
+frac{1}{z}$ 在 $z=0$ 处没有定义（这是个奇点）。
+
+\end_layout
+
+\begin_layout Standard
+这时候，
+复变函数变成了算术题。
+
+\end_layout
+
+\begin_layout Standard
+你不需要真的去积分，
+你只需要看看圈里包住了几个“奇点”，
+算出每个奇点的“留数” (Residue)（代表这个奇点的权重），
+然后把它们加起来乘以 $2
+\backslash
+pi i$。
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+oint_C f(z) dz = 2
+\backslash
+pi i 
+\backslash
+sum 
+\backslash
+text{Res}(f,
+ a_k) $$
+\end_layout
+
+\begin_layout Standard
+连接拓扑学：
+
+\end_layout
+
+\begin_layout Standard
+还记得你问的几何拓扑吗？
+这跟拓扑里的“绕数”一模一样。
+
+\end_layout
+
+\begin_layout Standard
+* 积分不再是计算“面积”，
+而是计算你绕了奇点几圈。
+
+\end_layout
+
+\begin_layout Standard
+* 这把复杂的微积分问题，
+降维成了简单的代数加法。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 几何视角：
+保角映射 (Conformal Mapping)
+\end_layout
+
+\begin_layout Standard
+复变函数不仅是计算工具，
+它是几何变换的艺术。
+
+\end_layout
+
+\begin_layout Standard
+所有的解析函数（全纯函数）都有一个几何性质：
+保角性。
+
+\end_layout
+
+\begin_layout Standard
+这意味着，
+变换前的网格如果是 90 度垂直相交的，
+变换后的网格（虽然扭曲了）依然是 90 度相交。
+
+\end_layout
+
+\begin_layout Standard
+应用：
+流体力学
+\end_layout
+
+\begin_layout Standard
+* 设计飞机机翼时，
+直接算机翼周围的气流很难。
+
+\end_layout
+
+\begin_layout Standard
+* 数学家利用复变函数（茹科夫斯基变换），
+把一个标准的圆变换成机翼的形状。
+
+\end_layout
+
+\begin_layout Standard
+* 因为是“保角”的，
+圆周围简单的气流场，
+也就被完美映射成了机翼周围复杂的气流场。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 5.
+ 与欧拉公式的联系 —
+—
+ 旋转的灵魂
+\end_layout
+
+\begin_layout Standard
+复变函数的灵魂是欧拉公式：
+
+\end_layout
+
+\begin_layout Standard
+$$ e^{ix} = 
+\backslash
+cos x + i 
+\backslash
+sin x $$
+\end_layout
+
+\begin_layout Standard
+在实数里，
+$e^x$ 是增长最快的函数。
+
+\end_layout
+
+\begin_layout Standard
+在复数里，
+乘上 $i$ 之后，
+$e^{ix}$ 变成了旋转。
+
+\end_layout
+
+\begin_layout Standard
+这解释了为什么波函数（你上一个问题）需要用复数。
+
+\end_layout
+
+\begin_layout Standard
+* 物理世界中的波（光波、声波、概率波）本质上都是周期性的震荡。
+
+\end_layout
+
+\begin_layout Standard
+* 用复变函数中的 $e^{i
+\backslash
+omega t}$ 来描述震荡，
+比用三角函数 $
+\backslash
+sin$ 和 $
+\backslash
+cos$ 要简洁、优雅得多。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 6.
+ 总结
+\end_layout
+
+\begin_layout Standard
+复变函数在数学大厦中的位置：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 对于微积分：
+ 它是升级版。
+它解决了实积分中很多积不出来的难题（通过绕路到复平面去积）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 对于物理：
+ 它是必需品。
+不管是量子力学（波函数是复值），
+还是信号处理（傅里叶变换的核心是复指数），
+还是电路分析（交流电的相量法），
+离开复变函数都寸步难行。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 对于直觉：
+ 它告诉我们，
+实数轴只是一个二维平面的切片。
+当我们把维度展开，
+原本在实数轴上看似断裂或无解的问题（比如 $
+\backslash
+sqrt{-1}$，
+比如 $
+\backslash
+frac{1}{1+x^2}$ 的积分），
+在复平面上都变得完整且连贯。
+
+\end_layout
+
+\begin_layout Standard
+一句话概括：
+
+\end_layout
+
+\begin_layout Standard
+复变函数就是在一个拥有完美对称性和刚性结构的二维世界里做的微积分。
+
+\end_layout
+
+\begin_layout Subsection
+解析函数
 \end_layout
 
 \begin_layout Standard
@@ -112743,6 +113933,49 @@ f(z)=\sum_{n=0}^{\infty}a_{n}(z-z_{0})^{n}
 
 \end_layout
 
+\begin_layout Standard
+在复变函数理论中，
+有一个著名的等价关系，
+往往让初学者混淆，
+其实是同一个东西的不同侧面：
+
+\end_layout
+
+\begin_layout Enumerate
+全纯函数 (Holomorphic Function)：
+ 侧重于“可导”（微分性质）。
+
+\end_layout
+
+\begin_layout Enumerate
+解析函数 (Analytic Function)：
+ 侧重于“能展成级数”（代数性质）。
+
+\end_layout
+
+\begin_layout Standard
+在复变函数领域，
+ 全纯函数 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 解析函数。
+(注：
+在实变函数里，
+这通常是不等价的，
+但在复变函数里，
+它们是完美的同义词。
+)
+\end_layout
+
+\begin_layout Standard
+所以，
+通常我们说“这个复变函数是解析的”，
+意思就是“这个函数非常完美，
+我们可以对它进行微积分运算”。
+
+\end_layout
+
 \begin_layout Subsection
 柯西-黎曼条件
 \end_layout
@@ -112795,6 +114028,544 @@ f(z)=u(x,y)+iv(x,y)
 \begin_layout Standard
 只要这两个条件满足并且偏导连续，
 函数就在该点解析。
+
+\end_layout
+
+\begin_layout Standard
+看看函数表达式里有没有 
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+ (z的共轭) 或者只涉及
+\begin_inset Formula $|z|$
+\end_inset
+
+ (模长)。
+
+\end_layout
+
+\begin_layout Standard
+如果函数能只用 
+\begin_inset Formula $z$
+\end_inset
+
+ 表达出来（比如 
+\begin_inset Formula $z^{2},e^{z},\sin z$
+\end_inset
+
+），
+它通常是解析的。
+
+\end_layout
+
+\begin_layout Standard
+如果函数必须拆开写成 
+\begin_inset Formula $x$
+\end_inset
+
+ 和
+\begin_inset Formula $y$
+\end_inset
+
+ 的关系，
+或者包含
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+，
+它通常 不是解析的。
+
+\end_layout
+
+\begin_layout Standard
+举例对比：
+ 
+\end_layout
+
+\begin_layout Enumerate
+函数 A：
+ 
+\begin_inset Formula $f(z)=z^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+它是复变函数。
+
+\end_layout
+
+\begin_layout Standard
+它是解析函数（处处可导）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+函数 B：
+
+\begin_inset Formula $f(z)=\bar{z}$
+\end_inset
+
+ (即 
+\begin_inset Formula $x-iy$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+它是复变函数。
+
+\end_layout
+
+\begin_layout Standard
+它不是解析函数！
+（虽然它连续，
+但在任何点都不可导）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+直觉解释：
+ 解析函数要求具有保角性（旋转伸缩），
+而共轭操作是“镜像翻转”，
+翻转破坏了复导数的定义。
+
+\end_layout
+
+\begin_layout Standard
+我想你可能想问的是 “具体推导” 或者 “具体举例” 来看为什么 $f(z) = 
+\backslash
+bar{z}$ 不解析。
+（“具体距离”在这里语境下稍显模糊，
+但我猜测你是想看数学上是如何一步步证明它不可导的，
+也就是导数定义的极限过程）。
+
+\end_layout
+
+\begin_layout Standard
+我们就通过复数导数的定义，
+来“近距离”地看一看，
+为什么 $f(z) = 
+\backslash
+bar{z}$ 在任何地方都不可导。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 核心问题：
+导数的定义
+\end_layout
+
+\begin_layout Standard
+在复变函数中，
+导数 $f'(z)$ 的定义和实数一样，
+是变化率的极限：
+
+\end_layout
+
+\begin_layout Standard
+$$ f'(z) = 
+\backslash
+lim_{
+\backslash
+Delta z 
+\backslash
+to 0} 
+\backslash
+frac{f(z + 
+\backslash
+Delta z) - f(z)}{
+\backslash
+Delta z} $$
+\end_layout
+
+\begin_layout Standard
+对于 $f(z) = 
+\backslash
+bar{z}$，
+代入公式：
+
+\end_layout
+
+\begin_layout Standard
+* $f(z) = 
+\backslash
+bar{z}$
+\end_layout
+
+\begin_layout Standard
+* $f(z + 
+\backslash
+Delta z) = 
+\backslash
+overline{z + 
+\backslash
+Delta z} = 
+\backslash
+bar{z} + 
+\backslash
+overline{
+\backslash
+Delta z}$
+\end_layout
+
+\begin_layout Standard
+于是，
+分子变成了：
+
+\end_layout
+
+\begin_layout Standard
+$$ (
+\backslash
+bar{z} + 
+\backslash
+overline{
+\backslash
+Delta z}) - 
+\backslash
+bar{z} = 
+\backslash
+overline{
+\backslash
+Delta z} $$
+\end_layout
+
+\begin_layout Standard
+那么，
+我们要算的极限就是：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+lim_{
+\backslash
+Delta z 
+\backslash
+to 0} 
+\backslash
+frac{
+\backslash
+overline{
+\backslash
+Delta z}}{
+\backslash
+Delta z} $$
+\end_layout
+
+\begin_layout Standard
+现在的关键是：
+ $
+\backslash
+Delta z$ 趋近于 0 的方式有无数种。
+为了让导数存在，
+无论你从哪个方向趋近 0，
+这个比值必须是同一个数。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 2.
+ “兵分两路”的验证
+\end_layout
+
+\begin_layout Standard
+我们设 $
+\backslash
+Delta z = 
+\backslash
+Delta x + i
+\backslash
+Delta y$。
+
+\end_layout
+
+\begin_layout Standard
+那么 $
+\backslash
+overline{
+\backslash
+Delta z} = 
+\backslash
+Delta x - i
+\backslash
+Delta y$。
+
+\end_layout
+
+\begin_layout Standard
+比值变成了：
+
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+frac{
+\backslash
+Delta x - i
+\backslash
+Delta y}{
+\backslash
+Delta x + i
+\backslash
+Delta y} $$
+\end_layout
+
+\begin_layout Standard
+让我们试着从两个最简单的方向逼近 0：
+
+\end_layout
+
+\begin_layout Standard
+#### 路径 A：
+横着走（沿实轴逼近）
+\end_layout
+
+\begin_layout Standard
+假设我们只在水平方向移动，
+意味着没有虚部变化 ($
+\backslash
+Delta y = 0$)。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+Delta z = 
+\backslash
+Delta x$
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+overline{
+\backslash
+Delta z} = 
+\backslash
+Delta x$
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+text{极限}_A = 
+\backslash
+lim_{
+\backslash
+Delta x 
+\backslash
+to 0} 
+\backslash
+frac{
+\backslash
+Delta x}{
+\backslash
+Delta x} = 
+\backslash
+mathbf{1} $$
+\end_layout
+
+\begin_layout Standard
+#### 路径 B：
+竖着走（沿虚轴逼近）
+\end_layout
+
+\begin_layout Standard
+假设我们只在垂直方向移动，
+意味着没有实部变化 ($
+\backslash
+Delta x = 0$)。
+
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+Delta z = i
+\backslash
+Delta y$
+\end_layout
+
+\begin_layout Standard
+* $
+\backslash
+overline{
+\backslash
+Delta z} = -i
+\backslash
+Delta y$ （注意这里有个负号！
+）
+\end_layout
+
+\begin_layout Standard
+$$ 
+\backslash
+text{极限}_B = 
+\backslash
+lim_{
+\backslash
+Delta y 
+\backslash
+to 0} 
+\backslash
+frac{-i
+\backslash
+Delta y}{i
+\backslash
+Delta y} = 
+\backslash
+frac{-i}{i} = 
+\backslash
+mathbf{-1} $$
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 结论：
+灾难发生
+\end_layout
+
+\begin_layout Standard
+* 横着走过来，
+结果是 1。
+
+\end_layout
+
+\begin_layout Standard
+* 竖着走过来，
+结果是 -1。
+
+\end_layout
+
+\begin_layout Standard
+$$ 1 
+\backslash
+neq -1 $$
+\end_layout
+
+\begin_layout Standard
+这就好比你去爬一座山，
+从东边爬上去发现山顶海拔 1000米，
+从北边爬上去发现山顶海拔 -1000米。
+这说明这座山（导数）根本不存在。
+
+\end_layout
+
+\begin_layout Standard
+因为极限依赖于路径，
+所以极限不存在。
+
+\end_layout
+
+\begin_layout Standard
+所以，
+$f(z) = 
+\backslash
+bar{z}$ 在复平面上任何一点都不可导。
+
+\end_layout
+
+\begin_layout Standard
+自然，
+它也就不是解析函数。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 几何直觉（为什么会这样？
+）
+\end_layout
+
+\begin_layout Standard
+你可能会觉得奇怪，
+共轭 $
+\backslash
+bar{z}$ 只是把点上下翻转了一下，
+图形看起来很连续啊，
+为什么不可导？
+
+\end_layout
+
+\begin_layout Standard
+解析函数的几何本质是：
+保角性（旋转 + 伸缩）。
+
+\end_layout
+
+\begin_layout Standard
+* 乘法 $z 
+\backslash
+times A$：
+代表旋转和拉伸。
+这是解析函数允许的操作。
+
+\end_layout
+
+\begin_layout Standard
+* 共轭 $
+\backslash
+bar{z}$：
+代表镜像翻转（Mirror Reflection）。
+
+\end_layout
+
+\begin_layout Standard
+翻转破坏了方向性。
+
+\end_layout
+
+\begin_layout Standard
+* 如果你看一个时钟，
+它是顺时针转的。
+
+\end_layout
+
+\begin_layout Standard
+* 你在镜子里看这个时钟，
+它是逆时针转的。
+
+\end_layout
+
+\begin_layout Standard
+* 复数导数要求“局部结构”必须保持一致。
+翻转操作彻底改变了局部的拓扑方向，
+所以它无法被表示为一个简单的复数乘法（即导数）。
+
+\end_layout
+
+\begin_layout Standard
+这就是为什么 $f(z) = 
+\backslash
+bar{z}$ 被踢出解析函数家族的根本原因。
 
 \end_layout
 
@@ -158762,23 +160533,22 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-判断这个图是否是一个能够遍历完所有的边而没有重复.
- 这样的图称为
+判断这个图是否是一个能够遍历完所有的边而没有重复，
+这样的图称为
 \series bold
 欧拉图
 \series default
-.
+。
  遍历的路径称作
 \series bold
 欧拉路径
 \series default
-(一个环或者一条链),
- 如果路径闭合(一个圈),
- 则称为
+(一个环或者一条链)，
+如果路径闭合(一个圈)，
+则称为
 \series bold
-欧拉回路
-\series default
-.
+欧拉回路。
+
 \end_layout
 
 \begin_layout Standard
@@ -159102,6 +160872,1327 @@ x_{4} & =y_{4}
 
 \end_layout
 
+\begin_layout Chapter
+几何拓扑学
+\end_layout
+
+\begin_layout Standard
+几何拓扑学 (Geometric Topology) 是数学中一个非常迷人且抽象的领域。
+
+\end_layout
+
+\begin_layout Standard
+如果用一句话来形容它，
+它被称为“橡皮泥几何学”。
+
+\end_layout
+
+\begin_layout Standard
+为了让你听懂，
+我们需要先把它和我们熟悉的“欧几里得几何”（中学学的几何）做一个对比。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 核心直觉：
+从“刚性”到“柔性”
+\end_layout
+
+\begin_layout Standard
+* 欧几里得几何（刚性）：
+
+\end_layout
+
+\begin_layout Standard
+你画一个三角形。
+如果你把它的边拉长一点，
+或者把角弄弯一点，
+它就不是原来的那个三角形了。
+长度、角度、面积是绝对不能变的。
+
+\end_layout
+
+\begin_layout Standard
+* 拓扑学（柔性）：
+
+\end_layout
+
+\begin_layout Standard
+想象这个三角形是用橡皮泥或者是弹性极好的橡胶做的。
+
+\end_layout
+
+\begin_layout Standard
+* 你可以把它拉长，
+它还是它。
+
+\end_layout
+
+\begin_layout Standard
+* 你可以把它捏圆变成一个圆圈，
+在拓扑学里，
+三角形和圆圈是同一个东西。
+
+\end_layout
+
+\begin_layout Standard
+* 规则：
+ 你可以随意拉伸、扭曲、弯曲，
+但不能撕破，
+也不能粘连（不能把两个分开的点粘在一起）。
+
+\end_layout
+
+\begin_layout Standard
+经典名言：
+
+\end_layout
+
+\begin_layout Standard
+> 在拓扑学家眼里，
+甜甜圈（Donut）和马克杯（Mug）是一样的。
+
+\end_layout
+
+\begin_layout Standard
+为什么？
+
+\end_layout
+
+\begin_layout Standard
+因为甜甜圈有一个洞。
+马克杯的把手也有一个洞。
+如果你是橡皮泥做的，
+你可以把甜甜圈的“肉”慢慢捏成杯壁，
+把“洞”周围捏成把手，
+不需要撕开也不需要粘合，
+就能从一个变形成另一个。
+
+\end_layout
+
+\begin_layout Standard
+这种变形关系，
+在数学上叫同胚 (Homeomorphism)。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 几何拓扑学具体研究什么？
+
+\end_layout
+
+\begin_layout Standard
+虽然“拓扑学”很广，
+但“几何拓扑学”主要专注于研究流形 (Manifolds) 及其嵌入。
+
+\end_layout
+
+\begin_layout Standard
+#### A.
+ 流形 (Manifolds) —
+—
+ 蚂蚁眼中的世界
+\end_layout
+
+\begin_layout Standard
+流形是一个看起来很平，
+但实际上可能是弯曲的空间。
+
+\end_layout
+
+\begin_layout Standard
+* 例子：
+ 地球表面。
+
+\end_layout
+
+\begin_layout Standard
+* 局部看：
+ 你站在操场上，
+觉得地是平的（像二维平面）。
+
+\end_layout
+
+\begin_layout Standard
+* 整体看：
+ 它是一个球体（封闭的）。
+
+\end_layout
+
+\begin_layout Standard
+* 几何拓扑学主要研究 2维（曲面）、3维（我们生活的空间可能是什么形状？
+）以及 4维流形。
+它试图把这些形状分类。
+比如，
+区分一个“球”和一个“救生圈”本质上的不同。
+
+\end_layout
+
+\begin_layout Standard
+#### B.
+ 纽结理论 (Knot Theory) —
+—
+ 纠缠的艺术
+\end_layout
+
+\begin_layout Standard
+这是几何拓扑学中最直观的分支。
+
+\end_layout
+
+\begin_layout Standard
+* 拿一根绳子，
+乱打几个结，
+然后把两头粘起来，
+形成一个闭环。
+
+\end_layout
+
+\begin_layout Standard
+* 问题：
+ 这个纠缠在一起的圈，
+能不能不剪断绳子，
+通过不停地蠕动、穿插（不能穿过绳子本身），
+最后变成一个普通的圆圈？
+
+\end_layout
+
+\begin_layout Standard
+* 这听起来像游戏，
+但实际上涉及深刻的数学结构，
+甚至与DNA的结构、量子物理有关。
+
+\end_layout
+
+\begin_layout Standard
+#### C.
+ 挖洞与亏格 (Genus)
+\end_layout
+
+\begin_layout Standard
+拓扑学怎么区分物体？
+主要靠数“洞”。
+
+\end_layout
+
+\begin_layout Standard
+* 球：
+ 0 个洞。
+
+\end_layout
+
+\begin_layout Standard
+* 甜甜圈/马克杯：
+ 1 个洞（亏格为 1）。
+
+\end_layout
+
+\begin_layout Standard
+* 眼镜框/数字8：
+ 2 个洞（亏格为 2）。
+
+\end_layout
+
+\begin_layout Standard
+你无法把一个球捏成甜甜圈（除非撕开一个洞），
+所以它们在拓扑上是不一样的。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 一个著名的例子：
+庞加莱猜想
+\end_layout
+
+\begin_layout Standard
+你可能听说过这个数学界的大boss（属于几何拓扑范畴），
+也就是俄罗斯数学家佩雷尔曼解决的问题。
+
+\end_layout
+
+\begin_layout Standard
+通俗解释：
+
+\end_layout
+
+\begin_layout Standard
+如果你有一个橡皮泥做的东西：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 它是没有洞的（单连通）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 它是封闭的有限大小的。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 它看起来像 3维空间。
+
+\end_layout
+
+\begin_layout Standard
+结论：
+ 无论它长得多么奇形怪状，
+它一定能被捏成一个标准的球体。
+
+\end_layout
+
+\begin_layout Standard
+这听起来是废话？
+但在高维空间证明这一点非常困难，
+困扰了人类一百年。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 几何拓扑 vs 离散数学
+\end_layout
+
+\begin_layout Standard
+回到你之前问的概念，
+做一个对比：
+
+\end_layout
+
+\begin_layout Standard
+* 离散数学（你之前的机器人路径题）：
+
+\end_layout
+
+\begin_layout Standard
+* 世界是由格子组成的。
+
+\end_layout
+
+\begin_layout Standard
+* 是非黑即白的（要么在A点，
+要么在B点，
+没有中间态）。
+
+\end_layout
+
+\begin_layout Standard
+* 像乐高积木。
+
+\end_layout
+
+\begin_layout Standard
+* 应用：
+计算机算法、编码、网络。
+
+\end_layout
+
+\begin_layout Standard
+* 几何拓扑学：
+
+\end_layout
+
+\begin_layout Standard
+* 世界是连续的。
+
+\end_layout
+
+\begin_layout Standard
+* 关注的是整体的性质（有没有洞？
+有没有打结？
+）。
+
+\end_layout
+
+\begin_layout Standard
+* 像橡皮泥。
+
+\end_layout
+
+\begin_layout Standard
+* 应用：
+理论物理（弦论、广义相对论）、生物学（DNA折叠）、机器人路径规划（在复杂障碍物空间中寻找路径的连通性）。
+
+\end_layout
+
+\begin_layout Standard
+### 总结
+\end_layout
+
+\begin_layout Standard
+几何拓扑学就是研究“忽略大尺度形状和距离，
+只在乎连接方式和孔洞数量”的几何学。
+它寻找的是物体在剧烈变形下依然保持不变的那些性质。
+
+\end_layout
+
+\begin_layout Chapter
+范畴论
+\end_layout
+
+\begin_layout Standard
+如果说离散数学是计算机的内功，
+几何拓扑是研究形状的柔性，
+那么范畴论 (Category Theory) 就是数学界的“上帝视角”。
+
+\end_layout
+
+\begin_layout Standard
+它被称为“数学的数学”（The Mathematics of Mathematics）。
+
+\end_layout
+
+\begin_layout Standard
+在数学圈里，
+它曾经有一个半开玩笑的绰号：
+“一般化的抽象废话” (General Abstract Nonsense)。
+但这并非贬义，
+而是因为它实在太抽象了，
+抽象到它不再关心具体的数学对象（比如数字、几何图形），
+而是关心它们之间的
+\series bold
+结构和关系
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+以下我用最直观的方式带你理解范畴论的核心。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 1.
+ 视角的转换：
+从“内容”到“关系”
+\end_layout
+
+\begin_layout Standard
+要理解范畴论，
+必须先改变你看待世界的方式。
+
+\end_layout
+
+\begin_layout Standard
+* 集合论视角（传统数学）：
+
+\end_layout
+
+\begin_layout Standard
+你想研究一个东西（比如一个整数、一个群、一个拓扑空间），
+你会把它拆开，
+看看它里面有哪些元素。
+
+\end_layout
+
+\begin_layout Standard
+> *比喻：
+* 你想了解一个人，
+你会去解剖他，
+看他的DNA，
+看他的细胞组成。
+
+\end_layout
+
+\begin_layout Standard
+* 范畴论视角：
+
+\end_layout
+
+\begin_layout Standard
+我根本不关心这个东西里面是什么，
+我也不允许你把它拆开。
+我只关心它和别的东西是怎么互动的。
+
+\end_layout
+
+\begin_layout Standard
+> *比喻：
+* 你想了解一个人，
+范畴论不看他的身体，
+而是看他的社交网络。
+他是谁的朋友？
+他是谁的父亲？
+只要搞清楚了他和所有其他人的关系，
+也就定义了这个人的本质。
+
+\end_layout
+
+\begin_layout Standard
+核心格言：
+ 一个对象的本质，
+由它与其他对象的关系（态射）决定。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 2.
+ 范畴论的三大基石
+\end_layout
+
+\begin_layout Standard
+一个范畴 (Category) 是一个独立的数学世界，
+它由两样东西组成：
+
+\end_layout
+
+\begin_layout Standard
+#### A.
+ 对象 (Objects) —
+—
+ 点
+\end_layout
+
+\begin_layout Standard
+这可以是任何东西：
+所有的集合、所有的向量空间、所有的拓扑空间\SpecialChar ldots
+\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Standard
+在范畴论的图表里，
+它们只是一个个点。
+
+\end_layout
+
+\begin_layout Standard
+#### B.
+ 态射 (Morphisms) —
+—
+ 箭
+\end_layout
+
+\begin_layout Standard
+这是连接两个对象的箭头。
+
+\end_layout
+
+\begin_layout Standard
+在集合论里，
+它是“函数”；
+在群论里，
+它是“群同态”；
+在拓扑里，
+它是“连续映射”。
+
+\end_layout
+
+\begin_layout Standard
+在范畴论里，
+我们不管它具体怎么算，
+只把它看作从 A 指向 B 的一个箭头：
+$A 
+\backslash
+to B$。
+
+\end_layout
+
+\begin_layout Standard
+#### C.
+ 复合 (Composition) —
+—
+ 路径
+\end_layout
+
+\begin_layout Standard
+如果有一支箭从 A 到 B，
+还有一支箭从 B 到 C，
+那么一定存在一支“复合箭”直接从 A 到 C。
+
+\end_layout
+
+\begin_layout Standard
+这就是“结合律”。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 3.
+ 威力所在：
+函子 (Functor)
+\end_layout
+
+\begin_layout Standard
+这是范畴论最强大的工具。
+
+\end_layout
+
+\begin_layout Standard
+如果你把“线性代数”看作一个范畴（世界A），
+把“几何拓扑”看作另一个范畴（世界B）。
+
+\end_layout
+
+\begin_layout Standard
+函子就是这两个平行宇宙之间的翻译机或桥梁。
+
+\end_layout
+
+\begin_layout Standard
+* 函子把世界A里的对象映射到世界B里的对象。
+
+\end_layout
+
+\begin_layout Standard
+* 函子把世界A里的箭头（关系）映射到世界B里的箭头。
+
+\end_layout
+
+\begin_layout Standard
+为什么要这么做？
+
+\end_layout
+
+\begin_layout Standard
+还记得你刚才问的几何拓扑吗？
+
+\end_layout
+
+\begin_layout Standard
+有些几何形状非常复杂（比如高维的纠缠结构），
+直接在几何世界里研究很难。
+
+\end_layout
+
+\begin_layout Standard
+于是，
+数学家构建一个函子，
+把这些复杂的几何形状（拓扑范畴）翻译成简单的代数群（代数范畴）。
+
+\end_layout
+
+\begin_layout Standard
+* 原本是：
+判断两个形状是否相同（很难）。
+
+\end_layout
+
+\begin_layout Standard
+* 翻译后：
+判断两个代数方程是否相等（很简单）。
+
+\end_layout
+
+\begin_layout Standard
+这就是代数拓扑的核心：
+用范畴论的桥梁，
+把几何难题变成代数计算题。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 4.
+ 范畴论与程序员的关系
+\end_layout
+
+\begin_layout Standard
+你可能觉得这太抽象了，
+跟写代码有啥关系？
+
+\end_layout
+
+\begin_layout Standard
+关系巨大。
+函数式编程 (Functional Programming) 语言（如 Haskell,
+ Scala,
+ 甚至 React 的某些思想）深受范畴论影响。
+
+\end_layout
+
+\begin_layout Standard
+* 类型 (Type) 就是对象（String,
+ Int,
+ User）。
+
+\end_layout
+
+\begin_layout Standard
+* 函数 (Function) 就是态射（接收 Int 返回 String）。
+
+\end_layout
+
+\begin_layout Standard
+* 单子 (Monad)：
+这是一个让无数程序员头秃的概念。
+它的定义直接来自范畴论：
+
+\end_layout
+
+\begin_layout Standard
+> *"A monad is just a monoid in the category of endofunctors."*
+\end_layout
+
+\begin_layout Standard
+> *（单子就是自函子范畴里的一个幺半群。
+）*
+\end_layout
+
+\begin_layout Standard
+简单来说，
+范畴论为编程提供了一种极度严谨的设计模式。
+它教你如何把副作用（比如IO操作、空值检查）抽象成数学结构，
+让代码像乐高积木一样可以安全地组合。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 5.
+ 总结
+\end_layout
+
+\begin_layout Standard
+回到你之前问的三个问题，
+我们可以画出一张地图：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 组合数学（机器人路径）：
+ 这是研究微观的数数技巧。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 几何拓扑（橡皮泥几何）：
+ 这是研究具体的空间结构和变形。
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 范畴论：
+ 这是站在云端，
+忽略具体的数和具体的形，
+研究这所有的数学分支之间是否存在通用的结构和转换桥梁。
+
+\end_layout
+
+\begin_layout Standard
+一句话总结：
+
+\end_layout
+
+\begin_layout Standard
+如果数学是研究世界的工具，
+那么范畴论就是管理这些工具的工具。
+
+\end_layout
+
+\begin_layout Standard
+范畴论之所以难懂，
+是因为它太“空”了。
+为了让你真切地感受到它的存在，
+我们不堆砌定义，
+而是通过三个不同维度的示例来拆解它。
+
+\end_layout
+
+\begin_layout Standard
+我们将从数学基础、编程代码和现实逻辑三个角度来看范畴论是如何运作的。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 示例 1：
+最基础的范畴 —
+—
+ 集合范畴 ($
+\backslash
+mathbf{Set}$)
+\end_layout
+
+\begin_layout Standard
+这是范畴论的“幼儿园”，
+也是最标准的模型。
+
+\end_layout
+
+\begin_layout Standard
+* 对象 (Objects)：
+ 所有的集合。
+
+\end_layout
+
+\begin_layout Standard
+* 比如：
+$A = 
+\backslash
+{
+\backslash
+text{苹果},
+ 
+\backslash
+text{香蕉}
+\backslash
+}$,
+ $B = 
+\backslash
+{
+\backslash
+text{红色},
+ 
+\backslash
+text{黄色}
+\backslash
+}$。
+
+\end_layout
+
+\begin_layout Standard
+* 在范畴论眼里，
+$A$ 和 $B$ 就是两个黑点，
+里面的苹果香蕉它看不见。
+
+\end_layout
+
+\begin_layout Standard
+* 态射 (Morphisms)：
+ 集合之间的函数（映射）。
+
+\end_layout
+
+\begin_layout Standard
+* 比如函数 $f:
+ A 
+\backslash
+to B$。
+
+\end_layout
+
+\begin_layout Standard
+* 规则：
+$f(
+\backslash
+text{苹果}) = 
+\backslash
+text{红色}$，
+$f(
+\backslash
+text{香蕉}) = 
+\backslash
+text{黄色}$。
+
+\end_layout
+
+\begin_layout Standard
+* 在范畴论眼里，
+这是一根从点 $A$ 指向点 $B$ 的箭头。
+
+\end_layout
+
+\begin_layout Standard
+* 复合 (Composition)：
+
+\end_layout
+
+\begin_layout Standard
+* 假设还有一个集合 $C = 
+\backslash
+{
+\backslash
+text{好心情},
+ 
+\backslash
+text{坏心情}
+\backslash
+}$。
+
+\end_layout
+
+\begin_layout Standard
+* 函数 $g:
+ B 
+\backslash
+to C$ 规定：
+看到红色 $
+\backslash
+to$ 好心情。
+
+\end_layout
+
+\begin_layout Standard
+* 结论：
+ 我们可以把箭头连起来，
+直接从 $A$ 到 $C$。
+即：
+看到苹果 $
+\backslash
+to$ 好心情。
+这就是复合函数 $g 
+\backslash
+circ f$。
+
+\end_layout
+
+\begin_layout Standard
+这告诉我们什么？
+
+\end_layout
+
+\begin_layout Standard
+在这个范畴里，
+研究的重点不是“苹果是什么”，
+而是“怎么把苹果变成好心情”。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 示例 2：
+程序员最熟悉的范畴 —
+—
+ 类型与函数
+\end_layout
+
+\begin_layout Standard
+如果你写代码（特别是 Java,
+ Python,
+ TypeScript 或 Haskell），
+其实你每天都在用范畴论。
+
+\end_layout
+
+\begin_layout Standard
+我们将编程语言的类型系统看作一个范畴：
+
+\end_layout
+
+\begin_layout Standard
+* 对象：
+ 数据类型 (`int`,
+ `string`,
+ `bool`,
+ `UserObject`)。
+
+\end_layout
+
+\begin_layout Standard
+* 态射：
+ 接收参数并返回结果的函数。
+
+\end_layout
+
+\begin_layout Standard
+* 复合：
+ 函数的链式调用。
+
+\end_layout
+
+\begin_layout Standard
+#### 核心概念展示：
+函子 (Functor)
+\end_layout
+
+\begin_layout Standard
+范畴论中最著名的概念是函子（在两个范畴之间映射的工具）。
+在编程中，
+`Array` (或 `List`) 就是一个典型的函子。
+
+\end_layout
+
+\begin_layout Standard
+假设我们要处理一个转换：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 原始世界（范畴 A）：
+ 只有单个元素。
+
+\end_layout
+
+\begin_layout Standard
+* 对象：
+`int`
+\end_layout
+
+\begin_layout Standard
+* 态射（函数）：
+`+1` (把 1 变成 2)
+\end_layout
+
+\begin_layout Standard
+2.
+ 列表世界（范畴 B）：
+ 都是列表。
+
+\end_layout
+
+\begin_layout Standard
+* 对象：
+`List<int>`
+\end_layout
+
+\begin_layout Standard
+函子是怎么工作的？
+
+\end_layout
+
+\begin_layout Standard
+函子不仅要把 `int` 变成 `List<int>`（把对象映射过去），
+还要把 `+1` 这个函数也映射过去。
+
+\end_layout
+
+\begin_layout Standard
+在代码中，
+这叫 `map`：
+
+\end_layout
+
+\begin_layout Standard
+```python
+\end_layout
+
+\begin_layout Standard
+# 原始函数 (态射)
+\end_layout
+
+\begin_layout Standard
+def add_one(x):
+\end_layout
+
+\begin_layout Standard
+return x + 1
+\end_layout
+
+\begin_layout Standard
+# 数据 (对象)
+\end_layout
+
+\begin_layout Standard
+my_list = [1,
+ 2,
+ 3]
+\end_layout
+
+\begin_layout Standard
+# 函子在工作：
+map 把作用于单个元素的函数，
+变成作用于列表的函数
+\end_layout
+
+\begin_layout Standard
+new_list = map(add_one,
+ my_list) 
+\end_layout
+
+\begin_layout Standard
+# 结果:
+ [2,
+ 3,
+ 4]
+\end_layout
+
+\begin_layout Standard
+```
+\end_layout
+
+\begin_layout Standard
+范畴论视角：
+
+\end_layout
+
+\begin_layout Standard
+`map` 保证了结构不变。
+你对单个数字做的事，
+可以通过 `map` 完美地平移到“一串数字”上，
+而不会破坏原本的逻辑（比如顺序）。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 示例 3：
+不是“动词”的范畴 —
+—
+ 偏序集
+\end_layout
+
+\begin_layout Standard
+前面两个例子中，
+箭头（态射）都代表“变化”或“动作”。
+但在范畴论里，
+箭头可以只代表一种关系。
+
+\end_layout
+
+\begin_layout Standard
+让我们建立一个“大小关系范畴”：
+
+\end_layout
+
+\begin_layout Standard
+* 对象：
+ 所有的实数 (1,
+ 5,
+ 100...)。
+
+\end_layout
+
+\begin_layout Standard
+* 态射：
+ “小于等于” ($
+\backslash
+le$)。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $a 
+\backslash
+le b$，
+那么从 $a$ 到 $b$ 就有一支箭头。
+
+\end_layout
+
+\begin_layout Standard
+* 注意：
+这里没有函数计算，
+箭头只是表示“我比你小”这个事实。
+
+\end_layout
+
+\begin_layout Standard
+验证范畴公理：
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 单位律：
+ 自己一定小于等于自己 ($a 
+\backslash
+le a$) 吗？
+是的。
+所以每个对象都有指向自己的箭头（Identity）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 复合律：
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $1 
+\backslash
+le 5$ (箭头 A->B)
+\end_layout
+
+\begin_layout Standard
+* 且 $5 
+\backslash
+le 10$ (箭头 B->C)
+\end_layout
+
+\begin_layout Standard
+* 那么 $1 
+\backslash
+le 10$ (箭头 A->C) 成立吗？
+当然成立。
+
+\end_layout
+
+\begin_layout Standard
+这告诉我们什么？
+
+\end_layout
+
+\begin_layout Standard
+范畴论可以统一完全不同的领域。
+
+\end_layout
+
+\begin_layout Standard
+在范畴论的高层视角下，
+“函数运行”和“数字大小比较”竟然是同一种架构（都符合对象、态射、复合的规则）。
+
+\end_layout
+
+\begin_layout Standard
+---
+\end_layout
+
+\begin_layout Standard
+### 综合应用：
+为什么这很有用？
+
+\end_layout
+
+\begin_layout Standard
+让我们回到“机器人路径”问题。
+
+\end_layout
+
+\begin_layout Standard
+1.
+ 路径范畴：
+
+\end_layout
+
+\begin_layout Standard
+* 对象是网格上的点。
+
+\end_layout
+
+\begin_layout Standard
+* 态射是“路径”。
+
+\end_layout
+
+\begin_layout Standard
+* 从 A 到 B 有路径，
+从 B 到 C 有路径，
+那么从 A 到 C 必然有路径（复合）。
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 同构 (Isomorphism)：
+
+\end_layout
+
+\begin_layout Standard
+假设我们有两个看似不同的问题：
+
+\end_layout
+
+\begin_layout Standard
+* 问题 X：
+机器人走格子的路径数。
+
+\end_layout
+
+\begin_layout Standard
+* 问题 Y：
+在一个多项式 $(x+y)^n$ 中展开后的系数。
+
+\end_layout
+
+\begin_layout Standard
+如果你能找到一个函子，
+把网格点映射成多项式的项，
+把走步映射成乘法，
+并且证明它们是同构的。
+
+\end_layout
+
+\begin_layout Standard
+结论：
+ 你就再也不用去数格子了，
+直接套用“二项式定理”的公式算出答案。
+
+\end_layout
+
+\begin_layout Standard
+总结：
+
+\end_layout
+
+\begin_layout Standard
+范畴论的示例实际上是在寻找“模式的模式”。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $A 
+\backslash
+to B$ 是函数，
+它是集合论。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $A 
+\backslash
+to B$ 是“小于”，
+它是序理论。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $A 
+\backslash
+to B$ 是“由..推导出..”，
+它是逻辑学。
+
+\end_layout
+
+\begin_layout Standard
+* 如果 $A 
+\backslash
+to B$ 是路径，
+它是拓扑学。
+
+\end_layout
+
+\begin_layout Standard
+范畴论就是把这些不同的书，
+装进同一个书架的分类学。
+
+\end_layout
+
 \begin_layout Part
 其它
 \end_layout
@@ -159345,10 +162436,16 @@ x_{4} & =y_{4}
 \end_layout
 
 \begin_layout Standard
-对于一个由测地线（曲面上的“直线”）围成的三角形 $T$，
-其内角和 $
-\backslash
-Sigma$ 满足以下公式：
+对于一个由测地线（曲面上的“直线”）围成的三角形 
+\begin_inset Formula $T$
+\end_inset
+
+，
+其内角和 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ 满足以下公式：
 
 \end_layout
 
@@ -159771,6 +162868,427 @@ circ}$ 只是欧几里得几何中的一个特例。
 \end_inset
 
 。
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+离散数学
+\end_layout
+
+\begin_layout Standard
+离散数学（Discrete Mathematics）被称为 计算机科学的数学基础。
+
+\end_layout
+
+\begin_layout Standard
+如果说高等数学（微积分）研究的是“连续”的变化（如水流、行星轨道），
+那么离散数学研究的就是“不连续”的、一个个独立的个体（如整数、计算机指令、社交网络中的人）。
+
+\end_layout
+
+\begin_layout Standard
+因为计算机底层是二进制（0和1），
+它无法处理真正的连续无限，
+所以离散数学是程序员的内功心法。
+
+\end_layout
+
+\begin_layout Standard
+以下是离散数学最核心的几个概念板块，
+我用通俗的语言为你拆解：
+
+\end_layout
+
+\begin_layout Enumerate
+组合数学 (Combinatorics) —
+—
+ 计数与排列
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+概念：
+ 研究“有多少种方法”做某事，
+或者如何排列组合对象。
+
+\end_layout
+
+\begin_layout Standard
+核心原理：
+ 排列 (
+\begin_inset Formula $P_{n}^{k}$
+\end_inset
+
+)、组合 (
+\begin_inset Formula $C_{n}^{k}$
+\end_inset
+
+)、抽屉原理（鸽巢原理）、容斥原理。
+
+\end_layout
+
+\begin_layout Standard
+计算机应用：
+
+\end_layout
+
+\begin_layout Itemize
+密码破解需要尝试多少次？
+
+\end_layout
+
+\begin_layout Itemize
+评估算法的复杂度（有多少种情况需要处理）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+图论 (Graph Theory) —
+—
+ 连接与关系
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是离散数学中最“直观”也是应用最广的部分。
+
+\end_layout
+
+\begin_layout Standard
+概念：
+ 研究由点（Vertex）和边（Edge）组成的图形。
+
+\end_layout
+
+\begin_layout Standard
+核心模型：
+
+\end_layout
+
+\begin_layout Itemize
+树 (Tree)：
+ 也就是数据结构里的树（目录结构、DOM树）。
+
+\end_layout
+
+\begin_layout Itemize
+最短路径：
+ 地图导航。
+
+\end_layout
+
+\begin_layout Itemize
+网络流：
+ 互联网带宽分配。
+
+\end_layout
+
+\begin_layout Standard
+计算机应用：
+
+\end_layout
+
+\begin_layout Itemize
+社交网络：
+ 你是点，
+你和朋友的关系是边。
+
+\end_layout
+
+\begin_layout Itemize
+高德/谷歌地图：
+ 寻找从A点到B点路程最短的路径（Dijkstra算法）。
+
+\end_layout
+
+\begin_layout Itemize
+依赖关系：
+ 比如 npm install 时解决包的依赖冲突。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+数理逻辑 (Mathematical Logic) —
+—
+ 推理的基础
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这是编程语言逻辑判断的基石。
+
+\end_layout
+
+\begin_layout Standard
+概念：
+ 研究命题的真假以及推理过程。
+
+\end_layout
+
+\begin_layout Standard
+核心内容：
+
+\end_layout
+
+\begin_layout Standard
+命题逻辑：
+ 与（AND）、或（OR）、非（NOT）、异或（XOR）。
+
+\end_layout
+
+\begin_layout Standard
+谓词逻辑：
+ 引入了“存在”(
+\begin_inset Formula $\exists$
+\end_inset
+
+)和“所有”(
+\begin_inset Formula $\forall$
+\end_inset
+
+)的概念。
+
+\end_layout
+
+\begin_layout Standard
+计算机应用：
+
+\end_layout
+
+\begin_layout Itemize
+`if (a && b || !c)` 这种代码写法就是逻辑运算。
+
+\end_layout
+
+\begin_layout Itemize
+数据库查询语言（SQL）背后的逻辑基础。
+
+\end_layout
+
+\begin_layout Itemize
+CPU电路设计（逻辑门）。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+集合论 (Set Theory) —
+—
+ 对象的归类
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+所有数学的基础，
+也是数据库的基础。
+
+\end_layout
+
+\begin_layout Standard
+概念：
+ 研究对象的汇集。
+
+\end_layout
+
+\begin_layout Standard
+核心内容：
+ 并集 (
+\begin_inset Formula $\cup$
+\end_inset
+
+)、交集 (
+\begin_inset Formula $\cap$
+\end_inset
+
+)、补集、笛卡尔积。
+
+\end_layout
+
+\begin_layout Standard
+计算机应用：
+
+\end_layout
+
+\begin_layout Itemize
+关系型数据库 (SQL)：
+ `JOIN` 操作本质上就是集合运算。
+
+\end_layout
+
+\begin_layout Itemize
+权限管理：
+ 用户组A 和 用户组B 的权限交集。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+数论 (Number Theory) —
+—
+ 整数的性质
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+曾经被认为是“最纯粹但最没用”的数学，
+现在是网络安全的基石。
+
+\end_layout
+
+\begin_layout Standard
+概念：
+ 研究整数性质，
+特别是素数（质数）和取模运算。
+
+\end_layout
+
+\begin_layout Standard
+核心内容：
+ 同余方程、欧几里得算法（求最大公约数）、费马小定理。
+
+\end_layout
+
+\begin_layout Standard
+计算机应用：
+
+\end_layout
+
+\begin_layout Itemize
+密码学 (RSA算法)：
+ 你的银行卡密码、HTTPS加密通信，
+全靠大素数分解的困难性来保护。
+
+\end_layout
+
+\begin_layout Itemize
+哈希算法 (Hash)：
+ 比如 MD5 或 SHA，
+利用取模和位运算将数据映射。
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+某城市街道呈现为一个网格状。
+小明住在城市的左上角（坐标为 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+），
+他的公司位于城市的右下角（坐标为
+\begin_inset Formula $(m,n)$
+\end_inset
+
+，
+即第
+\begin_inset Formula $m$
+\end_inset
+
+列第 
+\begin_inset Formula $n$
+\end_inset
+
+ 行）。
+
+\end_layout
+
+\begin_layout Example
+请问小明从家出发，
+最后到达公司，
+总共有多少条不同的路径？
+
+\end_layout
+
+\begin_layout Enumerate
+组合数学视角：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+这就是你刚才用的方法，
+计算 
+\begin_inset Formula $C_{m+n-2}^{m-1}$
+\end_inset
+
+，
+只关心结果的数量。
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+图论视角：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+网格被视为一个“有向无环图” (DAG)。
+
+\end_layout
+
+\begin_layout Enumerate
+每个格子是一个“点”。
+
+\end_layout
+
+\begin_layout Enumerate
+向右和向下是连接点的“单向边”。
+
+\end_layout
+
+\begin_layout Enumerate
+问题变成了：
+在这个图中，
+从起点到终点有多少条路径？
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+算法视角（递归/动态规划）：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+我们可以定义函数
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ 为到达坐标 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ 的路径数。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x,y)=f(x-1,y)+f(x,y-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+这就是递推关系（Recurrence Relation），
+也是离散数学的重要内容。
 
 \end_layout
 
@@ -161980,20 +165498,44 @@ U+2V\rightarrow3V
 
 \begin_layout Standard
 * 意味着：
-1 个 $u$ 分子遇到 2 个 $v$ 分子，
+1 个 
+\begin_inset Formula $u$
+\end_inset
+
+ 分子遇到 2 个 
+\begin_inset Formula $v$
+\end_inset
+
+ 分子，
 发生反应，
-导致 $u$ 变成了 $v$。
+导致 
+\begin_inset Formula $u$
+\end_inset
+
+ 变成了 
+\begin_inset Formula $v$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-* 所以在 $u$ 的方程里，
+* 所以在 
+\begin_inset Formula $u$
+\end_inset
+
+ 的方程里，
 这一项是减少（被消耗）。
 
 \end_layout
 
 \begin_layout Standard
-* 而在 $v$ 的方程里，
+* 而在 
+\begin_inset Formula $v$
+\end_inset
+
+ 的方程里，
 这一项是增加（繁殖）。
 
 \end_layout
