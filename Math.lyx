@@ -112981,8 +112981,8 @@ z=x+iy
  
 \end_layout
 
-\begin_layout Standard
-* 原数：
+\begin_layout Itemize
+原数：
 
 \begin_inset Formula $z=x+iy$
 \end_inset
@@ -112990,8 +112990,8 @@ z=x+iy
 
 \end_layout
 
-\begin_layout Standard
-* 共轭：
+\begin_layout Itemize
+共轭：
 
 \begin_inset Formula $\bar{z}=x-iy$
 \end_inset
@@ -113010,7 +113010,11 @@ z=x+iy
 \end_inset
 
 ，
-相当于关于 $x$ 轴做了一个镜像对称（上下翻转）。
+相当于关于 
+\begin_inset Formula $x$
+\end_inset
+
+ 轴做了一个镜像对称（上下翻转）。
 
 \end_layout
 
@@ -113104,14 +113108,11 @@ z=x+iy
 \end_layout
 
 \begin_layout Standard
-* $|z| = |
-\backslash
-bar{z}|$。
+\begin_inset Formula $|z|=|\bar{z}|$
+\end_inset
 
-\end_layout
+。
 
-\begin_layout Standard
----
 \end_layout
 
 \begin_layout Subsubsection
@@ -113201,10 +113202,6 @@ z=re^{i\theta}
 \end_inset
 
  角）
-\end_layout
-
-\begin_layout Standard
----
 \end_layout
 
 \begin_layout Subsubsection
@@ -113407,6 +113404,264 @@ z=\sqrt{2}e^{i\frac{\pi}{4}}
 
 \end_layout
 
+\begin_layout Subsubsection
+复函数的展开
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(z)=z^{2}=(x+iy)^{2}=x^{2}-y^{2}+2\cdot x\cdot iy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f(z)=\underbrace{(x^{2}-y^{2})}_{实部u}+i\underbrace{(2xy)}_{虚部v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $z^{2}$
+\end_inset
+
+ 是不是解析函数，
+光看
+\begin_inset Formula $z^{2}$
+\end_inset
+
+ 这个式子可能看不出来，
+但拆成 
+\begin_inset Formula $u$
+\end_inset
+
+ 和 
+\begin_inset Formula $v$
+\end_inset
+
+ 之后，
+就可以用柯西-黎曼方程 (
+\begin_inset Formula $C-R$
+\end_inset
+
+方程)来验证了。
+
+\end_layout
+
+\begin_layout Example
+我们得到了：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $u(x,y)=x^{2}-y^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $v(x,y)=2xy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+让我们求偏导数验证一下：
+
+\end_layout
+
+\begin_layout Example
+对 
+\begin_inset Formula $x$
+\end_inset
+
+ 求导：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial u}{\partial x}=2x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial v}{\partial x}=2y$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+对 
+\begin_inset Formula $y$
+\end_inset
+
+ 求导：
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial u}{\partial y}=-2y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial v}{\partial y}=2x$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula $C-R$
+\end_inset
+
+方程的要求是：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}$
+\end_inset
+
+ （即 
+\begin_inset Formula $2x=2x$
+\end_inset
+
+，
+成立！
+）
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}$
+\end_inset
+
+ （即 
+\begin_inset Formula $-2y=-2y$
+\end_inset
+
+，
+成立！
+）
+\end_layout
+
+\begin_layout Example
+结论：
+
+\end_layout
+
+\begin_layout Example
+因为满足这两个条件，
+所以 
+\begin_inset Formula $f(z)=z^{2}$
+\end_inset
+
+ 是处处可导的，
+也就是
+\series bold
+解析函数
+\series default
+。
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $f(z)=\bar{z}$
+\end_inset
+
+：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula 
+\[
+f(z)=x-iy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $u=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $v=-y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+验证一下：
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial u}{\partial x}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\frac{\partial v}{\partial y}=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $1\neq-1$
+\end_inset
+
+。
+
+\end_layout
+
+\begin_layout Example
+第一条规则就崩了。
+所以 
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+ 不是解析函数。
+
+\end_layout
+
+\begin_layout Subsubsection
+复函数性质
+\end_layout
+
 \begin_layout Standard
 引入虚数 
 \begin_inset Formula $i$
@@ -113418,14 +113673,14 @@ z=\sqrt{2}e^{i\frac{\pi}{4}}
 
 \end_layout
 
-\begin_layout Standard
-1.
- 核心门槛：
+\begin_layout Enumerate
+核心门槛：
 全纯性 (Holomorphism) —
 —
  苛刻的完美
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 在实数微积分里，
 一个函数可以是光滑的，
@@ -113440,13 +113695,13 @@ z=\sqrt{2}e^{i\frac{\pi}{4}}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 在实数轴上，
 逼近一个点只有两个方向（左、右）。
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 在复平面上，
 逼近一个点有无数个方向（上下左右、斜着、螺旋着\SpecialChar ldots
 \SpecialChar ldots
@@ -113479,24 +113734,25 @@ z=\sqrt{2}e^{i\frac{\pi}{4}}
 
 \end_layout
 
-\begin_layout Standard
-> 直觉：
+\begin_layout Remark*
+直觉：
  复变函数是非常“硬”的。
 你只要知道了它的一小块（比如它在一个小圆盘里的值），
-你就知道了它在整个定义域里的值（这叫解析延拓）。
+你就知道了它在整个定义域里的值（这叫
+\series bold
+解析延拓
+\series default
+）。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 2.
- 积分的魔法：
+\end_deeper
+\begin_layout Enumerate
+积分的魔法：
 柯西积分定理 (Cauchy's Integral Theorem)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 这是复变函数最迷人的地方，
 也是它和拓扑学的交汇点。
@@ -113505,9 +113761,11 @@ z=\sqrt{2}e^{i\frac{\pi}{4}}
 
 \begin_layout Standard
 在实数里，
-积分计算 $
-\backslash
-int_a^b f(x)dx$ 往往很难算出解析解。
+积分计算 
+\begin_inset Formula $\int_{a}^{b}f(x)dx$
+\end_inset
+
+ 往往很难算出解析解。
 
 \end_layout
 
@@ -113518,7 +113776,7 @@ int_a^b f(x)dx$ 往往很难算出解析解。
 \end_layout
 
 \begin_layout Standard
-#### 定理内容：
+定理内容：
 
 \end_layout
 
@@ -113530,9 +113788,14 @@ int_a^b f(x)dx$ 往往很难算出解析解。
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-oint_C f(z) dz = 0 $$
+\begin_inset Formula 
+\[
+\oint_{C}f(z)dz=0
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -113544,22 +113807,25 @@ oint_C f(z) dz = 0 $$
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 3.
- 留数定理 (Residue Theorem) —
+\end_deeper
+\begin_layout Enumerate
+留数定理 (Residue Theorem) —
 —
  数洞洞
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 如果圈里有“坏点”怎么办？
-比如 $f(z) = 
-\backslash
-frac{1}{z}$ 在 $z=0$ 处没有定义（这是个奇点）。
+比如 
+\begin_inset Formula $f(z)=\frac{1}{z}$
+\end_inset
+
+ 在 
+\begin_inset Formula $z=0$
+\end_inset
+
+ 处没有定义（这是个奇点）。
 
 \end_layout
 
@@ -113573,23 +113839,23 @@ frac{1}{z}$ 在 $z=0$ 处没有定义（这是个奇点）。
 你不需要真的去积分，
 你只需要看看圈里包住了几个“奇点”，
 算出每个奇点的“留数” (Residue)（代表这个奇点的权重），
-然后把它们加起来乘以 $2
-\backslash
-pi i$。
+然后把它们加起来乘以 
+\begin_inset Formula $2\pi i$
+\end_inset
+
+。
 
 \end_layout
 
 \begin_layout Standard
-$$ 
-\backslash
-oint_C f(z) dz = 2
-\backslash
-pi i 
-\backslash
-sum 
-\backslash
-text{Res}(f,
- a_k) $$
+\begin_inset Formula 
+\[
+\oint_{C}f(z)dz=2\pi i\sum\text{Res}(f,a_{k})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -113597,34 +113863,25 @@ text{Res}(f,
 
 \end_layout
 
-\begin_layout Standard
-还记得你问的几何拓扑吗？
-这跟拓扑里的“绕数”一模一样。
-
-\end_layout
-
-\begin_layout Standard
-* 积分不再是计算“面积”，
+\begin_layout Itemize
+积分不再是计算“面积”，
 而是计算你绕了奇点几圈。
 
 \end_layout
 
-\begin_layout Standard
-* 这把复杂的微积分问题，
+\begin_layout Itemize
+这把复杂的微积分问题，
 降维成了简单的代数加法。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 4.
- 几何视角：
+\end_deeper
+\begin_layout Enumerate
+几何视角：
 保角映射 (Conformal Mapping)
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 复变函数不仅是计算工具，
 它是几何变换的艺术。
@@ -113639,8 +113896,16 @@ text{Res}(f,
 
 \begin_layout Standard
 这意味着，
-变换前的网格如果是 90 度垂直相交的，
-变换后的网格（虽然扭曲了）依然是 90 度相交。
+变换前的网格如果是 
+\begin_inset Formula $90$
+\end_inset
+
+ 度垂直相交的，
+变换后的网格（虽然扭曲了）依然是 
+\begin_inset Formula $90$
+\end_inset
+
+ 度相交。
 
 \end_layout
 
@@ -113650,58 +113915,70 @@ text{Res}(f,
 \end_layout
 
 \begin_layout Standard
-* 设计飞机机翼时，
+设计飞机机翼时，
 直接算机翼周围的气流很难。
 
 \end_layout
 
 \begin_layout Standard
-* 数学家利用复变函数（茹科夫斯基变换），
+数学家利用复变函数（茹科夫斯基变换），
 把一个标准的圆变换成机翼的形状。
 
 \end_layout
 
 \begin_layout Standard
-* 因为是“保角”的，
+因为是“保角”的，
 圆周围简单的气流场，
 也就被完美映射成了机翼周围复杂的气流场。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 5.
- 与欧拉公式的联系 —
+\end_deeper
+\begin_layout Enumerate
+与欧拉公式的联系 —
 —
  旋转的灵魂
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 复变函数的灵魂是欧拉公式：
 
 \end_layout
 
 \begin_layout Standard
-$$ e^{ix} = 
-\backslash
-cos x + i 
-\backslash
-sin x $$
+\begin_inset Formula 
+\[
+e^{ix}=\cos x+i\sin x
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 在实数里，
-$e^x$ 是增长最快的函数。
+
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ 是增长最快的函数。
 
 \end_layout
 
 \begin_layout Standard
 在复数里，
-乘上 $i$ 之后，
-$e^{ix}$ 变成了旋转。
+乘上 
+\begin_inset Formula $i$
+\end_inset
+
+ 之后，
+
+\begin_inset Formula $e^{ix}$
+\end_inset
+
+ 变成了旋转。
 
 \end_layout
 
@@ -113711,31 +113988,29 @@ $e^{ix}$ 变成了旋转。
 \end_layout
 
 \begin_layout Standard
-* 物理世界中的波（光波、声波、概率波）本质上都是周期性的震荡。
+物理世界中的波（光波、声波、概率波）本质上都是周期性的震荡。
 
 \end_layout
 
 \begin_layout Standard
-* 用复变函数中的 $e^{i
-\backslash
-omega t}$ 来描述震荡，
-比用三角函数 $
-\backslash
-sin$ 和 $
-\backslash
-cos$ 要简洁、优雅得多。
+用复变函数中的 
+\begin_inset Formula $e^{i\omega t}$
+\end_inset
+
+ 来描述震荡，
+比用三角函数 
+\begin_inset Formula $\sin$
+\end_inset
+
+ 和 
+\begin_inset Formula $\cos$
+\end_inset
+
+ 要简洁、优雅得多。
 
 \end_layout
 
-\begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 6.
- 总结
-\end_layout
-
+\end_deeper
 \begin_layout Standard
 复变函数在数学大厦中的位置：
 
@@ -113766,12 +114041,16 @@ cos$ 要简洁、优雅得多。
  它告诉我们，
 实数轴只是一个二维平面的切片。
 当我们把维度展开，
-原本在实数轴上看似断裂或无解的问题（比如 $
-\backslash
-sqrt{-1}$，
-比如 $
-\backslash
-frac{1}{1+x^2}$ 的积分），
+原本在实数轴上看似断裂或无解的问题（比如 
+\begin_inset Formula $\sqrt{-1}$
+\end_inset
+
+，
+比如 
+\begin_inset Formula $\frac{1}{1+x^{2}}$
+\end_inset
+
+ 的积分），
 在复平面上都变得完整且连贯。
 
 \end_layout
@@ -114139,55 +114418,41 @@ f(z)=u(x,y)+iv(x,y)
 \end_layout
 
 \begin_layout Standard
-我想你可能想问的是 “具体推导” 或者 “具体举例” 来看为什么 $f(z) = 
-\backslash
-bar{z}$ 不解析。
-（“具体距离”在这里语境下稍显模糊，
-但我猜测你是想看数学上是如何一步步证明它不可导的，
-也就是导数定义的极限过程）。
-
-\end_layout
-
-\begin_layout Standard
 我们就通过复数导数的定义，
 来“近距离”地看一看，
-为什么 $f(z) = 
-\backslash
-bar{z}$ 在任何地方都不可导。
+为什么 
+\begin_inset Formula $f(z)=\bar{z}$
+\end_inset
+
+ 在任何地方都不可导。
 
 \end_layout
 
 \begin_layout Standard
----
-\end_layout
-
-\begin_layout Standard
-### 1.
- 核心问题：
+核心问题：
 导数的定义
 \end_layout
 
 \begin_layout Standard
 在复变函数中，
-导数 $f'(z)$ 的定义和实数一样，
+导数 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ 的定义和实数一样，
 是变化率的极限：
 
 \end_layout
 
 \begin_layout Standard
-$$ f'(z) = 
-\backslash
-lim_{
-\backslash
-Delta z 
-\backslash
-to 0} 
-\backslash
-frac{f(z + 
-\backslash
-Delta z) - f(z)}{
-\backslash
-Delta z} $$
+\begin_inset Formula 
+\[
+f'(z)=\lim_{\Delta z\to0}\frac{f(z+\Delta z)-f(z)}{\Delta z}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
